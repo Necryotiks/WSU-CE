@@ -1,0 +1,67 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Sun Jul 22 18:53:12 2018
+| Host         : DESKTOP-J2UKM9F running 64-bit major release  (build 9200)
+| Command      : report_drc -file wrapper_drc_routed.rpt -pb wrapper_drc_routed.pb -rpx wrapper_drc_routed.rpx
+| Design       : wrapper
+| Device       : xc7z007sclg400-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 6
++----------+----------+--------------------+------------+
+| Rule     | Severity | Description        | Violations |
++----------+----------+--------------------+------------+
+| PDRC-153 | Warning  | Gated clock check  | 5          |
+| ZPS7-1   | Warning  | PS7 block required | 1          |
++----------+----------+--------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net ck/E[0] is a gated clock net sourced by a combinational pin ck/O_reg[0]_i_1/O, cell ck/O_reg[0]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net ck/E[1] is a gated clock net sourced by a combinational pin ck/Y1_reg_i_1/O, cell ck/Y1_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net ck/E[2] is a gated clock net sourced by a combinational pin ck/Y2_reg_i_1/O, cell ck/Y2_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net ck/E[3] is a gated clock net sourced by a combinational pin ck/Y3_reg_i_1/O, cell ck/Y3_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net ck/Y0 is a gated clock net sourced by a combinational pin ck/Y0_reg_i_1/O, cell ck/Y0_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

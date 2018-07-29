@@ -1,0 +1,81 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Sun Jul 22 18:53:13 2018
+| Host         : DESKTOP-J2UKM9F running 64-bit major release  (build 9200)
+| Command      : report_methodology -file wrapper_methodology_drc_routed.rpt -pb wrapper_methodology_drc_routed.pb -rpx wrapper_methodology_drc_routed.rpx
+| Design       : wrapper
+| Device       : xc7z007sclg400-1
+| Speed File   : -1
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 9
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 1          |
+| TIMING-20 | Warning  | Non-clocked latch             | 8          |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An output delay is missing on TDATA relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch output_demux/Y0_reg cannot be properly analyzed as its control pin output_demux/Y0_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch output_demux/Y1_reg cannot be properly analyzed as its control pin output_demux/Y1_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch output_demux/Y2_reg cannot be properly analyzed as its control pin output_demux/Y2_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch output_demux/Y3_reg cannot be properly analyzed as its control pin output_demux/Y3_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch output_latch/O_reg[0] cannot be properly analyzed as its control pin output_latch/O_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch output_latch/O_reg[1] cannot be properly analyzed as its control pin output_latch/O_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch output_latch/O_reg[2] cannot be properly analyzed as its control pin output_latch/O_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch output_latch/O_reg[3] cannot be properly analyzed as its control pin output_latch/O_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+
