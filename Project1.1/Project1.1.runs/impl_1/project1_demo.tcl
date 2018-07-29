@@ -65,9 +65,8 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param xicom.use_bs_reader 1
   open_checkpoint project1_demo_routed.dcp
-  set_property webtalk.parent_dir C:/Users/lauer/Desktop/EE214/Project1.1/Project1.1.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/Sergaljerk/Project1.1/Project1.1.cache/wt [current_project]
   catch { write_mem_info -force project1_demo.mmi }
   write_bitstream -force project1_demo.bit 
   catch {write_debug_probes -quiet -force project1_demo}

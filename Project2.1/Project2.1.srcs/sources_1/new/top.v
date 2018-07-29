@@ -26,7 +26,7 @@ input [7:0] sw
     );
 //    //SOP 
 //    assign led[0] = (sw[1] & ~sw[0]) | 
-//    (sw[1] & ~sw[0]);
+//    (~sw[1] & sw[0]);
     
 //    assign led[1] = (~sw[3] & ~sw[2] & ~sw[1]) | 
 //    (~sw[3] & sw[2] & sw[1]) |
