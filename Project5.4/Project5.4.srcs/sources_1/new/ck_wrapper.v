@@ -41,4 +41,10 @@ output [15:0] led
  .leds(led),
  .fun_mode(fun_sw)
  );
+
+//clksft_alt cs2(
+// .clkin(cwire),
+// .rst(rst),
+// .leds(led)
+//);
 endmodule
