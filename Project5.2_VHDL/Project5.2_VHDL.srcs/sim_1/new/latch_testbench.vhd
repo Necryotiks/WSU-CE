@@ -43,6 +43,14 @@ Q: out std_logic;
 QN: out std_logic
 );
 end component;
+component sr_nor_latch port(
+S: in std_logic;
+R: in std_logic;
+Q: out std_logic;
+QN: out std_logic
+);
+end component;
+--TEST LATER.
 signal S1: std_logic := '1';
 signal R1: std_logic := '1';
 signal Q1: std_logic;

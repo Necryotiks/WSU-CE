@@ -35,12 +35,20 @@ entity d_latch is
     Port ( D : in STD_LOGIC;
            G : in STD_LOGIC;
            Q : out STD_LOGIC;
-           QN : in STD_LOGIC);
+           QN : out STD_LOGIC);
 end d_latch;
 
 architecture Behavioral of d_latch is
-
+signal S: std_logic;
+signal R: std_logic;
+signal Q_INTERNAL: std_logic;
+signal QN_INTERNAL: std_logic;
 begin
-
+S <= not(G and D);
+R <= not(not D and G);
+Q_INTERNAL <= not S or not QN_INTERNAL;
+QN_INTERNAL <= not(Q_INTERNAL and R);
+Q <= Q_INTERNAL;
+QN <= QN_INTERNAL;
 
 end Behavioral;
