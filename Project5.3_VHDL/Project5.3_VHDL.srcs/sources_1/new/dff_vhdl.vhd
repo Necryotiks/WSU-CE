@@ -32,10 +32,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity dff_vhdl is
-    Port ( D : in STD_LOGIC ;
-           clk : in STD_LOGIC ;
-           rst : in STD_LOGIC ;
-           Q : out STD_LOGIC );
+    Port ( D : in STD_ULOGIC ;
+           clk : in STD_ULOGIC ;
+           rst : in STD_ULOGIC ;
+           Q : out STD_ULOGIC );
 end dff_vhdl;
 
 architecture Behavioral of dff_vhdl is
@@ -44,7 +44,7 @@ begin
 
 flip_flop:process(clk,rst)
 begin
-    if rst = '1' then
+     if rst = '1' then
         Q <= '0';
      elsif rising_edge(clk) then
         Q <= D;

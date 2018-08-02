@@ -34,22 +34,24 @@ use IEEE.numeric_std.all;
 
 --ALWAYS DRIVE INPUTS SIGNAL IN TEST BENCH AND CHECK FOR DUPLICATE DRIVERS.
 --ALWAYS INITALIZE INPUT SIGNALS.
+--RUN SYNTHESIS FROM TIME TO TIME TO CHECK FOR BUGS(i.e incomplete sensitivity lists or inferred latches.)
+
 entity clkdiv_vhdl is
-    Port ( clk : in STD_LOGIC;
-           rst : in STD_LOGIC;
-           sw: in std_logic_vector(1 downto 0);
-           led : out STD_LOGIC);
+    Port ( clk : in STD_ULOGIC;
+           rst : in STD_ULOGIC;
+           sw: in std_ulogic_vector(1 downto 0);
+           led : out STD_ULOGIC);
 end clkdiv_vhdl;
 
 architecture Behavioral of clkdiv_vhdl is
-signal din: std_logic_vector (26 downto 0);
-signal clkdiv: std_logic_vector (26 downto 0);
+signal din: std_ulogic_vector (26 downto 0);
+signal clkdiv: std_ulogic_vector (26 downto 0);
 constant CLKOUT: integer := 26;
 component dff_vhdl port(
-clk: in std_logic;
-D: in std_logic;
-rst: in std_logic;
-Q: out std_logic
+clk: in std_ulogic;
+D: in std_ulogic;
+rst: in std_ulogic;
+Q: out std_ulogic
 );
 end component;
 begin
