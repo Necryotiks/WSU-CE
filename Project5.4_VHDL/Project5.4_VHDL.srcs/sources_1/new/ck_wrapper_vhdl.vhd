@@ -33,9 +33,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity ck_wrapper_vhdl is
     Port ( SW : in STD_ULOGIC_VECTOR (1 downto 0);
+           FUN_SW: in STD_ULOGIC;
            CLK : in STD_ULOGIC;
            RST : in STD_ULOGIC;
-           LED : out STD_ULOGIC_VECTOR (15 downto 0));
+           LED : out STD_LOGIC_VECTOR (15 downto 0));
 end ck_wrapper_vhdl;
 
 architecture Behavioral of ck_wrapper_vhdl is
@@ -49,7 +50,8 @@ end component;
 component clk_shifter_VHDL port(
 clkdiv: in std_ulogic;
 rst: in std_ulogic;
-led: out std_ulogic_vector(15 downto 0)
+fun_sw: in std_ulogic;
+led: out std_logic_vector(15 downto 0)
 );
 end component;
 signal cwire: std_ulogic;
@@ -64,6 +66,7 @@ led => cwire
 cs2:clk_shifter_VHDL port map(
 clkdiv => cwire,
 rst => rst,
+fun_sw => FUN_SW,
 led => LED
 );
 end Behavioral;

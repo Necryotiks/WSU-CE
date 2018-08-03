@@ -38,7 +38,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity clk_shifter_VHDL is
     Port ( clkdiv : in STD_ULOGIC;
            rst : in STD_ULOGIC;
-           led : out STD_ULOGIC_VECTOR (15 downto 0));
+           fun_sw: in STD_ULOGIC;
+           led : out STD_LOGIC_VECTOR (15 downto 0));
 end clk_shifter_VHDL;
 
 architecture Behavioral of clk_shifter_VHDL is
@@ -49,12 +50,12 @@ D: in std_ulogic;
 Q: out std_ulogic
 );
 end component;
-signal d: std_ulogic_vector(7 downto 0) := (others => '0'); --one extra bit to account for dummy dff needed to sync the circuit.
+signal d: std_logic_vector(7 downto 0) := (0 => '1',others => '0'); --one extra bit to account for dummy dff needed to sync the circuit.
+signal e: std_ulogic;
 signal OUTPUT: std_ulogic := '0';
-signal reset_local: std_ulogic  := '0';
 begin
 
-reset:process(clkdiv,rst,OUTPUT)
+reset:process(clkdiv,rst,OUTPUT,fun_sw)
 begin
      if falling_edge(rst) or OUTPUT = '1' then
         d(0) <= '1';  
@@ -62,8 +63,39 @@ begin
         d(0) <= '1'; --keep led(0) on.
      else
         d(0) <= '0'; --keep one led on at a time
-     end if;   
+     end if; 
+     if fun_sw = '1' then 
+     e <= '1';
+     end if;  
 end process reset;
+
+--reset:process(clkdiv,rst,OUTPUT,fun_sw)
+--begin
+--     if (falling_edge(rst) )  and fun_sw = '0' then
+--            d(0) <= 'H';
+--            led(0) <= d(0);
+--     elsif  (OUTPUT = 'H' or OUTPUT = '1') and fun_sw = '0' then
+--            led <=  (0 => 'H', others => '0');
+--     elsif rst = '1' or falling_edge(fun_sw) then
+--        led <= (0 => 'H', others => 'L');
+--        d(0) <= 'H'; --keep led(0) on.
+--     elsif fun_sw = '1' then
+--        if rising_edge(clkdiv) then
+--            led <= (0 => '1',2 => '1', 6 downto 4 => '1', 12 downto 10 => '1',others => '0');
+--        elsif falling_edge(clkdiv) then
+--            led <= (1 => '1',3 => '1', 9 downto 7 => '1', 15 downto 13 => '1',others => '0');
+--        else
+--            led <= (others => 'L');
+--        end if;
+--     else
+--        d(0) <= 'L'; --keep one led on at a time
+--        led(3 downto 0) <= d(3 downto 0);
+--        led(6 downto 4) <= (others => d(4));
+--        led(9 downto 7) <= (others => d(5));
+--        led(12 downto 10) <= (others => d(6));
+--        led(15 downto 13) <= (others => d(7));
+--     end if;   
+--end process reset;
 
 --SHIFTIN:dff_vhdl port map(
 --clk => clkdiv,
@@ -90,5 +122,6 @@ led(6 downto 4) <= (others => d(4));
 led(9 downto 7) <= (others => d(5));
 led(12 downto 10) <= (others => d(6));
 led(15 downto 13) <= (others => d(7));
+      
 
 end Behavioral;

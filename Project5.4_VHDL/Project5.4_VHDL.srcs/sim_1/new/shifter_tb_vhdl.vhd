@@ -39,17 +39,20 @@ architecture Behavioral of shifter_tb_vhdl is
 component clk_shifter_VHDL port(
 clkdiv: in std_ulogic;
 rst: in std_ulogic;
-led: out std_ulogic_vector(15 downto 0)
+fun_sw: in std_ulogic;
+led: out std_logic_vector(15 downto 0)
 );
 end component;
 signal clkdiv: std_ulogic := '0';
 signal rst: std_ulogic := '1';
-signal led: std_ulogic_vector(15 downto 0);
+signal led: std_logic_vector(15 downto 0);
+signal fun_sw: std_ulogic := '0';
 begin
 
 uut:clk_shifter_VHDL port map (
 clkdiv => clkdiv,
 rst => rst,
+fun_sw => fun_sw,
 led => led
 );
 
@@ -60,7 +63,7 @@ rst <= '0';
 for i in 0 to 255 loop
 wait for 20 ns;
 clkdiv <= not clkdiv;
-if i > 32 then
+if i > 64 then
     rst <= '1';
 end if;
 end loop;

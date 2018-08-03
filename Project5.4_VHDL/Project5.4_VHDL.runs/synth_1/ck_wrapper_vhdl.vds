@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Aug  1 23:42:47 2018
-# Process ID: 14968
+# Start of session at: Thu Aug  2 21:16:45 2018
+# Process ID: 12556
 # Current directory: C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.runs/synth_1
 # Command line: vivado.exe -log ck_wrapper_vhdl.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ck_wrapper_vhdl.tcl
 # Log file: C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.runs/synth_1/ck_wrapper_vhdl.vds
@@ -15,12 +15,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5352 
+INFO: Helper process launched with PID 2824 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 346.262 ; gain = 100.246
+Starting RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 344.387 ; gain = 101.602
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ck_wrapper_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/ck_wrapper_vhdl.vhd:41]
-INFO: [Synth 8-3491] module 'clkdiv_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:39' bound to instance 'cd2' of component 'clkdiv_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/ck_wrapper_vhdl.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'ck_wrapper_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/ck_wrapper_vhdl.vhd:42]
+INFO: [Synth 8-3491] module 'clkdiv_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:39' bound to instance 'cd2' of component 'clkdiv_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/ck_wrapper_vhdl.vhd:59]
 INFO: [Synth 8-638] synthesizing module 'clkdiv_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:46]
 INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DFF0' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:58]
 INFO: [Synth 8-638] synthesizing module 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:41]
@@ -52,20 +52,21 @@ INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Proj
 INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:67]
 INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:67]
 INFO: [Synth 8-256] done synthesizing module 'clkdiv_vhdl' (2#1) [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:46]
-INFO: [Synth 8-3491] module 'clk_shifter_VHDL' declared at 'C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:38' bound to instance 'cs2' of component 'clk_shifter_VHDL' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/ck_wrapper_vhdl.vhd:64]
-INFO: [Synth 8-638] synthesizing module 'clk_shifter_VHDL' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:44]
-INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:75]
-INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:75]
-INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:75]
-INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:75]
-INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:75]
-INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:75]
-INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:75]
-INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTOUT' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:82]
-INFO: [Synth 8-256] done synthesizing module 'clk_shifter_VHDL' (3#1) [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'ck_wrapper_vhdl' (4#1) [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/ck_wrapper_vhdl.vhd:41]
+INFO: [Synth 8-3491] module 'clk_shifter_VHDL' declared at 'C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:38' bound to instance 'cs2' of component 'clk_shifter_VHDL' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/ck_wrapper_vhdl.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'clk_shifter_VHDL' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:45]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:107]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:107]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:107]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:107]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:107]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:107]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:107]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'SHIFTOUT' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:114]
+INFO: [Synth 8-256] done synthesizing module 'clk_shifter_VHDL' (3#1) [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/clk_shifter_VHDL.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'ck_wrapper_vhdl' (4#1) [C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.srcs/sources_1/new/ck_wrapper_vhdl.vhd:42]
+WARNING: [Synth 8-3331] design clk_shifter_VHDL has unconnected port fun_sw
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 397.855 ; gain = 151.840
+Finished RTL Elaboration : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 396.305 ; gain = 153.520
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -75,7 +76,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 397.855 ; gain = 151.840
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 396.305 ; gain = 153.520
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -91,25 +92,25 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 724.672 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 721.219 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:25 ; elapsed = 00:01:48 . Memory (MB): peak = 724.672 ; gain = 478.656
+Finished Constraint Validation : Time (s): cpu = 00:01:26 ; elapsed = 00:01:37 . Memory (MB): peak = 721.219 ; gain = 478.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:25 ; elapsed = 00:01:48 . Memory (MB): peak = 724.672 ; gain = 478.656
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:26 ; elapsed = 00:01:37 . Memory (MB): peak = 721.219 ; gain = 478.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:25 ; elapsed = 00:01:48 . Memory (MB): peak = 724.672 ; gain = 478.656
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:26 ; elapsed = 00:01:37 . Memory (MB): peak = 721.219 ; gain = 478.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:25 ; elapsed = 00:01:48 . Memory (MB): peak = 724.672 ; gain = 478.656
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:27 ; elapsed = 00:01:38 . Memory (MB): peak = 721.219 ; gain = 478.434
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -160,8 +161,9 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design ck_wrapper_vhdl has unconnected port FUN_SW
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:27 ; elapsed = 00:01:51 . Memory (MB): peak = 724.672 ; gain = 478.656
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:29 ; elapsed = 00:01:41 . Memory (MB): peak = 721.219 ; gain = 478.434
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -173,13 +175,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:03 ; elapsed = 00:02:32 . Memory (MB): peak = 729.664 ; gain = 483.648
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:04 ; elapsed = 00:02:20 . Memory (MB): peak = 725.117 ; gain = 482.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:02:32 . Memory (MB): peak = 739.344 ; gain = 493.328
+Finished Timing Optimization : Time (s): cpu = 00:02:04 ; elapsed = 00:02:20 . Memory (MB): peak = 734.648 ; gain = 491.863
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -191,7 +193,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:03 ; elapsed = 00:02:32 . Memory (MB): peak = 748.879 ; gain = 502.863
+Finished Technology Mapping : Time (s): cpu = 00:02:04 ; elapsed = 00:02:20 . Memory (MB): peak = 745.184 ; gain = 502.398
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -215,7 +217,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:08 ; elapsed = 00:02:37 . Memory (MB): peak = 748.879 ; gain = 502.863
+Finished IO Insertion : Time (s): cpu = 00:02:09 ; elapsed = 00:02:25 . Memory (MB): peak = 745.184 ; gain = 502.398
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -228,7 +230,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:08 ; elapsed = 00:02:37 . Memory (MB): peak = 748.879 ; gain = 502.863
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:09 ; elapsed = 00:02:25 . Memory (MB): peak = 745.184 ; gain = 502.398
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -240,25 +242,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:08 ; elapsed = 00:02:37 . Memory (MB): peak = 748.879 ; gain = 502.863
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:09 ; elapsed = 00:02:25 . Memory (MB): peak = 745.184 ; gain = 502.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:08 ; elapsed = 00:02:37 . Memory (MB): peak = 748.879 ; gain = 502.863
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:09 ; elapsed = 00:02:25 . Memory (MB): peak = 745.184 ; gain = 502.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:08 ; elapsed = 00:02:37 . Memory (MB): peak = 748.879 ; gain = 502.863
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:09 ; elapsed = 00:02:25 . Memory (MB): peak = 745.184 ; gain = 502.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:08 ; elapsed = 00:02:37 . Memory (MB): peak = 748.879 ; gain = 502.863
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:09 ; elapsed = 00:02:25 . Memory (MB): peak = 745.184 ; gain = 502.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -327,11 +329,11 @@ Report Instance Areas:
 |38    |    SHIFTOUT             |dff_vhdl_6       |     2|
 +------+-------------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:08 ; elapsed = 00:02:37 . Memory (MB): peak = 748.879 ; gain = 502.863
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:09 ; elapsed = 00:02:25 . Memory (MB): peak = 745.184 ; gain = 502.398
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:01:57 . Memory (MB): peak = 748.879 ; gain = 176.047
-Synthesis Optimization Complete : Time (s): cpu = 00:02:08 ; elapsed = 00:02:38 . Memory (MB): peak = 748.879 ; gain = 502.863
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:11 ; elapsed = 00:01:56 . Memory (MB): peak = 745.184 ; gain = 177.484
+Synthesis Optimization Complete : Time (s): cpu = 00:02:09 ; elapsed = 00:02:26 . Memory (MB): peak = 745.184 ; gain = 502.398
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -341,10 +343,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-57 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+57 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:14 ; elapsed = 00:02:48 . Memory (MB): peak = 749.980 ; gain = 516.910
+synth_design: Time (s): cpu = 00:02:13 ; elapsed = 00:02:35 . Memory (MB): peak = 746.527 ; gain = 516.344
 INFO: [Common 17-1381] The checkpoint 'C:/Users/lauer/WSU-CPTE/Project5.4_VHDL/Project5.4_VHDL.runs/synth_1/ck_wrapper_vhdl.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ck_wrapper_vhdl_utilization_synth.rpt -pb ck_wrapper_vhdl_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.238 . Memory (MB): peak = 749.980 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Aug  1 23:46:08 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 746.527 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Aug  2 21:19:43 2018...
