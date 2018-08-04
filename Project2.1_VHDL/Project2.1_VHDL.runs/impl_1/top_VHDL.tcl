@@ -65,16 +65,15 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z007sclg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Sergaljerk/Project2.1_VHDL/Project2.1_VHDL.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Sergaljerk/Project2.1_VHDL/Project2.1_VHDL.xpr [current_project]
-  set_property ip_output_repo C:/Users/Sergaljerk/Project2.1_VHDL/Project2.1_VHDL.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.xpr [current_project]
+  set_property ip_output_repo C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/Sergaljerk/Project2.1_VHDL/Project2.1_VHDL.runs/synth_1/top_VHDL.dcp
-  read_xdc C:/Users/Sergaljerk/Project2.1_VHDL/Project2.1_VHDL.srcs/constrs_1/new/top_VHDL_cons.xdc
+  add_files -quiet C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.runs/synth_1/top_VHDL.dcp
+  read_xdc C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.srcs/constrs_1/new/top_VHDL_cons.xdc
   link_design -top top_VHDL -part xc7z007sclg400-1
   close_msg_db -file init_design.pb
 } RESULT]
