@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 08/02/2018 12:12:13 AM
+-- Create Date: 08/03/2018 10:17:38 PM
 -- Design Name: 
--- Module Name: cmp_bitslice - Behavioral
+-- Module Name: Fi_A_vhdl - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,22 +31,18 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity cmp_bitslice is
-    Port ( i_A : in STD_ULOGIC;
-           i_B : in STD_ULOGIC;
-           i_LTI : in STD_ULOGIC;
-           i_EQI : in STD_ULOGIC;
-           i_GTI : in STD_ULOGIC;
-           o_LTO : out STD_ULOGIC;
-           o_EQO : out STD_ULOGIC;
-           o_GTO : out STD_ULOGIC);
-end cmp_bitslice;
+entity FA_vhdl is
+    Port ( i_A : in STD_LOGIC;
+           i_B : in STD_LOGIC;
+           i_Cin : in STD_LOGIC;
+           o_S : out STD_LOGIC;
+           o_Cout : out STD_LOGIC);
+end FA_vhdl;
 
-architecture Behavioral of cmp_bitslice is
+architecture Behavioral of FA_vhdl is
 
 begin
-o_GTO <= (i_A and not i_B) or ((i_A xnor i_B) and i_GTI);
-o_EQO <= (i_A xnor i_B) and i_EQI;
-o_LTO <= (not i_A and i_B) or ((i_A xnor i_B ) and i_LTI);
+o_S <= i_A xor i_B xor i_Cin;
+o_Cout <= (i_A and i_B) or ((i_A xor i_B) and i_Cin);
 
 end Behavioral;
