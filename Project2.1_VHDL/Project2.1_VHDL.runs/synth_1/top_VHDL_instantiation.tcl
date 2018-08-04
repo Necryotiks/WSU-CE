@@ -27,7 +27,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_output_repo c:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.srcs/sources_1/new/top_VHDL.vhd
+read_vhdl -library xil_defaultlib {
+  C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.srcs/sources_1/new/top_VHDL.vhd
+  C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.srcs/sources_1/new/top_VHDL_instantiation.vhd
+}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -40,10 +43,10 @@ read_xdc C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.srcs/const
 set_property used_in_implementation false [get_files C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.srcs/constrs_1/new/top_VHDL_cons.xdc]
 
 
-synth_design -top top_VHDL -part xc7z007sclg400-1
+synth_design -top top_VHDL_instantiation -part xc7z007sclg400-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef top_VHDL.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file top_VHDL_utilization_synth.rpt -pb top_VHDL_utilization_synth.pb"
+write_checkpoint -force -noxdef top_VHDL_instantiation.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file top_VHDL_instantiation_utilization_synth.rpt -pb top_VHDL_instantiation_utilization_synth.pb"

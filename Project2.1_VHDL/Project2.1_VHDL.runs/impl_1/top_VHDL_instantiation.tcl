@@ -72,9 +72,9 @@ set rc [catch {
   set_property parent.project_path C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.xpr [current_project]
   set_property ip_output_repo C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.runs/synth_1/top_VHDL.dcp
+  add_files -quiet C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.runs/synth_1/top_VHDL_instantiation.dcp
   read_xdc C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.srcs/constrs_1/new/top_VHDL_cons.xdc
-  link_design -top top_VHDL -part xc7z007sclg400-1
+  link_design -top top_VHDL_instantiation -part xc7z007sclg400-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -90,8 +90,8 @@ set ACTIVE_STEP opt_design
 set rc [catch {
   create_msg_db opt_design.pb
   opt_design 
-  write_checkpoint -force top_VHDL_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file top_VHDL_drc_opted.rpt -pb top_VHDL_drc_opted.pb -rpx top_VHDL_drc_opted.rpx"
+  write_checkpoint -force top_VHDL_instantiation_opt.dcp
+  create_report "impl_1_opt_report_drc_0" "report_drc -file top_VHDL_instantiation_drc_opted.rpt -pb top_VHDL_instantiation_drc_opted.pb -rpx top_VHDL_instantiation_drc_opted.rpx"
   close_msg_db -file opt_design.pb
 } RESULT]
 if {$rc} {
@@ -108,10 +108,10 @@ set rc [catch {
   create_msg_db place_design.pb
   implement_debug_core 
   place_design 
-  write_checkpoint -force top_VHDL_placed.dcp
-  create_report "impl_1_place_report_io_0" "report_io -file top_VHDL_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file top_VHDL_utilization_placed.rpt -pb top_VHDL_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file top_VHDL_control_sets_placed.rpt"
+  write_checkpoint -force top_VHDL_instantiation_placed.dcp
+  create_report "impl_1_place_report_io_0" "report_io -file top_VHDL_instantiation_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file top_VHDL_instantiation_utilization_placed.rpt -pb top_VHDL_instantiation_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file top_VHDL_instantiation_control_sets_placed.rpt"
   close_msg_db -file place_design.pb
 } RESULT]
 if {$rc} {
@@ -127,18 +127,18 @@ set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
   route_design 
-  write_checkpoint -force top_VHDL_routed.dcp
-  create_report "impl_1_route_report_drc_0" "report_drc -file top_VHDL_drc_routed.rpt -pb top_VHDL_drc_routed.pb -rpx top_VHDL_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file top_VHDL_methodology_drc_routed.rpt -pb top_VHDL_methodology_drc_routed.pb -rpx top_VHDL_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file top_VHDL_power_routed.rpt -pb top_VHDL_power_summary_routed.pb -rpx top_VHDL_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file top_VHDL_route_status.rpt -pb top_VHDL_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file top_VHDL_timing_summary_routed.rpt -rpx top_VHDL_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file top_VHDL_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file top_VHDL_clock_utilization_routed.rpt"
+  write_checkpoint -force top_VHDL_instantiation_routed.dcp
+  create_report "impl_1_route_report_drc_0" "report_drc -file top_VHDL_instantiation_drc_routed.rpt -pb top_VHDL_instantiation_drc_routed.pb -rpx top_VHDL_instantiation_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file top_VHDL_instantiation_methodology_drc_routed.rpt -pb top_VHDL_instantiation_methodology_drc_routed.pb -rpx top_VHDL_instantiation_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file top_VHDL_instantiation_power_routed.rpt -pb top_VHDL_instantiation_power_summary_routed.pb -rpx top_VHDL_instantiation_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file top_VHDL_instantiation_route_status.rpt -pb top_VHDL_instantiation_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file top_VHDL_instantiation_timing_summary_routed.rpt -rpx top_VHDL_instantiation_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file top_VHDL_instantiation_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file top_VHDL_instantiation_clock_utilization_routed.rpt"
   close_msg_db -file route_design.pb
 } RESULT]
 if {$rc} {
-  write_checkpoint -force top_VHDL_routed_error.dcp
+  write_checkpoint -force top_VHDL_instantiation_routed_error.dcp
   step_failed route_design
   return -code error $RESULT
 } else {
@@ -150,10 +150,10 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  catch { write_mem_info -force top_VHDL.mmi }
-  write_bitstream -force top_VHDL.bit 
-  catch {write_debug_probes -quiet -force top_VHDL}
-  catch {file copy -force top_VHDL.ltx debug_nets.ltx}
+  catch { write_mem_info -force top_VHDL_instantiation.mmi }
+  write_bitstream -force top_VHDL_instantiation.bit 
+  catch {write_debug_probes -quiet -force top_VHDL_instantiation}
+  catch {file copy -force top_VHDL_instantiation.ltx debug_nets.ltx}
   close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {

@@ -1,16 +1,16 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-----------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Fri Aug  3 18:33:08 2018
+| Date             : Fri Aug  3 19:54:32 2018
 | Host             : DESKTOP-J2UKM9F running 64-bit major release  (build 9200)
-| Command          : report_power -file top_VHDL_power_routed.rpt -pb top_VHDL_power_summary_routed.pb -rpx top_VHDL_power_routed.rpx
-| Design           : top_VHDL
+| Command          : report_power -file top_VHDL_instantiation_power_routed.rpt -pb top_VHDL_instantiation_power_summary_routed.pb -rpx top_VHDL_instantiation_power_routed.rpx
+| Design           : top_VHDL_instantiation
 | Device           : xc7z007sclg400-1
 | Design State     : routed
 | Grade            : commercial
 | Process          : typical
 | Characterization : Preliminary
-----------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Power Report
 
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+---------------------------------+
-| Total On-Chip Power (W)  | 5.275 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 5.273 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                    |
 | Power Budget Margin (W)  | NA                              |
-| Dynamic (W)              | 5.019                           |
+| Dynamic (W)              | 5.017                           |
 | Device Static (W)        | 0.256                           |
 | Effective TJA (C/W)      | 11.5                            |
 | Max Ambient (C)          | 24.2                            |
@@ -54,10 +54,10 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | Slice Logic    |     0.012 |        4 |       --- |             --- |
 |   LUT as Logic |     0.012 |        2 |     14400 |            0.01 |
-| Signals        |     0.059 |       12 |       --- |             --- |
+| Signals        |     0.058 |       12 |       --- |             --- |
 | I/O            |     4.948 |       12 |       100 |           12.00 |
 | Static Power   |     0.256 |          |           |                 |
-| Total          |     5.275 |          |           |                 |
+| Total          |     5.273 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -67,7 +67,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.138 |       0.103 |      0.035 |
+| Vccint    |       1.000 |     0.136 |       0.101 |      0.035 |
 | Vccaux    |       1.800 |     0.199 |       0.180 |      0.018 |
 | Vcco33    |       3.300 |     1.392 |       1.391 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -138,10 +138,11 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------+-----------+
-| Name     | Power (W) |
-+----------+-----------+
-| top_VHDL |     5.019 |
-+----------+-----------+
++------------------------+-----------+
+| Name                   | Power (W) |
++------------------------+-----------+
+| top_VHDL_instantiation |     5.017 |
+|   SOP                  |     0.040 |
++------------------------+-----------+
 
 

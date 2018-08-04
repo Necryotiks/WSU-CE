@@ -71,18 +71,18 @@ o_LED(1) <= (i_SW(3) or i_SW(2) or not i_SW(1)) --Circuit II
     and (not i_SW(3) or not i_SW(2) or i_SW(1) ) 
     and (not i_SW(3) or not i_SW(2) or not i_SW(1));
     
-o_LED(2) <= (i_SW(7) or i_SW(6) or i_SW(5) or i_SW(4)) and  --Circuit III
-        (i_SW(7) or i_SW(6) or not i_SW(5) or i_SW(4)) and
-        (i_SW(7) or not i_SW(6) or i_SW(5) or not i_SW(4)) and 
-        (i_SW(7) or not i_SW(6) or not i_SW(5) or i_SW(4)) and
-        (i_SW(7) or not i_SW(6) or not i_SW(5) or not i_SW(4)) and 
-        (not i_SW(7) or i_SW(6) or i_SW(5) or i_SW(4)) and
-        (not i_SW(7) or i_SW(6) or i_SW(5) or not i_SW(4)) and 
-        (not i_SW(7) or i_SW(6) or not i_SW(5) or i_SW(4)) and
-        (not i_SW(7) or i_SW(6) or not i_SW(5) or not i_SW(4)) and 
-        (not i_SW(7) or not i_SW(6) or i_SW(5) or i_SW(4)) and
-        (not i_SW(7) or not i_SW(6) or i_SW(5) or not i_SW(4)) and 
-        (not i_SW(7) or not i_SW(6) or not i_SW(5) or i_SW(4));    
+o_LED(2) <= (i_SW(7) or i_SW(6) or i_SW(5) or i_SW(4)) --Circuit III
+and (i_SW(7) or i_SW(6) or not i_SW(5) or i_SW(4)) 
+and (i_SW(7) or not i_SW(6) or i_SW(5) or not i_SW(4)) 
+and (i_SW(7) or not i_SW(6) or not i_SW(5) or i_SW(4)) 
+and (i_SW(7) or not i_SW(6) or not i_SW(5) or not i_SW(4)) 
+and (not i_SW(7) or i_SW(6) or i_SW(5) or i_SW(4)) 
+and (not i_SW(7) or i_SW(6) or i_SW(5) or not i_SW(4)) 
+and (not i_SW(7) or i_SW(6) or not i_SW(5) or i_SW(4)) 
+and (not i_SW(7) or i_SW(6) or not i_SW(5) or not i_SW(4)) 
+and (not i_SW(7) or not i_SW(6) or i_SW(5) or i_SW(4)) 
+and (not i_SW(7) or not i_SW(6) or i_SW(5) or not i_SW(4)) 
+and (not i_SW(7) or not i_SW(6) or not i_SW(5) or i_SW(4));    
         
 o_LED(3) <= (i_SW(6) or i_SW(5) or i_SW(4) or i_SW(3)) and --Circuit IV
             (i_SW(6) or i_SW(5) or not i_SW(4) or i_SW(3)) and

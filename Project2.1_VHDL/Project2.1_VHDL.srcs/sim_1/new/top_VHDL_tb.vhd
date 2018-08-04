@@ -37,56 +37,74 @@ end top_VHDL_tb;
 
 architecture NULL_ARCH of top_VHDL_tb is
 signal r_SW: std_ulogic_vector(7 downto 0):= (others => '0');
-signal w_LED: std_ulogic_vector(3 downto 0):= (others => '0');
+signal w_LED_0: std_ulogic_vector(3 downto 0):= (others => '0');
+signal w_LED_1: std_ulogic_vector(3 downto 0):= (others => '0');
 begin
-uut: entity work.top_VHDL(SOP) port map(
+uut_sop: entity work.top_VHDL(SOP) port map(
     i_SW => r_SW,
-    o_LED => w_LED
+    o_LED => w_LED_0
+);
+
+uut_pos: entity work.top_VHDL(POS) port map(
+    i_SW => r_SW,
+    o_LED => w_LED_1
 );
 
 SOP_TEST:process
 begin
+
 wait for 20 ns;
 --Circuit I
 r_SW <= (0 => '1', others => '0');
 wait for 20 ns; 
-assert w_LED(0) = '1' report "Circuit I test failure." severity failure;
+assert w_LED_0(0) = '1' report "SOP Circuit I test failure." severity failure;
+assert w_LED_1(0) = '1' report "POS Circuit I test failure." severity failure;
 wait for 20 ns;
 r_SW <= (1 => '1', others => '0');
 wait for 20 ns; 
-assert w_LED(0) = '1' report "Circuit I test failure." severity failure;
+assert w_LED_0(0) = '1' report "SOP Circuit I test failure." severity failure;
+assert w_LED_1(0) = '1' report "POS Circuit I test failure." severity failure;
 wait for 20 ns;
 
 --Circut II
 r_SW <= (others => '0');
 wait for 20 ns;
-assert w_LED(1) = '1' report "Circuit II test failure." severity failure;
+assert w_LED_0(1) = '1' report "SOP Circuit II test failure." severity failure;
+assert w_LED_1(1) = '1' report "POS Circuit II test failure." severity failure;
 wait for 20 ns;
 r_SW <= (2 downto 1 => '1', others => '0');
 wait for 20 ns;
-assert w_LED(1) = '1' report "Circuit II test failure." severity failure;
+assert w_LED_0(1) = '1' report "SOP Circuit II test failure." severity failure;
+assert w_LED_1(1) = '1' report "POS Circuit II test failure." severity failure;
 wait for 20 ns;
 r_SW <= (1 => '1', 3 => '1',others => '0');
 wait for 20 ns;
-assert w_LED(1) = '1' report "Circuit II test failure." severity failure;
+assert w_LED_0(1) = '1' report "SOP Circuit II test failure." severity failure;
+assert w_LED_1(1) = '1' report "POS Circuit II test failure." severity failure;
 wait for 20 ns;
 
 --Circuit III
 r_SW <= (4 => '1', others => '0');
 wait for 20 ns;
-assert w_LED(2) = '1' report "Circuit III test failure." severity failure;
+assert w_LED_0(2) = '1' report "SOP Circuit III test failure." severity failure;
+assert w_LED_1(2) = '1' report "POS Circuit III test failure." severity failure;
 wait for 20 ns;
 r_SW <= (5 downto 4 => '1', others => '0');
 wait for 20 ns;
-assert w_LED(2) = '1' report "Circuit III test failure." severity failure;
+assert w_LED_0(2) = '1' report "SOP Circuit III test failure." severity failure;
+assert w_LED_1(2) = '1' report "POS Circuit III test failure." severity failure;
 wait for 20 ns;
 r_SW <= (6 => '1', others => '0');
 wait for 10 ns;
-assert w_LED(2) = '1' report "Circuit III test failure." severity failure;
+assert w_LED_0(2) = '1' report "SOP Circuit III test failure." severity failure;
+assert w_LED_1(2) = '1' report "POS Circuit III test failure." severity failure;
 wait for 20 ns;
 r_SW <= (7 downto 4 => '1', others => '0');
 wait for 20 ns;
-assert w_LED(2) = '1' report "Circuit III test failure." severity failure;
+assert w_LED_0(2) = '1' report "SOP Circuit III test failure." severity failure;
+assert w_LED_1(2) = '1' report "POS Circuit III test failure." severity failure;
+
+--Circuit IV
 wait;
 end process SOP_TEST;
 
