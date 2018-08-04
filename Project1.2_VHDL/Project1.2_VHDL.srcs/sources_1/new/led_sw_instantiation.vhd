@@ -41,13 +41,13 @@ architecture NULL_ARCH of led_sw_instantiation is
 begin
 
 FORWARD:entity work.led_sw_vhdl(Part_2) port map(
-i_SW => SW,
-o_LED => LED
+i_SW => i_SW,
+o_LED => o_LED
 );
 
 --BACKWARD:entity work.led_sw_vhdl(Part_3) port map(
---i_SW => SW,
---o_LED => LED
+--i_SW => i_SW,
+--o_LED => o_LED
 --); 
 
 

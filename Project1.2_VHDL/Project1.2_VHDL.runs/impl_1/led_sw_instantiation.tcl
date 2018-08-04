@@ -68,12 +68,12 @@ set rc [catch {
   create_project -in_memory -part xc7z007sclg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/lauer/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.cache/wt [current_project]
-  set_property parent.project_path C:/Users/lauer/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.xpr [current_project]
-  set_property ip_output_repo C:/Users/lauer/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.xpr [current_project]
+  set_property ip_output_repo C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/lauer/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.runs/synth_1/led_sw_instantiation.dcp
-  read_xdc C:/Users/lauer/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.srcs/constrs_1/new/led_sw_vhdl_cons.xdc
+  add_files -quiet C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.runs/synth_1/led_sw_instantiation.dcp
+  read_xdc C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.srcs/constrs_1/new/led_sw_vhdl_cons.xdc
   link_design -top led_sw_instantiation -part xc7z007sclg400-1
   close_msg_db -file init_design.pb
 } RESULT]
