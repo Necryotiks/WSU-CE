@@ -1,0 +1,283 @@
+
+*** Running vivado
+    with args -log arith_vhdl_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source arith_vhdl_tb.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source arith_vhdl_tb.tcl -notrace
+Command: synth_design -top arith_vhdl_tb -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11052 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 344.355 ; gain = 101.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'arith_vhdl_tb' [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/arith_vhdl_tb.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'comparator_vhdl_structural' [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/comparator_vhdl.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'cmp_bitslice' [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/cmp_bitslice.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'cmp_bitslice' (1#1) [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/cmp_bitslice.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'comparator_vhdl_structural' (2#1) [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/comparator_vhdl.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'comparator_vhdl_behavioral' [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/comparator_vhdl.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'comparator_vhdl_behavioral' (3#1) [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/comparator_vhdl.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'rippleCarryAdder_vhdl_structural' [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/rippleCarryAdder_vhdl.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'HA_vhdl' [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/HA_vhdl.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'HA_vhdl' (4#1) [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/HA_vhdl.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'FA_vhdl' [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/FA_vhdl.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'FA_vhdl' (5#1) [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/FA_vhdl.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'rippleCarryAdder_vhdl_structural' (6#1) [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/rippleCarryAdder_vhdl.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'rippleCarryAdder_vhdl_behavioral' [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/rippleCarryAdder_vhdl.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'rippleCarryAdder_vhdl_behavioral' (7#1) [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/rippleCarryAdder_vhdl.vhd:63]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/arith_vhdl_tb.vhd:110]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/arith_vhdl_tb.vhd:114]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/arith_vhdl_tb.vhd:119]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/arith_vhdl_tb.vhd:127]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/arith_vhdl_tb.vhd:129]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/arith_vhdl_tb.vhd:131]
+INFO: [Synth 8-256] done synthesizing module 'arith_vhdl_tb' (8#1) [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/sources_1/new/arith_vhdl_tb.vhd:38]
+WARNING: [Synth 8-3331] design rippleCarryAdder_vhdl_behavioral has unconnected port o_Cout
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 396.309 ; gain = 153.211
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 396.309 ; gain = 153.211
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/constrs_1/new/arith_vhdl_cons.xdc]
+Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.srcs/constrs_1/new/arith_vhdl_cons.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 709.949 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 709.949 ; gain = 466.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 709.949 ; gain = 466.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 709.949 ; gain = 466.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 709.949 ; gain = 466.852
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module cmp_bitslice 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module HA_vhdl 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module FA_vhdl 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
+Module rippleCarryAdder_vhdl_behavioral 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-115] binding instance 'i_0' in module 'arith_vhdl_tb' to reference 'partition' which has no pins
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 709.949 ; gain = 466.852
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 713.125 ; gain = 470.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 713.125 ; gain = 470.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 722.660 ; gain = 479.563
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 722.660 ; gain = 479.563
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 722.660 ; gain = 479.563
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 722.660 ; gain = 479.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 722.660 ; gain = 479.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 722.660 ; gain = 479.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 722.660 ; gain = 479.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 722.660 ; gain = 479.563
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 722.660 ; gain = 165.922
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 722.660 ; gain = 479.563
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 732.949 ; gain = 502.398
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Project6.1_VHDL/Project6.1_VHDL.runs/synth_1/arith_vhdl_tb.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file arith_vhdl_tb_utilization_synth.rpt -pb arith_vhdl_tb_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.031 . Memory (MB): peak = 732.949 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Aug  5 21:18:52 2018...

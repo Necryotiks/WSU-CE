@@ -32,11 +32,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity FA_vhdl is
-    Port ( i_A : in STD_LOGIC;
-           i_B : in STD_LOGIC;
-           i_Cin : in STD_LOGIC;
-           o_S : out STD_LOGIC;
-           o_Cout : out STD_LOGIC);
+    Port ( i_A : in STD_ULOGIC;
+           i_B : in STD_ULOGIC;
+           i_Cin : in STD_ULOGIC;
+           o_S : out STD_ULOGIC;
+           o_Cout : out STD_ULOGIC);
 end FA_vhdl;
 
 architecture Behavioral of FA_vhdl is

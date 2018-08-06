@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -40,27 +40,49 @@ end rippleCarryAdder_vhdl;
 
 architecture Structural of rippleCarryAdder_vhdl is
 signal w_Carry: STD_ULOGIC_VECTOR(3 downto 0);
+signal w_Result: STD_ULOGIC_VECTOR(3 downto 0); -- DONT DRIVE COMPONENT OUTPUTS STRAIGHT TO A PORT. USE HANDSHAKE SIGNAL.
+component HA_vhdl port(
+    i_A: in STD_ULOGIC;
+    i_B: in STD_ULOGIC;
+    o_S: out STD_ULOGIC;
+    o_Cout: out STD_ULOGIC
+);
+end component;
+
+component FA_vhdl port(
+    i_A: in STD_ULOGIC;
+    i_B: in STD_ULOGIC;
+    i_Cin: in STD_ULOGIC;
+    o_S: out STD_ULOGIC;
+    o_Cout : out STD_ULOGIC
+);
+end component;
 begin
-HA: entity work.HA_vhdl Port map(
+HA: HA_vhdl Port map(
     i_A => i_A(0),
     i_B => i_B(0),
-    o_S => o_S(0),
+    o_S => w_Result(0),
     o_Cout => w_Carry(0)
 );
 FA_GEN: for i in 1 to 3 generate
-FA_ADD: entity work.FA_vhdl port map
-(
-    i_A => i_A(i),
-    i_B => i_B(i),
-    i_Cin => w_Carry(i - 1),
-    o_S => o_S(i),
-    o_Cout => w_Carry(i)
-);
+    FA_ADD: FA_vhdl port map
+    (
+        i_A => i_A(i),
+        i_B => i_B(i),
+        i_Cin => w_Carry(i - 1),
+        o_S => w_Result(i),
+        o_Cout => w_Carry(i)
+    );
 end generate FA_GEN;
+o_S <= w_Result;
 o_Cout <= w_Carry(3);
+
 end Structural;
 
 architecture Behavioral of rippleCarryAdder_vhdl is
-
+signal w_Result: STD_ULOGIC_VECTOR(4 downto 0) := (others => '0');
 begin
+    w_Result(4 downto 0) <= std_ulogic_vector(resize(unsigned(i_A), w_Result'length) + resize(unsigned(i_B), w_Result'length)) ; --to_unsigned does NOT work for std_logic types. Cast using unsigned. a
+    o_S <= w_Result(3 downto 0); --resize to allow for carry out bit.
+    o_Cout <= w_Result(4); 
 end Behavioral;
