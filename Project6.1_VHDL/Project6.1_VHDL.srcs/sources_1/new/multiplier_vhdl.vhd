@@ -28,8 +28,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+library UNISIM;
+use UNISIM.VComponents.all;
 
 entity multiplier_vhdl is
     Port ( i_A : in STD_ULOGIC_VECTOR (3 downto 0);
@@ -39,6 +39,7 @@ end multiplier_vhdl;
 
 architecture Structural of multiplier_vhdl is
 signal w_P: STD_ULOGIC_VECTOR(15 downto 0);
+signal w_Interim: std_ulogic_vector(7 downto 0); 
 signal w_Internal: STD_ULOGIC_VECTOR(13 downto 0);
 begin
 
@@ -60,12 +61,12 @@ w_P(14) <= i_A(2) and i_B(3);
 w_P(15) <= i_A(3) and i_B(3);
 
 
-o_Result(0) <= w_P(0);
+w_Interim(0) <= w_P(0);
 
 HA_00: entity work.HA_vhdl port map(
     i_A => w_P(1),
     i_B => w_P(4),
-    o_S => o_Result(1),
+    o_S => w_Interim(1),
     o_Cout => w_Internal(0)
 ); 
 
@@ -95,7 +96,7 @@ HA_01: entity work.HA_vhdl port map(
 HA_10: entity work.HA_vhdl port map(
     i_A => w_Internal(1),
     i_B => w_Internal(0),
-    o_S => o_Result(2),
+    o_S => w_Interim(2),
     o_Cout => w_Internal(7)
 ); 
 
@@ -123,7 +124,7 @@ FA_12: entity work.FA_vhdl port map(
     o_Cout => w_Internal(13)
 );
 
-FINAL_ADDER: entity work.rippleCarryAdder_vhdl port map(
+FINAL_ADDER: entity work.rippleCarryAdder_vhdl(Structural) port map(
     i_A(0) => w_Internal(8), --NOTE Port assignment must be contiguous (i.e assign ALL of port A then assign port B, etc.)
     i_A(1) => w_Internal(10),
     i_A(2) => w_Internal(12),   
@@ -132,10 +133,10 @@ FINAL_ADDER: entity work.rippleCarryAdder_vhdl port map(
     i_B(1) => w_Internal(9),
     i_B(2) => w_Internal(11),
     i_B(3) => w_P(15),
-    
-    
-    
-    o_S => o_Result(6 downto 3),
-    o_Cout => o_Result(7)
+    i_Subtract => '0',
+    o_S => w_Interim(6 downto 3),
+    o_ERR => w_Interim(7)
 ) ;
+
+o_Result <= w_Interim;
 end Structural;

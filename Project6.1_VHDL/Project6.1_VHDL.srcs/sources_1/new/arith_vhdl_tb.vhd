@@ -72,25 +72,26 @@ comparator_uut_behav: entity work.comparator_vhdl(Behavioral) port map(
  o_EQO => w_EQO_Behav
 );
 
-adder_uut_struct: entity work.rippleCarryAdder_vhdl(Structural) port map (
- i_A => r_A_Add,
- i_B => r_B_Add,
- o_S => w_S_Add_Struct,
- o_Cout => w_Cout_Add_Struct
-);
+--adder_uut_struct: entity work.rippleCarryAdder_vhdl(Structural) port map (
+-- i_A => r_A_Add,
+-- i_B => r_B_Add,
+-- o_S => w_S_Add_Struct,
+-- o_Cout => w_Cout_Add_Struct
+--);
 
-adder_uut_behav: entity work.rippleCarryAdder_vhdl(Behavioral) port map (
- i_A => r_A_Add,
- i_B => r_B_Add,
- o_S => w_S_Add_Behav,
- o_Cout => w_Cout_Add_Behav
-);
+--adder_uut_behav: entity work.rippleCarryAdder_vhdl(Behavioral) port map (
+-- i_A => r_A_Add,
+-- i_B => r_B_Add,
+-- o_S => w_S_Add_Behav,
+-- o_Cout => w_Cout_Add_Behav
+--);
 
 multiplier_uut: entity work.multiplier_vhdl port map(
     i_A => r_A_Mul,
     i_B => r_B_Mul,
     o_Result => w_Mul_Result
 );
+
 --testcmp: process
 --begin
 --    for i in 0 to 15 loop
@@ -122,23 +123,23 @@ assert (w_LTO_Behav = '1') report "Less than test(Behavioral) failed." severity 
 wait;
 end process qtestcmp;
 
-qtestadd: process
-begin
-    r_A_Add <= (0 => '1',others => '0');
-    r_B_Add <= (1 => '1',others => '0');
-    wait for 20 ns;
-    assert ((to_integer(unsigned(w_S_Add_Struct)) = 3) and (w_Cout_Add_Struct = '0')) report "Add test failed(No carry out - Structural)" severity failure;
-    assert ((to_integer(unsigned(w_S_Add_Behav)) = 3) and (w_Cout_Add_Behav = '0')) report "Add test failed(No carry out - Behavioral)" severity failure;
-    wait for 20 ns;
-    r_A_Add <= (others => '1'); --15 + 1
-    wait for 20 ns;
-    r_B_Add <= (0 => '1',others => '0');
-    wait for 20 ns;
-    assert ((to_integer(unsigned(w_S_Add_Struct)) = 0) and (w_Cout_Add_Struct = '1')) report "Add test failed(Carry out - Structural)" severity failure;
-    assert ((to_integer(unsigned(w_S_Add_Behav)) = 0) and (w_Cout_Add_Behav = '1')) report "Add test failed(Carry out - Behavioral)" severity failure;
-    wait;
+--qtestadd: process
+--begin
+--    r_A_Add <= (0 => '1',others => '0');
+--    r_B_Add <= (1 => '1',others => '0');
+--    wait for 20 ns;
+--    assert ((to_integer(unsigned(w_S_Add_Struct)) = 3) and (w_Cout_Add_Struct = '0')) report "Add test failed(No carry out - Structural)" severity failure;
+--    assert ((to_integer(unsigned(w_S_Add_Behav)) = 3) and (w_Cout_Add_Behav = '0')) report "Add test failed(No carry out - Behavioral)" severity failure;
+--    wait for 20 ns;
+--    r_A_Add <= (others => '1'); --15 + 1
+--    wait for 20 ns;
+--    r_B_Add <= (0 => '1',others => '0');
+--    wait for 20 ns;
+--    assert ((to_integer(unsigned(w_S_Add_Struct)) = 0) and (w_Cout_Add_Struct = '1')) report "Add test failed(Carry out - Structural)" severity failure;
+--    assert ((to_integer(unsigned(w_S_Add_Behav)) = 0) and (w_Cout_Add_Behav = '1')) report "Add test failed(Carry out - Behavioral)" severity failure;
+--    wait;
 
-end process qtestadd;
+--end process qtestadd;
 
 qtestmul: process
 begin

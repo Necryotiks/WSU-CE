@@ -1,7 +1,7 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto a09982dbd0fe4aa69b3e45958101a37a --incr --debug all --rangecheck --relax --mt 8 -L xil_defaultlib -L secureip --snapshot arith_vhdl_tb_behav xil_defaultlib.arith_vhdl_tb -log elaborate.log 
-Using 8 slave threads.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto a09982dbd0fe4aa69b3e45958101a37a --incr --debug all --rangecheck --mt 2 -L xil_defaultlib -L secureip --snapshot arith_vhdl_tb_behav xil_defaultlib.arith_vhdl_tb -log elaborate.log 
+Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
@@ -11,14 +11,13 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
 Compiling architecture behavioral of entity xil_defaultlib.cmp_bitslice [cmp_bitslice_default]
 Compiling architecture structural of entity xil_defaultlib.comparator_vhdl [comparator_vhdl_default_uniq_0]
 Compiling architecture behavioral of entity xil_defaultlib.comparator_vhdl [comparator_vhdl_default_uniq_1]
-Compiling architecture behavioral of entity xil_defaultlib.FA_vhdl [fa_vhdl_default]
 Compiling architecture behavioral of entity xil_defaultlib.HA_vhdl [ha_vhdl_default]
-Compiling architecture structural of entity xil_defaultlib.rippleCarryAdder_vhdl [ripplecarryadder_vhdl_default_un...]
-Compiling architecture behavioral of entity xil_defaultlib.rippleCarryAdder_vhdl [ripplecarryadder_vhdl_default_un...]
-Compiling architecture behavioral of entity xil_defaultlib.rippleCarryAdder_vhdl [ripplecarryadder_vhdl_default_un...]
+Compiling architecture behavioral of entity xil_defaultlib.FA_vhdl [fa_vhdl_default]
+Compiling architecture structural of entity xil_defaultlib.rippleCarryAdder_vhdl [ripplecarryadder_vhdl_default]
 Compiling architecture structural of entity xil_defaultlib.multiplier_vhdl [multiplier_vhdl_default]
 Compiling architecture null_arch of entity xil_defaultlib.arith_vhdl_tb
 Built simulation snapshot arith_vhdl_tb_behav
