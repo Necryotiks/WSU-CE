@@ -78,11 +78,3 @@ o_S <= w_Result;
 o_Bout <= w_Borrow(3);
 
 end Structural;
-
-architecture Behavioral of rippleBorrowSubtractor_vhdl is
-signal w_Result: STD_ULOGIC_VECTOR(4 downto 0) := (others => '0');
-begin
-    w_Result(4 downto 0) <= std_ulogic_vector(resize(unsigned(i_A), w_Result'length) - resize(unsigned(i_B), w_Result'length)) ; --to_unsigned does NOT work for std_logic types. Cast using unsigned. a
-    o_S <= w_Result(3 downto 0); --resize to allow for carry out bit.
-    o_Bout <= w_Result(4); 
-end Behavioral;

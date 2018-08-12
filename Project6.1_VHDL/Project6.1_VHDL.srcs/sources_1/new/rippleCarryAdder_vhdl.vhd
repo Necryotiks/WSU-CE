@@ -83,15 +83,17 @@ end Structural;
 architecture Behavioral of rippleCarryAdder_vhdl is
 signal w_Result: STD_ULOGIC_VECTOR(4 downto 0) := (others => '0');
 begin
-process(i_Subtract,i_A,i_B)
+add:process(i_Subtract,i_A,i_B)
 begin
     if i_Subtract = '0' then
-        w_Result(4 downto 0) <= std_ulogic_vector(resize(unsigned(i_A), w_Result'length) + resize(unsigned(i_B), w_Result'length)) ; --to_unsigned does NOT work for std_logic types. Cast using unsigned. a
-        o_S <= w_Result(3 downto 0); --resize to allow for carry out bit.
+        w_Result(4 downto 0) <= std_ulogic_vector(resize(unsigned(i_A), w_Result'length) + resize(unsigned(i_B), w_Result'length)) ; --to_unsigned does NOT work for std_logic types. Cast using unsigned. 
     else
         w_Result(4 downto 0) <= std_ulogic_vector(resize(unsigned(i_A), w_Result'length) - resize(unsigned(i_B), w_Result'length)) ; --to_unsigned does NOT work for std_logic types. Cast using unsigned. a
-        o_S <= w_Result(3 downto 0); --resize to allow for carry out bit.
+        if (i_B > i_A) then
+            w_Result(4) <= '1';
+        end if;  
     end if;
+    o_S <= w_Result(3 downto 0); --resize to allow for carry out bit
     o_ERR <= w_Result(4);
-end process; 
+end process add; 
 end Behavioral;

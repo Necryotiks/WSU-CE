@@ -41,6 +41,7 @@ architecture Structural of multiplier_vhdl is
 signal w_P: STD_ULOGIC_VECTOR(15 downto 0);
 signal w_Interim: std_ulogic_vector(7 downto 0); 
 signal w_Internal: STD_ULOGIC_VECTOR(13 downto 0);
+signal w_Carry: STD_ULOGIC_VECTOR(3 downto 0);
 begin
 
 w_P(0) <= i_A(0) and i_B(0);
@@ -124,19 +125,48 @@ FA_12: entity work.FA_vhdl port map(
     o_Cout => w_Internal(13)
 );
 
-FINAL_ADDER: entity work.rippleCarryAdder_vhdl(Structural) port map(
-    i_A(0) => w_Internal(8), --NOTE Port assignment must be contiguous (i.e assign ALL of port A then assign port B, etc.)
-    i_A(1) => w_Internal(10),
-    i_A(2) => w_Internal(12),   
-    i_A(3) => w_Internal(13),
-    i_B(0) => w_Internal(7),
-    i_B(1) => w_Internal(9),
-    i_B(2) => w_Internal(11),
-    i_B(3) => w_P(15),
-    i_Subtract => '0',
-    o_S => w_Interim(6 downto 3),
-    o_ERR => w_Interim(7)
-) ;
+HA_FIN: entity work.HA_vhdl port map(
+i_A => w_Internal(8),
+i_B => w_Internal(7),
+o_S => w_Interim(3),
+o_Cout => w_Carry(0)
+
+);
+FA_FIN_0: entity work.FA_vhdl port map(
+i_A => w_Internal(10),
+i_B => w_Internal(9),
+i_Cin => w_Carry(0),
+o_S => w_Interim(4),
+o_Cout => w_Carry(1)
+);
+FA_FIN_1: entity work.FA_vhdl port map(
+i_A => w_Internal(12),
+i_B => w_Internal(11),
+i_Cin => w_Carry(1),
+o_S => w_Interim(5),
+o_Cout => w_Carry(2)
+);
+FA_FIN_2: entity work.FA_vhdl port map(
+i_A => w_Internal(13),
+i_B => w_P(15),
+i_Cin => w_Carry(2),
+o_S => w_Interim(6),
+o_Cout => w_Interim(7)
+);
+
+--FINAL_ADDER: entity work.rippleCarryAdder_vhdl(Structural) port map(
+    --i_A(0) => w_Internal(8), --NOTE Port assignment must be contiguous (i.e assign ALL of port A then assign port B, etc.)
+   -- i_A(1) => w_Internal(10),
+   -- i_A(2) => w_Internal(12),   
+   -- i_A(3) => w_Internal(13),
+   -- i_B(0) => w_Internal(7),
+   -- i_B(1) => w_Internal(9),
+  --  i_B(2) => w_Internal(11),
+  --  i_B(3) => w_P(15),
+  --  i_Subtract => '0',
+  --  o_S => w_Interim(6 downto 3),
+  --  o_ERR => w_Interim(7)
+--) ;
 
 o_Result <= w_Interim;
 end Structural;
