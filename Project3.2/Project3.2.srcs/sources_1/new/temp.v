@@ -27,7 +27,7 @@ input [7:0] sw
 
 //sw[0] = A,sw[1] = B,sw[2] = C,sw[3] = D,sw[4]=E,sw[5] =F,sw[6]=G,sw[7] =H
 
-///FINISH LATER
-assign led = (sw[7] & ~sw[6] & ~sw[5] & ~sw[4]) | (sw[7] & ~sw[6] & ~sw[5] & ~sw[3]) |
-(sw[7] & ~sw[6] & ~sw[5] & ~sw[2] & ~sw[1]) | (sw[7] & ~sw[6] & ~sw[5] & ~sw[2] & ~sw[0]);
+///Between 160 and 186 
+assign led = (sw[7] & ~sw[6] & sw[5] & ~sw[4]) | (sw[7] & ~sw[6] & sw[5] & ~sw[3]) |
+(sw[7] & ~sw[6] & sw[5] & ~sw[2] & ~sw[1]) | (sw[7] & ~sw[6] & sw[5] & ~sw[2] & ~sw[0]);
 endmodule
