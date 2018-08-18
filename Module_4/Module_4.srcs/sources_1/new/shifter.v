@@ -29,7 +29,8 @@ input En,
 output reg [7:0] Y
 );
 //only difference betwenn rotate and shift is fill signal
-always @ (I, En,D,F,R)
+//FIX THIS
+always @ (*)
 begin
 if (En == 0) //No Action
     Y = I;
