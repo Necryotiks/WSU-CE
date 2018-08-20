@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log SIPO.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SIPO.tcl
+EAStep vivado -log PISO_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source PISO_wrapper.tcl

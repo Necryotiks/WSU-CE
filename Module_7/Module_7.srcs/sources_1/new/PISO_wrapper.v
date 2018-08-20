@@ -35,7 +35,7 @@ always @ (posedge i_CLK)
 begin
     counter1 <= counter1 + 1;
 end
-assign r_CLK = counter1[27];    
+assign r_CLK = counter1[24];    
 PISO PISO_0(
 .i_SW(i_SW),
 .i_SFT_LD(i_SFT_LD[0]),
