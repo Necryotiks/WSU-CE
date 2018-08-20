@@ -1,3 +1,7 @@
+#Clock
+set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { i_CLK }]; #IO_L13P_T2_MRCC_35 Schematic=SYSCLK
+create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 4} [get_ports { i_CLK }];
+
 #LEDS
 set_property -dict { PACKAGE_PIN N20   IOSTANDARD LVCMOS33 } [get_ports { o_LED[0] }]; #IO_L14P_T2_SRCC_34 Schematic=LD0
 set_property -dict { PACKAGE_PIN P20   IOSTANDARD LVCMOS33 } [get_ports { o_LED[1] }]; #IO_L14N_T2_SRCC_34 Schematic=LD1
@@ -22,7 +26,8 @@ set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { o_LED[
 #set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { o_LED[15] }]; #IO_L7N_T1_34 Schematic=LD7_B
 
 #Buttons
-set_property -dict { PACKAGE_PIN W14   IOSTANDARD LVCMOS33 } [get_ports { i_CLK }]; #IO_L8P_T1_34 Schematic=BTN0
+set_property -dict { PACKAGE_PIN W14   IOSTANDARD LVCMOS33 } [get_ports { i_RST }]; #IO_L8P_T1_34 Schematic=BTN0
+#set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { i_CLK }]; #IO_L23P_T3_35 Schematic=BTN3
 
 #Switches
 set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { i_SDI }]; #IO_L19N_T3_VREF_34 Schematic=SW0
