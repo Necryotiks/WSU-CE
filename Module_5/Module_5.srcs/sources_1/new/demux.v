@@ -32,6 +32,7 @@ case({En,I1,I0})
     3'b101: {Y3,Y2,Y1,Y0} = 4'b0010;
     3'b110: {Y3,Y2,Y1,Y0} = 4'b0100; 
     3'b111: {Y3,Y2,Y1,Y0} = 4'b1000;
+    default: {Y3,Y2,Y1,Y0} = 4'b0000;
 endcase 
 end
 endmodule

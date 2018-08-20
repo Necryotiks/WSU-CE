@@ -32,10 +32,10 @@ module auto_controller(
     
     always@(*)
     begin
-        if ((i_CL | i_OL ) | (i_OT & ~i_OL) | (i_CT & i_OL))
-            o_WARN[1:0] <= 2'b11;
-        else if ((i_CT & i_CL) | (i_OT & i_OL) | (i_CT & i_OT) | (i_CL & i_OL & i_CT & ~i_OL))
+        if ((i_CT & i_CL) | (i_OT & i_OL) | (i_CT & i_OT) | ((i_CL & i_OL) & (i_CT & ~i_OL)))
             o_WARN[1:0] <= 2'b01;
+        else if ((i_CL | i_OL ) | (i_OT & ~i_OL) | (i_CT & i_OL))
+            o_WARN[1:0] <= 2'b11;
         else
             o_WARN[1:0] = 2'b00;
     end

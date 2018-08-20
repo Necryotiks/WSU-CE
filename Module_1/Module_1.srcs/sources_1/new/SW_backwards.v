@@ -43,9 +43,20 @@ module SW_backwards(
     //assign led[14] = sw[0];
     //assign led[13] = sw[0];
     
-  assign o_LED[3:0] = i_SW[7:4];
-  assign o_LED[6:4] = i_SW[3];
-  assign o_LED[9:7] = i_SW[2];
-  assign o_LED[12:10] = i_SW[1];
-  assign o_LED[15:13] = i_SW[0];
+  assign o_LED[0] = i_SW[7];
+  assign o_LED[1] = i_SW[6];
+  assign o_LED[2] = i_SW[5];
+  assign o_LED[3] = i_SW[4];
+  assign o_LED[6] = i_SW[3];
+  assign o_LED[5] = i_SW[3];
+  assign o_LED[4] = i_SW[3];
+  assign o_LED[9] = i_SW[2];
+  assign o_LED[8] = i_SW[2];
+  assign o_LED[7] = i_SW[2];
+  assign o_LED[12] = i_SW[1];
+  assign o_LED[11] = i_SW[1];
+  assign o_LED[10] = i_SW[1];
+  assign o_LED[15] = i_SW[0];
+  assign o_LED[14] = i_SW[0];
+  assign o_LED[13] = i_SW[0];
 endmodule

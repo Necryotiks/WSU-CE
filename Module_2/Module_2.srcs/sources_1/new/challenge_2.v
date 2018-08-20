@@ -25,7 +25,7 @@ module challenge_2(
     output reg [1:0] o_LED
     );
     
-      always@(*)
+    always@(*)
     begin
       if(i_SW[3:0] == 12 | i_SW[3:0] == 10 | i_SW[3:0] == 9 | i_SW[3:0] == 6 | i_SW[3:0] == 5 | i_SW[3:0] == 3) // is dumb, why does verilog allow this.
           o_LED[0] = 1'b1;
@@ -37,12 +37,11 @@ module challenge_2(
     always@(*)
     begin
       casez(i_SW)
-          8'b0111????: o_LED[1] = 1'b1;  
-          8'b1011????: o_LED[1] = 1'b1; 
-          8'b1101????: o_LED[1] = 1'b1; 
-          8'b1110????: o_LED[1] = 1'b1; 
+          8'b0001????: o_LED[1] = 1'b1;  
+          8'b0010????: o_LED[1] = 1'b1; 
+          8'b0100????: o_LED[1] = 1'b1; 
+          8'b1000????: o_LED[1] = 1'b1; 
           default: o_LED[1] = 0;  
       endcase
-      o_LED[3:2] = 2'b00;
     end
 endmodule

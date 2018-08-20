@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1534462114">
-  <File Type="PA-TCL" Name="challenge_1.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="challenge_1_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="challenge_1_reports.tcl"/>
-  <File Type="RDS-RDS" Name="challenge_1.vds"/>
-  <File Type="RDS-UTIL" Name="challenge_1_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="challenge_1_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="challenge_1.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="challenge_1_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="challenge_1_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1534741809">
+  <File Type="PA-TCL" Name="SW_backwards.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="SW_backwards_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="SW_backwards_reports.tcl"/>
+  <File Type="RDS-RDS" Name="SW_backwards.vds"/>
+  <File Type="RDS-UTIL" Name="SW_backwards_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="SW_backwards_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="SW_backwards.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="SW_backwards_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="SW_backwards_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/SW_backwards.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/challenge_1.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -34,17 +42,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/SW_backwards.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="challenge_1"/>
+      <Option Name="TopModule" Val="SW_backwards"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -65,13 +65,13 @@
     </File>
     <File Path="$PSRCDIR/constrs_1/new/SW_backwards_cons.xdc">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/constrs_1/new/challenge_1_cons.xdc">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
@@ -81,9 +81,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
