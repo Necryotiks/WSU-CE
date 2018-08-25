@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log SW_backwards.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SW_backwards.tcl
+EAStep vivado -log ssd.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ssd.tcl

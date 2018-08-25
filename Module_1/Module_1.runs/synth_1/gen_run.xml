@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1534741809">
-  <File Type="PA-TCL" Name="SW_backwards.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="SW_backwards_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="SW_backwards_reports.tcl"/>
-  <File Type="RDS-RDS" Name="SW_backwards.vds"/>
-  <File Type="RDS-UTIL" Name="SW_backwards_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="SW_backwards_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="SW_backwards.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="SW_backwards_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="SW_backwards_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1535185502">
+  <File Type="PA-TCL" Name="ssd.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ssd_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="ssd_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ssd.vds"/>
+  <File Type="RDS-UTIL" Name="ssd_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ssd_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ssd.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ssd_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ssd_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/ssd.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/SW_backwards.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -44,7 +52,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="SW_backwards"/>
+      <Option Name="TopModule" Val="ssd"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -65,6 +73,7 @@
     </File>
     <File Path="$PSRCDIR/constrs_1/new/SW_backwards_cons.xdc">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
