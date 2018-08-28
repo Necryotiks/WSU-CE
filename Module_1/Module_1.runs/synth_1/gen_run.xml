@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1535185502">
+<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1535487173">
   <File Type="PA-TCL" Name="ssd.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="ssd_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ssd_reports.tcl"/>
@@ -57,6 +57,12 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/ssd_cons.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/constrs_1/new/Project_demo_1_cons.xdc">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
@@ -64,14 +70,14 @@
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/constrs_1/new/SW_forwards_cons.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/SW_backwards_cons.xdc">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/constrs_1/new/SW_backwards_cons.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/SW_forwards_cons.xdc">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -86,6 +92,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/ssd_cons.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

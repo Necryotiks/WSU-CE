@@ -29,7 +29,7 @@ module ssd(
     assign o_CATHODE = 7'b0000000;
  always @(*)
    begin
-     case (btn)
+     case (i_BTN)
        4'b0001: o_ANODE = 4'b1110;//This is a Common Anode display.
        4'b0010: o_ANODE = 4'b1101;//LOW Voltage must be applied to both  
        4'b0100: o_ANODE = 4'b1011;//o_CATHODEs and i_ANODEs in order to illminate a
