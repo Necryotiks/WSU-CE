@@ -22,11 +22,12 @@
 
 module ssd(
     output reg [3:0] o_ANODE,
-    output [6:0] o_CATHODE,
-    input [3:0] i_BTN
+    output [7:0] o_CATHODE,
+    input [3:0] i_BTN,
+    input [7:0] i_SW
     );
 
-    assign o_CATHODE = 7'b0000000;
+assign o_CATHODE = i_SW;
  always @(*)
    begin
      case (i_BTN)
@@ -37,4 +38,5 @@ module ssd(
        default : o_ANODE = 4'b1111; 
      endcase
    end
+ 
 endmodule
