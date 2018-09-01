@@ -33,14 +33,14 @@ clock_divider uut(
 );
 
     always
-        #5 r_CLK = ~r_CLK; //5 ns high, then 5 ns low
+        #20 r_CLK = ~r_CLK; //5 ns high, then 5 ns low
 
     initial begin
         // Initialize Inputs
-        r_CLK = 0;
-        r_RST = 1;
+        r_CLK = 1'b0;
+        r_RST = 1'b1;
 
-        #100 r_RST = 0;
+        #10 r_RST = 1'b0;
 
         // Wait 100 ns for global reset to finish
         #100;
