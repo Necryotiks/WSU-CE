@@ -27,12 +27,8 @@ module clock_divider(
     );
     
     genvar i;
-    wire w_CLK;
-    wire w_RST;
     wire [26:0] w_DIN;
     wire [26:0] w_CLKDIV;
-    assign w_CLK = i_CLK;
-    assign w_RST = i_RST;
     
     dff dff_in(
     .i_CLK(i_CLK),
@@ -43,7 +39,7 @@ module clock_divider(
     
     generate
         for(i = 1; i< 27; i = i + 1)
-        begin
+        begin:dff_ist
         dff dff_x(
         .i_CLK(w_CLKDIV[i - 1]),
         .i_RST(i_RST),
@@ -53,5 +49,5 @@ module clock_divider(
         end
     endgenerate
     assign w_DIN = ~w_CLKDIV;
-    assign o_LED = w_CLKDIV[25];
+    assign o_LED = w_CLKDIV[26];
 endmodule
