@@ -27,7 +27,7 @@ module dff(
     output reg o_Q
     );
     
-    always@(posedge(i_CLK))
+    always@(posedge(i_CLK),posedge(i_RST)) //DONT FORGET THE RESET SIGNAL IN SENSITIVITY LIST.
     begin
         if(i_RST == 1)
             o_Q <= 1'b0;

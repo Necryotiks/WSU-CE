@@ -38,7 +38,7 @@ module challenge_3(
         flag = 0;
         b_flag = 0;
         for(i = 0; i < 8; i = i+1)
-            if (i_SW[i] == 1)
+            if (i_SW[i] == 1) //count active wires in bus.
                 flag = flag + 1;
         for(k =0;k<4;k= k+1)
                if (i_BTN[k] == 1)
