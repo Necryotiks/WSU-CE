@@ -1,0 +1,23 @@
+18:04:31 **** Auto Build of configuration Debug for project Project_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/P2.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P2.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P2.d" -MT"src/P2.o" -o "src/P2.o" "../src/P2.S"
+'Finished building: ../src/P2.S'
+' '
+'Building target: Project_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_2_bsp/ps7_cortexa9_0/lib -o "Project_2.elf"  ./src/P2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Project_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Project_2.elf  |tee "Project_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19224	   1144	  22568	  42936	   a7b8	Project_2.elf
+'Finished building: Project_2.elf.size'
+' '
+
+18:04:32 Build Finished (took 493ms)
+
