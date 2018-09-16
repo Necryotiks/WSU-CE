@@ -34,13 +34,13 @@ input  i_I3, //LIVE
 input [1:0] i_Sel,
 output reg [3:0] o_Y
     );
-    //FINISH
+
 always@(*)
 begin
     case(i_Sel)
         2'b00: 
         begin
-        o_Y[0] = i_I0;
+        o_Y[0] = i_I0; //o-Y <= (0 => i_I0, others => '0');
         o_Y[3:1] = 3'b000;
         end
         2'b01:

@@ -27,16 +27,16 @@ module counter_wrapper(
     );
     
     wire [27:0] w_CLK_WIRE;
-    
+    wire [3:0] w_OUT;
     counter_28bit c28(
     .i_CLK(i_CLK),
     .i_RST(i_RST),
     .o_Q(w_CLK_WIRE)
     );
     counter_4bit c4(
-    .i_CLK(w_CLK_WIRE[3:0]),
+    .i_CLK(w_CLK_WIRE[27]),
     .i_RST(i_RST),
-    .o_Q(o_LED)
+    .o_Q(w_OUT)
     );
-    
+    assign o_LED = w_OUT;
 endmodule

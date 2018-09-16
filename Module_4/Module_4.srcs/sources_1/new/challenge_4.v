@@ -30,16 +30,13 @@ output reg o_LED
     
 always@(*)
 begin
-    case({i_SW_3,i_SW_2,i_SW_1,i_SW_0})
+    casez({i_SW_3,i_SW_2,i_SW_1,i_SW_0})
         4'b0011: o_LED = 1'b1;
-        4'b0100: o_LED = 1'b1;
-        4'b1100: o_LED = 1'b1;
-        4'b1001: o_LED = 1'b1;
-        4'b1010: o_LED = 1'b1;
-        4'b1101: o_LED = 1'b1;
+        4'b01?0: o_LED = 1'b1;
+        4'b10?0: o_LED = 1'b1;
+        4'b1?01: o_LED = 1'b1;
         default: o_LED = 1'b0;
     endcase
-        
 end 
 
 endmodule

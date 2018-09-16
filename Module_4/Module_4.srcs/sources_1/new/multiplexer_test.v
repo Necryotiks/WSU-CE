@@ -21,7 +21,7 @@
 
 
 module multiplexer_test(
-input [7:0] i_I0, //two bits to light up 2 leds.
+input [7:0] i_I0, 
 input [7:0] i_I1,
 input [7:0] i_I2, //SIM
 input [7:0] i_I3,
@@ -46,8 +46,8 @@ output reg [7:0] o_Y
             2'b11: 
             begin
             o_Y = i_I3;
-            
             end
         endcase
-    end   
+    end
+       
 endmodule
