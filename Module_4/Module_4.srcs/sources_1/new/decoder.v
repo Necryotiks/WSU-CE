@@ -32,7 +32,7 @@ module decoder(
     
 //    always @ (*)
 //    begin
-//        case (i_SW)//Takes a number N and outputs 2^N
+//        casez(i_SW)//Takes a number N and outputs 2^N
 //            2'b00:
 //                begin
 //                if(i_BTN[0] == 1)
