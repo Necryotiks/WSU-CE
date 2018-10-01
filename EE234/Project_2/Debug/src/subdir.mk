@@ -7,13 +7,16 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 S_UPPER_SRCS += \
-../src/P2.S 
+../src/P2.S \
+../src/RGB.S 
 
 OBJS += \
-./src/P2.o 
+./src/P2.o \
+./src/RGB.o 
 
 S_UPPER_DEPS += \
-./src/P2.d 
+./src/P2.d \
+./src/RGB.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
