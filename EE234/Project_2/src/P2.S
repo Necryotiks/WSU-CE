@@ -1,10 +1,12 @@
 /*
- * P2.S
+ * PWM.S
  *
- *  Created on: Sep 1, 2018
- *      Author: Sergaljerk
+ *  Created on: Sep 15, 2018
+ *      Author: Necryotiks
  */
 
+
+/*
 .text
 .global main
 
@@ -19,26 +21,31 @@ LDR r12, =RGB_ADDR
 bl init_PWM
 bl init_PWM_PERIOD
 MOV r2, #1000 		@ r2 holds max pulse width
-MOV r1, #0			@ r1 holds current pulse width
+MOV r1, #999			@ r1 holds current pulse width
+MOV r10,#0
 MOVw r4, #0xFFFF		@ r3 holds loop delay count
 MOVt r4, #0x000F
 
-   /*Create an always loop to ramp up LED1*/
+   //Create an always loop to ramp up LED1
 
 led_loop:
 bl set_DC		@ Pass r1 to set pulse width
 
 bl set_delay		@ Pass r4 to delay loop
-ADDS r1, r1, #1	 	@ inc r1
-CMP r1, r2
+//ADDS r1, r1, #1	 	@ inc r1
+SUBS r1, r1, #1	 	@ inc r1
+CMP r1, r10
 BNE led_loop 		@ restart loop when r1==r2
-MOV r1, #0			@ reset r1 to 0 and restart loop
+MOV r1, #999			@ reset r1 to 0 and restart loop
 b led_loop
 
 
 init_PWM:
-MOV r1, #0x1F
-STR r1, [r12] //enable rgb
+MOV r1, #0x00 // reset rgbs
+STR r1, [r12,#0x04] //rgb0, white
+STR r1, [r12,#0x08] //rgb1, red
+STR r1, [r12,#0x0C] //rgb2, green
+STR r1, [r12,#0x10] //rgb3, blue
 MOV r1,#0x0
 STR r1, [r0] //Reset LEDs
 MOV r1, #0x1F
@@ -55,20 +62,15 @@ STR r1,[r0,#0x0C] //set duty cyle as 0 for now
 MOV r1, #1000
 STR r1,[r0,#0x20] // define period value as 1000 for led 1
 MOV r1, #0
-STR r1,[r0,#0x10] //set duty cyle as 0 for now
+STR r1,[r0,#0x10] //set duty cyle as 0
 MOV r1, #1000
 STR r1,[r0,#0x24] // define period value as 1000 for led 2
 MOV r1, #0
-STR r1,[r0,#0x14] //set duty cyle as 0 for now
+STR r1,[r0,#0x14] //set duty cyle as 0
 MOV r1, #1000
 STR r1,[r0,#0x28] // define period value as 1000 for led 3
 MOV r1, #0
-STR r1,[r0,#0x18] //set duty cyle as 0 for now
-rgb_ONLY:
-MOV r1, #1000
-STR r1,[r12,#0x44] // define period value as 1000 for led 5(red)
-MOV r1, #0
-STR r1,[r12,#0x14] //set duty cyle as 0 for now
+STR r1,[r0,#0x18] //set duty cyle as 0
 bx lr
 
 set_DC:
@@ -76,13 +78,14 @@ STR r1, [r0,#0x0C]
 STR r1, [r0,#0x10]
 STR r1, [r0,#0x14]
 STR r1, [r0,#0x18]
-STR r1, [r12,#0x14]
 bx lr
 
 set_delay:
-STMDB r13!, {r1,r4} //writes to stack. decrements then pushes.
+STMDB r13!, {r4} //writes to stack. decrements then pushes.
 subloop:
 SUBS r4, r4, #1	@ decrement r4 until r4 ==0
 BNE subloop
-LDMIA r13!, {r1,r4} //restores from stack. pops then increments.
+LDMIA r13!, {r4} //restores from stack. pops then increments.
 bx lr
+*/
+
