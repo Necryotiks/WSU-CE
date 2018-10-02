@@ -21,45 +21,42 @@
 
 
 module mux_demux(
-        I0, I1, I2, I3, Y0, Y1, Y2, Y3,clk,TDATA
+    input [7:0] i_IN,
+    input i_CLK,
+    output [7:0] o_LED,
+    output o_TDATA
     );
     
-    input I3, I2, I1, I0,clk;
-    output Y0, Y1, Y2, Y3,TDATA;
+    
     
     // Structural Description of wrapper
-    wire sdata,S0,S1,t0,t1,t2,t3;
+    wire w_SDATA;
+    wire [2:0] w_SEL;
+    wire [7:0]w_TRANSFER;
     
     counter ck(
-    .clk(clk),
-    .Y0(S0),
-    .Y1(S1)
+    .clk(i_CLK),
+    .Y0(w_SEL[0]),
+    .Y1(w_SEL[1]),
+    .Y2(w_SEL[2])
     );
     
     mux input_mux (
-        .I3(I3),
-        .I2(I2),
-        .I1(I1),
-        .I0(I0),
-        .S1(S1),
-        .S0(S0),
-        .Y(sdata)
+      .i_Input(i_IN),
+      .i_Sel(w_SEL),
+      .o_Y(w_SDATA)
     );
     
     demux output_demux (
-        .En(sdata),
-        .I1(S1),
-        .I0(S0),
-        .Y0(t0),
-        .Y1(t1),
-        .Y2(t2),
-        .Y3(t3)
+        .i_En(w_SDATA),
+        .i_decInput(w_SEL),
+        .o_LED(w_TRANSFER)
     );
     
     latch output_latch(
-    .S({S1,S0}),
-    .I({t3,t2,t1,t0}),
-    .O({Y3,Y2,Y1,Y0})
+    .S(w_SEL),
+    .I(w_TRANSFER),
+    .O(o_LED)
     );
-    assign TDATA = sdata;
+    assign o_TDATA = w_SDATA;
 endmodule

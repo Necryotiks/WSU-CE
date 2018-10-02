@@ -21,14 +21,19 @@
 
 
 module mux(
-input I0, I1, I2, I3, S0, S1,
-output reg Y
+input [7:0] i_Input,
+input [2:0] i_Sel,
+output reg o_Y
 );
 always@(*)
-case({S1,S0})
-2'b00: Y = I0;
-2'b01: Y = I1;
-2'b10: Y = I2;
-2'b11: Y = I3;
+case(i_Sel)
+3'b000: o_Y = i_Input[0];
+3'b001: o_Y = i_Input[1];
+3'b010: o_Y = i_Input[2];
+3'b011: o_Y = i_Input[3];
+3'b100: o_Y = i_Input[4];
+3'b101: o_Y = i_Input[5];
+3'b110: o_Y = i_Input[6];
+3'b111: o_Y = i_Input[7];
 endcase
 endmodule

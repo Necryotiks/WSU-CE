@@ -21,18 +21,23 @@
 
 
 module demux(
-input En, I0, I1,
-output reg Y0, Y1, Y2, Y3
+input i_En,
+input [2:0] i_decInput, 
+output reg [7:0] o_LED
     );
 always@(*)
 begin
-case({En,I1,I0})
-    3'b000: {Y3,Y2,Y1,Y0} = 4'b0000;
-    3'b100: {Y3,Y2,Y1,Y0} = 4'b0001;
-    3'b101: {Y3,Y2,Y1,Y0} = 4'b0010;
-    3'b110: {Y3,Y2,Y1,Y0} = 4'b0100; 
-    3'b111: {Y3,Y2,Y1,Y0} = 4'b1000;
-    default: {Y3,Y2,Y1,Y0} = 4'b0000;
+case({i_En,i_decInput})
+    4'b0000: o_LED = 8'b00000000;
+    4'b1000: o_LED = 8'b00000001;
+    4'b1001: o_LED = 8'b00000010;
+    4'b1010: o_LED = 8'b00000100; 
+    4'b1011: o_LED = 8'b00001000;
+    4'b1100: o_LED = 8'b00010000;
+    4'b1101: o_LED = 8'b00100000;
+    4'b1110: o_LED = 8'b01000000;
+    4'b1111: o_LED = 8'b10000000;
+    default: o_LED = 8'b00000000;
 endcase 
 end
 endmodule

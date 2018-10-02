@@ -22,7 +22,7 @@
 
 module counter (
 	input clk,
-	output Y1, Y0
+	output Y2, Y1, Y0
 );
 
 reg [27:0] counter1;
@@ -32,6 +32,8 @@ begin
 	counter1 <= counter1 + 1;
 end
 
-assign Y1 = counter1[27];
-assign Y0 = counter1[26];
+assign Y2 = counter1[27];
+assign Y1 = counter1[26];
+assign Y0 = counter1[25];
+
 endmodule
