@@ -25,15 +25,15 @@ module counter (
 	output Y2, Y1, Y0
 );
 
-reg [27:0] counter1;
+reg [28:0] counter1;
 
 always @ (posedge clk)
 begin
 	counter1 <= counter1 + 1;
 end
 
-assign Y2 = counter1[27];
-assign Y1 = counter1[26];
-assign Y0 = counter1[25];
+assign Y2 = counter1[28];
+assign Y1 = counter1[27];
+assign Y0 = counter1[26];
 
 endmodule
