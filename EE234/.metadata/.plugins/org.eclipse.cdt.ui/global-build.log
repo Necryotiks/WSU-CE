@@ -1,4 +1,4 @@
-22:26:10 **** Build of project Project1_bsp ****
+23:12:54 **** Build of project P3_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -161,32 +161,7 @@ make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling xadcps"
 'Finished building libraries'
-22:27:14 **** Build of configuration Debug for project Project1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: Project1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project1_bsp/ps7_cortexa9_0/lib -o "Project1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project1.elf  |tee "Project1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19348	   1144	  22568	  43060	   a834	Project1.elf
-'Finished building: Project1.elf.size'
-' '
-22:27:20 **** Build of project Project_1_bsp ****
+23:13:56 **** Build of project PRO3_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -350,753 +325,463 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Compiling xadcps"
 'Finished building libraries'
 
-**** Build of configuration Debug for project Project_1 ****
+**** Build of configuration Debug for project PRO3 ****
 
-Nothing to build for project Project_1
-22:28:56 **** Auto Build of configuration Debug for project Project_1 ****
+Nothing to build for project PRO3
+23:15:28 **** Auto Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
+'Building file: ../src/d.S'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/d.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/d.d" -MT"src/d.o" -o "src/d.o" "../src/d.S"
+'Finished building: ../src/d.S'
 ' '
-'Building target: Project_1.elf'
+'Building target: PRO3.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-../../Project_1_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
-C:\Users\Sergaljerk\EE234\Project_1_bsp\ps7_cortexa9_0\libsrc\standalone_v6_7\src/xil-crt0.S:142: undefined reference to `main'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../PRO3_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\Sergaljerk\EE234\PRO3_bsp\ps7_cortexa9_0\libsrc\standalone_v6_7\src/xil-crt0.S:142: undefined reference to `main'
 collect2.exe: error: ld returned 1 exit status
-make: *** [Project_1.elf] Error 1
-22:29:25 **** Auto Build of configuration Debug for project Project_1 ****
+make: *** [PRO3.elf] Error 1
+23:16:01 **** Auto Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
+'Building file: ../src/d.S'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/d.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/d.d" -MT"src/d.o" -o "src/d.o" "../src/d.S"
+'Finished building: ../src/d.S'
 ' '
-'Building target: Project_1.elf'
+'Building target: PRO3.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19024	   1144	  22568	  42736	   a6f0	Project_1.elf
-'Finished building: Project_1.elf.size'
+  19376	   1144	  22568	  43088	   a850	PRO3.elf
+'Finished building: PRO3.elf.size'
 ' '
-22:32:59 **** Incremental Build of configuration Debug for project Project_1 ****
+23:16:06 **** Incremental Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-22:33:18 **** Incremental Build of configuration Debug for project Project_1 ****
+23:16:59 **** Auto Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for `main-build'.
-22:35:34 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
+'Building file: ../src/ttc.S'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
 ' '
-'Building target: Project_1.elf'
+'Building target: PRO3.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19028	   1144	  22568	  42740	   a6f4	Project_1.elf
-'Finished building: Project_1.elf.size'
+  19376	   1144	  22568	  43088	   a850	PRO3.elf
+'Finished building: PRO3.elf.size'
 ' '
-22:53:11 **** Incremental Build of configuration Debug for project Project_1 ****
+23:18:50 **** Auto Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
+'Building file: ../src/ttc.S'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-../src/P1.S: Assembler messages:
-../src/P1.S:22: Error: garbage following instruction -- `mov r5,#0x01#enables SSD'
-make: *** [src/P1.o] Error 1
-22:53:18 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
 ' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
+'Building target: PRO3.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19040	   1144	  22568	  42752	   a700	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-22:56:47 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19040	   1144	  22568	  42752	   a700	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-22:57:58 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19040	   1144	  22568	  42752	   a700	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-22:58:55 **** Auto Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19040	   1144	  22568	  42752	   a700	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:00:43 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19048	   1144	  22568	  42760	   a708	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:04:09 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19044	   1144	  22568	  42756	   a704	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:15:01 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19044	   1144	  22568	  42756	   a704	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:20:15 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-../src/P1.S: Assembler messages:
-../src/P1.S:32: Error: shift expression expected -- `lsr r3,r3,0x04'
-make: *** [src/P1.o] Error 1
-23:20:27 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-../src/P1.S: Assembler messages:
-../src/P1.S:32: Error: immediate expression requires a # prefix -- `lsr r3,0x04'
-make: *** [src/P1.o] Error 1
-23:21:16 **** Auto Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-../src/P1.S: Assembler messages:
-../src/P1.S:32: Error: immediate expression requires a # prefix -- `lsr r3,53,#0x04'
-make: *** [src/P1.o] Error 1
-23:21:35 **** Auto Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-../src/P1.S: Assembler messages:
-../src/P1.S:32: Error: immediate expression requires a # prefix -- `lsr r3,53#0x04'
-make: *** [src/P1.o] Error 1
-23:21:50 **** Auto Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19052	   1144	  22568	  42764	   a70c	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:21:54 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-23:23:05 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19048	   1144	  22568	  42760	   a708	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:23:45 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19052	   1144	  22568	  42764	   a70c	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:37:47 **** Auto Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19040	   1144	  22568	  42752	   a700	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:37:53 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-23:38:35 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19040	   1144	  22568	  42752	   a700	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:38:51 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19040	   1144	  22568	  42752	   a700	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:40:23 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19040	   1144	  22568	  42752	   a700	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:41:11 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19040	   1144	  22568	  42752	   a700	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:43:05 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19048	   1144	  22568	  42760	   a708	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:48:08 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19056	   1144	  22568	  42768	   a710	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-23:48:56 **** Incremental Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19064	   1144	  22568	  42776	   a718	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-00:04:07 **** Auto Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19064	   1144	  22568	  42776	   a718	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-10:30:53 **** Auto Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19048	   1144	  22568	  42760	   a708	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-10:35:03 **** Auto Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-./src/P1.o: In function `always_loop':
-C:\Users\Sergaljerk\EE234\Project_1\Debug/../src/P1.S:39: undefined reference to `ovrflow'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ttc.o: In function `main':
+C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/ttc.S:21: multiple definition of `main'
+./src/d.o:C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/d.S:21: first defined here
+./src/ttc.o: In function `Digit_4':
+C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/ttc.S:70: undefined reference to `Delay'
+./src/ttc.o: In function `Digit_3':
+C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/ttc.S:85: undefined reference to `Delay'
+./src/ttc.o: In function `Digit_2':
+C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/ttc.S:99: undefined reference to `Delay'
+./src/ttc.o: In function `Digit_1':
+C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/ttc.S:113: undefined reference to `Delay'
+./src/ttc.o: In function `Delay_TTC':
+C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/ttc.S:119: undefined reference to `DIGIT_4'
 collect2.exe: error: ld returned 1 exit status
-make: *** [Project_1.elf] Error 1
-10:35:09 **** Auto Build of configuration Debug for project Project_1 ****
+make: *** [PRO3.elf] Error 1
+23:19:07 **** Auto Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
+'Building file: ../src/d.S'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/d.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/d.d" -MT"src/d.o" -o "src/d.o" "../src/d.S"
+'Finished building: ../src/d.S'
 ' '
-'Building target: Project_1.elf'
+'Building target: PRO3.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ttc.o: In function `Digit_4':
+C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/ttc.S:70: undefined reference to `Delay'
+./src/ttc.o: In function `Digit_3':
+C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/ttc.S:85: undefined reference to `Delay'
+./src/ttc.o: In function `Digit_2':
+C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/ttc.S:99: undefined reference to `Delay'
+./src/ttc.o: In function `Digit_1':
+C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/ttc.S:113: undefined reference to `Delay'
+./src/ttc.o: In function `Delay_TTC':
+C:\Users\Sergaljerk\EE234\PRO3\Debug/../src/ttc.S:119: undefined reference to `DIGIT_4'
+collect2.exe: error: ld returned 1 exit status
+make: *** [PRO3.elf] Error 1
+23:19:52 **** Auto Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/ttc.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
+' '
+'Building target: PRO3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19076	   1144	  22568	  42788	   a724	Project_1.elf
-'Finished building: Project_1.elf.size'
+  19416	   1144	  22568	  43128	   a878	PRO3.elf
+'Finished building: PRO3.elf.size'
 ' '
-10:36:29 **** Incremental Build of configuration Debug for project Project_1 ****
+23:20:19 **** Incremental Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-10:36:59 **** Auto Build of configuration Debug for project Project_1 ****
+23:21:09 **** Auto Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
+'Building file: ../src/ttc.S'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
 ' '
-'Building target: Project_1.elf'
+'Building target: PRO3.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19076	   1144	  22568	  42788	   a724	Project_1.elf
-'Finished building: Project_1.elf.size'
+  19420	   1144	  22568	  43132	   a87c	PRO3.elf
+'Finished building: PRO3.elf.size'
 ' '
-10:37:01 **** Incremental Build of configuration Debug for project Project_1 ****
+23:21:11 **** Incremental Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-10:39:47 **** Auto Build of configuration Debug for project Project_1 ****
+23:23:32 **** Auto Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
+'Building file: ../src/ttc.S'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-../src/P1.S: Assembler messages:
-../src/P1.S:42: Error: ARM register expected -- `str #0x00,[r4,#0x0C]'
-make: *** [src/P1.o] Error 1
-10:41:33 **** Auto Build of configuration Debug for project Project_1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
 ' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
+'Building target: PRO3.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19080	   1144	  22568	  42792	   a728	Project_1.elf
-'Finished building: Project_1.elf.size'
+  19420	   1144	  22568	  43132	   a87c	PRO3.elf
+'Finished building: PRO3.elf.size'
 ' '
-10:41:36 **** Incremental Build of configuration Debug for project Project_1 ****
+23:23:53 **** Auto Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/ttc.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
+' '
+'Building target: PRO3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19424	   1144	  22568	  43136	   a880	PRO3.elf
+'Finished building: PRO3.elf.size'
+' '
+23:24:49 **** Auto Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/ttc.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
+' '
+'Building target: PRO3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19420	   1144	  22568	  43132	   a87c	PRO3.elf
+'Finished building: PRO3.elf.size'
+' '
+23:24:51 **** Incremental Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-10:42:56 **** Incremental Build of configuration Debug for project Project_1 ****
+23:25:42 **** Auto Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
+'Building file: ../src/ttc.S'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
 ' '
-'Building target: Project_1.elf'
+'Building target: PRO3.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19084	   1144	  22568	  42796	   a72c	Project_1.elf
-'Finished building: Project_1.elf.size'
+  19420	   1144	  22568	  43132	   a87c	PRO3.elf
+'Finished building: PRO3.elf.size'
 ' '
-10:46:44 **** Auto Build of configuration Debug for project Project_1 ****
+23:25:45 **** Incremental Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19084	   1144	  22568	  42796	   a72c	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-10:48:54 **** Auto Build of configuration Debug for project Project_1 ****
+make: Nothing to be done for `main-build'.
+23:26:04 **** Auto Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
+'Building file: ../src/ttc.S'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
 ' '
-'Building target: Project_1.elf'
+'Building target: PRO3.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19084	   1144	  22568	  42796	   a72c	Project_1.elf
-'Finished building: Project_1.elf.size'
+  19416	   1144	  22568	  43128	   a878	PRO3.elf
+'Finished building: PRO3.elf.size'
 ' '
-10:50:00 **** Auto Build of configuration Debug for project Project_1 ****
+23:26:06 **** Incremental Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
-' '
-'Building target: Project_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19084	   1144	  22568	  42796	   a72c	Project_1.elf
-'Finished building: Project_1.elf.size'
-' '
-00:21:50 **** Auto Build of configuration Debug for project Project_1 ****
+make: Nothing to be done for `main-build'.
+23:26:52 **** Auto Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
+'Building file: ../src/ttc.S'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
 ' '
-'Building target: Project_1.elf'
+'Building target: PRO3.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19084	   1144	  22568	  42796	   a72c	Project_1.elf
-'Finished building: Project_1.elf.size'
+  19416	   1144	  22568	  43128	   a878	PRO3.elf
+'Finished building: PRO3.elf.size'
 ' '
-00:22:10 **** Auto Build of configuration Debug for project Project_1 ****
+23:26:55 **** Incremental Build of configuration Debug for project PRO3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/P1.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/P1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Project_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/P1.d" -MT"src/P1.o" -o "src/P1.o" "../src/P1.S"
-'Finished building: ../src/P1.S'
+make: Nothing to be done for `main-build'.
+23:28:18 **** Incremental Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
 ' '
-'Building target: Project_1.elf'
+make: Nothing to be done for `main-build'.
+23:31:28 **** Auto Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/ttc.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
+' '
+'Building target: PRO3.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Project_1_bsp/ps7_cortexa9_0/lib -o "Project_1.elf"  ./src/P1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Project_1.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Project_1.elf  |tee "Project_1.elf.size"
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19084	   1144	  22568	  42796	   a72c	Project_1.elf
-'Finished building: Project_1.elf.size'
+  19420	   1144	  22568	  43132	   a87c	PRO3.elf
+'Finished building: PRO3.elf.size'
 ' '
+23:31:31 **** Incremental Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:34:57 **** Auto Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/ttc.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
+' '
+'Building target: PRO3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19420	   1144	  22568	  43132	   a87c	PRO3.elf
+'Finished building: PRO3.elf.size'
+' '
+23:35:07 **** Incremental Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:35:13 **** Incremental Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:35:22 **** Incremental Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:35:38 **** Incremental Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:36:47 **** Auto Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/ttc.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
+' '
+'Building target: PRO3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19400	   1144	  22568	  43112	   a868	PRO3.elf
+'Finished building: PRO3.elf.size'
+' '
+23:36:50 **** Incremental Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:37:13 **** Incremental Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:44:09 **** Auto Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/ttc.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
+' '
+'Building target: PRO3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19400	   1144	  22568	  43112	   a868	PRO3.elf
+'Finished building: PRO3.elf.size'
+' '
+23:46:26 **** Incremental Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:47:29 **** Auto Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/ttc.S'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ttc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../PRO3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ttc.d" -MT"src/ttc.o" -o "src/ttc.o" "../src/ttc.S"
+'Finished building: ../src/ttc.S'
+' '
+'Building target: PRO3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../PRO3_bsp/ps7_cortexa9_0/lib -o "PRO3.elf"  ./src/d.o ./src/ttc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PRO3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size PRO3.elf  |tee "PRO3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19420	   1144	  22568	  43132	   a87c	PRO3.elf
+'Finished building: PRO3.elf.size'
+' '
+23:47:31 **** Incremental Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:49:21 **** Incremental Build of configuration Debug for project PRO3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
