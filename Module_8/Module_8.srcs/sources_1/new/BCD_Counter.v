@@ -26,24 +26,27 @@ module BCD_Counter(
  output [6:0] o_Cathodes,
  output [3:0] o_Anodes
     );
-    //CLOCK IS SLOW
+   
     wire w_CLK;
     wire w_RST;
-    wire w_SUBCLK;
+    wire w_SUBCLK_1HZ;
     wire [6:0] w_CATHODE_0;
     assign w_CLK = i_CLK;
     assign w_RST = i_RST;
     assign o_Anodes =4'b1110;
     assign o_Cathodes = w_CATHODE_0;
     
-    CBCDivider_wrapper Hz_CLK(
+    HZ_Counter #(.c_NUM(50000000)) Digit_1(
     .i_CLK(w_CLK),
     .i_RST(w_RST),
-    .o_LED(w_SUBCLK)
+    .o_Out(w_SUBCLK_1HZ)
     );
+    
+    //MUX HERE
+    //SETS ANODE AND SELECETS CATHODE DRIVER
   
     ssd_dec digit(
-    .i_CLK(w_SUBCLK),
+    .i_CLK(w_SUBCLK_1HZ),
     .cathode(w_CATHODE_0)
     );
 endmodule

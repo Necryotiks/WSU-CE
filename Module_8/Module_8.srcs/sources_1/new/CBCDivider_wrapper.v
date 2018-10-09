@@ -34,13 +34,13 @@ module CBCDivider_wrapper(
     assign w_RST = i_RST;
     assign o_LED = w_LED;
     
-    counter_divider MHz_to_1KHz(
+    HZ_Counter #(.c_NUM(50000)) MHz_to_1KHz(
     .i_CLK(w_CLK),
     .i_RST(w_RST),
     .o_Out(w_SUBCLK_1KHZ)
     );
     
-    counter_divider_1Hz KHz_to_1Hz(
+    HZ_Counter #(.c_NUM(1000)) KHz_to_1Hz(
     .i_CLK(w_SUBCLK_1KHZ),
     .i_RST(w_RST),
     .o_Out(w_LED)

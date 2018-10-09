@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/05/2018 06:23:05 PM
+// Create Date: 10/09/2018 12:15:35 PM
 // Design Name: 
-// Module Name: counter_divider
+// Module Name: HZ_Counter
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,13 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module counter_divider(
-    input i_CLK,
+module HZ_Counter(
+input i_CLK,
     input i_RST,
     output reg o_Out
     );
     
-    parameter c_NUM = 49152; //1 khz at 50% duty cycle
+    parameter c_NUM = 0; //Overide via parameter
     reg [31:0] r_Count;
     always @ (posedge(i_CLK), posedge(i_RST)) //Counter
     begin
@@ -42,9 +42,9 @@ module counter_divider(
     begin
         if (i_RST == 1'b1)
             o_Out <= 1'b0;
-        else if (r_Count == c_NUM - 1) // if r_Count = 49151 flip output
+        else if (r_Count == c_NUM - 1) // if r_Count = 49999999 flip output
             o_Out <= ~o_Out;
         else
             o_Out <= o_Out;
-    end
+        end
 endmodule

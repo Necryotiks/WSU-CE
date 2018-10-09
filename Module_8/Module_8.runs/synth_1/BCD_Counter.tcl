@@ -30,9 +30,7 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/Sergaljerk/WSU-CPTE/Module_8/Module_8.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/Sergaljerk/WSU-CPTE/Module_8/Module_8.srcs/sources_1/new/CBCDivider_wrapper.v
-  C:/Users/Sergaljerk/WSU-CPTE/Module_8/Module_8.srcs/sources_1/new/counter_divider.v
-  C:/Users/Sergaljerk/WSU-CPTE/Module_8/Module_8.srcs/sources_1/new/counter_divider_1Hz.v
+  C:/Users/Sergaljerk/WSU-CPTE/Module_8/Module_8.srcs/sources_1/new/HZ_Counter.v
   C:/Users/Sergaljerk/WSU-CPTE/Module_8/Module_8.srcs/sources_1/new/ssd_dec.v
   C:/Users/Sergaljerk/WSU-CPTE/Module_8/Module_8.srcs/sources_1/new/BCD_Counter.v
 }
