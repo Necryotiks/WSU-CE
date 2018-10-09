@@ -102,11 +102,11 @@ assign o_LED = r_SW;
 always@(posedge(i_CLK))
 begin
     if(i_SFT_LD == 0)
-        r_SW = i_SW;
+        r_SW = i_SW; //Load by default
     else
     begin
         
-        r_SW = r_SW << 1;
+        r_SW = r_SW << 1; //SHIFT otherwise.
         r_SW[0] = buffer;
     end
     

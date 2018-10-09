@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Module_8.srcs/sources_1/new/CBCDivider_wrapper.v" \
+"../../../../Module_8.srcs/sources_1/new/counter_divider.v" \
+"../../../../Module_8.srcs/sources_1/new/counter_divider_1Hz.v" \
+"../../../../Module_8.srcs/sim_1/new/CBCD_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
