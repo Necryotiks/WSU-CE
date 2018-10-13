@@ -21,19 +21,44 @@
 
 
 module ssd_mux(
-input i_Digit_1_clk,
-input i_Digit_2_clk,
-input i_Digit_3_clk,
-input i_Digit_4_clk,
-input [1:0] Sel,
-output reg o_Clk,
-output reg [3:0] o_Anodes
+input [3:0] i_Digit_1,
+input [3:0] i_Digit_2,
+input [3:0] i_Digit_3,
+input [3:0] i_Digit_4,
+input i_CLK,
+output reg [3:0] o_Out,
+output reg [3:0] an
     );
+    reg [1:0] r_CYCLE;
     
-    always@ (posedge(Sel))
+    always@(posedge i_CLK)
+    begin
+        r_CYCLE <= r_CYCLE + 1'b1;
+    end 
+   always@ (r_CYCLE,i_Digit_1,i_Digit_2,i_Digit_3,i_Digit_4)
         begin
-            case(Sel)
-            default: o_Clk = 0;
+            case(r_CYCLE)
+            2'b00: 
+            begin
+            o_Out = i_Digit_1;
+            an = 4'b0111;
+            end
+            2'b01: 
+            begin
+            o_Out = i_Digit_2;
+            an = 4'b1011;
+            end
+            2'b10: 
+            begin
+            o_Out = i_Digit_3;
+            an = 4'b1101;
+            end
+            2'b11: 
+            begin
+            o_Out = i_Digit_4;
+            an = 4'b1110;
+            end
+            default: o_Out = 0;
             endcase
         end
 endmodule

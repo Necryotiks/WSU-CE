@@ -24,16 +24,16 @@ module ssd_dec(
 
 
 input i_CLK,
+input [3:0] i_Num,
 output reg [6:0] cathode
 
     );
     
-reg [3:0] r_INC = 4'b0000;    
+  wire [3:0] w_Num;
+  assign w_Num = i_Num;  
 always@(posedge(i_CLK))
 begin
-    if(r_INC == 4'd10)
-        r_INC = 4'd0;
-    case(r_INC)
+    case(w_Num)
         4'b0000://0
         begin 
             
@@ -81,11 +81,9 @@ begin
         end
         4'b1001://9
         begin 
-            
             cathode = 7'b0010000;
         end
-   
-    endcase
-    r_INC = r_INC + 1'd1;     
+        default: cathode = 7'd0;
+    endcase  
     end
 endmodule

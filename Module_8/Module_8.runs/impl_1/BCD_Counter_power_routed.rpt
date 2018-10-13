@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Oct  9 12:57:31 2018
+| Date             : Fri Oct 12 21:36:00 2018
 | Host             : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 | Command          : report_power -file BCD_Counter_power_routed.rpt -pb BCD_Counter_power_summary_routed.pb -rpx BCD_Counter_power_routed.rpx
 | Design           : BCD_Counter
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.090        |
+| Total On-Chip Power (W)  | 0.106        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.001        |
-| Device Static (W)        | 0.090        |
+| Dynamic (W)              | 0.013        |
+| Device Static (W)        | 0.093        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 84.0         |
-| Junction Temperature (C) | 26.0         |
+| Max Ambient (C)          | 83.8         |
+| Junction Temperature (C) | 26.2         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      112 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       49 |     14400 |            0.34 |
-|   Register     |    <0.001 |       44 |     28800 |            0.15 |
-|   CARRY4       |    <0.001 |        8 |      4400 |            0.18 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |       93 |       --- |             --- |
-| I/O            |    <0.001 |       13 |       100 |           13.00 |
-| Static Power   |     0.090 |          |           |                 |
-| Total          |     0.090 |          |           |                 |
+| Slice Logic    |    <0.001 |      484 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      224 |     14400 |            1.56 |
+|   Register     |    <0.001 |      190 |     28800 |            0.66 |
+|   CARRY4       |    <0.001 |       40 |      4400 |            0.91 |
+|   Others       |     0.000 |       16 |       --- |             --- |
+| Signals        |    <0.001 |      429 |       --- |             --- |
+| I/O            |     0.011 |       13 |       100 |           13.00 |
+| Static Power   |     0.093 |          |           |                 |
+| Total          |     0.106 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.004 |       0.001 |      0.004 |
-| Vccaux    |       1.800 |     0.005 |       0.000 |      0.005 |
-| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vccint    |       1.000 |     0.005 |       0.002 |      0.004 |
+| Vccaux    |       1.800 |     0.006 |       0.000 |      0.005 |
+| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -147,9 +147,14 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| BCD_Counter |    <0.001 |
+| BCD_Counter |     0.013 |
 |   Digit_1   |    <0.001 |
-|   digit     |    <0.001 |
+|   Digit_2   |    <0.001 |
+|   Digit_3   |    <0.001 |
+|   Digit_4   |    <0.001 |
+|   SVD_CLK   |    <0.001 |
+|   digits    |    <0.001 |
+|   switch    |    <0.001 |
 +-------------+-----------+
 
 
