@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log BCD_Counter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BCD_Counter.tcl
+EAStep vivado -log challenge_8.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source challenge_8.tcl
