@@ -40,16 +40,8 @@ output reg [7:0] o_LED
 //end
 //endgenerate
 
-reg [27:0] counter1;
-wire Y1;
-always @ (posedge(i_CLK))
-begin
-	counter1 <= counter1 + 1;
-end
 
-assign Y1 = counter1[0];
-
-always@(posedge(Y1))
+always@(posedge(i_CLK))
 begin
 if(i_BTN == 1)
     o_LED = i_SW;
