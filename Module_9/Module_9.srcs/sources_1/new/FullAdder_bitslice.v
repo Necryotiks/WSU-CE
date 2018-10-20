@@ -28,6 +28,6 @@ module FullAdder_bitslice(
     output o_Carryout
     );
     
-    assign o_Sum = i_A ^ i_B ^ i_Carryin;
-    assign o_Carryout =  (i_A & i_B) | ((i_A ^ i_B) & i_Carryin);
+    assign o_Sum = i_A ^ i_B ^ i_Carryin; //Propagate xor Carryin
+    assign o_Carryout =  (i_A & i_B) | ((i_A ^ i_B) & i_Carryin); // Generate or (Propagate and Carryin)
 endmodule
