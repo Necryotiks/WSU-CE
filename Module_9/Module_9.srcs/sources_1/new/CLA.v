@@ -19,31 +19,32 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+parameter MAX_WIDTH = 3;
 module CLA(
-    input [3:0] i_A,
-    input [3:0] i_B,
-    output [3:0] o_S,
+    input [MAX_WIDTH:0] i_A,
+    input [MAX_WIDTH:0] i_B,
+    output [MAX_WIDTH:0] o_S,
     output o_Cout
     );
-     wire [3:0] w_PROP;
-     wire [3:0] w_GEN;
-     wire [4:0] w_CARRY;
-     wire [3:0] w_SUM;
-     wire [3:0] w_A;
-     wire [3:0] w_B;
+    
+     wire [MAX_WIDTH:0] w_PROP;
+     wire [MAX_WIDTH:0] w_GEN;
+     wire [MAX_WIDTH+1:0] w_CARRY;
+     wire [MAX_WIDTH:0] w_SUM;
+     wire [MAX_WIDTH:0] w_A;
+     wire [MAX_WIDTH:0] w_B;
     
    
     
     genvar i;
     
-    assign o_S = w_Sum;
+    assign o_S = w_SUM;
     assign o_Cout = w_CARRY[4];
     assign w_A = i_A;
     assign w_B = i_B;
     generate
     begin
-        for(i = 0; i <4; i=i+1)
+        for(i = 0; i <MAX_WIDTH+1; i=i+1)
         begin
             FullAdder_bitslice FA_XX(
             .i_A(w_A[i]),
