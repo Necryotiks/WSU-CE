@@ -54,7 +54,7 @@ module CLA(
             ); 
         end
         assign w_GEN[i] = w_A[i] & w_B[i];
-        assign w_PROP[i] = w_A[i] | w_B[i];
+        assign w_PROP[i] = w_A[i] ^ w_B[i];
         assign w_CARRY[0] = 0;
         assign w_CARRY[i+1] = w_GEN[i] | (w_PROP[i] & w_CARRY[i]);
     end
