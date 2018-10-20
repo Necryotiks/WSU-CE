@@ -58,7 +58,7 @@ begin
     if(i_SW[0] == 0)
         r_counter <= i_SW[7:4];
      else
-        if (r_counter == 4'd9)
+        if (r_counter >= 4'd9)
             r_counter <= 4'd0;
         else
             r_counter <= r_counter + 1'd1;
