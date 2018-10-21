@@ -160,3 +160,511 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
+17:39:07 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19100	   1144	  22568	  42812	   a73c	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:39:10 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:44:22 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19120	   1144	  22568	  42832	   a750	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:44:24 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:44:59 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19120	   1144	  22568	  42832	   a750	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:45:20 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19132	   1144	  22568	  42844	   a75c	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:45:25 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:45:56 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19132	   1144	  22568	  42844	   a75c	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:46:03 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:46:52 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19144	   1144	  22568	  42856	   a768	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:47:31 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19144	   1144	  22568	  42856	   a768	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:47:34 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:48:12 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:25:9: error: 'v_Count' undeclared (first use in this function)
+      if(v_Count == 0x10)
+         ^~~~~~~
+../src/main.c:25:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+17:48:23 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19104	   1144	  22568	  42816	   a740	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:48:27 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:49:03 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19104	   1144	  22568	  42816	   a740	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:49:08 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19104	   1144	  22568	  42816	   a740	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:49:39 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:50:21 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19100	   1144	  22568	  42812	   a73c	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:50:29 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:53:36 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19112	   1144	  22568	  42824	   a748	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:53:47 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19112	   1144	  22568	  42824	   a748	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:53:50 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:54:05 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19112	   1144	  22568	  42824	   a748	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:54:33 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19156	   1144	  22568	  42868	   a774	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:54:35 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:55:33 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19112	   1144	  22568	  42824	   a748	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:55:43 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:56:02 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19112	   1144	  22568	  42824	   a748	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:56:04 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:56:21 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19112	   1144	  22568	  42824	   a748	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:56:23 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:56:54 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19104	   1144	  22568	  42816	   a740	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:56:56 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:57:25 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19104	   1144	  22568	  42816	   a740	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:57:43 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19112	   1144	  22568	  42824	   a748	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:57:44 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
