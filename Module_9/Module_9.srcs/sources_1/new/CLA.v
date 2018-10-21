@@ -19,23 +19,20 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-parameter MAX_WIDTH = 3;
-module CLA(
+
+module CLA #(parameter MAX_WIDTH = 3)(
     input [MAX_WIDTH:0] i_A,
     input [MAX_WIDTH:0] i_B,
     output [MAX_WIDTH:0] o_S,
     output o_Cout
     );
     
-     wire [MAX_WIDTH:0] w_PROP;
-     wire [MAX_WIDTH:0] w_GEN;
-     wire [MAX_WIDTH+1:0] w_CARRY;
-     wire [MAX_WIDTH:0] w_SUM;
-     wire [MAX_WIDTH:0] w_A;
-     wire [MAX_WIDTH:0] w_B;
-    
-   
-    
+    wire [MAX_WIDTH:0] w_PROP;
+    wire [MAX_WIDTH:0] w_GEN;
+    wire [(MAX_WIDTH+1):0] w_CARRY;
+    wire [MAX_WIDTH:0] w_SUM;
+    wire [MAX_WIDTH:0] w_A;
+    wire [MAX_WIDTH:0] w_B;
     genvar i;
     
     assign o_S = w_SUM;
@@ -53,11 +50,11 @@ module CLA(
             .o_Sum(w_SUM[i]),
             .o_Carryout()
             ); 
-        end
         assign w_GEN[i] = w_A[i] & w_B[i];
         assign w_PROP[i] = w_A[i] ^ w_B[i];
         assign w_CARRY[0] = 0;
         assign w_CARRY[i+1] = w_GEN[i] | (w_PROP[i] & w_CARRY[i]);
+        end
     end
     endgenerate
     
