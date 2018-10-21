@@ -8,29 +8,13 @@
 
 #include "xil_types.h"
 
+#include "myAXIfunctions.h"
 
 // Macro to access the base address of your LED controller
 //#define LED *((uint32_t *)0x4BB00000)
 
 int main()
 {
-    int i = 0;
-    uint32_t * LED = (uint32_t*)0x4BB00000;
-    // Turn off all LEDs
-    LED[0] = 0x0F;
-
-    // Infinite loop
-    while (1) {
-        // invert the LED value
-    	LED[1] = 0xA;
-
-    	//LED = ~LED;
-        // Delay
-        for (i = 0; i < 10000000; i++)
-        {
-        	LED[1] = 0x00;
-        }
-
-    }
-    return 1;
+	demoLEDS();
+    //shiftLEDS();
 }
