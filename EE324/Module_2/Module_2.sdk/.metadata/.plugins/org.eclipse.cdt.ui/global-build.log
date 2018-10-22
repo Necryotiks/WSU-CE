@@ -2363,3 +2363,412 @@ arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.el
   19416	   1144	  22568	  43128	   a878	Module_2_LED_Controller.elf
 'Finished building: Module_2_LED_Controller.elf.size'
 ' '
+17:38:26 **** Auto Build of project Module_2_LED_Controller_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/my_RGB_LED_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/my_RGB_LED_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/myLED_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/myLED_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/spips_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/spips_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/my_RGB_LED_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/my_RGB_LED_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling my_RGB_LED..."
+my_RGB_LED_selftest.c: In function 'MY_RGB_LED_Reg_SelfTest':
+my_RGB_LED_selftest.c:52:59: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( MY_RGB_LED_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                           ^~
+my_RGB_LED_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/myLED_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/myLED_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling myLED..."
+myLED_selftest.c: In function 'MYLED_Reg_SelfTest':
+myLED_selftest.c:52:54: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( MYLED_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                      ^~
+myLED_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spips_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/spips_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling spips"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+17:38:55 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/myAXIfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myAXIfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myAXIfunctions.d" -MT"src/myAXIfunctions.o" -o "src/myAXIfunctions.o" "../src/myAXIfunctions.c"
+'Finished building: ../src/myAXIfunctions.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19416	   1144	  22568	  43128	   a878	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:39:52 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:40:05 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19416	   1144	  22568	  43128	   a878	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:40:07 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:42:02 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myAXIfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myAXIfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myAXIfunctions.d" -MT"src/myAXIfunctions.o" -o "src/myAXIfunctions.o" "../src/myAXIfunctions.c"
+'Finished building: ../src/myAXIfunctions.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19468	   1144	  22568	  43180	   a8ac	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:42:24 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19472	   1144	  22568	  43184	   a8b0	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:42:28 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:42:35 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19472	   1144	  22568	  43184	   a8b0	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:42:37 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:43:08 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myAXIfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myAXIfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myAXIfunctions.d" -MT"src/myAXIfunctions.o" -o "src/myAXIfunctions.o" "../src/myAXIfunctions.c"
+'Finished building: ../src/myAXIfunctions.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19472	   1152	  22568	  43192	   a8b8	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:44:31 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/myAXIfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myAXIfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myAXIfunctions.d" -MT"src/myAXIfunctions.o" -o "src/myAXIfunctions.o" "../src/myAXIfunctions.c"
+'Finished building: ../src/myAXIfunctions.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19472	   1152	  22568	  43192	   a8b8	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:45:49 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myAXIfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myAXIfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myAXIfunctions.d" -MT"src/myAXIfunctions.o" -o "src/myAXIfunctions.o" "../src/myAXIfunctions.c"
+'Finished building: ../src/myAXIfunctions.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19632	   1152	  22568	  43352	   a958	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:46:02 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:22:2: warning: implicit declaration of function 'demoRGBS'; did you mean 'demoRGB'? [-Wimplicit-function-declaration]
+  demoRGBS();
+  ^~~~~~~~
+  demoRGB
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19628	   1152	  22568	  43348	   a954	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:46:15 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myAXIfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myAXIfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myAXIfunctions.d" -MT"src/myAXIfunctions.o" -o "src/myAXIfunctions.o" "../src/myAXIfunctions.c"
+'Finished building: ../src/myAXIfunctions.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Users\Sergaljerk\WSU-CPTE\EE324\Module_2\Module_2.sdk\Module_2_LED_Controller\Debug/../src/main.c:22: undefined reference to `demoRGBS'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Module_2_LED_Controller.elf] Error 1
+17:46:20 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19628	   1152	  22568	  43348	   a954	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:46:29 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:47:15 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myAXIfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myAXIfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myAXIfunctions.d" -MT"src/myAXIfunctions.o" -o "src/myAXIfunctions.o" "../src/myAXIfunctions.c"
+'Finished building: ../src/myAXIfunctions.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19628	   1152	  22568	  43348	   a954	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '
+17:47:18 **** Incremental Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:48:11 **** Auto Build of configuration Debug for project Module_2_LED_Controller ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Module_2_LED_Controller.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Module_2_LED_Controller_bsp/ps7_cortexa9_0/lib -o "Module_2_LED_Controller.elf"  ./src/main.o ./src/myAXIfunctions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Module_2_LED_Controller.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Module_2_LED_Controller.elf  |tee "Module_2_LED_Controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19628	   1152	  22568	  43348	   a954	Module_2_LED_Controller.elf
+'Finished building: Module_2_LED_Controller.elf.size'
+' '

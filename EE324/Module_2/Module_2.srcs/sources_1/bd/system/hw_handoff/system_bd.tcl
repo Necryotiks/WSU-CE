@@ -160,9 +160,13 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set o_LED_0 [ create_bd_port -dir O -from 3 -to 0 o_LED_0 ]
+  set o_RGB_LED_0 [ create_bd_port -dir O -from 11 -to 0 o_RGB_LED_0 ]
 
   # Create instance: myLED_0, and set properties
   set myLED_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:myLED:1.0 myLED_0 ]
+
+  # Create instance: my_RGB_LED_0, and set properties
+  set my_RGB_LED_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:my_RGB_LED:1.0 my_RGB_LED_0 ]
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -542,7 +546,7 @@ proc create_root_design { parentCell } {
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {1} \
+   CONFIG.NUM_MI {2} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_50M, and set properties
@@ -553,16 +557,19 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins myLED_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins my_RGB_LED_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
 
   # Create port connections
   connect_bd_net -net myLED_0_o_LED [get_bd_ports o_LED_0] [get_bd_pins myLED_0/o_LED]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins myLED_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net my_RGB_LED_0_o_RGB_LED [get_bd_ports o_RGB_LED_0] [get_bd_pins my_RGB_LED_0/o_RGB_LED]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins myLED_0/s00_axi_aclk] [get_bd_pins my_RGB_LED_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_50M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_50M/interconnect_aresetn]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins myLED_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins myLED_0/s00_axi_aresetn] [get_bd_pins my_RGB_LED_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
 
   # Create address segments
   create_bd_addr_seg -range 0x00001000 -offset 0x4BB00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs myLED_0/S00_AXI/S00_AXI_reg] SEG_myLED_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x4BB01000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs my_RGB_LED_0/S00_AXI/S00_AXI_reg] SEG_my_RGB_LED_0_S00_AXI_reg
 
 
   # Restore current instance

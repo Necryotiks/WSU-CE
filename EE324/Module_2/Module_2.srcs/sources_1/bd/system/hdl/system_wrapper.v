@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Oct 20 23:31:19 2018
+//Date        : Sun Oct 21 17:33:46 2018
 //Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -31,7 +31,8 @@ module system_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    o_LED_0);
+    o_LED_0,
+    o_RGB_LED_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -54,6 +55,7 @@ module system_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   output [3:0]o_LED_0;
+  output [11:0]o_RGB_LED_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -77,6 +79,7 @@ module system_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire [3:0]o_LED_0;
+  wire [11:0]o_RGB_LED_0;
 
   system system_i
        (.DDR_addr(DDR_addr),
@@ -100,5 +103,6 @@ module system_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .o_LED_0(o_LED_0));
+        .o_LED_0(o_LED_0),
+        .o_RGB_LED_0(o_RGB_LED_0));
 endmodule

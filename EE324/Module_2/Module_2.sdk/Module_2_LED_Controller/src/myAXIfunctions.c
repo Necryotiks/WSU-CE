@@ -8,6 +8,8 @@
 #include "xil_types.h"
 #include "myAXIfunctions.h"
 uint32_t * LED =  (uint32_t*)0x4BB00000;
+uint32_t * RGB =  (uint32_t*)0x4BB01000;
+
 uint32_t getLEDStatus()
 {
 	uint32_t v_Val = 0;
@@ -16,6 +18,12 @@ uint32_t getLEDStatus()
 }
 void controlLEDS(int a_LEDCount)
 {
+	LED[0] = 0x00;
+	LED[0] = 0x0F;
+	while(1)
+	{
+		LED[1] = a_LEDCount;
+	}
 
 }
 void shiftLEDS()
@@ -52,4 +60,13 @@ void demoLEDS()
 	    for(i = 0; i < 10000000; i = i +1);
 	    v_Flip = ~v_Flip;
 	  }
+}
+void demoRGB()
+{
+	RGB[0] = 0x0;
+	RGB[0] = 0xF;
+	RGB[1] = 0x1;
+	RGB[2] = 0x2;
+	RGB[3] = 0x4;
+	RGB[4] = 0x7;
 }

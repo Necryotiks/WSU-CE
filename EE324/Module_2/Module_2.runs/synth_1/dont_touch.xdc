@@ -18,6 +18,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_ps7_0_ax
 # IP: bd/system/ip/system_rst_ps7_0_50M_0/system_rst_ps7_0_50M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_rst_ps7_0_50M_0 || ORIG_REF_NAME==system_rst_ps7_0_50M_0} -quiet] -quiet
 
+# IP: bd/system/ip/system_my_RGB_LED_0_0/system_my_RGB_LED_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_my_RGB_LED_0_0 || ORIG_REF_NAME==system_my_RGB_LED_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_xbar_0/system_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xbar_0 || ORIG_REF_NAME==system_xbar_0} -quiet] -quiet
+
 # IP: bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0} -quiet] -quiet
 

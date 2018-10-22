@@ -212,6 +212,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver MY_RGB_LED */
+#define XPAR_MY_RGB_LED_NUM_INSTANCES 1
+
+/* Definitions for peripheral MY_RGB_LED_0 */
+#define XPAR_MY_RGB_LED_0_DEVICE_ID 0
+#define XPAR_MY_RGB_LED_0_S00_AXI_BASEADDR 0x4BB01000
+#define XPAR_MY_RGB_LED_0_S00_AXI_HIGHADDR 0x4BB01FFF
+
+
+/******************************************************************/
+
 /* Definitions for driver QSPIPS */
 #define XPAR_XQSPIPS_NUM_INSTANCES 1
 

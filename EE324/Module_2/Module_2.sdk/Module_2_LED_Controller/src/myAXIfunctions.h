@@ -16,4 +16,4 @@ uint32_t getLEDStatus();
 void controlLEDS(int a_LEDCount);
 void shiftLEDS();
 void demoLEDS();
-
+void demoRGB();
