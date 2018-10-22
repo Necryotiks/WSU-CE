@@ -30,15 +30,15 @@ vcom -work xpm -64 -93 \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../Module_2.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/system/ipshared/5bb9/hdl/verilog" "+incdir+../../../../Module_2.srcs/sources_1/bd/system/ipshared/70fd/hdl" "+incdir+C:/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../Module_2.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/system/ipshared/5bb9/hdl/verilog" "+incdir+../../../../Module_2.srcs/sources_1/bd/system/ipshared/70fd/hdl" "+incdir+C:/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
 "../../../bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_sim_netlist.v" \
-"../../../bd/system/ipshared/bfac/hdl/myLED_v1_0_S00_AXI.v" \
-"../../../bd/system/ipshared/bfac/hdl/myLED_v1_0.v" \
+"../../../bd/system/ipshared/e63d/hdl/myLED_v1_0_S00_AXI.v" \
+"../../../bd/system/ipshared/e63d/hdl/myLED_v1_0.v" \
 "../../../bd/system/ip/system_myLED_0_0/sim/system_myLED_0_0.v" \
 "../../../bd/system/ip/system_rst_ps7_0_50M_0/system_rst_ps7_0_50M_0_sim_netlist.v" \
 "../../../bd/system/sim/system.v" \
 "../../../bd/system/ipshared/3e65/hdl/my_RGB_LED_v1_0_S00_AXI.v" \
 "../../../bd/system/ipshared/3e65/hdl/my_RGB_LED_v1_0.v" \
 "../../../bd/system/ip/system_my_RGB_LED_0_0/sim/system_my_RGB_LED_0_0.v" \
-"c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_sim_netlist.v" \
+"../../../bd/system/ip/system_xbar_0/system_xbar_0_sim_netlist.v" \
 "../../../bd/system/ip/system_auto_pc_0/system_auto_pc_0_sim_netlist.v" \
 
 vlog -work xil_defaultlib \

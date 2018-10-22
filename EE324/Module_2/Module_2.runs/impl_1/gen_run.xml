@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1540168432">
+<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1540194062">
   <File Type="BITSTR-BMM" Name="system_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="system_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="system_wrapper_timing_summary_init.rpt"/>
@@ -100,6 +100,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/system_cons.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -119,4 +120,6 @@
   <BlockFileSet Type="BlockSrcs" Name="system_rst_ps7_0_50M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_my_RGB_LED_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_system_ila_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_myLED_0_0"/>
 </GenRun>
