@@ -1,3 +1,4 @@
+
 /*
  * myfunctions.c
  *
@@ -27,6 +28,7 @@ uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
 uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
 uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
+uint32_t * BTN_Address = (uint32_t *)0x4BB02004;
 
 uint32_t * PIN_16 = (uint32_t *)0xF8000740;
 uint32_t * PIN_17 = (uint32_t *)0xF8000744;
@@ -39,9 +41,15 @@ uint32_t * GPIODirectionModeB1 = (uint32_t *)0xE000A244;
 void activateLEDS()
 {
 	uint32_t* ledBaseAddress = (uint32_t*)0x4BB00000;
-
+	ledBaseAddress[0] = 0x00000000; //enable the LEDs
+	ledBaseAddress[1] = 0x00000000; //Turn on the LEDs
+	while((BTN_Address[0] & (uint32_t)1) != 1)
+	{
+		//wait until button is pushed.
+	}
 	ledBaseAddress[0] = 0x0000000F; //enable the LEDs
 	ledBaseAddress[1] = 0x0000000F; //Turn on the LEDs
+
 }
 
 void disableInterrupts()
@@ -139,3 +147,6 @@ GPIODirectionModeB1[0] = 0x00000000;
 
 
 }
+
+
+
