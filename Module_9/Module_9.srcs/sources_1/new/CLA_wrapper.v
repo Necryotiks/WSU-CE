@@ -49,6 +49,7 @@ module CLA_wrapper(
     assign w_SW_UPPER = i_SW_UPPER;
     assign o_Cathodes = w_CATHODE;
     assign o_Anodes = w_ANODE;
+//    assign o_Anodes = 4'b1110;
     assign o_Overflow = w_CARRY;
     
     CLA #(.MAX_WIDTH(3)) CLA1(

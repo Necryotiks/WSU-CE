@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Sergaljerk/WSU-CPTE/Module_8/Module_8.runs/synth_1'
+HD_PWD='C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_8/Module_8.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log challenge_8.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source challenge_8.tcl
+EAStep vivado -log counter_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source counter_wrapper.tcl
