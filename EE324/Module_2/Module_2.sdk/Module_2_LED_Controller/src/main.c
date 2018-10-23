@@ -15,8 +15,8 @@
 
 int main()
 {
-	//demoLEDS();
-    shiftLEDS();
+	demoLEDS();
+   // shiftLEDS();
 	//controlLEDS(7);
 	//demoRGB();
 }

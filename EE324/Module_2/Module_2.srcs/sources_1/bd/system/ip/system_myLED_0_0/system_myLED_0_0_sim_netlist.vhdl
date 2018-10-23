@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sun Oct 21 21:36:05 2018
+-- Date        : Tue Oct 23 00:21:25 2018
 -- Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ip/system_myLED_0_0/system_myLED_0_0_sim_netlist.vhdl
@@ -18,9 +18,9 @@ entity system_myLED_0_0_myLED_v1_0_S00_AXI is
   port (
     S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_WREADY : out STD_LOGIC;
+    o_LED : out STD_LOGIC_VECTOR ( 3 downto 0 );
     S_AXI_ARREADY : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    o_LED : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
     s00_axi_bvalid : out STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
@@ -56,6 +56,10 @@ architecture STRUCTURE of system_myLED_0_0_myLED_v1_0_S00_AXI is
   signal axi_bvalid_i_1_n_0 : STD_LOGIC;
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal \axi_wready0__0\ : STD_LOGIC;
+  signal \o_LED[0]_i_1_n_0\ : STD_LOGIC;
+  signal \o_LED[1]_i_1_n_0\ : STD_LOGIC;
+  signal \o_LED[2]_i_1_n_0\ : STD_LOGIC;
+  signal \o_LED[3]_i_1_n_0\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal p_1_in : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal reg_data_out : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -1189,41 +1193,73 @@ axi_wready_reg: unisim.vcomponents.FDRE
       Q => \^s_axi_wready\,
       R => axi_awready_i_1_n_0
     );
-\o_LED[0]_INST_0\: unisim.vcomponents.LUT2
+\o_LED[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => slv_reg0(0),
       I1 => slv_reg1(0),
-      O => o_LED(0)
+      O => \o_LED[0]_i_1_n_0\
     );
-\o_LED[1]_INST_0\: unisim.vcomponents.LUT2
+\o_LED[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => slv_reg0(1),
       I1 => slv_reg1(1),
-      O => o_LED(1)
+      O => \o_LED[1]_i_1_n_0\
     );
-\o_LED[2]_INST_0\: unisim.vcomponents.LUT2
+\o_LED[2]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => slv_reg0(2),
       I1 => slv_reg1(2),
-      O => o_LED(2)
+      O => \o_LED[2]_i_1_n_0\
     );
-\o_LED[3]_INST_0\: unisim.vcomponents.LUT2
+\o_LED[3]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => slv_reg0(3),
       I1 => slv_reg1(3),
-      O => o_LED(3)
+      O => \o_LED[3]_i_1_n_0\
+    );
+\o_LED_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \o_LED[0]_i_1_n_0\,
+      Q => o_LED(0),
+      R => '0'
+    );
+\o_LED_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \o_LED[1]_i_1_n_0\,
+      Q => o_LED(1),
+      R => '0'
+    );
+\o_LED_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \o_LED[2]_i_1_n_0\,
+      Q => o_LED(2),
+      R => '0'
+    );
+\o_LED_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \o_LED[3]_i_1_n_0\,
+      Q => o_LED(3),
+      R => '0'
     );
 \slv_reg0[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -3815,9 +3851,9 @@ entity system_myLED_0_0_myLED_v1_0 is
   port (
     S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_WREADY : out STD_LOGIC;
+    o_LED : out STD_LOGIC_VECTOR ( 3 downto 0 );
     S_AXI_ARREADY : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    o_LED : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
     s00_axi_bvalid : out STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;

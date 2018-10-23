@@ -203,6 +203,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_CLK3_FREQ {10000000} \
    CONFIG.PCW_CPU_CPU_PLL_FREQMHZ {1333.333} \
    CONFIG.PCW_CPU_PERIPHERAL_DIVISOR0 {2} \
+   CONFIG.PCW_CRYSTAL_PERIPHERAL_FREQMHZ {33.333333} \
    CONFIG.PCW_DCI_PERIPHERAL_DIVISOR0 {15} \
    CONFIG.PCW_DCI_PERIPHERAL_DIVISOR1 {7} \
    CONFIG.PCW_DDRPLL_CTRL_FBDIV {32} \
@@ -555,13 +556,12 @@ proc create_root_design { parentCell } {
   # Create instance: system_ila_0, and set properties
   set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
   set_property -dict [ list \
-   CONFIG.ALL_PROBE_SAME_MU_CNT {4} \
-   CONFIG.C_BRAM_CNT {12} \
-   CONFIG.C_DATA_DEPTH {2048} \
-   CONFIG.C_INPUT_PIPE_STAGES {1} \
+   CONFIG.ALL_PROBE_SAME_MU_CNT {2} \
+   CONFIG.C_BRAM_CNT {14} \
+   CONFIG.C_DATA_DEPTH {4096} \
    CONFIG.C_MON_TYPE {INTERFACE} \
    CONFIG.C_NUM_MONITOR_SLOTS {1} \
-   CONFIG.C_PROBE0_MU_CNT {4} \
+   CONFIG.C_PROBE0_MU_CNT {2} \
    CONFIG.C_SLOT_0_APC_EN {0} \
    CONFIG.C_SLOT_0_AXI_AR_SEL_DATA {1} \
    CONFIG.C_SLOT_0_AXI_AR_SEL_TRIG {1} \
@@ -574,6 +574,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_SLOT_0_AXI_W_SEL_DATA {1} \
    CONFIG.C_SLOT_0_AXI_W_SEL_TRIG {1} \
    CONFIG.C_SLOT_0_INTF_TYPE {xilinx.com:interface:aximm_rtl:1.0} \
+   CONFIG.C_TRIGIN_EN {false} \
  ] $system_ila_0
 
   # Create interface connections

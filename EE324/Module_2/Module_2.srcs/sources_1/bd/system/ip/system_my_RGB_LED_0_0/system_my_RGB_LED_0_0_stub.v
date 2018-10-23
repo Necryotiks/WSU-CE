@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 // Date        : Sun Oct 21 17:29:09 2018
 // Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ip/system_my_RGB_LED_0_0/system_my_RGB_LED_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_my_RGB_LED_0_0 -prefix
+//               system_my_RGB_LED_0_0_ system_my_RGB_LED_0_0_stub.v
 // Design      : system_my_RGB_LED_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z007sclg400-1

@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sun Oct 21 21:36:05 2018
+// Date        : Tue Oct 23 00:21:25 2018
 // Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ip/system_myLED_0_0/system_myLED_0_0_sim_netlist.v
@@ -111,9 +111,9 @@ endmodule
 module system_myLED_0_0_myLED_v1_0
    (S_AXI_AWREADY,
     S_AXI_WREADY,
+    o_LED,
     S_AXI_ARREADY,
     s00_axi_rdata,
-    o_LED,
     s00_axi_rvalid,
     s00_axi_bvalid,
     s00_axi_aclk,
@@ -129,9 +129,9 @@ module system_myLED_0_0_myLED_v1_0
     s00_axi_rready);
   output S_AXI_AWREADY;
   output S_AXI_WREADY;
+  output [3:0]o_LED;
   output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
-  output [3:0]o_LED;
   output s00_axi_rvalid;
   output s00_axi_bvalid;
   input s00_axi_aclk;
@@ -190,9 +190,9 @@ endmodule
 module system_myLED_0_0_myLED_v1_0_S00_AXI
    (S_AXI_AWREADY,
     S_AXI_WREADY,
+    o_LED,
     S_AXI_ARREADY,
     s00_axi_rdata,
-    o_LED,
     s00_axi_rvalid,
     s00_axi_bvalid,
     s00_axi_aclk,
@@ -208,9 +208,9 @@ module system_myLED_0_0_myLED_v1_0_S00_AXI
     s00_axi_rready);
   output S_AXI_AWREADY;
   output S_AXI_WREADY;
+  output [3:0]o_LED;
   output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
-  output [3:0]o_LED;
   output s00_axi_rvalid;
   output s00_axi_bvalid;
   input s00_axi_aclk;
@@ -242,6 +242,10 @@ module system_myLED_0_0_myLED_v1_0_S00_AXI
   wire axi_rvalid_i_1_n_0;
   wire axi_wready0__0;
   wire [3:0]o_LED;
+  wire \o_LED[0]_i_1_n_0 ;
+  wire \o_LED[1]_i_1_n_0 ;
+  wire \o_LED[2]_i_1_n_0 ;
+  wire \o_LED[3]_i_1_n_0 ;
   wire [1:0]p_0_in;
   wire [31:0]p_1_in;
   wire [31:0]reg_data_out;
@@ -1031,28 +1035,52 @@ module system_myLED_0_0_myLED_v1_0_S00_AXI
         .R(axi_awready_i_1_n_0));
   LUT2 #(
     .INIT(4'h8)) 
-    \o_LED[0]_INST_0 
+    \o_LED[0]_i_1 
        (.I0(slv_reg0[0]),
         .I1(slv_reg1[0]),
-        .O(o_LED[0]));
+        .O(\o_LED[0]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
-    \o_LED[1]_INST_0 
+    \o_LED[1]_i_1 
        (.I0(slv_reg0[1]),
         .I1(slv_reg1[1]),
-        .O(o_LED[1]));
+        .O(\o_LED[1]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
-    \o_LED[2]_INST_0 
+    \o_LED[2]_i_1 
        (.I0(slv_reg0[2]),
         .I1(slv_reg1[2]),
-        .O(o_LED[2]));
+        .O(\o_LED[2]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
-    \o_LED[3]_INST_0 
+    \o_LED[3]_i_1 
        (.I0(slv_reg0[3]),
         .I1(slv_reg1[3]),
-        .O(o_LED[3]));
+        .O(\o_LED[3]_i_1_n_0 ));
+  FDRE \o_LED_reg[0] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\o_LED[0]_i_1_n_0 ),
+        .Q(o_LED[0]),
+        .R(1'b0));
+  FDRE \o_LED_reg[1] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\o_LED[1]_i_1_n_0 ),
+        .Q(o_LED[1]),
+        .R(1'b0));
+  FDRE \o_LED_reg[2] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\o_LED[2]_i_1_n_0 ),
+        .Q(o_LED[2]),
+        .R(1'b0));
+  FDRE \o_LED_reg[3] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\o_LED[3]_i_1_n_0 ),
+        .Q(o_LED[3]),
+        .R(1'b0));
   LUT5 #(
     .INIT(32'hFEFF1000)) 
     \slv_reg0[0]_i_1 

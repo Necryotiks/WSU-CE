@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 -- Date        : Sun Oct 21 17:29:09 2018
 -- Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ip/system_my_RGB_LED_0_0/system_my_RGB_LED_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top system_my_RGB_LED_0_0 -prefix
+--               system_my_RGB_LED_0_0_ system_my_RGB_LED_0_0_sim_netlist.vhdl
 -- Design      : system_my_RGB_LED_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,8 +35,6 @@ entity system_my_RGB_LED_0_0_my_RGB_LED_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_my_RGB_LED_0_0_my_RGB_LED_v1_0_S00_AXI : entity is "my_RGB_LED_v1_0_S00_AXI";
 end system_my_RGB_LED_0_0_my_RGB_LED_v1_0_S00_AXI;
 
 architecture STRUCTURE of system_my_RGB_LED_0_0_my_RGB_LED_v1_0_S00_AXI is
@@ -3264,8 +3262,6 @@ entity system_my_RGB_LED_0_0_my_RGB_LED_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_my_RGB_LED_0_0_my_RGB_LED_v1_0 : entity is "my_RGB_LED_v1_0";
 end system_my_RGB_LED_0_0_my_RGB_LED_v1_0;
 
 architecture STRUCTURE of system_my_RGB_LED_0_0_my_RGB_LED_v1_0 is
