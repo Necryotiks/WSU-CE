@@ -19,8 +19,8 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_sim_netlist.v" \
-  "../../../bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v" \
-  "../../../bd/system/ipshared/1643/hdl/myLED_v1_0.v" \
+  "../../../bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v" \
+  "../../../bd/system/ipshared/9f7e/hdl/myLED_v1_0.v" \
   "../../../bd/system/ip/system_myLED_0_0/sim/system_myLED_0_0.v" \
   "../../../bd/system/ip/system_rst_ps7_0_50M_0/system_rst_ps7_0_50M_0_sim_netlist.v" \
   "../../../bd/system/ipshared/3e65/hdl/my_RGB_LED_v1_0_S00_AXI.v" \

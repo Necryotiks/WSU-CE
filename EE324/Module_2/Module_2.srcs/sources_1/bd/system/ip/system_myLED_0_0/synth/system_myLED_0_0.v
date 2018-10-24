@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:myLED:1.0
-// IP Revision: 5
+// IP Revision: 6
 
 (* X_CORE_INFO = "myLED_v1_0,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "system_myLED_0_0,myLED_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "system_myLED_0_0,myLED_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=myLED,x_ipVersion=1.0,x_ipCoreRevision=5,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "system_myLED_0_0,myLED_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=myLED,x_ipVersion=1.0,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module system_myLED_0_0 (
   o_LED,

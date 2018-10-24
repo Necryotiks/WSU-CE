@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Oct 23 00:20:41 2018
-# Process ID: 4292
+# Start of session at: Tue Oct 23 22:02:42 2018
+# Process ID: 2324
 # Current directory: C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.runs/system_myLED_0_0_synth_1
 # Command line: vivado.exe -log system_myLED_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_myLED_0_0.tcl
 # Log file: C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.runs/system_myLED_0_0_synth_1/system_myLED_0_0.vds
@@ -15,31 +15,31 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5568 
+INFO: Helper process launched with PID 7680 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 395.363 ; gain = 102.395
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 395.844 ; gain = 102.125
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system_myLED_0_0' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ip/system_myLED_0_0/synth/system_myLED_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'myLED_v1_0' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myLED_v1_0' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'myLED_v1_0_S00_AXI' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myLED_v1_0_S00_AXI' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:4]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:108]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:108]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:110]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:110]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:112]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:112]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:114]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:114]
-INFO: [Synth 8-226] default block is never used [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:235]
-INFO: [Synth 8-226] default block is never used [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:376]
-INFO: [Synth 8-6155] done synthesizing module 'myLED_v1_0_S00_AXI' (1#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'myLED_v1_0' (2#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/1643/hdl/myLED_v1_0.v:4]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:108]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:108]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:110]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:110]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:112]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:112]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:114]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:114]
+INFO: [Synth 8-226] default block is never used [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:235]
+INFO: [Synth 8-226] default block is never used [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:376]
+INFO: [Synth 8-6155] done synthesizing module 'myLED_v1_0_S00_AXI' (1#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'myLED_v1_0' (2#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ipshared/9f7e/hdl/myLED_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'system_myLED_0_0' (3#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ip/system_myLED_0_0/synth/system_myLED_0_0.v:57]
 WARNING: [Synth 8-3331] design myLED_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
 WARNING: [Synth 8-3331] design myLED_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
@@ -48,7 +48,7 @@ WARNING: [Synth 8-3331] design myLED_v1_0_S00_AXI has unconnected port S_AXI_ARP
 WARNING: [Synth 8-3331] design myLED_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design myLED_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 451.031 ; gain = 158.063
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 451.016 ; gain = 157.297
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -61,10 +61,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 451.031 ; gain = 158.063
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 451.016 ; gain = 157.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 451.031 ; gain = 158.063
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 451.016 ; gain = 157.297
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -77,25 +77,25 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 754.355 ; gain = 2.047
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 755.352 ; gain = 3.348
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 754.355 ; gain = 461.387
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 755.352 ; gain = 461.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 754.355 ; gain = 461.387
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 755.352 ; gain = 461.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 754.355 ; gain = 461.387
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 755.352 ; gain = 461.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 754.355 ; gain = 461.387
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 755.352 ; gain = 461.633
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -167,7 +167,7 @@ INFO: [Synth 8-3332] Sequential element (inst/myLED_v1_0_S00_AXI_inst/axi_araddr
 INFO: [Synth 8-3332] Sequential element (inst/myLED_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module system_myLED_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/myLED_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module system_myLED_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 754.355 ; gain = 461.387
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 755.352 ; gain = 461.633
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -179,13 +179,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 776.070 ; gain = 483.102
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 778.250 ; gain = 484.531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 776.441 ; gain = 483.473
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 778.695 ; gain = 484.977
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -197,7 +197,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 786.938 ; gain = 493.969
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 789.102 ; gain = 495.383
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -221,7 +221,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 786.938 ; gain = 493.969
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 789.102 ; gain = 495.383
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -234,7 +234,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 786.938 ; gain = 493.969
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 789.102 ; gain = 495.383
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -246,25 +246,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 786.938 ; gain = 493.969
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 789.102 ; gain = 495.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 786.938 ; gain = 493.969
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 789.102 ; gain = 495.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 786.938 ; gain = 493.969
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 789.102 ; gain = 495.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 786.938 ; gain = 493.969
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 789.102 ; gain = 495.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -299,11 +299,11 @@ Report Instance Areas:
 |3     |    myLED_v1_0_S00_AXI_inst |myLED_v1_0_S00_AXI |   351|
 +------+----------------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 786.938 ; gain = 493.969
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 789.102 ; gain = 495.383
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 786.938 ; gain = 190.645
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 786.938 ; gain = 493.969
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 789.102 ; gain = 191.047
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 789.102 ; gain = 495.383
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -313,7 +313,7 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 35 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 797.395 ; gain = 515.594
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 804.141 ; gain = 522.203
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.runs/system_myLED_0_0_synth_1/system_myLED_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/system/ip/system_myLED_0_0/system_myLED_0_0.xci
@@ -321,5 +321,5 @@ INFO: [Coretcl 2-1174] Renamed 2 cell refs.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.runs/system_myLED_0_0_synth_1/system_myLED_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_myLED_0_0_utilization_synth.rpt -pb system_myLED_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 797.395 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 23 00:21:25 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 804.141 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 23 22:03:27 2018...
