@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Oct 27 12:02:26 2018
+| Date             : Sat Oct 27 12:54:23 2018
 | Host             : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 | Command          : report_power -file CMP_wrapper_power_routed.rpt -pb CMP_wrapper_power_summary_routed.pb -rpx CMP_wrapper_power_routed.rpx
 | Design           : CMP_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.096        |
+| Total On-Chip Power (W)  | 0.105        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.003        |
+| Dynamic (W)              | 0.012        |
 | Device Static (W)        | 0.093        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 83.9         |
-| Junction Temperature (C) | 26.1         |
+| Max Ambient (C)          | 83.8         |
+| Junction Temperature (C) | 26.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      167 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       86 |     14400 |            0.60 |
-|   CARRY4       |    <0.001 |       14 |      4400 |            0.32 |
-|   Register     |    <0.001 |       32 |     28800 |            0.11 |
-|   Others       |     0.000 |        7 |       --- |             --- |
-| Signals        |    <0.001 |      142 |       --- |             --- |
-| I/O            |     0.002 |       15 |       100 |           15.00 |
+| Slice Logic    |    <0.001 |      239 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      105 |     14400 |            0.73 |
+|   CARRY4       |    <0.001 |       20 |      4400 |            0.45 |
+|   Register     |    <0.001 |       62 |     28800 |            0.22 |
+|   Others       |     0.000 |       11 |       --- |             --- |
+| Signals        |    <0.001 |      202 |       --- |             --- |
+| I/O            |     0.010 |       27 |       100 |           27.00 |
 | Static Power   |     0.093 |          |           |                 |
-| Total          |     0.096 |          |           |                 |
+| Total          |     0.105 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,8 +72,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.005 |       0.001 |      0.004 |
-| Vccaux    |       1.800 |     0.005 |       0.000 |      0.005 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vccaux    |       1.800 |     0.006 |       0.000 |      0.005 |
+| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -144,21 +144,31 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------+-----------+
-| Name             | Power (W) |
-+------------------+-----------+
-| CMP_wrapper      |     0.003 |
-|   CMP_i          |    <0.001 |
-|     Comparator_0 |    <0.001 |
-|       inst       |    <0.001 |
-|     Multiplier_0 |    <0.001 |
-|       inst       |    <0.001 |
-|     PIPO_0       |    <0.001 |
-|       inst       |    <0.001 |
-|     PIPO_1       |    <0.001 |
-|       inst       |    <0.001 |
-|     PIPO_2       |    <0.001 |
-|       inst       |    <0.001 |
-+------------------+-----------+
++--------------------+-----------+
+| Name               | Power (W) |
++--------------------+-----------+
+| CMP_wrapper        |     0.012 |
+|   CMP_i            |     0.001 |
+|     Comparator_0   |    <0.001 |
+|       inst         |    <0.001 |
+|     Digit_1        |     0.000 |
+|     Digit_2        |     0.000 |
+|     Digit_3        |     0.000 |
+|     Digit_4        |     0.000 |
+|     Multiplier_0   |    <0.001 |
+|       inst         |    <0.001 |
+|     PIPO_0         |    <0.001 |
+|       inst         |    <0.001 |
+|     PIPO_1         |    <0.001 |
+|       inst         |    <0.001 |
+|     PIPO_2         |    <0.001 |
+|       inst         |    <0.001 |
+|     ssd_dec_0      |    <0.001 |
+|       inst         |    <0.001 |
+|     ssd_mux_0      |    <0.001 |
+|       inst         |    <0.001 |
+|     temp_reg_mux_0 |    <0.001 |
+|       inst         |    <0.001 |
++--------------------+-----------+
 
 

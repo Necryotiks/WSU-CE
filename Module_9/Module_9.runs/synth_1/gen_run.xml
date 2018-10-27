@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1540666817">
+<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1540669909">
   <File Type="PA-TCL" Name="CMP_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="CMP_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="CMP_wrapper_reports.tcl"/>
@@ -32,23 +32,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/CMP/CMP.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/CMP/hdl/CMP_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/Parts/ssd_dec.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../Parts/ssd_dec.v"/>
         <Attr Name="ImportTime" Val="1539999971"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -58,7 +43,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Parts/ssd_mux.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../Parts/ssd_mux.v"/>
         <Attr Name="ImportTime" Val="1540586095"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -66,9 +50,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/MUL/MUL.bd">
+    <File Path="$PSRCDIR/sources_1/new/temp_reg_mux.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/CMP/CMP.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/CMP/hdl/CMP_wrapper.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -146,13 +143,6 @@
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/new/CLA_wrapper_cons.xdc">
-      <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/constrs_1/new/MUL_wrapper_cons.xdc">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

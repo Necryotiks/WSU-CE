@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# Comparator, Multiplier, PIPO, PIPO, PIPO
+# Comparator, Multiplier, PIPO, PIPO, PIPO, ssd_dec, ssd_mux, temp_reg_mux
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -172,6 +172,9 @@ proc create_root_design { parentCell } {
   set i_LD_0 [ create_bd_port -dir I i_LD_0 ]
   set i_LD_1 [ create_bd_port -dir I i_LD_1 ]
   set i_SW [ create_bd_port -dir I -from 7 -to 0 i_SW ]
+  set i_SWP [ create_bd_port -dir I i_SWP ]
+  set o_Anodes [ create_bd_port -dir O -from 3 -to 0 o_Anodes ]
+  set o_Cathodes [ create_bd_port -dir O -from 6 -to 0 o_Cathodes ]
   set o_EQ [ create_bd_port -dir O o_EQ ]
   set o_GT [ create_bd_port -dir O o_GT ]
   set o_LT [ create_bd_port -dir O o_LT ]
@@ -187,6 +190,42 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: Digit_1, and set properties
+  set Digit_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Digit_1 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {15} \
+   CONFIG.DIN_TO {12} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $Digit_1
+
+  # Create instance: Digit_2, and set properties
+  set Digit_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Digit_2 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {11} \
+   CONFIG.DIN_TO {8} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $Digit_2
+
+  # Create instance: Digit_3, and set properties
+  set Digit_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Digit_3 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {7} \
+   CONFIG.DIN_TO {4} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $Digit_3
+
+  # Create instance: Digit_4, and set properties
+  set Digit_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Digit_4 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {3} \
+   CONFIG.DIN_TO {0} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $Digit_4
+
   # Create instance: Multiplier_0, and set properties
   set block_name Multiplier
   set block_cell_name Multiplier_0
@@ -234,19 +273,61 @@ proc create_root_design { parentCell } {
    CONFIG.BUS_MSB {15} \
  ] $PIPO_2
 
+  # Create instance: ssd_dec_0, and set properties
+  set block_name ssd_dec
+  set block_cell_name ssd_dec_0
+  if { [catch {set ssd_dec_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $ssd_dec_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: ssd_mux_0, and set properties
+  set block_name ssd_mux
+  set block_cell_name ssd_mux_0
+  if { [catch {set ssd_mux_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $ssd_mux_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: temp_reg_mux_0, and set properties
+  set block_name temp_reg_mux
+  set block_cell_name temp_reg_mux_0
+  if { [catch {set temp_reg_mux_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $temp_reg_mux_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create port connections
   connect_bd_net -net Comparator_0_o_EQ [get_bd_ports o_EQ] [get_bd_pins Comparator_0/o_EQ]
   connect_bd_net -net Comparator_0_o_GT [get_bd_ports o_GT] [get_bd_pins Comparator_0/o_GT]
   connect_bd_net -net Comparator_0_o_LT [get_bd_ports o_LT] [get_bd_pins Comparator_0/o_LT]
-  connect_bd_net -net Multiplier_0_o_Result [get_bd_pins Comparator_0/i_B] [get_bd_pins Multiplier_0/o_Result] [get_bd_pins PIPO_2/i_SW]
+  connect_bd_net -net Digit_1_Dout [get_bd_pins Digit_1/Dout] [get_bd_pins ssd_mux_0/i_Digit_1]
+  connect_bd_net -net Digit_2_Dout [get_bd_pins Digit_2/Dout] [get_bd_pins ssd_mux_0/i_Digit_2]
+  connect_bd_net -net Digit_3_Dout [get_bd_pins Digit_3/Dout] [get_bd_pins ssd_mux_0/i_Digit_3]
+  connect_bd_net -net Digit_4_Dout [get_bd_pins Digit_4/Dout] [get_bd_pins ssd_mux_0/i_Digit_4]
+  connect_bd_net -net Multiplier_0_o_Result [get_bd_pins Comparator_0/i_B] [get_bd_pins Multiplier_0/o_Result] [get_bd_pins PIPO_2/i_SW] [get_bd_pins temp_reg_mux_0/i_MUL]
   connect_bd_net -net PIPO_0_o_Out [get_bd_pins Multiplier_0/i_B] [get_bd_pins PIPO_0/o_Out]
   connect_bd_net -net PIPO_1_o_Out [get_bd_pins Multiplier_0/i_A] [get_bd_pins PIPO_1/o_Out]
-  connect_bd_net -net PIPO_2_o_Out [get_bd_pins Comparator_0/i_A] [get_bd_pins PIPO_2/o_Out]
-  connect_bd_net -net clk_100MHz_1 [get_bd_ports i_CLK] [get_bd_pins PIPO_0/i_CLK] [get_bd_pins PIPO_1/i_CLK] [get_bd_pins PIPO_2/i_CLK]
+  connect_bd_net -net PIPO_2_o_Out [get_bd_pins Comparator_0/i_A] [get_bd_pins PIPO_2/o_Out] [get_bd_pins temp_reg_mux_0/i_REG]
+  connect_bd_net -net clk_100MHz_1 [get_bd_ports i_CLK] [get_bd_pins PIPO_0/i_CLK] [get_bd_pins PIPO_1/i_CLK] [get_bd_pins PIPO_2/i_CLK] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
   connect_bd_net -net i_A_0_1 [get_bd_ports i_SW] [get_bd_pins PIPO_0/i_SW] [get_bd_pins PIPO_1/i_SW]
   connect_bd_net -net i_BTN_0_1 [get_bd_ports i_LD_1] [get_bd_pins PIPO_1/i_BTN]
-  connect_bd_net -net i_BTN_0_2 [get_bd_ports i_LDRG] [get_bd_pins PIPO_2/i_BTN]
   connect_bd_net -net i_BTN_1_1 [get_bd_ports i_LD_0] [get_bd_pins PIPO_0/i_BTN]
+  connect_bd_net -net i_LDRG_1 [get_bd_ports i_LDRG] [get_bd_pins PIPO_2/i_BTN]
+  connect_bd_net -net i_SWP_0_1 [get_bd_ports i_SWP] [get_bd_pins temp_reg_mux_0/i_SWP]
+  connect_bd_net -net ssd_dec_0_cathode [get_bd_ports o_Cathodes] [get_bd_pins ssd_dec_0/cathode]
+  connect_bd_net -net ssd_mux_0_an [get_bd_ports o_Anodes] [get_bd_pins ssd_mux_0/an]
+  connect_bd_net -net ssd_mux_0_o_Out [get_bd_pins ssd_dec_0/i_Num] [get_bd_pins ssd_mux_0/o_Out]
+  connect_bd_net -net temp_reg_mux_0_o_OUT [get_bd_pins Digit_1/Din] [get_bd_pins Digit_2/Din] [get_bd_pins Digit_3/Din] [get_bd_pins Digit_4/Din] [get_bd_pins temp_reg_mux_0/o_OUT]
 
   # Create address segments
 

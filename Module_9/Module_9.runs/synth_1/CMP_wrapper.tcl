@@ -39,6 +39,9 @@ read_verilog -library xil_defaultlib {
   C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/Multiplier.v
   C:/Users/Sergaljerk/WSU-CPTE/Parts/PIPO.v
   C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/Comparator.v
+  C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/imports/Parts/ssd_dec.v
+  C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/imports/Parts/ssd_mux.v
+  C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/temp_reg_mux.v
   C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/CMP/hdl/CMP_wrapper.v
 }
 add_files C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/CMP/CMP.bd
