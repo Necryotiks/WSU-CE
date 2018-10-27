@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xB81CFECAB15141A6" bd:device="xc7z007sclg400-1" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2018.2" bd:top="CMP" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x43A766D78174A8B8" bd:device="xc7z007sclg400-1" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2018.2" bd:top="CMP" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -105,19 +105,19 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>o_GT_0</spirit:name>
+          <spirit:name>o_GT</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>o_EQ_0</spirit:name>
+          <spirit:name>o_EQ</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>o_LT_0</spirit:name>
+          <spirit:name>o_LT</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
@@ -242,17 +242,17 @@
       <spirit:adHocConnection>
         <spirit:name>Comparator_0_o_GT</spirit:name>
         <spirit:internalPortReference spirit:componentRef="Comparator_0" spirit:portRef="o_GT"/>
-        <spirit:externalPortReference spirit:portRef="o_GT_0"/>
+        <spirit:externalPortReference spirit:portRef="o_GT"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>Comparator_0_o_EQ</spirit:name>
         <spirit:internalPortReference spirit:componentRef="Comparator_0" spirit:portRef="o_EQ"/>
-        <spirit:externalPortReference spirit:portRef="o_EQ_0"/>
+        <spirit:externalPortReference spirit:portRef="o_EQ"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>Comparator_0_o_LT</spirit:name>
         <spirit:internalPortReference spirit:componentRef="Comparator_0" spirit:portRef="o_LT"/>
-        <spirit:externalPortReference spirit:portRef="o_LT_0"/>
+        <spirit:externalPortReference spirit:portRef="o_LT"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

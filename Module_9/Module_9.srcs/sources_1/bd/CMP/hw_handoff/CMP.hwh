@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Oct 27 11:23:49 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Oct 27 11:50:53 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="CMP" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -32,17 +32,17 @@
         <CONNECTION INSTANCE="PIPO_2" PORT="i_BTN"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="o_GT_0" SIGIS="undef" SIGNAME="Comparator_0_o_GT">
+    <PORT DIR="O" NAME="o_GT" SIGIS="undef" SIGNAME="Comparator_0_o_GT">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Comparator_0" PORT="o_GT"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="o_EQ_0" SIGIS="undef" SIGNAME="Comparator_0_o_EQ">
+    <PORT DIR="O" NAME="o_EQ" SIGIS="undef" SIGNAME="Comparator_0_o_EQ">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Comparator_0" PORT="o_EQ"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="o_LT_0" SIGIS="undef" SIGNAME="Comparator_0_o_LT">
+    <PORT DIR="O" NAME="o_LT" SIGIS="undef" SIGNAME="Comparator_0_o_LT">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Comparator_0" PORT="o_LT"/>
       </CONNECTIONS>
@@ -71,17 +71,17 @@
         </PORT>
         <PORT DIR="O" NAME="o_GT" SIGIS="undef" SIGNAME="Comparator_0_o_GT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="o_GT_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_GT"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_EQ" SIGIS="undef" SIGNAME="Comparator_0_o_EQ">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="o_EQ_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_EQ"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_LT" SIGIS="undef" SIGNAME="Comparator_0_o_LT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="o_LT_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_LT"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

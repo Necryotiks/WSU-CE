@@ -172,9 +172,9 @@ proc create_root_design { parentCell } {
   set i_LD_0 [ create_bd_port -dir I i_LD_0 ]
   set i_LD_1 [ create_bd_port -dir I i_LD_1 ]
   set i_SW [ create_bd_port -dir I -from 7 -to 0 i_SW ]
-  set o_EQ_0 [ create_bd_port -dir O o_EQ_0 ]
-  set o_GT_0 [ create_bd_port -dir O o_GT_0 ]
-  set o_LT_0 [ create_bd_port -dir O o_LT_0 ]
+  set o_EQ [ create_bd_port -dir O o_EQ ]
+  set o_GT [ create_bd_port -dir O o_GT ]
+  set o_LT [ create_bd_port -dir O o_LT ]
 
   # Create instance: Comparator_0, and set properties
   set block_name Comparator
@@ -235,9 +235,9 @@ proc create_root_design { parentCell } {
  ] $PIPO_2
 
   # Create port connections
-  connect_bd_net -net Comparator_0_o_EQ [get_bd_ports o_EQ_0] [get_bd_pins Comparator_0/o_EQ]
-  connect_bd_net -net Comparator_0_o_GT [get_bd_ports o_GT_0] [get_bd_pins Comparator_0/o_GT]
-  connect_bd_net -net Comparator_0_o_LT [get_bd_ports o_LT_0] [get_bd_pins Comparator_0/o_LT]
+  connect_bd_net -net Comparator_0_o_EQ [get_bd_ports o_EQ] [get_bd_pins Comparator_0/o_EQ]
+  connect_bd_net -net Comparator_0_o_GT [get_bd_ports o_GT] [get_bd_pins Comparator_0/o_GT]
+  connect_bd_net -net Comparator_0_o_LT [get_bd_ports o_LT] [get_bd_pins Comparator_0/o_LT]
   connect_bd_net -net Multiplier_0_o_Result [get_bd_pins Comparator_0/i_B] [get_bd_pins Multiplier_0/o_Result] [get_bd_pins PIPO_2/i_SW]
   connect_bd_net -net PIPO_0_o_Out [get_bd_pins Multiplier_0/i_B] [get_bd_pins PIPO_0/o_Out]
   connect_bd_net -net PIPO_1_o_Out [get_bd_pins Multiplier_0/i_A] [get_bd_pins PIPO_1/o_Out]
