@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Oct 26 21:19:40 2018" VIVADOVERSION="2018.2">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="CLA_ADDER" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="3" NAME="i_SW_UPPER" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW_UPPER">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CLA_0" PORT="i_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="i_SW_LOWER" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW_LOWER">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CLA_0" PORT="i_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="temp_mux_input_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_Overflow" SIGIS="undef" SIGNAME="CLA_0_o_Cout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CLA_0" PORT="o_Cout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="6" NAME="o_Cathodes" RIGHT="0" SIGIS="undef" SIGNAME="ssd_dec_0_cathode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_dec_0" PORT="cathode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_Anodes" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_an">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_mux_0" PORT="an"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/CLA_0" HWVERSION="1.0" INSTANCE="CLA_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CLA" VLNV="xilinx.com:module_ref:CLA:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="MAX_WIDTH" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="CLA_ADDER_CLA_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="i_A" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW_UPPER">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SW_UPPER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_B" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW_LOWER">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SW_LOWER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_S" RIGHT="0" SIGIS="undef" SIGNAME="CLA_0_o_S">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="temp_mux_input_0" PORT="w_SUM"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Cout" SIGIS="undef" SIGNAME="CLA_0_o_Cout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Overflow"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ssd_dec_0" HWVERSION="1.0" INSTANCE="ssd_dec_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_dec" VLNV="xilinx.com:module_ref:ssd_dec:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CLA_ADDER_ssd_dec_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_Num" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="cathode" RIGHT="0" SIGIS="undef" SIGNAME="ssd_dec_0_cathode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Cathodes"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ssd_mux_0" HWVERSION="1.0" INSTANCE="ssd_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_mux" VLNV="xilinx.com:module_ref:ssd_mux:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CLA_ADDER_ssd_mux_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_2" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_3" RIGHT="0" SIGIS="undef" SIGNAME="temp_mux_input_0_r_SSD_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="temp_mux_input_0" PORT="r_SSD_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_4" RIGHT="0" SIGIS="undef" SIGNAME="temp_mux_input_0_r_SSD_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="temp_mux_input_0" PORT="r_SSD_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_dec_0" PORT="i_Num"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="an" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_an">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Anodes"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/temp_mux_input_0" HWVERSION="1.0" INSTANCE="temp_mux_input_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="temp_mux_input" VLNV="xilinx.com:module_ref:temp_mux_input:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CLA_ADDER_temp_mux_input_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="w_SUM" RIGHT="0" SIGIS="undef" SIGNAME="CLA_0_o_S">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CLA_0" PORT="o_S"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="r_SSD_0" RIGHT="0" SIGIS="undef" SIGNAME="temp_mux_input_0_r_SSD_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="r_SSD_1" RIGHT="0" SIGIS="undef" SIGNAME="temp_mux_input_0_r_SSD_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

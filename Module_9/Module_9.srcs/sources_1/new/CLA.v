@@ -36,7 +36,7 @@ module CLA #(parameter MAX_WIDTH = 3)(
     genvar i;
     
     assign o_S = w_SUM;
-    assign o_Cout = w_CARRY[4];
+    assign o_Cout = w_CARRY[(MAX_WIDTH+1)];
     assign w_A = i_A;
     assign w_B = i_B;
     generate

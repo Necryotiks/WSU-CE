@@ -2,8 +2,9 @@
 set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVCMOS33} [get_ports i_CLK]
 create_clock -period 23.00 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports i_CLK]
 
-##Buttons
-set_property -dict { PACKAGE_PIN W14   IOSTANDARD LVCMOS33 } [get_ports { i_RST }]; #IO_L8P_T1_34 Schematic=BTN0
+###Buttons
+#set_property -dict { PACKAGE_PIN W14   IOSTANDARD LVCMOS33 } [get_ports { i_LD_0 }]; #IO_L8P_T1_34 Schematic=BTN0
+#set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports { i_LD_1 }]; #IO_L8P_T1_34 Schematic=BTN1
 
 #SevenSegmentDisplay
 #anodes

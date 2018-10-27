@@ -30,10 +30,14 @@ output reg [3:0] o_Out,
 output reg [3:0] an
     );
     reg [1:0] r_CYCLE;
+    reg [16:0] r_SUBCLK;
     
     always@(posedge i_CLK)
     begin
-        r_CYCLE <= r_CYCLE + 1'b1;
+        if(r_SUBCLK[16] == 1'b1)
+             r_CYCLE <= r_CYCLE + 1'b1;
+        else
+           r_SUBCLK <= r_SUBCLK + 1'b1;
     end 
    always@ (r_CYCLE,i_Digit_1,i_Digit_2,i_Digit_3,i_Digit_4)
         begin
