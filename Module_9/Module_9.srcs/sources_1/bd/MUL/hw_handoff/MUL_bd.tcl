@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# Multiplier, ssd_dec, ssd_mux
+# Multiplier, PIPO, PIPO, ssd_dec, ssd_mux
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -164,20 +164,21 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set an_0 [ create_bd_port -dir O -from 3 -to 0 an_0 ]
-  set cathode_0 [ create_bd_port -dir O -from 6 -to 0 cathode_0 ]
-  set clk_100MHz [ create_bd_port -dir I -type clk clk_100MHz ]
+  set i_CLK [ create_bd_port -dir I -type clk i_CLK ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000} \
- ] $clk_100MHz
-  set i_A_0 [ create_bd_port -dir I -from 7 -to 0 i_A_0 ]
-  set i_B_0 [ create_bd_port -dir I -from 7 -to 0 i_B_0 ]
+ ] $i_CLK
+  set i_LD_0 [ create_bd_port -dir I i_LD_0 ]
+  set i_LD_1 [ create_bd_port -dir I i_LD_1 ]
+  set i_SW [ create_bd_port -dir I -from 7 -to 0 i_SW ]
+  set o_Anodes [ create_bd_port -dir O -from 3 -to 0 o_Anodes ]
+  set o_Cathodes [ create_bd_port -dir O -from 6 -to 0 o_Cathodes ]
 
   # Create instance: Digit_1, and set properties
   set Digit_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Digit_1 ]
   set_property -dict [ list \
-   CONFIG.DIN_FROM {3} \
-   CONFIG.DIN_TO {0} \
+   CONFIG.DIN_FROM {15} \
+   CONFIG.DIN_TO {12} \
    CONFIG.DIN_WIDTH {16} \
    CONFIG.DOUT_WIDTH {4} \
  ] $Digit_1
@@ -185,8 +186,8 @@ proc create_root_design { parentCell } {
   # Create instance: Digit_2, and set properties
   set Digit_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Digit_2 ]
   set_property -dict [ list \
-   CONFIG.DIN_FROM {7} \
-   CONFIG.DIN_TO {4} \
+   CONFIG.DIN_FROM {11} \
+   CONFIG.DIN_TO {8} \
    CONFIG.DIN_WIDTH {16} \
    CONFIG.DOUT_WIDTH {4} \
  ] $Digit_2
@@ -194,8 +195,8 @@ proc create_root_design { parentCell } {
   # Create instance: Digit_3, and set properties
   set Digit_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Digit_3 ]
   set_property -dict [ list \
-   CONFIG.DIN_FROM {11} \
-   CONFIG.DIN_TO {8} \
+   CONFIG.DIN_FROM {7} \
+   CONFIG.DIN_TO {4} \
    CONFIG.DIN_WIDTH {16} \
    CONFIG.DOUT_WIDTH {4} \
  ] $Digit_3
@@ -203,8 +204,8 @@ proc create_root_design { parentCell } {
   # Create instance: Digit_4, and set properties
   set Digit_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Digit_4 ]
   set_property -dict [ list \
-   CONFIG.DIN_FROM {15} \
-   CONFIG.DIN_TO {12} \
+   CONFIG.DIN_FROM {3} \
+   CONFIG.DIN_TO {0} \
    CONFIG.DIN_WIDTH {16} \
    CONFIG.DOUT_WIDTH {4} \
  ] $Digit_4
@@ -216,6 +217,28 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $Multiplier_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: PIPO_0, and set properties
+  set block_name PIPO
+  set block_cell_name PIPO_0
+  if { [catch {set PIPO_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $PIPO_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: PIPO_1, and set properties
+  set block_name PIPO
+  set block_cell_name PIPO_1
+  if { [catch {set PIPO_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $PIPO_1 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -248,11 +271,14 @@ proc create_root_design { parentCell } {
   connect_bd_net -net Digit_3_Dout [get_bd_pins Digit_3/Dout] [get_bd_pins ssd_mux_0/i_Digit_3]
   connect_bd_net -net Digit_4_Dout [get_bd_pins Digit_4/Dout] [get_bd_pins ssd_mux_0/i_Digit_4]
   connect_bd_net -net Multiplier_0_o_Result [get_bd_pins Digit_1/Din] [get_bd_pins Digit_2/Din] [get_bd_pins Digit_3/Din] [get_bd_pins Digit_4/Din] [get_bd_pins Multiplier_0/o_Result]
-  connect_bd_net -net clk_100MHz_1 [get_bd_ports clk_100MHz] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
-  connect_bd_net -net i_A_0_1 [get_bd_ports i_A_0] [get_bd_pins Multiplier_0/i_A]
-  connect_bd_net -net i_B_0_1 [get_bd_ports i_B_0] [get_bd_pins Multiplier_0/i_B]
-  connect_bd_net -net ssd_dec_0_cathode [get_bd_ports cathode_0] [get_bd_pins ssd_dec_0/cathode]
-  connect_bd_net -net ssd_mux_0_an [get_bd_ports an_0] [get_bd_pins ssd_mux_0/an]
+  connect_bd_net -net PIPO_0_o_Out [get_bd_pins Multiplier_0/i_B] [get_bd_pins PIPO_0/o_Out]
+  connect_bd_net -net PIPO_1_o_Out [get_bd_pins Multiplier_0/i_A] [get_bd_pins PIPO_1/o_Out]
+  connect_bd_net -net clk_100MHz_1 [get_bd_ports i_CLK] [get_bd_pins PIPO_0/i_CLK] [get_bd_pins PIPO_1/i_CLK] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
+  connect_bd_net -net i_A_0_1 [get_bd_ports i_SW] [get_bd_pins PIPO_0/i_SW] [get_bd_pins PIPO_1/i_SW]
+  connect_bd_net -net i_BTN_0_1 [get_bd_ports i_LD_1] [get_bd_pins PIPO_1/i_BTN]
+  connect_bd_net -net i_BTN_1_1 [get_bd_ports i_LD_0] [get_bd_pins PIPO_0/i_BTN]
+  connect_bd_net -net ssd_dec_0_cathode [get_bd_ports o_Cathodes] [get_bd_pins ssd_dec_0/cathode]
+  connect_bd_net -net ssd_mux_0_an [get_bd_ports o_Anodes] [get_bd_pins ssd_mux_0/an]
   connect_bd_net -net ssd_mux_0_o_Out [get_bd_pins ssd_dec_0/i_Num] [get_bd_pins ssd_mux_0/o_Out]
 
   # Create address segments

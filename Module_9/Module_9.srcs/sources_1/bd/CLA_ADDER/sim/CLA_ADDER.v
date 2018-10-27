@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Fri Oct 26 21:19:40 2018
+//Date        : Sat Oct 27 10:37:56 2018
 //Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target CLA_ADDER.bd
 //Design      : CLA_ADDER
@@ -17,7 +17,7 @@ module CLA_ADDER
     o_Anodes,
     o_Cathodes,
     o_Overflow);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.I_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.I_CLK, CLK_DOMAIN CLA_ADDER_clk_100MHz, FREQ_HZ 100000000, PHASE 0.000" *) input i_CLK;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.I_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.I_CLK, CLK_DOMAIN CLA_ADDER_i_CLK, FREQ_HZ 100000000, PHASE 0.000" *) input i_CLK;
   input [3:0]i_SW_LOWER;
   input [3:0]i_SW_UPPER;
   output [3:0]o_Anodes;

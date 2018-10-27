@@ -1,33 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Oct 26 20:22:55 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Oct 27 10:48:51 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="MUL" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_100MHz" SIGIS="clk" SIGNAME="External_Ports_clk_100MHz">
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="PIPO_1" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="7" NAME="i_A_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_A_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Multiplier_0" PORT="i_A"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="7" NAME="i_B_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_B_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Multiplier_0" PORT="i_B"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="6" NAME="cathode_0" RIGHT="0" SIGIS="undef" SIGNAME="ssd_dec_0_cathode">
+    <PORT DIR="O" LEFT="6" NAME="o_Cathodes" RIGHT="0" SIGIS="undef" SIGNAME="ssd_dec_0_cathode">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ssd_dec_0" PORT="cathode"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="an_0" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_an">
+    <PORT DIR="O" LEFT="3" NAME="o_Anodes" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_an">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ssd_mux_0" PORT="an"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_1" PORT="i_SW"/>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_SW"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_LD_1" SIGIS="undef" SIGNAME="External_Ports_i_LD_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_1" PORT="i_BTN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_LD_0" SIGIS="undef" SIGNAME="External_Ports_i_LD_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_BTN"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -39,9 +47,9 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="3"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="MUL_Digit_1_0"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="15"/>
+        <PARAMETER NAME="DIN_TO" VALUE="12"/>
+        <PARAMETER NAME="Component_Name" VALUE="MUL_Digit_4_0"/>
         <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -63,9 +71,9 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="7"/>
-        <PARAMETER NAME="DIN_TO" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="MUL_Digit_2_0"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="11"/>
+        <PARAMETER NAME="DIN_TO" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="MUL_Digit_3_0"/>
         <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -87,9 +95,9 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="11"/>
-        <PARAMETER NAME="DIN_TO" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="MUL_Digit_3_0"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="7"/>
+        <PARAMETER NAME="DIN_TO" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="MUL_Digit_2_0"/>
         <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -111,9 +119,9 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="DIN_FROM" VALUE="15"/>
-        <PARAMETER NAME="DIN_TO" VALUE="12"/>
-        <PARAMETER NAME="Component_Name" VALUE="MUL_Digit_4_0"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="3"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="MUL_Digit_1_0"/>
         <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -138,22 +146,82 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="7" NAME="i_A" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_A_0">
+        <PORT DIR="I" LEFT="7" NAME="i_A" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_1_o_Out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="i_A_0"/>
+            <CONNECTION INSTANCE="PIPO_1" PORT="o_Out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="i_B" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_B_0">
+        <PORT DIR="I" LEFT="7" NAME="i_B" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_0_o_Out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="i_B_0"/>
+            <CONNECTION INSTANCE="PIPO_0" PORT="o_Out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="o_Result" RIGHT="0" SIGIS="undef" SIGNAME="Multiplier_0_o_Result">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Digit_4" PORT="Din"/>
-            <CONNECTION INSTANCE="Digit_3" PORT="Din"/>
-            <CONNECTION INSTANCE="Digit_2" PORT="Din"/>
             <CONNECTION INSTANCE="Digit_1" PORT="Din"/>
+            <CONNECTION INSTANCE="Digit_2" PORT="Din"/>
+            <CONNECTION INSTANCE="Digit_3" PORT="Din"/>
+            <CONNECTION INSTANCE="Digit_4" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/PIPO_0" HWVERSION="1.0" INSTANCE="PIPO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PIPO" VLNV="xilinx.com:module_ref:PIPO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="MUL_PIPO_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_BTN" SIGIS="undef" SIGNAME="External_Ports_i_LD_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_LD_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Multiplier_0" PORT="i_B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/PIPO_1" HWVERSION="1.0" INSTANCE="PIPO_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PIPO" VLNV="xilinx.com:module_ref:PIPO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="MUL_PIPO_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_BTN" SIGIS="undef" SIGNAME="External_Ports_i_LD_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_LD_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_1_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Multiplier_0" PORT="i_A"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -166,9 +234,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_clk_100MHz">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk_100MHz"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="i_Num" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">
@@ -178,7 +246,7 @@
         </PORT>
         <PORT DIR="O" LEFT="6" NAME="cathode" RIGHT="0" SIGIS="undef" SIGNAME="ssd_dec_0_cathode">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="cathode_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Cathodes"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -211,9 +279,9 @@
             <CONNECTION INSTANCE="Digit_4" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_clk_100MHz">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk_100MHz"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">
@@ -223,7 +291,7 @@
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="an" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_an">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="an_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Anodes"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

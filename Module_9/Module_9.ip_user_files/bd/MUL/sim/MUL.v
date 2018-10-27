@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Fri Oct 26 20:22:55 2018
+//Date        : Sat Oct 27 10:34:57 2018
 //Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target MUL.bd
 //Design      : MUL
@@ -9,36 +9,42 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "MUL,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=MUL,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}" *) (* HW_HANDOFF = "MUL.hwdef" *) 
+(* CORE_GENERATION_INFO = "MUL,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=MUL,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "MUL.hwdef" *) 
 module MUL
-   (an_0,
-    cathode_0,
-    clk_100MHz,
-    i_A_0,
-    i_B_0);
-  output [3:0]an_0;
-  output [6:0]cathode_0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, CLK_DOMAIN MULTIPLIER_clk_100MHz, FREQ_HZ 100000000, PHASE 0.000" *) input clk_100MHz;
-  input [7:0]i_A_0;
-  input [7:0]i_B_0;
+   (i_CLK,
+    i_LD_0,
+    i_LD_1,
+    i_SW,
+    o_Anodes,
+    o_Cathodes);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.I_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.I_CLK, CLK_DOMAIN MUL_i_CLK, FREQ_HZ 100000000, PHASE 0.000" *) input i_CLK;
+  input i_LD_0;
+  input i_LD_1;
+  input [7:0]i_SW;
+  output [3:0]o_Anodes;
+  output [6:0]o_Cathodes;
 
   wire [3:0]Digit_1_Dout;
   wire [3:0]Digit_2_Dout;
   wire [3:0]Digit_3_Dout;
   wire [3:0]Digit_4_Dout;
   wire [15:0]Multiplier_0_o_Result;
+  wire [7:0]PIPO_0_o_Out;
+  wire [7:0]PIPO_1_o_Out;
   wire clk_100MHz_1;
   wire [7:0]i_A_0_1;
-  wire [7:0]i_B_0_1;
+  wire i_BTN_0_1;
+  wire i_BTN_1_1;
   wire [6:0]ssd_dec_0_cathode;
   wire [3:0]ssd_mux_0_an;
   wire [3:0]ssd_mux_0_o_Out;
 
-  assign an_0[3:0] = ssd_mux_0_an;
-  assign cathode_0[6:0] = ssd_dec_0_cathode;
-  assign clk_100MHz_1 = clk_100MHz;
-  assign i_A_0_1 = i_A_0[7:0];
-  assign i_B_0_1 = i_B_0[7:0];
+  assign clk_100MHz_1 = i_CLK;
+  assign i_A_0_1 = i_SW[7:0];
+  assign i_BTN_0_1 = i_LD_1;
+  assign i_BTN_1_1 = i_LD_0;
+  assign o_Anodes[3:0] = ssd_mux_0_an;
+  assign o_Cathodes[6:0] = ssd_dec_0_cathode;
   MUL_Digit_1_0 Digit_1
        (.Din(Multiplier_0_o_Result),
         .Dout(Digit_1_Dout));
@@ -52,9 +58,19 @@ module MUL
        (.Din(Multiplier_0_o_Result),
         .Dout(Digit_4_Dout));
   MUL_Multiplier_0_0 Multiplier_0
-       (.i_A(i_A_0_1),
-        .i_B(i_B_0_1),
+       (.i_A(PIPO_1_o_Out),
+        .i_B(PIPO_0_o_Out),
         .o_Result(Multiplier_0_o_Result));
+  MUL_PIPO_0_0 PIPO_0
+       (.i_BTN(i_BTN_1_1),
+        .i_CLK(clk_100MHz_1),
+        .i_SW(i_A_0_1),
+        .o_Out(PIPO_0_o_Out));
+  MUL_PIPO_0_1 PIPO_1
+       (.i_BTN(i_BTN_0_1),
+        .i_CLK(clk_100MHz_1),
+        .i_SW(i_A_0_1),
+        .o_Out(PIPO_1_o_Out));
   MUL_ssd_dec_0_0 ssd_dec_0
        (.cathode(ssd_dec_0_cathode),
         .i_CLK(clk_100MHz_1),

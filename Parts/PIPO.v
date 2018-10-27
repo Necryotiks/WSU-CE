@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module PIPO(
-input [7:0] i_SW,
+module PIPO #(parameter BUS_MSB = 7)(
+input [BUS_MSB:0] i_SW,
 input i_CLK,
 input i_BTN,
-output reg [7:0] o_Out
+output reg [BUS_MSB:0] o_Out
     );
 //genvar i;
 

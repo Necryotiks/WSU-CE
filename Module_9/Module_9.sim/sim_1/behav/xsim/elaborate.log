@@ -1,6 +1,6 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 56ce9ea1919b4a1b85e599ed9f58544b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlslice_v1_0_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_MUL_behav xil_defaultlib.test_MUL xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 56ce9ea1919b4a1b85e599ed9f58544b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_CMP_behav xil_defaultlib.test_CMP xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -12,31 +12,15 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package vl.vl_types
 Compiling module xil_defaultlib.glbl
-Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_WIDTH...
-Compiling module xil_defaultlib.MUL_Digit_1_0
-Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_WIDTH...
-Compiling module xil_defaultlib.MUL_Digit_2_0
-Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_WIDTH...
-Compiling module xil_defaultlib.MUL_Digit_3_0
-Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_WIDTH...
-Compiling module xil_defaultlib.MUL_Digit_4_0
-Compiling module unisims_ver.CARRY4
-Compiling module unisims_ver.LUT6
-Compiling module unisims_ver.LUT4
-Compiling module unisims_ver.x_lut2_mux4
-Compiling module unisims_ver.LUT2
-Compiling module unisims_ver.x_lut3_mux8
-Compiling module unisims_ver.LUT3
-Compiling module unisims_ver.LUT5
-Compiling module xil_defaultlib.MUL_Multiplier_0_0_Multiplier
-Compiling module xil_defaultlib.MUL_Multiplier_0_0
-Compiling module unisims_ver.FDRE_default
-Compiling module xil_defaultlib.MUL_ssd_dec_0_0_ssd_dec
-Compiling module xil_defaultlib.MUL_ssd_dec_0_0
-Compiling module unisims_ver.x_lut1_mux2
-Compiling module unisims_ver.LUT1
-Compiling module xil_defaultlib.MUL_ssd_mux_0_0_ssd_mux
-Compiling module xil_defaultlib.MUL_ssd_mux_0_0
-Compiling module xil_defaultlib.MUL
-Compiling architecture tb of entity xil_defaultlib.test_mul
-Built simulation snapshot test_MUL_behav
+Compiling module xil_defaultlib.Comparator
+Compiling module xil_defaultlib.CMP_Comparator_0_0
+Compiling module xil_defaultlib.Multiplier
+Compiling module xil_defaultlib.CMP_Multiplier_0_1
+Compiling module xil_defaultlib.PIPO
+Compiling module xil_defaultlib.CMP_PIPO_0_1
+Compiling module xil_defaultlib.CMP_PIPO_1_0
+Compiling module xil_defaultlib.PIPO(BUS_MSB=15)
+Compiling module xil_defaultlib.CMP_PIPO_1_1
+Compiling module xil_defaultlib.CMP
+Compiling architecture tb of entity xil_defaultlib.test_cmp
+Built simulation snapshot test_CMP_behav

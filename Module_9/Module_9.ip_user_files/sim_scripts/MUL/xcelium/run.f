@@ -10,6 +10,8 @@
   "../../../bd/MUL/ip/MUL_ssd_dec_0_0/sim/MUL_ssd_dec_0_0.v" \
   "../../../bd/MUL/ip/MUL_ssd_mux_0_0/sim/MUL_ssd_mux_0_0.v" \
   "../../../bd/MUL/sim/MUL.v" \
+  "../../../bd/MUL/ip/MUL_PIPO_0_0/sim/MUL_PIPO_0_0.v" \
+  "../../../bd/MUL/ip/MUL_PIPO_0_1/sim/MUL_PIPO_0_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

@@ -1,0 +1,35 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port i_CLK -pg 1 -y 220 -defaultsOSRD
+preplace port o_GT_0 -pg 1 -y 210 -defaultsOSRD
+preplace port o_EQ_0 -pg 1 -y 230 -defaultsOSRD
+preplace port i_LDRG -pg 1 -y 180 -defaultsOSRD
+preplace port i_LD_0 -pg 1 -y 100 -defaultsOSRD
+preplace port i_LD_1 -pg 1 -y 280 -defaultsOSRD
+preplace port o_LT_0 -pg 1 -y 250 -defaultsOSRD
+preplace portBus i_SW -pg 1 -y 200 -defaultsOSRD
+preplace inst Comparator_0 -pg 1 -lvl 4 -y 230 -defaultsOSRD
+preplace inst Multiplier_0 -pg 1 -lvl 2 -y 70 -defaultsOSRD
+preplace inst PIPO_0 -pg 1 -lvl 1 -y 80 -defaultsOSRD
+preplace inst PIPO_1 -pg 1 -lvl 1 -y 260 -defaultsOSRD
+preplace inst PIPO_2 -pg 1 -lvl 3 -y 160 -defaultsOSRD
+preplace netloc PIPO_0_o_Out 1 1 1 N
+preplace netloc PIPO_1_o_Out 1 1 1 270
+preplace netloc i_BTN_0_1 1 0 1 NJ
+preplace netloc i_BTN_0_2 1 0 3 NJ 180 NJ 180 NJ
+preplace netloc Comparator_0_o_GT 1 4 1 N
+preplace netloc PIPO_2_o_Out 1 3 1 790
+preplace netloc Comparator_0_o_EQ 1 4 1 N
+preplace netloc Multiplier_0_o_Result 1 2 2 530 80 800J
+preplace netloc i_BTN_1_1 1 0 1 NJ
+preplace netloc i_A_0_1 1 0 1 20
+preplace netloc Comparator_0_o_LT 1 4 1 N
+preplace netloc clk_100MHz_1 1 0 3 30 160 NJ 160 NJ
+levelinfo -pg 1 0 150 400 660 910 1040 -top 0 -bot 340
+",
+}
+{
+   da_clkrst_cnt: "2",
+}

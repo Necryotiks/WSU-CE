@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Oct 27 11:23:49 2018" VIVADOVERSION="2018.2">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="CMP" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="PIPO_1" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="PIPO_2" PORT="i_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_LD_0" SIGIS="undef" SIGNAME="External_Ports_i_LD_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_BTN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_LD_1" SIGIS="undef" SIGNAME="External_Ports_i_LD_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_1" PORT="i_BTN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_SW"/>
+        <CONNECTION INSTANCE="PIPO_1" PORT="i_SW"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_LDRG" SIGIS="undef" SIGNAME="External_Ports_i_LDRG">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_2" PORT="i_BTN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_GT_0" SIGIS="undef" SIGNAME="Comparator_0_o_GT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Comparator_0" PORT="o_GT"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_EQ_0" SIGIS="undef" SIGNAME="Comparator_0_o_EQ">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Comparator_0" PORT="o_EQ"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_LT_0" SIGIS="undef" SIGNAME="Comparator_0_o_LT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Comparator_0" PORT="o_LT"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/Comparator_0" HWVERSION="1.0" INSTANCE="Comparator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Comparator" VLNV="xilinx.com:module_ref:Comparator:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CMP_Comparator_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="i_A" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_2_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIPO_2" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="i_B" RIGHT="0" SIGIS="undef" SIGNAME="Multiplier_0_o_Result">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Multiplier_0" PORT="o_Result"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_GT" SIGIS="undef" SIGNAME="Comparator_0_o_GT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_GT_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_EQ" SIGIS="undef" SIGNAME="Comparator_0_o_EQ">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_EQ_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_LT" SIGIS="undef" SIGNAME="Comparator_0_o_LT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_LT_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Multiplier_0" HWVERSION="1.0" INSTANCE="Multiplier_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Multiplier" VLNV="xilinx.com:module_ref:Multiplier:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CMP_Multiplier_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_A" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_1_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIPO_1" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i_B" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIPO_0" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="o_Result" RIGHT="0" SIGIS="undef" SIGNAME="Multiplier_0_o_Result">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIPO_2" PORT="i_SW"/>
+            <CONNECTION INSTANCE="Comparator_0" PORT="i_B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/PIPO_0" HWVERSION="1.0" INSTANCE="PIPO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PIPO" VLNV="xilinx.com:module_ref:PIPO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="BUS_MSB" VALUE="7"/>
+        <PARAMETER NAME="Component_Name" VALUE="CMP_PIPO_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_BTN" SIGIS="undef" SIGNAME="External_Ports_i_LD_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_LD_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Multiplier_0" PORT="i_B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/PIPO_1" HWVERSION="1.0" INSTANCE="PIPO_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PIPO" VLNV="xilinx.com:module_ref:PIPO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="BUS_MSB" VALUE="7"/>
+        <PARAMETER NAME="Component_Name" VALUE="CMP_PIPO_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_BTN" SIGIS="undef" SIGNAME="External_Ports_i_LD_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_LD_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_1_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Multiplier_0" PORT="i_A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/PIPO_2" HWVERSION="1.0" INSTANCE="PIPO_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PIPO" VLNV="xilinx.com:module_ref:PIPO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="BUS_MSB" VALUE="15"/>
+        <PARAMETER NAME="Component_Name" VALUE="CMP_PIPO_1_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="Multiplier_0_o_Result">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Multiplier_0" PORT="o_Result"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_BTN" SIGIS="undef" SIGNAME="External_Ports_i_LDRG">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_LDRG"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_2_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Comparator_0" PORT="i_A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
