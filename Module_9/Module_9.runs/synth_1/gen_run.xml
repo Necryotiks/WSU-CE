@@ -1,41 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1540669909">
-  <File Type="PA-TCL" Name="CMP_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="CMP_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="CMP_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="CMP_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="CMP_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="CMP_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="CMP_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="CMP_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="CMP_wrapper_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1540855294">
+  <File Type="PA-TCL" Name="S_ADDER_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="S_ADDER_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="S_ADDER_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="S_ADDER_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="S_ADDER_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="S_ADDER_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="S_ADDER_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="S_ADDER_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="S_ADDER_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/Multiplier.v">
+    <File Path="$PSRCDIR/sources_1/new/CLA.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Parts/PIPO.v">
+    <File Path="$PSRCDIR/sources_1/new/FullAdder_bitslice.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Comparator.v">
+    <File Path="$PSRCDIR/sources_1/new/SubAdder.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Parts/ssd_dec.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Parts/ssd_dec.v"/>
-        <Attr Name="ImportTime" Val="1539999971"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -50,8 +41,55 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/Parts/ssd_dec.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Parts/ssd_dec.v"/>
+        <Attr Name="ImportTime" Val="1539999971"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Parts/PIPO.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/S_ADDER/S_ADDER.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/S_ADDER/hdl/S_ADDER_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Multiplier.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Comparator.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/temp_reg_mux.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -59,35 +97,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/CMP/CMP.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/bd/CMP/hdl/CMP_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/MUL/hdl/MUL_wrapper.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/FullAdder_bitslice.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/CLA.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -127,17 +143,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/SubAdder.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="CMP_wrapper"/>
+      <Option Name="TopModule" Val="S_ADDER_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -150,6 +158,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/constrs_1/new/CMP_wrapper_cons.xdc">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/new/SA_cons.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

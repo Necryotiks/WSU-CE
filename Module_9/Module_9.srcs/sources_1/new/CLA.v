@@ -23,6 +23,7 @@
 module CLA #(parameter MAX_WIDTH = 3)(
     input [MAX_WIDTH:0] i_A,
     input [MAX_WIDTH:0] i_B,
+    input i_Cin,
     output [MAX_WIDTH:0] o_S,
     output o_Cout
     );
@@ -33,12 +34,14 @@ module CLA #(parameter MAX_WIDTH = 3)(
     wire [MAX_WIDTH:0] w_SUM;
     wire [MAX_WIDTH:0] w_A;
     wire [MAX_WIDTH:0] w_B;
+    wire w_Cin;
     genvar i;
     
     assign o_S = w_SUM;
     assign o_Cout = w_CARRY[(MAX_WIDTH+1)];
     assign w_A = i_A;
     assign w_B = i_B;
+    assign w_Cin = i_Cin;
     generate
     begin
         for(i = 0; i <MAX_WIDTH+1; i=i+1)
@@ -52,7 +55,7 @@ module CLA #(parameter MAX_WIDTH = 3)(
             ); 
         assign w_GEN[i] = w_A[i] & w_B[i];
         assign w_PROP[i] = w_A[i] ^ w_B[i];
-        assign w_CARRY[0] = 0;
+        assign w_CARRY[0] = w_Cin;
         assign w_CARRY[i+1] = w_GEN[i] | (w_PROP[i] & w_CARRY[i]);
         end
     end

@@ -2,7 +2,7 @@
    ExpandedHierarchyInLayout: "",
    PinnedBlocks: "",
    PinnedPorts: "",
-   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS-threadsafe
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
 #  -string -flagsOSRD
 preplace port i_CLK -pg 1 -y 60 -defaultsOSRD
 preplace port o_Overflow -pg 1 -y 360 -defaultsOSRD
@@ -14,17 +14,17 @@ preplace inst ssd_dec_0 -pg 1 -lvl 3 -y 210 -defaultsOSRD
 preplace inst ssd_mux_0 -pg 1 -lvl 2 -y 100 -defaultsOSRD
 preplace inst temp_mux_input_0 -pg 1 -lvl 1 -y 130 -defaultsOSRD
 preplace inst CLA_0 -pg 1 -lvl 3 -y 350 -defaultsOSRD
-preplace netloc i_B_0_1 1 0 3 NJ 360 NJ 360 NJ
+preplace netloc i_B_0_1 1 0 3 NJ 360 NJ 360 580J
 preplace netloc CLA_0_o_Cout 1 3 1 NJ
 preplace netloc ssd_mux_0_an 1 2 2 NJ 110 NJ
-preplace netloc CLA_0_o_S 1 0 4 20 280 NJ 280 NJ 280 830
+preplace netloc CLA_0_o_S 1 0 4 20 210 NJ 210 570J 140 840
 preplace netloc temp_mux_input_0_r_SSD_0 1 1 1 N
 preplace netloc temp_mux_input_0_r_SSD_1 1 1 1 300
 preplace netloc ssd_dec_0_cathode 1 3 1 NJ
-preplace netloc i_A_0_1 1 0 3 NJ 340 NJ 340 NJ
-preplace netloc ssd_mux_0_o_Out 1 2 1 570
+preplace netloc i_A_0_1 1 0 3 NJ 340 NJ 340 570J
+preplace netloc ssd_mux_0_o_Out 1 2 1 580
 preplace netloc clk_100MHz_1 1 0 3 10 200 310 200 NJ
-levelinfo -pg 1 -10 160 440 700 850 -top 0 -bot 420
+levelinfo -pg 1 -10 160 440 710 860 -top 0 -bot 430
 ",
 }
 {
