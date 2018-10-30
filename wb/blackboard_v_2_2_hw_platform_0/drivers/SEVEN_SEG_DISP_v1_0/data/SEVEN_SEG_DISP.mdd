@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER SEVEN_SEG_DISP
+	OPTION supported_peripherals = (SEVEN_SEG_DISP);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = SEVEN_SEG_DISP;
+END DRIVER
