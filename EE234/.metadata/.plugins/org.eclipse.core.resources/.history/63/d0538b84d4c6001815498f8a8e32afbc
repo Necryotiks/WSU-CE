@@ -1,0 +1,150 @@
+/*
+ * ttc.S
+ *
+ *  Created on: Oct 2, 2018
+ *      Author: Sergaljerk
+ */
+
+
+/*
+ * delay.S
+ *
+ *  Created on: Sep 29, 2018
+ *      Author: Sergaljerk
+ */
+
+.text
+.global main
+.set SEVENSEG_BASEADDR, 0x4BB03000
+.set BUTTON_BASEADDR, 0x4BB02004
+main:
+LDR r0, =SEVENSEG_BASEADDR
+LDR r1, =BUTTON_BASEADDR
+TTC0_Configure:
+.set TTC0, 0xF8001000
+LDR r1, =TTC0
+MOVw r2, #0x13
+STR r2, [r1]
+MOVw r2, #0x21
+STR r2, [r1, #0x0C]
+MOVw r2, #1080
+STR r2, [r1, #0x24]
+MOVw r2, #0x22
+STR r2, [r1, #0x60]
+MOVw r2, #0x22
+STR r2, [r1,#0x0C]
+Setup_SVD:
+MOVw r8, #1
+STR r8, [r0]
+// enable the default mode
+MOVw r8, #2
+STR r8, [r0, #0x14]
+// enable the decimal point after the second digit
+MOVw r7, #0
+// Digit #1 On the left
+STR r7, [r0,#0x4]
+MOVw r6, #0
+// Digit #2
+STR r6, [r0,#0x8]
+MOVw r5, #0
+// Digit #3
+STR r5, [r0,#0xC]
+MOVw r4, #0
+// Digit #4 on the right.
+STR r4, [r0,#0x10]
+Wait_on_Btn0:
+LDR r8, [r1]
+MOV r9, #0x1
+CMP r8, r9
+BNE Wait_on_Btn0
+Digit_4:
+LDR r8, [r1]
+MOV r9, #0x8
+CMP r8, r9
+BEQ Setup_SVD
+ADD r4, r4, #1
+CMP r4, #0xA
+BEQ Digit_3
+STR r4, [r0, #0x10]
+BL Wait_on_Btn1
+BL Delay_TTC
+B Digit_4
+Digit_3:
+LDR r8, [r1]
+MOV r9, #0x8
+CMP r8, r9
+BEQ Setup_SVD
+MOVw r4, #0
+STR r4, [r0, #0x10]
+ADD r5, r5, #1
+CMP r5, #0xA
+BEQ Digit_2
+STR r5, [r0, #0x0C]
+BL Wait_on_Btn1
+BL Wait_on_Btn3
+BL Delay_TTC
+B Digit_4
+Digit_2:
+LDR r8, [r1]
+MOV r9, #0x8
+CMP r8, r9
+BEQ Setup_SVD
+MOVw r5, #0
+STR r5, [r0, #0x0C]
+ADD r6, r6, #1
+CMP r6, #0xA
+BEQ Digit_1
+STR r6, [r0, #0x08]
+BL Wait_on_Btn1
+BL Delay_TTC
+B Digit_4
+Digit_1:
+LDR r8, [r1]
+MOV r9, #0x8
+CMP r8, r9
+BEQ Setup_SVD
+MOVw r6, #0
+STR r6, [r0, #0x08]
+ADD r7, r7, #1
+CMP r7, #0xA
+BEQ Setup_SVD
+STR r7, [r0, #0x04]
+BL Wait_on_Btn1
+BL Delay_TTC
+B Digit_4
+
+Delay_TTC:
+LDR r2,[r1,#0x54]
+CMP r2, #1
+BEQ Digit_4
+B Delay_TTC
+
+Wait_on_Btn1:
+LDR r8, [r1]
+MOV r9, #0x2
+CMP r8, r9
+BEQ Wait_on_Btn2
+BX LR
+
+Wait_on_Btn2:
+LDR r8, [r1]
+MOV r9, #0x8
+CMP r8, r9
+BEQ Setup_SVD
+LDR r8, [r1]
+MOV r9, #0x4
+CMP r8, r9
+BEQ Digit_4
+B Wait_on_Btn2
+
+Wait_on_Btn3:
+LDR r8, [r1]
+MOV r9, #0x8
+CMP r8, r9
+BEQ Setup_SVD
+BX LR
+
+endless:
+B Setup_SVD
+// move to the initial of the stopwatch.
+.end
