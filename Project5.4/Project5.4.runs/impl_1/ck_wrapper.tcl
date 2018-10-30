@@ -65,6 +65,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+<<<<<<< HEAD
   create_project -in_memory -part xc7z007sclg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -74,6 +75,18 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.runs/synth_1/ck_wrapper.dcp
   read_xdc C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc
+=======
+  set_param xicom.use_bs_reader 1
+  create_project -in_memory -part xc7z007sclg400-1
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+  set_property webtalk.parent_dir C:/Users/Sergaljerk/Project5.4/Project5.4.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Sergaljerk/Project5.4/Project5.4.xpr [current_project]
+  set_property ip_output_repo C:/Users/Sergaljerk/Project5.4/Project5.4.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet C:/Users/Sergaljerk/Project5.4/Project5.4.runs/synth_1/ck_wrapper.dcp
+  read_xdc C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc
+>>>>>>> master
   link_design -top ck_wrapper -part xc7z007sclg400-1
   close_msg_db -file init_design.pb
 } RESULT]

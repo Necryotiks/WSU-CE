@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1534410979">
+=======
+<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1531964660">
+>>>>>>> master
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -18,6 +22,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+<<<<<<< HEAD
     <File Path="$PSRCDIR/sources_1/new/automobile_controller.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -26,6 +31,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+=======
+>>>>>>> master
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
@@ -45,7 +52,13 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
+<<<<<<< HEAD
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+=======
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+>>>>>>> master
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

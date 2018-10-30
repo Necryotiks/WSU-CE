@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1532671130">
   <File Type="PWROPT-DCP" Name="clkdiv_pwropt.dcp"/>
+<<<<<<< HEAD
   <File Type="BITSTR-BMM" Name="clkdiv_bd.bmm"/>
+=======
+>>>>>>> master
   <File Type="ROUTE-PWR" Name="clkdiv_power_routed.rpt"/>
   <File Type="PA-TCL" Name="clkdiv.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="clkdiv_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="clkdiv_reports.tcl"/>
   <File Type="BG-DRC" Name="clkdiv.drc"/>
+<<<<<<< HEAD
   <File Type="OPT-HWDEF" Name="clkdiv.hwdef"/>
   <File Type="OPT-DCP" Name="clkdiv_opt.dcp"/>
   <File Type="OPT-DRC" Name="clkdiv_drc_opted.rpt"/>
@@ -22,11 +26,37 @@
   <File Type="PHYSOPT-DCP" Name="clkdiv_physopt.dcp"/>
   <File Type="BG-BIT" Name="clkdiv.bit"/>
   <File Type="BITSTR-MSK" Name="clkdiv.msk"/>
+=======
+  <File Type="OPT-METHODOLOGY-DRC" Name="clkdiv_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="clkdiv_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="clkdiv.hwdef"/>
+  <File Type="OPT-DCP" Name="clkdiv_opt.dcp"/>
+  <File Type="OPT-DRC" Name="clkdiv_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="clkdiv_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="clkdiv_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="clkdiv_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="clkdiv_placed.dcp"/>
+  <File Type="PLACE-IO" Name="clkdiv_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="clkdiv_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="clkdiv_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="clkdiv_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="clkdiv_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="clkdiv_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="clkdiv_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="clkdiv_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="clkdiv_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="clkdiv_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="clkdiv_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="clkdiv_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="clkdiv.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="clkdiv_timing_summary_physopted.rpt"/>
+>>>>>>> master
   <File Type="ROUTE-ERROR-DCP" Name="clkdiv_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="clkdiv_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="clkdiv_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="clkdiv_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="clkdiv_drc_routed.pb"/>
+<<<<<<< HEAD
   <File Type="BITSTR-LTX" Name="clkdiv.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="clkdiv_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="clkdiv.mmi"/>
@@ -34,6 +64,15 @@
   <File Type="BITSTR-RBT" Name="clkdiv.rbt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="clkdiv_methodology_drc_routed.rpx"/>
   <File Type="BITSTR-SYSDEF" Name="clkdiv.sysdef"/>
+=======
+  <File Type="BITSTR-MSK" Name="clkdiv.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="clkdiv_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="clkdiv.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="clkdiv_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="clkdiv.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="clkdiv_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="clkdiv.bin"/>
+>>>>>>> master
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="clkdiv_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="clkdiv_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="clkdiv_route_status.rpt"/>
@@ -41,11 +80,28 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="clkdiv_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="clkdiv_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="clkdiv_timing_summary_routed.rpx"/>
+<<<<<<< HEAD
   <File Type="ROUTE-CLK" Name="clkdiv_clock_utilization_routed.rpt"/>
   <File Type="RDI-RDI" Name="clkdiv.vdi"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="clkdiv_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="clkdiv_postroute_physopt_bb.dcp"/>
   <File Type="BITSTR-NKY" Name="clkdiv.nky"/>
+=======
+  <File Type="ROUTE-SIMILARITY" Name="clkdiv_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="clkdiv.vdi"/>
+  <File Type="ROUTE-CLK" Name="clkdiv_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="clkdiv_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="clkdiv_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="clkdiv_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="clkdiv_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="clkdiv_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="clkdiv.nky"/>
+  <File Type="BITSTR-BMM" Name="clkdiv_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="clkdiv.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="clkdiv.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="clkdiv.sysdef"/>
+>>>>>>> master
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>

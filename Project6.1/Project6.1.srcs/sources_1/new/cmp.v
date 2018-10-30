@@ -46,8 +46,12 @@ cmp_bitslice slice_0 (
 genvar i;
 generate 
 for(i = 1; i <4; i = i + 1)
+<<<<<<< HEAD
     begin
     cmp_bitslice slices(
+=======
+    begin:cmp_bitslice slices(
+>>>>>>> master
     .A(A[i]),
     .B(B[i]),
     .LT_I(LT_int[i-1]),

@@ -3,7 +3,11 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
+<<<<<<< HEAD
 <Project Version="7" Minor="35" Path="C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.xpr">
+=======
+<Project Version="7" Minor="35" Path="C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.xpr">
+>>>>>>> master
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="26fb916b742a4dffb9a8be048f1a1da4"/>
@@ -18,7 +22,10 @@
     <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
+<<<<<<< HEAD
     <Option Name="SimulatorLanguage" Val="VHDL"/>
+=======
+>>>>>>> master
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
@@ -33,7 +40,11 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
+<<<<<<< HEAD
     <Option Name="WTXSimLaunchSim" Val="6"/>
+=======
+    <Option Name="WTXSimLaunchSim" Val="0"/>
+>>>>>>> master
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -63,6 +74,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+<<<<<<< HEAD
       <File Path="$PSRCDIR/sources_1/new/led_sw_instantiation.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -72,6 +84,11 @@
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="led_sw_instantiation"/>
+=======
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="led_sw_vhdl"/>
+>>>>>>> master
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -88,6 +105,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+<<<<<<< HEAD
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/new/led_sw_vhdl_tb.vhd">
         <FileInfo>
@@ -98,11 +116,19 @@
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="led_sw_vhdl_tb"/>
+=======
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="led_sw_vhdl"/>
+>>>>>>> master
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
+<<<<<<< HEAD
         <Option Name="SimMode" Val="post-implementation"/>
+=======
+>>>>>>> master
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>

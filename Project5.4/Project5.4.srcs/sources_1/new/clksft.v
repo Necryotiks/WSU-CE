@@ -25,6 +25,7 @@ input clkin,rst,fun_mode,
 output reg [15:0] leds
     );
 
+<<<<<<< HEAD
 reg [15:0] i =  16'd0;
 integer j = 3'd0;
 integer k = 3'd0;
@@ -68,6 +69,35 @@ casez({fun_mode,rst,i})
             j = j % 4;
         end
     {2'b11,{16{1'b?}}}: leds = {{15{1'b0}},1'b1}; // rst is one, then leds are off.
+=======
+reg [15:0] i;
+integer j;
+initial 
+    begin
+    i = {{15{1'b0}},1'b1}; // i = 1
+    j = 2'd0;
+    end
+always @ (posedge(clkin))
+begin
+if (i == {15{1'b0}}) //if I is zero, i is now one. bit replication is nice
+    i = {{15{1'b0}},1'b1};
+casez({fun_mode,rst,i})
+    {2'b00,{16{1'b?}}}: leds = i;
+    {2'b01,{16{1'b?}}}: leds = {16{1'b0}};
+    {2'b10,{16{1'b?}}}: 
+        begin
+        
+        case(j)
+            2'd0: leds = {8{2'b01}}; //
+            2'd1: leds = {8{2'b10}};
+            2'd2: leds = {{8{1'b1}},{8{1'b0}}};// bit replication with concatenation.
+            2'd3: leds = {{8{1'b0}},{8{1'b1}}};
+        endcase
+        j = j + 1;
+        j = j % 4;
+        end
+    {2'b11,{16{1'b?}}}: leds = {16{1'b0}}; // rst is one, then leds are off.
+>>>>>>> master
 endcase
 i = i << 1;
 end

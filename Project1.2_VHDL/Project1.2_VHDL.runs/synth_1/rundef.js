@@ -23,7 +23,11 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
+<<<<<<< HEAD
          "-log led_sw_instantiation.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_sw_instantiation.tcl" );
+=======
+         "-log led_sw_vhdl.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_sw_vhdl.tcl" );
+>>>>>>> master
 
 
 

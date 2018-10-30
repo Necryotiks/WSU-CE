@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1533343652">
   <File Type="PA-TCL" Name="led_sw_instantiation.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="led_sw_instantiation_drc_synth.rpt"/>
@@ -9,6 +10,18 @@
   <File Type="RDS-DCP" Name="led_sw_instantiation.dcp"/>
   <File Type="VDS-TIMINGSUMMARY" Name="led_sw_instantiation_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="led_sw_instantiation_timing_summary_synth.pb"/>
+=======
+<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1532856519">
+  <File Type="PA-TCL" Name="led_sw_vhdl.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="led_sw_vhdl_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="led_sw_vhdl_reports.tcl"/>
+  <File Type="RDS-RDS" Name="led_sw_vhdl.vds"/>
+  <File Type="RDS-UTIL" Name="led_sw_vhdl_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="led_sw_vhdl_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="led_sw_vhdl.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="led_sw_vhdl_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="led_sw_vhdl_timing_summary_synth.pb"/>
+>>>>>>> master
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/led_sw.vhd">
@@ -17,6 +30,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+<<<<<<< HEAD
     <File Path="$PSRCDIR/sources_1/new/led_sw_instantiation.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -26,6 +40,11 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="led_sw_instantiation"/>
+=======
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="led_sw_vhdl"/>
+>>>>>>> master
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1533011381">
+=======
+<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1532851474">
+>>>>>>> master
   <File Type="PWROPT-DCP" Name="ck_wrapper_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="ck_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="ck_wrapper.tcl"/>
@@ -93,6 +97,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+<<<<<<< HEAD
     <File Path="$PSRCDIR/sources_1/new/clksft_alt.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -101,6 +106,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+=======
+>>>>>>> master
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="ck_wrapper"/>

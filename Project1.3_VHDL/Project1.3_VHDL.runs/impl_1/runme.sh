@@ -24,7 +24,11 @@ else
 fi
 export LD_LIBRARY_PATH
 
+<<<<<<< HEAD
 HD_PWD='C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.runs/impl_1'
+=======
+HD_PWD='C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.runs/impl_1'
+>>>>>>> master
 cd "$HD_PWD"
 
 HD_LOG=runme.log
