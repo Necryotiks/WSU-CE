@@ -15,6 +15,7 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
 <<<<<<< HEAD
+<<<<<<< HEAD
 INFO: Helper process launched with PID 9980 
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 345.301 ; gain = 101.320
@@ -31,6 +32,8 @@ WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[0] driven by constant
 ---------------------------------------------------------------------------------
 Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 397.047 ; gain = 153.066
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 INFO: Helper process launched with PID 7500 
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 344.348 ; gain = 100.391
@@ -46,7 +49,10 @@ WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[1] driven by constant 0
 WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[0] driven by constant 0
 ---------------------------------------------------------------------------------
 Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 396.434 ; gain = 152.477
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -57,16 +63,21 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 397.047 ; gain = 153.066
 =======
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 396.434 ; gain = 152.477
 >>>>>>> master
+=======
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 396.434 ; gain = 152.477
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+<<<<<<< HEAD
 <<<<<<< HEAD
 Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]
 Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]
@@ -76,12 +87,18 @@ Parsing XDC File [C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.srcs/const
 Finished Parsing XDC File [C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ssd_VHDL_propImpl.xdc].
 >>>>>>> master
+=======
+Parsing XDC File [C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]
+Finished Parsing XDC File [C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ssd_VHDL_propImpl.xdc].
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Resolution: To avoid this warning, move constraints listed in [.Xil/ssd_VHDL_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 642.953 ; gain = 0.000
 ---------------------------------------------------------------------------------
@@ -91,6 +108,11 @@ Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.00
 ---------------------------------------------------------------------------------
 Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.277 ; gain = 398.320
 >>>>>>> master
+=======
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 642.277 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.277 ; gain = 398.320
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -98,15 +120,20 @@ Start Loading Part and Timing Information
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.953 ; gain = 398.973
 =======
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.277 ; gain = 398.320
 >>>>>>> master
+=======
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.277 ; gain = 398.320
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.953 ; gain = 398.973
 ---------------------------------------------------------------------------------
@@ -114,12 +141,17 @@ INFO: [Synth 8-5544] ROM "o_ANODE" won't be mapped to Block RAM because address 
 ---------------------------------------------------------------------------------
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.953 ; gain = 398.973
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.277 ; gain = 398.320
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "ANODE" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.277 ; gain = 398.320
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -160,6 +192,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[6] driven by constant 0
 WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[5] driven by constant 0
 WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[4] driven by constant 0
@@ -170,6 +203,8 @@ WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[0] driven by constant
 ---------------------------------------------------------------------------------
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 642.953 ; gain = 398.973
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[6] driven by constant 0
 WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[5] driven by constant 0
 WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[4] driven by constant 0
@@ -179,7 +214,10 @@ WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[1] driven by constant 0
 WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[0] driven by constant 0
 ---------------------------------------------------------------------------------
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 642.277 ; gain = 398.320
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -192,20 +230,28 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 725.078 ; gain = 481.098
 =======
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 722.992 ; gain = 479.035
 >>>>>>> master
+=======
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 722.992 ; gain = 479.035
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 725.078 ; gain = 481.098
 =======
 Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 722.992 ; gain = 479.035
 >>>>>>> master
+=======
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 722.992 ; gain = 479.035
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -218,10 +264,14 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 734.613 ; gain = 490.633
 =======
 Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 732.523 ; gain = 488.566
 >>>>>>> master
+=======
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -246,10 +296,14 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
 =======
 Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
 >>>>>>> master
+=======
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -263,10 +317,14 @@ Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
 =======
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
 >>>>>>> master
+=======
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -279,40 +337,56 @@ Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
 =======
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
 >>>>>>> master
+=======
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
 =======
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
 >>>>>>> master
+=======
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
 =======
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
 >>>>>>> master
+=======
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
 =======
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
 >>>>>>> master
+=======
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -341,18 +415,24 @@ Report Instance Areas:
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
 Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 734.613 ; gain = 244.727
 Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
 Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 732.523 ; gain = 242.723
 Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 732.523 ; gain = 488.566
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -365,15 +445,21 @@ INFO: [Common 17-83] Releasing license: Synthesis
 15 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
 <<<<<<< HEAD
+<<<<<<< HEAD
 synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 742.738 ; gain = 511.895
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1/ssd_VHDL.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ssd_VHDL_utilization_synth.rpt -pb ssd_VHDL_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 742.738 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Fri Aug  3 18:10:08 2018...
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 746.648 ; gain = 515.828
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1/ssd_VHDL.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ssd_VHDL_utilization_synth.rpt -pb ssd_VHDL_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 746.648 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Sun Jul 29 05:13:03 2018...
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8

@@ -26,9 +26,12 @@ input [4:0] sw
     );
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     //NOTE COMPRESSED VAR IS COUNTED IN BOTH POS AND SOP
 =======
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
     //SOP
 //    assign led = (sw[0] & sw[1] & sw[2]) | //ABC
 //                 (sw[0] & sw[1] & sw[3]) | //ABD

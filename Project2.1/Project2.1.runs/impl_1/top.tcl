@@ -62,6 +62,7 @@ proc step_failed { step } {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
@@ -152,15 +153,22 @@ if {$rc} {
 
 =======
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   open_checkpoint top_routed.dcp
   set_property webtalk.parent_dir C:/Users/Sergaljerk/Project2.1/Project2.1.cache/wt [current_project]
 >>>>>>> master
+=======
+  open_checkpoint top_routed.dcp
+  set_property webtalk.parent_dir C:/Users/Sergaljerk/Project2.1/Project2.1.cache/wt [current_project]
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
   catch { write_mem_info -force top.mmi }
   write_bitstream -force top.bit 
   catch {write_debug_probes -quiet -force top}

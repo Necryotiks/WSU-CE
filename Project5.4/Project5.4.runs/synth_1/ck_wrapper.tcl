@@ -17,14 +17,19 @@ proc create_report { reportName command } {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 set_param xicom.use_bs_reader 1
 >>>>>>> master
+=======
+set_param xicom.use_bs_reader 1
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 create_project -in_memory -part xc7z007sclg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+<<<<<<< HEAD
 <<<<<<< HEAD
 set_property webtalk.parent_dir C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.cache/wt [current_project]
 set_property parent.project_path C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.xpr [current_project]
@@ -38,6 +43,8 @@ read_verilog -library xil_defaultlib {
   C:/Users/lauer/WSU-CPTE/Project5.3/Project5.3.srcs/sources_1/new/dff.v
   C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/sources_1/new/ck_wrapper.v
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 set_property webtalk.parent_dir C:/Users/Sergaljerk/Project5.4/Project5.4.cache/wt [current_project]
 set_property parent.project_path C:/Users/Sergaljerk/Project5.4/Project5.4.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
@@ -49,7 +56,10 @@ read_verilog -library xil_defaultlib {
   C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/sources_1/new/clksft.v
   C:/Users/Sergaljerk/Project5.3/Project5.3.srcs/sources_1/new/dff.v
   C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/sources_1/new/ck_wrapper.v
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -60,12 +70,17 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 read_xdc C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc
 set_property used_in_implementation false [get_files C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc]
 =======
 read_xdc C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc
 set_property used_in_implementation false [get_files C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc]
 >>>>>>> master
+=======
+read_xdc C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc
+set_property used_in_implementation false [get_files C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc]
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 
 synth_design -top ck_wrapper -part xc7z007sclg400-1

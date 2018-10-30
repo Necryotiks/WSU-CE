@@ -1,10 +1,14 @@
 
 *** Running vivado
 <<<<<<< HEAD
+<<<<<<< HEAD
     with args -log led_sw_instantiation.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source led_sw_instantiation.tcl -notrace
 =======
     with args -log led_sw_vhdl.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source led_sw_vhdl.tcl -notrace
 >>>>>>> master
+=======
+    with args -log led_sw_vhdl.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source led_sw_vhdl.tcl -notrace
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 
 ****** Vivado v2017.4 (64-bit)
@@ -13,12 +17,17 @@
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 source led_sw_instantiation.tcl -notrace
 Command: link_design -top led_sw_instantiation -part xc7z007sclg400-1
 =======
 source led_sw_vhdl.tcl -notrace
 Command: link_design -top led_sw_vhdl -part xc7z007sclg400-1
 >>>>>>> master
+=======
+source led_sw_vhdl.tcl -notrace
+Command: link_design -top led_sw_vhdl -part xc7z007sclg400-1
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
@@ -27,12 +36,17 @@ INFO: [Project 1-479] Netlist was created with Vivado 2017.4
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 <<<<<<< HEAD
+<<<<<<< HEAD
 Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.srcs/constrs_1/new/led_sw_vhdl_cons.xdc]
 Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.srcs/constrs_1/new/led_sw_vhdl_cons.xdc]
 =======
 Parsing XDC File [C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.srcs/constrs_1/new/led_sw_vhdl_cons.xdc]
 Finished Parsing XDC File [C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.srcs/constrs_1/new/led_sw_vhdl_cons.xdc]
 >>>>>>> master
+=======
+Parsing XDC File [C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.srcs/constrs_1/new/led_sw_vhdl_cons.xdc]
+Finished Parsing XDC File [C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.srcs/constrs_1/new/led_sw_vhdl_cons.xdc]
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
@@ -40,10 +54,14 @@ No Unisim elements were transformed.
 7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
 <<<<<<< HEAD
+<<<<<<< HEAD
 link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 547.391 ; gain = 311.254
 =======
 link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 547.551 ; gain = 311.098
 >>>>>>> master
+=======
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 547.551 ; gain = 311.098
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z007s'
@@ -55,10 +73,14 @@ INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.650 . Memory (MB): peak = 559.922 ; gain = 12.531
 =======
 Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.949 . Memory (MB): peak = 560.340 ; gain = 12.789
 >>>>>>> master
+=======
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.949 . Memory (MB): peak = 560.340 ; gain = 12.789
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
@@ -66,6 +88,7 @@ Starting Logic Optimization Task
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
+<<<<<<< HEAD
 <<<<<<< HEAD
 Phase 1 Retarget | Checksum: fa072281
 
@@ -75,12 +98,21 @@ Phase 1 Retarget | Checksum: 12c82a74f
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1091.766 ; gain = 0.000
 >>>>>>> master
+=======
+Phase 1 Retarget | Checksum: 12c82a74f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1091.766 ; gain = 0.000
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 <<<<<<< HEAD
+<<<<<<< HEAD
 Phase 2 Constant propagation | Checksum: fa072281
+=======
+Phase 2 Constant propagation | Checksum: 12c82a74f
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1092.473 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
@@ -100,6 +132,7 @@ INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
 Phase 5 Shift Register Optimization
 Phase 5 Shift Register Optimization | Checksum: fa072281
 
+<<<<<<< HEAD
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1092.473 ; gain = 0.000
 =======
 Phase 2 Constant propagation | Checksum: 12c82a74f
@@ -124,13 +157,21 @@ Phase 5 Shift Register Optimization | Checksum: 12c82a74f
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1091.766 ; gain = 0.000
 >>>>>>> master
+=======
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1091.766 ; gain = 0.000
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1092.473 ; gain = 0.000
 Ending Logic Optimization Task | Checksum: fa072281
+=======
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1091.766 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 12c82a74f
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1092.473 ; gain = 0.000
 
@@ -142,6 +183,7 @@ Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1092.473
 INFO: [Common 17-83] Releasing license: Implementation
 22 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
+<<<<<<< HEAD
 opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1092.473 ; gain = 545.082
 =======
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1091.766 ; gain = 0.000
@@ -159,30 +201,43 @@ INFO: [Common 17-83] Releasing license: Implementation
 opt_design completed successfully
 opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1091.766 ; gain = 544.215
 >>>>>>> master
+=======
+opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1091.766 ; gain = 544.215
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
+<<<<<<< HEAD
 <<<<<<< HEAD
 Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1092.473 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.runs/impl_1/led_sw_instantiation_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file led_sw_instantiation_drc_opted.rpt -pb led_sw_instantiation_drc_opted.pb -rpx led_sw_instantiation_drc_opted.rpx
 Command: report_drc -file led_sw_instantiation_drc_opted.rpt -pb led_sw_instantiation_drc_opted.pb -rpx led_sw_instantiation_drc_opted.rpx
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1091.766 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.runs/impl_1/led_sw_vhdl_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file led_sw_vhdl_drc_opted.rpt -pb led_sw_vhdl_drc_opted.pb -rpx led_sw_vhdl_drc_opted.rpx
 Command: report_drc -file led_sw_vhdl_drc_opted.rpt -pb led_sw_vhdl_drc_opted.pb -rpx led_sw_vhdl_drc_opted.rpx
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
 INFO: [DRC 23-27] Running DRC with 2 threads
 <<<<<<< HEAD
+<<<<<<< HEAD
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.runs/impl_1/led_sw_instantiation_drc_opted.rpt.
 =======
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.runs/impl_1/led_sw_vhdl_drc_opted.rpt.
 >>>>>>> master
+=======
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.runs/impl_1/led_sw_vhdl_drc_opted.rpt.
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 report_drc completed successfully
 INFO: [Chipscope 16-241] No debug cores found in the current design.
 Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
@@ -205,8 +260,13 @@ Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
 <<<<<<< HEAD
+<<<<<<< HEAD
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1092.473 ; gain = 0.000
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 5dca886e
+=======
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1091.766 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 668573ce
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1092.473 ; gain = 0.000
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1092.473 ; gain = 0.000
@@ -237,6 +297,7 @@ Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.465 . Memory (MB): peak = 1092.473
 INFO: [Place 30-281] No place-able instance is found; design doesn't contain any instance or all instances are placed
 Ending Placer Task | Checksum: 5dca886e
 
+<<<<<<< HEAD
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.466 . Memory (MB): peak = 1092.473 ; gain = 0.000
 =======
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1091.766 ; gain = 0.000
@@ -273,6 +334,9 @@ Ending Placer Task | Checksum: 668573ce
 
 Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.427 . Memory (MB): peak = 1091.766 ; gain = 0.000
 >>>>>>> master
+=======
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.427 . Memory (MB): peak = 1091.766 ; gain = 0.000
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 INFO: [Common 17-83] Releasing license: Implementation
 41 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
@@ -280,6 +344,7 @@ Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
+<<<<<<< HEAD
 <<<<<<< HEAD
 Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.124 . Memory (MB): peak = 1092.473 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.runs/impl_1/led_sw_instantiation_placed.dcp' has been generated.
@@ -290,6 +355,8 @@ report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file led_sw_instantiation_control_sets_placed.rpt
 report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1092.473 ; gain = 0.000
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1091.766 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.runs/impl_1/led_sw_vhdl_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file led_sw_vhdl_io_placed.rpt
@@ -298,7 +365,10 @@ INFO: [runtcl-4] Executing : report_utilization -file led_sw_vhdl_utilization_pl
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1091.766 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file led_sw_vhdl_control_sets_placed.rpt
 report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1091.766 ; gain = 0.000
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z007s'
@@ -311,6 +381,7 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 <<<<<<< HEAD
+<<<<<<< HEAD
 Checksum: PlaceDB: 3df8be91 ConstDB: 0 ShapeSum: 1fd1c9dd RouteDB: 0
 
 Phase 1 Build RT Design
@@ -319,6 +390,8 @@ Phase 1 Build RT Design | Checksum: 14ecc0292
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1164.188 ; gain = 71.715
 Post Restoration Checksum: NetGraph: 737718ac NumContArr: db54e9e6 Constraints: 0 Timing: 0
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Checksum: PlaceDB: 46b3a9f1 ConstDB: 0 ShapeSum: 1fd1c9dd RouteDB: 0
 
 Phase 1 Build RT Design
@@ -326,12 +399,16 @@ Phase 1 Build RT Design | Checksum: 14cdcc594
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1160.660 ; gain = 68.895
 Post Restoration Checksum: NetGraph: 7187dbae NumContArr: db54e9e6 Constraints: 0 Timing: 0
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 Phase 2 Router Initialization
 INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
 
 Phase 2.1 Fix Topology Constraints
+<<<<<<< HEAD
 <<<<<<< HEAD
 Phase 2.1 Fix Topology Constraints | Checksum: 14ecc0292
 
@@ -351,6 +428,8 @@ Phase 3 Initial Routing | Checksum: 5aa5c3dd
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1170.660 ; gain = 78.188
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Phase 2.1 Fix Topology Constraints | Checksum: 14cdcc594
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1166.648 ; gain = 74.883
@@ -367,6 +446,7 @@ Phase 3 Initial Routing
 Phase 3 Initial Routing | Checksum: 12ead26e7
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1167.184 ; gain = 75.418
+<<<<<<< HEAD
 >>>>>>> master
 
 Phase 4 Rip-up And Reroute
@@ -379,12 +459,18 @@ Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1170.660 ; g
 Phase 4 Rip-up And Reroute | Checksum: 5aa5c3dd
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1170.660 ; gain = 78.188
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 Phase 5 Delay and Skew Optimization
 Phase 5 Delay and Skew Optimization | Checksum: 5aa5c3dd
 
+<<<<<<< HEAD
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1170.660 ; gain = 78.188
 =======
+=======
+Phase 4.1 Global Iteration 0
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
  Number of Nodes with overlaps = 0
 Phase 4.1 Global Iteration 0 | Checksum: e3ddcfb8
 
@@ -397,6 +483,7 @@ Phase 5 Delay and Skew Optimization
 Phase 5 Delay and Skew Optimization | Checksum: e3ddcfb8
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1167.223 ; gain = 75.457
+<<<<<<< HEAD
 >>>>>>> master
 
 Phase 6 Post Hold Fix
@@ -410,17 +497,27 @@ Phase 6 Post Hold Fix | Checksum: 5aa5c3dd
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1170.660 ; gain = 78.188
 =======
+=======
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Phase 6.1 Hold Fix Iter | Checksum: e3ddcfb8
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1167.223 ; gain = 75.457
 Phase 6 Post Hold Fix | Checksum: e3ddcfb8
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1167.223 ; gain = 75.457
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 Phase 7 Route finalize
 
 Router Utilization Summary
+<<<<<<< HEAD
 <<<<<<< HEAD
   Global Vertical Routing Utilization    = 0.033643 %
   Global Horizontal Routing Utilization  = 0.00137868 %
@@ -428,6 +525,10 @@ Router Utilization Summary
   Global Vertical Routing Utilization    = 0.0315315 %
   Global Horizontal Routing Utilization  = 0.00183824 %
 >>>>>>> master
+=======
+  Global Vertical Routing Utilization    = 0.0315315 %
+  Global Horizontal Routing Utilization  = 0.00183824 %
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -439,6 +540,7 @@ Router Utilization Summary
 Utilization threshold used for congestion level computation: 0.85
 Congestion Report
 <<<<<<< HEAD
+<<<<<<< HEAD
 North Dir 1x1 Area, Max Cong = 10.8108%, No Congested Regions.
 South Dir 1x1 Area, Max Cong = 5.40541%, No Congested Regions.
 East Dir 1x1 Area, Max Cong = 1.47059%, No Congested Regions.
@@ -447,6 +549,8 @@ Phase 7 Route finalize | Checksum: 5aa5c3dd
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1170.660 ; gain = 78.188
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 North Dir 1x1 Area, Max Cong = 16.2162%, No Congested Regions.
 South Dir 1x1 Area, Max Cong = 16.2162%, No Congested Regions.
 East Dir 1x1 Area, Max Cong = 2.94118%, No Congested Regions.
@@ -454,13 +558,20 @@ West Dir 1x1 Area, Max Cong = 1.47059%, No Congested Regions.
 Phase 7 Route finalize | Checksum: e3ddcfb8
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1167.223 ; gain = 75.457
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
 <<<<<<< HEAD
+<<<<<<< HEAD
 Phase 8 Verifying routed nets | Checksum: 5aa5c3dd
+=======
+Phase 8 Verifying routed nets | Checksum: e3ddcfb8
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.668 ; gain = 80.195
 
@@ -470,6 +581,7 @@ Phase 9 Depositing Routes | Checksum: 5aa5c3dd
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.668 ; gain = 80.195
 INFO: [Route 35-16] Router Completed Successfully
 
+<<<<<<< HEAD
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.668 ; gain = 80.195
 =======
 Phase 8 Verifying routed nets | Checksum: e3ddcfb8
@@ -484,20 +596,28 @@ INFO: [Route 35-16] Router Completed Successfully
 
 Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1169.184 ; gain = 77.418
 >>>>>>> master
+=======
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1169.184 ; gain = 77.418
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 53 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
 <<<<<<< HEAD
+<<<<<<< HEAD
 route_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1172.668 ; gain = 80.195
 =======
 route_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1169.184 ; gain = 77.418
 >>>>>>> master
+=======
+route_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1169.184 ; gain = 77.418
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
+<<<<<<< HEAD
 <<<<<<< HEAD
 Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1172.668 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.runs/impl_1/led_sw_instantiation_routed.dcp' has been generated.
@@ -517,6 +637,8 @@ report_methodology completed successfully
 INFO: [runtcl-4] Executing : report_power -file led_sw_instantiation_power_routed.rpt -pb led_sw_instantiation_power_summary_routed.pb -rpx led_sw_instantiation_power_routed.rpx
 Command: report_power -file led_sw_instantiation_power_routed.rpt -pb led_sw_instantiation_power_summary_routed.pb -rpx led_sw_instantiation_power_routed.rpx
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1169.184 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.runs/impl_1/led_sw_vhdl_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file led_sw_vhdl_drc_routed.rpt -pb led_sw_vhdl_drc_routed.pb -rpx led_sw_vhdl_drc_routed.rpx
@@ -534,7 +656,10 @@ INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/Se
 report_methodology completed successfully
 INFO: [runtcl-4] Executing : report_power -file led_sw_vhdl_power_routed.rpt -pb led_sw_vhdl_power_summary_routed.pb -rpx led_sw_vhdl_power_routed.rpx
 Command: report_power -file led_sw_vhdl_power_routed.rpt -pb led_sw_vhdl_power_summary_routed.pb -rpx led_sw_vhdl_power_routed.rpx
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 WARNING: [Power 33-232] No user defined clocks were found in the design!
 Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -543,6 +668,7 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 65 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
+<<<<<<< HEAD
 <<<<<<< HEAD
 INFO: [runtcl-4] Executing : report_route_status -file led_sw_instantiation_route_status.rpt -pb led_sw_instantiation_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file led_sw_instantiation_timing_summary_routed.rpt -rpx led_sw_instantiation_timing_summary_routed.rpx -warn_on_violation 
@@ -554,6 +680,8 @@ INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placemen
 INFO: [runtcl-4] Executing : report_clock_utilization -file led_sw_instantiation_clock_utilization_routed.rpt
 Command: write_bitstream -force led_sw_instantiation.bit
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 INFO: [runtcl-4] Executing : report_route_status -file led_sw_vhdl_route_status.rpt -pb led_sw_vhdl_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file led_sw_vhdl_timing_summary_routed.rpt -rpx led_sw_vhdl_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
@@ -563,7 +691,10 @@ INFO: [runtcl-4] Executing : report_incremental_reuse -file led_sw_vhdl_incremen
 INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
 INFO: [runtcl-4] Executing : report_clock_utilization -file led_sw_vhdl_clock_utilization_routed.rpt
 Command: write_bitstream -force led_sw_vhdl.bit
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z007s'
 Running DRC as a precondition to command write_bitstream
@@ -581,13 +712,18 @@ Processing options...
 Creating bitmap...
 Creating bitstream...
 <<<<<<< HEAD
+<<<<<<< HEAD
 Writing bitstream ./led_sw_instantiation.bit...
+=======
+Writing bitstream ./led_sw_vhdl.bit...
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-186] 'C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri Aug  3 17:49:34 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.4/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
 83 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
+<<<<<<< HEAD
 write_bitstream: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1625.859 ; gain = 418.363
 INFO: [Common 17-206] Exiting Vivado at Fri Aug  3 17:49:34 2018...
 =======
@@ -601,3 +737,7 @@ write_bitstream completed successfully
 write_bitstream: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1624.551 ; gain = 426.023
 INFO: [Common 17-206] Exiting Vivado at Sun Jul 29 02:30:47 2018...
 >>>>>>> master
+=======
+write_bitstream: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1624.551 ; gain = 426.023
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 29 02:30:47 2018...
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8

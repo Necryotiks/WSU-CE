@@ -4,10 +4,14 @@
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 =======
 # Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 >>>>>>> master
+=======
+# Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 # 
 
 echo "This script was generated under a different operating system."
@@ -15,6 +19,7 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
+<<<<<<< HEAD
 <<<<<<< HEAD
   PATH=C:/Xilinx/SDK/2018.2/bin;C:/Xilinx/Vivado/2018.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2018.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2018.2/bin
 else
@@ -24,6 +29,11 @@ else
 else
   PATH=C:/Xilinx/SDK/2017.4/bin;C:/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2017.4/bin:$PATH
 >>>>>>> master
+=======
+  PATH=C:/Xilinx/SDK/2017.4/bin;C:/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2017.4/bin
+else
+  PATH=C:/Xilinx/SDK/2017.4/bin;C:/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2017.4/bin:$PATH
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 fi
 export PATH
 
@@ -35,10 +45,14 @@ fi
 export LD_LIBRARY_PATH
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 HD_PWD='C:/Users/Sergaljerk/WSU-CPTE/Project2.1/Project2.1.runs/synth_1'
 =======
 HD_PWD='C:/Users/Sergaljerk/Project2.1/Project2.1.runs/synth_1'
 >>>>>>> master
+=======
+HD_PWD='C:/Users/Sergaljerk/Project2.1/Project2.1.runs/synth_1'
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 cd "$HD_PWD"
 
 HD_LOG=runme.log

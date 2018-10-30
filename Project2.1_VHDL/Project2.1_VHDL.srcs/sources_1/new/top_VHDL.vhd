@@ -5,10 +5,14 @@
 -- Create Date: 07/29/2018 05:18:21 AM
 -- Design Name: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- Module Name: top_VHDL - SOP
 =======
 -- Module Name: top_VHDL - Behavioral
 >>>>>>> master
+=======
+-- Module Name: top_VHDL - Behavioral
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -36,6 +40,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity top_VHDL is
+<<<<<<< HEAD
 <<<<<<< HEAD
     Port ( i_SW: in std_ulogic_vector(7 downto 0);
            o_LED: out std_ulogic_vector(3 downto 0)
@@ -99,6 +104,8 @@ o_LED(3) <= (i_SW(6) or i_SW(5) or i_SW(4) or i_SW(3)) and --Circuit IV
             (not i_SW(6) or not i_SW(5) or i_SW(4) or not i_SW(3));
 end POS;
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
     Port ( SW: in std_logic_vector(7 downto 0);
            LED: out std_logic_vector(3 downto 0)
            );
@@ -157,4 +164,7 @@ LED(3) <= (SW(6) or SW(5) or SW(4) or SW(3)) and --Circuit IV
             (SW(6) or not SW(5) or SW(4) or not SW(3)) and
             (not SW(6) or not SW(5) or SW(4) or not SW(3));
 end Behavioral;
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8

@@ -69,6 +69,7 @@ set rc [catch {
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   set_property webtalk.parent_dir C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.cache/wt [current_project]
   set_property parent.project_path C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.xpr [current_project]
   set_property ip_output_repo C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.cache/ip [current_project]
@@ -76,13 +77,18 @@ set rc [catch {
   add_files -quiet C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1/ssd_VHDL.dcp
   read_xdc C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
   set_property webtalk.parent_dir C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.cache/wt [current_project]
   set_property parent.project_path C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.xpr [current_project]
   set_property ip_output_repo C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1/ssd_VHDL.dcp
   read_xdc C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
   link_design -top ssd_VHDL -part xc7z007sclg400-1
   close_msg_db -file init_design.pb
 } RESULT]

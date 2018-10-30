@@ -47,11 +47,15 @@ genvar i;
 generate 
 for(i = 1; i <4; i = i + 1)
 <<<<<<< HEAD
+<<<<<<< HEAD
     begin
     cmp_bitslice slices(
 =======
     begin:cmp_bitslice slices(
 >>>>>>> master
+=======
+    begin:cmp_bitslice slices(
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
     .A(A[i]),
     .B(B[i]),
     .LT_I(LT_int[i-1]),

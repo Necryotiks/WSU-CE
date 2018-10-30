@@ -26,6 +26,7 @@ output reg [15:0] leds
     );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 reg [15:0] i =  16'd0;
 integer j = 3'd0;
 integer k = 3'd0;
@@ -70,6 +71,8 @@ casez({fun_mode,rst,i})
         end
     {2'b11,{16{1'b?}}}: leds = {{15{1'b0}},1'b1}; // rst is one, then leds are off.
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 reg [15:0] i;
 integer j;
 initial 
@@ -97,7 +100,10 @@ casez({fun_mode,rst,i})
         j = j % 4;
         end
     {2'b11,{16{1'b?}}}: leds = {16{1'b0}}; // rst is one, then leds are off.
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 endcase
 i = i << 1;
 end

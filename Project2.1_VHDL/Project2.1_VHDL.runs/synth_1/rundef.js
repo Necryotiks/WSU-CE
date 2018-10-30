@@ -24,10 +24,14 @@ eval( EAInclude(ISEJScriptLib) );
 
 ISEStep( "vivado",
 <<<<<<< HEAD
+<<<<<<< HEAD
          "-log top_VHDL_instantiation.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_VHDL_instantiation.tcl" );
 =======
          "-log top_VHDL.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_VHDL.tcl" );
 >>>>>>> master
+=======
+         "-log top_VHDL.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_VHDL.tcl" );
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 
 

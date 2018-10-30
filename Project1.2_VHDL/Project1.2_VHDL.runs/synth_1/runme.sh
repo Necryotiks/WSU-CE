@@ -25,10 +25,14 @@ fi
 export LD_LIBRARY_PATH
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 HD_PWD='C:/Users/Sergaljerk/WSU-CPTE/Project1.2_VHDL/Project1.2_VHDL.runs/synth_1'
 =======
 HD_PWD='C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.runs/synth_1'
 >>>>>>> master
+=======
+HD_PWD='C:/Users/Sergaljerk/Project1.2_VHDL/Project1.2_VHDL.runs/synth_1'
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -45,7 +49,11 @@ EAStep()
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 EAStep vivado -log led_sw_instantiation.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_sw_instantiation.tcl
 =======
 EAStep vivado -log led_sw_vhdl.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_sw_vhdl.tcl
 >>>>>>> master
+=======
+EAStep vivado -log led_sw_vhdl.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_sw_vhdl.tcl
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8

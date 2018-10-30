@@ -4,10 +4,14 @@
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <Project Version="7" Minor="35" Path="C:/Users/Sergaljerk/WSU-CPTE/Project6.1/Project6.1.xpr">
 =======
 <Project Version="7" Minor="35" Path="C:/Users/Sergaljerk/Project6.1/Project6.1.xpr">
 >>>>>>> master
+=======
+<Project Version="7" Minor="35" Path="C:/Users/Sergaljerk/Project6.1/Project6.1.xpr">
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="5064d445f2e44e8c9baa1272db4eaf98"/>
@@ -87,9 +91,12 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Filter Type="Srcs"/>
 =======
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="cmp"/>
@@ -121,6 +128,7 @@
   </Simulators>
   <Runs Version="1" Minor="10">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z007sclg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
@@ -128,6 +136,8 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z007sclg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
@@ -135,12 +145,16 @@
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z007sclg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
 =======
@@ -148,6 +162,11 @@
           <Desc>Default settings for Implementation.</Desc>
         </StratHandle>
 >>>>>>> master
+=======
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

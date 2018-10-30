@@ -23,6 +23,7 @@
  module fsw_led(
  output led,
 <<<<<<< HEAD
+<<<<<<< HEAD
  input [4:0] sw
     );
     //SOP
@@ -54,6 +55,8 @@ assign led = (~sw[4] & ~sw[3] & ~sw[2] & ~sw[1] & sw[0]) | //00001
 (sw[4] & sw[3] & sw[2] & ~sw[1] & ~sw[0])   | //11100
 (sw[4] & sw[3] & sw[2] & sw[1] &  sw[0]);     //11111  
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
  input [3:0] sw
     );
     //SOP
@@ -67,5 +70,8 @@ assign led = (~sw[4] & ~sw[3] & ~sw[2] & ~sw[1] & sw[0]) | //00001
     (sw[3] & ~sw[2] & sw[1] & sw[0])   | //1011
     (sw[3] & sw[2] & ~sw[1] & sw[0])   | //1101
     (sw[3] & sw[2] & sw[1] & ~sw[0]);    //1110
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 endmodule

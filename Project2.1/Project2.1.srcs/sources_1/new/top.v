@@ -22,10 +22,14 @@
 
 module top(
 <<<<<<< HEAD
+<<<<<<< HEAD
 output reg [3:0]  led,
 =======
 output [3:0] led,
 >>>>>>> master
+=======
+output [3:0] led,
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 input [7:0] sw
     );
 //    //SOP 
@@ -50,6 +54,7 @@ input [7:0] sw
 //    (sw[6] & ~sw[5] & sw[4] & sw[3]) |
 //    (~sw[6] & ~sw[5] & sw[4] & sw[3]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 //    //POS
 //    assign led[0] = (sw[1] | sw[0]) & (~sw[1] | ~sw[0]);
@@ -103,6 +108,8 @@ input [7:0] sw
     led[3:2] = 2'b00;
   end
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
     //POS
     assign led[0] = (sw[1] | sw[0]) & (~sw[1] | ~sw[0]);
     
@@ -133,5 +140,8 @@ input [7:0] sw
     (sw[6] | ~sw[5] | ~sw[4] | ~sw[3]) &
     (sw[6] | ~sw[5] | sw[4] | ~sw[3]) &
     (~sw[6] | ~sw[5] | sw[4] | ~sw[3]);
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 endmodule

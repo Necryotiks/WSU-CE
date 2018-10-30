@@ -1,5 +1,6 @@
 #Switches
 <<<<<<< HEAD
+<<<<<<< HEAD
 set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { i_SW[0] }]; #IO_L19N_T3_VREF_34 Schematic=SW0W0
 set_property -dict { PACKAGE_PIN U20   IOSTANDARD LVCMOS33 } [get_ports { i_SW[1] }]; #IO_L15N_T2_DQS_34 Schematic=i_SW1
 set_property -dict { PACKAGE_PIN R16   IOSTANDARD LVCMOS33 } [get_ports { i_SW[2] }]; #IO_L19P_T3_34 Schematic=i_SW2
@@ -32,6 +33,8 @@ set_property -dict { PACKAGE_PIN Y14   IOSTANDARD LVCMOS33 } [get_ports { o_LED[
 set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { o_LED[14] }]; #IO_L7P_T1_34 Schematic=LD7_G
 set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { o_LED[15] }]; #IO_L7N_T1_34 Schematic=LD7_B
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { SW[0] }]; #IO_L19N_T3_VREF_34 Schematic=SW0
 set_property -dict { PACKAGE_PIN U20   IOSTANDARD LVCMOS33 } [get_ports { SW[1] }]; #IO_L15N_T2_DQS_34 Schematic=SW1
 set_property -dict { PACKAGE_PIN R16   IOSTANDARD LVCMOS33 } [get_ports { SW[2] }]; #IO_L19P_T3_34 Schematic=SW2
@@ -62,5 +65,9 @@ set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { LED[12
 
 set_property -dict { PACKAGE_PIN Y14   IOSTANDARD LVCMOS33 } [get_ports { LED[13] }]; #IO_L8N_T1_34 Schematic=LD7_R
 set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { LED[14] }]; #IO_L7P_T1_34 Schematic=LD7_G
+<<<<<<< HEAD
 set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { LED[15] }]; #IO_L7N_T1_34 Schematic=LD7_B
 >>>>>>> master
+=======
+set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { LED[15] }]; #IO_L7N_T1_34 Schematic=LD7_B
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8

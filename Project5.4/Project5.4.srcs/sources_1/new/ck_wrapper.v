@@ -42,6 +42,7 @@ output [15:0] led
  .fun_mode(fun_sw)
  );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //clksft_alt cs2(
 // .clkin(cwire),
@@ -50,4 +51,6 @@ output [15:0] led
 //);
 =======
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 endmodule

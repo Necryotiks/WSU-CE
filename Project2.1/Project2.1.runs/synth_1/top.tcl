@@ -3,9 +3,12 @@
 # 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 set TIME_start [clock seconds] 
 =======
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 proc create_report { reportName command } {
   set status "."
   append status $reportName ".fail"
@@ -26,6 +29,7 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 <<<<<<< HEAD
+<<<<<<< HEAD
 set_property webtalk.parent_dir C:/Users/Sergaljerk/WSU-CPTE/Project2.1/Project2.1.cache/wt [current_project]
 set_property parent.project_path C:/Users/Sergaljerk/WSU-CPTE/Project2.1/Project2.1.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
@@ -34,6 +38,8 @@ set_property ip_output_repo c:/Users/Sergaljerk/WSU-CPTE/Project2.1/Project2.1.c
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib C:/Users/Sergaljerk/WSU-CPTE/Project2.1/Project2.1.srcs/sources_1/new/top.v
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 set_property webtalk.parent_dir C:/Users/Sergaljerk/Project2.1/Project2.1.cache/wt [current_project]
 set_property parent.project_path C:/Users/Sergaljerk/Project2.1/Project2.1.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
@@ -41,7 +47,10 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/Sergaljerk/Project2.1/Project2.1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib C:/Users/Sergaljerk/Project2.1/Project2.1.srcs/sources_1/new/top.v
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -50,6 +59,7 @@ read_verilog -library xil_defaultlib C:/Users/Sergaljerk/Project2.1/Project2.1.s
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 read_xdc C:/Users/Sergaljerk/WSU-CPTE/Project2.1/Project2.1.srcs/constrs_1/new/top_cons.xdc
 set_property used_in_implementation false [get_files C:/Users/Sergaljerk/WSU-CPTE/Project2.1/Project2.1.srcs/constrs_1/new/top_cons.xdc]
@@ -61,6 +71,11 @@ read_xdc C:/Users/Sergaljerk/Project2.1/Project2.1.srcs/constrs_1/new/top_cons.x
 set_property used_in_implementation false [get_files C:/Users/Sergaljerk/Project2.1/Project2.1.srcs/constrs_1/new/top_cons.xdc]
 
 >>>>>>> master
+=======
+read_xdc C:/Users/Sergaljerk/Project2.1/Project2.1.srcs/constrs_1/new/top_cons.xdc
+set_property used_in_implementation false [get_files C:/Users/Sergaljerk/Project2.1/Project2.1.srcs/constrs_1/new/top_cons.xdc]
+
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 
 synth_design -top top -part xc7z007sclg400-1
 
@@ -70,7 +85,10 @@ set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef top.dcp
 create_report "synth_1_synth_report_utilization_0" "report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb"
 <<<<<<< HEAD
+<<<<<<< HEAD
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
 =======
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8

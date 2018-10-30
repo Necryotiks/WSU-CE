@@ -25,10 +25,14 @@ fi
 export LD_LIBRARY_PATH
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 HD_PWD='C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.runs/impl_1'
 =======
 HD_PWD='C:/Users/Sergaljerk/Project5.4/Project5.4.runs/impl_1'
 >>>>>>> master
+=======
+HD_PWD='C:/Users/Sergaljerk/Project5.4/Project5.4.runs/impl_1'
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 cd "$HD_PWD"
 
 HD_LOG=runme.log

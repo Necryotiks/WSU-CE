@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 set_property SRC_FILE_INFO {cfile:C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc rfile:../../../Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN K19   IOSTANDARD LVCMOS33 } [get_ports { o_ANODE[0] }]; #IO_L10P_T1_AD11P_35 Schematic=SSEG_AN0
@@ -31,6 +32,8 @@ set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports { i_BTN[
 set_property src_info {type:XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { i_BTN[3] }]; #IO_L23P_T3_35 Schematic=BTN3
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
 set_property SRC_FILE_INFO {cfile:C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc rfile:../../../Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN K19   IOSTANDARD LVCMOS33 } [get_ports { ANODE[0] }]; #IO_L10P_T1_AD11P_35 Schematic=SSEG_AN0
@@ -62,4 +65,7 @@ set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports { BTN[2] }]; #IO_L24P_T3_34 Schematic=BTN2
 set_property src_info {type:XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { BTN[3] }]; #IO_L23P_T3_35 Schematic=BTN3
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8

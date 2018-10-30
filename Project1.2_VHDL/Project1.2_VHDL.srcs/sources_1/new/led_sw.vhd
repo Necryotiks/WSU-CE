@@ -34,6 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity led_sw_vhdl is
  Port (
 <<<<<<< HEAD
+<<<<<<< HEAD
  i_SW: in std_ulogic_vector(7 downto 0);
  o_LED: out std_ulogic_vector(15 downto 0) 
  );
@@ -64,6 +65,8 @@ o_LED(6 downto 4) <= (6 => i_SW(3),5 => i_SW(3),4 => i_SW(3));
 o_LED(3 downto 0) <= (0 => i_SW(7),1 => i_SW(6),2 => i_SW(5),3 => i_SW(4));
 end Part_3;
 =======
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
  SW: in std_logic_vector(7 downto 0);
  LED: out std_logic_vector(15 downto 0) 
  );
@@ -84,4 +87,7 @@ LED(9 downto 7) <= (9 => SW(2),8 => SW(2),7 => SW(2));
 LED(6 downto 4) <= (6 => SW(3),5 => SW(3),4 => SW(3));
 LED(3 downto 0) <= (0 => SW(7),1 => SW(6),2 => SW(5),3 => SW(4));
 end Behavioral;
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 5ec567faa533c067fd38e29ea17d6632d7cd74e8
