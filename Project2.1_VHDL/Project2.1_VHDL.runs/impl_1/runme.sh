@@ -24,7 +24,11 @@ else
 fi
 export LD_LIBRARY_PATH
 
+<<<<<<< HEAD
+HD_PWD='C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.runs/impl_1'
+=======
 HD_PWD='C:/Users/Sergaljerk/Project2.1_VHDL/Project2.1_VHDL.runs/impl_1'
+>>>>>>> master
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +46,10 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
+<<<<<<< HEAD
+EAStep vivado -log top_VHDL_instantiation.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_VHDL_instantiation.tcl -notrace
+=======
 EAStep vivado -log top_VHDL.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_VHDL.tcl -notrace
+>>>>>>> master
 
 

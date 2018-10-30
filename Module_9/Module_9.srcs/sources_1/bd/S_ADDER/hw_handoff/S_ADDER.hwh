@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 29 16:21:31 2018" VIVADOVERSION="2018.2">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="S_ADDER" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_Sub" SIGIS="undef" SIGNAME="External_Ports_i_Sub">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SubAdder_0" PORT="i_Sub"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_Anodes" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_an">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_mux_0" PORT="an"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="6" NAME="o_Cathode" RIGHT="0" SIGIS="undef" SIGNAME="ssd_dec_0_cathode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_dec_0" PORT="cathode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_LD_0" SIGIS="undef" SIGNAME="External_Ports_i_LD_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_BTN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_Carry" SIGIS="undef" SIGNAME="SubAdder_0_o_Carry">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SubAdder_0" PORT="o_Carry"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_SW"/>
+        <CONNECTION INSTANCE="SubAdder_0" PORT="i_A"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/PIPO_0" HWVERSION="1.0" INSTANCE="PIPO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PIPO" VLNV="xilinx.com:module_ref:PIPO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="BUS_MSB" VALUE="7"/>
+        <PARAMETER NAME="Component_Name" VALUE="S_ADDER_PIPO_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_BTN" SIGIS="undef" SIGNAME="External_Ports_i_LD_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_LD_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SubAdder_0" PORT="i_B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/SubAdder_0" HWVERSION="1.0" INSTANCE="SubAdder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SubAdder" VLNV="xilinx.com:module_ref:SubAdder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="S_ADDER_SubAdder_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_A" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i_B" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIPO_0" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Sub" SIGIS="undef" SIGNAME="External_Ports_i_Sub">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_Sub"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Carry" SIGIS="undef" SIGNAME="SubAdder_0_o_Carry">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Carry"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_Sum" RIGHT="0" SIGIS="undef" SIGNAME="SubAdder_0_o_Sum">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_1" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ssd_dec_0" HWVERSION="1.0" INSTANCE="ssd_dec_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_dec" VLNV="xilinx.com:module_ref:ssd_dec:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="S_ADDER_ssd_dec_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_Num" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="cathode" RIGHT="0" SIGIS="undef" SIGNAME="ssd_dec_0_cathode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Cathode"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ssd_mux_0" HWVERSION="1.0" INSTANCE="ssd_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_mux" VLNV="xilinx.com:module_ref:ssd_mux:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="S_ADDER_ssd_mux_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_2" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_3" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_4" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_1" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_dec_0" PORT="i_Num"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="an" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_an">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Anodes"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="7"/>
+        <PARAMETER NAME="DIN_TO" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="S_ADDER_xlslice_0_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="SubAdder_0_o_Sum">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SubAdder_0" PORT="o_Sum"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xlslice_1" HWVERSION="1.0" INSTANCE="xlslice_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="3"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="S_ADDER_xlslice_1_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="SubAdder_0_o_Sum">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SubAdder_0" PORT="o_Sum"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_4"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

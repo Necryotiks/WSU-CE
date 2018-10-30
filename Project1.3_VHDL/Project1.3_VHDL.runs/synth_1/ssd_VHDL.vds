@@ -2,12 +2,21 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+<<<<<<< HEAD
+# Start of session at: Fri Aug  3 18:09:23 2018
+# Process ID: 3360
+# Current directory: C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1
+# Command line: vivado.exe -log ssd_VHDL.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ssd_VHDL.tcl
+# Log file: C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1/ssd_VHDL.vds
+# Journal file: C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1\vivado.jou
+=======
 # Start of session at: Sun Jul 29 05:12:19 2018
 # Process ID: 6468
 # Current directory: C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1
 # Command line: vivado.exe -log ssd_VHDL.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ssd_VHDL.tcl
 # Log file: C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1/ssd_VHDL.vds
 # Journal file: C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1\vivado.jou
+>>>>>>> master
 #-----------------------------------------------------------
 source ssd_VHDL.tcl -notrace
 Command: synth_design -top ssd_VHDL -part xc7z007sclg400-1
@@ -15,6 +24,23 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
+<<<<<<< HEAD
+INFO: Helper process launched with PID 9980 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 345.301 ; gain = 101.320
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ssd_VHDL' [C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.srcs/sources_1/new/ssd_VHDL.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'ssd_VHDL' (1#1) [C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.srcs/sources_1/new/ssd_VHDL.vhd:42]
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[6] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[5] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[4] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[3] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[2] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[1] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 397.047 ; gain = 153.066
+=======
 INFO: Helper process launched with PID 7500 
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 344.348 ; gain = 100.391
@@ -30,6 +56,7 @@ WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[1] driven by constant 0
 WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[0] driven by constant 0
 ---------------------------------------------------------------------------------
 Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 396.434 ; gain = 152.477
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -39,42 +66,70 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 397.047 ; gain = 153.066
+=======
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 396.434 ; gain = 152.477
+>>>>>>> master
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+<<<<<<< HEAD
+Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]
+Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ssd_VHDL_propImpl.xdc].
+=======
 Parsing XDC File [C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]
 Finished Parsing XDC File [C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.srcs/constrs_1/new/ssd_VHDL_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ssd_VHDL_propImpl.xdc].
+>>>>>>> master
 Resolution: To avoid this warning, move constraints listed in [.Xil/ssd_VHDL_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+<<<<<<< HEAD
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 642.953 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.953 ; gain = 398.973
+=======
 Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 642.277 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.277 ; gain = 398.320
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.953 ; gain = 398.973
+=======
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.277 ; gain = 398.320
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.953 ; gain = 398.973
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "o_ANODE" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.953 ; gain = 398.973
+=======
 Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.277 ; gain = 398.320
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "ANODE" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 642.277 ; gain = 398.320
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -114,6 +169,17 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[6] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[5] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[4] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[3] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[2] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[1] driven by constant 0
+WARNING: [Synth 8-3917] design ssd_VHDL has port o_CATHODE[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 642.953 ; gain = 398.973
+=======
 WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[6] driven by constant 0
 WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[5] driven by constant 0
 WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[4] driven by constant 0
@@ -123,6 +189,7 @@ WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[1] driven by constant 0
 WARNING: [Synth 8-3917] design ssd_VHDL has port CATHODE[0] driven by constant 0
 ---------------------------------------------------------------------------------
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 642.277 ; gain = 398.320
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -134,13 +201,21 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 725.078 ; gain = 481.098
+=======
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 722.992 ; gain = 479.035
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 725.078 ; gain = 481.098
+=======
 Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 722.992 ; gain = 479.035
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -152,7 +227,11 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 734.613 ; gain = 490.633
+=======
 Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -176,7 +255,11 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
+=======
 Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -189,7 +272,11 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
+=======
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -201,25 +288,41 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
+=======
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
+=======
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
+=======
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
+=======
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -247,11 +350,19 @@ Report Instance Areas:
 |1     |top      |       |    19|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 734.613 ; gain = 244.727
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 734.613 ; gain = 490.633
+=======
 Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 732.523 ; gain = 488.566
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
 Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 732.523 ; gain = 242.723
 Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 732.523 ; gain = 488.566
+>>>>>>> master
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -263,8 +374,16 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 15 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
+<<<<<<< HEAD
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 742.738 ; gain = 511.895
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1/ssd_VHDL.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ssd_VHDL_utilization_synth.rpt -pb ssd_VHDL_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 742.738 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  3 18:10:08 2018...
+=======
 synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 746.648 ; gain = 515.828
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/Project1.3_VHDL/Project1.3_VHDL.runs/synth_1/ssd_VHDL.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ssd_VHDL_utilization_synth.rpt -pb ssd_VHDL_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 746.648 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Sun Jul 29 05:13:03 2018...
+>>>>>>> master

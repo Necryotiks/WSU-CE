@@ -24,7 +24,11 @@ else
 fi
 export LD_LIBRARY_PATH
 
+<<<<<<< HEAD
+HD_PWD='C:/Users/Sergaljerk/WSU-CPTE/Project2.1_VHDL/Project2.1_VHDL.runs/synth_1'
+=======
 HD_PWD='C:/Users/Sergaljerk/Project2.1_VHDL/Project2.1_VHDL.runs/synth_1'
+>>>>>>> master
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +44,8 @@ EAStep()
      fi
 }
 
+<<<<<<< HEAD
+EAStep vivado -log top_VHDL_instantiation.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_VHDL_instantiation.tcl
+=======
 EAStep vivado -log top_VHDL.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_VHDL.tcl
+>>>>>>> master

@@ -14,6 +14,24 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
+<<<<<<< HEAD
+INFO: Helper process launched with PID 4840 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 346.172 ; gain = 100.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ck_wrapper' [C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/sources_1/new/ck_wrapper.v:23]
+INFO: [Synth 8-638] synthesizing module 'clkdiv' [C:/Users/lauer/WSU-CPTE/Project5.3/Project5.3.srcs/sources_1/new/clkdiv.v:23]
+INFO: [Synth 8-638] synthesizing module 'dff' [C:/Users/lauer/WSU-CPTE/Project5.3/Project5.3.srcs/sources_1/new/dff.v:23]
+INFO: [Synth 8-256] done synthesizing module 'dff' (1#1) [C:/Users/lauer/WSU-CPTE/Project5.3/Project5.3.srcs/sources_1/new/dff.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clkdiv' (2#1) [C:/Users/lauer/WSU-CPTE/Project5.3/Project5.3.srcs/sources_1/new/clkdiv.v:23]
+INFO: [Synth 8-638] synthesizing module 'clksft' [C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/sources_1/new/clksft.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/sources_1/new/clksft.v:41]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/sources_1/new/clksft.v:61]
+INFO: [Synth 8-256] done synthesizing module 'clksft' (3#1) [C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/sources_1/new/clksft.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ck_wrapper' (4#1) [C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/sources_1/new/ck_wrapper.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 398.234 ; gain = 152.988
+=======
 INFO: Helper process launched with PID 8272 
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 344.176 ; gain = 100.547
@@ -29,6 +47,7 @@ INFO: [Synth 8-256] done synthesizing module 'clksft' (3#1) [C:/Users/Sergaljerk
 INFO: [Synth 8-256] done synthesizing module 'ck_wrapper' (4#1) [C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/sources_1/new/ck_wrapper.v:23]
 ---------------------------------------------------------------------------------
 Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 396.184 ; gain = 152.555
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -38,42 +57,72 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 398.234 ; gain = 152.988
+=======
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 396.184 ; gain = 152.555
+>>>>>>> master
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+<<<<<<< HEAD
+Parsing XDC File [C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc]
+Finished Parsing XDC File [C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ck_wrapper_propImpl.xdc].
+=======
 Parsing XDC File [C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc]
 Finished Parsing XDC File [C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ck_wrapper_propImpl.xdc].
+>>>>>>> master
 Resolution: To avoid this warning, move constraints listed in [.Xil/ck_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+<<<<<<< HEAD
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 735.801 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:25 ; elapsed = 00:01:38 . Memory (MB): peak = 735.801 ; gain = 490.555
+=======
 Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 734.625 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 734.625 ; gain = 490.996
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:25 ; elapsed = 00:01:38 . Memory (MB): peak = 735.801 ; gain = 490.555
+=======
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 734.625 ; gain = 490.996
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:25 ; elapsed = 00:01:38 . Memory (MB): peak = 735.801 ; gain = 490.555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "leds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "leds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "k" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:26 ; elapsed = 00:01:39 . Memory (MB): peak = 735.801 ; gain = 490.555
+=======
 Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 734.625 ; gain = 490.996
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "leds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 734.625 ; gain = 490.996
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -86,6 +135,19 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+<<<<<<< HEAD
+	   2 Input     32 Bit       Adders := 6     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 6     
+	   4 Input     16 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 4     
+=======
 	   2 Input     32 Bit       Adders := 3     
 +---Registers : 
 	               32 Bit    Registers := 1     
@@ -97,6 +159,7 @@ Detailed RTL Component Info :
 	   4 Input     16 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 1     
+>>>>>>> master
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -115,6 +178,18 @@ Detailed RTL Component Info :
 Module clksft 
 Detailed RTL Component Info : 
 +---Adders : 
+<<<<<<< HEAD
+	   2 Input     32 Bit       Adders := 6     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 6     
+	   4 Input     16 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 5     
+=======
 	   2 Input     32 Bit       Adders := 3     
 +---Registers : 
 	               32 Bit    Registers := 1     
@@ -125,6 +200,7 @@ Detailed RTL Component Info :
 	   4 Input     16 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+>>>>>>> master
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -140,6 +216,10 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+INFO: [Synth 8-5546] ROM "k" won't be mapped to RAM because it is too sparse
+=======
+>>>>>>> master
 INFO: [Synth 8-3886] merging instance 'cs1/j_reg[19]' (FDE) to 'cs1/j_reg[2]'
 INFO: [Synth 8-3886] merging instance 'cs1/j_reg[18]' (FDE) to 'cs1/j_reg[2]'
 INFO: [Synth 8-3886] merging instance 'cs1/j_reg[17]' (FDE) to 'cs1/j_reg[2]'
@@ -169,8 +249,47 @@ INFO: [Synth 8-3886] merging instance 'cs1/j_reg[15]' (FDE) to 'cs1/j_reg[9]'
 INFO: [Synth 8-3886] merging instance 'cs1/j_reg[10]' (FDE) to 'cs1/j_reg[9]'
 INFO: [Synth 8-3886] merging instance 'cs1/j_reg[9]' (FDE) to 'cs1/j_reg[11]'
 INFO: [Synth 8-3886] merging instance 'cs1/j_reg[12]' (FDE) to 'cs1/j_reg[11]'
+<<<<<<< HEAD
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[19]' (FDE) to 'cs1/k_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[18]' (FDE) to 'cs1/k_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[17]' (FDE) to 'cs1/k_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[23]' (FDE) to 'cs1/k_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[22]' (FDE) to 'cs1/k_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[21]' (FDE) to 'cs1/k_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[20]' (FDE) to 'cs1/k_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[29]' (FDE) to 'cs1/k_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[28]' (FDE) to 'cs1/k_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[31]' (FDE) to 'cs1/k_reg[30]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[30]' (FDE) to 'cs1/k_reg[27]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[25]' (FDE) to 'cs1/k_reg[27]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[24]' (FDE) to 'cs1/k_reg[27]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[27]' (FDE) to 'cs1/k_reg[26]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[26]' (FDE) to 'cs1/k_reg[16]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[4]' (FDE) to 'cs1/k_reg[16]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[2]' (FDE) to 'cs1/k_reg[16]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[3]' (FDE) to 'cs1/k_reg[16]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[8]' (FDE) to 'cs1/k_reg[16]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[7]' (FDE) to 'cs1/k_reg[16]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[6]' (FDE) to 'cs1/k_reg[16]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[5]' (FDE) to 'cs1/k_reg[16]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[14]' (FDE) to 'cs1/k_reg[16]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[13]' (FDE) to 'cs1/k_reg[16]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[16]' (FDE) to 'cs1/k_reg[15]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[15]' (FDE) to 'cs1/k_reg[12]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[10]' (FDE) to 'cs1/k_reg[12]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[9]' (FDE) to 'cs1/k_reg[12]'
+INFO: [Synth 8-3886] merging instance 'cs1/k_reg[12]' (FDE) to 'cs1/k_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cs1/i_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (cs1/i_reg[0]) is unused and will be removed from module ck_wrapper.
+INFO: [Synth 8-3886] merging instance 'cs1/leds_reg[4]' (FDE) to 'cs1/leds_reg[6]'
+INFO: [Synth 8-3886] merging instance 'cs1/leds_reg[10]' (FDE) to 'cs1/leds_reg[12]'
+INFO: [Synth 8-3886] merging instance 'cs1/leds_reg[13]' (FDE) to 'cs1/leds_reg[15]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:30 ; elapsed = 00:01:44 . Memory (MB): peak = 735.801 ; gain = 490.555
+=======
 ---------------------------------------------------------------------------------
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 734.625 ; gain = 490.996
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,13 +301,21 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:06 ; elapsed = 00:02:22 . Memory (MB): peak = 735.801 ; gain = 490.555
+=======
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 734.625 ; gain = 490.996
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Timing Optimization : Time (s): cpu = 00:02:06 ; elapsed = 00:02:22 . Memory (MB): peak = 743.203 ; gain = 497.957
+=======
 Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 740.383 ; gain = 496.754
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -200,7 +327,11 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Technology Mapping : Time (s): cpu = 00:02:06 ; elapsed = 00:02:22 . Memory (MB): peak = 753.238 ; gain = 507.992
+=======
 Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 750.422 ; gain = 506.793
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -224,7 +355,11 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished IO Insertion : Time (s): cpu = 00:02:11 ; elapsed = 00:02:27 . Memory (MB): peak = 753.238 ; gain = 507.992
+=======
 Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 750.422 ; gain = 506.793
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -237,7 +372,11 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:11 ; elapsed = 00:02:27 . Memory (MB): peak = 753.238 ; gain = 507.992
+=======
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 750.422 ; gain = 506.793
+>>>>>>> master
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -249,25 +388,41 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:11 ; elapsed = 00:02:27 . Memory (MB): peak = 753.238 ; gain = 507.992
+=======
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 750.422 ; gain = 506.793
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:11 ; elapsed = 00:02:27 . Memory (MB): peak = 753.238 ; gain = 507.992
+=======
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 750.422 ; gain = 506.793
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:11 ; elapsed = 00:02:27 . Memory (MB): peak = 753.238 ; gain = 507.992
+=======
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 750.422 ; gain = 506.793
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:11 ; elapsed = 00:02:27 . Memory (MB): peak = 753.238 ; gain = 507.992
+=======
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 750.422 ; gain = 506.793
+>>>>>>> master
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -284,6 +439,16 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
+<<<<<<< HEAD
+|2     |CARRY4 |    16|
+|3     |LUT2   |    30|
+|4     |LUT3   |     1|
+|5     |LUT4   |    11|
+|6     |LUT5   |     7|
+|7     |LUT6   |    13|
+|8     |FDRE   |    57|
+|9     |FDSE   |     4|
+=======
 |2     |CARRY4 |     8|
 |3     |LUT2   |    27|
 |4     |LUT3   |    17|
@@ -292,6 +457,7 @@ Report Cell Usage:
 |7     |LUT6   |     4|
 |8     |FDRE   |    46|
 |9     |FDSE   |    16|
+>>>>>>> master
 |10    |IBUF   |     5|
 |11    |OBUF   |    16|
 +------+-------+------+
@@ -300,7 +466,11 @@ Report Instance Areas:
 +------+----------------------------------+-------+------+
 |      |Instance                          |Module |Cells |
 +------+----------------------------------+-------+------+
+<<<<<<< HEAD
+|1     |top                               |       |   162|
+=======
 |1     |top                               |       |   151|
+>>>>>>> master
 |2     |  cd1                             |clkdiv |    55|
 |3     |    \dff_gen_label1[10].dff_inst  |dff    |     2|
 |4     |    \dff_gen_label1[11].dff_inst  |dff_0  |     2|
@@ -329,6 +499,18 @@ Report Instance Areas:
 |27    |    \dff_gen_label1[8].dff_inst   |dff_23 |     2|
 |28    |    \dff_gen_label1[9].dff_inst   |dff_24 |     2|
 |29    |    dff_inst0                     |dff_25 |     2|
+<<<<<<< HEAD
+|30    |  cs1                             |clksft |    84|
++------+----------------------------------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:11 ; elapsed = 00:02:27 . Memory (MB): peak = 753.238 ; gain = 507.992
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:15 ; elapsed = 00:01:55 . Memory (MB): peak = 753.238 ; gain = 170.426
+Synthesis Optimization Complete : Time (s): cpu = 00:02:12 ; elapsed = 00:02:28 . Memory (MB): peak = 753.238 ; gain = 507.992
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+=======
 |30    |  cs1                             |clksft |    73|
 +------+----------------------------------+-------+------+
 ---------------------------------------------------------------------------------
@@ -339,6 +521,7 @@ Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 .
 Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 750.422 ; gain = 506.793
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+>>>>>>> master
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -346,6 +529,15 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
+<<<<<<< HEAD
+88 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:16 ; elapsed = 00:02:36 . Memory (MB): peak = 753.238 ; gain = 520.938
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.runs/synth_1/ck_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ck_wrapper_utilization_synth.rpt -pb ck_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.202 . Memory (MB): peak = 753.238 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 30 21:32:53 2018...
+=======
 51 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
 synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 752.539 ; gain = 521.531
@@ -353,3 +545,4 @@ INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/Project5.4/Project5.4
 INFO: [runtcl-4] Executing : report_utilization -file ck_wrapper_utilization_synth.rpt -pb ck_wrapper_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 752.539 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Sun Jul 29 01:05:25 2018...
+>>>>>>> master

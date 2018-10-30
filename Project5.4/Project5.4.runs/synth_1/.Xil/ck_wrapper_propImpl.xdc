@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+set_property SRC_FILE_INFO {cfile:C:/Users/lauer/WSU-CPTE/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc rfile:../../../Project5.4.srcs/constrs_1/new/clkshift_cons.xdc id:1} [current_design]
+=======
 set_property SRC_FILE_INFO {cfile:C:/Users/Sergaljerk/Project5.4/Project5.4.srcs/constrs_1/new/clkshift_cons.xdc rfile:../../../Project5.4.srcs/constrs_1/new/clkshift_cons.xdc id:1} [current_design]
+>>>>>>> master
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_35 Schematic=SYSCLK
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]

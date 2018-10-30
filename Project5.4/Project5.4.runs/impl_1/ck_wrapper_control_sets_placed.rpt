@@ -1,8 +1,13 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+<<<<<<< HEAD
+| Date         : Mon Jul 30 21:35:20 2018
+| Host         : DESKTOP-T6GBLFK running 64-bit major release  (build 9200)
+=======
 | Date         : Sun Jul 29 01:06:08 2018
 | Host         : DESKTOP-J2UKM9F running 64-bit major release  (build 9200)
+>>>>>>> master
 | Command      : report_control_sets -verbose -file ck_wrapper_control_sets_placed.rpt
 | Design       : ck_wrapper
 | Device       : xc7z007s
@@ -22,8 +27,13 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
+<<<<<<< HEAD
+| Number of unique control sets                            |    33 |
+| Unused register locations in slices containing registers |   216 |
+=======
 | Number of unique control sets                            |    32 |
 | Unused register locations in slices containing registers |   210 |
+>>>>>>> master
 +----------------------------------------------------------+-------+
 
 
@@ -33,18 +43,66 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
+<<<<<<< HEAD
+| No           | No                    | No                     |              35 |           30 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              11 |            4 |
+| Yes          | No                    | No                     |              14 |            6 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               4 |            1 |
+=======
 | No           | No                    | No                     |              46 |           32 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |              16 |            4 |
+>>>>>>> master
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
+<<<<<<< HEAD
++-----------------------------------------------+----------------------+---------------------+------------------+----------------+
+|                  Clock Signal                 |     Enable Signal    |   Set/Reset Signal  | Slice Load Count | Bel Load Count |
++-----------------------------------------------+----------------------+---------------------+------------------+----------------+
+|  cd1/dff_gen_label1[12].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[10].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[11].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[24].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[21].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[25].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[22].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[20].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[2].dff_inst/clkdivide[0]  |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[23].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[4].dff_inst/clkdivide[0]  |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[13].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[7].dff_inst/clkdivide[0]  |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[6].dff_inst/clkdivide[0]  |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[8].dff_inst/clkdivide[0]  |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[3].dff_inst/clkdivide[0]  |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[5].dff_inst/clkdivide[0]  |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[9].dff_inst/Q_reg_0[0]    |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[17].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_inst0/Q_reg_0[0]                     |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[15].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[18].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[16].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[14].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[19].dff_inst/clkdivide[0] |                      |                     |                1 |              1 |
+|  cd1/dff_gen_label1[1].dff_inst/clkdivide[0]  |                      |                     |                1 |              1 |
+|  clk_IBUF_BUFG                                |                      |                     |                1 |              1 |
+|  cwire_BUFG                                   | cs1/j                |                     |                1 |              1 |
+|  cwire_BUFG                                   | cs1/k[1]_i_1_n_0     |                     |                1 |              1 |
+|  cwire_BUFG                                   | cs1/leds[15]_i_1_n_0 | cs1/leds[7]_i_1_n_0 |                1 |              4 |
+|  cwire_BUFG                                   |                      |                     |                3 |              8 |
+|  cwire_BUFG                                   |                      | cs1/i[15]_i_1_n_0   |                4 |             11 |
+|  cwire_BUFG                                   | cs1/leds[15]_i_1_n_0 |                     |                4 |             12 |
++-----------------------------------------------+----------------------+---------------------+------------------+----------------+
+=======
 +-----------------------------------------------+----------------------+----------------------+------------------+----------------+
 |                  Clock Signal                 |     Enable Signal    |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
 +-----------------------------------------------+----------------------+----------------------+------------------+----------------+
@@ -81,14 +139,23 @@ Table of Contents
 |  cwire_BUFG                                   | cs1/leds[15]_i_2_n_0 | cs1/leds[6]_i_1_n_0  |                1 |              4 |
 |  cwire_BUFG                                   |                      |                      |                5 |             19 |
 +-----------------------------------------------+----------------------+----------------------+------------------+----------------+
+>>>>>>> master
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
+<<<<<<< HEAD
+| 1      |                    29 |
+| 4      |                     1 |
+| 8      |                     1 |
+| 11     |                     1 |
+| 12     |                     1 |
+=======
 | 1      |                    27 |
 | 4      |                     4 |
 | 16+    |                     1 |
+>>>>>>> master
 +--------+-----------------------+
 
 

@@ -1,0 +1,287 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Jul 31 23:43:41 2018
+# Process ID: 13476
+# Current directory: C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.runs/synth_1
+# Command line: vivado.exe -log clkdiv_vhdl.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clkdiv_vhdl.tcl
+# Log file: C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.runs/synth_1/clkdiv_vhdl.vds
+# Journal file: C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source clkdiv_vhdl.tcl -notrace
+Command: synth_design -top clkdiv_vhdl -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4904 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 346.316 ; gain = 100.301
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'clkdiv_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:44]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DFF0' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'dff_vhdl' (1#1) [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:41]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-3491] module 'dff_vhdl' declared at 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/dff_vhdl.vhd:34' bound to instance 'DIVX' of component 'dff_vhdl' [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'clkdiv_vhdl' (2#1) [C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.srcs/sources_1/new/clkdiv_vhdl.vhd:44]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 398.332 ; gain = 152.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 398.332 ; gain = 152.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 398.332 ; gain = 152.316
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 398.332 ; gain = 152.316
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clkdiv_vhdl 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module dff_vhdl 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 529.898 ; gain = 283.883
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 529.898 ; gain = 283.883
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 539.434 ; gain = 293.418
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 539.434 ; gain = 293.418
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 539.434 ; gain = 293.418
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 539.434 ; gain = 293.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 539.434 ; gain = 293.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 539.434 ; gain = 293.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 539.434 ; gain = 293.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |    27|
+|3     |LUT6 |     1|
+|4     |FDCE |    27|
+|5     |IBUF |     4|
+|6     |OBUF |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------------------+------------+------+
+|      |Instance             |Module      |Cells |
++------+---------------------+------------+------+
+|1     |top                  |            |    61|
+|2     |  DFF0               |dff_vhdl    |     2|
+|3     |  \GEN_DIV[10].DIVX  |dff_vhdl_0  |     2|
+|4     |  \GEN_DIV[11].DIVX  |dff_vhdl_1  |     2|
+|5     |  \GEN_DIV[12].DIVX  |dff_vhdl_2  |     2|
+|6     |  \GEN_DIV[13].DIVX  |dff_vhdl_3  |     2|
+|7     |  \GEN_DIV[14].DIVX  |dff_vhdl_4  |     2|
+|8     |  \GEN_DIV[15].DIVX  |dff_vhdl_5  |     2|
+|9     |  \GEN_DIV[16].DIVX  |dff_vhdl_6  |     2|
+|10    |  \GEN_DIV[17].DIVX  |dff_vhdl_7  |     2|
+|11    |  \GEN_DIV[18].DIVX  |dff_vhdl_8  |     2|
+|12    |  \GEN_DIV[19].DIVX  |dff_vhdl_9  |     2|
+|13    |  \GEN_DIV[1].DIVX   |dff_vhdl_10 |     2|
+|14    |  \GEN_DIV[20].DIVX  |dff_vhdl_11 |     2|
+|15    |  \GEN_DIV[21].DIVX  |dff_vhdl_12 |     2|
+|16    |  \GEN_DIV[22].DIVX  |dff_vhdl_13 |     2|
+|17    |  \GEN_DIV[23].DIVX  |dff_vhdl_14 |     2|
+|18    |  \GEN_DIV[24].DIVX  |dff_vhdl_15 |     2|
+|19    |  \GEN_DIV[25].DIVX  |dff_vhdl_16 |     3|
+|20    |  \GEN_DIV[26].DIVX  |dff_vhdl_17 |     2|
+|21    |  \GEN_DIV[2].DIVX   |dff_vhdl_18 |     2|
+|22    |  \GEN_DIV[3].DIVX   |dff_vhdl_19 |     2|
+|23    |  \GEN_DIV[4].DIVX   |dff_vhdl_20 |     2|
+|24    |  \GEN_DIV[5].DIVX   |dff_vhdl_21 |     2|
+|25    |  \GEN_DIV[6].DIVX   |dff_vhdl_22 |     2|
+|26    |  \GEN_DIV[7].DIVX   |dff_vhdl_23 |     2|
+|27    |  \GEN_DIV[8].DIVX   |dff_vhdl_24 |     2|
+|28    |  \GEN_DIV[9].DIVX   |dff_vhdl_25 |     2|
++------+---------------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 539.434 ; gain = 293.418
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 539.434 ; gain = 293.418
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 539.434 ; gain = 293.418
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:10 . Memory (MB): peak = 640.914 ; gain = 407.848
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lauer/WSU-CPTE/Project5.3_VHDL/Project5.3_VHDL.runs/synth_1/clkdiv_vhdl.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file clkdiv_vhdl_utilization_synth.rpt -pb clkdiv_vhdl_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 640.914 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 31 23:45:16 2018...
