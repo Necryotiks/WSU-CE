@@ -1,0 +1,406 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Nov  3 01:15:09 2018
+# Process ID: 6676
+# Current directory: C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.runs/synth_1
+# Command line: vivado.exe -log ARITHMETIC_LOGIC_UNIT_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ARITHMETIC_LOGIC_UNIT_wrapper.tcl
+# Log file: C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.runs/synth_1/ARITHMETIC_LOGIC_UNIT_wrapper.vds
+# Journal file: C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ARITHMETIC_LOGIC_UNIT_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 284.406 ; gain = 38.945
+Command: synth_design -top ARITHMETIC_LOGIC_UNIT_wrapper -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10188 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 389.238 ; gain = 99.145
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ARITHMETIC_LOGIC_UNIT_wrapper' [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/hdl/ARITHMETIC_LOGIC_UNIT_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ARITHMETIC_LOGIC_UNIT' [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/synth/ARITHMETIC_LOGIC_UNIT.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ARITHMETIC_LOGIC_UNIT_ALU_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_ALU_0_0/synth/ARITHMETIC_LOGIC_UNIT_ALU_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/new/ALU.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (1#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ARITHMETIC_LOGIC_UNIT_ALU_0_0' (2#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_ALU_0_0/synth/ARITHMETIC_LOGIC_UNIT_ALU_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ARITHMETIC_LOGIC_UNIT_xlslice_1_1' [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_xlslice_1_1/synth/ARITHMETIC_LOGIC_UNIT_xlslice_1_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice' [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 8 - type: integer 
+	Parameter DIN_FROM bound to: 3 - type: integer 
+	Parameter DIN_TO bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice' (3#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ARITHMETIC_LOGIC_UNIT_xlslice_1_1' (4#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_xlslice_1_1/synth/ARITHMETIC_LOGIC_UNIT_xlslice_1_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'ARITHMETIC_LOGIC_UNIT_xlslice_1_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_xlslice_1_0/synth/ARITHMETIC_LOGIC_UNIT_xlslice_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice__parameterized0' [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 8 - type: integer 
+	Parameter DIN_FROM bound to: 7 - type: integer 
+	Parameter DIN_TO bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice__parameterized0' (4#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ARITHMETIC_LOGIC_UNIT_xlslice_1_0' (5#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_xlslice_1_0/synth/ARITHMETIC_LOGIC_UNIT_xlslice_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'ARITHMETIC_LOGIC_UNIT_PIPO_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_PIPO_0_0/synth/ARITHMETIC_LOGIC_UNIT_PIPO_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'PIPO' [C:/Users/Sergaljerk/WSU-CPTE/Parts/PIPO.v:23]
+	Parameter BUS_MSB bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'PIPO' (6#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/PIPO.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ARITHMETIC_LOGIC_UNIT_PIPO_0_0' (7#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_PIPO_0_0/synth/ARITHMETIC_LOGIC_UNIT_PIPO_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ARITHMETIC_LOGIC_UNIT_PIPO_0_1' [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_PIPO_0_1/synth/ARITHMETIC_LOGIC_UNIT_PIPO_0_1.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'ARITHMETIC_LOGIC_UNIT_PIPO_0_1' (8#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_PIPO_0_1/synth/ARITHMETIC_LOGIC_UNIT_PIPO_0_1.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ARITHMETIC_LOGIC_UNIT_xlslice_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_xlslice_0_0/synth/ARITHMETIC_LOGIC_UNIT_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice__parameterized1' [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 8 - type: integer 
+	Parameter DIN_FROM bound to: 2 - type: integer 
+	Parameter DIN_TO bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice__parameterized1' (8#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ARITHMETIC_LOGIC_UNIT_xlslice_0_0' (9#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_xlslice_0_0/synth/ARITHMETIC_LOGIC_UNIT_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'ARITHMETIC_LOGIC_UNIT_ssd_dec_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_ssd_dec_0_0/synth/ARITHMETIC_LOGIC_UNIT_ssd_dec_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ssd_dec' [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_dec.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_dec' (10#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_dec.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ARITHMETIC_LOGIC_UNIT_ssd_dec_0_0' (11#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_ssd_dec_0_0/synth/ARITHMETIC_LOGIC_UNIT_ssd_dec_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ARITHMETIC_LOGIC_UNIT_ssd_mux_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_ssd_mux_0_0/synth/ARITHMETIC_LOGIC_UNIT_ssd_mux_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ssd_mux' [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_mux.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_mux.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_mux' (12#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ARITHMETIC_LOGIC_UNIT_ssd_mux_0_0' (13#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/ip/ARITHMETIC_LOGIC_UNIT_ssd_mux_0_0/synth/ARITHMETIC_LOGIC_UNIT_ssd_mux_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'ARITHMETIC_LOGIC_UNIT' (14#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/synth/ARITHMETIC_LOGIC_UNIT.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ARITHMETIC_LOGIC_UNIT_wrapper' (15#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/bd/ARITHMETIC_LOGIC_UNIT/hdl/ARITHMETIC_LOGIC_UNIT_wrapper.v:12]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized1 has unconnected port Din[7]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized1 has unconnected port Din[6]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized1 has unconnected port Din[5]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized1 has unconnected port Din[4]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized1 has unconnected port Din[3]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized0 has unconnected port Din[3]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized0 has unconnected port Din[2]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized0 has unconnected port Din[1]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized0 has unconnected port Din[0]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[7]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[6]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[5]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 444.293 ; gain = 154.199
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 444.293 ; gain = 154.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 444.293 ; gain = 154.199
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/constrs_1/new/ALU_cons.xdc]
+Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/constrs_1/new/ALU_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/constrs_1/new/ALU_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ARITHMETIC_LOGIC_UNIT_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ARITHMETIC_LOGIC_UNIT_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 769.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 769.523 ; gain = 479.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 769.523 ; gain = 479.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for ARITHMETIC_LOGIC_UNIT_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ARITHMETIC_LOGIC_UNIT_i/ALU_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ARITHMETIC_LOGIC_UNIT_i/PIPO_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ARITHMETIC_LOGIC_UNIT_i/PIPO_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ARITHMETIC_LOGIC_UNIT_i/Selector. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ARITHMETIC_LOGIC_UNIT_i/MSB. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ARITHMETIC_LOGIC_UNIT_i/LSB. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 769.523 ; gain = 479.430
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/new/ALU.v:42]
+WARNING: [Synth 8-327] inferring latch for variable 'r_Out_reg' [C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.srcs/sources_1/new/ALU.v:42]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 769.523 ; gain = 479.430
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   7 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Muxes : 
+	   7 Input      8 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+Module PIPO 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module ssd_dec 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
+Module ssd_mux 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_0_0 has unconnected port Din[7]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_0_0 has unconnected port Din[6]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_0_0 has unconnected port Din[5]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_0_0 has unconnected port Din[4]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_0_0 has unconnected port Din[3]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_1_0 has unconnected port Din[3]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_1_0 has unconnected port Din[2]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_1_0 has unconnected port Din[1]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_1_0 has unconnected port Din[0]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_1_1 has unconnected port Din[7]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_1_1 has unconnected port Din[6]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_1_1 has unconnected port Din[5]
+WARNING: [Synth 8-3331] design ARITHMETIC_LOGIC_UNIT_xlslice_1_1 has unconnected port Din[4]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/i_0/\inst/r_SUBCLK_reg[26] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 769.523 ; gain = 479.430
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 773.820 ; gain = 483.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 783.430 ; gain = 493.336
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 783.934 ; gain = 493.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 783.934 ; gain = 493.840
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 783.934 ; gain = 493.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 783.934 ; gain = 493.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 783.934 ; gain = 493.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 783.934 ; gain = 493.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 783.934 ; gain = 493.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     2|
+|3     |LUT1   |     1|
+|4     |LUT2   |     6|
+|5     |LUT3   |     1|
+|6     |LUT4   |    14|
+|7     |LUT6   |    12|
+|8     |FDRE   |    25|
+|9     |LD     |     8|
+|10    |IBUF   |    11|
+|11    |OBUF   |    15|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------+----------------------------------+------+
+|      |Instance                  |Module                            |Cells |
++------+--------------------------+----------------------------------+------+
+|1     |top                       |                                  |    96|
+|2     |  ARITHMETIC_LOGIC_UNIT_i |ARITHMETIC_LOGIC_UNIT             |    69|
+|3     |    ALU_0                 |ARITHMETIC_LOGIC_UNIT_ALU_0_0     |    27|
+|4     |      inst                |ALU                               |    27|
+|5     |    LSB                   |ARITHMETIC_LOGIC_UNIT_xlslice_1_1 |     0|
+|6     |    MSB                   |ARITHMETIC_LOGIC_UNIT_xlslice_1_0 |     0|
+|7     |    PIPO_0                |ARITHMETIC_LOGIC_UNIT_PIPO_0_0    |     8|
+|8     |      inst                |PIPO_0                            |     8|
+|9     |    PIPO_1                |ARITHMETIC_LOGIC_UNIT_PIPO_0_1    |     8|
+|10    |      inst                |PIPO                              |     8|
+|11    |    Selector              |ARITHMETIC_LOGIC_UNIT_xlslice_0_0 |     0|
+|12    |    ssd_dec_0             |ARITHMETIC_LOGIC_UNIT_ssd_dec_0_0 |    14|
+|13    |      inst                |ssd_dec                           |    14|
+|14    |    ssd_mux_0             |ARITHMETIC_LOGIC_UNIT_ssd_mux_0_0 |    12|
+|15    |      inst                |ssd_mux                           |    12|
++------+--------------------------+----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 783.934 ; gain = 493.840
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 783.934 ; gain = 168.609
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 783.934 ; gain = 493.840
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  LD => LDCE: 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+53 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 794.094 ; gain = 509.688
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Module_10/Module_10.runs/synth_1/ARITHMETIC_LOGIC_UNIT_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ARITHMETIC_LOGIC_UNIT_wrapper_utilization_synth.rpt -pb ARITHMETIC_LOGIC_UNIT_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 794.094 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  3 01:16:02 2018...

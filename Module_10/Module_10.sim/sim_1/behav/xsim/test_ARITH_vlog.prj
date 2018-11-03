@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Module_10.srcs/sources_1/new/ALU.v" \
+"../../../../Module_10.ip_user_files/bd/ARITH/ip/ARITH_ALU_0_0/sim/ARITH_ALU_0_0.v" \
+"../../../../Module_10.ip_user_files/bd/ARITH/sim/ARITH.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Nov  3 01:15:05 2018" VIVADOVERSION="2018.2">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="ARITHMETIC_LOGIC_UNIT" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="7" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_1" PORT="i_SW"/>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_SW"/>
+        <CONNECTION INSTANCE="Selector" PORT="Din"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_1" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_LD_0" SIGIS="undef" SIGNAME="External_Ports_i_LD_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_0" PORT="i_BTN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_LD_1" SIGIS="undef" SIGNAME="External_Ports_i_LD_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PIPO_1" PORT="i_BTN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_Status" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_o_Status">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ALU_0" PORT="o_Status"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="6" NAME="o_Cathodes" RIGHT="0" SIGIS="undef" SIGNAME="ssd_dec_0_o_Cathodes">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_dec_0" PORT="o_Cathodes"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_Anodes" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Anodes">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ssd_mux_0" PORT="o_Anodes"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/ALU_0" HWVERSION="1.0" INSTANCE="ALU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ALU" VLNV="xilinx.com:module_ref:ALU:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="ARITHMETIC_LOGIC_UNIT_ALU_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_A" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIPO_0" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i_B" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_1_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PIPO_1" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="i_Sel" RIGHT="0" SIGIS="undef" SIGNAME="Selector_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Selector" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MSB" PORT="Din"/>
+            <CONNECTION INSTANCE="LSB" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Status" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_o_Status">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Status"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/LSB" HWVERSION="1.0" INSTANCE="LSB" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="3"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="ARITHMETIC_LOGIC_UNIT_xlslice_1_1"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="LSB_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_4"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/MSB" HWVERSION="1.0" INSTANCE="MSB" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="7"/>
+        <PARAMETER NAME="DIN_TO" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="ARITHMETIC_LOGIC_UNIT_xlslice_1_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="MSB_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/PIPO_0" HWVERSION="1.0" INSTANCE="PIPO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PIPO" VLNV="xilinx.com:module_ref:PIPO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="BUS_MSB" VALUE="7"/>
+        <PARAMETER NAME="Component_Name" VALUE="ARITHMETIC_LOGIC_UNIT_PIPO_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_BTN" SIGIS="undef" SIGNAME="External_Ports_i_LD_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_LD_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="i_A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/PIPO_1" HWVERSION="1.0" INSTANCE="PIPO_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PIPO" VLNV="xilinx.com:module_ref:PIPO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="BUS_MSB" VALUE="7"/>
+        <PARAMETER NAME="Component_Name" VALUE="ARITHMETIC_LOGIC_UNIT_PIPO_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_SW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_BTN" SIGIS="undef" SIGNAME="External_Ports_i_LD_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_LD_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="PIPO_1_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="i_B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Selector" HWVERSION="1.0" INSTANCE="Selector" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="2"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="ARITHMETIC_LOGIC_UNIT_xlslice_0_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="Selector_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="i_Sel"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ssd_dec_0" HWVERSION="1.0" INSTANCE="ssd_dec_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_dec" VLNV="xilinx.com:module_ref:ssd_dec:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="ARITHMETIC_LOGIC_UNIT_ssd_dec_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_Num" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="o_Cathodes" RIGHT="0" SIGIS="undef" SIGNAME="ssd_dec_0_o_Cathodes">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Cathodes"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ssd_mux_0" HWVERSION="1.0" INSTANCE="ssd_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_mux" VLNV="xilinx.com:module_ref:ssd_mux:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="ARITHMETIC_LOGIC_UNIT_ssd_mux_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_2" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_3" RIGHT="0" SIGIS="undef" SIGNAME="MSB_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MSB" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_4" RIGHT="0" SIGIS="undef" SIGNAME="LSB_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LSB" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_dec_0" PORT="i_Num"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Anodes" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Anodes">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Anodes"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
