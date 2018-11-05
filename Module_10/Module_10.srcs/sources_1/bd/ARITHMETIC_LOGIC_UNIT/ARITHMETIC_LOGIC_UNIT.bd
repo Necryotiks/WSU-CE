@@ -275,21 +275,6 @@
         <spirit:internalPortReference spirit:componentRef="LSB" spirit:portRef="Din"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>xlslice_1_Dout</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="MSB" spirit:portRef="Dout"/>
-        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="i_Digit_3"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>xlslice_2_Dout</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="LSB" spirit:portRef="Dout"/>
-        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="i_Digit_4"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>ssd_mux_0_o_Out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="o_Out"/>
-        <spirit:internalPortReference spirit:componentRef="ssd_dec_0" spirit:portRef="i_Num"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>ALU_0_o_Status</spirit:name>
         <spirit:internalPortReference spirit:componentRef="ALU_0" spirit:portRef="o_Status"/>
         <spirit:externalPortReference spirit:portRef="o_Status"/>
@@ -303,6 +288,21 @@
         <spirit:name>ssd_mux_0_o_Anodes</spirit:name>
         <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="o_Anodes"/>
         <spirit:externalPortReference spirit:portRef="o_Anodes"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ssd_mux_0_o_Out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="o_Out"/>
+        <spirit:internalPortReference spirit:componentRef="ssd_dec_0" spirit:portRef="i_Num"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>MSB_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="MSB" spirit:portRef="Dout"/>
+        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="i_Digit_3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>LSB_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="LSB" spirit:portRef="Dout"/>
+        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="i_Digit_4"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

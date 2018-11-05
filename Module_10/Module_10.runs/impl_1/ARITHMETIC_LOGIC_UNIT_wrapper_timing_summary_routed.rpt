@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Nov  3 01:17:18 2018
+| Date         : Sun Nov  4 16:32:31 2018
 | Host         : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file ARITHMETIC_LOGIC_UNIT_wrapper_timing_summary_routed.rpt -pb ARITHMETIC_LOGIC_UNIT_wrapper_timing_summary_routed.pb -rpx ARITHMETIC_LOGIC_UNIT_wrapper_timing_summary_routed.rpx -warn_on_violation
 | Design       : ARITHMETIC_LOGIC_UNIT_wrapper
@@ -52,9 +52,11 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 8 register/latch pins with no clock driven by root clock pin: i_SW[1] (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: i_SW[0] (HIGH)
 
- There are 8 register/latch pins with no clock driven by root clock pin: i_SW[2] (HIGH)
+ There are 9 register/latch pins with no clock driven by root clock pin: i_SW[1] (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: i_SW[2] (HIGH)
 
 
 2. checking constant_clock
@@ -69,7 +71,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 8 pins that are not constrained for maximum delay. (HIGH)
+ There are 9 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -83,7 +85,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 11 ports with no output delay specified. (HIGH)
+ There are 15 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -128,7 +130,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     20.027        0.000                      0                    9        0.452        0.000                      0                    9        3.500        0.000                       0                    26  
+     20.140        0.000                      0                   25        0.252        0.000                      0                   25        3.500        0.000                       0                    42  
 
 
 All user specified timing constraints are met.
@@ -151,7 +153,7 @@ sys_clk_pin  {0.000 4.000}      23.000          43.478
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-sys_clk_pin        20.027        0.000                      0                    9        0.452        0.000                      0                    9        3.500        0.000                       0                    26  
+sys_clk_pin        20.140        0.000                      0                   25        0.252        0.000                      0                   25        3.500        0.000                       0                    42  
 
 
 ------------------------------------------------------------------------------------------------
@@ -182,28 +184,28 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
-Setup :            0  Failing Endpoints,  Worst Slack       20.027ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.452ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack       20.140ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.252ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        3.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             20.027ns  (required time - arrival time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
+Slack (MET) :             20.140ns  (required time - arrival time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.945ns  (logic 0.766ns (26.007%)  route 2.179ns (73.993%))
+  Data Path Delay:        2.834ns  (logic 0.704ns (24.843%)  route 2.130ns (75.157%))
   Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.922ns = ( 27.922 - 23.000 ) 
-    Source Clock Delay      (SCD):    5.373ns
-    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.937ns = ( 27.937 - 23.000 ) 
+    Source Clock Delay      (SCD):    5.391ns
+    Clock Pessimism Removal (CPR):    0.432ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -219,75 +221,16 @@ Slack (MET) :             20.027ns  (required time - arrival time)
     H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.739     5.373    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
+                         net (fo=41, routed)          1.757     5.391    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y58         FDRE (Prop_fdre_C_Q)         0.518     5.891 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/Q
-                         net (fo=10, routed)          1.107     6.998    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I2_O)        0.124     7.122 f  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[3]_INST_0/O
-                         net (fo=7, routed)           1.073     8.195    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[3]
-    SLICE_X43Y52         LUT4 (Prop_lut4_I0_O)        0.124     8.319 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[4]_i_1/O
-                         net (fo=1, routed)           0.000     8.319    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[4]
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     23.000    23.000 r  
-    H16                                               0.000    23.000 r  i_CLK (IN)
-                         net (fo=0)                   0.000    23.000    i_CLK
-    H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
-                         net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    27.922    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]/C
-                         clock pessimism              0.429    28.350    
-                         clock uncertainty           -0.035    28.315    
-    SLICE_X43Y52         FDRE (Setup_fdre_C_D)        0.031    28.346    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]
-  -------------------------------------------------------------------
-                         required time                         28.346    
-                         arrival time                          -8.319    
-  -------------------------------------------------------------------
-                         slack                                 20.027    
-
-Slack (MET) :             20.027ns  (required time - arrival time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.943ns  (logic 0.766ns (26.025%)  route 2.177ns (73.975%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.922ns = ( 27.922 - 23.000 ) 
-    Source Clock Delay      (SCD):    5.373ns
-    Clock Pessimism Removal (CPR):    0.429ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    H16                                               0.000     0.000 r  i_CLK (IN)
-                         net (fo=0)                   0.000     0.000    i_CLK
-    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.739     5.373    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X42Y58         FDRE (Prop_fdre_C_Q)         0.518     5.891 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/Q
-                         net (fo=10, routed)          1.107     6.998    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I2_O)        0.124     7.122 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[3]_INST_0/O
-                         net (fo=7, routed)           1.071     8.193    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[3]
-    SLICE_X43Y52         LUT4 (Prop_lut4_I0_O)        0.124     8.317 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[2]_i_1/O
-                         net (fo=1, routed)           0.000     8.317    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[2]
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]/D
+    SLICE_X41Y46         FDRE (Prop_fdre_C_Q)         0.456     5.847 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/Q
+                         net (fo=9, routed)           1.124     6.972    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/p_0_in[1]
+    SLICE_X40Y42         LUT4 (Prop_lut4_I1_O)        0.124     7.096 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[0]_INST_0/O
+                         net (fo=7, routed)           1.005     8.101    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[0]
+    SLICE_X40Y46         LUT4 (Prop_lut4_I3_O)        0.124     8.225 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[4]_i_1/O
+                         net (fo=1, routed)           0.000     8.225    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[4]
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -297,266 +240,384 @@ Slack (MET) :             20.027ns  (required time - arrival time)
     H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    27.922    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]/C
-                         clock pessimism              0.429    28.350    
-                         clock uncertainty           -0.035    28.315    
-    SLICE_X43Y52         FDRE (Setup_fdre_C_D)        0.029    28.344    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]
+                         net (fo=41, routed)          1.579    27.937    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]/C
+                         clock pessimism              0.432    28.369    
+                         clock uncertainty           -0.035    28.334    
+    SLICE_X40Y46         FDRE (Setup_fdre_C_D)        0.031    28.365    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]
   -------------------------------------------------------------------
-                         required time                         28.344    
-                         arrival time                          -8.317    
+                         required time                         28.365    
+                         arrival time                          -8.225    
   -------------------------------------------------------------------
-                         slack                                 20.027    
+                         slack                                 20.140    
 
-Slack (MET) :             20.039ns  (required time - arrival time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.930ns  (logic 0.766ns (26.139%)  route 2.164ns (73.861%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.921ns = ( 27.921 - 23.000 ) 
-    Source Clock Delay      (SCD):    5.373ns
-    Clock Pessimism Removal (CPR):    0.429ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    H16                                               0.000     0.000 r  i_CLK (IN)
-                         net (fo=0)                   0.000     0.000    i_CLK
-    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.739     5.373    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X42Y58         FDRE (Prop_fdre_C_Q)         0.518     5.891 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/Q
-                         net (fo=10, routed)          1.098     6.989    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I2_O)        0.124     7.113 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[1]_INST_0/O
-                         net (fo=7, routed)           1.067     8.180    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[1]
-    SLICE_X43Y53         LUT4 (Prop_lut4_I3_O)        0.124     8.304 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[0]_i_1/O
-                         net (fo=1, routed)           0.000     8.304    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[0]
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     23.000    23.000 r  
-    H16                                               0.000    23.000 r  i_CLK (IN)
-                         net (fo=0)                   0.000    23.000    i_CLK
-    H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
-                         net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.563    27.921    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]/C
-                         clock pessimism              0.429    28.349    
-                         clock uncertainty           -0.035    28.314    
-    SLICE_X43Y53         FDRE (Setup_fdre_C_D)        0.029    28.343    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]
-  -------------------------------------------------------------------
-                         required time                         28.343    
-                         arrival time                          -8.304    
-  -------------------------------------------------------------------
-                         slack                                 20.039    
-
-Slack (MET) :             20.043ns  (required time - arrival time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.973ns  (logic 0.794ns (26.704%)  route 2.179ns (73.296%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.922ns = ( 27.922 - 23.000 ) 
-    Source Clock Delay      (SCD):    5.373ns
-    Clock Pessimism Removal (CPR):    0.429ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    H16                                               0.000     0.000 r  i_CLK (IN)
-                         net (fo=0)                   0.000     0.000    i_CLK
-    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.739     5.373    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X42Y58         FDRE (Prop_fdre_C_Q)         0.518     5.891 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/Q
-                         net (fo=10, routed)          1.107     6.998    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I2_O)        0.124     7.122 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[3]_INST_0/O
-                         net (fo=7, routed)           1.073     8.195    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[3]
-    SLICE_X43Y52         LUT4 (Prop_lut4_I0_O)        0.152     8.347 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[5]_i_1/O
-                         net (fo=1, routed)           0.000     8.347    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[5]
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     23.000    23.000 r  
-    H16                                               0.000    23.000 r  i_CLK (IN)
-                         net (fo=0)                   0.000    23.000    i_CLK
-    H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
-                         net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    27.922    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]/C
-                         clock pessimism              0.429    28.350    
-                         clock uncertainty           -0.035    28.315    
-    SLICE_X43Y52         FDRE (Setup_fdre_C_D)        0.075    28.390    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]
-  -------------------------------------------------------------------
-                         required time                         28.390    
-                         arrival time                          -8.347    
-  -------------------------------------------------------------------
-                         slack                                 20.043    
-
-Slack (MET) :             20.045ns  (required time - arrival time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.971ns  (logic 0.794ns (26.722%)  route 2.177ns (73.278%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.922ns = ( 27.922 - 23.000 ) 
-    Source Clock Delay      (SCD):    5.373ns
-    Clock Pessimism Removal (CPR):    0.429ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    H16                                               0.000     0.000 r  i_CLK (IN)
-                         net (fo=0)                   0.000     0.000    i_CLK
-    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.739     5.373    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X42Y58         FDRE (Prop_fdre_C_Q)         0.518     5.891 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/Q
-                         net (fo=10, routed)          1.107     6.998    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I2_O)        0.124     7.122 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[3]_INST_0/O
-                         net (fo=7, routed)           1.071     8.193    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[3]
-    SLICE_X43Y52         LUT4 (Prop_lut4_I0_O)        0.152     8.345 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[3]_i_1/O
-                         net (fo=1, routed)           0.000     8.345    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[3]
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     23.000    23.000 r  
-    H16                                               0.000    23.000 r  i_CLK (IN)
-                         net (fo=0)                   0.000    23.000    i_CLK
-    H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
-                         net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    27.922    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]/C
-                         clock pessimism              0.429    28.350    
-                         clock uncertainty           -0.035    28.315    
-    SLICE_X43Y52         FDRE (Setup_fdre_C_D)        0.075    28.390    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]
-  -------------------------------------------------------------------
-                         required time                         28.390    
-                         arrival time                          -8.345    
-  -------------------------------------------------------------------
-                         slack                                 20.045    
-
-Slack (MET) :             20.057ns  (required time - arrival time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.958ns  (logic 0.794ns (26.838%)  route 2.164ns (73.162%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.921ns = ( 27.921 - 23.000 ) 
-    Source Clock Delay      (SCD):    5.373ns
-    Clock Pessimism Removal (CPR):    0.429ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    H16                                               0.000     0.000 r  i_CLK (IN)
-                         net (fo=0)                   0.000     0.000    i_CLK
-    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.739     5.373    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X42Y58         FDRE (Prop_fdre_C_Q)         0.518     5.891 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/Q
-                         net (fo=10, routed)          1.098     6.989    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I2_O)        0.124     7.113 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[1]_INST_0/O
-                         net (fo=7, routed)           1.067     8.180    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[1]
-    SLICE_X43Y53         LUT4 (Prop_lut4_I2_O)        0.152     8.332 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[1]_i_1/O
-                         net (fo=1, routed)           0.000     8.332    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[1]
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                     23.000    23.000 r  
-    H16                                               0.000    23.000 r  i_CLK (IN)
-                         net (fo=0)                   0.000    23.000    i_CLK
-    H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
-                         net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.563    27.921    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]/C
-                         clock pessimism              0.429    28.349    
-                         clock uncertainty           -0.035    28.314    
-    SLICE_X43Y53         FDRE (Setup_fdre_C_D)        0.075    28.389    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]
-  -------------------------------------------------------------------
-                         required time                         28.389    
-                         arrival time                          -8.332    
-  -------------------------------------------------------------------
-                         slack                                 20.057    
-
-Slack (MET) :             20.196ns  (required time - arrival time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
+Slack (MET) :             20.148ns  (required time - arrival time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.775ns  (logic 0.766ns (27.601%)  route 2.009ns (72.399%))
+  Data Path Delay:        2.827ns  (logic 0.704ns (24.903%)  route 2.123ns (75.096%))
   Logic Levels:           2  (LUT4=2)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.937ns = ( 27.937 - 23.000 ) 
+    Source Clock Delay      (SCD):    5.391ns
+    Clock Pessimism Removal (CPR):    0.432ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000     0.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.757     5.391    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y46         FDRE (Prop_fdre_C_Q)         0.456     5.847 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/Q
+                         net (fo=9, routed)           1.124     6.972    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/p_0_in[1]
+    SLICE_X40Y42         LUT4 (Prop_lut4_I1_O)        0.124     7.096 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[0]_INST_0/O
+                         net (fo=7, routed)           0.999     8.094    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[0]
+    SLICE_X40Y46         LUT4 (Prop_lut4_I1_O)        0.124     8.218 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[6]_i_1/O
+                         net (fo=1, routed)           0.000     8.218    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[6]
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     23.000    23.000 r  
+    H16                                               0.000    23.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000    23.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.579    27.937    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]/C
+                         clock pessimism              0.432    28.369    
+                         clock uncertainty           -0.035    28.334    
+    SLICE_X40Y46         FDRE (Setup_fdre_C_D)        0.032    28.366    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]
+  -------------------------------------------------------------------
+                         required time                         28.366    
+                         arrival time                          -8.218    
+  -------------------------------------------------------------------
+                         slack                                 20.148    
+
+Slack (MET) :             20.155ns  (required time - arrival time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        2.863ns  (logic 0.733ns (25.605%)  route 2.130ns (74.395%))
+  Logic Levels:           2  (LUT4=2)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.937ns = ( 27.937 - 23.000 ) 
+    Source Clock Delay      (SCD):    5.391ns
+    Clock Pessimism Removal (CPR):    0.432ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000     0.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.757     5.391    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y46         FDRE (Prop_fdre_C_Q)         0.456     5.847 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/Q
+                         net (fo=9, routed)           1.124     6.972    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/p_0_in[1]
+    SLICE_X40Y42         LUT4 (Prop_lut4_I1_O)        0.124     7.096 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[0]_INST_0/O
+                         net (fo=7, routed)           1.005     8.101    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[0]
+    SLICE_X40Y46         LUT4 (Prop_lut4_I2_O)        0.153     8.254 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[5]_i_1/O
+                         net (fo=1, routed)           0.000     8.254    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[5]
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     23.000    23.000 r  
+    H16                                               0.000    23.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000    23.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.579    27.937    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]/C
+                         clock pessimism              0.432    28.369    
+                         clock uncertainty           -0.035    28.334    
+    SLICE_X40Y46         FDRE (Setup_fdre_C_D)        0.075    28.409    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]
+  -------------------------------------------------------------------
+                         required time                         28.409    
+                         arrival time                          -8.254    
+  -------------------------------------------------------------------
+                         slack                                 20.155    
+
+Slack (MET) :             20.184ns  (required time - arrival time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        2.790ns  (logic 0.704ns (25.236%)  route 2.086ns (74.764%))
+  Logic Levels:           2  (LUT4=2)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.937ns = ( 27.937 - 23.000 ) 
+    Source Clock Delay      (SCD):    5.391ns
+    Clock Pessimism Removal (CPR):    0.432ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000     0.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.757     5.391    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y46         FDRE (Prop_fdre_C_Q)         0.456     5.847 f  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/Q
+                         net (fo=9, routed)           1.124     6.972    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/p_0_in[1]
+    SLICE_X40Y42         LUT4 (Prop_lut4_I1_O)        0.124     7.096 f  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[0]_INST_0/O
+                         net (fo=7, routed)           0.961     8.057    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[0]
+    SLICE_X40Y46         LUT4 (Prop_lut4_I1_O)        0.124     8.181 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[2]_i_1/O
+                         net (fo=1, routed)           0.000     8.181    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[2]
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     23.000    23.000 r  
+    H16                                               0.000    23.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000    23.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.579    27.937    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]/C
+                         clock pessimism              0.432    28.369    
+                         clock uncertainty           -0.035    28.334    
+    SLICE_X40Y46         FDRE (Setup_fdre_C_D)        0.031    28.365    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]
+  -------------------------------------------------------------------
+                         required time                         28.365    
+                         arrival time                          -8.181    
+  -------------------------------------------------------------------
+                         slack                                 20.184    
+
+Slack (MET) :             20.200ns  (required time - arrival time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        2.818ns  (logic 0.732ns (25.979%)  route 2.086ns (74.021%))
+  Logic Levels:           2  (LUT4=2)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.937ns = ( 27.937 - 23.000 ) 
+    Source Clock Delay      (SCD):    5.391ns
+    Clock Pessimism Removal (CPR):    0.432ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000     0.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.757     5.391    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y46         FDRE (Prop_fdre_C_Q)         0.456     5.847 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/Q
+                         net (fo=9, routed)           1.124     6.972    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/p_0_in[1]
+    SLICE_X40Y42         LUT4 (Prop_lut4_I1_O)        0.124     7.096 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[0]_INST_0/O
+                         net (fo=7, routed)           0.961     8.057    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[0]
+    SLICE_X40Y46         LUT4 (Prop_lut4_I2_O)        0.152     8.209 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[3]_i_1/O
+                         net (fo=1, routed)           0.000     8.209    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[3]
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     23.000    23.000 r  
+    H16                                               0.000    23.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000    23.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.579    27.937    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]/C
+                         clock pessimism              0.432    28.369    
+                         clock uncertainty           -0.035    28.334    
+    SLICE_X40Y46         FDRE (Setup_fdre_C_D)        0.075    28.409    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]
+  -------------------------------------------------------------------
+                         required time                         28.409    
+                         arrival time                          -8.209    
+  -------------------------------------------------------------------
+                         slack                                 20.200    
+
+Slack (MET) :             20.296ns  (required time - arrival time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        2.676ns  (logic 0.704ns (26.308%)  route 1.972ns (73.692%))
+  Logic Levels:           2  (LUT4=2)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.937ns = ( 27.937 - 23.000 ) 
+    Source Clock Delay      (SCD):    5.391ns
+    Clock Pessimism Removal (CPR):    0.432ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000     0.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.757     5.391    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y46         FDRE (Prop_fdre_C_Q)         0.456     5.847 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]/Q
+                         net (fo=9, routed)           0.984     6.831    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/p_0_in[0]
+    SLICE_X40Y42         LUT4 (Prop_lut4_I2_O)        0.124     6.955 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[2]_INST_0/O
+                         net (fo=7, routed)           0.988     7.943    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[2]
+    SLICE_X40Y46         LUT4 (Prop_lut4_I1_O)        0.124     8.067 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[0]_i_1/O
+                         net (fo=1, routed)           0.000     8.067    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[0]
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     23.000    23.000 r  
+    H16                                               0.000    23.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000    23.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.579    27.937    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]/C
+                         clock pessimism              0.432    28.369    
+                         clock uncertainty           -0.035    28.334    
+    SLICE_X40Y46         FDRE (Setup_fdre_C_D)        0.029    28.363    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]
+  -------------------------------------------------------------------
+                         required time                         28.363    
+                         arrival time                          -8.067    
+  -------------------------------------------------------------------
+                         slack                                 20.296    
+
+Slack (MET) :             20.314ns  (required time - arrival time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        2.704ns  (logic 0.732ns (27.071%)  route 1.972ns (72.929%))
+  Logic Levels:           2  (LUT4=2)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.937ns = ( 27.937 - 23.000 ) 
+    Source Clock Delay      (SCD):    5.391ns
+    Clock Pessimism Removal (CPR):    0.432ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000     0.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.757     5.391    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y46         FDRE (Prop_fdre_C_Q)         0.456     5.847 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]/Q
+                         net (fo=9, routed)           0.984     6.831    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/p_0_in[0]
+    SLICE_X40Y42         LUT4 (Prop_lut4_I2_O)        0.124     6.955 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[2]_INST_0/O
+                         net (fo=7, routed)           0.988     7.943    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[2]
+    SLICE_X40Y46         LUT4 (Prop_lut4_I1_O)        0.152     8.095 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[1]_i_1/O
+                         net (fo=1, routed)           0.000     8.095    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[1]
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     23.000    23.000 r  
+    H16                                               0.000    23.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000    23.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          1.579    27.937    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
+    SLICE_X40Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]/C
+                         clock pessimism              0.432    28.369    
+                         clock uncertainty           -0.035    28.334    
+    SLICE_X40Y46         FDRE (Setup_fdre_C_D)        0.075    28.409    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]
+  -------------------------------------------------------------------
+                         required time                         28.409    
+                         arrival time                          -8.095    
+  -------------------------------------------------------------------
+                         slack                                 20.314    
+
+Slack (MET) :             20.716ns  (required time - arrival time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        2.286ns  (logic 1.806ns (78.986%)  route 0.480ns (21.014%))
+  Logic Levels:           5  (CARRY4=5)
   Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.921ns = ( 27.921 - 23.000 ) 
-    Source Clock Delay      (SCD):    5.373ns
+    Destination Clock Delay (DCD):    4.937ns = ( 27.937 - 23.000 ) 
+    Source Clock Delay      (SCD):    5.390ns
     Clock Pessimism Removal (CPR):    0.429ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -573,16 +634,27 @@ Slack (MET) :             20.196ns  (required time - arrival time)
     H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.739     5.373    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
+                         net (fo=41, routed)          1.756     5.390    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y42         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y58         FDRE (Prop_fdre_C_Q)         0.518     5.891 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/Q
-                         net (fo=10, routed)          1.107     6.998    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I2_O)        0.124     7.122 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[3]_INST_0/O
-                         net (fo=7, routed)           0.903     8.024    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[3]
-    SLICE_X43Y53         LUT4 (Prop_lut4_I0_O)        0.124     8.148 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[6]_i_1/O
-                         net (fo=1, routed)           0.000     8.148    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[6]
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]/D
+    SLICE_X41Y42         FDRE (Prop_fdre_C_Q)         0.456     5.846 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[1]/Q
+                         net (fo=1, routed)           0.480     6.327    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[1]
+    SLICE_X41Y42         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     7.001 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.001    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[0]_i_1_n_0
+    SLICE_X41Y43         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.115 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.115    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]_i_1_n_0
+    SLICE_X41Y44         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.229 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.229    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1_n_0
+    SLICE_X41Y45         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.343 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.343    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1_n_0
+    SLICE_X41Y46         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     7.677 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]_i_1/O[1]
+                         net (fo=1, routed)           0.000     7.677    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]_i_1_n_6
+    SLICE_X41Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -592,31 +664,31 @@ Slack (MET) :             20.196ns  (required time - arrival time)
     H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.563    27.921    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]/C
-                         clock pessimism              0.429    28.349    
-                         clock uncertainty           -0.035    28.314    
-    SLICE_X43Y53         FDRE (Setup_fdre_C_D)        0.031    28.345    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]
+                         net (fo=41, routed)          1.579    27.937    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]/C
+                         clock pessimism              0.429    28.366    
+                         clock uncertainty           -0.035    28.331    
+    SLICE_X41Y46         FDRE (Setup_fdre_C_D)        0.062    28.393    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[17]
   -------------------------------------------------------------------
-                         required time                         28.345    
-                         arrival time                          -8.148    
+                         required time                         28.393    
+                         arrival time                          -7.677    
   -------------------------------------------------------------------
-                         slack                                 20.196    
+                         slack                                 20.716    
 
-Slack (MET) :             20.917ns  (required time - arrival time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+Slack (MET) :             20.827ns  (required time - arrival time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/D
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        2.125ns  (logic 0.642ns (30.211%)  route 1.483ns (69.789%))
-  Logic Levels:           1  (LUT2=1)
-  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.921ns = ( 27.921 - 23.000 ) 
-    Source Clock Delay      (SCD):    5.374ns
-    Clock Pessimism Removal (CPR):    0.454ns
+  Data Path Delay:        2.175ns  (logic 1.695ns (77.914%)  route 0.480ns (22.086%))
+  Logic Levels:           5  (CARRY4=5)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.937ns = ( 27.937 - 23.000 ) 
+    Source Clock Delay      (SCD):    5.390ns
+    Clock Pessimism Removal (CPR):    0.429ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -632,14 +704,27 @@ Slack (MET) :             20.917ns  (required time - arrival time)
     H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.740     5.374    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+                         net (fo=41, routed)          1.756     5.390    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y42         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y56         FDRE (Prop_fdre_C_Q)         0.518     5.892 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/Q
-                         net (fo=9, routed)           1.483     7.375    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[1]
-    SLICE_X42Y56         LUT2 (Prop_lut2_I1_O)        0.124     7.499 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[1]_i_1/O
-                         net (fo=1, routed)           0.000     7.499    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/p_0_in1_in[1]
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/D
+    SLICE_X41Y42         FDRE (Prop_fdre_C_Q)         0.456     5.846 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[1]/Q
+                         net (fo=1, routed)           0.480     6.327    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[1]
+    SLICE_X41Y42         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     7.001 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.001    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[0]_i_1_n_0
+    SLICE_X41Y43         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.115 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.115    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]_i_1_n_0
+    SLICE_X41Y44         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.229 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.229    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1_n_0
+    SLICE_X41Y45         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.343 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.343    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1_n_0
+    SLICE_X41Y46         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223     7.566 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]_i_1/O[0]
+                         net (fo=1, routed)           0.000     7.566    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]_i_1_n_7
+    SLICE_X41Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -649,31 +734,31 @@ Slack (MET) :             20.917ns  (required time - arrival time)
     H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.563    27.921    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
-                         clock pessimism              0.454    28.374    
-                         clock uncertainty           -0.035    28.339    
-    SLICE_X42Y56         FDRE (Setup_fdre_C_D)        0.077    28.416    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]
+                         net (fo=41, routed)          1.579    27.937    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y46         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]/C
+                         clock pessimism              0.429    28.366    
+                         clock uncertainty           -0.035    28.331    
+    SLICE_X41Y46         FDRE (Setup_fdre_C_D)        0.062    28.393    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[16]
   -------------------------------------------------------------------
-                         required time                         28.416    
-                         arrival time                          -7.499    
+                         required time                         28.393    
+                         arrival time                          -7.566    
   -------------------------------------------------------------------
-                         slack                                 20.917    
+                         slack                                 20.827    
 
-Slack (MET) :             21.370ns  (required time - arrival time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
+Slack (MET) :             20.830ns  (required time - arrival time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/D
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[13]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            23.000ns  (sys_clk_pin rise@23.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        1.563ns  (logic 0.642ns (41.065%)  route 0.921ns (58.935%))
-  Logic Levels:           1  (LUT1=1)
-  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.920ns = ( 27.920 - 23.000 ) 
-    Source Clock Delay      (SCD):    5.373ns
-    Clock Pessimism Removal (CPR):    0.454ns
+  Data Path Delay:        2.172ns  (logic 1.692ns (77.883%)  route 0.480ns (22.117%))
+  Logic Levels:           4  (CARRY4=4)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.937ns = ( 27.937 - 23.000 ) 
+    Source Clock Delay      (SCD):    5.390ns
+    Clock Pessimism Removal (CPR):    0.429ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -689,14 +774,24 @@ Slack (MET) :             21.370ns  (required time - arrival time)
     H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           2.076     3.533    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.739     5.373    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
+                         net (fo=41, routed)          1.756     5.390    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y42         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y58         FDRE (Prop_fdre_C_Q)         0.518     5.891 f  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/Q
-                         net (fo=10, routed)          0.542     6.434    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]
-    SLICE_X42Y58         LUT1 (Prop_lut1_I0_O)        0.124     6.558 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]_i_1/O
-                         net (fo=1, routed)           0.379     6.937    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/p_0_in1_in[0]
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/D
+    SLICE_X41Y42         FDRE (Prop_fdre_C_Q)         0.456     5.846 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[1]/Q
+                         net (fo=1, routed)           0.480     6.327    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[1]
+    SLICE_X41Y42         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     7.001 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.001    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[0]_i_1_n_0
+    SLICE_X41Y43         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.115 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.115    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]_i_1_n_0
+    SLICE_X41Y44         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.229 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.229    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1_n_0
+    SLICE_X41Y45         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     7.563 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1/O[1]
+                         net (fo=1, routed)           0.000     7.563    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1_n_6
+    SLICE_X41Y45         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[13]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -706,16 +801,16 @@ Slack (MET) :             21.370ns  (required time - arrival time)
     H16                  IBUF (Prop_ibuf_I_O)         1.387    24.387 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           1.880    26.267    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    26.358 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.562    27.920    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-                         clock pessimism              0.454    28.373    
-                         clock uncertainty           -0.035    28.338    
-    SLICE_X42Y58         FDRE (Setup_fdre_C_D)       -0.031    28.307    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]
+                         net (fo=41, routed)          1.579    27.937    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y45         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[13]/C
+                         clock pessimism              0.429    28.366    
+                         clock uncertainty           -0.035    28.331    
+    SLICE_X41Y45         FDRE (Setup_fdre_C_D)        0.062    28.393    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[13]
   -------------------------------------------------------------------
-                         required time                         28.307    
-                         arrival time                          -6.937    
+                         required time                         28.393    
+                         arrival time                          -7.563    
   -------------------------------------------------------------------
-                         slack                                 21.370    
+                         slack                                 20.830    
 
 
 
@@ -723,20 +818,20 @@ Slack (MET) :             21.370ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.452ns  (arrival time - required time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[11]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/D
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[11]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.511ns  (logic 0.209ns (40.872%)  route 0.302ns (59.128%))
-  Logic Levels:           1  (LUT1=1)
+  Data Path Delay:        0.357ns  (logic 0.249ns (69.714%)  route 0.108ns (30.286%))
+  Logic Levels:           1  (CARRY4=1)
   Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.982ns
-    Source Clock Delay      (SCD):    1.465ns
-    Clock Pessimism Removal (CPR):    0.517ns
+    Destination Clock Delay (DCD):    1.988ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -747,14 +842,15 @@ Slack (MET) :             0.452ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.627     0.852    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.587     1.465    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
+                         net (fo=41, routed)          0.594     1.472    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y44         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[11]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y58         FDRE (Prop_fdre_C_Q)         0.164     1.629 f  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/Q
-                         net (fo=10, routed)          0.186     1.815    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]
-    SLICE_X42Y58         LUT1 (Prop_lut1_I0_O)        0.045     1.860 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]_i_1/O
-                         net (fo=1, routed)           0.116     1.976    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/p_0_in1_in[0]
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/D
+    SLICE_X41Y44         FDRE (Prop_fdre_C_Q)         0.141     1.613 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[11]/Q
+                         net (fo=1, routed)           0.108     1.721    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[11]
+    SLICE_X41Y44         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     1.829 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.829    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1_n_4
+    SLICE_X41Y44         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[11]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -764,30 +860,30 @@ Slack (MET) :             0.452ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.096    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.857     1.982    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
-                         clock pessimism             -0.517     1.465    
-    SLICE_X42Y58         FDRE (Hold_fdre_C_D)         0.059     1.524    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]
+                         net (fo=41, routed)          0.863     1.988    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y44         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[11]/C
+                         clock pessimism             -0.516     1.472    
+    SLICE_X41Y44         FDRE (Hold_fdre_C_D)         0.105     1.577    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[11]
   -------------------------------------------------------------------
-                         required time                         -1.524    
-                         arrival time                           1.976    
+                         required time                         -1.577    
+                         arrival time                           1.829    
   -------------------------------------------------------------------
-                         slack                                  0.452    
+                         slack                                  0.252    
 
-Slack (MET) :             0.534ns  (arrival time - required time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[15]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]/D
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[15]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.642ns  (logic 0.254ns (39.534%)  route 0.388ns (60.466%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.983ns
-    Source Clock Delay      (SCD):    1.466ns
-    Clock Pessimism Removal (CPR):    0.501ns
+  Data Path Delay:        0.357ns  (logic 0.249ns (69.714%)  route 0.108ns (30.286%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.988ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -798,16 +894,15 @@ Slack (MET) :             0.534ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.627     0.852    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.588     1.466    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+                         net (fo=41, routed)          0.594     1.472    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y45         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y56         FDRE (Prop_fdre_C_Q)         0.164     1.630 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/Q
-                         net (fo=9, routed)           0.255     1.885    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[1]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I1_O)        0.045     1.930 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[1]_INST_0/O
-                         net (fo=7, routed)           0.133     2.064    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[1]
-    SLICE_X43Y53         LUT4 (Prop_lut4_I3_O)        0.045     2.109 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[6]_i_1/O
-                         net (fo=1, routed)           0.000     2.109    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[6]
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]/D
+    SLICE_X41Y45         FDRE (Prop_fdre_C_Q)         0.141     1.613 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[15]/Q
+                         net (fo=1, routed)           0.108     1.721    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[15]
+    SLICE_X41Y45         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     1.829 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.829    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1_n_4
+    SLICE_X41Y45         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[15]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -817,30 +912,30 @@ Slack (MET) :             0.534ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.096    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.858     1.983    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]/C
-                         clock pessimism             -0.501     1.482    
-    SLICE_X43Y53         FDRE (Hold_fdre_C_D)         0.092     1.574    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]
+                         net (fo=41, routed)          0.863     1.988    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y45         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[15]/C
+                         clock pessimism             -0.516     1.472    
+    SLICE_X41Y45         FDRE (Hold_fdre_C_D)         0.105     1.577    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[15]
   -------------------------------------------------------------------
-                         required time                         -1.574    
-                         arrival time                           2.109    
+                         required time                         -1.577    
+                         arrival time                           1.829    
   -------------------------------------------------------------------
-                         slack                                  0.534    
+                         slack                                  0.252    
 
-Slack (MET) :             0.562ns  (arrival time - required time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/D
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[3]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.699ns  (logic 0.209ns (29.911%)  route 0.490ns (70.089%))
-  Logic Levels:           1  (LUT2=1)
-  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.983ns
-    Source Clock Delay      (SCD):    1.465ns
-    Clock Pessimism Removal (CPR):    0.501ns
+  Data Path Delay:        0.357ns  (logic 0.249ns (69.714%)  route 0.108ns (30.286%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.987ns
+    Source Clock Delay      (SCD):    1.471ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -851,14 +946,15 @@ Slack (MET) :             0.562ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.627     0.852    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.587     1.465    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y58         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/C
+                         net (fo=41, routed)          0.593     1.471    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y42         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y58         FDRE (Prop_fdre_C_Q)         0.164     1.629 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[0]/Q
-                         net (fo=10, routed)          0.490     2.119    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[0]
-    SLICE_X42Y56         LUT2 (Prop_lut2_I0_O)        0.045     2.164 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[1]_i_1/O
-                         net (fo=1, routed)           0.000     2.164    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/p_0_in1_in[1]
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/D
+    SLICE_X41Y42         FDRE (Prop_fdre_C_Q)         0.141     1.612 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[3]/Q
+                         net (fo=1, routed)           0.108     1.720    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[3]
+    SLICE_X41Y42         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     1.828 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[0]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.828    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[0]_i_1_n_4
+    SLICE_X41Y42         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -868,30 +964,30 @@ Slack (MET) :             0.562ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.096    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.858     1.983    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
-                         clock pessimism             -0.501     1.482    
-    SLICE_X42Y56         FDRE (Hold_fdre_C_D)         0.120     1.602    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]
+                         net (fo=41, routed)          0.862     1.987    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y42         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[3]/C
+                         clock pessimism             -0.516     1.471    
+    SLICE_X41Y42         FDRE (Hold_fdre_C_D)         0.105     1.576    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[3]
   -------------------------------------------------------------------
-                         required time                         -1.602    
-                         arrival time                           2.164    
+                         required time                         -1.576    
+                         arrival time                           1.828    
   -------------------------------------------------------------------
-                         slack                                  0.562    
+                         slack                                  0.252    
 
-Slack (MET) :             0.594ns  (arrival time - required time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[7]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]/D
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[7]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.718ns  (logic 0.254ns (35.385%)  route 0.464ns (64.615%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.984ns
-    Source Clock Delay      (SCD):    1.466ns
-    Clock Pessimism Removal (CPR):    0.501ns
+  Data Path Delay:        0.357ns  (logic 0.249ns (69.714%)  route 0.108ns (30.286%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.988ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -902,16 +998,15 @@ Slack (MET) :             0.594ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.627     0.852    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.588     1.466    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+                         net (fo=41, routed)          0.594     1.472    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y43         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y56         FDRE (Prop_fdre_C_Q)         0.164     1.630 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/Q
-                         net (fo=9, routed)           0.255     1.885    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[1]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I1_O)        0.045     1.930 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[1]_INST_0/O
-                         net (fo=7, routed)           0.209     2.139    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[1]
-    SLICE_X43Y52         LUT4 (Prop_lut4_I3_O)        0.045     2.184 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[5]_i_1/O
-                         net (fo=1, routed)           0.000     2.184    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[5]
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]/D
+    SLICE_X41Y43         FDRE (Prop_fdre_C_Q)         0.141     1.613 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[7]/Q
+                         net (fo=1, routed)           0.108     1.721    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[7]
+    SLICE_X41Y43         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     1.829 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.829    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]_i_1_n_4
+    SLICE_X41Y43         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -921,30 +1016,30 @@ Slack (MET) :             0.594ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.096    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.859     1.984    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]/C
-                         clock pessimism             -0.501     1.483    
-    SLICE_X43Y52         FDRE (Hold_fdre_C_D)         0.107     1.590    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]
+                         net (fo=41, routed)          0.863     1.988    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y43         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[7]/C
+                         clock pessimism             -0.516     1.472    
+    SLICE_X41Y43         FDRE (Hold_fdre_C_D)         0.105     1.577    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[7]
   -------------------------------------------------------------------
-                         required time                         -1.590    
-                         arrival time                           2.184    
+                         required time                         -1.577    
+                         arrival time                           1.829    
   -------------------------------------------------------------------
-                         slack                                  0.594    
+                         slack                                  0.252    
 
-Slack (MET) :             0.595ns  (arrival time - required time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]/D
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.719ns  (logic 0.255ns (35.475%)  route 0.464ns (64.525%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.984ns
-    Source Clock Delay      (SCD):    1.466ns
-    Clock Pessimism Removal (CPR):    0.501ns
+  Data Path Delay:        0.361ns  (logic 0.256ns (70.880%)  route 0.105ns (29.120%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.988ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -955,16 +1050,15 @@ Slack (MET) :             0.595ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.627     0.852    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.588     1.466    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+                         net (fo=41, routed)          0.594     1.472    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y45         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y56         FDRE (Prop_fdre_C_Q)         0.164     1.630 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/Q
-                         net (fo=9, routed)           0.255     1.885    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[1]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I1_O)        0.045     1.930 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[1]_INST_0/O
-                         net (fo=7, routed)           0.209     2.139    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[1]
-    SLICE_X43Y52         LUT4 (Prop_lut4_I3_O)        0.046     2.185 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[3]_i_1/O
-                         net (fo=1, routed)           0.000     2.185    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[3]
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]/D
+    SLICE_X41Y45         FDRE (Prop_fdre_C_Q)         0.141     1.613 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]/Q
+                         net (fo=1, routed)           0.105     1.718    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[12]
+    SLICE_X41Y45         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     1.833 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.833    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1_n_7
+    SLICE_X41Y45         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -974,30 +1068,30 @@ Slack (MET) :             0.595ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.096    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.859     1.984    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]/C
-                         clock pessimism             -0.501     1.483    
-    SLICE_X43Y52         FDRE (Hold_fdre_C_D)         0.107     1.590    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]
+                         net (fo=41, routed)          0.863     1.988    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y45         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]/C
+                         clock pessimism             -0.516     1.472    
+    SLICE_X41Y45         FDRE (Hold_fdre_C_D)         0.105     1.577    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]
   -------------------------------------------------------------------
-                         required time                         -1.590    
-                         arrival time                           2.185    
+                         required time                         -1.577    
+                         arrival time                           1.833    
   -------------------------------------------------------------------
-                         slack                                  0.595    
+                         slack                                  0.256    
 
-Slack (MET) :             0.609ns  (arrival time - required time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]/D
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.718ns  (logic 0.254ns (35.385%)  route 0.464ns (64.615%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.984ns
-    Source Clock Delay      (SCD):    1.466ns
-    Clock Pessimism Removal (CPR):    0.501ns
+  Data Path Delay:        0.361ns  (logic 0.256ns (70.880%)  route 0.105ns (29.120%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.988ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1008,16 +1102,15 @@ Slack (MET) :             0.609ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.627     0.852    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.588     1.466    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+                         net (fo=41, routed)          0.594     1.472    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y43         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y56         FDRE (Prop_fdre_C_Q)         0.164     1.630 f  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/Q
-                         net (fo=9, routed)           0.255     1.885    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[1]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I1_O)        0.045     1.930 f  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[1]_INST_0/O
-                         net (fo=7, routed)           0.209     2.139    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[1]
-    SLICE_X43Y52         LUT4 (Prop_lut4_I1_O)        0.045     2.184 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[4]_i_1/O
-                         net (fo=1, routed)           0.000     2.184    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[4]
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]/D
+    SLICE_X41Y43         FDRE (Prop_fdre_C_Q)         0.141     1.613 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]/Q
+                         net (fo=1, routed)           0.105     1.718    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[4]
+    SLICE_X41Y43         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     1.833 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.833    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]_i_1_n_7
+    SLICE_X41Y43         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1027,30 +1120,30 @@ Slack (MET) :             0.609ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.096    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.859     1.984    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]/C
-                         clock pessimism             -0.501     1.483    
-    SLICE_X43Y52         FDRE (Hold_fdre_C_D)         0.092     1.575    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]
+                         net (fo=41, routed)          0.863     1.988    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y43         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]/C
+                         clock pessimism             -0.516     1.472    
+    SLICE_X41Y43         FDRE (Hold_fdre_C_D)         0.105     1.577    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[4]
   -------------------------------------------------------------------
-                         required time                         -1.575    
-                         arrival time                           2.184    
+                         required time                         -1.577    
+                         arrival time                           1.833    
   -------------------------------------------------------------------
-                         slack                                  0.609    
+                         slack                                  0.256    
 
-Slack (MET) :             0.610ns  (arrival time - required time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]/D
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.718ns  (logic 0.254ns (35.385%)  route 0.464ns (64.615%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.984ns
-    Source Clock Delay      (SCD):    1.466ns
-    Clock Pessimism Removal (CPR):    0.501ns
+  Data Path Delay:        0.361ns  (logic 0.256ns (70.880%)  route 0.105ns (29.120%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.988ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1061,16 +1154,15 @@ Slack (MET) :             0.610ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.627     0.852    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.588     1.466    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+                         net (fo=41, routed)          0.594     1.472    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y44         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y56         FDRE (Prop_fdre_C_Q)         0.164     1.630 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/Q
-                         net (fo=9, routed)           0.255     1.885    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[1]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I1_O)        0.045     1.930 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[1]_INST_0/O
-                         net (fo=7, routed)           0.209     2.139    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[1]
-    SLICE_X43Y52         LUT4 (Prop_lut4_I2_O)        0.045     2.184 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[2]_i_1/O
-                         net (fo=1, routed)           0.000     2.184    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[2]
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]/D
+    SLICE_X41Y44         FDRE (Prop_fdre_C_Q)         0.141     1.613 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]/Q
+                         net (fo=1, routed)           0.105     1.718    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[8]
+    SLICE_X41Y44         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     1.833 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.833    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1_n_7
+    SLICE_X41Y44         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1080,30 +1172,30 @@ Slack (MET) :             0.610ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.096    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.859     1.984    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y52         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]/C
-                         clock pessimism             -0.501     1.483    
-    SLICE_X43Y52         FDRE (Hold_fdre_C_D)         0.091     1.574    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]
+                         net (fo=41, routed)          0.863     1.988    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y44         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]/C
+                         clock pessimism             -0.516     1.472    
+    SLICE_X41Y44         FDRE (Hold_fdre_C_D)         0.105     1.577    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]
   -------------------------------------------------------------------
-                         required time                         -1.574    
-                         arrival time                           2.184    
+                         required time                         -1.577    
+                         arrival time                           1.833    
   -------------------------------------------------------------------
-                         slack                                  0.610    
+                         slack                                  0.256    
 
-Slack (MET) :             0.635ns  (arrival time - required time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]/D
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[2]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.758ns  (logic 0.251ns (33.104%)  route 0.507ns (66.896%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.983ns
-    Source Clock Delay      (SCD):    1.466ns
-    Clock Pessimism Removal (CPR):    0.501ns
+  Data Path Delay:        0.361ns  (logic 0.252ns (69.733%)  route 0.109ns (30.267%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.987ns
+    Source Clock Delay      (SCD):    1.471ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1114,16 +1206,15 @@ Slack (MET) :             0.635ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.627     0.852    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.588     1.466    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+                         net (fo=41, routed)          0.593     1.471    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y42         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y56         FDRE (Prop_fdre_C_Q)         0.164     1.630 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/Q
-                         net (fo=9, routed)           0.327     1.957    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[1]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I1_O)        0.045     2.002 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[0]_INST_0/O
-                         net (fo=7, routed)           0.180     2.182    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[0]
-    SLICE_X43Y53         LUT4 (Prop_lut4_I3_O)        0.042     2.224 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[1]_i_1/O
-                         net (fo=1, routed)           0.000     2.224    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[1]
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]/D
+    SLICE_X41Y42         FDRE (Prop_fdre_C_Q)         0.141     1.612 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[2]/Q
+                         net (fo=1, routed)           0.109     1.721    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[2]
+    SLICE_X41Y42         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.832 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[0]_i_1/O[2]
+                         net (fo=1, routed)           0.000     1.832    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[0]_i_1_n_5
+    SLICE_X41Y42         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1133,30 +1224,30 @@ Slack (MET) :             0.635ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.096    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.858     1.983    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]/C
-                         clock pessimism             -0.501     1.482    
-    SLICE_X43Y53         FDRE (Hold_fdre_C_D)         0.107     1.589    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]
+                         net (fo=41, routed)          0.862     1.987    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y42         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[2]/C
+                         clock pessimism             -0.516     1.471    
+    SLICE_X41Y42         FDRE (Hold_fdre_C_D)         0.105     1.576    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[2]
   -------------------------------------------------------------------
-                         required time                         -1.589    
-                         arrival time                           2.224    
+                         required time                         -1.576    
+                         arrival time                           1.832    
   -------------------------------------------------------------------
-                         slack                                  0.635    
+                         slack                                  0.256    
 
-Slack (MET) :             0.654ns  (arrival time - required time)
-  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[10]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
-  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]/D
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[10]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.761ns  (logic 0.254ns (33.367%)  route 0.507ns (66.633%))
-  Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.983ns
-    Source Clock Delay      (SCD):    1.466ns
-    Clock Pessimism Removal (CPR):    0.501ns
+  Data Path Delay:        0.361ns  (logic 0.252ns (69.733%)  route 0.109ns (30.267%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.988ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.516ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1167,16 +1258,15 @@ Slack (MET) :             0.654ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.627     0.852    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.588     1.466    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
-    SLICE_X42Y56         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/C
+                         net (fo=41, routed)          0.594     1.472    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y44         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[10]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y56         FDRE (Prop_fdre_C_Q)         0.164     1.630 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE_reg[1]/Q
-                         net (fo=9, routed)           0.327     1.957    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_CYCLE[1]
-    SLICE_X42Y53         LUT4 (Prop_lut4_I1_O)        0.045     2.002 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/o_Out[0]_INST_0/O
-                         net (fo=7, routed)           0.180     2.182    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_Num[0]
-    SLICE_X43Y53         LUT4 (Prop_lut4_I2_O)        0.045     2.227 r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[0]_i_1/O
-                         net (fo=1, routed)           0.000     2.227    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes[0]
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]/D
+    SLICE_X41Y44         FDRE (Prop_fdre_C_Q)         0.141     1.613 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[10]/Q
+                         net (fo=1, routed)           0.109     1.722    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[10]
+    SLICE_X41Y44         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.833 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1/O[2]
+                         net (fo=1, routed)           0.000     1.833    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[8]_i_1_n_5
+    SLICE_X41Y44         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[10]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1186,15 +1276,67 @@ Slack (MET) :             0.654ns  (arrival time - required time)
     H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  i_CLK_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.096    i_CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  i_CLK_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          0.858     1.983    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/i_CLK
-    SLICE_X43Y53         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]/C
-                         clock pessimism             -0.501     1.482    
-    SLICE_X43Y53         FDRE (Hold_fdre_C_D)         0.091     1.573    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]
+                         net (fo=41, routed)          0.863     1.988    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y44         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[10]/C
+                         clock pessimism             -0.516     1.472    
+    SLICE_X41Y44         FDRE (Hold_fdre_C_D)         0.105     1.577    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[10]
   -------------------------------------------------------------------
-                         required time                         -1.573    
-                         arrival time                           2.227    
+                         required time                         -1.577    
+                         arrival time                           1.833    
   -------------------------------------------------------------------
-                         slack                                  0.654    
+                         slack                                  0.256    
+
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Destination:            ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=23.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.361ns  (logic 0.252ns (69.733%)  route 0.109ns (30.267%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.988ns
+    Source Clock Delay      (SCD):    1.472ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000     0.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          0.594     1.472    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y45         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y45         FDRE (Prop_fdre_C_Q)         0.141     1.613 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[14]/Q
+                         net (fo=1, routed)           0.109     1.722    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg_n_0_[14]
+    SLICE_X41Y45         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.833 r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1/O[2]
+                         net (fo=1, routed)           0.000     1.833    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[12]_i_1_n_5
+    SLICE_X41Y45         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  i_CLK (IN)
+                         net (fo=0)                   0.000     0.000    i_CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  i_CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    i_CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  i_CLK_IBUF_BUFG_inst/O
+                         net (fo=41, routed)          0.863     1.988    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/i_CLK
+    SLICE_X41Y45         FDRE                                         r  ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[14]/C
+                         clock pessimism             -0.516     1.472    
+    SLICE_X41Y45         FDRE (Hold_fdre_C_D)         0.105     1.577    ARITHMETIC_LOGIC_UNIT_i/ssd_mux_0/inst/r_SUBCLK_reg[14]
+  -------------------------------------------------------------------
+                         required time                         -1.577    
+                         arrival time                           1.833    
+  -------------------------------------------------------------------
+                         slack                                  0.256    
 
 
 
@@ -1209,35 +1351,35 @@ Sources:            { i_CLK }
 
 Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
 Min Period        n/a     BUFG/I   n/a            2.155         23.000      20.845     BUFGCTRL_X0Y16  i_CLK_IBUF_BUFG_inst/I
-Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X41Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[0]/C
-Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X41Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[1]/C
-Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X40Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[2]/C
-Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X40Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[3]/C
-Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X42Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[4]/C
-Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X41Y50    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[5]/C
-Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X40Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[6]/C
-Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X42Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[7]/C
-Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X40Y50    ARITHMETIC_LOGIC_UNIT_i/PIPO_1/inst/o_Out_reg[0]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X41Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[0]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X41Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[1]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X40Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[2]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X40Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[3]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X42Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[4]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X41Y50    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[5]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X40Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[6]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X42Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[7]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X40Y50    ARITHMETIC_LOGIC_UNIT_i/PIPO_1/inst/o_Out_reg[0]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X40Y50    ARITHMETIC_LOGIC_UNIT_i/PIPO_1/inst/o_Out_reg[1]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X41Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[0]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X41Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[1]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[2]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[3]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X42Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[4]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X41Y50    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[5]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[6]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X42Y51    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[7]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y50    ARITHMETIC_LOGIC_UNIT_i/PIPO_1/inst/o_Out_reg[0]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y50    ARITHMETIC_LOGIC_UNIT_i/PIPO_1/inst/o_Out_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X36Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X39Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X39Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X39Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[3]/C
+Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X36Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[4]/C
+Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X36Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[5]/C
+Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X39Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[6]/C
+Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X39Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[7]/C
+Min Period        n/a     FDRE/C   n/a            1.000         23.000      22.000     SLICE_X37Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_1/inst/o_Out_reg[0]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X36Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[0]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X39Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[1]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X39Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[2]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X39Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[3]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X36Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[4]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X36Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[5]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X39Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[6]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X39Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_0/inst/o_Out_reg[7]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X37Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_1/inst/o_Out_reg[0]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         19.000      18.500     SLICE_X37Y42    ARITHMETIC_LOGIC_UNIT_i/PIPO_1/inst/o_Out_reg[1]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X39Y43    ARITHMETIC_LOGIC_UNIT_i/PIPO_1/inst/o_Out_reg[3]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X39Y43    ARITHMETIC_LOGIC_UNIT_i/PIPO_1/inst/o_Out_reg[6]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X39Y43    ARITHMETIC_LOGIC_UNIT_i/PIPO_1/inst/o_Out_reg[7]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y46    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[0]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y46    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[1]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y46    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[2]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y46    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[3]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y46    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[4]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y46    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[5]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X40Y46    ARITHMETIC_LOGIC_UNIT_i/ssd_dec_0/inst/r_Cathodes_reg[6]/C
 
 
 

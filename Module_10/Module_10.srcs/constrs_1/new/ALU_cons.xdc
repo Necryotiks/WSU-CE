@@ -25,7 +25,7 @@ set_property -dict {PACKAGE_PIN Y16 IOSTANDARD LVCMOS33} [get_ports {o_Status[3]
 #set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { o_GT }]; #IO_L7N_T1_34 Schematic=LD7_B
 #RGB_LEDS
 #set_property -dict { PACKAGE_PIN U13   IOSTANDARD LVCMOS33 } [get_ports { o_Status[4] }]; #IO_L3P_T0_DWS_PUDC_B_34 Schematic=LD4_R
-set_property -dict { PACKAGE_PIN T19   IOSTANDARD LVCMOS33 } [get_ports { o_Status[2] }]; #IO_25_34 Schematic=LD4_G
+set_property -dict { PACKAGE_PIN T19   IOSTANDARD LVCMOS33 } [get_ports { o_Status[0] }]; #IO_25_34 Schematic=LD4_G
 #set_property -dict { PACKAGE_PIN W20   IOSTANDARD LVCMOS33 } [get_ports { o_Status[6] }]; #IO_L16N_T2_34 Schematic=LD4_B
 
 #set_property -dict { PACKAGE_PIN Y19   IOSTANDARD LVCMOS33 } [get_ports { o_Status[7] }]; #IO_L17N_T2_34  Schematic=LD5_R
@@ -33,7 +33,7 @@ set_property -dict { PACKAGE_PIN V20   IOSTANDARD LVCMOS33 } [get_ports { o_Stat
 #set_property -dict { PACKAGE_PIN W19   IOSTANDARD LVCMOS33 } [get_ports { o_Status[9] }]; #IO_L22N_T3_34 Schematic=LD5_B
 
 #set_property -dict { PACKAGE_PIN W18   IOSTANDARD LVCMOS33 } [get_ports { o_Status[10] }]; #IO_L22P_T3_34  Schematic=LD6_R
-set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { o_Status[0] }]; #IO_L18N_T2_34 Schematic=LD6_G
+set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { o_Status[2] }]; #IO_L18N_T2_34 Schematic=LD6_G
 #set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { o_Status[12] }]; #IO_L17P_T2_34 Schematic=LD6_B
 
 ##SevenSegmentDisplay

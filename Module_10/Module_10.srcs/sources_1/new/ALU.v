@@ -45,16 +45,35 @@ module ALU(
     
     always@(i_A,i_B,i_Sel)
     begin
-        r_Status <= 4'd0;
-        case(i_Sel)
-            3'b000: r_Out = i_A + i_B;
-            3'b001: r_Out = i_A + 1'b1;
-            3'b010: r_Out = i_A - i_B;
+       // r_Status <= 4'd0;
+        case(w_Sel)
+            3'b000: {r_Carry,r_Out} = i_A + i_B;
+            3'b001: {r_Carry,r_Out} = i_A + 1'd1;
+            3'b010: {r_Carry,r_Out} = i_A - i_B;
             3'b011: r_Out = i_A ^ i_B;
             3'b100: r_Out = i_A | i_B;
             3'b101: r_Out = i_A & i_B;
         endcase
     end
+always@(*)
+begin
+    r_Status[3:2] <= {2{r_Carry}};
+end
+   
+always@(*)
+begin
+    if(r_Out == 8'd0)
+        r_Status[0] <= 1'b1;
+    else
+        r_Status[0] <= 1'b0;
+end
 
+always@(*)
+begin
+    if((w_Sel == 3'b010) & (r_Carry == 1'b1))
+        r_Status[1] <= 1'b1;
+    else
+        r_Status[1] <= 1'b0;   
+end 
    
 endmodule

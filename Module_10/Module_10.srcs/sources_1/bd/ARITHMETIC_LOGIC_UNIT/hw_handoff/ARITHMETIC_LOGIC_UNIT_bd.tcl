@@ -260,6 +260,8 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net ALU_0_o_Out [get_bd_pins ALU_0/o_Out] [get_bd_pins LSB/Din] [get_bd_pins MSB/Din]
   connect_bd_net -net ALU_0_o_Status [get_bd_ports o_Status] [get_bd_pins ALU_0/o_Status]
+  connect_bd_net -net LSB_Dout [get_bd_pins LSB/Dout] [get_bd_pins ssd_mux_0/i_Digit_4]
+  connect_bd_net -net MSB_Dout [get_bd_pins MSB/Dout] [get_bd_pins ssd_mux_0/i_Digit_3]
   connect_bd_net -net PIPO_0_o_Out [get_bd_pins ALU_0/i_A] [get_bd_pins PIPO_0/o_Out]
   connect_bd_net -net PIPO_1_o_Out [get_bd_pins ALU_0/i_B] [get_bd_pins PIPO_1/o_Out]
   connect_bd_net -net clk_100MHz_1 [get_bd_ports i_CLK] [get_bd_pins PIPO_0/i_CLK] [get_bd_pins PIPO_1/i_CLK] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
@@ -270,8 +272,6 @@ proc create_root_design { parentCell } {
   connect_bd_net -net ssd_mux_0_o_Anodes [get_bd_ports o_Anodes] [get_bd_pins ssd_mux_0/o_Anodes]
   connect_bd_net -net ssd_mux_0_o_Out [get_bd_pins ssd_dec_0/i_Num] [get_bd_pins ssd_mux_0/o_Out]
   connect_bd_net -net xlslice_0_Dout [get_bd_pins ALU_0/i_Sel] [get_bd_pins Selector/Dout]
-  connect_bd_net -net xlslice_1_Dout [get_bd_pins MSB/Dout] [get_bd_pins ssd_mux_0/i_Digit_3]
-  connect_bd_net -net xlslice_2_Dout [get_bd_pins LSB/Dout] [get_bd_pins ssd_mux_0/i_Digit_4]
 
   # Create address segments
 

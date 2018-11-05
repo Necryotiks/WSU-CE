@@ -29,7 +29,6 @@ input i_CLK,
 output  [3:0] o_Out,
 output  [3:0] o_Anodes
     );
-    reg [1:0] r_CYCLE;
     reg [26:0] r_SUBCLK;
     
     wire w_CLK;
@@ -50,14 +49,11 @@ output  [3:0] o_Anodes
     
     always@(posedge w_CLK)
     begin
-        if(r_SUBCLK[26] == 1'b1)
-             r_CYCLE = r_CYCLE + 1'b1;
-        else
            r_SUBCLK = r_SUBCLK + 1'b1;
     end 
-   always@ (r_CYCLE,w_Digit_1,w_Digit_2,w_Digit_3,w_Digit_4)
+    always@ (*)
         begin
-            case(r_CYCLE)
+            case(r_SUBCLK[17:16])
             2'b00: 
             begin
                 r_Out = w_Digit_1;

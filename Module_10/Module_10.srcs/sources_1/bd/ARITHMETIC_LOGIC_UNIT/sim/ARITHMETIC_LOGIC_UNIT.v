@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Nov  3 01:15:05 2018
+//Date        : Sun Nov  4 16:30:23 2018
 //Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target ARITHMETIC_LOGIC_UNIT.bd
 //Design      : ARITHMETIC_LOGIC_UNIT
@@ -28,6 +28,8 @@ module ARITHMETIC_LOGIC_UNIT
 
   wire [7:0]ALU_0_o_Out;
   wire [3:0]ALU_0_o_Status;
+  wire [3:0]LSB_Dout;
+  wire [3:0]MSB_Dout;
   wire [7:0]PIPO_0_o_Out;
   wire [7:0]PIPO_1_o_Out;
   wire clk_100MHz_1;
@@ -38,8 +40,6 @@ module ARITHMETIC_LOGIC_UNIT
   wire [3:0]ssd_mux_0_o_Anodes;
   wire [3:0]ssd_mux_0_o_Out;
   wire [2:0]xlslice_0_Dout;
-  wire [3:0]xlslice_1_Dout;
-  wire [3:0]xlslice_2_Dout;
 
   assign clk_100MHz_1 = i_CLK;
   assign i_BTN_0_1 = i_LD_0;
@@ -56,10 +56,10 @@ module ARITHMETIC_LOGIC_UNIT
         .o_Status(ALU_0_o_Status));
   ARITHMETIC_LOGIC_UNIT_xlslice_1_1 LSB
        (.Din(ALU_0_o_Out),
-        .Dout(xlslice_2_Dout));
+        .Dout(LSB_Dout));
   ARITHMETIC_LOGIC_UNIT_xlslice_1_0 MSB
        (.Din(ALU_0_o_Out),
-        .Dout(xlslice_1_Dout));
+        .Dout(MSB_Dout));
   ARITHMETIC_LOGIC_UNIT_PIPO_0_0 PIPO_0
        (.i_BTN(i_BTN_0_1),
         .i_CLK(clk_100MHz_1),
@@ -81,8 +81,8 @@ module ARITHMETIC_LOGIC_UNIT
        (.i_CLK(clk_100MHz_1),
         .i_Digit_1({1'b0,1'b0,1'b0,1'b0}),
         .i_Digit_2({1'b0,1'b0,1'b0,1'b0}),
-        .i_Digit_3(xlslice_1_Dout),
-        .i_Digit_4(xlslice_2_Dout),
+        .i_Digit_3(MSB_Dout),
+        .i_Digit_4(LSB_Dout),
         .o_Anodes(ssd_mux_0_o_Anodes),
         .o_Out(ssd_mux_0_o_Out));
 endmodule

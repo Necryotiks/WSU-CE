@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Nov  3 01:16:58 2018
+| Date         : Sun Nov  4 16:32:12 2018
 | Host         : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file ARITHMETIC_LOGIC_UNIT_wrapper_control_sets_placed.rpt
 | Design       : ARITHMETIC_LOGIC_UNIT_wrapper
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     4 |
-| Unused register locations in slices containing registers |     6 |
+| Number of unique control sets                            |     5 |
+| Unused register locations in slices containing registers |    12 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,6 +34,7 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
+|      2 |            1 |
 |    16+ |            4 |
 +--------+--------------+
 
@@ -44,10 +45,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              34 |            6 |
+| No           | No                    | No                     |              68 |           11 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              32 |            7 |
+| Yes          | No                    | No                     |              32 |            5 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -59,10 +60,11 @@ Table of Contents
 +----------------------------------------------------------+---------------+------------------+------------------+----------------+
 |                       Clock Signal                       | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +----------------------------------------------------------+---------------+------------------+------------------+----------------+
+|  ARITHMETIC_LOGIC_UNIT_i/ALU_0/inst/r_Carry_reg_i_2_n_0  |               |                  |                1 |              2 |
+|  i_CLK_IBUF_BUFG                                         | i_LD_0_IBUF   |                  |                2 |             16 |
 |  i_CLK_IBUF_BUFG                                         | i_LD_1_IBUF   |                  |                3 |             16 |
-|  i_CLK_IBUF_BUFG                                         | i_LD_0_IBUF   |                  |                4 |             16 |
-|  ARITHMETIC_LOGIC_UNIT_i/ALU_0/inst/r_Out_reg[7]_i_2_n_0 |               |                  |                2 |             16 |
-|  i_CLK_IBUF_BUFG                                         |               |                  |                4 |             18 |
+|  ARITHMETIC_LOGIC_UNIT_i/ALU_0/inst/r_Out_reg[7]_i_2_n_0 |               |                  |                4 |             16 |
+|  i_CLK_IBUF_BUFG                                         |               |                  |                6 |             50 |
 +----------------------------------------------------------+---------------+------------------+------------------+----------------+
 
 
