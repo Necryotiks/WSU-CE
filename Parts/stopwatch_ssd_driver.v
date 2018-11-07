@@ -31,10 +31,10 @@ module stopwatch_ssd_driver(
 
     );
        parameter c_HEX_DEC = 9;//Override with either 9 or 15 for decimal or hex mode respectively.
-       reg [3:0] r_Digit_1_val;
-       reg [3:0] r_Digit_2_val;
-       reg [3:0] r_Digit_3_val;
-       reg [3:0] r_Digit_4_val;
+       reg [3:0] r_Digit_1_val = 4'b0000;
+       reg [3:0] r_Digit_2_val = 4'b0000;
+       reg [3:0] r_Digit_3_val = 4'b0000;
+       reg [3:0] r_Digit_4_val = 4'b0000;
        wire w_SUBCLK;
        wire w_RST;
        

@@ -1,0 +1,78 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Nov  7 01:28:48 2018
+| Host         : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file STOPWATCH_wrapper_control_sets_placed.rpt
+| Design       : STOPWATCH_wrapper
+| Device       : xc7z007s
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    20 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      4 |            1 |
+|      8 |            5 |
+|     12 |            1 |
+|    16+ |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              98 |           11 |
+| No           | No                    | Yes                    |              78 |           17 |
+| No           | Yes                   | No                     |               8 |            2 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              24 |            4 |
+| Yes          | Yes                   | No                     |              12 |            2 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------------------+------------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+|                         Clock Signal                         |                           Enable Signal                          |                     Set/Reset Signal                     | Slice Load Count | Bel Load Count |
++--------------------------------------------------------------+------------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+|  STOPWATCH_i/stopwatchFSM_0/inst/r_ENABLE_inferred__1/i__n_0 |                                                                  |                                                          |                1 |              2 |
+|  STOPWATCH_i/HZ_Counter_0/inst/o_Out                         |                                                                  | i_RST_0_IBUF                                             |                1 |              4 |
+|  STOPWATCH_i/stopwatchFSM_0/inst/o_ENABLE                    |                                                                  | STOPWATCH_i/rst_clk_100MHz_100M/U0/peripheral_aresetn[0] |                1 |              8 |
+|  STOPWATCH_i/stopwatchFSM_0/inst/o_ENABLE                    | STOPWATCH_i/stopwatch_ssd_driver_0/inst/r_Digit_3_val[3]_i_1_n_0 | STOPWATCH_i/rst_clk_100MHz_100M/U0/peripheral_aresetn[0] |                2 |              8 |
+|  STOPWATCH_i/stopwatchFSM_0/inst/o_ENABLE                    | STOPWATCH_i/stopwatch_ssd_driver_0/inst/r_Digit_1_val            | STOPWATCH_i/rst_clk_100MHz_100M/U0/peripheral_aresetn[0] |                1 |              8 |
+|  STOPWATCH_i/stopwatchFSM_0/inst/o_ENABLE                    | STOPWATCH_i/stopwatch_ssd_driver_0/inst/r_Digit_2_val            | STOPWATCH_i/rst_clk_100MHz_100M/U0/peripheral_aresetn[0] |                1 |              8 |
+|  i_CLK_IBUF_BUFG                                             |                                                                  | STOPWATCH_i/rst_clk_100MHz_100M/U0/EXT_LPF/lpf_int       |                2 |              8 |
+|  i_CLK_IBUF_BUFG                                             | STOPWATCH_i/rst_clk_100MHz_100M/U0/SEQ/seq_cnt_en                | STOPWATCH_i/rst_clk_100MHz_100M/U0/SEQ/SEQ_COUNTER/clear |                2 |             12 |
+|  i_CLK_IBUF_BUFG                                             |                                                                  | STOPWATCH_i/rst_clk_100MHz_100M/U0/peripheral_aresetn[0] |               15 |             66 |
+|  i_CLK_IBUF_BUFG                                             |                                                                  |                                                          |               11 |             98 |
++--------------------------------------------------------------+------------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+
+
