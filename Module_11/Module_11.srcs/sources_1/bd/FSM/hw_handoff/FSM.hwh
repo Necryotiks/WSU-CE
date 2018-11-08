@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov  8 11:58:52 2018" VIVADOVERSION="2018.2">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="FSM" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="slowest_sync_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="ext_reset_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_Start_0" SIGIS="undef" SIGNAME="External_Ports_i_Start_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="stopwatchFSM_0" PORT="i_Start"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_Stop_0" SIGIS="undef" SIGNAME="External_Ports_i_Stop_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="stopwatchFSM_0" PORT="i_Stop"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_ENABLE_0" SIGIS="undef" SIGNAME="stopwatchFSM_0_o_ENABLE">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="stopwatchFSM_0" PORT="o_ENABLE"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_Inc_0" SIGIS="undef" SIGNAME="External_Ports_i_Inc_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="stopwatchFSM_0" PORT="i_Inc"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/HZ_Counter_0" HWVERSION="1.0" INSTANCE="HZ_Counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="HZ_Counter" VLNV="xilinx.com:module_ref:HZ_Counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="c_NUM" VALUE="500000"/>
+        <PARAMETER NAME="Component_Name" VALUE="FSM_HZ_Counter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Out" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatchFSM_0" PORT="i_CLK1KHZ"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/rst_clk_100MHz_100M" HWVERSION="5.0" INSTANCE="rst_clk_100MHz_100M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
+        <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="FSM_rst_clk_100MHz_100M_0"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="External_Ports_i_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst"/>
+        <PORT DIR="I" NAME="mb_debug_sys_rst" SIGIS="rst"/>
+        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
+        <PORT DIR="O" NAME="mb_reset" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="stopwatchFSM_0" PORT="i_RST"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/stopwatchFSM_0" HWVERSION="1.0" INSTANCE="stopwatchFSM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="stopwatchFSM" VLNV="xilinx.com:module_ref:stopwatchFSM:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="FSM_stopwatchFSM_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="i_Start" SIGIS="undef" SIGNAME="External_Ports_i_Start_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_Start_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Stop" SIGIS="undef" SIGNAME="External_Ports_i_Stop_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_Stop_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Inc" SIGIS="undef" SIGNAME="External_Ports_i_Inc_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_Inc_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_CLK1KHZ" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_ENABLE" SIGIS="undef" SIGNAME="stopwatchFSM_0_o_ENABLE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_ENABLE_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

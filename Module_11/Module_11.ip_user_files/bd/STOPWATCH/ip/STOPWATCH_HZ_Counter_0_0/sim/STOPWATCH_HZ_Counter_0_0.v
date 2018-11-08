@@ -69,7 +69,7 @@ input wire i_RST;
 output wire o_Out;
 
   HZ_Counter #(
-    .c_NUM(50000)
+    .c_NUM(500000)
   ) inst (
     .i_CLK(i_CLK),
     .i_RST(i_RST),

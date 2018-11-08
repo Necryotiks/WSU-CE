@@ -23,6 +23,7 @@
 module stopwatch_ssd_driver(
     input i_SUBCLK, 
     input i_RST,
+    input i_TIMER,
     output [3:0] o_Digit_1_val,
     output [3:0] o_Digit_2_val,
     output [3:0] o_Digit_3_val,
@@ -31,12 +32,15 @@ module stopwatch_ssd_driver(
 
     );
        parameter c_HEX_DEC = 9;//Override with either 9 or 15 for decimal or hex mode respectively.
+       reg [3:0] r_HEX_DEC;
        reg [3:0] r_Digit_1_val = 4'b0000;
        reg [3:0] r_Digit_2_val = 4'b0000;
        reg [3:0] r_Digit_3_val = 4'b0000;
        reg [3:0] r_Digit_4_val = 4'b0000;
        wire w_SUBCLK;
        wire w_RST;
+       wire w_TIMER;
+       assign w_TIMER = i_TIMER;
        
        assign w_SUBCLK = i_SUBCLK;
        assign w_RST = i_RST;
@@ -50,25 +54,36 @@ module stopwatch_ssd_driver(
   
     always@(posedge w_SUBCLK,posedge w_RST) 
     begin
-        if(w_RST == 1)
+        r_HEX_DEC <= c_HEX_DEC; //verilog bullshit.
+        if((w_RST == 1'b1) & (w_TIMER == 1'b0))
             begin
                r_Digit_1_val <= 4'd0;
                r_Digit_2_val <= 4'd0;
                r_Digit_3_val <= 4'd0;
                r_Digit_4_val <= 4'd0; 
             end
+        else if((w_RST == 1'b1) & (w_TIMER == 1'b1))
+            begin
+                r_Digit_1_val <= r_HEX_DEC;
+                r_Digit_2_val <= r_HEX_DEC;
+                r_Digit_3_val <= r_HEX_DEC;
+                r_Digit_4_val <= r_HEX_DEC; 
+            end
+        else if(w_TIMER == 1'b1)
+            begin
+            end
         else
             begin     
-                if(r_Digit_4_val >= c_HEX_DEC)
+                if(r_Digit_4_val >= r_HEX_DEC)
                     begin
                         r_Digit_4_val <= 4'd0;
-                        if(r_Digit_3_val >= c_HEX_DEC)
+                        if(r_Digit_3_val >= r_HEX_DEC)
                         begin
                             r_Digit_3_val <= 4'd0;
-                            if(r_Digit_2_val >= c_HEX_DEC)
+                            if(r_Digit_2_val >= r_HEX_DEC)
                             begin
                                 r_Digit_2_val <= 4'd0;
-                                if(r_Digit_1_val >= c_HEX_DEC)
+                                if(r_Digit_1_val >= r_HEX_DEC)
                                     r_Digit_1_val <= 4'd0;
                                 else
                                     r_Digit_1_val <= r_Digit_1_val + 4'd1;

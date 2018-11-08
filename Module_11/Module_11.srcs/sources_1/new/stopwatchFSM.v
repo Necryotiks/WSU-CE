@@ -28,12 +28,12 @@ module stopwatchFSM(
     input i_CLK1KHZ,
     output o_ENABLE
     );
-    localparam ST0 = 2'b00; //reset
-    localparam ST1 = 2'b01;//start
-    localparam ST2 = 2'b10; //stop
-    localparam ST3 = 2'b11; //inc
+    localparam s_RESET = 2'b00; //reset
+    localparam s_START = 2'b01;//start
+    localparam s_STOP = 2'b10; //stop
+    localparam s_INCREMENT = 2'b11; //inc
     
-    reg [1:0] r_CURRENT_STATE = ST0;
+    reg [1:0] r_CURRENT_STATE = s_RESET;
     reg [1:0] r_NEXT_STATE;
     reg r_ENABLE;
     wire w_Start;
@@ -54,65 +54,64 @@ module stopwatchFSM(
     always@(*)
     begin
         case(r_CURRENT_STATE)
-            ST0:
+            s_RESET:
                 begin
                     if(w_Start == 1'b1)
                         begin
-                            r_NEXT_STATE = ST1;
+                            r_NEXT_STATE = s_START;
                         end
                     else if(w_Inc == 1'b1)
                         begin
-                            r_ENABLE = 1'b1;
-                            r_NEXT_STATE = ST3;
+                            r_NEXT_STATE = s_INCREMENT;
                         end
                      else
-                          r_NEXT_STATE = ST0;   
+                          r_NEXT_STATE = s_RESET;   
                 end
-          ST1:
+            s_START:
                 begin
                      if(w_Stop == 1'b1)
                         begin
-                            r_ENABLE <= 1'b0;
-                            r_NEXT_STATE = ST2;
+                            r_NEXT_STATE = s_STOP;
                         end
                      else
                          begin
                             r_ENABLE <= w_SUBCLK;
-                            r_NEXT_STATE = ST1;
+                            r_NEXT_STATE = s_START;
                          end   
                 end
-           ST2:
+            s_STOP:
                 begin
                     if(w_Start == 1'b1)
                         begin
-                            r_ENABLE <= w_SUBCLK;
-                            r_NEXT_STATE = ST1;
+                            r_NEXT_STATE = s_START;
                         end
                     else if(w_Inc == 1'b1)
                         begin
-                            r_ENABLE = 1'b1;
-                            r_NEXT_STATE = ST3;
+                            r_NEXT_STATE = s_INCREMENT;
                         end
                      else
                         begin
-                            r_ENABLE <= 1'b0;  
-                            r_NEXT_STATE = ST2;
+                            r_ENABLE = 1'b0;  
+                            r_NEXT_STATE = s_STOP;
                         end                            
                 end
-           ST3:
+            s_INCREMENT:
                 begin
                     r_ENABLE = 1'b1;
-                    r_NEXT_STATE = ST2;
+                    if(w_Inc == 1'b1)
+                        r_NEXT_STATE = s_INCREMENT;
+                    else
+                        r_NEXT_STATE = s_STOP;
                 end 
-           default:
-                    r_NEXT_STATE = ST0;         
+            default:
+                r_NEXT_STATE = s_RESET;         
            endcase
     end
     
     always@(posedge w_SUBCLK,posedge w_RST)
     begin
         if(w_RST == 1'b1)
-            r_CURRENT_STATE = ST0;
+            r_CURRENT_STATE = s_RESET;
         else
             r_CURRENT_STATE = r_NEXT_STATE;
     end
