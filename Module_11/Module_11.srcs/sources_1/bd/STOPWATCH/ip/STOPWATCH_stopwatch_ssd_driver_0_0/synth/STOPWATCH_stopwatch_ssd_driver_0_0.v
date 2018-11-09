@@ -47,37 +47,40 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:module_ref:stopwatchFSM:1.0
+// IP VLNV: xilinx.com:module_ref:stopwatch_ssd_driver:1.0
 // IP Revision: 1
 
-`timescale 1ns/1ps
-
+(* X_CORE_INFO = "stopwatch_ssd_driver,Vivado 2018.2" *)
+(* CHECK_LICENSE_TYPE = "STOPWATCH_stopwatch_ssd_driver_0_0,stopwatch_ssd_driver,{}" *)
+(* CORE_GENERATION_INFO = "STOPWATCH_stopwatch_ssd_driver_0_0,stopwatch_ssd_driver,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=stopwatch_ssd_driver,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VHDL,c_HEX_DEC=9}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module FSM_stopwatchFSM_0_0 (
-  i_Start,
-  i_Stop,
-  i_Inc,
+module STOPWATCH_stopwatch_ssd_driver_0_0 (
+  i_SUBCLK,
   i_RST,
-  i_CLK1KHZ,
-  o_ENABLE
+  o_Digit_1_val,
+  o_Digit_2_val,
+  o_Digit_3_val,
+  o_Digit_4_val
 );
 
-input wire i_Start;
-input wire i_Stop;
-input wire i_Inc;
+input wire i_SUBCLK;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
 input wire i_RST;
-input wire i_CLK1KHZ;
-output wire o_ENABLE;
+output wire [3 : 0] o_Digit_1_val;
+output wire [3 : 0] o_Digit_2_val;
+output wire [3 : 0] o_Digit_3_val;
+output wire [3 : 0] o_Digit_4_val;
 
-  stopwatchFSM inst (
-    .i_Start(i_Start),
-    .i_Stop(i_Stop),
-    .i_Inc(i_Inc),
+  stopwatch_ssd_driver #(
+    .c_HEX_DEC(9)
+  ) inst (
+    .i_SUBCLK(i_SUBCLK),
     .i_RST(i_RST),
-    .i_CLK1KHZ(i_CLK1KHZ),
-    .o_ENABLE(o_ENABLE)
+    .o_Digit_1_val(o_Digit_1_val),
+    .o_Digit_2_val(o_Digit_2_val),
+    .o_Digit_3_val(o_Digit_3_val),
+    .o_Digit_4_val(o_Digit_4_val)
   );
 endmodule

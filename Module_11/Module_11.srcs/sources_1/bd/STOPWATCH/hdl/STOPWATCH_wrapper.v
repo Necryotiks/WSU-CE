@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Thu Nov  8 11:49:55 2018
+//Date        : Fri Nov  9 01:45:30 2018
 //Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target STOPWATCH_wrapper.bd
 //Design      : STOPWATCH_wrapper
@@ -15,6 +15,7 @@ module STOPWATCH_wrapper
     i_RST_0,
     i_Start_0,
     i_Stop_0,
+    i_TIMER_0,
     o_Anodes_0,
     o_Cathodes_0);
   input i_CLK;
@@ -22,6 +23,7 @@ module STOPWATCH_wrapper
   input i_RST_0;
   input i_Start_0;
   input i_Stop_0;
+  input i_TIMER_0;
   output [3:0]o_Anodes_0;
   output [6:0]o_Cathodes_0;
 
@@ -30,6 +32,7 @@ module STOPWATCH_wrapper
   wire i_RST_0;
   wire i_Start_0;
   wire i_Stop_0;
+  wire i_TIMER_0;
   wire [3:0]o_Anodes_0;
   wire [6:0]o_Cathodes_0;
 
@@ -39,6 +42,7 @@ module STOPWATCH_wrapper
         .i_RST_0(i_RST_0),
         .i_Start_0(i_Start_0),
         .i_Stop_0(i_Stop_0),
+        .i_TIMER_0(i_TIMER_0),
         .o_Anodes_0(o_Anodes_0),
         .o_Cathodes_0(o_Cathodes_0));
 endmodule

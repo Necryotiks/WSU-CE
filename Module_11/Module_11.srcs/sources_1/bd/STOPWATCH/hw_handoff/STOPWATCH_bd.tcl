@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# HZ_Counter, ssd_dec, ssd_mux, stopwatchFSM, stopwatch_ssd_driver
+# HZ_Counter, SW_T_MUX, ssd_dec, ssd_mux, stopwatchFSM, stopwatch_ssd_driver, timer_ssd_driver
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -172,6 +172,7 @@ proc create_root_design { parentCell } {
   set i_RST_0 [ create_bd_port -dir I -type rst i_RST_0 ]
   set i_Start_0 [ create_bd_port -dir I i_Start_0 ]
   set i_Stop_0 [ create_bd_port -dir I i_Stop_0 ]
+  set i_TIMER_0 [ create_bd_port -dir I i_TIMER_0 ]
   set o_Anodes_0 [ create_bd_port -dir O -from 3 -to 0 o_Anodes_0 ]
   set o_Cathodes_0 [ create_bd_port -dir O -from 6 -to 0 o_Cathodes_0 ]
 
@@ -189,6 +190,17 @@ proc create_root_design { parentCell } {
    CONFIG.c_NUM {500000} \
  ] $HZ_Counter_0
 
+  # Create instance: SW_T_MUX_0, and set properties
+  set block_name SW_T_MUX
+  set block_cell_name SW_T_MUX_0
+  if { [catch {set SW_T_MUX_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $SW_T_MUX_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: rst_clk_100MHz_100M, and set properties
   set rst_clk_100MHz_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_100MHz_100M ]
 
@@ -236,22 +248,42 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: timer_ssd_driver_0, and set properties
+  set block_name timer_ssd_driver
+  set block_cell_name timer_ssd_driver_0
+  if { [catch {set timer_ssd_driver_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $timer_ssd_driver_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create port connections
   connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins stopwatchFSM_0/i_CLK1KHZ]
-  connect_bd_net -net clk_100MHz_1 [get_bd_ports i_CLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
+  connect_bd_net -net SW_T_MUX_0_o_Digit_1 [get_bd_pins SW_T_MUX_0/o_Digit_1] [get_bd_pins ssd_mux_0/i_Digit_1]
+  connect_bd_net -net SW_T_MUX_0_o_Digit_2 [get_bd_pins SW_T_MUX_0/o_Digit_2] [get_bd_pins ssd_mux_0/i_Digit_2]
+  connect_bd_net -net SW_T_MUX_0_o_Digit_3 [get_bd_pins SW_T_MUX_0/o_Digit_3] [get_bd_pins ssd_mux_0/i_Digit_3]
+  connect_bd_net -net SW_T_MUX_0_o_Digit_4 [get_bd_pins SW_T_MUX_0/o_Digit_4] [get_bd_pins ssd_mux_0/i_Digit_4]
+  connect_bd_net -net clk_100MHz_1 [get_bd_ports i_CLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins SW_T_MUX_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
   connect_bd_net -net i_Inc_0_1 [get_bd_ports i_Inc_0] [get_bd_pins stopwatchFSM_0/i_Inc]
   connect_bd_net -net i_RST_0_1 [get_bd_ports i_RST_0] [get_bd_pins rst_clk_100MHz_100M/ext_reset_in] [get_bd_pins stopwatchFSM_0/i_RST]
   connect_bd_net -net i_Start_0_1 [get_bd_ports i_Start_0] [get_bd_pins stopwatchFSM_0/i_Start]
   connect_bd_net -net i_Stop_0_1 [get_bd_ports i_Stop_0] [get_bd_pins stopwatchFSM_0/i_Stop]
-  connect_bd_net -net rst_clk_100MHz_100M_peripheral_aresetn [get_bd_pins HZ_Counter_0/i_RST] [get_bd_pins rst_clk_100MHz_100M/peripheral_aresetn] [get_bd_pins stopwatch_ssd_driver_0/i_RST]
+  connect_bd_net -net i_TIMER_0_1 [get_bd_ports i_TIMER_0] [get_bd_pins SW_T_MUX_0/i_Sel]
+  connect_bd_net -net rst_clk_100MHz_100M_peripheral_aresetn [get_bd_pins HZ_Counter_0/i_RST] [get_bd_pins rst_clk_100MHz_100M/peripheral_aresetn] [get_bd_pins stopwatch_ssd_driver_0/i_RST] [get_bd_pins timer_ssd_driver_0/i_RST]
   connect_bd_net -net ssd_dec_0_o_Cathodes [get_bd_ports o_Cathodes_0] [get_bd_pins ssd_dec_0/o_Cathodes]
   connect_bd_net -net ssd_mux_0_o_Anodes [get_bd_ports o_Anodes_0] [get_bd_pins ssd_mux_0/o_Anodes]
   connect_bd_net -net ssd_mux_0_o_Out [get_bd_pins ssd_dec_0/i_Num] [get_bd_pins ssd_mux_0/o_Out]
-  connect_bd_net -net stopwatchFSM_0_o_ENABLE [get_bd_pins stopwatchFSM_0/o_ENABLE] [get_bd_pins stopwatch_ssd_driver_0/i_SUBCLK]
-  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_1_val [get_bd_pins ssd_mux_0/i_Digit_1] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_1_val]
-  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_2_val [get_bd_pins ssd_mux_0/i_Digit_2] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_2_val]
-  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_3_val [get_bd_pins ssd_mux_0/i_Digit_3] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_3_val]
-  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_4_val [get_bd_pins ssd_mux_0/i_Digit_4] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_4_val]
+  connect_bd_net -net stopwatchFSM_0_o_ENABLE [get_bd_pins stopwatchFSM_0/o_ENABLE] [get_bd_pins stopwatch_ssd_driver_0/i_SUBCLK] [get_bd_pins timer_ssd_driver_0/i_SUBCLK]
+  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_1_val [get_bd_pins SW_T_MUX_0/i_SW_Digit_1] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_1_val]
+  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_2_val [get_bd_pins SW_T_MUX_0/i_SW_Digit_2] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_2_val]
+  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_3_val [get_bd_pins SW_T_MUX_0/i_SW_Digit_3] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_3_val]
+  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_4_val [get_bd_pins SW_T_MUX_0/i_SW_Digit_4] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_4_val]
+  connect_bd_net -net timer_ssd_driver_0_o_Digit_1_val [get_bd_pins SW_T_MUX_0/i_T_Digit_1] [get_bd_pins timer_ssd_driver_0/o_Digit_1_val]
+  connect_bd_net -net timer_ssd_driver_0_o_Digit_2_val [get_bd_pins SW_T_MUX_0/i_T_Digit_2] [get_bd_pins timer_ssd_driver_0/o_Digit_2_val]
+  connect_bd_net -net timer_ssd_driver_0_o_Digit_3_val [get_bd_pins SW_T_MUX_0/i_T_Digit_3] [get_bd_pins timer_ssd_driver_0/o_Digit_3_val]
+  connect_bd_net -net timer_ssd_driver_0_o_Digit_4_val [get_bd_pins SW_T_MUX_0/i_T_Digit_4] [get_bd_pins timer_ssd_driver_0/o_Digit_4_val]
 
   # Create address segments
 

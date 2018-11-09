@@ -23,3 +23,6 @@ set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { o_Cath
 set_property -dict { PACKAGE_PIN M17   IOSTANDARD LVCMOS33 } [get_ports { o_Cathodes_0[4] }]; #IO_L8P_T1_AD10P_35 Schematic=SSEG_CE
 set_property -dict { PACKAGE_PIN J16   IOSTANDARD LVCMOS33 } [get_ports { o_Cathodes_0[5] }]; #IO_L24N_T3_AD15N_35 Schematic=SSEG_CF
 set_property -dict { PACKAGE_PIN H18   IOSTANDARD LVCMOS33 } [get_ports { o_Cathodes_0[6] }]; #IO_L8P_T1_AD10P_35 Schematic=SSEG_CG
+
+#Switches
+set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { i_TIMER_0 }]; #IO_L19N_T3_VREF_34 Schematic=SW0

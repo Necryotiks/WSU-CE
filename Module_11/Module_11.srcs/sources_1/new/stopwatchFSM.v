@@ -97,14 +97,16 @@ module stopwatchFSM(
                 end
             s_INCREMENT:
                 begin
-                    r_ENABLE = 1'b1;
-                    if(w_Inc == 1'b1)
-                        r_NEXT_STATE = s_INCREMENT;
-                    else
+                    if(w_Inc == 1'b0)
                         r_NEXT_STATE = s_STOP;
+                    else
+                        begin
+                            r_ENABLE = 1'b1;
+                            r_NEXT_STATE = s_INCREMENT;
+                        end
                 end 
             default:
-                r_NEXT_STATE = s_RESET;         
+                r_NEXT_STATE = s_RESET;  
            endcase
     end
     

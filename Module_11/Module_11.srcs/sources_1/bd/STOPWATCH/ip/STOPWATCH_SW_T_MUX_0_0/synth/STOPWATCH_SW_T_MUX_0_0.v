@@ -47,38 +47,62 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:module_ref:stopwatchFSM:1.0
+// IP VLNV: xilinx.com:module_ref:SW_T_MUX:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "stopwatchFSM,Vivado 2018.2" *)
-(* CHECK_LICENSE_TYPE = "FSM_stopwatchFSM_0_0,stopwatchFSM,{}" *)
-(* CORE_GENERATION_INFO = "FSM_stopwatchFSM_0_0,stopwatchFSM,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=stopwatchFSM,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VHDL}" *)
+(* X_CORE_INFO = "SW_T_MUX,Vivado 2018.2" *)
+(* CHECK_LICENSE_TYPE = "STOPWATCH_SW_T_MUX_0_0,SW_T_MUX,{}" *)
+(* CORE_GENERATION_INFO = "STOPWATCH_SW_T_MUX_0_0,SW_T_MUX,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SW_T_MUX,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VHDL}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module FSM_stopwatchFSM_0_0 (
-  i_Start,
-  i_Stop,
-  i_Inc,
-  i_RST,
-  i_CLK1KHZ,
-  o_ENABLE
+module STOPWATCH_SW_T_MUX_0_0 (
+  i_SW_Digit_1,
+  i_SW_Digit_2,
+  i_SW_Digit_3,
+  i_SW_Digit_4,
+  i_T_Digit_1,
+  i_T_Digit_2,
+  i_T_Digit_3,
+  i_T_Digit_4,
+  i_Sel,
+  i_CLK,
+  o_Digit_1,
+  o_Digit_2,
+  o_Digit_3,
+  o_Digit_4
 );
 
-input wire i_Start;
-input wire i_Stop;
-input wire i_Inc;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
-input wire i_RST;
-input wire i_CLK1KHZ;
-output wire o_ENABLE;
+input wire [3 : 0] i_SW_Digit_1;
+input wire [3 : 0] i_SW_Digit_2;
+input wire [3 : 0] i_SW_Digit_3;
+input wire [3 : 0] i_SW_Digit_4;
+input wire [3 : 0] i_T_Digit_1;
+input wire [3 : 0] i_T_Digit_2;
+input wire [3 : 0] i_T_Digit_3;
+input wire [3 : 0] i_T_Digit_4;
+input wire i_Sel;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN STOPWATCH_i_CLK" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
+input wire i_CLK;
+output wire [3 : 0] o_Digit_1;
+output wire [3 : 0] o_Digit_2;
+output wire [3 : 0] o_Digit_3;
+output wire [3 : 0] o_Digit_4;
 
-  stopwatchFSM inst (
-    .i_Start(i_Start),
-    .i_Stop(i_Stop),
-    .i_Inc(i_Inc),
-    .i_RST(i_RST),
-    .i_CLK1KHZ(i_CLK1KHZ),
-    .o_ENABLE(o_ENABLE)
+  SW_T_MUX inst (
+    .i_SW_Digit_1(i_SW_Digit_1),
+    .i_SW_Digit_2(i_SW_Digit_2),
+    .i_SW_Digit_3(i_SW_Digit_3),
+    .i_SW_Digit_4(i_SW_Digit_4),
+    .i_T_Digit_1(i_T_Digit_1),
+    .i_T_Digit_2(i_T_Digit_2),
+    .i_T_Digit_3(i_T_Digit_3),
+    .i_T_Digit_4(i_T_Digit_4),
+    .i_Sel(i_Sel),
+    .i_CLK(i_CLK),
+    .o_Digit_1(o_Digit_1),
+    .o_Digit_2(o_Digit_2),
+    .o_Digit_3(o_Digit_3),
+    .o_Digit_4(o_Digit_4)
   );
 endmodule

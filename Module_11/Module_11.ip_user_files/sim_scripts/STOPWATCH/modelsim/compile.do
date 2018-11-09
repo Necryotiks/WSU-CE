@@ -23,10 +23,12 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/STOPWATCH/ip/STOPWATCH_rst_clk_100MHz_100M_0/sim/STOPWATCH_rst_clk_100MHz_100M_0.vhd" \
 
 vlog -work xil_defaultlib -64 -incr \
-"../../../bd/STOPWATCH/ip/STOPWATCH_stopwatch_ssd_driver_0_0/sim/STOPWATCH_stopwatch_ssd_driver_0_0.v" \
 "../../../bd/STOPWATCH/ip/STOPWATCH_ssd_mux_0_0/sim/STOPWATCH_ssd_mux_0_0.v" \
 "../../../bd/STOPWATCH/ip/STOPWATCH_ssd_dec_0_0/sim/STOPWATCH_ssd_dec_0_0.v" \
 "../../../bd/STOPWATCH/sim/STOPWATCH.v" \
+"../../../bd/STOPWATCH/ip/STOPWATCH_timer_ssd_driver_0_0/sim/STOPWATCH_timer_ssd_driver_0_0.v" \
+"../../../bd/STOPWATCH/ip/STOPWATCH_SW_T_MUX_0_0/sim/STOPWATCH_SW_T_MUX_0_0.v" \
+"../../../bd/STOPWATCH/ip/STOPWATCH_stopwatch_ssd_driver_0_0/sim/STOPWATCH_stopwatch_ssd_driver_0_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

@@ -15,14 +15,20 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==STOPWATCH_HZ_Co
 # IP: bd/STOPWATCH/ip/STOPWATCH_rst_clk_100MHz_100M_0/STOPWATCH_rst_clk_100MHz_100M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==STOPWATCH_rst_clk_100MHz_100M_0 || ORIG_REF_NAME==STOPWATCH_rst_clk_100MHz_100M_0} -quiet] -quiet
 
-# IP: bd/STOPWATCH/ip/STOPWATCH_stopwatch_ssd_driver_0_0/STOPWATCH_stopwatch_ssd_driver_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==STOPWATCH_stopwatch_ssd_driver_0_0 || ORIG_REF_NAME==STOPWATCH_stopwatch_ssd_driver_0_0} -quiet] -quiet
-
 # IP: bd/STOPWATCH/ip/STOPWATCH_ssd_mux_0_0/STOPWATCH_ssd_mux_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==STOPWATCH_ssd_mux_0_0 || ORIG_REF_NAME==STOPWATCH_ssd_mux_0_0} -quiet] -quiet
 
 # IP: bd/STOPWATCH/ip/STOPWATCH_ssd_dec_0_0/STOPWATCH_ssd_dec_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==STOPWATCH_ssd_dec_0_0 || ORIG_REF_NAME==STOPWATCH_ssd_dec_0_0} -quiet] -quiet
+
+# IP: bd/STOPWATCH/ip/STOPWATCH_timer_ssd_driver_0_0/STOPWATCH_timer_ssd_driver_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==STOPWATCH_timer_ssd_driver_0_0 || ORIG_REF_NAME==STOPWATCH_timer_ssd_driver_0_0} -quiet] -quiet
+
+# IP: bd/STOPWATCH/ip/STOPWATCH_SW_T_MUX_0_0/STOPWATCH_SW_T_MUX_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==STOPWATCH_SW_T_MUX_0_0 || ORIG_REF_NAME==STOPWATCH_SW_T_MUX_0_0} -quiet] -quiet
+
+# IP: bd/STOPWATCH/ip/STOPWATCH_stopwatch_ssd_driver_0_0/STOPWATCH_stopwatch_ssd_driver_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==STOPWATCH_stopwatch_ssd_driver_0_0 || ORIG_REF_NAME==STOPWATCH_stopwatch_ssd_driver_0_0} -quiet] -quiet
 
 # XDC: bd/STOPWATCH/ip/STOPWATCH_rst_clk_100MHz_100M_0/STOPWATCH_rst_clk_100MHz_100M_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==STOPWATCH_rst_clk_100MHz_100M_0 || ORIG_REF_NAME==STOPWATCH_rst_clk_100MHz_100M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet

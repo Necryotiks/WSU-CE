@@ -34,9 +34,11 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/stopwatchFSM.v
   C:/Users/Sergaljerk/WSU-CPTE/Parts/HZ_Counter.v
-  C:/Users/Sergaljerk/WSU-CPTE/Parts/stopwatch_ssd_driver.v
   C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_mux.v
   C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_dec.v
+  C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/timer_ssd_driver.v
+  C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/SW_T_MUX.v
+  C:/Users/Sergaljerk/WSU-CPTE/Parts/stopwatch_ssd_driver.v
   C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/hdl/STOPWATCH_wrapper.v
 }
 add_files C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/STOPWATCH.bd

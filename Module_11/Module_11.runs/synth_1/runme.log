@@ -12,15 +12,15 @@ source STOPWATCH_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 282.805 ; gain = 38.398
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 282.711 ; gain = 38.098
 Command: synth_design -top STOPWATCH_wrapper -part xc7z007sclg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2668 
+INFO: Helper process launched with PID 9860 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 387.848 ; gain = 96.633
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 389.859 ; gain = 100.023
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'STOPWATCH_wrapper' [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/hdl/STOPWATCH_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'STOPWATCH' [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/synth/STOPWATCH.v:13]
@@ -29,6 +29,10 @@ INFO: [Synth 8-6157] synthesizing module 'HZ_Counter' [C:/Users/Sergaljerk/WSU-C
 	Parameter c_NUM bound to: 500000 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'HZ_Counter' (1#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/HZ_Counter.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_HZ_Counter_0_0' (2#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_HZ_Counter_0_0/synth/STOPWATCH_HZ_Counter_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'STOPWATCH_SW_T_MUX_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_SW_T_MUX_0_0/synth/STOPWATCH_SW_T_MUX_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'SW_T_MUX' [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/SW_T_MUX.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'SW_T_MUX' (3#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/SW_T_MUX.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_SW_T_MUX_0_0' (4#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_SW_T_MUX_0_0/synth/STOPWATCH_SW_T_MUX_0_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'STOPWATCH_rst_clk_100MHz_100M_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_rst_clk_100MHz_100M_0/synth/STOPWATCH_rst_clk_100MHz_100M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -83,7 +87,7 @@ INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/Sergaljerk/WSU-CPTE/Modu
 INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
 INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-6155] done synthesizing module 'SRL16' (3#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (5#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
@@ -103,25 +107,25 @@ INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_o
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (4#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (5#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (6#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (7#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
 INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (6#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (7#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (8#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'STOPWATCH_rst_clk_100MHz_100M_0' (9#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_rst_clk_100MHz_100M_0/synth/STOPWATCH_rst_clk_100MHz_100M_0.vhd:74]
-WARNING: [Synth 8-350] instance 'rst_clk_100MHz_100M' of module 'STOPWATCH_rst_clk_100MHz_100M_0' requires 10 connections, but only 6 given [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/synth/STOPWATCH.v:56]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (8#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (9#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (10#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'STOPWATCH_rst_clk_100MHz_100M_0' (11#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_rst_clk_100MHz_100M_0/synth/STOPWATCH_rst_clk_100MHz_100M_0.vhd:74]
+WARNING: [Synth 8-350] instance 'rst_clk_100MHz_100M' of module 'STOPWATCH_rst_clk_100MHz_100M_0' requires 10 connections, but only 6 given [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/synth/STOPWATCH.v:83]
 INFO: [Synth 8-6157] synthesizing module 'STOPWATCH_ssd_dec_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_ssd_dec_0_0/synth/STOPWATCH_ssd_dec_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'ssd_dec' [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_dec.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ssd_dec' (10#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_dec.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_ssd_dec_0_0' (11#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_ssd_dec_0_0/synth/STOPWATCH_ssd_dec_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_dec' (12#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_dec.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_ssd_dec_0_0' (13#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_ssd_dec_0_0/synth/STOPWATCH_ssd_dec_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'STOPWATCH_ssd_mux_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_ssd_mux_0_0/synth/STOPWATCH_ssd_mux_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'ssd_mux' [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_mux.v:23]
 INFO: [Synth 8-226] default block is never used [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_mux.v:56]
-INFO: [Synth 8-6155] done synthesizing module 'ssd_mux' (12#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_mux.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_ssd_mux_0_0' (13#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_ssd_mux_0_0/synth/STOPWATCH_ssd_mux_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_mux' (14#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_ssd_mux_0_0' (15#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_ssd_mux_0_0/synth/STOPWATCH_ssd_mux_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'STOPWATCH_stopwatchFSM_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_stopwatchFSM_0_0/synth/STOPWATCH_stopwatchFSM_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'stopwatchFSM' [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/stopwatchFSM.v:23]
 	Parameter s_RESET bound to: 2'b00 
@@ -129,22 +133,31 @@ INFO: [Synth 8-6157] synthesizing module 'stopwatchFSM' [C:/Users/Sergaljerk/WSU
 	Parameter s_STOP bound to: 2'b10 
 	Parameter s_INCREMENT bound to: 2'b11 
 INFO: [Synth 8-226] default block is never used [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/stopwatchFSM.v:56]
-INFO: [Synth 8-6155] done synthesizing module 'stopwatchFSM' (14#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/stopwatchFSM.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_stopwatchFSM_0_0' (15#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_stopwatchFSM_0_0/synth/STOPWATCH_stopwatchFSM_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'stopwatchFSM' (16#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/stopwatchFSM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_stopwatchFSM_0_0' (17#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_stopwatchFSM_0_0/synth/STOPWATCH_stopwatchFSM_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'STOPWATCH_stopwatch_ssd_driver_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_stopwatch_ssd_driver_0_0/synth/STOPWATCH_stopwatch_ssd_driver_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'stopwatch_ssd_driver' [C:/Users/Sergaljerk/WSU-CPTE/Parts/stopwatch_ssd_driver.v:23]
 	Parameter c_HEX_DEC bound to: 9 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'stopwatch_ssd_driver' (16#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/stopwatch_ssd_driver.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_stopwatch_ssd_driver_0_0' (17#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_stopwatch_ssd_driver_0_0/synth/STOPWATCH_stopwatch_ssd_driver_0_0.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH' (18#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/synth/STOPWATCH.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_wrapper' (19#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/hdl/STOPWATCH_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'stopwatch_ssd_driver' (18#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/stopwatch_ssd_driver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_stopwatch_ssd_driver_0_0' (19#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_stopwatch_ssd_driver_0_0/synth/STOPWATCH_stopwatch_ssd_driver_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'STOPWATCH_timer_ssd_driver_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_timer_ssd_driver_0_0/synth/STOPWATCH_timer_ssd_driver_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'timer_ssd_driver' [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/timer_ssd_driver.v:23]
+	Parameter c_HEX_DEC bound to: 9 - type: integer 
+WARNING: [Synth 8-5788] Register r_Digit_1_val_reg in module timer_ssd_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/timer_ssd_driver.v:42]
+WARNING: [Synth 8-5788] Register r_Digit_2_val_reg in module timer_ssd_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/timer_ssd_driver.v:43]
+WARNING: [Synth 8-5788] Register r_Digit_3_val_reg in module timer_ssd_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/timer_ssd_driver.v:44]
+WARNING: [Synth 8-5788] Register r_Digit_4_val_reg in module timer_ssd_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/timer_ssd_driver.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'timer_ssd_driver' (20#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/new/timer_ssd_driver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_timer_ssd_driver_0_0' (21#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/ip/STOPWATCH_timer_ssd_driver_0_0/synth/STOPWATCH_timer_ssd_driver_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH' (22#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/synth/STOPWATCH.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'STOPWATCH_wrapper' (23#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.srcs/sources_1/bd/STOPWATCH/hdl/STOPWATCH_wrapper.v:12]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_aclk
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_resetn
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[1]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[0]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port scndry_resetn
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 443.227 ; gain = 152.012
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 445.023 ; gain = 155.188
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -157,10 +170,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 443.227 ; gain = 152.012
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 445.023 ; gain = 155.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 443.227 ; gain = 152.012
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 445.023 ; gain = 155.188
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -188,16 +201,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 779.527 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 782.043 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 779.527 ; gain = 488.313
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 782.043 ; gain = 492.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 779.527 ; gain = 488.313
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 782.043 ; gain = 492.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -206,12 +219,14 @@ Applied set_property DONT_TOUCH = true for STOPWATCH_i. (constraint file  auto g
 Applied set_property DONT_TOUCH = true for STOPWATCH_i/stopwatchFSM_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for STOPWATCH_i/HZ_Counter_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for STOPWATCH_i/rst_clk_100MHz_100M. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for STOPWATCH_i/stopwatch_ssd_driver_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for STOPWATCH_i/ssd_mux_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for STOPWATCH_i/ssd_dec_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for STOPWATCH_i/rst_clk_100MHz_100M/U0. (constraint file  C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.runs/synth_1/dont_touch.xdc, line 28).
+Applied set_property DONT_TOUCH = true for STOPWATCH_i/timer_ssd_driver_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for STOPWATCH_i/SW_T_MUX_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for STOPWATCH_i/stopwatch_ssd_driver_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for STOPWATCH_i/rst_clk_100MHz_100M/U0. (constraint file  C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.runs/synth_1/dont_touch.xdc, line 34).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 779.527 ; gain = 488.313
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 782.043 ; gain = 492.207
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "r_Count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "o_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -232,7 +247,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'r_ENABLE_reg' [C:/Users/Ser
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_CURRENT_STATE_reg' using encoding 'sequential' in module 'stopwatchFSM'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 779.527 ; gain = 488.313
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 782.043 ; gain = 492.207
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -247,19 +262,19 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 8     
 +---Registers : 
 	               32 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 4     
+	                4 Bit    Registers := 14    
 	                3 Bit    Registers := 3     
 	                1 Bit    Registers := 9     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 14    
 	   4 Input      4 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 4     
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 2     
@@ -281,6 +296,12 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
+Module SW_T_MUX 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 4     
 Module lpf 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -318,9 +339,17 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input      4 Bit       Adders := 4     
 +---Registers : 
-	                4 Bit    Registers := 4     
+	                4 Bit    Registers := 5     
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 4     
+Module timer_ssd_driver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 4     
++---Registers : 
+	                4 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -345,8 +374,20 @@ WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GE
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+INFO: [Synth 8-3886] merging instance 'STOPWATCH_i/stopwatch_ssd_driver_0/inst/r_HEX_DEC_reg[0]' (FD) to 'STOPWATCH_i/stopwatch_ssd_driver_0/inst/r_HEX_DEC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'STOPWATCH_i/stopwatch_ssd_driver_0/inst/r_HEX_DEC_reg[1]' (FD) to 'STOPWATCH_i/stopwatch_ssd_driver_0/inst/r_HEX_DEC_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (STOPWATCH_i/stopwatch_ssd_driver_0/\inst/r_HEX_DEC_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (STOPWATCH_i/stopwatch_ssd_driver_0/\inst/r_HEX_DEC_reg[3] )
+INFO: [Synth 8-3332] Sequential element (inst/r_HEX_DEC_reg[3]) is unused and will be removed from module STOPWATCH_stopwatch_ssd_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/r_HEX_DEC_reg[2]) is unused and will be removed from module STOPWATCH_stopwatch_ssd_driver_0_0.
+INFO: [Synth 8-3886] merging instance 'STOPWATCH_i/timer_ssd_driver_0/inst/r_HEX_DEC_reg[0]' (FD) to 'STOPWATCH_i/timer_ssd_driver_0/inst/r_HEX_DEC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'STOPWATCH_i/timer_ssd_driver_0/inst/r_HEX_DEC_reg[1]' (FD) to 'STOPWATCH_i/timer_ssd_driver_0/inst/r_HEX_DEC_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (STOPWATCH_i/timer_ssd_driver_0/\inst/r_HEX_DEC_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (STOPWATCH_i/timer_ssd_driver_0/\inst/r_HEX_DEC_reg[3] )
+INFO: [Synth 8-3332] Sequential element (inst/r_HEX_DEC_reg[3]) is unused and will be removed from module STOPWATCH_timer_ssd_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/r_HEX_DEC_reg[2]) is unused and will be removed from module STOPWATCH_timer_ssd_driver_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 779.527 ; gain = 488.313
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 782.043 ; gain = 492.207
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -358,13 +399,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 779.527 ; gain = 488.313
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 782.043 ; gain = 492.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 795.148 ; gain = 503.934
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 793.348 ; gain = 503.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -376,7 +417,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 795.148 ; gain = 503.934
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 793.348 ; gain = 503.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -400,7 +441,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 795.148 ; gain = 503.934
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 793.348 ; gain = 503.512
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -413,7 +454,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 795.148 ; gain = 503.934
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 793.348 ; gain = 503.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -425,25 +466,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 795.148 ; gain = 503.934
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 793.348 ; gain = 503.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 795.148 ; gain = 503.934
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 793.348 ; gain = 503.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 795.148 ; gain = 503.934
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 793.348 ; gain = 503.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 795.148 ; gain = 503.934
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 793.348 ; gain = 503.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -461,54 +502,59 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    13|
-|3     |LUT1   |     6|
+|3     |LUT1   |    10|
 |4     |LUT2   |    13|
-|5     |LUT3   |     6|
-|6     |LUT4   |    32|
-|7     |LUT5   |    43|
-|8     |LUT6   |     6|
+|5     |LUT3   |    22|
+|6     |LUT4   |    46|
+|7     |LUT5   |    44|
+|8     |LUT6   |     7|
 |9     |SRL16  |     1|
-|10    |FDCE   |    51|
-|11    |FDR    |     8|
-|12    |FDRE   |    53|
-|13    |FDSE   |     4|
-|14    |LD     |     1|
-|15    |IBUF   |     5|
-|16    |OBUF   |    11|
+|10    |FDCE   |    59|
+|11    |FDPE   |     8|
+|12    |FDR    |     8|
+|13    |FDRE   |    69|
+|14    |FDSE   |     4|
+|15    |LD     |     1|
+|16    |IBUF   |     6|
+|17    |OBUF   |    11|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------------------------+-----------------------------------+------+
 |      |Instance                              |Module                             |Cells |
 +------+--------------------------------------+-----------------------------------+------+
-|1     |top                                   |                                   |   254|
-|2     |  STOPWATCH_i                         |STOPWATCH                          |   237|
+|1     |top                                   |                                   |   323|
+|2     |  STOPWATCH_i                         |STOPWATCH                          |   305|
 |3     |    HZ_Counter_0                      |STOPWATCH_HZ_Counter_0_0           |    82|
 |4     |      inst                            |HZ_Counter                         |    82|
-|5     |    rst_clk_100MHz_100M               |STOPWATCH_rst_clk_100MHz_100M_0    |    66|
-|6     |      U0                              |proc_sys_reset                     |    66|
-|7     |        EXT_LPF                       |lpf                                |    23|
-|8     |          \ACTIVE_LOW_AUX.ACT_LO_AUX  |cdc_sync                           |     6|
-|9     |          \ACTIVE_LOW_EXT.ACT_LO_EXT  |cdc_sync_0                         |     6|
-|10    |        SEQ                           |sequence_psr                       |    38|
-|11    |          SEQ_COUNTER                 |upcnt_n                            |    13|
-|12    |    ssd_dec_0                         |STOPWATCH_ssd_dec_0_0              |    14|
-|13    |      inst                            |ssd_dec                            |    14|
-|14    |    ssd_mux_0                         |STOPWATCH_ssd_mux_0_0              |    32|
-|15    |      inst                            |ssd_mux                            |    32|
-|16    |    stopwatchFSM_0                    |STOPWATCH_stopwatchFSM_0_0         |     7|
-|17    |      inst                            |stopwatchFSM                       |     7|
-|18    |    stopwatch_ssd_driver_0            |STOPWATCH_stopwatch_ssd_driver_0_0 |    36|
-|19    |      inst                            |stopwatch_ssd_driver               |    36|
+|5     |    SW_T_MUX_0                        |STOPWATCH_SW_T_MUX_0_0             |    32|
+|6     |      inst                            |SW_T_MUX                           |    32|
+|7     |    rst_clk_100MHz_100M               |STOPWATCH_rst_clk_100MHz_100M_0    |    66|
+|8     |      U0                              |proc_sys_reset                     |    66|
+|9     |        EXT_LPF                       |lpf                                |    23|
+|10    |          \ACTIVE_LOW_AUX.ACT_LO_AUX  |cdc_sync                           |     6|
+|11    |          \ACTIVE_LOW_EXT.ACT_LO_EXT  |cdc_sync_0                         |     6|
+|12    |        SEQ                           |sequence_psr                       |    38|
+|13    |          SEQ_COUNTER                 |upcnt_n                            |    13|
+|14    |    ssd_dec_0                         |STOPWATCH_ssd_dec_0_0              |    14|
+|15    |      inst                            |ssd_dec                            |    14|
+|16    |    ssd_mux_0                         |STOPWATCH_ssd_mux_0_0              |    32|
+|17    |      inst                            |ssd_mux                            |    32|
+|18    |    stopwatchFSM_0                    |STOPWATCH_stopwatchFSM_0_0         |     7|
+|19    |      inst                            |stopwatchFSM                       |     7|
+|20    |    stopwatch_ssd_driver_0            |STOPWATCH_stopwatch_ssd_driver_0_0 |    36|
+|21    |      inst                            |stopwatch_ssd_driver               |    36|
+|22    |    timer_ssd_driver_0                |STOPWATCH_timer_ssd_driver_0_0     |    36|
+|23    |      inst                            |timer_ssd_driver                   |    36|
 +------+--------------------------------------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 795.148 ; gain = 503.934
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 793.348 ; gain = 503.512
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 795.148 ; gain = 167.633
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 795.148 ; gain = 503.934
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 793.348 ; gain = 166.492
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 793.348 ; gain = 503.512
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -519,11 +565,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-83 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+103 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 798.828 ; gain = 516.023
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 796.523 ; gain = 513.813
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Module_11/Module_11.runs/synth_1/STOPWATCH_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file STOPWATCH_wrapper_utilization_synth.rpt -pb STOPWATCH_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 798.828 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Nov  8 11:50:50 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 796.523 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  9 01:46:36 2018...
