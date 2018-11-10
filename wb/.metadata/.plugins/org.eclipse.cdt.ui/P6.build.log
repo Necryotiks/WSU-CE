@@ -1,4 +1,4 @@
-11:41:20 **** Auto Build of configuration Debug for project P6 ****
+12:36:08 **** Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -11,6 +11,16 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcp
      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
 'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
 arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
@@ -19,9 +29,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size P6.elf  |tee "P6.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  22212	   1256	  22616	  46084	   b404	P6.elf
+  22232	   1256	  22616	  46104	   b418	P6.elf
 'Finished building: P6.elf.size'
 ' '
 
-11:41:20 Build Finished (took 644ms)
+12:36:11 Build Finished (took 2s.895ms)
 
