@@ -290,13 +290,15 @@ void sendREADY()
 	SendChar(C);
 	C = '>';
 	SendChar(C);
-	C = 'T';
+	C = 'R';
 	SendChar(C);
 	C = 'E';
 	SendChar(C);
-	C = 'S';
+	C = 'A';
 	SendChar(C);
-	C = 'T';
+	C = 'D';
+	SendChar(C);
+	C = 'Y';
 	SendChar(C);
 }
 
