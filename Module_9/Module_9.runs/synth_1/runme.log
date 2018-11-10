@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log S_ADDER_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source S_ADDER_wrapper.tcl
+    with args -log CLA_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CLA_wrapper.tcl
 
 
 ****** Vivado v2018.2 (64-bit)
@@ -8,71 +8,33 @@
   **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source S_ADDER_wrapper.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 283.855 ; gain = 38.547
-Command: synth_design -top S_ADDER_wrapper -part xc7z007sclg400-1
+source CLA_wrapper.tcl -notrace
+Command: synth_design -top CLA_wrapper -part xc7z007sclg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8752 
+INFO: Helper process launched with PID 7200 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 387.840 ; gain = 97.871
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 357.074 ; gain = 99.211
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'S_ADDER_wrapper' [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/hdl/S_ADDER_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'S_ADDER' [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/synth/S_ADDER.v:13]
-INFO: [Synth 8-6157] synthesizing module 'S_ADDER_PIPO_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_PIPO_0_0/synth/S_ADDER_PIPO_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'PIPO' [C:/Users/Sergaljerk/WSU-CPTE/Parts/PIPO.v:23]
-	Parameter BUS_MSB bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'PIPO' (1#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/PIPO.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'S_ADDER_PIPO_0_0' (2#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_PIPO_0_0/synth/S_ADDER_PIPO_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'S_ADDER_SubAdder_0_1' [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_SubAdder_0_1/synth/S_ADDER_SubAdder_0_1.v:58]
-INFO: [Synth 8-6157] synthesizing module 'SubAdder' [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/SubAdder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'CLA_wrapper' [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA_wrapper.v:23]
 INFO: [Synth 8-6157] synthesizing module 'CLA' [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA.v:23]
-	Parameter MAX_WIDTH bound to: 7 - type: integer 
+	Parameter MAX_WIDTH bound to: 3 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'FullAdder_bitslice' [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/FullAdder_bitslice.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'FullAdder_bitslice' (3#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/FullAdder_bitslice.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'CLA' (4#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'SubAdder' (5#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/SubAdder.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'S_ADDER_SubAdder_0_1' (6#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_SubAdder_0_1/synth/S_ADDER_SubAdder_0_1.v:58]
-INFO: [Synth 8-6157] synthesizing module 'S_ADDER_ssd_dec_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_ssd_dec_0_0/synth/S_ADDER_ssd_dec_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'ssd_dec' [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/imports/Parts/ssd_dec.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ssd_dec' (7#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/imports/Parts/ssd_dec.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'S_ADDER_ssd_dec_0_0' (8#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_ssd_dec_0_0/synth/S_ADDER_ssd_dec_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'S_ADDER_ssd_mux_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_ssd_mux_0_0/synth/S_ADDER_ssd_mux_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'ssd_mux' [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/imports/Parts/ssd_mux.v:23]
-INFO: [Synth 8-226] default block is never used [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/imports/Parts/ssd_mux.v:43]
-INFO: [Synth 8-6155] done synthesizing module 'ssd_mux' (9#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/imports/Parts/ssd_mux.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'S_ADDER_ssd_mux_0_0' (10#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_ssd_mux_0_0/synth/S_ADDER_ssd_mux_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'S_ADDER_xlslice_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_xlslice_0_0/synth/S_ADDER_xlslice_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice' [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 8 - type: integer 
-	Parameter DIN_FROM bound to: 7 - type: integer 
-	Parameter DIN_TO bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice' (11#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'S_ADDER_xlslice_0_0' (12#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_xlslice_0_0/synth/S_ADDER_xlslice_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'S_ADDER_xlslice_1_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_xlslice_1_0/synth/S_ADDER_xlslice_1_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice__parameterized0' [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 8 - type: integer 
-	Parameter DIN_FROM bound to: 3 - type: integer 
-	Parameter DIN_TO bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice__parameterized0' (12#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'S_ADDER_xlslice_1_0' (13#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/ip/S_ADDER_xlslice_1_0/synth/S_ADDER_xlslice_1_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'S_ADDER' (14#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/synth/S_ADDER.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'S_ADDER_wrapper' (15#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/bd/S_ADDER/hdl/S_ADDER_wrapper.v:12]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized0 has unconnected port Din[7]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized0 has unconnected port Din[6]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized0 has unconnected port Din[5]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized0 has unconnected port Din[4]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[3]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[2]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[1]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[0]
+INFO: [Synth 8-6155] done synthesizing module 'FullAdder_bitslice' (1#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/FullAdder_bitslice.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'CLA' (2#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'HZ_Counter' [C:/Users/Sergaljerk/WSU-CPTE/Parts/HZ_Counter.v:23]
+	Parameter c_NUM bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'HZ_Counter' (3#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/HZ_Counter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ssd_mux' [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_mux.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_mux.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_mux' (4#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ssd_dec' [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_dec.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_dec' (5#1) [C:/Users/Sergaljerk/WSU-CPTE/Parts/ssd_dec.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'CLA_wrapper' (6#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA_wrapper.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 442.879 ; gain = 152.910
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.660 ; gain = 153.797
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -81,57 +43,58 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin sw1:i_Digit_1[3] to constant 0 [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA_wrapper.v:81]
+WARNING: [Synth 8-3295] tying undriven pin sw1:i_Digit_1[2] to constant 0 [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA_wrapper.v:81]
+WARNING: [Synth 8-3295] tying undriven pin sw1:i_Digit_1[1] to constant 0 [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA_wrapper.v:81]
+WARNING: [Synth 8-3295] tying undriven pin sw1:i_Digit_1[0] to constant 0 [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA_wrapper.v:81]
+WARNING: [Synth 8-3295] tying undriven pin sw1:i_Digit_2[3] to constant 0 [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA_wrapper.v:81]
+WARNING: [Synth 8-3295] tying undriven pin sw1:i_Digit_2[2] to constant 0 [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA_wrapper.v:81]
+WARNING: [Synth 8-3295] tying undriven pin sw1:i_Digit_2[1] to constant 0 [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA_wrapper.v:81]
+WARNING: [Synth 8-3295] tying undriven pin sw1:i_Digit_2[0] to constant 0 [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/sources_1/new/CLA_wrapper.v:81]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 442.879 ; gain = 152.910
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.660 ; gain = 153.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 442.879 ; gain = 152.910
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.660 ; gain = 153.797
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/constrs_1/new/SA_cons.xdc]
-Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/constrs_1/new/SA_cons.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/constrs_1/new/SA_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/S_ADDER_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/S_ADDER_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/constrs_1/new/CLA_wrapper_cons.xdc]
+Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/constrs_1/new/CLA_wrapper_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.srcs/constrs_1/new/CLA_wrapper_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CLA_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/CLA_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 780.215 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 731.398 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 780.215 ; gain = 490.246
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 731.398 ; gain = 473.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 780.215 ; gain = 490.246
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 731.398 ; gain = 473.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for S_ADDER_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for S_ADDER_i/SubAdder_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for S_ADDER_i/ssd_mux_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for S_ADDER_i/ssd_dec_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for S_ADDER_i/xlslice_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for S_ADDER_i/xlslice_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for S_ADDER_i/PIPO_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 780.215 ; gain = 490.246
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 731.398 ; gain = 473.535
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "r_Count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 780.215 ; gain = 490.246
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 731.398 ; gain = 473.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -143,15 +106,23 @@ Report RTL Partitions:
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
-	   2 Input      8 Bit         XORs := 1     
-	   2 Input      1 Bit         XORs := 25    
+	   2 Input      1 Bit         XORs := 12    
 +---Registers : 
-	                8 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -159,10 +130,15 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module PIPO 
+Module CLA_wrapper 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
 Module FullAdder_bitslice 
 Detailed RTL Component Info : 
 +---XORs : 
@@ -170,22 +146,29 @@ Detailed RTL Component Info :
 Module CLA 
 Detailed RTL Component Info : 
 +---XORs : 
-	   2 Input      1 Bit         XORs := 8     
-Module SubAdder 
+	   2 Input      1 Bit         XORs := 4     
+Module HZ_Counter 
 Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      8 Bit         XORs := 1     
-	   2 Input      1 Bit         XORs := 1     
-Module ssd_dec 
-Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
-	                7 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module ssd_mux 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	                2 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input      4 Bit        Muxes := 2     
+Module ssd_dec 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -202,16 +185,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design S_ADDER_xlslice_1_0 has unconnected port Din[7]
-WARNING: [Synth 8-3331] design S_ADDER_xlslice_1_0 has unconnected port Din[6]
-WARNING: [Synth 8-3331] design S_ADDER_xlslice_1_0 has unconnected port Din[5]
-WARNING: [Synth 8-3331] design S_ADDER_xlslice_1_0 has unconnected port Din[4]
-WARNING: [Synth 8-3331] design S_ADDER_xlslice_0_0 has unconnected port Din[3]
-WARNING: [Synth 8-3331] design S_ADDER_xlslice_0_0 has unconnected port Din[2]
-WARNING: [Synth 8-3331] design S_ADDER_xlslice_0_0 has unconnected port Din[1]
-WARNING: [Synth 8-3331] design S_ADDER_xlslice_0_0 has unconnected port Din[0]
+INFO: [Synth 8-5545] ROM "SVD/r_Count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "SVD/o_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 780.215 ; gain = 490.246
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 731.398 ; gain = 473.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -223,13 +200,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 780.215 ; gain = 490.246
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 744.113 ; gain = 486.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 781.504 ; gain = 491.535
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 765.934 ; gain = 508.070
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -241,7 +218,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 781.504 ; gain = 491.535
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 765.934 ; gain = 508.070
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -265,7 +242,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 781.504 ; gain = 491.535
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 765.934 ; gain = 508.070
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -278,7 +255,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 781.504 ; gain = 491.535
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 765.934 ; gain = 508.070
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -290,25 +267,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 781.504 ; gain = 491.535
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 765.934 ; gain = 508.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 781.504 ; gain = 491.535
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 765.934 ; gain = 508.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 781.504 ; gain = 491.535
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 765.934 ; gain = 508.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 781.504 ; gain = 491.535
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 765.934 ; gain = 508.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -325,41 +302,35 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |     6|
-|3     |LUT1   |     1|
-|4     |LUT2   |     5|
-|5     |LUT4   |    10|
-|6     |LUT5   |     2|
-|7     |LUT6   |    10|
-|8     |FDRE   |    38|
-|9     |IBUF   |    11|
-|10    |OBUF   |    12|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     2|
+|4     |LUT2   |     6|
+|5     |LUT4   |     6|
+|6     |LUT5   |    38|
+|7     |LUT6   |    12|
+|8     |FDCE   |    33|
+|9     |FDRE   |    14|
+|10    |IBUF   |    10|
+|11    |OBUF   |    12|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+---------------+---------------------+------+
-|      |Instance       |Module               |Cells |
-+------+---------------+---------------------+------+
-|1     |top            |                     |    96|
-|2     |  S_ADDER_i    |S_ADDER              |    72|
-|3     |    PIPO_0     |S_ADDER_PIPO_0_0     |     8|
-|4     |      inst     |PIPO                 |     8|
-|5     |    SubAdder_0 |S_ADDER_SubAdder_0_1 |    12|
-|6     |    ssd_dec_0  |S_ADDER_ssd_dec_0_0  |    14|
-|7     |      inst     |ssd_dec              |    14|
-|8     |    ssd_mux_0  |S_ADDER_ssd_mux_0_0  |    38|
-|9     |      inst     |ssd_mux              |    38|
-|10    |    xlslice_0  |S_ADDER_xlslice_0_0  |     0|
-|11    |    xlslice_1  |S_ADDER_xlslice_1_0  |     0|
-+------+---------------+---------------------+------+
++------+---------+-----------+------+
+|      |Instance |Module     |Cells |
++------+---------+-----------+------+
+|1     |top      |           |   142|
+|2     |  SVD    |HZ_Counter |    82|
+|3     |  digit  |ssd_dec    |     7|
+|4     |  sw1    |ssd_mux    |    16|
++------+---------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 781.504 ; gain = 491.535
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 765.934 ; gain = 508.070
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 781.504 ; gain = 154.199
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 781.504 ; gain = 491.535
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 765.934 ; gain = 188.332
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 765.934 ; gain = 508.070
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -367,11 +338,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-48 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+29 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 789.926 ; gain = 506.070
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 768.586 ; gain = 523.598
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.runs/synth_1/S_ADDER_wrapper.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file S_ADDER_wrapper_utilization_synth.rpt -pb S_ADDER_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 789.926 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 29 16:22:26 2018...
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Module_9/Module_9.runs/synth_1/CLA_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file CLA_wrapper_utilization_synth.rpt -pb CLA_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 768.586 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 20 16:24:48 2018...
