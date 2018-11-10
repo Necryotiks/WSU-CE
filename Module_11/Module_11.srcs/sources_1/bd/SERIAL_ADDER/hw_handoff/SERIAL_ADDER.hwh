@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov  8 11:59:31 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov  9 16:11:44 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="SERIAL_ADDER" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -26,8 +26,8 @@
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="SerialAdder_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="slowest_sync_clk"/>
+        <CONNECTION INSTANCE="SerialAdder_0" PORT="i_CLK"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">

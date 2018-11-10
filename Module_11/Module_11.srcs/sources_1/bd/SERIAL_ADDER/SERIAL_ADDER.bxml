@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="SERIAL_ADDER" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1541707171"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1541707171"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1541707171"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1541707171"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1541819672"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1541819672"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1541819672"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1541819672"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\SERIAL_ADDER_SerialAdder_0_0\SERIAL_ADDER_SerialAdder_0_0.xci" Type="IP">
         <Instance HierarchyPath="SerialAdder_0"/>
@@ -55,6 +55,22 @@
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="ip\SERIAL_ADDER_SIPO_0_0\SERIAL_ADDER_SIPO_0_0.xci" Type="IP">
+        <Instance HierarchyPath="SIPO_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\SERIAL_ADDER_dff_0_0\SERIAL_ADDER_dff_0_0.xci" Type="IP">
+        <Instance HierarchyPath="dff_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
       </File>
     </FileCollection>
   </CompositeFile>
