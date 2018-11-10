@@ -50,12 +50,11 @@
 // IP VLNV: xilinx.com:module_ref:ALU:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "ALU,Vivado 2018.2" *)
-(* CHECK_LICENSE_TYPE = "ARITHMETIC_LOGIC_UNIT_ALU_0_0,ALU,{}" *)
-(* CORE_GENERATION_INFO = "ARITHMETIC_LOGIC_UNIT_ALU_0_0,ALU,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=ALU,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VHDL}" *)
+`timescale 1ns/1ps
+
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module ARITHMETIC_LOGIC_UNIT_ALU_0_0 (
+module ARITH_ALU_0_0 (
   i_A,
   i_B,
   i_Sel,
