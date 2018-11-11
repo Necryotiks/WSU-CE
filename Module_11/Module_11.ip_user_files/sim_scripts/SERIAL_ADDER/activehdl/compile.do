@@ -23,7 +23,10 @@ vcom -work xil_defaultlib -93 \
 
 vlog -work xil_defaultlib  -v2k5 \
 "../../../bd/SERIAL_ADDER/sim/SERIAL_ADDER.v" \
-
+"../../../bd/SERIAL_ADDER/ip/SERIAL_ADDER_SIPO_0_0/sim/SERIAL_ADDER_SIPO_0_0.v" \
+"../../../bd/SERIAL_ADDER/ip/SERIAL_ADDER_PISO_0_0/sim/SERIAL_ADDER_PISO_0_0.v" \
+"../../../bd/SERIAL_ADDER/ip/SERIAL_ADDER_dff_0_0/sim/SERIAL_ADDER_dff_0_0.v" \
+"../../../bd/SERIAL_ADDER/ip/SERIAL_ADDER_PISO_0_1/sim/SERIAL_ADDER_PISO_0_1.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

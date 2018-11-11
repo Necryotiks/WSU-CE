@@ -1,33 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov  8 11:59:31 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Nov 10 21:34:09 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="SERIAL_ADDER" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="O" NAME="o_Cout_0" SIGIS="undef" SIGNAME="SerialAdder_0_o_Cout">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="SerialAdder_0" PORT="o_Cout"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="o_Sum_0" SIGIS="undef" SIGNAME="SerialAdder_0_o_Sum">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="SerialAdder_0" PORT="o_Sum"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="i_B_0" SIGIS="undef" SIGNAME="External_Ports_i_B_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="SerialAdder_0" PORT="i_B"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="i_A_0" SIGIS="undef" SIGNAME="External_Ports_i_A_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="SerialAdder_0" PORT="i_A"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="SerialAdder_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="slowest_sync_clk"/>
+        <CONNECTION INSTANCE="PISO_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="dff_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="PISO_1" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="SIPO_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="SerialAdder_0" PORT="i_CLK"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
@@ -35,11 +19,125 @@
         <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="ext_reset_in"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" LEFT="7" NAME="i_IN_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_IN_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PISO_1" PORT="i_IN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="i_IN_1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_IN_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PISO_0" PORT="i_IN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_SFT_LD_0" SIGIS="undef" SIGNAME="External_Ports_i_SFT_LD_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PISO_0" PORT="i_SFT_LD"/>
+        <CONNECTION INSTANCE="PISO_1" PORT="i_SFT_LD"/>
+        <CONNECTION INSTANCE="SIPO_0" PORT="i_SFT"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="o_OUT_0" RIGHT="0" SIGIS="undef" SIGNAME="SIPO_0_o_OUT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SIPO_0" PORT="o_OUT"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES/>
 
   <MODULES>
+    <MODULE FULLNAME="/PISO_0" HWVERSION="1.0" INSTANCE="PISO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PISO" VLNV="xilinx.com:module_ref:PISO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="BUS_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="SERIAL_ADDER_PISO_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_IN" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_IN_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_IN_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_SFT_LD" SIGIS="undef" SIGNAME="External_Ports_i_SFT_LD_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SFT_LD_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_OUT" SIGIS="undef" SIGNAME="PISO_0_o_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SerialAdder_0" PORT="i_A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/PISO_1" HWVERSION="1.0" INSTANCE="PISO_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PISO" VLNV="xilinx.com:module_ref:PISO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="BUS_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="SERIAL_ADDER_PISO_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_IN" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_IN_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_IN_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_SFT_LD" SIGIS="undef" SIGNAME="External_Ports_i_SFT_LD_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SFT_LD_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_OUT" SIGIS="undef" SIGNAME="PISO_1_o_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SerialAdder_0" PORT="i_B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/SIPO_0" HWVERSION="1.0" INSTANCE="SIPO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SIPO" VLNV="xilinx.com:module_ref:SIPO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="SERIAL_ADDER_SIPO_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="i_SDI" SIGIS="undef" SIGNAME="SerialAdder_0_o_Sum">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SerialAdder_0" PORT="o_Sum"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_SFT" SIGIS="undef" SIGNAME="External_Ports_i_SFT_LD_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SFT_LD_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_OUT" RIGHT="0" SIGIS="undef" SIGNAME="SIPO_0_o_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_OUT_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE FULLNAME="/SerialAdder_0" HWVERSION="1.0" INSTANCE="SerialAdder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SerialAdder" VLNV="xilinx.com:module_ref:SerialAdder:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -57,24 +155,59 @@
             <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="i_A" SIGIS="undef" SIGNAME="External_Ports_i_A_0">
+        <PORT DIR="I" NAME="i_A" SIGIS="undef" SIGNAME="PISO_0_o_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="i_A_0"/>
+            <CONNECTION INSTANCE="PISO_0" PORT="o_OUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="i_B" SIGIS="undef" SIGNAME="External_Ports_i_B_0">
+        <PORT DIR="I" NAME="i_B" SIGIS="undef" SIGNAME="PISO_1_o_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="i_B_0"/>
+            <CONNECTION INSTANCE="PISO_1" PORT="o_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Cin" SIGIS="undef" SIGNAME="dff_0_o_Q">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dff_0" PORT="o_Q"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_Sum" SIGIS="undef" SIGNAME="SerialAdder_0_o_Sum">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="o_Sum_0"/>
+            <CONNECTION INSTANCE="SIPO_0" PORT="i_SDI"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_Cout" SIGIS="undef" SIGNAME="SerialAdder_0_o_Cout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="o_Cout_0"/>
+            <CONNECTION INSTANCE="dff_0" PORT="i_D"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/dff_0" HWVERSION="1.0" INSTANCE="dff_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dff" VLNV="xilinx.com:module_ref:dff:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="SERIAL_ADDER_dff_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_D" SIGIS="undef" SIGNAME="SerialAdder_0_o_Cout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SerialAdder_0" PORT="o_Cout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Q" SIGIS="undef" SIGNAME="dff_0_o_Q">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SerialAdder_0" PORT="i_Cin"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -119,6 +252,7 @@
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="dff_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="SerialAdder_0" PORT="i_RST"/>
           </CONNECTIONS>
         </PORT>

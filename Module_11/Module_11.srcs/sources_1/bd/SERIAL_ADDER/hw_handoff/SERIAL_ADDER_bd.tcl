@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# SerialAdder
+# PISO, PISO, SIPO, SerialAdder, dff
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -164,16 +164,49 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set i_A_0 [ create_bd_port -dir I i_A_0 ]
-  set i_B_0 [ create_bd_port -dir I i_B_0 ]
   set i_CLK [ create_bd_port -dir I -type clk i_CLK ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000} \
  ] $i_CLK
+  set i_IN_0 [ create_bd_port -dir I -from 7 -to 0 i_IN_0 ]
+  set i_IN_1 [ create_bd_port -dir I -from 7 -to 0 i_IN_1 ]
   set i_RST [ create_bd_port -dir I -type rst i_RST ]
-  set o_Cout_0 [ create_bd_port -dir O o_Cout_0 ]
-  set o_Sum_0 [ create_bd_port -dir O o_Sum_0 ]
+  set i_SFT_LD_0 [ create_bd_port -dir I i_SFT_LD_0 ]
+  set o_OUT_0 [ create_bd_port -dir O -from 7 -to 0 o_OUT_0 ]
 
+  # Create instance: PISO_0, and set properties
+  set block_name PISO
+  set block_cell_name PISO_0
+  if { [catch {set PISO_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $PISO_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: PISO_1, and set properties
+  set block_name PISO
+  set block_cell_name PISO_1
+  if { [catch {set PISO_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $PISO_1 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: SIPO_0, and set properties
+  set block_name SIPO
+  set block_cell_name SIPO_0
+  if { [catch {set SIPO_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $SIPO_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: SerialAdder_0, and set properties
   set block_name SerialAdder
   set block_cell_name SerialAdder_0
@@ -185,17 +218,33 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: dff_0, and set properties
+  set block_name dff
+  set block_cell_name dff_0
+  if { [catch {set dff_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $dff_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: rst_clk_100MHz_100M, and set properties
   set rst_clk_100MHz_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_100MHz_100M ]
 
   # Create port connections
-  connect_bd_net -net SerialAdder_0_o_Cout [get_bd_ports o_Cout_0] [get_bd_pins SerialAdder_0/o_Cout]
-  connect_bd_net -net SerialAdder_0_o_Sum [get_bd_ports o_Sum_0] [get_bd_pins SerialAdder_0/o_Sum]
-  connect_bd_net -net clk_100MHz_1 [get_bd_ports i_CLK] [get_bd_pins SerialAdder_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk]
+  connect_bd_net -net PISO_0_o_OUT [get_bd_pins PISO_0/o_OUT] [get_bd_pins SerialAdder_0/i_A]
+  connect_bd_net -net PISO_1_o_OUT [get_bd_pins PISO_1/o_OUT] [get_bd_pins SerialAdder_0/i_B]
+  connect_bd_net -net SIPO_0_o_OUT [get_bd_ports o_OUT_0] [get_bd_pins SIPO_0/o_OUT]
+  connect_bd_net -net SerialAdder_0_o_Cout [get_bd_pins SerialAdder_0/o_Cout] [get_bd_pins dff_0/i_D]
+  connect_bd_net -net SerialAdder_0_o_Sum [get_bd_pins SIPO_0/i_SDI] [get_bd_pins SerialAdder_0/o_Sum]
+  connect_bd_net -net clk_100MHz_1 [get_bd_ports i_CLK] [get_bd_pins PISO_0/i_CLK] [get_bd_pins PISO_1/i_CLK] [get_bd_pins SIPO_0/i_CLK] [get_bd_pins SerialAdder_0/i_CLK] [get_bd_pins dff_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk]
+  connect_bd_net -net dff_0_o_Q [get_bd_pins SerialAdder_0/i_Cin] [get_bd_pins dff_0/o_Q]
   connect_bd_net -net ext_reset_in_0_1 [get_bd_ports i_RST] [get_bd_pins rst_clk_100MHz_100M/ext_reset_in]
-  connect_bd_net -net i_A_0_1 [get_bd_ports i_A_0] [get_bd_pins SerialAdder_0/i_A]
-  connect_bd_net -net i_B_0_1 [get_bd_ports i_B_0] [get_bd_pins SerialAdder_0/i_B]
-  connect_bd_net -net rst_clk_100MHz_100M_peripheral_aresetn [get_bd_pins SerialAdder_0/i_RST] [get_bd_pins rst_clk_100MHz_100M/peripheral_aresetn]
+  connect_bd_net -net i_IN_0_1 [get_bd_ports i_IN_0] [get_bd_pins PISO_1/i_IN]
+  connect_bd_net -net i_IN_1_1 [get_bd_ports i_IN_1] [get_bd_pins PISO_0/i_IN]
+  connect_bd_net -net i_SFT_LD_0_1 [get_bd_ports i_SFT_LD_0] [get_bd_pins PISO_0/i_SFT_LD] [get_bd_pins PISO_1/i_SFT_LD] [get_bd_pins SIPO_0/i_SFT]
+  connect_bd_net -net rst_clk_100MHz_100M_peripheral_aresetn [get_bd_pins SerialAdder_0/i_RST] [get_bd_pins dff_0/i_RST] [get_bd_pins rst_clk_100MHz_100M/peripheral_aresetn]
 
   # Create address segments
 

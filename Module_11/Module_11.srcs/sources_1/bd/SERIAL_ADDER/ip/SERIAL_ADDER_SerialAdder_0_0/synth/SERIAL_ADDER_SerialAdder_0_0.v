@@ -60,6 +60,7 @@ module SERIAL_ADDER_SerialAdder_0_0 (
   i_RST,
   i_A,
   i_B,
+  i_Cin,
   o_Sum,
   o_Cout
 );
@@ -72,6 +73,7 @@ input wire i_CLK;
 input wire i_RST;
 input wire i_A;
 input wire i_B;
+input wire i_Cin;
 output wire o_Sum;
 output wire o_Cout;
 
@@ -80,6 +82,7 @@ output wire o_Cout;
     .i_RST(i_RST),
     .i_A(i_A),
     .i_B(i_B),
+    .i_Cin(i_Cin),
     .o_Sum(o_Sum),
     .o_Cout(o_Cout)
   );

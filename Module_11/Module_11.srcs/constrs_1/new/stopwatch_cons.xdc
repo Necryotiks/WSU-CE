@@ -26,3 +26,5 @@ set_property -dict { PACKAGE_PIN H18   IOSTANDARD LVCMOS33 } [get_ports { o_Cath
 
 #Switches
 set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { i_TIMER_0 }]; #IO_L19N_T3_VREF_34 Schematic=SW0
+
+

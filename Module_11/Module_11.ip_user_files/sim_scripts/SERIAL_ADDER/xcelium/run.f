@@ -12,6 +12,10 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/SERIAL_ADDER/sim/SERIAL_ADDER.v" \
+  "../../../bd/SERIAL_ADDER/ip/SERIAL_ADDER_SIPO_0_0/sim/SERIAL_ADDER_SIPO_0_0.v" \
+  "../../../bd/SERIAL_ADDER/ip/SERIAL_ADDER_PISO_0_0/sim/SERIAL_ADDER_PISO_0_0.v" \
+  "../../../bd/SERIAL_ADDER/ip/SERIAL_ADDER_dff_0_0/sim/SERIAL_ADDER_dff_0_0.v" \
+  "../../../bd/SERIAL_ADDER/ip/SERIAL_ADDER_PISO_0_1/sim/SERIAL_ADDER_PISO_0_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v
