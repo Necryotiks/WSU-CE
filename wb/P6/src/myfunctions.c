@@ -1,3 +1,6 @@
+
+
+/*
 /*
  * myfunctions.c
  *
@@ -55,7 +58,7 @@ uint8_t D3 =0;
 uint8_t D4 =0;
 int START = 0;
 
-uint8_t buffer[32] = {0};
+uint8_t buffer[32];
 
 #define UART1_CON_Addr 0xE0001000
 #define UART1_Mode_Addr 0xE0001004
@@ -75,6 +78,7 @@ uint8_t buffer[32] = {0};
 #define UART1_FCD_Addr 0xE0001038
 #define UART1_TFIFO_LEV_Addr 0xE0001044
 
+int count=0;
 void activateLEDS()
 {
 	uint32_t* ledBaseAddress = (uint32_t*)0x4BB00000;
@@ -227,32 +231,44 @@ void SendChar(uint8_t C)
 	*((uint32_t*) UART1_FIFO_Addr) = C;
 }
 void StoreChar(uint8_t C)
-{	int j = 0;
-	if(buffer[j] == 0)
-	{
-		buffer[j] = C;
-	}
-	j++;
+{
+		buffer[count] = C;
+		count = count + 1;
+
 }
 
 void GPIO_IRQ(uint32_t button)
 {
 	uint32_t BTN5=0x80000;
 	uint32_t BTN4=0x40000;
-	int i = 0;
 	if(button == BTN5)
 	{
-		uint8_t C = 13;
-		SendChar(C);
-		for(i = 0; i < (sizeof(buffer)/buffer[0]); ++i)
+		if(buffer != NULL)
 		{
-			SendChar(buffer[i]);
+			uint8_t C = '\n';
+			SendChar(C);
+			C = '>';
+			SendChar(C);
+			C = '>';
+			SendChar(C);
+			//*((uint32_t*) UART1_FIFO_Addr) = buffer[0];
+			for(int i = 0; i < count-1; i++)//count -1 to ignore carridge return.
+			{
+				SendChar(buffer[i]); //write buffer to FIFO
+			}
+			count = 0;
 		}
-		i = 0;
 	}
 	else if(button == BTN4)
 	{
-		uint8_t C = 'T';
+
+		uint8_t C = '\n';
+		SendChar(C);
+		C = '>';
+		SendChar(C);
+		C = '>';
+		SendChar(C);
+		C = 'T';
 		SendChar(C);
 		C = 'E';
 		SendChar(C);
@@ -301,4 +317,6 @@ void sendREADY()
 	C = 'Y';
 	SendChar(C);
 }
+
+
 
