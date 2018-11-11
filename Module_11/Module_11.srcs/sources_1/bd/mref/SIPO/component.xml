@@ -6,6 +6,25 @@
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
+<<<<<<< HEAD
+=======
+      <spirit:name>i_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>i_RST</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
       <spirit:name>i_CLK</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
@@ -20,6 +39,15 @@
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
+<<<<<<< HEAD
+=======
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.I_CLK.ASSOCIATED_RESET">i_RST</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
     </spirit:busInterface>
   </spirit:busInterfaces>
   <spirit:model>
@@ -33,7 +61,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
+<<<<<<< HEAD
             <spirit:value>7d1a77eb</spirit:value>
+=======
+            <spirit:value>69941c86</spirit:value>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -46,7 +78,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
+<<<<<<< HEAD
             <spirit:value>7d1a77eb</spirit:value>
+=======
+            <spirit:value>69941c86</spirit:value>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,7 +110,11 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+<<<<<<< HEAD
         <spirit:name>i_SFT</spirit:name>
+=======
+        <spirit:name>i_RST</spirit:name>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -100,7 +140,11 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+<<<<<<< HEAD
         <spirit:name>o_OUT</spirit:name>
+=======
+        <spirit:name>o_LED</spirit:name>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -151,7 +195,11 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
+<<<<<<< HEAD
       <xilinx:coreCreationDateTime>2018-11-11T05:18:39Z</xilinx:coreCreationDateTime>
+=======
+      <xilinx:coreCreationDateTime>2018-11-10T00:30:04Z</xilinx:coreCreationDateTime>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>

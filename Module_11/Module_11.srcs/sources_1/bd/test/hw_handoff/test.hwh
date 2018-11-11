@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov  9 20:19:20 2018" VIVADOVERSION="2018.2">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="test" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="i_SDI_0" SIGIS="undef" SIGNAME="External_Ports_i_SDI_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SIPO_0" PORT="i_SDI"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_RST_0" SIGIS="rst" SIGNAME="External_Ports_i_RST_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SIPO_0" PORT="i_RST"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK_0" SIGIS="clk" SIGNAME="External_Ports_i_CLK_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SIPO_0" PORT="i_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="o_LED_0" RIGHT="0" SIGIS="undef" SIGNAME="SIPO_0_o_LED">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SIPO_0" PORT="o_LED"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/SIPO_0" HWVERSION="1.0" INSTANCE="SIPO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SIPO" VLNV="xilinx.com:module_ref:SIPO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="test_SIPO_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="i_SDI" SIGIS="undef" SIGNAME="External_Ports_i_SDI_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_SDI_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_RST_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_LED" RIGHT="0" SIGIS="undef" SIGNAME="SIPO_0_o_LED">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_LED_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

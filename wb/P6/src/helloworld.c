@@ -64,7 +64,7 @@ int main()
     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
     while(1){
     	uint32_t R= *((uint32_t*) UART1_C_Stat_Addr);
-    	if((R && 0x0002)== 0x0)
+    	if((R & 0x0002)!= 0x2)
     	{
     	uint8_t C = *((uint32_t*) UART1_FIFO_Addr);
     	StoreChar(C);

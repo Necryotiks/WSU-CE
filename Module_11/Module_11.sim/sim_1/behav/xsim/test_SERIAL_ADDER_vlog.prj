@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../Module_11.srcs/sources_1/new/SerialAdder.v" \
+<<<<<<< HEAD
 "../../../../../Parts/SIPO.v" \
 "../../../../../Parts/PISO.v" \
 "../../../../../Parts/dff.v" \
@@ -10,6 +11,10 @@ verilog xil_defaultlib  \
 "../../../../Module_11.ip_user_files/bd/SERIAL_ADDER/ip/SERIAL_ADDER_PISO_0_0/sim/SERIAL_ADDER_PISO_0_0.v" \
 "../../../../Module_11.ip_user_files/bd/SERIAL_ADDER/ip/SERIAL_ADDER_dff_0_0/sim/SERIAL_ADDER_dff_0_0.v" \
 "../../../../Module_11.ip_user_files/bd/SERIAL_ADDER/ip/SERIAL_ADDER_PISO_0_1/sim/SERIAL_ADDER_PISO_0_1.v" \
+=======
+"../../../../Module_11.ip_user_files/bd/SERIAL_ADDER/ip/SERIAL_ADDER_SerialAdder_0_0/sim/SERIAL_ADDER_SerialAdder_0_0.v" \
+"../../../../Module_11.ip_user_files/bd/SERIAL_ADDER/sim/SERIAL_ADDER.v" \
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

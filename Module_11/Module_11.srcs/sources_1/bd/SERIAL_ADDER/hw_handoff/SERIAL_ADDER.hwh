@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<<<<<<< HEAD
 <EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Nov 10 21:34:09 2018" VIVADOVERSION="2018.2">
+=======
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov  9 16:11:44 2018" VIVADOVERSION="2018.2">
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="SERIAL_ADDER" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -31,9 +35,14 @@
     </PORT>
     <PORT DIR="I" NAME="i_SFT_LD_0" SIGIS="undef" SIGNAME="External_Ports_i_SFT_LD_0">
       <CONNECTIONS>
+<<<<<<< HEAD
         <CONNECTION INSTANCE="PISO_0" PORT="i_SFT_LD"/>
         <CONNECTION INSTANCE="PISO_1" PORT="i_SFT_LD"/>
         <CONNECTION INSTANCE="SIPO_0" PORT="i_SFT"/>
+=======
+        <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="slowest_sync_clk"/>
+        <CONNECTION INSTANCE="SerialAdder_0" PORT="i_CLK"/>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="7" NAME="o_OUT_0" RIGHT="0" SIGIS="undef" SIGNAME="SIPO_0_o_OUT">

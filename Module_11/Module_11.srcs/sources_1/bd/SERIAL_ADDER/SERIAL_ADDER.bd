@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<<<<<<< HEAD
 <bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x878DFE2A108D9C25" bd:device="xc7z007sclg400-1" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2018.2" bd:top="SERIAL_ADDER" bd:version="1.00.a">
+=======
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xE9E90B742915C6DF" bd:device="xc7z007sclg400-1" bd:synthFlowMode="None" bd:tool_version="2018.2" bd:top="SERIAL_ADDER" bd:version="1.00.a">
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -34,29 +38,6 @@
           <spirit:parameter>
             <spirit:name>FREQ_HZ</spirit:name>
             <spirit:value>100000000</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="user"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>PHASE</spirit:name>
-            <spirit:value>0.000</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>CLK_DOMAIN</spirit:name>
-            <spirit:value>SERIAL_ADDER_clk_100MHz</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -77,17 +58,7 @@
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>POLARITY</spirit:name>
-            <spirit:value>ACTIVE_LOW</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-        </spirit:parameters>
+        <spirit:parameters/>
       </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:model>
@@ -100,6 +71,7 @@
       </spirit:views>
       <spirit:ports>
         <spirit:port>
+<<<<<<< HEAD
           <spirit:name>i_CLK</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -113,6 +85,9 @@
         </spirit:port>
         <spirit:port>
           <spirit:name>i_IN_0</spirit:name>
+=======
+          <spirit:name>i_B_0</spirit:name>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
             <spirit:vector>
@@ -165,11 +140,19 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+<<<<<<< HEAD
         <spirit:instanceName>PISO_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="PISO" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">SERIAL_ADDER_PISO_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceName">PISO</spirit:configurableElementValue>
+=======
+        <spirit:instanceName>SIPO_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="SIPO" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">SERIAL_ADDER_SIPO_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">SIPO</spirit:configurableElementValue>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
@@ -187,6 +170,7 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+<<<<<<< HEAD
         <spirit:instanceName>PISO_1</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="PISO" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -209,6 +193,8 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+=======
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
         <spirit:instanceName>SerialAdder_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="SerialAdder" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -225,6 +211,7 @@
         <spirit:name>clk_100MHz_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="i_CLK"/>
         <spirit:internalPortReference spirit:componentRef="rst_clk_100MHz_100M" spirit:portRef="slowest_sync_clk"/>
+<<<<<<< HEAD
         <spirit:internalPortReference spirit:componentRef="PISO_0" spirit:portRef="i_CLK"/>
         <spirit:internalPortReference spirit:componentRef="dff_0" spirit:portRef="i_CLK"/>
         <spirit:internalPortReference spirit:componentRef="PISO_1" spirit:portRef="i_CLK"/>
@@ -266,6 +253,9 @@
         <spirit:name>dff_0_o_Q</spirit:name>
         <spirit:internalPortReference spirit:componentRef="dff_0" spirit:portRef="o_Q"/>
         <spirit:internalPortReference spirit:componentRef="SerialAdder_0" spirit:portRef="i_Cin"/>
+=======
+        <spirit:internalPortReference spirit:componentRef="SerialAdder_0" spirit:portRef="i_CLK"/>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>i_IN_0_1</spirit:name>
@@ -288,6 +278,16 @@
         <spirit:name>SIPO_0_o_OUT</spirit:name>
         <spirit:internalPortReference spirit:componentRef="SIPO_0" spirit:portRef="o_OUT"/>
         <spirit:externalPortReference spirit:portRef="o_OUT_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>SerialAdder_0_o_Sum</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="SerialAdder_0" spirit:portRef="o_Sum"/>
+        <spirit:internalPortReference spirit:componentRef="SIPO_0" spirit:portRef="i_SDI"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>SerialAdder_0_o_Cout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="SerialAdder_0" spirit:portRef="o_Cout"/>
+        <spirit:internalPortReference spirit:componentRef="dff_0" spirit:portRef="i_D"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>
