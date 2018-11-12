@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Module_11_Alt.srcs/sources_1/imports/new/SerialAdder.v" \
+"../../../../Module_11_Alt.srcs/sources_1/imports/Parts/SIPO.v" \
+"../../../../Module_11_Alt.srcs/sources_1/imports/Parts/PISO.v" \
+"../../../../Module_11_Alt.srcs/sources_1/imports/Parts/dff.v" \
+"../../../../Module_11_Alt.ip_user_files/bd/S_A_FSM/ip/S_A_FSM_SerialAdder_0_0/sim/S_A_FSM_SerialAdder_0_0.v" \
+"../../../../Module_11_Alt.ip_user_files/bd/S_A_FSM/ip/S_A_FSM_SIPO_0_0/sim/S_A_FSM_SIPO_0_0.v" \
+"../../../../Module_11_Alt.ip_user_files/bd/S_A_FSM/ip/S_A_FSM_PISO_0_0/sim/S_A_FSM_PISO_0_0.v" \
+"../../../../Module_11_Alt.ip_user_files/bd/S_A_FSM/ip/S_A_FSM_PISO_0_1/sim/S_A_FSM_PISO_0_1.v" \
+"../../../../Module_11_Alt.ip_user_files/bd/S_A_FSM/sim/S_A_FSM.v" \
+"../../../../Module_11_Alt.ip_user_files/bd/S_A_FSM/ip/S_A_FSM_dff_0_0/sim/S_A_FSM_dff_0_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
