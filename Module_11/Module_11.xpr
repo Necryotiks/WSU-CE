@@ -32,11 +32,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-<<<<<<< HEAD
     <Option Name="WTXSimLaunchSim" Val="5"/>
-=======
-    <Option Name="WTXSimLaunchSim" Val="1"/>
->>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -151,11 +147,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-<<<<<<< HEAD
       <File Path="$PPRDIR/../Parts/PISO.v">
-=======
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../Parts/SIPO.v">
->>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -163,31 +163,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-<<<<<<< HEAD
-      <File Path="$PPRDIR/../Parts/SIPO.v">
-=======
       <File Path="$PPRDIR/../Parts/dff.v">
->>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-<<<<<<< HEAD
-      <File Path="$PPRDIR/../Parts/dff.v">
-=======
-      <File Path="$PSRCDIR/sources_1/bd/test/test.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/test/hdl/test_wrapper.v">
->>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -215,11 +191,7 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-<<<<<<< HEAD
       <File Path="$PPRDIR/../../AppData/Roaming/Xilinx/Vivado/test_SERIAL_ADDER.vhd">
-=======
-      <File Path="$PPRDIR/../../../Xilinx/Vivado/test_SERIAL_ADDER.vhd">
->>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
