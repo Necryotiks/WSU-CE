@@ -1,19 +1,3 @@
-/*
- * myfunctions.c
- *
- *  Created on: Nov 10, 2018
- *      Author: Sergaljerk
- */
-
-
-/*
- * myfunctions.c
- *
- *  Created on: Nov 10, 2018
- *      Author: Sergaljerk
- */
-
-
 
 #include "myfunctions.h"
 #include <string.h>
@@ -66,6 +50,7 @@ uint8_t D3 =0;
 uint8_t D4 =0;
 int START = 0;
 
+
 uint8_t buffer[32];
 int count=0;
 
@@ -93,19 +78,23 @@ void activateLEDS(int LED_NUM)
 
 	if(LED_NUM == 1)
 	{
-		ledBaseAddress[1] = 0x00000001; //Turn on the LEDs
+		ledBaseAddress[1] = (ledBaseAddress[1] | 0x1); //Turn on the LEDs
+
 	}
 	else if(LED_NUM == 2)
 	{
-		ledBaseAddress[1] = 0x00000002; //Turn on the LEDs
+		ledBaseAddress[1] = (ledBaseAddress[1] | 0x2); //Turn on the LEDs
+
 	}
 	else if(LED_NUM == 3)
 	{
-		ledBaseAddress[1] = 0x00000004; //Turn on the LEDs
+		ledBaseAddress[1] = (ledBaseAddress[1] | 0x4); //Turn on the LEDs
+
 	}
 	else if(LED_NUM == 4)
 	{
-		ledBaseAddress[1] = 0x00000008; //Turn on the LEDs
+		ledBaseAddress[1] = (ledBaseAddress[1] | 0x8); //Turn on the LEDs
+
 	}
 	else
 	{
@@ -117,27 +106,26 @@ void activateLEDS(int LED_NUM)
 }
 void deactivateLEDS(int LED_NUM)
 {
-	if(LED_NUM == 1)
+	if(LED_NUM == 1 && (ledBaseAddress[1] & 0x1))
 		{
-			ledBaseAddress[0] = 0x0000000E; //Turn off the LEDs //1110
+			ledBaseAddress[1] = (ledBaseAddress[1] - 0x1); //Turn off the LEDs //1110
 		}
-		else if(LED_NUM == 2)
+		else if(LED_NUM == 2  && (ledBaseAddress[1] & 0x2))
 		{
-			ledBaseAddress[0] = 0x0000000D; //Turn off the LEDs //1101
+			ledBaseAddress[1] = (ledBaseAddress[1] - 0x2); //Turn off the LEDs //1101
 		}
-		else if(LED_NUM == 3)
+		else if(LED_NUM == 3 && (ledBaseAddress[1] & 0x4))
 		{
-			ledBaseAddress[0] = 0x0000000B; //Turn off the LEDs //1011
+			ledBaseAddress[1] = (ledBaseAddress[1] - 0x4); //Turn off the LEDs //1011
 		}
-		else if(LED_NUM == 4)
+		else if(LED_NUM == 4 && (ledBaseAddress[1] & 0x8))
 		{
-			ledBaseAddress[0] = 0x00000007; //Turn off the LEDs //0111
+			ledBaseAddress[1] = (ledBaseAddress[1] - 0x8); //Turn off the LEDs //0111
 		}
 		else
 		{
 			;
 		}
-	ledBaseAddress[0] = 0x0000000F; //enable the LEDs
 
 }
 void configureLEDS()
@@ -236,12 +224,16 @@ GPIODirectionModeB1[0] = 0x00000000;
 void initializeSVD()
 {
 	SVD[0] = 0x0;
-	SVD[5] = 0x02; // set decimal point
+	//SVD[5] = 0x02; // set decimal point
+	D1 = 0;
+	D2 = 0;
+	D3 = 0;
+	D4 = 0;
 	SVD[0] = 0x1;
-	SVD[1] = 0x0;
-	SVD[2] = 0x0;
-	SVD[3] = 0x0;
-	SVD[4] = 0x0;
+	SVD[1] = D1;
+	SVD[2] = D2;
+	SVD[3] = D3;
+	SVD[4] = D4;
 }
 
 void initGlobalTimer()
@@ -335,7 +327,10 @@ void sendREADY()
 	SendChar(C);
 
 }
-
+void svdOff()
+{
+	SVD[0] = 0x0;
+}
 void parseCMD()
 {
 
@@ -346,6 +341,13 @@ void parseCMD()
 	char * led2 ="LED2";
 	char * led3 ="LED3";
 	char * led4 ="LED4";
+	char * inc = "INCREMENT";
+	char * rst = "RESET";
+	char * d1 = "DIGIT1;";
+	char * d2 = "DIGIT2;";
+	char * d3 = "DIGIT3;";
+	char * d4 = "DIGIT4;";
+	char * svd = "SVD";
 	char * on = "ON;";
 	char * off = "OFF;";
 	//int j = 0;
@@ -370,12 +372,7 @@ void parseCMD()
 		}
 		else
 		{
-			uint8_t C = 'N';
-			SendChar(C);
-			C = 'O';
-			SendChar(C);
-			C = 'T';
-			SendChar(C);
+			invCMD();
 
 		}
 	}
@@ -388,16 +385,11 @@ void parseCMD()
 		}
 		else if(!strncmp(token,off,4))
 		{
-			deactivateLEDS(1);
+			deactivateLEDS(2);
 		}
 		else
 		{
-			uint8_t C = 'N';
-						SendChar(C);
-						C = 'O';
-						SendChar(C);
-						C = 'T';
-						SendChar(C);
+			invCMD();
 		}
 	}
 	else if(!strncmp(token,led3,6))
@@ -409,16 +401,11 @@ void parseCMD()
 		}
 		else if(!strncmp(token,off,4))
 		{
-			deactivateLEDS(1);
+			deactivateLEDS(3);
 		}
 		else
 		{
-			uint8_t C = 'N';
-						SendChar(C);
-						C = 'O';
-						SendChar(C);
-						C = 'T';
-						SendChar(C);
+			invCMD();
 		}
 	}
 	else if(!strncmp(token,led4,6))
@@ -430,25 +417,198 @@ void parseCMD()
 		}
 		else if(!strncmp(token,off,4))
 		{
-			deactivateLEDS(1);
+			deactivateLEDS(4);
 		}
 		else
 		{
-			uint8_t C = 'N';
-						SendChar(C);
-						C = 'O';
-						SendChar(C);
-						C = 'T';
-						SendChar(C);
+			invCMD();
 		}
+	}
+	else if(!strncmp(token,svd,6))
+	{
+		token = strtok(NULL," ");
+		if(!strncmp(token,on,3))
+		{
+			initializeSVD();
+		}
+		else if(!strncmp(token,off,4))
+		{
+			svdOff();
+		}
+		else
+		{
+			invCMD();
+		}
+	}
+	else if(!strncmp(token,inc,9))
+	{
+		token = strtok(NULL," ");
+		if(!strncmp(token,d1,7))
+		{
+			//TODO:add logic for interrupts later
+			incSVD(1);
+		}
+		else if(!strncmp(token,d2,7))
+		{
+			incSVD(2);
+		}
+		else if(!strncmp(token,d3,7))
+		{
+			incSVD(3);
+		}
+		else if(!strncmp(token,d4,7))
+		{
+			incSVD(4);
+		}
+	}
+	else if(!strncmp(token,rst,9))
+	{
+		token = strtok(NULL," ");
+		if(!strncmp(token,d1,7))
+		{
+			//TODO:add logic for interrupts later
+			resetSVD(1);
+		}
+		else if(!strncmp(token,d2,7))
+		{
+			resetSVD(2);
+		}
+		else if(!strncmp(token,d3,7))
+		{
+			resetSVD(3);
+		}
+		else if(!strncmp(token,d4,7))
+		{
+			resetSVD(4);
+		}
+	}
+	else
+	{
+		invCMD();
 	}
 	count = 0;
 
 	return;
 
 }
-int bufferEmpty()
+void invCMD()
 {
-
+	uint8_t C = 'C';
+	SendChar(C);
+	C = 'O';
+	SendChar(C);
+	C = 'M';
+	SendChar(C);
+	C = 'M';
+	SendChar(C);
+	C = 'M';
+	SendChar(C);
+	C = 'A';
+	SendChar(C);
+	C = 'N';
+	SendChar(C);
+	C = 'D';
+	SendChar(C);
+	C = ' ';
+	SendChar(C);
+	C = 'I';
+	SendChar(C);
+	C = 'N';
+	SendChar(C);
+	C = 'V';
+	SendChar(C);
+	C = 'A';
+	SendChar(C);
+	C = 'L';
+	SendChar(C);
+	C = 'I';
+	SendChar(C);
+	C = 'D';
+	SendChar(C);
+	sendREADY();
 }
+
+void incSVD(int digit)
+{
+	if(digit == 1)
+	{
+		if(D1 >= 9)
+		{
+			D1 = 0;
+		}
+		else
+		{
+			D1 = D1 + 1;
+		}
+		SVD[1] = D1;
+	}
+	else if(digit == 2)
+	{
+		if(D2 >= 9)
+		{
+			D2 = 0;
+		}
+		else
+		{
+			D2 = D2 + 1;
+		}
+		SVD[2] = D2;
+	}
+	else if(digit == 3)
+	{
+		if(D3 >= 9)
+		{
+			D3 = 0;
+		}
+		else
+		{
+			D3 = D3 + 1;
+		}
+		SVD[3] = D3;
+	}
+	else if(digit == 4)
+	{
+		if(D4 >= 9)
+		{
+			D4 = 0;
+		}
+		else
+		{
+			D4 = D4 + 1;
+		}
+		SVD[4] = D4;
+	}
+	else
+	{
+		return;
+	}
+}
+void resetSVD(int digit)
+{
+	if(digit == 1)
+	{
+		D1 = 0;
+		SVD[1] = D1;
+	}
+	else if(digit == 2)
+	{
+		D2 = 0;
+		SVD[2] = D2;
+	}
+	else if(digit == 3)
+	{
+		D3 = 0;
+		SVD[3] = D3;
+	}
+	else if(digit == 4)
+	{
+		D4 = 0;
+		SVD[4] = D4;
+	}
+	else
+	{
+		return;
+	}
+}
+
 
