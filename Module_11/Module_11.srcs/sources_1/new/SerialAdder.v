@@ -44,15 +44,9 @@ module SerialAdder(
         case(r_PREV_STATE)  
             STATE_0:
                 begin
-<<<<<<< HEAD
                     if(i_A == 1'b0 && i_B == 1'b0 && i_Cin == 1'b0)
                         r_NEXT_STATE = STATE_0;
                     else if((i_A == 1'b1 && i_B == 1'b1) | ((i_A ^ i_B) & i_Cin))
-=======
-                    if(~(i_A | i_B | i_Cin))
-                        r_NEXT_STATE = STATE_0;
-                    else if(i_A & i_B & i_Cin)
->>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
                         r_NEXT_STATE = STATE_2;
                     else
                         r_NEXT_STATE = STATE_1;    
