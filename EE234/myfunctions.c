@@ -17,6 +17,7 @@
 
 #include "myfunctions.h"
 #include <string.h>
+#include "xil_exception.h"
 uint32_t * interruptProcessorTargets= (uint32_t*)0xF8F01800;
 uint32_t * interruptPriorityMask =  (uint32_t*)0xF8F00104;
 uint32_t * cpuInterfaceControl = (uint32_t*)0xF8F00100;
@@ -221,6 +222,342 @@ void IRQHandler(void * data)
 	endofInterruptReg[0] = interruptID; //clear interrupt.
 
 }
+void IRQD1B4Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQD1B4(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQD1B5Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQD1B5(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQD2B4Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQD2B4(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQD2B5Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQD2B5(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQD3B4Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQD3B4(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQD3B5Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQD3B5(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQD4B4Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQD4B4(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQD4B5Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQD4B5(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQRD1B4Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQRD1B4(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQRD1B5Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQRD1B5(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQRD2B4Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQRD2B4(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQRD2B5Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQRD2B5(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQRD3B4Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQRD3B4(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQRD3B5Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQRD3B5(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQRD4B4Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQRD4B4(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
+void IRQRD4B5Handler(void * data)
+{
+	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+
+	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
+	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
+	if(interruptID == 52)
+	{
+		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+		GPIO_IRQRD4B5(buttonEvent);
+
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+	endofInterruptReg[0] = interruptID; //clear interrupt.
+
+}
 void configureIO()
 {
 	*((uint32_t*) 0xF8000000+0x8/4) = 0x0000DF0D;//???
@@ -299,25 +636,276 @@ void StoreChar(uint8_t C)
 
 void GPIO_IRQ(uint32_t button)
 {
-	uint32_t BTN5=0x80000;
+	//uint32_t BTN5=0x80000;
 	uint32_t BTN4=0x40000;
 
-	if(button == BTN5)
-	{
-		;
-	}
-	else if(button == BTN4)
-	{
 
-
+	if(button == BTN4)
+	{
+		//incSVD(1);
 	}
 	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
-	for(int i = 0; i < 1000000; i = i + 1)
+	//for(int i = 0; i < 1000000; i = i + 1)
+	//	{
+	//		;
+	//	}
+}
+void GPIO_IRQD1B4(uint32_t button)
+{
+	//uint32_t BTN5=0x80000;
+	uint32_t BTN4=0x40000;
+
+
+	if(button == BTN4)
+	{
+		incSVD(1);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
 		{
 			;
 		}
 }
+void GPIO_IRQD1B5(uint32_t button)
+{
+	uint32_t BTN5=0x80000;
+	//uint32_t BTN4=0x40000;
 
+
+	if(button == BTN5)
+	{
+		incSVD(1);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQD2B4(uint32_t button)
+{
+	//uint32_t BTN5=0x80000;
+	uint32_t BTN4=0x40000;
+
+
+	if(button == BTN4)
+	{
+		incSVD(2);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQD2B5(uint32_t button)
+{
+	uint32_t BTN5=0x80000;
+	//uint32_t BTN4=0x40000;
+
+
+	if(button == BTN5)
+	{
+		incSVD(2);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQD3B4(uint32_t button)
+{
+	//uint32_t BTN5=0x80000;
+	uint32_t BTN4=0x40000;
+
+
+	if(button == BTN4)
+	{
+		incSVD(3);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQD3B5(uint32_t button)
+{
+	uint32_t BTN5=0x80000;
+	//uint32_t BTN4=0x40000;
+
+
+	if(button == BTN5)
+	{
+		incSVD(3);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQD4B4(uint32_t button)
+{
+	//uint32_t BTN5=0x80000;
+	uint32_t BTN4=0x40000;
+
+
+	if(button == BTN4)
+	{
+		incSVD(4);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQD4B5(uint32_t button)
+{
+	uint32_t BTN5=0x80000;
+	//uint32_t BTN4=0x40000;
+
+
+	if(button == BTN5)
+	{
+		incSVD(4);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQRD1B4(uint32_t button)
+{
+	//uint32_t BTN5=0x80000;
+	uint32_t BTN4=0x40000;
+
+
+	if(button == BTN4)
+	{
+		resetSVD(1);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQRD1B5(uint32_t button)
+{
+	uint32_t BTN5=0x80000;
+	//uint32_t BTN4=0x40000;
+
+
+	if(button == BTN5)
+	{
+		resetSVD(1);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQRD2B4(uint32_t button)
+{
+	//uint32_t BTN5=0x80000;
+	uint32_t BTN4=0x40000;
+
+
+	if(button == BTN4)
+	{
+		resetSVD(2);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQRD2B5(uint32_t button)
+{
+	uint32_t BTN5=0x80000;
+	//uint32_t BTN4=0x40000;
+
+
+	if(button == BTN5)
+	{
+		resetSVD(2);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQRD3B4(uint32_t button)
+{
+	//uint32_t BTN5=0x80000;
+	uint32_t BTN4=0x40000;
+
+
+	if(button == BTN4)
+	{
+		resetSVD(3);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQRD3B5(uint32_t button)
+{
+	uint32_t BTN5=0x80000;
+	//uint32_t BTN4=0x40000;
+
+
+	if(button == BTN5)
+	{
+		resetSVD(3);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQRD4B4(uint32_t button)
+{
+	//uint32_t BTN5=0x80000;
+	uint32_t BTN4=0x40000;
+
+
+	if(button == BTN4)
+	{
+		resetSVD(4);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
+void GPIO_IRQRD4B5(uint32_t button)
+{
+	uint32_t BTN5=0x80000;
+	//uint32_t BTN4=0x40000;
+
+
+	if(button == BTN5)
+	{
+		resetSVD(4);
+	}
+	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
+	for(int i = 0; i < 10000; i = i + 1)
+		{
+			;
+		}
+}
 void initUART1()
 {
 
@@ -360,12 +948,18 @@ void parseCMD()
 	char * inc = "INCREMENT";
 	char * rst = "RESET";
 	char * d1 = "DIGIT1;";
+	char * d1x = "DIGIT1";
 	char * d2 = "DIGIT2;";
+	char * d2x = "DIGIT2";
 	char * d3 = "DIGIT3;";
+	char * d3x = "DIGIT3";
 	char * d4 = "DIGIT4;";
+	char * d4x = "DIGIT4";
 	char * svd = "SVD";
 	char * on = "ON;";
 	char * off = "OFF;";
+	char * btn4 = "BTN4;";
+	char * btn5 = "BTN5;";
 	//int j = 0;
 	for(int i = 0; i < count; i++)
 	{
@@ -461,20 +1055,124 @@ void parseCMD()
 		token = strtok(NULL," ");
 		if(!strncmp(token,d1,7))
 		{
-			//TODO:add logic for interrupts later
 			incSVD(1);
+
+		}
+		else if(!strncmp(token,d1x,6))
+		{
+			token = strtok(NULL," ");
+
+			if(!strncmp(token,on,2))
+			{
+				token = strtok(NULL," ");
+				if(!strncmp(token,btn4,5))
+				{
+					Xil_ExceptionRegisterHandler(5, IRQD1B4Handler, NULL);// build- in
+				}
+				else if (!strncmp(token,btn5,5))
+				{
+					Xil_ExceptionRegisterHandler(5, IRQD1B5Handler, NULL);// build- in
+				}
+				else
+				{
+					invCMD();
+				}
+			}
+			else
+			{
+				invCMD();
+			}
 		}
 		else if(!strncmp(token,d2,7))
 		{
 			incSVD(2);
 		}
+		else if(!strncmp(token,d2x,6))
+		{
+			token = strtok(NULL," ");
+
+					if(!strncmp(token,on,2))
+					{
+						token = strtok(NULL," ");
+						if(!strncmp(token,btn4,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQD2B4Handler, NULL);// build- in
+						}
+						else if (!strncmp(token,btn5,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQD2B5Handler, NULL);// build- in
+						}
+						else
+						{
+							invCMD();
+						}
+					}
+					else
+					{
+						invCMD();
+					}
+				}
 		else if(!strncmp(token,d3,7))
 		{
 			incSVD(3);
 		}
+		else if(!strncmp(token,d3x,6))
+				{
+					token = strtok(NULL," ");
+
+					if(!strncmp(token,on,2))
+					{
+						token = strtok(NULL," ");
+						if(!strncmp(token,btn4,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQD3B4Handler, NULL);// build- in
+						}
+						else if (!strncmp(token,btn5,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQD3B5Handler, NULL);// build- in
+						}
+						else
+						{
+							invCMD();
+						}
+					}
+					else
+					{
+						invCMD();
+					}
+				}
 		else if(!strncmp(token,d4,7))
 		{
 			incSVD(4);
+		}
+		else if(!strncmp(token,d4x,6))
+				{
+					token = strtok(NULL," ");
+
+					if(!strncmp(token,on,2))
+					{
+						token = strtok(NULL," ");
+						if(!strncmp(token,btn4,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQD4B4Handler, NULL);// build- in
+						}
+						else if (!strncmp(token,btn5,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQD4B5Handler, NULL);// build- in
+						}
+						else
+						{
+							invCMD();
+						}
+					}
+					else
+					{
+						invCMD();
+					}
+				}
+		else
+		{
+			invCMD();
 		}
 	}
 	else if(!strncmp(token,rst,9))
@@ -482,21 +1180,121 @@ void parseCMD()
 		token = strtok(NULL," ");
 		if(!strncmp(token,d1,7))
 		{
-			//TODO:add logic for interrupts later
+
 			resetSVD(1);
 		}
+		else if(!strncmp(token,d1x,6))
+				{
+					token = strtok(NULL," ");
+
+					if(!strncmp(token,on,2))
+					{
+						token = strtok(NULL," ");
+						if(!strncmp(token,btn4,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQRD1B4Handler, NULL);// build- in
+						}
+						else if (!strncmp(token,btn5,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQRD1B5Handler, NULL);// build- in
+						}
+						else
+						{
+							invCMD();
+						}
+					}
+					else
+					{
+						invCMD();
+					}
+				}
 		else if(!strncmp(token,d2,7))
 		{
 			resetSVD(2);
 		}
+		else if(!strncmp(token,d2x,6))
+				{
+					token = strtok(NULL," ");
+
+					if(!strncmp(token,on,2))
+					{
+						token = strtok(NULL," ");
+						if(!strncmp(token,btn4,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQRD2B4Handler, NULL);// build- in
+						}
+						else if (!strncmp(token,btn5,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQRD2B5Handler, NULL);// build- in
+						}
+						else
+						{
+							invCMD();
+						}
+					}
+					else
+					{
+						invCMD();
+					}
+				}
 		else if(!strncmp(token,d3,7))
 		{
 			resetSVD(3);
 		}
+		else if(!strncmp(token,d3x,6))
+				{
+					token = strtok(NULL," ");
+
+					if(!strncmp(token,on,2))
+					{
+						token = strtok(NULL," ");
+						if(!strncmp(token,btn4,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQRD3B4Handler, NULL);// build- in
+						}
+						else if (!strncmp(token,btn5,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQRD3B5Handler, NULL);// build- in
+						}
+						else
+						{
+							invCMD();
+						}
+					}
+					else
+					{
+						invCMD();
+					}
+				}
 		else if(!strncmp(token,d4,7))
 		{
 			resetSVD(4);
 		}
+		else if(!strncmp(token,d4x,6))
+				{
+					token = strtok(NULL," ");
+
+					if(!strncmp(token,on,2))
+					{
+						token = strtok(NULL," ");
+						if(!strncmp(token,btn4,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQRD4B4Handler, NULL);// build- in
+						}
+						else if (!strncmp(token,btn5,5))
+						{
+							Xil_ExceptionRegisterHandler(5, IRQRD4B5Handler, NULL);// build- in
+						}
+						else
+						{
+							invCMD();
+						}
+					}
+					else
+					{
+						invCMD();
+					}
+				}
 	}
 	else
 	{
@@ -546,6 +1344,7 @@ void invCMD()
 
 void incSVD(int digit)
 {
+	//check if svd is on
 	if(digit == 1)
 	{
 		if(D1 >= 9)

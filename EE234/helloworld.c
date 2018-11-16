@@ -2,6 +2,7 @@
 #include "platform.h"
 #include "xil_printf.h"
 #include "myfunctions.h"
+#include "xil_exception.h"
 #define UART1_C_Stat_Addr 0xE000102C
 #define UART1_FIFO_Addr 0xE0001030
 int data = 0;
@@ -19,14 +20,16 @@ int main()
 	    initGlobalTimer();
 	    configureGT();
 	    initGTInterrupts();
-	    Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+	   // Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
 	    while(1){
 
 	    	uint32_t R = *((uint32_t*) UART1_C_Stat_Addr);
 	    	while((R & 0x0002) != 0x2)
 	    	{
-	    		for(int i = 0; i < 100000; i++)
+	    		for(int i = 0; i < 10000; i++)
+	    		{
 	    			;
+	    		}
 	    		R = *((uint32_t*) UART1_C_Stat_Addr);
 	    		uint8_t C = *((uint32_t*) UART1_FIFO_Addr);
 	    		if( C >= 32)
