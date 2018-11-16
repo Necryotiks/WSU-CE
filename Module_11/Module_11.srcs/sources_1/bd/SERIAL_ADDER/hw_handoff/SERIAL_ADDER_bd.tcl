@@ -164,15 +164,18 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set i_A_0 [ create_bd_port -dir I i_A_0 ]
-  set i_B_0 [ create_bd_port -dir I i_B_0 ]
-  set i_CLK [ create_bd_port -dir I -type clk i_CLK ]
+  set clk_100MHz [ create_bd_port -dir I -type clk clk_100MHz ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000} \
- ] $i_CLK
-  set i_RST [ create_bd_port -dir I -type rst i_RST ]
+ ] $clk_100MHz
+  set i_A_0 [ create_bd_port -dir I i_A_0 ]
+  set i_B_0 [ create_bd_port -dir I i_B_0 ]
   set o_Cout_0 [ create_bd_port -dir O o_Cout_0 ]
   set o_Sum_0 [ create_bd_port -dir O o_Sum_0 ]
+  set reset_rtl_0 [ create_bd_port -dir I -type rst reset_rtl_0 ]
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_LOW} \
+ ] $reset_rtl_0
 
   # Create instance: SerialAdder_0, and set properties
   set block_name SerialAdder
@@ -191,10 +194,10 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net SerialAdder_0_o_Cout [get_bd_ports o_Cout_0] [get_bd_pins SerialAdder_0/o_Cout]
   connect_bd_net -net SerialAdder_0_o_Sum [get_bd_ports o_Sum_0] [get_bd_pins SerialAdder_0/o_Sum]
-  connect_bd_net -net clk_100MHz_1 [get_bd_ports i_CLK] [get_bd_pins SerialAdder_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk]
-  connect_bd_net -net ext_reset_in_0_1 [get_bd_ports i_RST] [get_bd_pins rst_clk_100MHz_100M/ext_reset_in]
+  connect_bd_net -net clk_100MHz_1 [get_bd_ports clk_100MHz] [get_bd_pins SerialAdder_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk]
   connect_bd_net -net i_A_0_1 [get_bd_ports i_A_0] [get_bd_pins SerialAdder_0/i_A]
   connect_bd_net -net i_B_0_1 [get_bd_ports i_B_0] [get_bd_pins SerialAdder_0/i_B]
+  connect_bd_net -net reset_rtl_0_1 [get_bd_ports reset_rtl_0] [get_bd_pins rst_clk_100MHz_100M/ext_reset_in]
   connect_bd_net -net rst_clk_100MHz_100M_peripheral_aresetn [get_bd_pins SerialAdder_0/i_RST] [get_bd_pins rst_clk_100MHz_100M/peripheral_aresetn]
 
   # Create address segments

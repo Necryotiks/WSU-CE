@@ -25,9 +25,10 @@ module SerialAdder(
     input i_RST,
     input i_A,
     input i_B,
-    input i_Cin,
+   
     output o_Sum,
     output o_Cout
+
     );
     
     
@@ -44,9 +45,9 @@ module SerialAdder(
         case(r_PREV_STATE)  
             STATE_0:
                 begin
-                    if(~(i_A | i_B | i_Cin))
+                    if(i_A == 1'b0 && i_B == 1'b0)
                         r_NEXT_STATE = STATE_0;
-                    else if(i_A & i_B & i_Cin)
+                    else if(i_A  == 1'b1 && i_B == 1'b1)
                         r_NEXT_STATE = STATE_2;
                     else
                         r_NEXT_STATE = STATE_1;    

@@ -1,12 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov  9 16:11:44 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 13 14:43:37 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="SERIAL_ADDER" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="O" NAME="o_Cout_0" SIGIS="undef" SIGNAME="SerialAdder_0_o_Cout">
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_100MHz" SIGIS="clk" SIGNAME="External_Ports_clk_100MHz">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="SerialAdder_0" PORT="o_Cout"/>
+        <CONNECTION INSTANCE="SerialAdder_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="slowest_sync_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset_rtl_0" SIGIS="rst" SIGNAME="External_Ports_reset_rtl_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="ext_reset_in"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="o_Sum_0" SIGIS="undef" SIGNAME="SerialAdder_0_o_Sum">
@@ -14,9 +20,9 @@
         <CONNECTION INSTANCE="SerialAdder_0" PORT="o_Sum"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="i_B_0" SIGIS="undef" SIGNAME="External_Ports_i_B_0">
+    <PORT DIR="O" NAME="o_Cout_0" SIGIS="undef" SIGNAME="SerialAdder_0_o_Cout">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="SerialAdder_0" PORT="i_B"/>
+        <CONNECTION INSTANCE="SerialAdder_0" PORT="o_Cout"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_A_0" SIGIS="undef" SIGNAME="External_Ports_i_A_0">
@@ -24,15 +30,9 @@
         <CONNECTION INSTANCE="SerialAdder_0" PORT="i_A"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+    <PORT DIR="I" NAME="i_B_0" SIGIS="undef" SIGNAME="External_Ports_i_B_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="slowest_sync_clk"/>
-        <CONNECTION INSTANCE="SerialAdder_0" PORT="i_CLK"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="ext_reset_in"/>
+        <CONNECTION INSTANCE="SerialAdder_0" PORT="i_B"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -43,13 +43,13 @@
     <MODULE FULLNAME="/SerialAdder_0" HWVERSION="1.0" INSTANCE="SerialAdder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SerialAdder" VLNV="xilinx.com:module_ref:SerialAdder:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="SERIAL_ADDER_SerialAdder_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="SERIAL_ADDER_SerialAdder_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_clk_100MHz">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_100MHz"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
@@ -94,20 +94,20 @@
         <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
         <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
         <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="SERIAL_ADDER_rst_clk_100MHz_100M_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="SERIAL_ADDER_rst_clk_100MHz_100M_1"/>
         <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
         <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="External_Ports_clk_100MHz">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_100MHz"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="External_Ports_i_RST">
+        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="External_Ports_reset_rtl_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="i_RST"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst"/>

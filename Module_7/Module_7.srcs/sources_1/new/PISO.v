@@ -22,15 +22,14 @@
 
 module PISO(
 input [7:0] i_SW,
-input i_buf,
+
 input i_SFT_LD,
 input i_CLK,
-output  [7:0] o_LED,
-output reg o_buf
+output  o_LED
     );
     reg [7:0] r_SW ;
 
-assign o_LED = r_SW;
+assign o_LED = r_SW[7];
 
 always@(posedge(i_CLK))
 begin
@@ -38,10 +37,7 @@ begin
         r_SW = i_SW; //Load by default
     else
     begin
-        
         r_SW = r_SW << 1; //SHIFT otherwise.
-        r_SW[0] = i_buf;
-        o_buf = r_SW[7];
     end
     
 end
