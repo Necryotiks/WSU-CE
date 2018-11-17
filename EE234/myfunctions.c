@@ -200,8 +200,48 @@ void initializeGPIOInterrupts()
 
 	configureIO();
 }
+void GT_IRQ()
+{
+	D4=D4+1;
+	if (D4<10)
+		SVD[4] = D4;
+	else
+	{
+		D4=0;
+		SVD[4] = D4;
+		D3=D3+1;
+		if (D3<10)
+			SVD[3] = D3;
+		else{
+			D3=0;
+			SVD[3] = D3;
+			D2=D2+1;
+			if (D2<10)
+				SVD[2] = D2;
+			else{
+				D2=0;
+				SVD[2] = D2;
+				D1= D1+1;
+				if (D1<10)
+					SVD[1] = D1;
+				else
+				{
+					D1=0;
+					SVD[1] = D1;
+				}
+			}
+		}
+		}
+	*((uint32_t*) GT_COUNTER0_ADDRESS) = 0x00000000;
+	// reset Counter
+	*((uint32_t*) GT_COUNTER1_ADDRESS) = 0x00000000;
+	*((uint32_t*) GT_CONTROL_ADDRESS) = 0x010F;
+	// Start Timer
+	*((uint32_t*) GT_INTSTAT_ADDRESS) = 0x1;
+	// clear Global Timer Interrupt Flag bit.
+}
 
-void IRQHandler(void * data)
+void SWIRQHandler(void * data)
 {
 	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
 	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
@@ -211,15 +251,13 @@ void IRQHandler(void * data)
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
 	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
 
-	if(interruptID == 52)
-	{
-		uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
-		uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-		GPIO_IRQ(buttonEvent);
+	 if(interruptID == 27)
+		{
+			GT_IRQ();
+		}
+		GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
+		endofInterruptReg[0] = interruptID; //clear interrupt
 
-	}
-	GPIOInterruptStatusBank1[0] = 0xFFFFFF; //reset interrupt status.
-	endofInterruptReg[0] = interruptID; //clear interrupt.
 
 }
 void IRQD1B4Handler(void * data)
@@ -588,7 +626,20 @@ void initializeSVD()
 	SVD[3] = D3;
 	SVD[4] = D4;
 }
-
+void initSW()
+{
+		SVD[0] = 0x0;
+		SVD[5] = 0x02; // set decimal point
+		D1 = 0;
+		D2 = 0;
+		D3 = 0;
+		D4 = 0;
+		SVD[0] = 0x1;
+		SVD[1] = D1;
+		SVD[2] = D2;
+		SVD[3] = D3;
+		SVD[4] = D4;
+}
 void initGlobalTimer()
 {
 	*((uint32_t*) GT_CONTROL_ADDRESS) = 0x0000;
@@ -960,6 +1011,9 @@ void parseCMD()
 	char * off = "OFF;";
 	char * btn4 = "BTN4;";
 	char * btn5 = "BTN5;";
+	char * start = "START";
+	char * stop = "STOP";
+	char * watch = "WATCH;";
 	//int j = 0;
 	for(int i = 0; i < count; i++)
 	{
@@ -1295,6 +1349,46 @@ void parseCMD()
 						invCMD();
 					}
 				}
+	}
+	else if(!strncmp(token,start,5))
+	{
+		token = strtok(NULL," ");
+		if(!strncmp(token,watch,6))
+		{
+			//TODO:need reset flag condition and test
+			initSW();
+			initGlobalTimer();
+			D1=0;
+			D2=0;
+			D3=0;
+			D4=0;
+			*((uint32_t*) GT_CONTROL_ADDRESS) = 0x010F;
+		}
+		else
+		{
+			invCMD();
+		}
+	}
+	else if(!strncmp(token,stop,4))
+	{
+		token = strtok(NULL," ");
+		if(!strncmp(token,watch,6))
+		{
+			*((uint32_t*) GT_CONTROL_ADDRESS) = 0x010E;
+		}
+	}
+	else if(!strncmp(token,rst,5))
+	{
+		token = strtok(NULL," ");
+		if(!strncmp(token,watch,6))
+		{
+			initSW();
+			initGlobalTimer();
+			D1=0;
+			D2=0;
+			D3=0;
+			D4=0;
+		}
 	}
 	else
 	{

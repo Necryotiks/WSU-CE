@@ -28,6 +28,7 @@ void initializeGPIOInterrupts();
 void IRQHandler(void * data);
 void configureIO();
 void initializeSVD();
+void initSW();
 void initGlobalTimer();
 void initGTInterrupts();
 void configureGT();
