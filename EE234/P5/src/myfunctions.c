@@ -250,7 +250,7 @@ void GPIO_IRQ(uint32_t button)
 		D1=0;
 		D2=0;
 		D3=0;
-		D4 = 0;
+		D4=0;
 	}
 	else if(button == BTN4)
 	{
