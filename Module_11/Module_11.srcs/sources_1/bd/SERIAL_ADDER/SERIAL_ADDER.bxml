@@ -2,10 +2,24 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="SERIAL_ADDER" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
+<<<<<<< HEAD
     <Generation Name="SYNTHESIS" State="STALE" Timestamp="1542149017"/>
     <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1542149017"/>
     <Generation Name="SIMULATION" State="GENERATED" Timestamp="1542149017"/>
     <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1542149017"/>
+=======
+<<<<<<< HEAD
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1541914449"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1541914449"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1541914449"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1541914449"/>
+=======
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1541819672"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1541819672"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1541819672"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1541819672"/>
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5
+>>>>>>> f5b32d4ca83d31785747b52779843e931249981e
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\SERIAL_ADDER.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -28,6 +42,38 @@
       </File>
       <File Name="ip\SERIAL_ADDER_rst_clk_100MHz_100M_1\SERIAL_ADDER_rst_clk_100MHz_100M_1.xci" Type="IP">
         <Instance HierarchyPath="rst_clk_100MHz_100M"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\SERIAL_ADDER_SIPO_0_0\SERIAL_ADDER_SIPO_0_0.xci" Type="IP">
+        <Instance HierarchyPath="SIPO_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\SERIAL_ADDER_PISO_0_0\SERIAL_ADDER_PISO_0_0.xci" Type="IP">
+        <Instance HierarchyPath="PISO_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\SERIAL_ADDER_dff_0_0\SERIAL_ADDER_dff_0_0.xci" Type="IP">
+        <Instance HierarchyPath="dff_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\SERIAL_ADDER_PISO_0_1\SERIAL_ADDER_PISO_0_1.xci" Type="IP">
+        <Instance HierarchyPath="PISO_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

@@ -58,23 +58,47 @@
 module test_SIPO_0_0 (
   i_SDI,
   i_RST,
+<<<<<<< HEAD:Module_11/Module_11.srcs/sources_1/bd/SERIAL_ADDER/ip/SERIAL_ADDER_SerialAdder_0_0/synth/SERIAL_ADDER_SerialAdder_0_0.v
+  i_A,
+  i_B,
+  i_Cin,
+  o_Sum,
+  o_Cout
+=======
   i_CLK,
   o_LED
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5:Module_11/Module_11.srcs/sources_1/bd/test/ip/test_SIPO_0_0/synth/test_SIPO_0_0.v
 );
 
 input wire i_SDI;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
 input wire i_RST;
+<<<<<<< HEAD:Module_11/Module_11.srcs/sources_1/bd/SERIAL_ADDER/ip/SERIAL_ADDER_SerialAdder_0_0/synth/SERIAL_ADDER_SerialAdder_0_0.v
+input wire i_A;
+input wire i_B;
+input wire i_Cin;
+output wire o_Sum;
+output wire o_Cout;
+=======
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN test_i_CLK_0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
 output wire [7 : 0] o_LED;
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5:Module_11/Module_11.srcs/sources_1/bd/test/ip/test_SIPO_0_0/synth/test_SIPO_0_0.v
 
   SIPO inst (
     .i_SDI(i_SDI),
     .i_RST(i_RST),
+<<<<<<< HEAD:Module_11/Module_11.srcs/sources_1/bd/SERIAL_ADDER/ip/SERIAL_ADDER_SerialAdder_0_0/synth/SERIAL_ADDER_SerialAdder_0_0.v
+    .i_A(i_A),
+    .i_B(i_B),
+    .i_Cin(i_Cin),
+    .o_Sum(o_Sum),
+    .o_Cout(o_Cout)
+=======
     .i_CLK(i_CLK),
     .o_LED(o_LED)
+>>>>>>> 8c676840f2d6ed352e8a720fb7e570aabcf8c2b5:Module_11/Module_11.srcs/sources_1/bd/test/ip/test_SIPO_0_0/synth/test_SIPO_0_0.v
   );
 endmodule

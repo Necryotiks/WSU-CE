@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1541756733">
+<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1541931735">
   <File Type="PA-TCL" Name="STOPWATCH_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="STOPWATCH_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="STOPWATCH_wrapper.vds"/>
@@ -88,6 +88,30 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/bd/SERIAL_ADDER/SERIAL_ADDER.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Parts/PISO.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Parts/SIPO.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Parts/dff.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
