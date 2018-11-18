@@ -1,4 +1,11 @@
 /*
+ * myfunction.c
+ *
+ *  Created on: Nov 18, 2018
+ *      Author: Necryotiks
+ */
+
+/*
  * myfunctions.c
  *
  *  Created on: Nov 10, 2018
@@ -66,7 +73,7 @@ uint8_t D2 =0;
 uint8_t D3 =0;
 uint8_t D4 =0;
 int START = 0;
-
+int RESET = 0;
 
 uint8_t buffer[32];
 int count=0;
@@ -200,56 +207,12 @@ void initializeGPIOInterrupts()
 
 	configureIO();
 }
-void GT_IRQ()
-{
-	D4=D4+1;
-	if (D4<10)
-		SVD[4] = D4;
-	else
-	{
-		D4=0;
-		SVD[4] = D4;
-		D3=D3+1;
-		if (D3<10)
-			SVD[3] = D3;
-		else{
-			D3=0;
-			SVD[3] = D3;
-			D2=D2+1;
-			if (D2<10)
-				SVD[2] = D2;
-			else{
-				D2=0;
-				SVD[2] = D2;
-				D1= D1+1;
-				if (D1<10)
-					SVD[1] = D1;
-				else
-				{
-					D1=0;
-					SVD[1] = D1;
-				}
-			}
-		}
-		}
-	*((uint32_t*) GT_COUNTER0_ADDRESS) = 0x00000000;
-	// reset Counter
-	*((uint32_t*) GT_COUNTER1_ADDRESS) = 0x00000000;
-	*((uint32_t*) GT_CONTROL_ADDRESS) = 0x010F;
-	// Start Timer
-	*((uint32_t*) GT_INTSTAT_ADDRESS) = 0x1;
-	// clear Global Timer Interrupt Flag bit.
-}
+
 
 void SWIRQHandler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
 
 	 if(interruptID == 27)
 		{
@@ -262,13 +225,9 @@ void SWIRQHandler(void * data)
 }
 void IRQD1B4Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -283,13 +242,8 @@ void IRQD1B4Handler(void * data)
 }
 void IRQD1B5Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
 
 	if(interruptID == 52)
 	{
@@ -304,13 +258,9 @@ void IRQD1B5Handler(void * data)
 }
 void IRQD2B4Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -325,13 +275,8 @@ void IRQD2B4Handler(void * data)
 }
 void IRQD2B5Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
 
 	if(interruptID == 52)
 	{
@@ -346,13 +291,8 @@ void IRQD2B5Handler(void * data)
 }
 void IRQD3B4Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
 
 	if(interruptID == 52)
 	{
@@ -367,13 +307,9 @@ void IRQD3B4Handler(void * data)
 }
 void IRQD3B5Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -388,13 +324,9 @@ void IRQD3B5Handler(void * data)
 }
 void IRQD4B4Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -409,13 +341,8 @@ void IRQD4B4Handler(void * data)
 }
 void IRQD4B5Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -430,13 +357,8 @@ void IRQD4B5Handler(void * data)
 }
 void IRQRD1B4Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -451,13 +373,9 @@ void IRQRD1B4Handler(void * data)
 }
 void IRQRD1B5Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -472,13 +390,9 @@ void IRQRD1B5Handler(void * data)
 }
 void IRQRD2B4Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -493,13 +407,9 @@ void IRQRD2B4Handler(void * data)
 }
 void IRQRD2B5Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -514,13 +424,9 @@ void IRQRD2B5Handler(void * data)
 }
 void IRQRD3B4Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -535,13 +441,9 @@ void IRQRD3B4Handler(void * data)
 }
 void IRQRD3B5Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -556,13 +458,9 @@ void IRQRD3B5Handler(void * data)
 }
 void IRQRD4B4Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
-	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+
 
 	if(interruptID == 52)
 	{
@@ -577,11 +475,7 @@ void IRQRD4B4Handler(void * data)
 }
 void IRQRD4B5Handler(void * data)
 {
-	//uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
-	//uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
-	//uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
 
-	//uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
 	uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
 	//uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
 
@@ -615,7 +509,7 @@ GPIODirectionModeB1[0] = 0x00000000;
 void initializeSVD()
 {
 	SVD[0] = 0x0;
-	//SVD[5] = 0x02; // set decimal point
+	SVD[5] = 0x0; // set decimal point
 	D1 = 0;
 	D2 = 0;
 	D3 = 0;
@@ -625,6 +519,7 @@ void initializeSVD()
 	SVD[2] = D2;
 	SVD[3] = D3;
 	SVD[4] = D4;
+	RESET = 0;
 }
 void initSW()
 {
@@ -685,22 +580,6 @@ void StoreChar(uint8_t C)
 	count = count + 1;
 }
 
-void GPIO_IRQ(uint32_t button)
-{
-	//uint32_t BTN5=0x80000;
-	uint32_t BTN4=0x40000;
-
-
-	if(button == BTN4)
-	{
-		//incSVD(1);
-	}
-	GPIOInterruptStatusBank1[0] = 0xFFFFFF;
-	//for(int i = 0; i < 1000000; i = i + 1)
-	//	{
-	//		;
-	//	}
-}
 void GPIO_IRQD1B4(uint32_t button)
 {
 	//uint32_t BTN5=0x80000;
@@ -957,6 +836,46 @@ void GPIO_IRQRD4B5(uint32_t button)
 			;
 		}
 }
+void GT_IRQ()
+{
+	D4=D4+1;
+	if (D4<10)
+		SVD[4] = D4;
+	else
+	{
+		D4=0;
+		SVD[4] = D4;
+		D3=D3+1;
+		if (D3<10)
+			SVD[3] = D3;
+		else{
+			D3=0;
+			SVD[3] = D3;
+			D2=D2+1;
+			if (D2<10)
+				SVD[2] = D2;
+			else{
+				D2=0;
+				SVD[2] = D2;
+				D1= D1+1;
+				if (D1<10)
+					SVD[1] = D1;
+				else
+				{
+					D1=0;
+					SVD[1] = D1;
+				}
+			}
+		}
+		}
+	*((uint32_t*) GT_COUNTER0_ADDRESS) = 0x00000000;
+	// reset Counter
+	*((uint32_t*) GT_COUNTER1_ADDRESS) = 0x00000000;
+	*((uint32_t*) GT_CONTROL_ADDRESS) = 0x010F;
+	// Start Timer
+	*((uint32_t*) GT_INTSTAT_ADDRESS) = 0x1;
+	// clear Global Timer Interrupt Flag bit.
+}
 void initUART1()
 {
 
@@ -1107,6 +1026,7 @@ void parseCMD()
 	else if(!strncmp(token,inc,9))
 	{
 		token = strtok(NULL," ");
+		RESET = 0;
 		if(!strncmp(token,d1,7))
 		{
 			incSVD(1);
@@ -1121,10 +1041,12 @@ void parseCMD()
 				token = strtok(NULL," ");
 				if(!strncmp(token,btn4,5))
 				{
+					SWSpindown();
 					Xil_ExceptionRegisterHandler(5, IRQD1B4Handler, NULL);// build- in
 				}
 				else if (!strncmp(token,btn5,5))
 				{
+					SWSpindown();
 					Xil_ExceptionRegisterHandler(5, IRQD1B5Handler, NULL);// build- in
 				}
 				else
@@ -1150,10 +1072,12 @@ void parseCMD()
 						token = strtok(NULL," ");
 						if(!strncmp(token,btn4,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQD2B4Handler, NULL);// build- in
 						}
 						else if (!strncmp(token,btn5,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQD2B5Handler, NULL);// build- in
 						}
 						else
@@ -1179,10 +1103,12 @@ void parseCMD()
 						token = strtok(NULL," ");
 						if(!strncmp(token,btn4,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQD3B4Handler, NULL);// build- in
 						}
 						else if (!strncmp(token,btn5,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQD3B5Handler, NULL);// build- in
 						}
 						else
@@ -1208,10 +1134,12 @@ void parseCMD()
 						token = strtok(NULL," ");
 						if(!strncmp(token,btn4,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQD4B4Handler, NULL);// build- in
 						}
 						else if (!strncmp(token,btn5,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQD4B5Handler, NULL);// build- in
 						}
 						else
@@ -1246,10 +1174,12 @@ void parseCMD()
 						token = strtok(NULL," ");
 						if(!strncmp(token,btn4,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQRD1B4Handler, NULL);// build- in
 						}
 						else if (!strncmp(token,btn5,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQRD1B5Handler, NULL);// build- in
 						}
 						else
@@ -1275,10 +1205,12 @@ void parseCMD()
 						token = strtok(NULL," ");
 						if(!strncmp(token,btn4,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQRD2B4Handler, NULL);// build- in
 						}
 						else if (!strncmp(token,btn5,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQRD2B5Handler, NULL);// build- in
 						}
 						else
@@ -1304,10 +1236,12 @@ void parseCMD()
 						token = strtok(NULL," ");
 						if(!strncmp(token,btn4,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQRD3B4Handler, NULL);// build- in
 						}
 						else if (!strncmp(token,btn5,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQRD3B5Handler, NULL);// build- in
 						}
 						else
@@ -1325,18 +1259,20 @@ void parseCMD()
 			resetSVD(4);
 		}
 		else if(!strncmp(token,d4x,6))
-				{
-					token = strtok(NULL," ");
+		{
+			token = strtok(NULL," ");
 
-					if(!strncmp(token,on,2))
-					{
-						token = strtok(NULL," ");
+			if(!strncmp(token,on,2))
+			{
+				token = strtok(NULL," ");
 						if(!strncmp(token,btn4,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQRD4B4Handler, NULL);// build- in
 						}
 						else if (!strncmp(token,btn5,5))
 						{
+							SWSpindown();
 							Xil_ExceptionRegisterHandler(5, IRQRD4B5Handler, NULL);// build- in
 						}
 						else
@@ -1348,20 +1284,32 @@ void parseCMD()
 					{
 						invCMD();
 					}
-				}
+		}
+		else if(!strncmp(token,watch,6))
+		{
+				initSW();
+				initGlobalTimer();
+				D1=0;
+				D2=0;
+				D3=0;
+				D4=0;
+
+		}
 	}
 	else if(!strncmp(token,start,5))
 	{
 		token = strtok(NULL," ");
 		if(!strncmp(token,watch,6))
 		{
-			//TODO:need reset flag condition and test
-			initSW();
+			if(RESET == 0)
+			{
+				initSW();
+				RESET = 1;
+			}
 			initGlobalTimer();
-			D1=0;
-			D2=0;
-			D3=0;
-			D4=0;
+			configureGT();
+			initGTInterrupts();
+			Xil_ExceptionRegisterHandler(5, SWIRQHandler, NULL);// build- in
 			*((uint32_t*) GT_CONTROL_ADDRESS) = 0x010F;
 		}
 		else
@@ -1375,19 +1323,6 @@ void parseCMD()
 		if(!strncmp(token,watch,6))
 		{
 			*((uint32_t*) GT_CONTROL_ADDRESS) = 0x010E;
-		}
-	}
-	else if(!strncmp(token,rst,5))
-	{
-		token = strtok(NULL," ");
-		if(!strncmp(token,watch,6))
-		{
-			initSW();
-			initGlobalTimer();
-			D1=0;
-			D2=0;
-			D3=0;
-			D4=0;
 		}
 	}
 	else
@@ -1519,4 +1454,13 @@ void resetSVD(int digit)
 		return;
 	}
 }
+void SWSpindown()
+{
+	if((*((uint32_t*) GT_CONTROL_ADDRESS) & 0x1) == 0x1)
+	{
+		*((uint32_t*) GT_CONTROL_ADDRESS) = 0x010E;
+
+	}
+}
+
 
