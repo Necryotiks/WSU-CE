@@ -1,5 +1,10 @@
+/*
+ * main.c
+ *
+ *  Created on: Nov 18, 2018
+ *      Author: Necryotiks
+ */
 #include <stdio.h>
-#include "platform.h"
 #include "xil_printf.h"
 #include "myfunctions.h"
 #include "xil_exception.h"
@@ -14,13 +19,11 @@ int main()
 	    disableInterrupts();
 	    GICConfigure();
 	    initializeGPIOInterrupts();
-	    enableInterrupts();
-	    sendREADY();
-	    //initializeSVD();
 	    initGlobalTimer();
 	    configureGT();
 	    initGTInterrupts();
-	   // Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+	    enableInterrupts();
+	    sendREADY();
 	    while(1){
 
 	    	uint32_t R = *((uint32_t*) UART1_C_Stat_Addr);
@@ -51,3 +54,5 @@ int main()
 	    }
 	    cleanup_platform();
 }
+
+
