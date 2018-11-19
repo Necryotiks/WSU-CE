@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_rst_clk_100MHz_100M_1/sim/LSFR_rst_clk_100MHz_100M_1.vhd" \
+"../../../../../../../Xilinx/Vivado/test_LSFR.vhd" \
+
+# Do not sort compile order
+nosort

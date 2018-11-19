@@ -24,14 +24,15 @@ module dff(
     input i_CLK,
     input i_RST,
     input i_D,
-    output reg o_Q
+    output o_Q
     );
-    
+    reg w_Q;
+    assign o_Q = w_Q;
     always@(posedge(i_CLK),posedge(i_RST)) //DONT FORGET THE RESET SIGNAL IN SENSITIVITY LIST.
     begin
         if(i_RST == 1)
-            o_Q <= 1'b0;
+            w_Q <= 1'b0;
         else
-           o_Q <= i_D;
+           w_Q <= i_D;
     end
 endmodule

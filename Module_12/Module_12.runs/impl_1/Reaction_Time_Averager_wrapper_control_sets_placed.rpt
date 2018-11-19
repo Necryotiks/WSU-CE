@@ -1,0 +1,80 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Nov 18 23:13:31 2018
+| Host         : LAPTOP-QC2AS776 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Reaction_Time_Averager_wrapper_control_sets_placed.rpt
+| Design       : Reaction_Time_Averager_wrapper
+| Device       : xc7z007s
+-----------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    32 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            3 |
+|      8 |            5 |
+|     12 |            1 |
+|    16+ |            4 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             132 |           21 |
+| No           | No                    | Yes                    |              78 |           19 |
+| No           | Yes                   | No                     |               8 |            2 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              50 |            6 |
+| Yes          | Yes                   | No                     |              12 |            1 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+
+|                             Clock Signal                             |                                 Enable Signal                                 |                          Set/Reset Signal                          | Slice Load Count | Bel Load Count |
++----------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out                    |                                                                               | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                2 |              4 |
+|  Reaction_Time_Averager_i/RTM_FSM_0/inst/r_NEXT_STATE_reg[1]_i_2_n_0 |                                                                               |                                                                    |                2 |              4 |
+|  Reaction_Time_Averager_i/RTM_FSM_0/inst/r_SWEN_reg_i_2_n_0          |                                                                               |                                                                    |                1 |              4 |
+|  Reaction_Time_Averager_i/RTM_FSM_0/inst/o_SWEN                      |                                                                               | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                2 |              8 |
+|  Reaction_Time_Averager_i/RTM_FSM_0/inst/o_SWEN                      | Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_3_val[3]_i_1_n_0 | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                1 |              8 |
+|  Reaction_Time_Averager_i/RTM_FSM_0/inst/o_SWEN                      | Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_2_val            | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                1 |              8 |
+|  Reaction_Time_Averager_i/RTM_FSM_0/inst/o_SWEN                      | Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_1_val            | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                1 |              8 |
+|  i_CLK_IBUF_BUFG                                                     |                                                                               | Reaction_Time_Averager_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int       |                2 |              8 |
+|  i_CLK_IBUF_BUFG                                                     | Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/seq_cnt_en                   | Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/SEQ_COUNTER/clear |                1 |             12 |
+|  i_CLK_IBUF_BUFG                                                     | Reaction_Time_Averager_i/RTM_FSM_0/inst/o_CEN                                 | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                3 |             26 |
+|  Reaction_Time_Averager_i/RTM_FSM_0/inst/r_Ready_reg[1]_i_1_n_0      |                                                                               |                                                                    |                6 |             28 |
+|  i_CLK_IBUF_BUFG                                                     |                                                                               | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |               15 |             66 |
+|  i_CLK_IBUF_BUFG                                                     |                                                                               |                                                                    |               13 |             98 |
++----------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+
+
+

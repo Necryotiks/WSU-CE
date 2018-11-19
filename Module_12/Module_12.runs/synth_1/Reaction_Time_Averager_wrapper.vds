@@ -1,0 +1,557 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Nov 18 23:11:41 2018
+# Process ID: 5448
+# Current directory: C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1
+# Command line: vivado.exe -log Reaction_Time_Averager_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Reaction_Time_Averager_wrapper.tcl
+# Log file: C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/Reaction_Time_Averager_wrapper.vds
+# Journal file: C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Reaction_Time_Averager_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 284.930 ; gain = 39.328
+Command: synth_design -top Reaction_Time_Averager_wrapper -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6084 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 389.750 ; gain = 96.867
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_wrapper' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.v:13]
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_HZ_Counter_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_HZ_Counter_0_0/synth/Reaction_Time_Averager_HZ_Counter_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'HZ_Counter' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/HZ_Counter.v:23]
+	Parameter c_NUM bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'HZ_Counter' (1#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/HZ_Counter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_HZ_Counter_0_0' (2#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_HZ_Counter_0_0/synth/Reaction_Time_Averager_HZ_Counter_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_LSFR_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_LSFR_0_0/synth/Reaction_Time_Averager_LSFR_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'LSFR' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/LSFR.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'LSFR' (3#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/LSFR.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_LSFR_0_0' (4#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_LSFR_0_0/synth/Reaction_Time_Averager_LSFR_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_RTM_FSM_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_RTM_FSM_0_0/synth/Reaction_Time_Averager_RTM_FSM_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'RTM_FSM' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:23]
+	Parameter s_GET_COUNTER bound to: 2'b00 
+	Parameter s_COUNTDOWN bound to: 2'b01 
+	Parameter s_SW_RUNNING bound to: 2'b10 
+	Parameter s_SW_STOPPED bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'RTM_FSM' (5#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_RTM_FSM_0_0' (6#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_RTM_FSM_0_0/synth/Reaction_Time_Averager_RTM_FSM_0_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'Reaction_Time_Averager_proc_sys_reset_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/synth/Reaction_Time_Averager_proc_sys_reset_0_0.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/synth/Reaction_Time_Averager_proc_sys_reset_0_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
+	Parameter INIT bound to: 16'b0000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (7#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (8#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (9#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (10#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (11#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (12#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'Reaction_Time_Averager_proc_sys_reset_0_0' (13#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/synth/Reaction_Time_Averager_proc_sys_reset_0_0.vhd:74]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_0' of module 'Reaction_Time_Averager_proc_sys_reset_0_0' requires 10 connections, but only 6 given [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.v:72]
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_ssd_dec_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_dec_0_0/synth/Reaction_Time_Averager_ssd_dec_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ssd_dec' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_dec.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_dec' (14#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_dec.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_ssd_dec_0_0' (15#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_dec_0_0/synth/Reaction_Time_Averager_ssd_dec_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_ssd_mux_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_mux_0_0/synth/Reaction_Time_Averager_ssd_mux_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ssd_mux' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_mux.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_mux.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_mux' (16#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_ssd_mux_0_0' (17#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_mux_0_0/synth/Reaction_Time_Averager_ssd_mux_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_stopwatch_ssd_driver_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_stopwatch_ssd_driver_0_0/synth/Reaction_Time_Averager_stopwatch_ssd_driver_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'stopwatch_ssd_driver' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/stopwatch_ssd_driver.v:23]
+	Parameter c_HEX_DEC bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'stopwatch_ssd_driver' (18#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/stopwatch_ssd_driver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_stopwatch_ssd_driver_0_0' (19#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_stopwatch_ssd_driver_0_0/synth/Reaction_Time_Averager_stopwatch_ssd_driver_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager' (20#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_wrapper' (21#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v:12]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_aclk
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_resetn
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[1]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[0]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port scndry_resetn
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 444.867 ; gain = 151.984
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 444.867 ; gain = 151.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 444.867 ; gain = 151.984
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/Reaction_Time_Averager_proc_sys_reset_0_0_board.xdc] for cell 'Reaction_Time_Averager_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/Reaction_Time_Averager_proc_sys_reset_0_0_board.xdc] for cell 'Reaction_Time_Averager_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/Reaction_Time_Averager_proc_sys_reset_0_0.xdc] for cell 'Reaction_Time_Averager_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/Reaction_Time_Averager_proc_sys_reset_0_0.xdc] for cell 'Reaction_Time_Averager_i/proc_sys_reset_0/U0'
+Parsing XDC File [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/constrs_1/new/RTM_cons.xdc]
+Finished Parsing XDC File [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/constrs_1/new/RTM_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/constrs_1/new/RTM_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Reaction_Time_Averager_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Reaction_Time_Averager_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Reaction_Time_Averager_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Reaction_Time_Averager_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 13 instances were transformed.
+  FDR => FDRE: 12 instances
+  SRL16 => SRL16E: 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 779.980 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/LSFR_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/HZ_Counter_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/RTM_FSM_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/stopwatch_ssd_driver_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/ssd_mux_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/ssd_dec_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/proc_sys_reset_0/U0. (constraint file  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/dont_touch.xdc, line 31).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "r_Count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'r_CURRENT_STATE_reg' in module 'RTM_FSM'
+INFO: [Synth 8-5546] ROM "r_Ready" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "r_NEXT_STATE" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "r_CEN" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
+WARNING: [Synth 8-6014] Unused sequential element seq_cnt_en_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'r_Ready_reg' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:58]
+WARNING: [Synth 8-327] inferring latch for variable 'r_NEXT_STATE_reg' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'r_SWEN_reg' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:54]
+WARNING: [Synth 8-327] inferring latch for variable 'r_CEN_reg' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'r_COUNTER_reg' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:71]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 4     
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     13 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module HZ_Counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module LSFR 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               13 Bit    Registers := 1     
+Module RTM_FSM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
++---Muxes : 
+	   4 Input     13 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 6     
+Module lpf 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module upcnt_n 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module sequence_psr 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
+Module ssd_dec 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
+Module ssd_mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+Module stopwatch_ssd_driver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 4     
++---Registers : 
+	                4 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "inst/r_Count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "inst/o_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "inst/r_Ready" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst/r_NEXT_STATE" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Reaction_Time_Averager_i/RTM_FSM_0/\inst/r_Ready_reg[0] )
+INFO: [Synth 8-3332] Sequential element (inst/r_Ready_reg[0]) is unused and will be removed from module Reaction_Time_Averager_RTM_FSM_0_0.
+INFO: [Synth 8-3886] merging instance 'Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/pr_dec_reg[1]' (FD) to 'Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/bsr_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/bsr_dec_reg[1]' (FD) to 'Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/core_dec_reg[1]'
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+INFO: [Synth 8-3886] merging instance 'Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_HEX_DEC_reg[0]' (FD) to 'Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_HEX_DEC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_HEX_DEC_reg[1]' (FD) to 'Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_HEX_DEC_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Reaction_Time_Averager_i/stopwatch_ssd_driver_0/\inst/r_HEX_DEC_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Reaction_Time_Averager_i/stopwatch_ssd_driver_0/\inst/r_HEX_DEC_reg[3] )
+INFO: [Synth 8-3332] Sequential element (inst/r_HEX_DEC_reg[3]) is unused and will be removed from module Reaction_Time_Averager_stopwatch_ssd_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/r_HEX_DEC_reg[2]) is unused and will be removed from module Reaction_Time_Averager_stopwatch_ssd_driver_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    16|
+|3     |LUT1   |    18|
+|4     |LUT2   |    15|
+|5     |LUT3   |    20|
+|6     |LUT4   |    35|
+|7     |LUT5   |    43|
+|8     |LUT6   |     7|
+|9     |SRL16  |     1|
+|10    |FDCE   |    63|
+|11    |FDPE   |     1|
+|12    |FDR    |     8|
+|13    |FDRE   |    53|
+|14    |FDSE   |     4|
+|15    |LD     |    18|
+|16    |IBUF   |     4|
+|17    |OBUF   |    13|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------------+------------------------------------------------+------+
+|      |Instance                              |Module                                          |Cells |
++------+--------------------------------------+------------------------------------------------+------+
+|1     |top                                   |                                                |   320|
+|2     |  Reaction_Time_Averager_i            |Reaction_Time_Averager                          |   302|
+|3     |    HZ_Counter_0                      |Reaction_Time_Averager_HZ_Counter_0_0           |    82|
+|4     |      inst                            |HZ_Counter                                      |    82|
+|5     |    LSFR_0                            |Reaction_Time_Averager_LSFR_0_0                 |    14|
+|6     |      inst                            |LSFR                                            |    14|
+|7     |    RTM_FSM_0                         |Reaction_Time_Averager_RTM_FSM_0_0              |    58|
+|8     |      inst                            |RTM_FSM                                         |    58|
+|9     |    proc_sys_reset_0                  |Reaction_Time_Averager_proc_sys_reset_0_0       |    66|
+|10    |      U0                              |proc_sys_reset                                  |    66|
+|11    |        EXT_LPF                       |lpf                                             |    23|
+|12    |          \ACTIVE_LOW_AUX.ACT_LO_AUX  |cdc_sync                                        |     6|
+|13    |          \ACTIVE_LOW_EXT.ACT_LO_EXT  |cdc_sync_0                                      |     6|
+|14    |        SEQ                           |sequence_psr                                    |    38|
+|15    |          SEQ_COUNTER                 |upcnt_n                                         |    13|
+|16    |    ssd_dec_0                         |Reaction_Time_Averager_ssd_dec_0_0              |    14|
+|17    |      inst                            |ssd_dec                                         |    14|
+|18    |    ssd_mux_0                         |Reaction_Time_Averager_ssd_mux_0_0              |    32|
+|19    |      inst                            |ssd_mux                                         |    32|
+|20    |    stopwatch_ssd_driver_0            |Reaction_Time_Averager_stopwatch_ssd_driver_0_0 |    36|
+|21    |      inst                            |stopwatch_ssd_driver                            |    36|
++------+--------------------------------------+------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 779.980 ; gain = 151.984
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 27 instances were transformed.
+  FDR => FDRE: 8 instances
+  LD => LDCE: 18 instances
+  SRL16 => SRL16E: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+95 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 793.480 ; gain = 508.551
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/Reaction_Time_Averager_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Reaction_Time_Averager_wrapper_utilization_synth.rpt -pb Reaction_Time_Averager_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 793.480 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 18 23:12:32 2018...

@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Module_12.srcs/sources_1/new/LSFR.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR_TEST/ip/LSFR_TEST_LSFR_0_0/sim/LSFR_TEST_LSFR_0_0.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR_TEST/sim/LSFR_TEST.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

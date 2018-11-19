@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../Parts/dff.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_0/sim/LSFR_dff_0_0.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_1/sim/LSFR_dff_0_1.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_2/sim/LSFR_dff_0_2.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_3/sim/LSFR_dff_0_3.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_4/sim/LSFR_dff_0_4.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_5/sim/LSFR_dff_0_5.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_6/sim/LSFR_dff_0_6.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_7/sim/LSFR_dff_0_7.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_8/sim/LSFR_dff_0_8.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_9/sim/LSFR_dff_0_9.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_10/sim/LSFR_dff_0_10.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_11/sim/LSFR_dff_0_11.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_dff_0_12/sim/LSFR_dff_0_12.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_util_vector_logic_0_0/sim/LSFR_util_vector_logic_0_0.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/sim/LSFR.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_util_vector_logic_0_1/sim/LSFR_util_vector_logic_0_1.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_util_vector_logic_1_1/sim/LSFR_util_vector_logic_1_1.v" \
+"../../../../Module_12.ip_user_files/bd/LSFR/ip/LSFR_xlconcat_0_0/sim/LSFR_xlconcat_0_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
