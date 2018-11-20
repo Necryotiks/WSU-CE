@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Nov 18 23:11:41 2018
-# Process ID: 5448
+# Start of session at: Mon Nov 19 22:35:34 2018
+# Process ID: 9528
 # Current directory: C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1
 # Command line: vivado.exe -log Reaction_Time_Averager_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Reaction_Time_Averager_wrapper.tcl
 # Log file: C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/Reaction_Time_Averager_wrapper.vds
@@ -13,15 +13,15 @@ source Reaction_Time_Averager_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 284.930 ; gain = 39.328
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 285.043 ; gain = 39.957
 Command: synth_design -top Reaction_Time_Averager_wrapper -part xc7z007sclg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6084 
+INFO: Helper process launched with PID 4808 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 389.750 ; gain = 96.867
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 389.328 ; gain = 96.219
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_wrapper' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.v:13]
@@ -40,6 +40,7 @@ INFO: [Synth 8-6157] synthesizing module 'RTM_FSM' [C:/Users/Necryotiks/AppData/
 	Parameter s_COUNTDOWN bound to: 2'b01 
 	Parameter s_SW_RUNNING bound to: 2'b10 
 	Parameter s_SW_STOPPED bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:61]
 INFO: [Synth 8-6155] done synthesizing module 'RTM_FSM' (5#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_RTM_FSM_0_0' (6#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_RTM_FSM_0_0/synth/Reaction_Time_Averager_RTM_FSM_0_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'Reaction_Time_Averager_proc_sys_reset_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/synth/Reaction_Time_Averager_proc_sys_reset_0_0.vhd:74]
@@ -148,7 +149,7 @@ WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[1]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[0]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port scndry_resetn
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 444.867 ; gain = 151.984
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 444.180 ; gain = 151.070
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -161,10 +162,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 444.867 ; gain = 151.984
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 444.180 ; gain = 151.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 444.867 ; gain = 151.984
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 444.180 ; gain = 151.070
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -192,16 +193,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 779.980 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 780.664 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -216,23 +217,29 @@ Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/ssd_dec_0. (
 Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/proc_sys_reset_0/U0. (constraint file  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/dont_touch.xdc, line 31).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "r_Count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "o_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'r_CURRENT_STATE_reg' in module 'RTM_FSM'
-INFO: [Synth 8-5546] ROM "r_Ready" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "r_NEXT_STATE" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "r_SWEN" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "r_CEN" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_COUNTER" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_NEXT_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_NEXT_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 WARNING: [Synth 8-6014] Unused sequential element seq_cnt_en_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
-WARNING: [Synth 8-327] inferring latch for variable 'r_Ready_reg' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:58]
-WARNING: [Synth 8-327] inferring latch for variable 'r_NEXT_STATE_reg' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'r_SWEN_reg' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:54]
-WARNING: [Synth 8-327] inferring latch for variable 'r_CEN_reg' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:53]
-WARNING: [Synth 8-327] inferring latch for variable 'r_COUNTER_reg' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:71]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+           s_GET_COUNTER |                             0001 |                               00
+             s_COUNTDOWN |                             0010 |                               01
+            s_SW_RUNNING |                             0100 |                               10
+            s_SW_STOPPED |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_CURRENT_STATE_reg' using encoding 'one-hot' in module 'RTM_FSM'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -246,7 +253,6 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
-	   2 Input     13 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 4     
 +---XORs : 
@@ -258,17 +264,14 @@ Detailed RTL Component Info :
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 5     
 	                3 Bit    Registers := 3     
-	                1 Bit    Registers := 9     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   4 Input     13 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 4     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 8     
-	   4 Input      1 Bit        Muxes := 6     
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -294,14 +297,12 @@ Detailed RTL Component Info :
 	               13 Bit    Registers := 1     
 Module RTM_FSM 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     13 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   4 Input     13 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 6     
-	   4 Input      1 Bit        Muxes := 6     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
 Module lpf 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -354,10 +355,8 @@ Start Cross Boundary and Area Optimization
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5545] ROM "inst/r_Count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inst/o_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "inst/r_Ready" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst/r_NEXT_STATE" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (Reaction_Time_Averager_i/RTM_FSM_0/\inst/r_Ready_reg[0] )
-INFO: [Synth 8-3332] Sequential element (inst/r_Ready_reg[0]) is unused and will be removed from module Reaction_Time_Averager_RTM_FSM_0_0.
+INFO: [Synth 8-3886] merging instance 'Reaction_Time_Averager_i/RTM_FSM_0/inst/r_SWEN_reg__0' (FDS) to 'Reaction_Time_Averager_i/RTM_FSM_0/inst/r_Ready_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Reaction_Time_Averager_i/RTM_FSM_0/inst/r_Ready_reg[0]' (FDS) to 'Reaction_Time_Averager_i/RTM_FSM_0/inst/r_Ready_reg[1]'
 INFO: [Synth 8-3886] merging instance 'Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/pr_dec_reg[1]' (FD) to 'Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/bsr_dec_reg[1]'
 INFO: [Synth 8-3886] merging instance 'Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/bsr_dec_reg[1]' (FD) to 'Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/core_dec_reg[1]'
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
@@ -371,7 +370,7 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (Reaction_
 INFO: [Synth 8-3332] Sequential element (inst/r_HEX_DEC_reg[3]) is unused and will be removed from module Reaction_Time_Averager_stopwatch_ssd_driver_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/r_HEX_DEC_reg[2]) is unused and will be removed from module Reaction_Time_Averager_stopwatch_ssd_driver_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -383,13 +382,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -401,7 +400,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -425,7 +424,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -438,7 +437,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -450,25 +449,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -485,36 +484,35 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    16|
-|3     |LUT1   |    18|
+|2     |CARRY4 |    19|
+|3     |LUT1   |     7|
 |4     |LUT2   |    15|
-|5     |LUT3   |    20|
-|6     |LUT4   |    35|
-|7     |LUT5   |    43|
-|8     |LUT6   |     7|
+|5     |LUT3   |     6|
+|6     |LUT4   |    36|
+|7     |LUT5   |    41|
+|8     |LUT6   |    10|
 |9     |SRL16  |     1|
-|10    |FDCE   |    63|
-|11    |FDPE   |     1|
+|10    |FDCE   |    64|
+|11    |FDPE   |     2|
 |12    |FDR    |     8|
-|13    |FDRE   |    53|
-|14    |FDSE   |     4|
-|15    |LD     |    18|
-|16    |IBUF   |     4|
-|17    |OBUF   |    13|
+|13    |FDRE   |    66|
+|14    |FDSE   |     6|
+|15    |IBUF   |     4|
+|16    |OBUF   |    13|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------------------------+------------------------------------------------+------+
 |      |Instance                              |Module                                          |Cells |
 +------+--------------------------------------+------------------------------------------------+------+
-|1     |top                                   |                                                |   320|
-|2     |  Reaction_Time_Averager_i            |Reaction_Time_Averager                          |   302|
+|1     |top                                   |                                                |   299|
+|2     |  Reaction_Time_Averager_i            |Reaction_Time_Averager                          |   281|
 |3     |    HZ_Counter_0                      |Reaction_Time_Averager_HZ_Counter_0_0           |    82|
 |4     |      inst                            |HZ_Counter                                      |    82|
 |5     |    LSFR_0                            |Reaction_Time_Averager_LSFR_0_0                 |    14|
 |6     |      inst                            |LSFR                                            |    14|
-|7     |    RTM_FSM_0                         |Reaction_Time_Averager_RTM_FSM_0_0              |    58|
-|8     |      inst                            |RTM_FSM                                         |    58|
+|7     |    RTM_FSM_0                         |Reaction_Time_Averager_RTM_FSM_0_0              |    35|
+|8     |      inst                            |RTM_FSM                                         |    35|
 |9     |    proc_sys_reset_0                  |Reaction_Time_Averager_proc_sys_reset_0_0       |    66|
 |10    |      U0                              |proc_sys_reset                                  |    66|
 |11    |        EXT_LPF                       |lpf                                             |    23|
@@ -526,32 +524,31 @@ Report Instance Areas:
 |17    |      inst                            |ssd_dec                                         |    14|
 |18    |    ssd_mux_0                         |Reaction_Time_Averager_ssd_mux_0_0              |    32|
 |19    |      inst                            |ssd_mux                                         |    32|
-|20    |    stopwatch_ssd_driver_0            |Reaction_Time_Averager_stopwatch_ssd_driver_0_0 |    36|
-|21    |      inst                            |stopwatch_ssd_driver                            |    36|
+|20    |    stopwatch_ssd_driver_0            |Reaction_Time_Averager_stopwatch_ssd_driver_0_0 |    38|
+|21    |      inst                            |stopwatch_ssd_driver                            |    38|
 +------+--------------------------------------+------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 779.980 ; gain = 151.984
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 779.980 ; gain = 487.098
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 780.664 ; gain = 151.070
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 27 instances were transformed.
+  A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
-  LD => LDCE: 18 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-95 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+97 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 793.480 ; gain = 508.551
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 790.996 ; gain = 505.953
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/Reaction_Time_Averager_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Reaction_Time_Averager_wrapper_utilization_synth.rpt -pb Reaction_Time_Averager_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 793.480 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 18 23:12:32 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 790.996 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 19 22:36:45 2018...

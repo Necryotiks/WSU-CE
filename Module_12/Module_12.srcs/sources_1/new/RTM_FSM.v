@@ -31,13 +31,13 @@ module RTM_FSM(
     output o_CEN
     );
     
-    localparam s_GET_COUNTER = 2'd0;
-    localparam s_COUNTDOWN = 2'd1;
-    localparam s_SW_RUNNING = 2'd2;
-    localparam s_SW_STOPPED = 2'd3;
+    localparam s_GET_COUNTER = 2'b00;
+    localparam s_COUNTDOWN = 2'b01;
+    localparam s_SW_RUNNING = 2'b10;
+    localparam s_SW_STOPPED = 2'b11;
     
     reg [1:0] r_CURRENT_STATE = 2'b00;
-    reg [1:0] r_NEXT_STATE;
+    reg [1:0] r_NEXT_STATE = 2'b00;
     reg r_CEN;
     reg r_SWEN;
     reg [1:0] r_Ready;
@@ -60,53 +60,76 @@ module RTM_FSM(
     begin
         case(r_CURRENT_STATE)
             s_GET_COUNTER:
-            begin
-                if(w_Start == 1'd1)
-                    ;//r_NEXT_STATE = s_COUNTDOWN;
-                else
-                    begin
-                    r_Ready = 2'b01;
-                    r_CEN = 1'd1;
-                    r_SWEN <= 1'd0;
-                    r_COUNTER = w_CVAL;
-                   end
-            end
+                        begin
+                            if(w_Start == 1'd1) 
+                                begin
+                                r_NEXT_STATE = s_COUNTDOWN;
+                                end
+                            else 
+                                begin
+                                r_NEXT_STATE = s_GET_COUNTER;
+                                end
+                        end
             s_COUNTDOWN:
-                begin
-                if(r_COUNTER == 13'd0)
-                    r_NEXT_STATE = s_SW_RUNNING; 
-                else
-                    begin
-                        r_Ready = 2'b11;
-                        r_CEN = 1'd0;
-                        r_SWEN <= 1'd0;   
-                        r_COUNTER = r_COUNTER - 1'd1;
-                    end
-                end
+                        begin
+                        if(r_COUNTER == w_CVAL) begin
+                            r_NEXT_STATE = s_SW_RUNNING; 
+                            end
+                        else begin
+                            r_NEXT_STATE = s_COUNTDOWN;
+                            end
+                            
+                        end
            s_SW_RUNNING:
-           begin
-                if(w_React == 1'd1)
-                    r_NEXT_STATE = s_SW_STOPPED;
-                else
-                begin
-                    r_SWEN <= w_CLK1KHZ;
-                    r_CEN = 1'd0;
-                end
-           end
+                        begin
+                             if(w_React == 1'd1) begin
+                                r_NEXT_STATE = s_SW_STOPPED;
+                                end
+                             else begin
+                                r_NEXT_STATE = s_SW_RUNNING;
+                                end
+                        end
            s_SW_STOPPED:
-           begin
-                r_NEXT_STATE = s_GET_COUNTER;
-                r_SWEN <= 1'd0;
-                r_CEN = 1'd0;
-           end
+                       r_NEXT_STATE = s_GET_COUNTER;
+           default: r_NEXT_STATE = s_GET_COUNTER;          
         endcase
     end
     
-    always@(posedge w_CLK1KHZ,posedge w_RST)
+    always@(posedge w_CLK1KHZ or posedge w_RST)
     begin
         if(w_RST == 1'd1)
             r_CURRENT_STATE = s_GET_COUNTER;
         else
             r_CURRENT_STATE = r_NEXT_STATE;
     end
+    
+    always@(posedge w_CLK1KHZ) //clock logic
+    begin
+        if(r_CURRENT_STATE == s_SW_RUNNING)
+            begin
+            r_SWEN = 1'b1;
+            r_Ready = 2'b11;
+            end
+        else
+            begin
+            r_Ready = 2'd0;
+            r_SWEN = 1'b0;
+            end
+    end
+    
+    always@(posedge w_CLK1KHZ)
+    begin
+        if(r_CURRENT_STATE == s_GET_COUNTER)
+            r_CEN = 1'b1;
+        else
+            r_CEN = 1'b0;  
+    end
+    
+    always@(posedge w_CLK1KHZ)
+        begin
+            if(r_CURRENT_STATE == s_COUNTDOWN)
+                r_COUNTER = r_COUNTER + 1'd1;
+            else
+                r_COUNTER = r_COUNTER + 1'd0;   
+        end
 endmodule

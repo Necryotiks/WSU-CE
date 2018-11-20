@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Module_12.srcs/sources_1/new/LSFR.v" \
+"../../../../../Parts/HZ_Counter.v" \
+"../../../../Module_12.srcs/sources_1/new/RTM_FSM.v" \
+"../../../../../Parts/stopwatch_ssd_driver.v" \
+"../../../../../Parts/ssd_mux.v" \
+"../../../../../Parts/ssd_dec.v" \
+"../../../../Module_12.ip_user_files/bd/Reaction_Time_Averager/sim/Reaction_Time_Averager.v" \
+"../../../../Module_12.ip_user_files/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_LSFR_0_0/sim/Reaction_Time_Averager_LSFR_0_0.v" \
+"../../../../Module_12.ip_user_files/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_HZ_Counter_0_0/sim/Reaction_Time_Averager_HZ_Counter_0_0.v" \
+"../../../../Module_12.ip_user_files/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_RTM_FSM_0_0/sim/Reaction_Time_Averager_RTM_FSM_0_0.v" \
+"../../../../Module_12.ip_user_files/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_stopwatch_ssd_driver_0_0/sim/Reaction_Time_Averager_stopwatch_ssd_driver_0_0.v" \
+"../../../../Module_12.ip_user_files/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_mux_0_0/sim/Reaction_Time_Averager_ssd_mux_0_0.v" \
+"../../../../Module_12.ip_user_files/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_dec_0_0/sim/Reaction_Time_Averager_ssd_dec_0_0.v" \
+"../../../../Module_12.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

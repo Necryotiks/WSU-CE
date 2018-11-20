@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Nov 18 23:07:41 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Nov 19 22:35:26 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Reaction_Time_Averager" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -68,6 +68,7 @@
         </PORT>
         <PORT DIR="O" NAME="o_Out" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SUBCLK"/>
             <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_CLK1KHZ"/>
           </CONNECTIONS>
         </PORT>
@@ -143,7 +144,7 @@
         </PORT>
         <PORT DIR="O" NAME="o_SWEN" SIGIS="undef" SIGNAME="RTM_FSM_0_o_SWEN">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SUBCLK"/>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_CLK_EN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_CEN" SIGIS="undef" SIGNAME="RTM_FSM_0_o_CEN">
@@ -280,14 +281,19 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="i_SUBCLK" SIGIS="undef" SIGNAME="RTM_FSM_0_o_SWEN">
+        <PORT DIR="I" NAME="i_SUBCLK" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_SWEN"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_CLK_EN" SIGIS="undef" SIGNAME="RTM_FSM_0_o_SWEN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_SWEN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Digit_1_val" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_1_val">

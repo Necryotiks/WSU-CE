@@ -248,11 +248,11 @@ proc create_root_design { parentCell } {
    }
   
   # Create port connections
-  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins RTM_FSM_0/i_CLK1KHZ]
+  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins RTM_FSM_0/i_CLK1KHZ] [get_bd_pins stopwatch_ssd_driver_0/i_SUBCLK]
   connect_bd_net -net LSFR_0_o_OUT [get_bd_pins LSFR_0/o_OUT] [get_bd_pins RTM_FSM_0/i_CVAL]
   connect_bd_net -net RTM_FSM_0_o_CEN [get_bd_pins LSFR_0/i_EN] [get_bd_pins RTM_FSM_0/o_CEN]
   connect_bd_net -net RTM_FSM_0_o_Ready [get_bd_ports o_Ready_0] [get_bd_pins RTM_FSM_0/o_Ready]
-  connect_bd_net -net RTM_FSM_0_o_SWEN [get_bd_pins RTM_FSM_0/o_SWEN] [get_bd_pins stopwatch_ssd_driver_0/i_SUBCLK]
+  connect_bd_net -net RTM_FSM_0_o_SWEN [get_bd_pins RTM_FSM_0/o_SWEN] [get_bd_pins stopwatch_ssd_driver_0/i_CLK_EN]
   connect_bd_net -net i_CLK_1 [get_bd_ports i_CLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins LSFR_0/i_CLK] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
   connect_bd_net -net i_RST_1 [get_bd_ports i_RST] [get_bd_pins proc_sys_reset_0/ext_reset_in]
   connect_bd_net -net i_React_0_1 [get_bd_ports i_React_0] [get_bd_pins RTM_FSM_0/i_React]

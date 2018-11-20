@@ -187,17 +187,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>stopwatch_ssd_driver_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="stopwatch_ssd_driver" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_stopwatch_ssd_driver_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">stopwatch_ssd_driver</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>ssd_mux_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="ssd_mux" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -227,6 +216,17 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>stopwatch_ssd_driver_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="stopwatch_ssd_driver" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_stopwatch_ssd_driver_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">stopwatch_ssd_driver</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>RTM_FSM_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="RTM_FSM" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -239,11 +239,6 @@
       </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:adHocConnections>
-      <spirit:adHocConnection>
-        <spirit:name>HZ_Counter_0_o_Out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="HZ_Counter_0" spirit:portRef="o_Out"/>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="i_CLK1KHZ"/>
-      </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>LSFR_0_o_OUT</spirit:name>
         <spirit:internalPortReference spirit:componentRef="LSFR_0" spirit:portRef="o_OUT"/>
@@ -263,11 +258,6 @@
         <spirit:name>RTM_FSM_0_o_CEN</spirit:name>
         <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_CEN"/>
         <spirit:internalPortReference spirit:componentRef="LSFR_0" spirit:portRef="i_EN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>RTM_FSM_0_o_SWEN</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_SWEN"/>
-        <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="i_SUBCLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>ssd_mux_0_o_Out</spirit:name>
@@ -330,6 +320,17 @@
         <spirit:name>i_RST_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="i_RST"/>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="ext_reset_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>RTM_FSM_0_o_SWEN</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_SWEN"/>
+        <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="i_CLK_EN"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>HZ_Counter_0_o_Out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="HZ_Counter_0" spirit:portRef="o_Out"/>
+        <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="i_SUBCLK"/>
+        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="i_CLK1KHZ"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>
