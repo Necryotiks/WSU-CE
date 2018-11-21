@@ -27,6 +27,10 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/sim/Reaction_Time_Averager_proc_sys_reset_0_0.vhd" \
 
 vlog -work xil_defaultlib -64 \
+"../../../bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_Accumuator_0_0/sim/Reaction_Time_Averager_Accumuator_0_0.v" \
+"../../../bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BCD_TO_BINARY_0_0/sim/Reaction_Time_Averager_BCD_TO_BINARY_0_0.v" \
+"../../../bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/sim/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v" \
+"../../../bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_EXTRA_THICC_MUX_0_0/sim/Reaction_Time_Averager_EXTRA_THICC_MUX_0_0.v" \
 "../../../bd/Reaction_Time_Averager/sim/Reaction_Time_Averager.v" \
 
 vlog -work xil_defaultlib \

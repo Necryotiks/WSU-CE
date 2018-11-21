@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z007sclg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -37,6 +36,10 @@ read_verilog -library xil_defaultlib {
   C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/stopwatch_ssd_driver.v
   C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_mux.v
   C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_dec.v
+  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/Accumuator.v
+  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/BCD_TO_BINARY.v
+  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/BINARY_TO_BCD.v
+  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/EXTRA_THICC_MUX.v
   C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v
 }
 add_files C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd

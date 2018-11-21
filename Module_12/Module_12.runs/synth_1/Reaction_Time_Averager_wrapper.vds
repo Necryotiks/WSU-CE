@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Nov 19 22:35:34 2018
-# Process ID: 9528
+# Start of session at: Tue Nov 20 23:05:59 2018
+# Process ID: 11148
 # Current directory: C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1
 # Command line: vivado.exe -log Reaction_Time_Averager_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Reaction_Time_Averager_wrapper.tcl
 # Log file: C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/Reaction_Time_Averager_wrapper.vds
@@ -13,36 +13,52 @@ source Reaction_Time_Averager_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 285.043 ; gain = 39.957
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 286.406 ; gain = 40.969
 Command: synth_design -top Reaction_Time_Averager_wrapper -part xc7z007sclg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4808 
+INFO: Helper process launched with PID 5784 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 389.328 ; gain = 96.219
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 393.617 ; gain = 101.609
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_wrapper' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.v:13]
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_Accumuator_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_Accumuator_0_0/synth/Reaction_Time_Averager_Accumuator_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Accumuator' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/Accumuator.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Accumuator' (1#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/Accumuator.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_Accumuator_0_0' (2#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_Accumuator_0_0/synth/Reaction_Time_Averager_Accumuator_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_BCD_TO_BINARY_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BCD_TO_BINARY_0_0/synth/Reaction_Time_Averager_BCD_TO_BINARY_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'BCD_TO_BINARY' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/BCD_TO_BINARY.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'BCD_TO_BINARY' (3#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/BCD_TO_BINARY.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_BCD_TO_BINARY_0_0' (4#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BCD_TO_BINARY_0_0/synth/Reaction_Time_Averager_BCD_TO_BINARY_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_BINARY_TO_BCD_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'BINARY_TO_BCD' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/BINARY_TO_BCD.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'BINARY_TO_BCD' (5#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/BINARY_TO_BCD.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_BINARY_TO_BCD_0_0' (6#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_EXTRA_THICC_MUX_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_EXTRA_THICC_MUX_0_0/synth/Reaction_Time_Averager_EXTRA_THICC_MUX_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'EXTRA_THICC_MUX' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/EXTRA_THICC_MUX.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'EXTRA_THICC_MUX' (7#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/EXTRA_THICC_MUX.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_EXTRA_THICC_MUX_0_0' (8#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_EXTRA_THICC_MUX_0_0/synth/Reaction_Time_Averager_EXTRA_THICC_MUX_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_HZ_Counter_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_HZ_Counter_0_0/synth/Reaction_Time_Averager_HZ_Counter_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'HZ_Counter' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/HZ_Counter.v:23]
 	Parameter c_NUM bound to: 50000 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'HZ_Counter' (1#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/HZ_Counter.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_HZ_Counter_0_0' (2#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_HZ_Counter_0_0/synth/Reaction_Time_Averager_HZ_Counter_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'HZ_Counter' (9#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/HZ_Counter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_HZ_Counter_0_0' (10#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_HZ_Counter_0_0/synth/Reaction_Time_Averager_HZ_Counter_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_LSFR_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_LSFR_0_0/synth/Reaction_Time_Averager_LSFR_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'LSFR' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/LSFR.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'LSFR' (3#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/LSFR.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_LSFR_0_0' (4#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_LSFR_0_0/synth/Reaction_Time_Averager_LSFR_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'LSFR' (11#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/LSFR.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_LSFR_0_0' (12#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_LSFR_0_0/synth/Reaction_Time_Averager_LSFR_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_RTM_FSM_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_RTM_FSM_0_0/synth/Reaction_Time_Averager_RTM_FSM_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'RTM_FSM' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:23]
-	Parameter s_GET_COUNTER bound to: 2'b00 
-	Parameter s_COUNTDOWN bound to: 2'b01 
-	Parameter s_SW_RUNNING bound to: 2'b10 
-	Parameter s_SW_STOPPED bound to: 2'b11 
-INFO: [Synth 8-226] default block is never used [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'RTM_FSM' (5#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_RTM_FSM_0_0' (6#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_RTM_FSM_0_0/synth/Reaction_Time_Averager_RTM_FSM_0_0.v:58]
+	Parameter s_GET_COUNTER bound to: 3'b000 
+	Parameter s_COUNTDOWN bound to: 3'b001 
+	Parameter s_SW_RUNNING bound to: 3'b010 
+	Parameter s_SW_STOPPED bound to: 3'b011 
+	Parameter s_COLLECTION_COMPLETE bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'RTM_FSM' (13#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_RTM_FSM_0_0' (14#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_RTM_FSM_0_0/synth/Reaction_Time_Averager_RTM_FSM_0_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'Reaction_Time_Averager_proc_sys_reset_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/synth/Reaction_Time_Averager_proc_sys_reset_0_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -97,7 +113,7 @@ INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/Necryotiks/AppData/Roami
 INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
 INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-6155] done synthesizing module 'SRL16' (7#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (15#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
@@ -117,39 +133,39 @@ INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_o
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (8#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (9#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (16#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (17#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
 INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (10#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (11#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (12#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'Reaction_Time_Averager_proc_sys_reset_0_0' (13#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/synth/Reaction_Time_Averager_proc_sys_reset_0_0.vhd:74]
-WARNING: [Synth 8-350] instance 'proc_sys_reset_0' of module 'Reaction_Time_Averager_proc_sys_reset_0_0' requires 10 connections, but only 6 given [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.v:72]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (18#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (19#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (20#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'Reaction_Time_Averager_proc_sys_reset_0_0' (21#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/synth/Reaction_Time_Averager_proc_sys_reset_0_0.vhd:74]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_0' of module 'Reaction_Time_Averager_proc_sys_reset_0_0' requires 10 connections, but only 6 given [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.v:127]
 INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_ssd_dec_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_dec_0_0/synth/Reaction_Time_Averager_ssd_dec_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'ssd_dec' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_dec.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ssd_dec' (14#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_dec.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_ssd_dec_0_0' (15#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_dec_0_0/synth/Reaction_Time_Averager_ssd_dec_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_dec' (22#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_dec.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_ssd_dec_0_0' (23#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_dec_0_0/synth/Reaction_Time_Averager_ssd_dec_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_ssd_mux_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_mux_0_0/synth/Reaction_Time_Averager_ssd_mux_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'ssd_mux' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_mux.v:23]
 INFO: [Synth 8-226] default block is never used [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_mux.v:56]
-INFO: [Synth 8-6155] done synthesizing module 'ssd_mux' (16#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_mux.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_ssd_mux_0_0' (17#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_mux_0_0/synth/Reaction_Time_Averager_ssd_mux_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_mux' (24#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_ssd_mux_0_0' (25#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_ssd_mux_0_0/synth/Reaction_Time_Averager_ssd_mux_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'Reaction_Time_Averager_stopwatch_ssd_driver_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_stopwatch_ssd_driver_0_0/synth/Reaction_Time_Averager_stopwatch_ssd_driver_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'stopwatch_ssd_driver' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/stopwatch_ssd_driver.v:23]
 	Parameter c_HEX_DEC bound to: 9 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'stopwatch_ssd_driver' (18#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/stopwatch_ssd_driver.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_stopwatch_ssd_driver_0_0' (19#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_stopwatch_ssd_driver_0_0/synth/Reaction_Time_Averager_stopwatch_ssd_driver_0_0.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager' (20#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_wrapper' (21#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'stopwatch_ssd_driver' (26#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/stopwatch_ssd_driver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_stopwatch_ssd_driver_0_0' (27#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_stopwatch_ssd_driver_0_0/synth/Reaction_Time_Averager_stopwatch_ssd_driver_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager' (28#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'Reaction_Time_Averager_wrapper' (29#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v:12]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_aclk
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_resetn
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[1]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[0]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port scndry_resetn
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 444.180 ; gain = 151.070
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 449.328 ; gain = 157.320
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -162,10 +178,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 444.180 ; gain = 151.070
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 449.328 ; gain = 157.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 444.180 ; gain = 151.070
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 449.328 ; gain = 157.320
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -193,16 +209,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 780.664 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 788.844 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 788.844 ; gain = 496.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 788.844 ; gain = 496.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -215,31 +231,41 @@ Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/stopwatch_ss
 Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/ssd_mux_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/ssd_dec_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/proc_sys_reset_0/U0. (constraint file  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/dont_touch.xdc, line 31).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/Accumuator_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/BCD_TO_BINARY_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/BINARY_TO_BCD_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/EXTRA_THICC_MUX_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Reaction_Time_Averager_i/proc_sys_reset_0/U0. (constraint file  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/dont_touch.xdc, line 43).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 788.844 ; gain = 496.836
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "r_Count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "o_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-4471] merging register 'r_SRST_reg' into 'r_ACC_EN_reg' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:74]
+WARNING: [Synth 8-6014] Unused sequential element r_SRST_reg was removed.  [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v:74]
 INFO: [Synth 8-802] inferred FSM for state register 'r_CURRENT_STATE_reg' in module 'RTM_FSM'
-INFO: [Synth 8-5544] ROM "r_SWEN" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "r_CEN" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "r_COUNTER" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_ACC_EN" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_SWEN" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_CEN" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_COUNTER" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_DONE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "r_NEXT_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "r_NEXT_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_NEXT_STATE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 WARNING: [Synth 8-6014] Unused sequential element seq_cnt_en_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-           s_GET_COUNTER |                             0001 |                               00
-             s_COUNTDOWN |                             0010 |                               01
-            s_SW_RUNNING |                             0100 |                               10
-            s_SW_STOPPED |                             1000 |                               11
+           s_GET_COUNTER |                            00001 |                              000
+             s_COUNTDOWN |                            00010 |                              001
+            s_SW_RUNNING |                            00100 |                              010
+            s_SW_STOPPED |                            01000 |                              011
+   s_COLLECTION_COMPLETE |                            10000 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_CURRENT_STATE_reg' using encoding 'one-hot' in module 'RTM_FSM'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 788.844 ; gain = 496.836
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -254,24 +280,28 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 60    
+	   2 Input      3 Bit       Adders := 1     
 +---XORs : 
 	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
 	               13 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 5     
-	                3 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 4     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 11    
+	                1 Bit    Registers := 13    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 68    
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -279,6 +309,22 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module BCD_TO_BINARY 
+Detailed RTL Component Info : 
++---Registers : 
+	               14 Bit    Registers := 1     
+Module BINARY_TO_BCD 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 56    
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 56    
+Module EXTRA_THICC_MUX 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 4     
 Module HZ_Counter 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -297,12 +343,15 @@ Detailed RTL Component Info :
 	               13 Bit    Registers := 1     
 Module RTM_FSM 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
+	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
 +---Muxes : 
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 3     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 Module lpf 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -336,7 +385,8 @@ Detailed RTL Component Info :
 +---Registers : 
 	                4 Bit    Registers := 5     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -370,7 +420,7 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (Reaction_
 INFO: [Synth 8-3332] Sequential element (inst/r_HEX_DEC_reg[3]) is unused and will be removed from module Reaction_Time_Averager_stopwatch_ssd_driver_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/r_HEX_DEC_reg[2]) is unused and will be removed from module Reaction_Time_Averager_stopwatch_ssd_driver_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 788.844 ; gain = 496.836
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -382,13 +432,50 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 788.844 ; gain = 496.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_9/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_9/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_46/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_46/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_191/Z'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_190/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_191/Z'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_193/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_262/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_612/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_354/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_416/Z'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_398/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_415/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_649/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_522/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_521/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_581/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_638/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_309/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_793/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_377/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_735/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_803/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_770/O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_50' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_261' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_693' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_220' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_190' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_793' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_612' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_428' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_398' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_415' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_580' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_0/i_716' with timing assertions on output pin 'O'
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 838.945 ; gain = 546.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -399,8 +486,1577 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I5 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_204/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_204/I5 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_183/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_183/I4 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_293/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_293/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/I4 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/O (LUT2)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/I1 (LUT2)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_188/O (LUT6)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_188/I4 (LUT6)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/O (LUT6)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/I4 (LUT6)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/O (LUT2)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/I1 (LUT2)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/O (LUT2)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/I1 (LUT2)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/O (LUT4)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/I3 (LUT4)
+    28: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/O (LUT6)
+    29: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/I4 (LUT6)
+    30: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I5 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_183/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_183/I4 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_293/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_293/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/I4 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_188/O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_188/I4 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/I4 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/O (LUT2)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/I1 (LUT2)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/O (LUT2)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/I1 (LUT2)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/O (LUT4)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/I3 (LUT4)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/O (LUT6)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/I4 (LUT6)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    28: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    29: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    30: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_293/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_293/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/I4 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_188/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_188/I4 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/I4 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/O (LUT2)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/I1 (LUT2)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/O (LUT4)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/I3 (LUT4)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/O (LUT6)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/I4 (LUT6)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/I4 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_188/O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_188/I4 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/I4 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/O (LUT4)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/I3 (LUT4)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/I4 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I4 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/I5 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_240/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_240/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_192/O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_192/I5 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/O (LUT4)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/I3 (LUT4)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/O (LUT5)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/I3 (LUT5)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I5 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_188/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_188/I4 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/I4 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/O (LUT4)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/I3 (LUT4)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/I4 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/I2 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/O (LUT4)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/I3 (LUT4)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/I4 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I2 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/I4 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/O (LUT4)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/I3 (LUT4)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/I4 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I4 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_340/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/O (LUT4)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_174/I3 (LUT4)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/I4 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_240/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_240/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_192/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_192/I5 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/O (LUT4)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/I3 (LUT4)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/O (LUT5)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/I3 (LUT5)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_240"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_293/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_293/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/I1 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/I0 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/O (LUT4)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/I3 (LUT4)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/O (LUT5)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/I3 (LUT5)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_293"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/I0 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/O (LUT4)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/I3 (LUT4)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/O (LUT5)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/I3 (LUT5)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I0 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_247/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_240/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_240/I0 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_190/I0 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/O (LUT4)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/I3 (LUT4)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/O (LUT5)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/I3 (LUT5)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I0 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_240"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_235/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/I4 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I4 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/O (LUT5)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/I3 (LUT5)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_243/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_243/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_234/O (LUT4)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_234/I1 (LUT4)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_243"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I5 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I5 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_185/O (LUT4)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_185/I2 (LUT4)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_186/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_186/I3 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/I1 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_194/O (LUT4)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_194/I3 (LUT4)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/I3 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_203/O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_203/I5 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_243/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_243/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I2 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_185"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/I1 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/I1 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_194/O (LUT4)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_194/I3 (LUT4)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_198/I3 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_203/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_203/I5 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_243/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_243/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_185/O (LUT4)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_185/O (LUT4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I5 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_208/I3 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I5 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_204/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_204/I5 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I5 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_204"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_243/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_243/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/I4 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_206/I2 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I4 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/O (LUT5)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_143/I3 (LUT5)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/O (LUT4)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_195/I3 (LUT4)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_204/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_204/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_204/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_204/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_218/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_180/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_213/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_236/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_204/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_204/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/I0 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I0 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_237/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_200/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_238/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_240/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_240/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_239/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_345/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_148/O (LUT3)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_148/I1 (LUT3)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_263/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_263/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_145/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_145/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_252/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_252/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_151/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_151/I0 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_257/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_257/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_116/O (LUT2)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_116/I1 (LUT2)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_150/O (LUT2)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_150/I1 (LUT2)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_228/O (LUT2)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_228/I1 (LUT2)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_251/O (LUT2)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_251/I1 (LUT2)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_118/O (LUT3)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_118/I2 (LUT3)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_328/O (LUT6)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_328/I3 (LUT6)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_256/O (LUT2)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_256/I1 (LUT2)
+    28: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_329/O (LUT4)
+    29: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_329/I3 (LUT4)
+    30: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_259/O (LUT2)
+    31: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_259/I1 (LUT2)
+    32: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_129/O (LUT6)
+    33: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_129/I3 (LUT6)
+    34: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_166/O (LUT6)
+    35: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_166/I5 (LUT6)
+    36: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_263/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_263/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_145/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_145/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_252/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_252/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_151/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_151/I0 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_257/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_257/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_116/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_116/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_150/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_150/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_228/O (LUT2)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_228/I1 (LUT2)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_251/O (LUT2)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_251/I1 (LUT2)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_118/O (LUT3)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_118/I2 (LUT3)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_328/O (LUT6)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_328/I3 (LUT6)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_256/O (LUT2)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_256/I1 (LUT2)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_329/O (LUT4)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_329/I3 (LUT4)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_259/O (LUT2)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_259/I1 (LUT2)
+    28: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_129/O (LUT6)
+    29: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_129/I3 (LUT6)
+    30: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_166/O (LUT6)
+    31: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_166/I5 (LUT6)
+    32: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+    33: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_263"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_252/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_252/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_151/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_151/I0 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_257/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_257/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_116/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_116/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_150/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_150/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_228/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_228/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_251/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_251/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_118/O (LUT3)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_118/I2 (LUT3)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_328/O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_328/I3 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_256/O (LUT2)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_256/I1 (LUT2)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_329/O (LUT4)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_329/I3 (LUT4)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_259/O (LUT2)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_259/I1 (LUT2)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_129/O (LUT6)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_129/I3 (LUT6)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_166/O (LUT6)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_166/I5 (LUT6)
+    28: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+    29: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_252"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_257/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_257/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_116/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_116/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_150/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_150/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_228/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_228/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_251/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_251/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_118/O (LUT3)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_118/I2 (LUT3)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_328/O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_328/I3 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_256/O (LUT2)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_256/I1 (LUT2)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_329/O (LUT4)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_329/I3 (LUT4)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_259/O (LUT2)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_259/I1 (LUT2)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_129/O (LUT6)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_129/I3 (LUT6)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_166/O (LUT6)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_166/I5 (LUT6)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_257"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_252/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_252/I0 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_228/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_228/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_251/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_251/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_118/O (LUT3)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_118/I2 (LUT3)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_328/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_328/I3 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_256/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_256/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_329/O (LUT4)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_329/I3 (LUT4)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_259/O (LUT2)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_259/I1 (LUT2)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_129/O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_129/I3 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_166/O (LUT6)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_166/I5 (LUT6)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I0 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_252"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_263/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_263/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_148/O (LUT3)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_148/I1 (LUT3)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_263/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_263/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_148"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_268/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_268/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_258/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_258/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_343/O (LUT5)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_343/I4 (LUT5)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_268"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_258/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_258/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_343/O (LUT5)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_343/I4 (LUT5)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_229/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_258"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_255/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_255/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_159/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_159/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_165/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_165/I0 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_342/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_342/I5 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_268/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_268/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_255"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_342/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_342/I5 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_268/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_268/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I5 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_342"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_255/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_255/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_258/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_258/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_255/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_255/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_255/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_255/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_255/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_255/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_258/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_258/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/I0 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_107/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_107/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_265/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_265/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_30/O (LUT4)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_30/I3 (LUT4)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_42/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_42/I5 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_271/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_271/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_44/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_44/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_46/O (LUT5)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_46/I2 (LUT5)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_82/O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_82/I4 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/O (LUT5)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/I4 (LUT5)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/I2 (LUT3)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_312/O (LUT2)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_312/I1 (LUT2)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_59/O (LUT2)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_59/I1 (LUT2)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_320/O (LUT5)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_320/I4 (LUT5)
+    28: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_100/O (LUT6)
+    29: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_100/I5 (LUT6)
+    30: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+    31: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/I1 (LUT2)
+    32: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_36/O (LUT2)
+    33: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_36/I1 (LUT2)
+    34: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I0 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_42/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_42/I5 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_271/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_271/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_44/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_44/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_46/O (LUT5)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_46/I2 (LUT5)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_82/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_82/I4 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/O (LUT5)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/I4 (LUT5)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/I2 (LUT3)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_312/O (LUT2)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_312/I1 (LUT2)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_59/O (LUT2)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_59/I1 (LUT2)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_320/O (LUT5)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_320/I4 (LUT5)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_100/O (LUT6)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_100/I5 (LUT6)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/I1 (LUT2)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_36/O (LUT2)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_36/I1 (LUT2)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I5 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_42"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_271/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_271/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_44/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_44/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_46/O (LUT5)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_46/I2 (LUT5)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_82/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_82/I4 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/O (LUT5)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/I4 (LUT5)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/I2 (LUT3)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_312/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_312/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_59/O (LUT2)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_59/I1 (LUT2)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_320/O (LUT5)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_320/I4 (LUT5)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_100/O (LUT6)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_100/I5 (LUT6)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/I1 (LUT2)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_36/O (LUT2)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_36/I1 (LUT2)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_271"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_265/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_265/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_30/O (LUT4)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_30/I3 (LUT4)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_42/O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_42/I2 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_79/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_79/I5 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_87/O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_87/I5 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/I1 (LUT2)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/I1 (LUT2)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_321/O (LUT2)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_321/I1 (LUT2)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_94/O (LUT5)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_94/I3 (LUT5)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/O (LUT6)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/I4 (LUT6)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_104/O (LUT5)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_104/I4 (LUT5)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/O (LUT2)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/I1 (LUT2)
+    28: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_38/O (LUT2)
+    29: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_38/I1 (LUT2)
+    30: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+    31: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_265"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/I2 (LUT3)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_312/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_312/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_59/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_59/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_320/O (LUT5)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_320/I4 (LUT5)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_100/O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_100/I5 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_36/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_36/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I2 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/I4 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_104/O (LUT5)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_104/I4 (LUT5)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_38/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_38/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I4 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_107/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_107/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_265/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_265/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_107"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_38/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_38/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_36/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_36/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_106/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_107/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_107/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/I0 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_37/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_37/I0 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_277/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_277/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_304/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_304/I3 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_43/O (LUT5)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_43/I4 (LUT5)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_276/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_276/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_316/O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_316/I4 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_89/O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_89/I5 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/I0 (LUT3)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/I1 (LUT2)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_321/O (LUT2)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_321/I1 (LUT2)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_94/O (LUT5)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_94/I3 (LUT5)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/O (LUT6)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/I3 (LUT6)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/I0 (LUT2)
+    28: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_277/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I0 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/I0 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_277/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_277/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_304/O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_304/I3 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_43/O (LUT5)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_43/I4 (LUT5)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_276/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_276/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_316/O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_316/I4 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_89/O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_89/I5 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/I0 (LUT3)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/I1 (LUT2)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_321/O (LUT2)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_321/I1 (LUT2)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_94/O (LUT5)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_94/I3 (LUT5)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/O (LUT6)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/I3 (LUT6)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I0 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_107/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_107/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_100/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_100/I5 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I5 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_100"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_321/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_321/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_94/O (LUT5)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_94/I3 (LUT5)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/I3 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_278/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_87/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_87/I5 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/I4 (LUT5)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/I0 (LUT3)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I4 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/I0 (LUT3)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I0 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_82/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_82/I4 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/O (LUT5)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/I0 (LUT5)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I4 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_82"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/I0 (LUT5)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+Inferred a: "set_disable_timing -from I0 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_BINARY_TO_BCD_0_0/synth/Reaction_Time_Averager_BINARY_TO_BCD_0_0.v:58]
+INFO: [Common 17-14] Message 'Synth 8-295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/O (LUT5)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_91/O (LUT5)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_275/O (LUT3)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_271/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_271/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_265/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_265/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_104/O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_104/I4 (LUT5)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_273/O (LUT2)
+Inferred a: "set_disable_timing -from I4 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_104"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/O (LUT6)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_101/O (LUT6)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_269/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_270/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_279/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_79/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_79/I5 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_280/O (LUT2)
+Inferred a: "set_disable_timing -from I5 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_79"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_79/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_79/O (LUT6)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_79/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_79/O (LUT6)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/O (LUT5)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/I2 (LUT5)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_71/O (LUT4)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_71/I3 (LUT4)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_227/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_227/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_9/O (LUT4)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_9/I3 (LUT4)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/O (LUT2)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/I1 (LUT2)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_300/O (LUT4)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_300/I3 (LUT4)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/O (LUT2)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/I1 (LUT2)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_14/O (LUT4)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_14/I3 (LUT4)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/O (LUT2)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/I1 (LUT2)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/O (LUT6)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/I4 (LUT6)
+    28: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+    29: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/I1 (LUT2)
+    30: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_25/O (LUT3)
+    31: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_25/I1 (LUT3)
+    32: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/I2 (LUT5)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_71/O (LUT4)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_71/I3 (LUT4)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_227/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_227/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230/I1 (LUT2)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_9/O (LUT4)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_9/I3 (LUT4)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/O (LUT2)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/I1 (LUT2)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_300/O (LUT4)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_300/I3 (LUT4)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/O (LUT2)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/I1 (LUT2)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_14/O (LUT4)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_14/I3 (LUT4)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/O (LUT2)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/I1 (LUT2)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/O (LUT6)
+    25: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/I4 (LUT6)
+    26: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+    27: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/I1 (LUT2)
+    28: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_25/O (LUT3)
+    29: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_25/I1 (LUT3)
+    30: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+    31: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+Inferred a: "set_disable_timing -from I2 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_300/O (LUT4)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_300/I3 (LUT4)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_14/O (LUT4)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_14/I3 (LUT4)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/I4 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/I1 (LUT2)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_25/O (LUT3)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_25/I1 (LUT3)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_14/O (LUT4)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_14/I3 (LUT4)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/I4 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_25/O (LUT3)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_25/I1 (LUT3)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_25/O (LUT3)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_25/I1 (LUT3)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_285/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_285/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_60/O (LUT3)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_60/I2 (LUT3)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/O (LUT5)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/O (LUT5)
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_285"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_63/O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_63/I4 (LUT5)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_285/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_285/O (LUT2)
+Inferred a: "set_disable_timing -from I4 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_63"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_63/O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_63/I3 (LUT5)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/O (LUT5)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/O (LUT5)
+Inferred a: "set_disable_timing -from I3 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_63"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_63/O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_63/I0 (LUT5)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+Inferred a: "set_disable_timing -from I0 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_63"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_231/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_231/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_299/O (LUT4)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_299/I3 (LUT4)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/O (LUT2)
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_231"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_227/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_227/I1 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_9/O (LUT4)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_9/I3 (LUT4)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/O (LUT2)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/O (LUT2)
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_231/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_231/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_9/O (LUT4)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_9/I3 (LUT4)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/O (LUT2)
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_299/O (LUT4)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_299/I3 (LUT4)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_290/O (LUT2)
+Inferred a: "set_disable_timing -from I3 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_299"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_227/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_227/I1 (LUT2)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230/O (LUT2)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230/I0 (LUT2)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_55/O (LUT2)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_55/I1 (LUT2)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_283/O (LUT2)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_283/I1 (LUT2)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_11/O (LUT5)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_11/I3 (LUT5)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/O (LUT2)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/O (LUT2)
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_71/O (LUT4)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_71/I3 (LUT4)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+Inferred a: "set_disable_timing -from I3 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_71"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/O (LUT5)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_285/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_285/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/I4 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+Inferred a: "set_disable_timing -from I4 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/I1 (LUT2)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/O (LUT6)
+Inferred a: "set_disable_timing -from I1 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286"
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_20/O (LUT6)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_286/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_287/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_282/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_71/O (LUT4)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_71/O (LUT4)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_292/O (LUT2)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_71/O (LUT4)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_71/O (LUT4)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_66/O (LUT5)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_295/O (LUT2)
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_233/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_233/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_211/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_241/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_182/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_211/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_182/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_257/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_263/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_104/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_230/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_352/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Reaction_Time_Averager_i/BINARY_TO_BCD_0/i_291/O'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 838.945 ; gain = 546.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -424,7 +2080,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 838.945 ; gain = 546.938
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -437,7 +2093,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 838.945 ; gain = 546.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -445,29 +2101,177 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 /O (LUT4)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 /I2 (LUT4)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_3 /O (LUT5)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_3 /I3 (LUT5)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_5 /O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_5 /I3 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit3[1]_INST_0_i_9 /O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit3[1]_INST_0_i_9 /I3 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_67 /O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_67 /I5 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_58 /O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_58 /I1 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_57 /O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_57 /I3 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_106 /O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_106 /I3 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_143 /O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_143 /I4 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 /O (LUT4)
+Inferred a: "set_disable_timing -from I2 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 "
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_3 /O (LUT5)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_3 /I3 (LUT5)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_5 /O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_5 /I3 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit3[1]_INST_0_i_9 /O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit3[1]_INST_0_i_9 /I3 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_67 /O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_67 /I5 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_58 /O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_58 /I1 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_57 /O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_57 /I3 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_106 /O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_106 /I3 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_143 /O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_143 /I4 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 /O (LUT4)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 /O (LUT4)
+Inferred a: "set_disable_timing -from I3 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_3 "
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_5 /O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_5 /I3 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit3[1]_INST_0_i_9 /O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit3[1]_INST_0_i_9 /I3 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_67 /O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_67 /I5 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_58 /O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_58 /I1 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_57 /O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_57 /I3 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_106 /O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_106 /I3 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_143 /O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_143 /I4 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 /O (LUT4)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 /I0 (LUT4)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_1 /O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_1 /I3 (LUT6)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_5 /O (LUT6)
+Inferred a: "set_disable_timing -from I3 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_5 "
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit3[1]_INST_0_i_9 /O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit3[1]_INST_0_i_9 /I3 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_67 /O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_67 /I5 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_58 /O (LUT6)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_58 /I1 (LUT6)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_57 /O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_57 /I3 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_106 /O (LUT6)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_106 /I3 (LUT6)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_143 /O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_143 /I4 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 /O (LUT4)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 /I0 (LUT4)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_1 /O (LUT6)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_1 /I3 (LUT6)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_5 /O (LUT6)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[3]_INST_0_i_5 /O (LUT6)
+Inferred a: "set_disable_timing -from I3 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit3[1]_INST_0_i_9 "
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit3[1]_INST_0_i_9 /O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit3[1]_INST_0_i_9 /O (LUT6)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 /O (LUT4)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit4[2]_INST_0_i_1 /O (LUT4)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_44 /O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_44 /I4 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_80 /O (LUT5)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_80 /I3 (LUT5)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_122 /O (LUT4)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_122 /I3 (LUT4)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_157 /O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_157 /I1 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[2]_INST_0_i_9 /O (LUT4)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[2]_INST_0_i_9 /I3 (LUT4)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[2]_INST_0_i_8 /O (LUT6)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[2]_INST_0_i_8 /I4 (LUT6)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_14 /O (LUT5)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_14 /I2 (LUT5)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_40 /O (LUT5)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_40 /I1 (LUT5)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_43 /O (LUT5)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_43 /I2 (LUT5)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_44 /O (LUT6)
+Inferred a: "set_disable_timing -from I4 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_44 "
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_44 /O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_44 /O (LUT6)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_44 /O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_44 /O (LUT6)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_4 /O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_4 /I3 (LUT6)
+     2: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_8 /O (LUT6)
+     3: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_8 /I1 (LUT6)
+     4: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_24 /O (LUT3)
+     5: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_24 /I0 (LUT3)
+     6: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_50 /O (LUT6)
+     7: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_50 /I2 (LUT6)
+     8: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_92 /O (LUT5)
+     9: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_92 /I3 (LUT5)
+    10: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_139 /O (LUT3)
+    11: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_139 /I2 (LUT3)
+    12: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_161 /O (LUT6)
+    13: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_161 /I5 (LUT6)
+    14: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_169 /O (LUT4)
+    15: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_169 /I3 (LUT4)
+    16: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_162 /O (LUT5)
+    17: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_162 /I4 (LUT5)
+    18: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_168 /O (LUT6)
+    19: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_168 /I5 (LUT6)
+    20: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_173 /O (LUT4)
+    21: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_173 /I3 (LUT4)
+    22: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[2]_INST_0_i_4 /O (LUT5)
+    23: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[2]_INST_0_i_4 /I3 (LUT5)
+    24: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_4 /O (LUT6)
+Inferred a: "set_disable_timing -from I3 -to O Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_4 "
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_4 /O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_4 /O (LUT6)
+Found timing loop:
+     0: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_4 /O (LUT6)
+     1: Reaction_Time_Averager_i/BINARY_TO_BCD_0/\o_Digit1[3]_INST_0_i_4 /O (LUT6)
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 838.945 ; gain = 546.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 838.945 ; gain = 546.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 838.945 ; gain = 546.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 838.945 ; gain = 546.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -484,57 +2288,64 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    19|
-|3     |LUT1   |     7|
-|4     |LUT2   |    15|
-|5     |LUT3   |     6|
-|6     |LUT4   |    36|
-|7     |LUT5   |    41|
-|8     |LUT6   |    10|
+|2     |CARRY4 |    39|
+|3     |LUT1   |    22|
+|4     |LUT2   |    66|
+|5     |LUT3   |    35|
+|6     |LUT4   |    68|
+|7     |LUT5   |   116|
+|8     |LUT6   |   120|
 |9     |SRL16  |     1|
-|10    |FDCE   |    64|
+|10    |FDCE   |    79|
 |11    |FDPE   |     2|
 |12    |FDR    |     8|
-|13    |FDRE   |    66|
-|14    |FDSE   |     6|
+|13    |FDRE   |   100|
+|14    |FDSE   |     7|
 |15    |IBUF   |     4|
-|16    |OBUF   |    13|
+|16    |OBUF   |    16|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------------------------+------------------------------------------------+------+
 |      |Instance                              |Module                                          |Cells |
 +------+--------------------------------------+------------------------------------------------+------+
-|1     |top                                   |                                                |   299|
-|2     |  Reaction_Time_Averager_i            |Reaction_Time_Averager                          |   281|
-|3     |    HZ_Counter_0                      |Reaction_Time_Averager_HZ_Counter_0_0           |    82|
-|4     |      inst                            |HZ_Counter                                      |    82|
-|5     |    LSFR_0                            |Reaction_Time_Averager_LSFR_0_0                 |    14|
-|6     |      inst                            |LSFR                                            |    14|
-|7     |    RTM_FSM_0                         |Reaction_Time_Averager_RTM_FSM_0_0              |    35|
-|8     |      inst                            |RTM_FSM                                         |    35|
-|9     |    proc_sys_reset_0                  |Reaction_Time_Averager_proc_sys_reset_0_0       |    66|
-|10    |      U0                              |proc_sys_reset                                  |    66|
-|11    |        EXT_LPF                       |lpf                                             |    23|
-|12    |          \ACTIVE_LOW_AUX.ACT_LO_AUX  |cdc_sync                                        |     6|
-|13    |          \ACTIVE_LOW_EXT.ACT_LO_EXT  |cdc_sync_0                                      |     6|
-|14    |        SEQ                           |sequence_psr                                    |    38|
-|15    |          SEQ_COUNTER                 |upcnt_n                                         |    13|
-|16    |    ssd_dec_0                         |Reaction_Time_Averager_ssd_dec_0_0              |    14|
-|17    |      inst                            |ssd_dec                                         |    14|
-|18    |    ssd_mux_0                         |Reaction_Time_Averager_ssd_mux_0_0              |    32|
-|19    |      inst                            |ssd_mux                                         |    32|
-|20    |    stopwatch_ssd_driver_0            |Reaction_Time_Averager_stopwatch_ssd_driver_0_0 |    38|
-|21    |      inst                            |stopwatch_ssd_driver                            |    38|
+|1     |top                                   |                                                |   684|
+|2     |  Reaction_Time_Averager_i            |Reaction_Time_Averager                          |   663|
+|3     |    Accumuator_0                      |Reaction_Time_Averager_Accumuator_0_0           |    32|
+|4     |      inst                            |Accumuator                                      |    32|
+|5     |    BCD_TO_BINARY_0                   |Reaction_Time_Averager_BCD_TO_BINARY_0_0        |    65|
+|6     |      inst                            |BCD_TO_BINARY                                   |    65|
+|7     |    BINARY_TO_BCD_0                   |Reaction_Time_Averager_BINARY_TO_BCD_0_0        |   241|
+|8     |    EXTRA_THICC_MUX_0                 |Reaction_Time_Averager_EXTRA_THICC_MUX_0_0      |    32|
+|9     |      inst                            |EXTRA_THICC_MUX                                 |    32|
+|10    |    HZ_Counter_0                      |Reaction_Time_Averager_HZ_Counter_0_0           |    82|
+|11    |      inst                            |HZ_Counter                                      |    82|
+|12    |    LSFR_0                            |Reaction_Time_Averager_LSFR_0_0                 |    14|
+|13    |      inst                            |LSFR                                            |    14|
+|14    |    RTM_FSM_0                         |Reaction_Time_Averager_RTM_FSM_0_0              |    46|
+|15    |      inst                            |RTM_FSM                                         |    46|
+|16    |    proc_sys_reset_0                  |Reaction_Time_Averager_proc_sys_reset_0_0       |    66|
+|17    |      U0                              |proc_sys_reset                                  |    66|
+|18    |        EXT_LPF                       |lpf                                             |    23|
+|19    |          \ACTIVE_LOW_AUX.ACT_LO_AUX  |cdc_sync                                        |     6|
+|20    |          \ACTIVE_LOW_EXT.ACT_LO_EXT  |cdc_sync_0                                      |     6|
+|21    |        SEQ                           |sequence_psr                                    |    38|
+|22    |          SEQ_COUNTER                 |upcnt_n                                         |    13|
+|23    |    ssd_dec_0                         |Reaction_Time_Averager_ssd_dec_0_0              |    14|
+|24    |      inst                            |ssd_dec                                         |    14|
+|25    |    ssd_mux_0                         |Reaction_Time_Averager_ssd_mux_0_0              |    32|
+|26    |      inst                            |ssd_mux                                         |    32|
+|27    |    stopwatch_ssd_driver_0            |Reaction_Time_Averager_stopwatch_ssd_driver_0_0 |    39|
+|28    |      inst                            |stopwatch_ssd_driver                            |    39|
 +------+--------------------------------------+------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 838.945 ; gain = 546.938
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 780.664 ; gain = 151.070
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 780.664 ; gain = 487.555
+Synthesis finished with 0 errors, 179 critical warnings and 44 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 838.945 ; gain = 207.422
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 838.945 ; gain = 546.938
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -544,11 +2355,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-97 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+129 Infos, 50 Warnings, 100 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 790.996 ; gain = 505.953
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 838.945 ; gain = 552.539
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.runs/synth_1/Reaction_Time_Averager_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Reaction_Time_Averager_wrapper_utilization_synth.rpt -pb Reaction_Time_Averager_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 790.996 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 19 22:36:45 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 838.945 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 20 23:07:13 2018...

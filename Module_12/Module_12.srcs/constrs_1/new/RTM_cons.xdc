@@ -47,3 +47,10 @@ set_output_delay -clock [get_clocks i_CLK] -min -add_delay 0.000 [get_ports {o_A
 set_output_delay -clock [get_clocks i_CLK] -max -add_delay 10.000 [get_ports {o_Anodes_0[*]}]
 set_output_delay -clock [get_clocks i_CLK] -min -add_delay 0.000 [get_ports {o_Cathodes_0[*]}]
 set_output_delay -clock [get_clocks i_CLK] -max -add_delay 10.000 [get_ports {o_Cathodes_0[*]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {o_T_NUM_0[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_T_NUM_0[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_T_NUM_0[0]}]
+set_property PACKAGE_PIN N20 [get_ports {o_T_NUM_0[0]}]
+set_property PACKAGE_PIN P20 [get_ports {o_T_NUM_0[1]}]
+set_property PACKAGE_PIN R19 [get_ports {o_T_NUM_0[2]}]

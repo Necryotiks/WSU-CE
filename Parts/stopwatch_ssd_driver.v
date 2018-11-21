@@ -24,6 +24,7 @@ module stopwatch_ssd_driver(
     input i_SUBCLK, 
     input i_RST,
     input i_CLK_EN,
+    input i_SRST,
     output [3:0] o_Digit_1_val,
     output [3:0] o_Digit_2_val,
     output [3:0] o_Digit_3_val,
@@ -38,9 +39,9 @@ module stopwatch_ssd_driver(
        wire w_SUBCLK;
        wire w_RST;
        wire w_CLK_EN;
-
+       wire w_SRST;
        assign w_SUBCLK = i_SUBCLK;
-
+       assign w_SRST = i_SRST;
        assign w_RST = i_RST;
        assign w_CLK_EN = i_CLK_EN;
        assign o_Digit_1_val = r_Digit_1_val;
@@ -52,7 +53,8 @@ module stopwatch_ssd_driver(
     always@(posedge w_SUBCLK,posedge w_RST) 
     begin
         r_HEX_DEC <= c_HEX_DEC; //verilog bullshit.
-        if(w_RST == 1'b1)
+         
+        if(w_RST == 1'b1 | w_SRST == 1'b1)
             begin
                r_Digit_1_val <= 4'd0;
                r_Digit_2_val <= 4'd0;
@@ -61,7 +63,7 @@ module stopwatch_ssd_driver(
             end               
         else
             begin
-            if(w_CLK_EN == 1'd1) begin     
+               if(w_CLK_EN == 1'd1) begin 
                 if(r_Digit_4_val >= r_HEX_DEC)
                     begin
                         r_Digit_4_val <= 4'd0;

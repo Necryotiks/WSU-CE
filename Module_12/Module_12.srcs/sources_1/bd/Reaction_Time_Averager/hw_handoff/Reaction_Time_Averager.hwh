@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Nov 19 22:35:26 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 20 23:03:14 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Reaction_Time_Averager" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -36,6 +36,9 @@
         <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
+        <CONNECTION INSTANCE="Accumuator_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_CLK"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
@@ -43,11 +46,206 @@
         <CONNECTION INSTANCE="proc_sys_reset_0" PORT="ext_reset_in"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" LEFT="2" NAME="o_T_NUM_0" RIGHT="0" SIGIS="undef" SIGNAME="RTM_FSM_0_o_T_NUM">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_T_NUM"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES/>
 
   <MODULES>
+    <MODULE FULLNAME="/Accumuator_0" HWVERSION="1.0" INSTANCE="Accumuator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Accumuator" VLNV="xilinx.com:module_ref:Accumuator:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_Accumuator_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_CLK_EN" SIGIS="undef" SIGNAME="RTM_FSM_0_o_ACC_EN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_ACC_EN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="13" NAME="i_DATA" RIGHT="0" SIGIS="undef" SIGNAME="BCD_TO_BINARY_0_o_DATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="o_DATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="13" NAME="o_OUT" RIGHT="0" SIGIS="undef" SIGNAME="Accumuator_0_o_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_DATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/BCD_TO_BINARY_0" HWVERSION="1.0" INSTANCE="BCD_TO_BINARY_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BCD_TO_BINARY" VLNV="xilinx.com:module_ref:BCD_TO_BINARY:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_BCD_TO_BINARY_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit1" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_1_val">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_1_val"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit2" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_2_val">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_2_val"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit3" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_3_val">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_3_val"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_Digit4" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_4_val">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_4_val"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="13" NAME="o_DATA" RIGHT="0" SIGIS="undef" SIGNAME="BCD_TO_BINARY_0_o_DATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Accumuator_0" PORT="i_DATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/BINARY_TO_BCD_0" HWVERSION="1.0" INSTANCE="BINARY_TO_BCD_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BINARY_TO_BCD" VLNV="xilinx.com:module_ref:BINARY_TO_BCD:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_BINARY_TO_BCD_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="13" NAME="i_DATA" RIGHT="0" SIGIS="undef" SIGNAME="Accumuator_0_o_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Accumuator_0" PORT="o_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Digit1" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Digit2" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Digit3" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Digit4" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_4"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/EXTRA_THICC_MUX_0" HWVERSION="1.0" INSTANCE="EXTRA_THICC_MUX_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="EXTRA_THICC_MUX" VLNV="xilinx.com:module_ref:EXTRA_THICC_MUX:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_EXTRA_THICC_MUX_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="i_SW_Digit_1" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_1_val">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_1_val"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_SW_Digit_2" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_2_val">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_2_val"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_SW_Digit_3" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_3_val">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_3_val"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_SW_Digit_4" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_4_val">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_4_val"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_1" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_Digit1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_2" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_Digit2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_3" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_Digit3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_4" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_Digit4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Sel" SIGIS="undef" SIGNAME="RTM_FSM_0_o_DONE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_DONE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Digit_1" RIGHT="0" SIGIS="undef" SIGNAME="EXTRA_THICC_MUX_0_o_Digit_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Digit_2" RIGHT="0" SIGIS="undef" SIGNAME="EXTRA_THICC_MUX_0_o_Digit_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Digit_3" RIGHT="0" SIGIS="undef" SIGNAME="EXTRA_THICC_MUX_0_o_Digit_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_Digit_4" RIGHT="0" SIGIS="undef" SIGNAME="EXTRA_THICC_MUX_0_o_Digit_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_4"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE FULLNAME="/HZ_Counter_0" HWVERSION="1.0" INSTANCE="HZ_Counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="HZ_Counter" VLNV="xilinx.com:module_ref:HZ_Counter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -147,6 +345,26 @@
             <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_CLK_EN"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="o_ACC_EN" SIGIS="undef" SIGNAME="RTM_FSM_0_o_ACC_EN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Accumuator_0" PORT="i_CLK_EN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_DONE" SIGIS="undef" SIGNAME="RTM_FSM_0_o_DONE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_Sel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="o_T_NUM" RIGHT="0" SIGIS="undef" SIGNAME="RTM_FSM_0_o_T_NUM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_T_NUM_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_SRST" SIGIS="undef" SIGNAME="RTM_FSM_0_o_SRST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SRST"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="o_CEN" SIGIS="undef" SIGNAME="RTM_FSM_0_o_CEN">
           <CONNECTIONS>
             <CONNECTION INSTANCE="LSFR_0" PORT="i_EN"/>
@@ -196,6 +414,7 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="LSFR_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="Accumuator_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_RST"/>
           </CONNECTIONS>
@@ -235,24 +454,24 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="i_Digit_1" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_1_val">
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_1" RIGHT="0" SIGIS="undef" SIGNAME="EXTRA_THICC_MUX_0_o_Digit_1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_1_val"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="o_Digit_1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="i_Digit_2" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_2_val">
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_2" RIGHT="0" SIGIS="undef" SIGNAME="EXTRA_THICC_MUX_0_o_Digit_2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_2_val"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="o_Digit_2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="i_Digit_3" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_3_val">
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_3" RIGHT="0" SIGIS="undef" SIGNAME="EXTRA_THICC_MUX_0_o_Digit_3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_3_val"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="o_Digit_3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="i_Digit_4" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_4_val">
+        <PORT DIR="I" LEFT="3" NAME="i_Digit_4" RIGHT="0" SIGIS="undef" SIGNAME="EXTRA_THICC_MUX_0_o_Digit_4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_4_val"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="o_Digit_4"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
@@ -296,24 +515,33 @@
             <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_SWEN"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="i_SRST" SIGIS="undef" SIGNAME="RTM_FSM_0_o_SRST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_SRST"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Digit_1_val" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_1_val">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_1"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_1"/>
+            <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_Digit1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Digit_2_val" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_2_val">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_2"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_2"/>
+            <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_Digit2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Digit_3_val" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_3_val">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_3"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_3"/>
+            <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_Digit3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Digit_4_val" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_4_val">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_Digit_4"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_4"/>
+            <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_Digit4"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

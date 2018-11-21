@@ -59,6 +59,7 @@ module Reaction_Time_Averager_stopwatch_ssd_driver_0_0 (
   i_SUBCLK,
   i_RST,
   i_CLK_EN,
+  i_SRST,
   o_Digit_1_val,
   o_Digit_2_val,
   o_Digit_3_val,
@@ -70,6 +71,7 @@ input wire i_SUBCLK;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
 input wire i_RST;
 input wire i_CLK_EN;
+input wire i_SRST;
 output wire [3 : 0] o_Digit_1_val;
 output wire [3 : 0] o_Digit_2_val;
 output wire [3 : 0] o_Digit_3_val;
@@ -81,6 +83,7 @@ output wire [3 : 0] o_Digit_4_val;
     .i_SUBCLK(i_SUBCLK),
     .i_RST(i_RST),
     .i_CLK_EN(i_CLK_EN),
+    .i_SRST(i_SRST),
     .o_Digit_1_val(o_Digit_1_val),
     .o_Digit_2_val(o_Digit_2_val),
     .o_Digit_3_val(o_Digit_3_val),

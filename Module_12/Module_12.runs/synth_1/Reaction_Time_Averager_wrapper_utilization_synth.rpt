@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon Nov 19 22:36:45 2018
+| Date         : Tue Nov 20 23:07:13 2018
 | Host         : LAPTOP-QC2AS776 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Reaction_Time_Averager_wrapper_utilization_synth.rpt -pb Reaction_Time_Averager_wrapper_utilization_synth.pb
 | Design       : Reaction_Time_Averager_wrapper
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |   96 |     0 |     14400 |  0.67 |
-|   LUT as Logic             |   95 |     0 |     14400 |  0.66 |
+| Slice LUTs*                |  347 |     0 |     14400 |  2.41 |
+|   LUT as Logic             |  346 |     0 |     14400 |  2.40 |
 |   LUT as Memory            |    1 |     0 |      6000 |  0.02 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    1 |     0 |           |       |
-| Slice Registers            |  146 |     0 |     28800 |  0.51 |
-|   Register as Flip Flop    |  146 |     0 |     28800 |  0.51 |
+| Slice Registers            |  196 |     0 |     28800 |  0.68 |
+|   Register as Flip Flop    |  196 |     0 |     28800 |  0.68 |
 |   Register as Latch        |    0 |     0 |     28800 |  0.00 |
 | F7 Muxes                   |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 2     |          Yes |           - |          Set |
-| 64    |          Yes |           - |        Reset |
-| 6     |          Yes |         Set |            - |
-| 74    |          Yes |       Reset |            - |
+| 79    |          Yes |           - |        Reset |
+| 7     |          Yes |         Set |            - |
+| 108   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   17 |     0 |       100 | 17.00 |
+| Bonded IOB                  |   20 |     0 |       100 | 20.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |  0.00 |
@@ -148,17 +148,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   74 |        Flop & Latch |
-| FDCE     |   64 |        Flop & Latch |
-| LUT5     |   41 |                 LUT |
-| LUT4     |   36 |                 LUT |
-| CARRY4   |   19 |          CarryLogic |
-| LUT2     |   15 |                 LUT |
-| OBUF     |   13 |                  IO |
-| LUT6     |   10 |                 LUT |
-| LUT1     |    7 |                 LUT |
-| LUT3     |    6 |                 LUT |
-| FDSE     |    6 |        Flop & Latch |
+| LUT6     |  120 |                 LUT |
+| LUT5     |  116 |                 LUT |
+| FDRE     |  108 |        Flop & Latch |
+| FDCE     |   79 |        Flop & Latch |
+| LUT4     |   68 |                 LUT |
+| LUT2     |   66 |                 LUT |
+| CARRY4   |   39 |          CarryLogic |
+| LUT3     |   35 |                 LUT |
+| LUT1     |   22 |                 LUT |
+| OBUF     |   16 |                  IO |
+| FDSE     |    7 |        Flop & Latch |
 | IBUF     |    4 |                  IO |
 | FDPE     |    2 |        Flop & Latch |
 | SRL16E   |    1 |  Distributed Memory |
