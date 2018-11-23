@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 20 23:03:14 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov 23 01:10:25 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Reaction_Time_Averager" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -36,9 +36,7 @@
         <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
-        <CONNECTION INSTANCE="Accumuator_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_CLK"/>
-        <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_CLK"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
@@ -49,6 +47,11 @@
     <PORT DIR="O" LEFT="2" NAME="o_T_NUM_0" RIGHT="0" SIGIS="undef" SIGNAME="RTM_FSM_0_o_T_NUM">
       <CONNECTIONS>
         <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_T_NUM"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_Terminate_0" SIGIS="undef" SIGNAME="External_Ports_i_Terminate_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_Terminate"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -63,9 +66,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="i_CLK_EN" SIGIS="undef" SIGNAME="RTM_FSM_0_o_ACC_EN">
@@ -85,7 +88,7 @@
         </PORT>
         <PORT DIR="O" LEFT="13" NAME="o_OUT" RIGHT="0" SIGIS="undef" SIGNAME="Accumuator_0_o_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_DATA"/>
+            <CONNECTION INSTANCE="Divider_0" PORT="i_DATA"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -98,9 +101,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="i_Digit1" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_1_val">
@@ -134,33 +137,63 @@
     <MODULE FULLNAME="/BINARY_TO_BCD_0" HWVERSION="1.0" INSTANCE="BINARY_TO_BCD_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BINARY_TO_BCD" VLNV="xilinx.com:module_ref:BINARY_TO_BCD:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
+        <PARAMETER NAME="INPUT_WIDTH" VALUE="14"/>
+        <PARAMETER NAME="DECIMAL_DIGITS" VALUE="4"/>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_BINARY_TO_BCD_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clock" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="13" NAME="i_Binary" RIGHT="0" SIGIS="undef" SIGNAME="Divider_0_o_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Divider_0" PORT="o_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Start" SIGIS="undef" SIGNAME="RTM_FSM_0_o_ACC_EN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_ACC_EN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="o_BCD" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_BCD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_1" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_2" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_3" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Divider_0" HWVERSION="1.0" INSTANCE="Divider_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Divider" VLNV="xilinx.com:module_ref:Divider:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_Divider_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="i_TC" RIGHT="0" SIGIS="undef" SIGNAME="RTM_FSM_0_o_TRIAL_NUM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_TRIAL_NUM"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="13" NAME="i_DATA" RIGHT="0" SIGIS="undef" SIGNAME="Accumuator_0_o_OUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Accumuator_0" PORT="o_OUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="o_Digit1" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit1">
+        <PORT DIR="O" LEFT="13" NAME="o_OUT" RIGHT="0" SIGIS="undef" SIGNAME="Divider_0_o_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="o_Digit2" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="o_Digit3" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_3"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="o_Digit4" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit4">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_4"/>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Binary"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -193,24 +226,24 @@
             <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="o_Digit_4_val"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_1" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit1">
+        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_1" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_Digit1"/>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_2" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit2">
+        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_2" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_Digit2"/>
+            <CONNECTION INSTANCE="xlslice_1" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_3" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit3">
+        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_3" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_2_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_Digit3"/>
+            <CONNECTION INSTANCE="xlslice_2" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_4" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_Digit4">
+        <PORT DIR="I" LEFT="3" NAME="i_T_Digit_4" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_3_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_Digit4"/>
+            <CONNECTION INSTANCE="xlslice_3" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="i_Sel" SIGIS="undef" SIGNAME="RTM_FSM_0_o_DONE">
@@ -267,6 +300,10 @@
         <PORT DIR="O" NAME="o_Out" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SUBCLK"/>
+            <CONNECTION INSTANCE="Accumuator_0" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Clock"/>
+            <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="Divider_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_CLK1KHZ"/>
           </CONNECTIONS>
         </PORT>
@@ -330,6 +367,11 @@
             <CONNECTION INSTANCE="External_Ports" PORT="i_Start_0"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="i_Terminate" SIGIS="undef" SIGNAME="External_Ports_i_Terminate_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_Terminate_0"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="i_React" SIGIS="undef" SIGNAME="External_Ports_i_React_0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="i_React_0"/>
@@ -347,6 +389,7 @@
         </PORT>
         <PORT DIR="O" NAME="o_ACC_EN" SIGIS="undef" SIGNAME="RTM_FSM_0_o_ACC_EN">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Start"/>
             <CONNECTION INSTANCE="Accumuator_0" PORT="i_CLK_EN"/>
           </CONNECTIONS>
         </PORT>
@@ -363,6 +406,11 @@
         <PORT DIR="O" NAME="o_SRST" SIGIS="undef" SIGNAME="RTM_FSM_0_o_SRST">
           <CONNECTIONS>
             <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SRST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="o_TRIAL_NUM" RIGHT="0" SIGIS="undef" SIGNAME="RTM_FSM_0_o_TRIAL_NUM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Divider_0" PORT="i_TC"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_CEN" SIGIS="undef" SIGNAME="RTM_FSM_0_o_CEN">
@@ -414,8 +462,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="LSFR_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
-            <CONNECTION INSTANCE="Accumuator_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="Accumuator_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_RST"/>
           </CONNECTIONS>
         </PORT>
@@ -542,6 +590,102 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_4"/>
             <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_Digit4"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="15"/>
+        <PARAMETER NAME="DIN_TO" VALUE="12"/>
+        <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_xlslice_0_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_BCD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_BCD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xlslice_1" HWVERSION="1.0" INSTANCE="xlslice_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="11"/>
+        <PARAMETER NAME="DIN_TO" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_xlslice_0_1"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_BCD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_BCD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xlslice_2" HWVERSION="1.0" INSTANCE="xlslice_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="7"/>
+        <PARAMETER NAME="DIN_TO" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_xlslice_0_2"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_BCD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_BCD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_2_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xlslice_3" HWVERSION="1.0" INSTANCE="xlslice_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="3"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_xlslice_0_3"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_BCD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="o_BCD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_3_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_T_Digit_4"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

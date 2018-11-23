@@ -19,12 +19,13 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+//TODO: ADD NEW STATE SO SVD SETTLES
 module RTM_FSM(
     input i_CLK1KHZ,
     input i_RST,
     input [12:0] i_CVAL,
     input i_Start,
+    input i_Terminate,
     input i_React,
     output [1:0] o_Ready,
     output o_SWEN,
@@ -32,6 +33,7 @@ module RTM_FSM(
     output o_DONE,
     output [2:0] o_T_NUM,
     output o_SRST,
+    output [2:0] o_TRIAL_NUM,
     output o_CEN
     );
     
@@ -55,9 +57,9 @@ module RTM_FSM(
     wire w_React;
     reg r_ACC_EN = 1'b0;
     reg r_DONE = 1'b0;
-    reg r_SRST;
+    reg r_SRST = 1'b0;
     wire [2:0] w_T_NUM;
-    
+    wire w_Terminate;
     
     assign w_CLK1KHZ = i_CLK1KHZ;
     assign w_RST = i_RST;
@@ -69,9 +71,10 @@ module RTM_FSM(
     assign o_Ready = r_Ready;
     assign o_ACC_EN = r_ACC_EN;
     assign o_DONE = r_DONE;
-    assign o_T_NUM = w_T_NUM;
-    assign w_T_NUM = r_TRIAL_COUNT;
-    assign o_SRST = r_SRST;
+    assign o_T_NUM = r_TRIAL_COUNT;
+    assign o_SRST = r_SRST; // tie to manual control
+    assign w_Terminate = i_Terminate;
+    assign o_TRIAL_NUM = r_TRIAL_COUNT;
     always@(*)
     begin
         case(r_CURRENT_STATE)
@@ -80,6 +83,10 @@ module RTM_FSM(
                             if(w_Start == 1'd1) 
                                 begin
                                 r_NEXT_STATE = s_COUNTDOWN;
+                                end
+                            else if((w_Terminate == 1'd1) & ((r_TRIAL_COUNT % 2) == 0) & (r_TRIAL_COUNT != 3'd6))
+                                begin
+                                    r_NEXT_STATE = s_COLLECTION_COMPLETE;
                                 end
                             else 
                                 begin
@@ -120,29 +127,30 @@ module RTM_FSM(
     
     always@(posedge w_CLK1KHZ or posedge w_RST) //RESET LOGIC
     begin
-        if(w_RST == 1'd1) 
+        if(w_RST == 1'd1) begin
             r_CURRENT_STATE = s_GET_COUNTER;
+            end
         else
             r_CURRENT_STATE = r_NEXT_STATE;
     end
     
-    always@(posedge w_CLK1KHZ) //ACCUMULATE
+    always@(posedge w_CLK1KHZ or posedge w_RST) //ACCUMULATE
     begin
-        if(w_RST == 1'd1)
-            r_TRIAL_COUNT = 3'd0;
-        else if(r_CURRENT_STATE == s_SW_STOPPED) begin
+         if(w_RST == 1'd1)
+            r_TRIAL_COUNT <= 3'b000;
+         else if(r_CURRENT_STATE == s_SW_STOPPED) 
+            begin
             r_ACC_EN = 1'b1;
-            r_TRIAL_COUNT = r_TRIAL_COUNT + 1'd1;
-            r_SRST = 1'b1;
+            r_TRIAL_COUNT <= r_TRIAL_COUNT + 1'd1;
+       
             end
         else
             begin
             r_ACC_EN = 1'b0;  
-            r_TRIAL_COUNT = r_TRIAL_COUNT + 1'd0;  
-            r_SRST = 1'b0;       
+            r_TRIAL_COUNT <= r_TRIAL_COUNT + 1'd0;  
+                 
             end       
     end
-    
     
     always@(posedge w_CLK1KHZ) //clock logic
     begin
@@ -151,7 +159,12 @@ module RTM_FSM(
             r_SWEN = 1'b1;
             r_Ready = 2'b11;
             end
-        else
+        else if (r_CURRENT_STATE == s_GET_COUNTER)
+            begin
+            r_Ready = 2'd1;
+            r_SWEN = 1'b0;
+            end
+         else
             begin
             r_Ready = 2'd0;
             r_SWEN = 1'b0;
@@ -168,16 +181,23 @@ module RTM_FSM(
     
     always@(posedge w_CLK1KHZ)
         begin
-            if(r_CURRENT_STATE == s_COUNTDOWN)
+            if(r_CURRENT_STATE == s_COUNTDOWN) begin
                 r_COUNTER = r_COUNTER + 1'd1;
-            else
-                r_COUNTER = r_COUNTER + 1'd0;   
+                r_SRST = 1'd1;
+                end
+            else begin
+                r_COUNTER = r_COUNTER + 1'd0;
+                r_SRST = 1'd0;
+                end   
         end
     always@(posedge w_CLK1KHZ)
         begin
-            if(r_CURRENT_STATE == s_COLLECTION_COMPLETE)
+            if(r_CURRENT_STATE == s_COLLECTION_COMPLETE) begin
                 r_DONE = 1'b1;
-            else
-                r_DONE = 1'b0;   
+                end
+            else 
+                begin
+                r_DONE = 1'b0;  
+                end
         end
 endmodule

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Tue Nov 20 23:03:13 2018
+//Date        : Fri Nov 23 01:10:25 2018
 //Host        : LAPTOP-QC2AS776 running 64-bit major release  (build 9200)
 //Command     : generate_target Reaction_Time_Averager.bd
 //Design      : Reaction_Time_Averager
@@ -9,12 +9,13 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Reaction_Time_Averager,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Reaction_Time_Averager,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=11,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=10,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=9,synth_mode=Global}" *) (* HW_HANDOFF = "Reaction_Time_Averager.hwdef" *) 
+(* CORE_GENERATION_INFO = "Reaction_Time_Averager,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Reaction_Time_Averager,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=16,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=11,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=11,synth_mode=Global}" *) (* HW_HANDOFF = "Reaction_Time_Averager.hwdef" *) 
 module Reaction_Time_Averager
    (i_CLK,
     i_RST,
     i_React_0,
     i_Start_0,
+    i_Terminate_0,
     o_Anodes_0,
     o_Cathodes_0,
     o_Ready_0,
@@ -23,6 +24,7 @@ module Reaction_Time_Averager
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.I_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.I_RST, POLARITY ACTIVE_LOW" *) input i_RST;
   input i_React_0;
   input i_Start_0;
+  input i_Terminate_0;
   output [3:0]o_Anodes_0;
   output [6:0]o_Cathodes_0;
   output [1:0]o_Ready_0;
@@ -30,10 +32,12 @@ module Reaction_Time_Averager
 
   wire [13:0]Accumuator_0_o_OUT;
   wire [13:0]BCD_TO_BINARY_0_o_DATA;
+  wire [15:0]BINARY_TO_BCD_0_o_BCD;
   wire [3:0]BINARY_TO_BCD_0_o_Digit1;
   wire [3:0]BINARY_TO_BCD_0_o_Digit2;
   wire [3:0]BINARY_TO_BCD_0_o_Digit3;
   wire [3:0]BINARY_TO_BCD_0_o_Digit4;
+  wire [13:0]Divider_0_o_OUT;
   wire [3:0]EXTRA_THICC_MUX_0_o_Digit_1;
   wire [3:0]EXTRA_THICC_MUX_0_o_Digit_2;
   wire [3:0]EXTRA_THICC_MUX_0_o_Digit_3;
@@ -46,11 +50,13 @@ module Reaction_Time_Averager
   wire [1:0]RTM_FSM_0_o_Ready;
   wire RTM_FSM_0_o_SRST;
   wire RTM_FSM_0_o_SWEN;
+  wire [2:0]RTM_FSM_0_o_TRIAL_NUM;
   wire [2:0]RTM_FSM_0_o_T_NUM;
   wire i_CLK_1;
   wire i_RST_1;
   wire i_React_0_1;
   wire i_Start_0_1;
+  wire i_Terminate_0_1;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire [6:0]ssd_dec_0_o_Cathodes;
   wire [3:0]ssd_mux_0_o_Anodes;
@@ -64,29 +70,34 @@ module Reaction_Time_Averager
   assign i_RST_1 = i_RST;
   assign i_React_0_1 = i_React_0;
   assign i_Start_0_1 = i_Start_0;
+  assign i_Terminate_0_1 = i_Terminate_0;
   assign o_Anodes_0[3:0] = ssd_mux_0_o_Anodes;
   assign o_Cathodes_0[6:0] = ssd_dec_0_o_Cathodes;
   assign o_Ready_0[1:0] = RTM_FSM_0_o_Ready;
   assign o_T_NUM_0[2:0] = RTM_FSM_0_o_T_NUM;
   Reaction_Time_Averager_Accumuator_0_0 Accumuator_0
-       (.i_CLK(i_CLK_1),
+       (.i_CLK(HZ_Counter_0_o_Out),
         .i_CLK_EN(RTM_FSM_0_o_ACC_EN),
         .i_DATA(BCD_TO_BINARY_0_o_DATA),
         .i_RST(proc_sys_reset_0_peripheral_aresetn),
         .o_OUT(Accumuator_0_o_OUT));
   Reaction_Time_Averager_BCD_TO_BINARY_0_0 BCD_TO_BINARY_0
-       (.i_CLK(i_CLK_1),
+       (.i_CLK(HZ_Counter_0_o_Out),
         .i_Digit1(stopwatch_ssd_driver_0_o_Digit_1_val),
         .i_Digit2(stopwatch_ssd_driver_0_o_Digit_2_val),
         .i_Digit3(stopwatch_ssd_driver_0_o_Digit_3_val),
         .i_Digit4(stopwatch_ssd_driver_0_o_Digit_4_val),
         .o_DATA(BCD_TO_BINARY_0_o_DATA));
   Reaction_Time_Averager_BINARY_TO_BCD_0_0 BINARY_TO_BCD_0
-       (.i_DATA(Accumuator_0_o_OUT),
-        .o_Digit1(BINARY_TO_BCD_0_o_Digit1),
-        .o_Digit2(BINARY_TO_BCD_0_o_Digit2),
-        .o_Digit3(BINARY_TO_BCD_0_o_Digit3),
-        .o_Digit4(BINARY_TO_BCD_0_o_Digit4));
+       (.i_Binary(Divider_0_o_OUT),
+        .i_Clock(HZ_Counter_0_o_Out),
+        .i_Start(RTM_FSM_0_o_ACC_EN),
+        .o_BCD(BINARY_TO_BCD_0_o_BCD));
+  Reaction_Time_Averager_Divider_0_0 Divider_0
+       (.i_CLK(HZ_Counter_0_o_Out),
+        .i_DATA(Accumuator_0_o_OUT),
+        .i_TC(RTM_FSM_0_o_TRIAL_NUM),
+        .o_OUT(Divider_0_o_OUT));
   Reaction_Time_Averager_EXTRA_THICC_MUX_0_0 EXTRA_THICC_MUX_0
        (.i_CLK(i_CLK_1),
         .i_SW_Digit_1(stopwatch_ssd_driver_0_o_Digit_1_val),
@@ -117,12 +128,14 @@ module Reaction_Time_Averager
         .i_RST(proc_sys_reset_0_peripheral_aresetn),
         .i_React(i_React_0_1),
         .i_Start(i_Start_0_1),
+        .i_Terminate(i_Terminate_0_1),
         .o_ACC_EN(RTM_FSM_0_o_ACC_EN),
         .o_CEN(RTM_FSM_0_o_CEN),
         .o_DONE(RTM_FSM_0_o_DONE),
         .o_Ready(RTM_FSM_0_o_Ready),
         .o_SRST(RTM_FSM_0_o_SRST),
         .o_SWEN(RTM_FSM_0_o_SWEN),
+        .o_TRIAL_NUM(RTM_FSM_0_o_TRIAL_NUM),
         .o_T_NUM(RTM_FSM_0_o_T_NUM));
   Reaction_Time_Averager_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(1'b1),
@@ -152,4 +165,16 @@ module Reaction_Time_Averager
         .o_Digit_2_val(stopwatch_ssd_driver_0_o_Digit_2_val),
         .o_Digit_3_val(stopwatch_ssd_driver_0_o_Digit_3_val),
         .o_Digit_4_val(stopwatch_ssd_driver_0_o_Digit_4_val));
+  Reaction_Time_Averager_xlslice_0_0 xlslice_0
+       (.Din(BINARY_TO_BCD_0_o_BCD),
+        .Dout(BINARY_TO_BCD_0_o_Digit1));
+  Reaction_Time_Averager_xlslice_0_1 xlslice_1
+       (.Din(BINARY_TO_BCD_0_o_BCD),
+        .Dout(BINARY_TO_BCD_0_o_Digit2));
+  Reaction_Time_Averager_xlslice_0_2 xlslice_2
+       (.Din(BINARY_TO_BCD_0_o_BCD),
+        .Dout(BINARY_TO_BCD_0_o_Digit3));
+  Reaction_Time_Averager_xlslice_0_3 xlslice_3
+       (.Din(BINARY_TO_BCD_0_o_BCD),
+        .Dout(BINARY_TO_BCD_0_o_Digit4));
 endmodule

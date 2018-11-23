@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# Accumuator, BCD_TO_BINARY, BINARY_TO_BCD, EXTRA_THICC_MUX, HZ_Counter, LSFR, RTM_FSM, ssd_dec, ssd_mux, stopwatch_ssd_driver
+# Accumuator, BCD_TO_BINARY, BINARY_TO_BCD, Divider, EXTRA_THICC_MUX, HZ_Counter, LSFR, RTM_FSM, ssd_dec, ssd_mux, stopwatch_ssd_driver
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -171,6 +171,7 @@ proc create_root_design { parentCell } {
  ] $i_RST
   set i_React_0 [ create_bd_port -dir I i_React_0 ]
   set i_Start_0 [ create_bd_port -dir I i_Start_0 ]
+  set i_Terminate_0 [ create_bd_port -dir I i_Terminate_0 ]
   set o_Anodes_0 [ create_bd_port -dir O -from 3 -to 0 o_Anodes_0 ]
   set o_Cathodes_0 [ create_bd_port -dir O -from 6 -to 0 o_Cathodes_0 ]
   set o_Ready_0 [ create_bd_port -dir O -from 1 -to 0 o_Ready_0 ]
@@ -205,6 +206,17 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $BINARY_TO_BCD_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: Divider_0, and set properties
+  set block_name Divider
+  set block_cell_name Divider_0
+  if { [catch {set Divider_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $Divider_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -292,30 +304,70 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: xlslice_0, and set properties
+  set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {15} \
+   CONFIG.DIN_TO {12} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $xlslice_0
+
+  # Create instance: xlslice_1, and set properties
+  set xlslice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_1 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {11} \
+   CONFIG.DIN_TO {8} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $xlslice_1
+
+  # Create instance: xlslice_2, and set properties
+  set xlslice_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_2 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {7} \
+   CONFIG.DIN_TO {4} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $xlslice_2
+
+  # Create instance: xlslice_3, and set properties
+  set xlslice_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_3 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {3} \
+   CONFIG.DIN_TO {0} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $xlslice_3
+
   # Create port connections
-  connect_bd_net -net Accumuator_0_o_OUT [get_bd_pins Accumuator_0/o_OUT] [get_bd_pins BINARY_TO_BCD_0/i_DATA]
+  connect_bd_net -net Accumuator_0_o_OUT [get_bd_pins Accumuator_0/o_OUT] [get_bd_pins Divider_0/i_DATA]
   connect_bd_net -net BCD_TO_BINARY_0_o_DATA [get_bd_pins Accumuator_0/i_DATA] [get_bd_pins BCD_TO_BINARY_0/o_DATA]
-  connect_bd_net -net BINARY_TO_BCD_0_o_Digit1 [get_bd_pins BINARY_TO_BCD_0/o_Digit1] [get_bd_pins EXTRA_THICC_MUX_0/i_T_Digit_1]
-  connect_bd_net -net BINARY_TO_BCD_0_o_Digit2 [get_bd_pins BINARY_TO_BCD_0/o_Digit2] [get_bd_pins EXTRA_THICC_MUX_0/i_T_Digit_2]
-  connect_bd_net -net BINARY_TO_BCD_0_o_Digit3 [get_bd_pins BINARY_TO_BCD_0/o_Digit3] [get_bd_pins EXTRA_THICC_MUX_0/i_T_Digit_3]
-  connect_bd_net -net BINARY_TO_BCD_0_o_Digit4 [get_bd_pins BINARY_TO_BCD_0/o_Digit4] [get_bd_pins EXTRA_THICC_MUX_0/i_T_Digit_4]
+  connect_bd_net -net BINARY_TO_BCD_0_o_BCD [get_bd_pins BINARY_TO_BCD_0/o_BCD] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_3/Din]
+  connect_bd_net -net BINARY_TO_BCD_0_o_Digit1 [get_bd_pins EXTRA_THICC_MUX_0/i_T_Digit_1] [get_bd_pins xlslice_0/Dout]
+  connect_bd_net -net BINARY_TO_BCD_0_o_Digit2 [get_bd_pins EXTRA_THICC_MUX_0/i_T_Digit_2] [get_bd_pins xlslice_1/Dout]
+  connect_bd_net -net BINARY_TO_BCD_0_o_Digit3 [get_bd_pins EXTRA_THICC_MUX_0/i_T_Digit_3] [get_bd_pins xlslice_2/Dout]
+  connect_bd_net -net BINARY_TO_BCD_0_o_Digit4 [get_bd_pins EXTRA_THICC_MUX_0/i_T_Digit_4] [get_bd_pins xlslice_3/Dout]
+  connect_bd_net -net Divider_0_o_OUT [get_bd_pins BINARY_TO_BCD_0/i_Binary] [get_bd_pins Divider_0/o_OUT]
   connect_bd_net -net EXTRA_THICC_MUX_0_o_Digit_1 [get_bd_pins EXTRA_THICC_MUX_0/o_Digit_1] [get_bd_pins ssd_mux_0/i_Digit_1]
   connect_bd_net -net EXTRA_THICC_MUX_0_o_Digit_2 [get_bd_pins EXTRA_THICC_MUX_0/o_Digit_2] [get_bd_pins ssd_mux_0/i_Digit_2]
   connect_bd_net -net EXTRA_THICC_MUX_0_o_Digit_3 [get_bd_pins EXTRA_THICC_MUX_0/o_Digit_3] [get_bd_pins ssd_mux_0/i_Digit_3]
   connect_bd_net -net EXTRA_THICC_MUX_0_o_Digit_4 [get_bd_pins EXTRA_THICC_MUX_0/o_Digit_4] [get_bd_pins ssd_mux_0/i_Digit_4]
-  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins RTM_FSM_0/i_CLK1KHZ] [get_bd_pins stopwatch_ssd_driver_0/i_SUBCLK]
+  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins Accumuator_0/i_CLK] [get_bd_pins BCD_TO_BINARY_0/i_CLK] [get_bd_pins BINARY_TO_BCD_0/i_Clock] [get_bd_pins Divider_0/i_CLK] [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins RTM_FSM_0/i_CLK1KHZ] [get_bd_pins stopwatch_ssd_driver_0/i_SUBCLK]
   connect_bd_net -net LSFR_0_o_OUT [get_bd_pins LSFR_0/o_OUT] [get_bd_pins RTM_FSM_0/i_CVAL]
-  connect_bd_net -net RTM_FSM_0_o_ACC_EN [get_bd_pins Accumuator_0/i_CLK_EN] [get_bd_pins RTM_FSM_0/o_ACC_EN]
+  connect_bd_net -net RTM_FSM_0_o_ACC_EN [get_bd_pins Accumuator_0/i_CLK_EN] [get_bd_pins BINARY_TO_BCD_0/i_Start] [get_bd_pins RTM_FSM_0/o_ACC_EN]
   connect_bd_net -net RTM_FSM_0_o_CEN [get_bd_pins LSFR_0/i_EN] [get_bd_pins RTM_FSM_0/o_CEN]
   connect_bd_net -net RTM_FSM_0_o_DONE [get_bd_pins EXTRA_THICC_MUX_0/i_Sel] [get_bd_pins RTM_FSM_0/o_DONE]
   connect_bd_net -net RTM_FSM_0_o_Ready [get_bd_ports o_Ready_0] [get_bd_pins RTM_FSM_0/o_Ready]
   connect_bd_net -net RTM_FSM_0_o_SRST [get_bd_pins RTM_FSM_0/o_SRST] [get_bd_pins stopwatch_ssd_driver_0/i_SRST]
   connect_bd_net -net RTM_FSM_0_o_SWEN [get_bd_pins RTM_FSM_0/o_SWEN] [get_bd_pins stopwatch_ssd_driver_0/i_CLK_EN]
+  connect_bd_net -net RTM_FSM_0_o_TRIAL_NUM [get_bd_pins Divider_0/i_TC] [get_bd_pins RTM_FSM_0/o_TRIAL_NUM]
   connect_bd_net -net RTM_FSM_0_o_T_NUM [get_bd_ports o_T_NUM_0] [get_bd_pins RTM_FSM_0/o_T_NUM]
-  connect_bd_net -net i_CLK_1 [get_bd_ports i_CLK] [get_bd_pins Accumuator_0/i_CLK] [get_bd_pins BCD_TO_BINARY_0/i_CLK] [get_bd_pins EXTRA_THICC_MUX_0/i_CLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins LSFR_0/i_CLK] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
+  connect_bd_net -net i_CLK_1 [get_bd_ports i_CLK] [get_bd_pins EXTRA_THICC_MUX_0/i_CLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins LSFR_0/i_CLK] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
   connect_bd_net -net i_RST_1 [get_bd_ports i_RST] [get_bd_pins proc_sys_reset_0/ext_reset_in]
   connect_bd_net -net i_React_0_1 [get_bd_ports i_React_0] [get_bd_pins RTM_FSM_0/i_React]
   connect_bd_net -net i_Start_0_1 [get_bd_ports i_Start_0] [get_bd_pins RTM_FSM_0/i_Start]
+  connect_bd_net -net i_Terminate_0_1 [get_bd_ports i_Terminate_0] [get_bd_pins RTM_FSM_0/i_Terminate]
   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins Accumuator_0/i_RST] [get_bd_pins HZ_Counter_0/i_RST] [get_bd_pins LSFR_0/i_RST] [get_bd_pins RTM_FSM_0/i_RST] [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins stopwatch_ssd_driver_0/i_RST]
   connect_bd_net -net ssd_dec_0_o_Cathodes [get_bd_ports o_Cathodes_0] [get_bd_pins ssd_dec_0/o_Cathodes]
   connect_bd_net -net ssd_mux_0_o_Anodes [get_bd_ports o_Anodes_0] [get_bd_pins ssd_mux_0/o_Anodes]

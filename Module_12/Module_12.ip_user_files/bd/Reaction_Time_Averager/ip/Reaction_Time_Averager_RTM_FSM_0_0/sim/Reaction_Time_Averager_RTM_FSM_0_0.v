@@ -59,6 +59,7 @@ module Reaction_Time_Averager_RTM_FSM_0_0 (
   i_RST,
   i_CVAL,
   i_Start,
+  i_Terminate,
   i_React,
   o_Ready,
   o_SWEN,
@@ -66,6 +67,7 @@ module Reaction_Time_Averager_RTM_FSM_0_0 (
   o_DONE,
   o_T_NUM,
   o_SRST,
+  o_TRIAL_NUM,
   o_CEN
 );
 
@@ -75,6 +77,7 @@ input wire i_CLK1KHZ;
 input wire i_RST;
 input wire [12 : 0] i_CVAL;
 input wire i_Start;
+input wire i_Terminate;
 input wire i_React;
 output wire [1 : 0] o_Ready;
 output wire o_SWEN;
@@ -82,6 +85,7 @@ output wire o_ACC_EN;
 output wire o_DONE;
 output wire [2 : 0] o_T_NUM;
 output wire o_SRST;
+output wire [2 : 0] o_TRIAL_NUM;
 output wire o_CEN;
 
   RTM_FSM inst (
@@ -89,6 +93,7 @@ output wire o_CEN;
     .i_RST(i_RST),
     .i_CVAL(i_CVAL),
     .i_Start(i_Start),
+    .i_Terminate(i_Terminate),
     .i_React(i_React),
     .o_Ready(o_Ready),
     .o_SWEN(o_SWEN),
@@ -96,6 +101,7 @@ output wire o_CEN;
     .o_DONE(o_DONE),
     .o_T_NUM(o_T_NUM),
     .o_SRST(o_SRST),
+    .o_TRIAL_NUM(o_TRIAL_NUM),
     .o_CEN(o_CEN)
   );
 endmodule

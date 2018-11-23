@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xF4040659FB9C5E0A" bd:device="xc7z007sclg400-1" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2018.2" bd:top="Reaction_Time_Averager" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x985CBE932F102AA2" bd:device="xc7z007sclg400-1" bd:synthFlowMode="None" bd:tool_version="2018.2" bd:top="Reaction_Time_Averager" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -30,35 +30,7 @@
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>FREQ_HZ</spirit:name>
-            <spirit:value>100000000</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>PHASE</spirit:name>
-            <spirit:value>0.000</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>CLK_DOMAIN</spirit:name>
-            <spirit:value>Reaction_Time_Averager_i_CLK</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-        </spirit:parameters>
+        <spirit:parameters/>
       </spirit:busInterface>
       <spirit:busInterface>
         <spirit:name>RST.I_RST</spirit:name>
@@ -81,11 +53,6 @@
           <spirit:parameter>
             <spirit:name>POLARITY</spirit:name>
             <spirit:value>ACTIVE_LOW</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="user"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -163,6 +130,12 @@
             </spirit:vector>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>i_Terminate_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -226,17 +199,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>Accumuator_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="Accumuator" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_Accumuator_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Accumuator</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>EXTRA_THICC_MUX_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="EXTRA_THICC_MUX" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -259,17 +221,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>RTM_FSM_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="RTM_FSM" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_RTM_FSM_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">RTM_FSM</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>BCD_TO_BINARY_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="BCD_TO_BINARY" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -286,6 +237,83 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_BINARY_TO_BCD_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceName">BINARY_TO_BCD</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlslice_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_xlslice_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">4</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlslice_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_xlslice_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">11</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">4</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlslice_2</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_xlslice_0_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">7</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">4</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlslice_3</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_xlslice_0_3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">4</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Accumuator_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="Accumuator" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_Accumuator_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Accumuator</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Divider_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="Divider" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_Divider_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Divider</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>RTM_FSM_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="RTM_FSM" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_RTM_FSM_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">RTM_FSM</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
@@ -365,17 +393,15 @@
         <spirit:internalPortReference spirit:componentRef="HZ_Counter_0" spirit:portRef="i_CLK"/>
         <spirit:internalPortReference spirit:componentRef="ssd_dec_0" spirit:portRef="i_CLK"/>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="slowest_sync_clk"/>
-        <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="i_CLK"/>
         <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="BCD_TO_BINARY_0" spirit:portRef="i_CLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>proc_sys_reset_0_peripheral_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="peripheral_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="LSFR_0" spirit:portRef="i_RST"/>
         <spirit:internalPortReference spirit:componentRef="HZ_Counter_0" spirit:portRef="i_RST"/>
-        <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="i_RST"/>
         <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="i_RST"/>
+        <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="i_RST"/>
         <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="i_RST"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -392,6 +418,10 @@
         <spirit:name>HZ_Counter_0_o_Out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="HZ_Counter_0" spirit:portRef="o_Out"/>
         <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="i_SUBCLK"/>
+        <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="i_CLK"/>
+        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="i_Clock"/>
+        <spirit:internalPortReference spirit:componentRef="BCD_TO_BINARY_0" spirit:portRef="i_CLK"/>
+        <spirit:internalPortReference spirit:componentRef="Divider_0" spirit:portRef="i_CLK"/>
         <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="i_CLK1KHZ"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -400,28 +430,23 @@
         <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="i_DATA"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>Accumuator_0_o_OUT</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="o_OUT"/>
-        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="i_DATA"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>BINARY_TO_BCD_0_o_Digit1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="o_Digit1"/>
+        <spirit:internalPortReference spirit:componentRef="xlslice_0" spirit:portRef="Dout"/>
         <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_T_Digit_1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>BINARY_TO_BCD_0_o_Digit2</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="o_Digit2"/>
+        <spirit:internalPortReference spirit:componentRef="xlslice_1" spirit:portRef="Dout"/>
         <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_T_Digit_2"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>BINARY_TO_BCD_0_o_Digit3</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="o_Digit3"/>
+        <spirit:internalPortReference spirit:componentRef="xlslice_2" spirit:portRef="Dout"/>
         <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_T_Digit_3"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>BINARY_TO_BCD_0_o_Digit4</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="o_Digit4"/>
+        <spirit:internalPortReference spirit:componentRef="xlslice_3" spirit:portRef="Dout"/>
         <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_T_Digit_4"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -447,6 +472,7 @@
       <spirit:adHocConnection>
         <spirit:name>RTM_FSM_0_o_ACC_EN</spirit:name>
         <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_ACC_EN"/>
+        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="i_Start"/>
         <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="i_CLK_EN"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -460,9 +486,37 @@
         <spirit:externalPortReference spirit:portRef="o_T_NUM_0"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
+        <spirit:name>BINARY_TO_BCD_0_o_BCD</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="o_BCD"/>
+        <spirit:internalPortReference spirit:componentRef="xlslice_0" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="xlslice_1" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="xlslice_2" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="xlslice_3" spirit:portRef="Din"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
         <spirit:name>RTM_FSM_0_o_SRST</spirit:name>
         <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_SRST"/>
         <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="i_SRST"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Accumuator_0_o_OUT</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="o_OUT"/>
+        <spirit:internalPortReference spirit:componentRef="Divider_0" spirit:portRef="i_DATA"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Divider_0_o_OUT</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="Divider_0" spirit:portRef="o_OUT"/>
+        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="i_Binary"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>RTM_FSM_0_o_TRIAL_NUM</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_TRIAL_NUM"/>
+        <spirit:internalPortReference spirit:componentRef="Divider_0" spirit:portRef="i_TC"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>i_Terminate_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="i_Terminate_0"/>
+        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="i_Terminate"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

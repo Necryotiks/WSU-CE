@@ -22,6 +22,16 @@
   "../../../bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_EXTRA_THICC_MUX_0_0/sim/Reaction_Time_Averager_EXTRA_THICC_MUX_0_0.v" \
   "../../../bd/Reaction_Time_Averager/sim/Reaction_Time_Averager.v" \
 -endlib
+-makelib ies_lib/xlslice_v1_0_1 \
+  "../../../../Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_xlslice_0_0/sim/Reaction_Time_Averager_xlslice_0_0.v" \
+  "../../../bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_xlslice_0_1/sim/Reaction_Time_Averager_xlslice_0_1.v" \
+  "../../../bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_xlslice_0_2/sim/Reaction_Time_Averager_xlslice_0_2.v" \
+  "../../../bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_xlslice_0_3/sim/Reaction_Time_Averager_xlslice_0_3.v" \
+  "../../../bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_Divider_0_0/sim/Reaction_Time_Averager_Divider_0_0.v" \
+-endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v
 -endlib

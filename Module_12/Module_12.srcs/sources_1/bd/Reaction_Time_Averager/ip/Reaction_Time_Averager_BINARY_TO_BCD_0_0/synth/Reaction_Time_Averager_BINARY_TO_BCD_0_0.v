@@ -52,28 +52,30 @@
 
 (* X_CORE_INFO = "BINARY_TO_BCD,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "Reaction_Time_Averager_BINARY_TO_BCD_0_0,BINARY_TO_BCD,{}" *)
-(* CORE_GENERATION_INFO = "Reaction_Time_Averager_BINARY_TO_BCD_0_0,BINARY_TO_BCD,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=BINARY_TO_BCD,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VHDL}" *)
+(* CORE_GENERATION_INFO = "Reaction_Time_Averager_BINARY_TO_BCD_0_0,BINARY_TO_BCD,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=BINARY_TO_BCD,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VHDL,INPUT_WIDTH=14,DECIMAL_DIGITS=4}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Reaction_Time_Averager_BINARY_TO_BCD_0_0 (
-  i_DATA,
-  o_Digit1,
-  o_Digit2,
-  o_Digit3,
-  o_Digit4
+  i_Clock,
+  i_Binary,
+  i_Start,
+  o_BCD
 );
 
-input wire [13 : 0] i_DATA;
-output wire [3 : 0] o_Digit1;
-output wire [3 : 0] o_Digit2;
-output wire [3 : 0] o_Digit3;
-output wire [3 : 0] o_Digit4;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clock, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Reaction_Time_Averager_i_CLK" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clock CLK" *)
+input wire i_Clock;
+input wire [13 : 0] i_Binary;
+input wire i_Start;
+output wire [15 : 0] o_BCD;
 
-  BINARY_TO_BCD inst (
-    .i_DATA(i_DATA),
-    .o_Digit1(o_Digit1),
-    .o_Digit2(o_Digit2),
-    .o_Digit3(o_Digit3),
-    .o_Digit4(o_Digit4)
+  BINARY_TO_BCD #(
+    .INPUT_WIDTH(14),
+    .DECIMAL_DIGITS(4)
+  ) inst (
+    .i_Clock(i_Clock),
+    .i_Binary(i_Binary),
+    .i_Start(i_Start),
+    .o_BCD(o_BCD)
   );
 endmodule

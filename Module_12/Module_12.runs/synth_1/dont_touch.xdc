@@ -39,6 +39,21 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Reaction_Time_A
 # IP: bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_EXTRA_THICC_MUX_0_0/Reaction_Time_Averager_EXTRA_THICC_MUX_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Reaction_Time_Averager_EXTRA_THICC_MUX_0_0 || ORIG_REF_NAME==Reaction_Time_Averager_EXTRA_THICC_MUX_0_0} -quiet] -quiet
 
+# IP: bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_xlslice_0_0/Reaction_Time_Averager_xlslice_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Reaction_Time_Averager_xlslice_0_0 || ORIG_REF_NAME==Reaction_Time_Averager_xlslice_0_0} -quiet] -quiet
+
+# IP: bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_xlslice_0_1/Reaction_Time_Averager_xlslice_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Reaction_Time_Averager_xlslice_0_1 || ORIG_REF_NAME==Reaction_Time_Averager_xlslice_0_1} -quiet] -quiet
+
+# IP: bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_xlslice_0_2/Reaction_Time_Averager_xlslice_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Reaction_Time_Averager_xlslice_0_2 || ORIG_REF_NAME==Reaction_Time_Averager_xlslice_0_2} -quiet] -quiet
+
+# IP: bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_xlslice_0_3/Reaction_Time_Averager_xlslice_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Reaction_Time_Averager_xlslice_0_3 || ORIG_REF_NAME==Reaction_Time_Averager_xlslice_0_3} -quiet] -quiet
+
+# IP: bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_Divider_0_0/Reaction_Time_Averager_Divider_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Reaction_Time_Averager_Divider_0_0 || ORIG_REF_NAME==Reaction_Time_Averager_Divider_0_0} -quiet] -quiet
+
 # XDC: bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/Reaction_Time_Averager_proc_sys_reset_0_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==Reaction_Time_Averager_proc_sys_reset_0_0 || ORIG_REF_NAME==Reaction_Time_Averager_proc_sys_reset_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 

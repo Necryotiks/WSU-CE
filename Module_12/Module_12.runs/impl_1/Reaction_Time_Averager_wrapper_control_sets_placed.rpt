@@ -1,0 +1,92 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Nov 23 01:12:39 2018
+| Host         : LAPTOP-QC2AS776 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Reaction_Time_Averager_wrapper_control_sets_placed.rpt
+| Design       : Reaction_Time_Averager_wrapper
+| Device       : xc7z007s
+-----------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    23 |
+| Unused register locations in slices containing registers |    54 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|      6 |            2 |
+|      8 |            9 |
+|     10 |            1 |
+|     12 |            1 |
+|    16+ |            8 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             198 |           30 |
+| No           | No                    | Yes                    |              76 |           18 |
+| No           | Yes                   | No                     |              18 |            6 |
+| Yes          | No                    | No                     |             102 |           17 |
+| Yes          | No                    | Yes                    |              92 |           12 |
+| Yes          | Yes                   | No                     |              12 |            1 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+
+|                    Clock Signal                   |                                 Enable Signal                                 |                          Set/Reset Signal                          | Slice Load Count | Bel Load Count |
++---------------------------------------------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out |                                                                               | Reaction_Time_Averager_i/RTM_FSM_0/inst/r_DONE                     |                1 |              2 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out |                                                                               | Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER                  |                1 |              2 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out |                                                                               | Reaction_Time_Averager_i/RTM_FSM_0/inst/r_SWEN                     |                2 |              6 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/RTM_FSM_0/inst/r_TRIAL_COUNT                         | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                1 |              6 |
+|  i_CLK_IBUF_BUFG                                  |                                                                               | Reaction_Time_Averager_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int       |                2 |              8 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_1_val[3]_i_1_n_0 | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                1 |              8 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_2_val[3]_i_1_n_0 | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                2 |              8 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_3_val[3]_i_1_n_0 | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                1 |              8 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_4_val[3]_i_1_n_0 | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                1 |              8 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/BINARY_TO_BCD_0/inst/r_BCD[15]                       |                                                                    |                2 |              8 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/BINARY_TO_BCD_0/inst/r_BCD[3]                        |                                                                    |                2 |              8 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/BINARY_TO_BCD_0/inst/r_BCD[11]                       |                                                                    |                2 |              8 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/BINARY_TO_BCD_0/inst/r_BCD[7]                        |                                                                    |                2 |              8 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out |                                                                               | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                3 |             10 |
+|  i_CLK_IBUF_BUFG                                  | Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/seq_cnt_en                   | Reaction_Time_Averager_i/proc_sys_reset_0/U0/SEQ/SEQ_COUNTER/clear |                1 |             12 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/BINARY_TO_BCD_0/inst/r_Loop_Count[7]_i_1_n_0         |                                                                    |                3 |             16 |
+|  i_CLK_IBUF_BUFG                                  | Reaction_Time_Averager_i/RTM_FSM_0/inst/o_CEN                                 | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                2 |             26 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER                             |                                                                    |                4 |             26 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/BINARY_TO_BCD_0/inst/r_Binary_0                      |                                                                    |                2 |             28 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out | Reaction_Time_Averager_i/RTM_FSM_0/inst/o_ACC_EN                              | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |                4 |             28 |
+|  i_CLK_IBUF_BUFG                                  |                                                                               | Reaction_Time_Averager_i/proc_sys_reset_0/U0/peripheral_aresetn[0] |               15 |             66 |
+|  Reaction_Time_Averager_i/HZ_Counter_0/inst/o_Out |                                                                               |                                                                    |               15 |             70 |
+|  i_CLK_IBUF_BUFG                                  |                                                                               |                                                                    |               16 |            130 |
++---------------------------------------------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+
+
+

@@ -54,3 +54,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {o_T_NUM_0[0]}]
 set_property PACKAGE_PIN N20 [get_ports {o_T_NUM_0[0]}]
 set_property PACKAGE_PIN P20 [get_ports {o_T_NUM_0[1]}]
 set_property PACKAGE_PIN R19 [get_ports {o_T_NUM_0[2]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports i_Terminate_0]
+set_property PACKAGE_PIN P15 [get_ports i_Terminate_0]

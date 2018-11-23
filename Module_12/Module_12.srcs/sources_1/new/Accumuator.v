@@ -42,12 +42,17 @@ module Accumuator(
     
     always@(posedge w_CLK or posedge w_RST)
     begin
-        if(w_RST == 1'b1)
+        if(w_RST == 1'b1) begin
             r_OUT <= 14'd0;
+            end
         else if(w_CLK_EN == 1'b1)
+            begin
             r_OUT <= r_OUT + w_DATA;
+            end
         else
-            r_OUT <= r_OUT;              
+            begin
+            r_OUT <= r_OUT; 
+            end           
     end
     
 endmodule
