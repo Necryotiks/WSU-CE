@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov 23 01:10:25 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov 23 15:48:38 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Reaction_Time_Averager" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -299,12 +299,12 @@
         </PORT>
         <PORT DIR="O" NAME="o_Out" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SUBCLK"/>
             <CONNECTION INSTANCE="Accumuator_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Clock"/>
             <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="Divider_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_CLK1KHZ"/>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SUBCLK"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -462,9 +462,9 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="LSFR_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="Accumuator_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

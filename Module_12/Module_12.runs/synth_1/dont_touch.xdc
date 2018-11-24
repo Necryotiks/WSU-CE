@@ -54,12 +54,4 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Reaction_Time_A
 # IP: bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_Divider_0_0/Reaction_Time_Averager_Divider_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Reaction_Time_Averager_Divider_0_0 || ORIG_REF_NAME==Reaction_Time_Averager_Divider_0_0} -quiet] -quiet
 
-# XDC: bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/Reaction_Time_Averager_proc_sys_reset_0_0_board.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==Reaction_Time_Averager_proc_sys_reset_0_0 || ORIG_REF_NAME==Reaction_Time_Averager_proc_sys_reset_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/Reaction_Time_Averager_proc_sys_reset_0_0.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==Reaction_Time_Averager_proc_sys_reset_0_0 || ORIG_REF_NAME==Reaction_Time_Averager_proc_sys_reset_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/Reaction_Time_Averager_proc_sys_reset_0_0_ooc.xdc
-
 # XDC: bd/Reaction_Time_Averager/Reaction_Time_Averager_ooc.xdc

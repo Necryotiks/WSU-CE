@@ -42,6 +42,7 @@ module RTM_FSM(
     localparam s_SW_RUNNING = 3'b010;
     localparam s_SW_STOPPED = 3'b011;
     localparam s_COLLECTION_COMPLETE = 3'b100;
+    localparam s_HOLD = 3'b101;
     
     reg [2:0] r_CURRENT_STATE = 3'b00;
     reg [2:0] r_NEXT_STATE = 3'b00;
@@ -60,6 +61,7 @@ module RTM_FSM(
     reg r_SRST = 1'b0;
     wire [2:0] w_T_NUM;
     wire w_Terminate;
+    reg [5:0] r_HOLD_COUNT = 6'd0;
     
     assign w_CLK1KHZ = i_CLK1KHZ;
     assign w_RST = i_RST;
@@ -86,7 +88,7 @@ module RTM_FSM(
                                 end
                             else if((w_Terminate == 1'd1) & ((r_TRIAL_COUNT % 2) == 0) & (r_TRIAL_COUNT != 3'd6))
                                 begin
-                                    r_NEXT_STATE = s_COLLECTION_COMPLETE;
+                                    r_NEXT_STATE = s_HOLD;
                                 end
                             else 
                                 begin
@@ -114,17 +116,34 @@ module RTM_FSM(
                         end
            s_SW_STOPPED:
                        begin
-                            if(r_TRIAL_COUNT == 3'b111)
-                                r_NEXT_STATE = s_COLLECTION_COMPLETE;
+                            if(r_TRIAL_COUNT == 3'b111) begin
+                                r_NEXT_STATE = s_HOLD;
+                             end
                             else
                                 r_NEXT_STATE = s_GET_COUNTER;
                        end
            s_COLLECTION_COMPLETE:
                                 r_NEXT_STATE = s_COLLECTION_COMPLETE;
+           s_HOLD:
+                    begin
+                        if(r_HOLD_COUNT == 6'b111111)
+                            r_NEXT_STATE = s_COLLECTION_COMPLETE;
+                        else
+                            r_NEXT_STATE = s_HOLD;    
+                    end                
            default: r_NEXT_STATE = s_GET_COUNTER;          
         endcase
     end
     
+    always@(posedge w_CLK1KHZ)
+    begin
+        if(w_RST == 1'd1)
+            r_HOLD_COUNT <= 6'd0;
+        else if (r_CURRENT_STATE == s_HOLD)
+            r_HOLD_COUNT <= r_HOLD_COUNT + 1'b1;
+        else
+            r_HOLD_COUNT <= r_HOLD_COUNT + 1'b0;
+    end  
     always@(posedge w_CLK1KHZ or posedge w_RST) //RESET LOGIC
     begin
         if(w_RST == 1'd1) begin
@@ -136,8 +155,10 @@ module RTM_FSM(
     
     always@(posedge w_CLK1KHZ or posedge w_RST) //ACCUMULATE
     begin
-         if(w_RST == 1'd1)
+         if(w_RST == 1'd1) begin
             r_TRIAL_COUNT <= 3'b000;
+            r_ACC_EN = 1'b0;
+            end
          else if(r_CURRENT_STATE == s_SW_STOPPED) 
             begin
             r_ACC_EN = 1'b1;
@@ -146,7 +167,7 @@ module RTM_FSM(
             end
         else
             begin
-            r_ACC_EN = 1'b0;  
+            r_ACC_EN =  1'b0; 
             r_TRIAL_COUNT <= r_TRIAL_COUNT + 1'd0;  
                  
             end       

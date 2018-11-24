@@ -16,9 +16,9 @@ preplace inst xlslice_0 -pg 1 -lvl 9 -y 470 -defaultsOSRD
 preplace inst xlslice_1 -pg 1 -lvl 9 -y 570 -defaultsOSRD
 preplace inst RTM_FSM_0 -pg 1 -lvl 3 -y 140 -defaultsOSRD
 preplace inst xlslice_2 -pg 1 -lvl 9 -y 770 -defaultsOSRD
+preplace inst stopwatch_ssd_driver_0 -pg 1 -lvl 4 -y 290 -defaultsOSRD
 preplace inst xlslice_3 -pg 1 -lvl 9 -y 670 -defaultsOSRD
 preplace inst BCD_TO_BINARY_0 -pg 1 -lvl 5 -y 280 -defaultsOSRD
-preplace inst stopwatch_ssd_driver_0 -pg 1 -lvl 4 -y 290 -defaultsOSRD
 preplace inst EXTRA_THICC_MUX_0 -pg 1 -lvl 10 -y 450 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 340 -defaultsOSRD
 preplace inst Divider_0 -pg 1 -lvl 7 -y 510 -defaultsOSRD
@@ -27,42 +27,42 @@ preplace inst Accumuator_0 -pg 1 -lvl 6 -y 520 -defaultsOSRD
 preplace inst BINARY_TO_BCD_0 -pg 1 -lvl 8 -y 510 -defaultsOSRD
 preplace inst ssd_mux_0 -pg 1 -lvl 11 -y 460 -defaultsOSRD
 preplace inst LSFR_0 -pg 1 -lvl 2 -y 260 -defaultsOSRD
-preplace netloc BINARY_TO_BCD_0_o_Digit1 1 9 1 2740
-preplace netloc HZ_Counter_0_o_Out 1 2 6 640 290 1050 200 1360 180 1660 430 1960 430 2240J
-preplace netloc stopwatch_ssd_driver_0_o_Digit_1_val 1 4 6 1340 150 NJ 150 NJ 150 NJ 150 NJ 150 2790J
-preplace netloc BINARY_TO_BCD_0_o_Digit2 1 9 1 2750
-preplace netloc i_CLK_1 1 0 12 20 240 360 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 2770 300 3090 360 3370
-preplace netloc stopwatch_ssd_driver_0_o_Digit_3_val 1 4 6 1350 420 NJ 420 NJ 420 2260J 400 NJ 400 NJ
-preplace netloc Accumuator_0_o_OUT 1 6 1 1960
-preplace netloc BINARY_TO_BCD_0_o_Digit3 1 9 1 2780
-preplace netloc BINARY_TO_BCD_0_o_Digit4 1 9 1 2790
-preplace netloc BCD_TO_BINARY_0_o_DATA 1 5 1 1640
-preplace netloc BINARY_TO_BCD_0_o_BCD 1 8 1 2540
-preplace netloc RTM_FSM_0_o_T_NUM 1 3 10 NJ 150 1330J 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 3660J
-preplace netloc RTM_FSM_0_o_ACC_EN 1 3 5 NJ 110 NJ 110 1670 400 NJ 400 2250
+preplace netloc BINARY_TO_BCD_0_o_Digit1 1 9 1 2770
+preplace netloc HZ_Counter_0_o_Out 1 2 6 640 290 1050 200 1360 180 1670 430 1970 430 2270J
+preplace netloc stopwatch_ssd_driver_0_o_Digit_1_val 1 4 6 1340 150 NJ 150 NJ 150 NJ 150 NJ 150 2820J
+preplace netloc BINARY_TO_BCD_0_o_Digit2 1 9 1 2780
+preplace netloc i_CLK_1 1 0 12 20 240 360 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 2800 300 3130 360 3430
+preplace netloc stopwatch_ssd_driver_0_o_Digit_3_val 1 4 6 1350 420 NJ 420 NJ 420 2290J 400 NJ 400 NJ
+preplace netloc Accumuator_0_o_OUT 1 6 1 1970
+preplace netloc BINARY_TO_BCD_0_o_Digit3 1 9 1 2810
+preplace netloc BINARY_TO_BCD_0_o_Digit4 1 9 1 2820
+preplace netloc BCD_TO_BINARY_0_o_DATA 1 5 1 1650
+preplace netloc BINARY_TO_BCD_0_o_BCD 1 8 1 2570
+preplace netloc RTM_FSM_0_o_T_NUM 1 3 10 NJ 150 1330J 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 3720J
+preplace netloc RTM_FSM_0_o_ACC_EN 1 3 5 NJ 110 NJ 110 1680 400 NJ 400 2280
 preplace netloc RTM_FSM_0_o_CEN 1 1 3 380 180 630J 270 1010
 preplace netloc RTM_FSM_0_o_SWEN 1 3 1 1030
-preplace netloc stopwatch_ssd_driver_0_o_Digit_4_val 1 4 6 1330 390 NJ 390 NJ 390 NJ 390 NJ 390 2740J
+preplace netloc stopwatch_ssd_driver_0_o_Digit_4_val 1 4 6 1330 390 NJ 390 NJ 390 NJ 390 NJ 390 2770J
 preplace netloc EXTRA_THICC_MUX_0_o_Digit_1 1 10 1 N
 preplace netloc i_Start_0_1 1 0 3 NJ 140 360J 150 NJ
-preplace netloc RTM_FSM_0_o_TRIAL_NUM 1 3 4 1010J 140 NJ 140 NJ 140 1950
+preplace netloc RTM_FSM_0_o_TRIAL_NUM 1 3 4 1010J 140 NJ 140 NJ 140 1960
 preplace netloc EXTRA_THICC_MUX_0_o_Digit_2 1 10 1 N
 preplace netloc i_RST_1 1 0 1 NJ
 preplace netloc RTM_FSM_0_o_Ready 1 3 10 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 NJ
-preplace netloc stopwatch_ssd_driver_0_o_Digit_2_val 1 4 6 1350 160 NJ 160 NJ 160 NJ 160 NJ 160 2740J
+preplace netloc stopwatch_ssd_driver_0_o_Digit_2_val 1 4 6 1350 160 NJ 160 NJ 160 NJ 160 NJ 160 2770J
 preplace netloc i_Terminate_0_1 1 0 3 NJ 170 NJ 170 NJ
-preplace netloc RTM_FSM_0_o_DONE 1 3 7 N 130 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 2760J
+preplace netloc RTM_FSM_0_o_DONE 1 3 7 N 130 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 2790J
 preplace netloc EXTRA_THICC_MUX_0_o_Digit_3 1 10 1 N
 preplace netloc EXTRA_THICC_MUX_0_o_Digit_4 1 10 1 N
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 5 370 140 670 280 1040 170 NJ 170 1650J
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 5 370 140 670 280 1040 170 NJ 170 1660J
 preplace netloc ssd_dec_0_o_Cathodes 1 12 1 NJ
 preplace netloc Divider_0_o_OUT 1 7 1 N
 preplace netloc RTM_FSM_0_o_SRST 1 3 1 1020
 preplace netloc ssd_mux_0_o_Anodes 1 11 2 NJ 470 NJ
 preplace netloc i_React_0_1 1 0 3 20J 160 NJ 160 660J
-preplace netloc ssd_mux_0_o_Out 1 11 1 3370
+preplace netloc ssd_mux_0_o_Out 1 11 1 3430
 preplace netloc LSFR_0_o_OUT 1 2 1 650
-levelinfo -pg 1 0 190 510 850 1190 1500 1810 2100 2400 2640 2940 3230 3520 3680 -top -250 -bot 840
+levelinfo -pg 1 0 190 510 850 1190 1510 1820 2130 2430 2670 2980 3290 3580 3740 -top -250 -bot 840
 ",
 }
 {

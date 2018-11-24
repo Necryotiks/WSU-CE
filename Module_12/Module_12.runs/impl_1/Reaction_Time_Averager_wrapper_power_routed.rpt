@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Fri Nov 23 01:12:56 2018
+| Date             : Fri Nov 23 15:51:55 2018
 | Host             : LAPTOP-QC2AS776 running 64-bit major release  (build 9200)
 | Command          : report_power -file Reaction_Time_Averager_wrapper_power_routed.rpt -pb Reaction_Time_Averager_wrapper_power_summary_routed.pb -rpx Reaction_Time_Averager_wrapper_power_routed.rpx
 | Design           : Reaction_Time_Averager_wrapper
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |    <0.001 |        3 |       --- |             --- |
-| Slice Logic             |    <0.001 |      600 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      224 |     14400 |            1.56 |
+| Slice Logic             |    <0.001 |      614 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      229 |     14400 |            1.59 |
 |   CARRY4                |    <0.001 |       39 |      4400 |            0.89 |
-|   Register              |    <0.001 |      249 |     28800 |            0.86 |
+|   Register              |    <0.001 |      256 |     28800 |            0.89 |
 |   Others                |     0.000 |       29 |       --- |             --- |
 |   F7/F8 Muxes           |     0.000 |       11 |     17600 |            0.06 |
 |   LUT as Shift Register |     0.000 |        1 |      6000 |            0.02 |
-| Signals                 |    <0.001 |      404 |       --- |             --- |
+| Signals                 |    <0.001 |      418 |       --- |             --- |
 | I/O                     |     0.003 |       21 |       100 |           21.00 |
 | Static Power            |     0.093 |          |           |                 |
 | Total                   |     0.097 |          |           |                 |
@@ -150,7 +150,7 @@ Table of Contents
 | Name                                | Power (W) |
 +-------------------------------------+-----------+
 | Reaction_Time_Averager_wrapper      |     0.004 |
-|   Reaction_Time_Averager_i          |     0.001 |
+|   Reaction_Time_Averager_i          |    <0.001 |
 |     Accumuator_0                    |     0.000 |
 |       inst                          |     0.000 |
 |     BCD_TO_BINARY_0                 |    <0.001 |

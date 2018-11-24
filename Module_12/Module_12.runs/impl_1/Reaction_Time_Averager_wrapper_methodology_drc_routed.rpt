@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Nov 23 01:12:55 2018
+| Date         : Fri Nov 23 15:51:55 2018
 | Host         : LAPTOP-QC2AS776 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Reaction_Time_Averager_wrapper_methodology_drc_routed.rpt -pb Reaction_Time_Averager_wrapper_methodology_drc_routed.pb -rpx Reaction_Time_Averager_wrapper_methodology_drc_routed.rpx
 | Design       : Reaction_Time_Averager_wrapper
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 129
+             Violations found: 136
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell | 129        |
+| TIMING-17 | Warning  | Non-clocked sequential cell | 136        |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -484,195 +484,230 @@ Related violations: <none>
 
 TIMING-17#91 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_ACC_EN_reg/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/FSM_onehot_r_CURRENT_STATE_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#92 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_CEN_reg/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_ACC_EN_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#93 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[0]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_CEN_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#94 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[10]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#95 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[11]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#96 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[12]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#97 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[1]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#98 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[2]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#99 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[3]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#100 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[4]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#101 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[5]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#102 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[6]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#103 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[7]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#104 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[8]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#105 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[9]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#106 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_DONE_reg/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_COUNTER_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#107 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_Ready_reg[0]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_DONE_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#108 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_Ready_reg[1]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_HOLD_COUNT_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#109 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_Ready_reg[1]_lopt_replica/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_HOLD_COUNT_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#110 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_SRST_reg/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_HOLD_COUNT_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#111 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_TRIAL_COUNT_reg[0]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_HOLD_COUNT_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#112 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_TRIAL_COUNT_reg[1]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_HOLD_COUNT_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#113 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_TRIAL_COUNT_reg[2]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_HOLD_COUNT_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#114 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_1_val_reg[0]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_Ready_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#115 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_1_val_reg[1]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_Ready_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#116 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_1_val_reg[2]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_Ready_reg[1]_lopt_replica/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#117 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_1_val_reg[3]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_SRST_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#118 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_2_val_reg[0]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_TRIAL_COUNT_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#119 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_2_val_reg[1]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_TRIAL_COUNT_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#120 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_2_val_reg[2]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/RTM_FSM_0/inst/r_TRIAL_COUNT_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#121 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_2_val_reg[3]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_1_val_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#122 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_3_val_reg[0]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_1_val_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#123 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_3_val_reg[1]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_1_val_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#124 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_3_val_reg[2]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_1_val_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#125 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_3_val_reg[3]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_2_val_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#126 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_4_val_reg[0]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_2_val_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#127 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_4_val_reg[1]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_2_val_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#128 Warning
 Non-clocked sequential cell  
-The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_4_val_reg[2]/C is not reached by a timing clock
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_2_val_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#129 Warning
+Non-clocked sequential cell  
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_3_val_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#130 Warning
+Non-clocked sequential cell  
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_3_val_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#131 Warning
+Non-clocked sequential cell  
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_3_val_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#132 Warning
+Non-clocked sequential cell  
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_3_val_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#133 Warning
+Non-clocked sequential cell  
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_4_val_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#134 Warning
+Non-clocked sequential cell  
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_4_val_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#135 Warning
+Non-clocked sequential cell  
+The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_4_val_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#136 Warning
 Non-clocked sequential cell  
 The clock pin Reaction_Time_Averager_i/stopwatch_ssd_driver_0/inst/r_Digit_4_val_reg[3]/C is not reached by a timing clock
 Related violations: <none>

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Fri Nov 23 01:10:25 2018
+//Date        : Fri Nov 23 15:48:37 2018
 //Host        : LAPTOP-QC2AS776 running 64-bit major release  (build 9200)
 //Command     : generate_target Reaction_Time_Averager.bd
 //Design      : Reaction_Time_Averager
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Reaction_Time_Averager,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Reaction_Time_Averager,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=16,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=11,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=11,synth_mode=Global}" *) (* HW_HANDOFF = "Reaction_Time_Averager.hwdef" *) 
+(* CORE_GENERATION_INFO = "Reaction_Time_Averager,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Reaction_Time_Averager,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=16,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=11,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=11,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Reaction_Time_Averager.hwdef" *) 
 module Reaction_Time_Averager
    (i_CLK,
     i_RST,

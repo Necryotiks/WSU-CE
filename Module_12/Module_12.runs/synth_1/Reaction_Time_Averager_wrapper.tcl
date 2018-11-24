@@ -32,20 +32,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib {
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/LSFR.v
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/HZ_Counter.v
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/RTM_FSM.v
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/stopwatch_ssd_driver.v
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_mux.v
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Parts/ssd_dec.v
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/Accumuator.v
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/BCD_TO_BINARY.v
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/BINARY_TO_BCD.v
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/EXTRA_THICC_MUX.v
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/new/Divider.v
-  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v
-}
+read_verilog -library xil_defaultlib C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v
 add_files C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd
 set_property used_in_implementation false [get_files -all c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/Reaction_Time_Averager_proc_sys_reset_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_12/Module_12.srcs/sources_1/bd/Reaction_Time_Averager/ip/Reaction_Time_Averager_proc_sys_reset_0_0/Reaction_Time_Averager_proc_sys_reset_0_0.xdc]

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1542964228">
+<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1543016923">
   <File Type="BITSTR-BMM" Name="Reaction_Time_Averager_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Reaction_Time_Averager_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Reaction_Time_Averager_wrapper_timing_summary_init.rpt"/>
@@ -162,6 +162,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/bounce_timer_driver.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="Reaction_Time_Averager_wrapper"/>
@@ -193,4 +201,15 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Reaction_Time_Averager_EXTRA_THICC_MUX_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Reaction_Time_Averager_ssd_dec_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Reaction_Time_Averager_LSFR_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Reaction_Time_Averager_HZ_Counter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Reaction_Time_Averager_BINARY_TO_BCD_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Reaction_Time_Averager_ssd_mux_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Reaction_Time_Averager_Accumuator_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Reaction_Time_Averager_Divider_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Reaction_Time_Averager_BCD_TO_BINARY_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Reaction_Time_Averager_RTM_FSM_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Reaction_Time_Averager_stopwatch_ssd_driver_0_0"/>
 </GenRun>

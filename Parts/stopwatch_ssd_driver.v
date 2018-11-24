@@ -24,7 +24,7 @@ module stopwatch_ssd_driver(
     input i_SUBCLK, 
     input i_RST,
     input i_CLK_EN,
-    input i_SRST,
+        input i_SRST,
     output [3:0] o_Digit_1_val,
     output [3:0] o_Digit_2_val,
     output [3:0] o_Digit_3_val,
@@ -41,8 +41,8 @@ module stopwatch_ssd_driver(
        wire w_CLK_EN;
        wire w_SRST;
        assign w_SUBCLK = i_SUBCLK;
-       assign w_SRST = i_SRST;
        assign w_RST = i_RST;
+       assign w_SRST = i_SRST;
        assign w_CLK_EN = i_CLK_EN;
        assign o_Digit_1_val = r_Digit_1_val;
        assign o_Digit_2_val = r_Digit_2_val;
@@ -63,7 +63,7 @@ module stopwatch_ssd_driver(
             end               
         else
             begin
-               if(w_CLK_EN == 1'd1) begin 
+          if(w_CLK_EN == 1'd1) begin 
                 if(r_Digit_4_val >= r_HEX_DEC)
                     begin
                         r_Digit_4_val <= 4'd0;
@@ -88,5 +88,5 @@ module stopwatch_ssd_driver(
                     r_Digit_4_val <= r_Digit_4_val + 4'd1;             
             end     
     end
-    end
+   end
 endmodule
