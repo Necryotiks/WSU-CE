@@ -24,6 +24,7 @@ module VGA_controller(
     input i_CLK25MHZ,
     output o_HSYNC,
     output o_VSYNC,
+    output o_VDE,
     output [9:0] o_X_COORD,
     output [9:0] o_Y_COORD
     );
@@ -42,10 +43,12 @@ module VGA_controller(
     reg r_VSYNC;
     reg [9:0] r_HCNT;
     reg [9:0] r_VCNT;
+    reg r_VDE;
     
     assign w_CLK25MHZ = i_CLK25MHZ;
     assign o_HSYNC = r_HSYNC;
     assign o_VSYNC = r_VSYNC;
+    assign o_VDE = r_VDE;
     assign o_X_COORD = (r_HCNT >= v_HA_START) ? (r_HCNT - v_HA_START) : 0; 
     assign o_Y_COORD = (r_VCNT >= v_VA_END) ? (v_VA_END - 1) : r_VCNT; 
     //https://timetoexplore.net/blog/arty-fpga-vga-verilog-01
@@ -89,5 +92,13 @@ module VGA_controller(
                 r_VSYNC <= 1'b0;
             else
                 r_VSYNC <= 1'b1;
+        end
+        
+        always@(posedge w_CLK25MHZ)
+        begin
+            if((r_HCNT >= v_HA_START & r_HCNT <= v_HA_END) & (r_VCNT >= v_VA_START & r_VCNT <= v_VA_END ))
+                r_VDE <= 1'b1;
+            else
+                r_VDE <= 1'b0;
         end
 endmodule

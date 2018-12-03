@@ -1,0 +1,34 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port hdmi_tx_0 -pg 1 -y 290 -defaultsOSRD
+preplace port i_CLK -pg 1 -y 210 -defaultsOSRD
+preplace port i_RST -pg 1 -y 80 -defaultsOSRD
+preplace inst hdmi_tx_0 -pg 1 -lvl 4 -y 290 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -y 200 -defaultsOSRD
+preplace inst color_logic_0 -pg 1 -lvl 3 -y 420 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -y 100 -defaultsOSRD
+preplace inst VGA_controller_0 -pg 1 -lvl 2 -y 340 -defaultsOSRD
+preplace netloc hdmi_tx_0_hdmi_tx 1 4 1 N
+preplace netloc clk_wiz_clk_out2 1 1 3 NJ 220 NJ 220 800
+preplace netloc clk_wiz_locked 1 1 3 NJ 200 NJ 200 N
+preplace netloc VGA_controller_0_o_VDE 1 2 2 N 340 NJ
+preplace netloc VGA_controller_0_o_X_COORD 1 2 1 440
+preplace netloc VGA_controller_0_o_Y_COORD 1 2 1 430
+preplace netloc color_logic_0_o_GREEN 1 3 1 800
+preplace netloc color_logic_0_o_BLUE 1 3 1 810
+preplace netloc color_logic_0_o_RED 1 3 1 790
+preplace netloc VGA_controller_0_o_HSYNC 1 2 2 N 300 NJ
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 3 1 810
+preplace netloc reset_rtl_0_1 1 0 3 -50 80 NJ 80 NJ
+preplace netloc clk_100MHz_1 1 0 1 N
+preplace netloc VGA_controller_0_o_VSYNC 1 2 2 N 320 NJ
+preplace netloc clk_wiz_clk_out1 1 1 3 130 180 450 210 790J
+levelinfo -pg 1 -70 40 280 620 930 1070 -top 0 -bot 500
+",
+}
+{
+   da_board_cnt: "4",
+   da_clkrst_cnt: "3",
+}
