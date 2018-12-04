@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="HDMI_CTRL" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1543738999"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1543738999"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1543738999"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1543738999"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1543893535"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1543893535"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1543893535"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1543893535"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\HDMI_CTRL_hdmi_tx_0_0\HDMI_CTRL_hdmi_tx_0_0.xci" Type="IP">
         <Instance HierarchyPath="hdmi_tx_0"/>
@@ -56,6 +56,30 @@
       <File Name="sim\HDMI_CTRL.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\HDMI_CTRL_xlslice_0_0\HDMI_CTRL_xlslice_0_0.xci" Type="IP">
+        <Instance HierarchyPath="xlslice_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\HDMI_CTRL_xlslice_0_1\HDMI_CTRL_xlslice_0_1.xci" Type="IP">
+        <Instance HierarchyPath="xlslice_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\HDMI_CTRL_xlslice_0_2\HDMI_CTRL_xlslice_0_2.xci" Type="IP">
+        <Instance HierarchyPath="xlslice_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="HDMI_CTRL_ooc.xdc" Type="XDC">

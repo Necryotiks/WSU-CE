@@ -31,6 +31,14 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/HDMI_CTRL/sim/HDMI_CTRL.v" \
 -endlib
+-makelib xcelium_lib/xlslice_v1_0_1 \
+  "../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_0/sim/HDMI_CTRL_xlslice_0_0.v" \
+  "../../../bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_1/sim/HDMI_CTRL_xlslice_0_1.v" \
+  "../../../bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_2/sim/HDMI_CTRL_xlslice_0_2.v" \
+-endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v
 -endlib

@@ -173,6 +173,11 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.POLARITY {ACTIVE_HIGH} \
  ] $i_RST
+  set o_BLUE [ create_bd_port -dir O -from 3 -to 0 o_BLUE ]
+  set o_GREEN [ create_bd_port -dir O -from 3 -to 0 o_GREEN ]
+  set o_HSYNC [ create_bd_port -dir O o_HSYNC ]
+  set o_RED [ create_bd_port -dir O -from 3 -to 0 o_RED ]
+  set o_VSYNC [ create_bd_port -dir O o_VSYNC ]
 
   # Create instance: VGA_controller_0, and set properties
   set block_name VGA_controller
@@ -232,24 +237,54 @@ proc create_root_design { parentCell } {
   # Create instance: proc_sys_reset_0, and set properties
   set proc_sys_reset_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0 ]
 
+  # Create instance: xlslice_0, and set properties
+  set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {3} \
+   CONFIG.DIN_TO {0} \
+   CONFIG.DIN_WIDTH {8} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $xlslice_0
+
+  # Create instance: xlslice_1, and set properties
+  set xlslice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_1 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {3} \
+   CONFIG.DIN_TO {0} \
+   CONFIG.DIN_WIDTH {8} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $xlslice_1
+
+  # Create instance: xlslice_2, and set properties
+  set xlslice_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_2 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {3} \
+   CONFIG.DIN_TO {0} \
+   CONFIG.DIN_WIDTH {8} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $xlslice_2
+
   # Create interface connections
   connect_bd_intf_net -intf_net hdmi_tx_0_hdmi_tx [get_bd_intf_ports hdmi_tx_0] [get_bd_intf_pins hdmi_tx_0/hdmi_tx]
 
   # Create port connections
-  connect_bd_net -net VGA_controller_0_o_HSYNC [get_bd_pins VGA_controller_0/o_HSYNC] [get_bd_pins hdmi_tx_0/hsync]
+  connect_bd_net -net VGA_controller_0_o_HSYNC [get_bd_ports o_HSYNC] [get_bd_pins VGA_controller_0/o_HSYNC] [get_bd_pins hdmi_tx_0/hsync]
   connect_bd_net -net VGA_controller_0_o_VDE [get_bd_pins VGA_controller_0/o_VDE] [get_bd_pins hdmi_tx_0/vde]
-  connect_bd_net -net VGA_controller_0_o_VSYNC [get_bd_pins VGA_controller_0/o_VSYNC] [get_bd_pins hdmi_tx_0/vsync]
+  connect_bd_net -net VGA_controller_0_o_VSYNC [get_bd_ports o_VSYNC] [get_bd_pins VGA_controller_0/o_VSYNC] [get_bd_pins hdmi_tx_0/vsync]
   connect_bd_net -net VGA_controller_0_o_X_COORD [get_bd_pins VGA_controller_0/o_X_COORD] [get_bd_pins color_logic_0/i_X_COORD]
   connect_bd_net -net VGA_controller_0_o_Y_COORD [get_bd_pins VGA_controller_0/o_Y_COORD] [get_bd_pins color_logic_0/i_Y_COORD]
   connect_bd_net -net clk_100MHz_1 [get_bd_ports i_CLK] [get_bd_pins clk_wiz/clk_in1]
   connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins VGA_controller_0/i_CLK25MHZ] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins color_logic_0/i_CLK] [get_bd_pins hdmi_tx_0/pix_clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
   connect_bd_net -net clk_wiz_clk_out2 [get_bd_pins clk_wiz/clk_out2] [get_bd_pins hdmi_tx_0/pix_clkx5]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins hdmi_tx_0/pix_clk_locked]
-  connect_bd_net -net color_logic_0_o_BLUE [get_bd_pins color_logic_0/o_BLUE] [get_bd_pins hdmi_tx_0/blue]
-  connect_bd_net -net color_logic_0_o_GREEN [get_bd_pins color_logic_0/o_GREEN] [get_bd_pins hdmi_tx_0/green]
-  connect_bd_net -net color_logic_0_o_RED [get_bd_pins color_logic_0/o_RED] [get_bd_pins hdmi_tx_0/red]
+  connect_bd_net -net color_logic_0_o_BLUE [get_bd_pins color_logic_0/o_BLUE] [get_bd_pins hdmi_tx_0/blue] [get_bd_pins xlslice_2/Din]
+  connect_bd_net -net color_logic_0_o_GREEN [get_bd_pins color_logic_0/o_GREEN] [get_bd_pins hdmi_tx_0/green] [get_bd_pins xlslice_1/Din]
+  connect_bd_net -net color_logic_0_o_RED [get_bd_pins color_logic_0/o_RED] [get_bd_pins hdmi_tx_0/red] [get_bd_pins xlslice_0/Din]
   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins hdmi_tx_0/rst] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
   connect_bd_net -net reset_rtl_0_1 [get_bd_ports i_RST] [get_bd_pins clk_wiz/reset] [get_bd_pins proc_sys_reset_0/ext_reset_in]
+  connect_bd_net -net xlslice_0_Dout [get_bd_ports o_RED] [get_bd_pins xlslice_0/Dout]
+  connect_bd_net -net xlslice_1_Dout [get_bd_ports o_GREEN] [get_bd_pins xlslice_1/Dout]
+  connect_bd_net -net xlslice_2_Dout [get_bd_ports o_BLUE] [get_bd_pins xlslice_2/Dout]
 
   # Create address segments
 

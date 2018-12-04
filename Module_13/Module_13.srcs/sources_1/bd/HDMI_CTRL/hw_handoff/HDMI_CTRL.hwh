@@ -1,22 +1,47 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec  2 00:23:19 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec  3 19:18:54 2018" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="HDMI_CTRL" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_tx_0_tmds_clk_n" SIGIS="clk"/>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_tx_0_tmds_data_n" RIGHT="0" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_tx_0_tmds_clk_p" SIGIS="clk"/>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_tx_0_tmds_data_p" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
         <CONNECTION INSTANCE="proc_sys_reset_0" PORT="ext_reset_in"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_tx_0_tmds_clk_n" SIGIS="clk"/>
-    <PORT DIR="O" LEFT="2" NAME="hdmi_tx_0_tmds_data_n" RIGHT="0" SIGIS="undef"/>
-    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_tx_0_tmds_clk_p" SIGIS="clk"/>
-    <PORT DIR="O" LEFT="2" NAME="hdmi_tx_0_tmds_data_p" RIGHT="0" SIGIS="undef"/>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz" PORT="clk_in1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_VSYNC" SIGIS="undef" SIGNAME="VGA_controller_0_o_VSYNC">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VGA_controller_0" PORT="o_VSYNC"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_HSYNC" SIGIS="undef" SIGNAME="VGA_controller_0_o_HSYNC">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VGA_controller_0" PORT="o_HSYNC"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_RED" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_BLUE" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_2_Dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlslice_2" PORT="Dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_GREEN" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlslice_1" PORT="Dout"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -56,11 +81,13 @@
         <PORT DIR="O" NAME="o_HSYNC" SIGIS="undef" SIGNAME="VGA_controller_0_o_HSYNC">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="hsync"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_HSYNC"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_VSYNC" SIGIS="undef" SIGNAME="VGA_controller_0_o_VSYNC">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="vsync"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_VSYNC"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_VDE" SIGIS="undef" SIGNAME="VGA_controller_0_o_VDE">
@@ -664,19 +691,19 @@
         <PORT CLKFREQUENCY="25000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="pix_clk"/>
-            <CONNECTION INSTANCE="color_logic_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="VGA_controller_0" PORT="i_CLK25MHZ"/>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_locked">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tx_0" PORT="pix_clk_locked"/>
+            <CONNECTION INSTANCE="color_logic_0" PORT="i_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="125000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_wiz_clk_out2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="pix_clkx5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_tx_0" PORT="pix_clk_locked"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -711,16 +738,19 @@
         <PORT DIR="O" LEFT="7" NAME="o_RED" RIGHT="0" SIGIS="undef" SIGNAME="color_logic_0_o_RED">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="red"/>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="o_GREEN" RIGHT="0" SIGIS="undef" SIGNAME="color_logic_0_o_GREEN">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="green"/>
+            <CONNECTION INSTANCE="xlslice_1" PORT="Din"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="o_BLUE" RIGHT="0" SIGIS="undef" SIGNAME="color_logic_0_o_BLUE">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="blue"/>
+            <CONNECTION INSTANCE="xlslice_2" PORT="Din"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -847,6 +877,78 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="3"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="HDMI_CTRL_xlslice_0_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="color_logic_0_o_RED">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="color_logic_0" PORT="o_RED"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_RED"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xlslice_1" HWVERSION="1.0" INSTANCE="xlslice_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="3"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="HDMI_CTRL_xlslice_0_1"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="color_logic_0_o_GREEN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="color_logic_0" PORT="o_GREEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_GREEN"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xlslice_2" HWVERSION="1.0" INSTANCE="xlslice_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="3"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="HDMI_CTRL_xlslice_0_2"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="color_logic_0_o_BLUE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="color_logic_0" PORT="o_BLUE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_2_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_BLUE"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

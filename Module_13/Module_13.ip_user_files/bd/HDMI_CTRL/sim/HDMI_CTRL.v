@@ -1,28 +1,38 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sun Dec  2 00:05:02 2018
-//Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
+//Date        : Mon Dec  3 18:00:50 2018
+//Host        : LAPTOP-QC2AS776 running 64-bit major release  (build 9200)
 //Command     : generate_target HDMI_CTRL.bd
 //Design      : HDMI_CTRL
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "HDMI_CTRL,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=HDMI_CTRL,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=5,numReposBlks=5,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_board_cnt=4,da_clkrst_cnt=3,synth_mode=Global}" *) (* HW_HANDOFF = "HDMI_CTRL.hwdef" *) 
+(* CORE_GENERATION_INFO = "HDMI_CTRL,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=HDMI_CTRL,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_board_cnt=4,da_clkrst_cnt=3,synth_mode=Global}" *) (* HW_HANDOFF = "HDMI_CTRL.hwdef" *) 
 module HDMI_CTRL
    (hdmi_tx_0_tmds_clk_n,
     hdmi_tx_0_tmds_clk_p,
     hdmi_tx_0_tmds_data_n,
     hdmi_tx_0_tmds_data_p,
     i_CLK,
-    i_RST);
+    i_RST,
+    o_BLUE,
+    o_GREEN,
+    o_HSYNC,
+    o_RED,
+    o_VSYNC);
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx_0 TMDS_CLK_N" *) output hdmi_tx_0_tmds_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx_0 TMDS_CLK_P" *) output hdmi_tx_0_tmds_clk_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx_0 TMDS_DATA_N" *) output [2:0]hdmi_tx_0_tmds_data_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx_0 TMDS_DATA_P" *) output [2:0]hdmi_tx_0_tmds_data_p;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.I_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.I_CLK, CLK_DOMAIN HDMI_CTRL_clk_100MHz, FREQ_HZ 100000000, PHASE 0.000" *) input i_CLK;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.I_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.I_RST, POLARITY ACTIVE_HIGH" *) input i_RST;
+  output [3:0]o_BLUE;
+  output [3:0]o_GREEN;
+  output o_HSYNC;
+  output [3:0]o_RED;
+  output o_VSYNC;
 
   wire VGA_controller_0_o_HSYNC;
   wire VGA_controller_0_o_VDE;
@@ -42,12 +52,20 @@ module HDMI_CTRL
   wire [2:0]hdmi_tx_0_hdmi_tx_TMDS_DATA_P;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire reset_rtl_0_1;
+  wire [3:0]xlslice_0_Dout;
+  wire [3:0]xlslice_1_Dout;
+  wire [3:0]xlslice_2_Dout;
 
   assign clk_100MHz_1 = i_CLK;
   assign hdmi_tx_0_tmds_clk_n = hdmi_tx_0_hdmi_tx_TMDS_CLK_N;
   assign hdmi_tx_0_tmds_clk_p = hdmi_tx_0_hdmi_tx_TMDS_CLK_P;
   assign hdmi_tx_0_tmds_data_n[2:0] = hdmi_tx_0_hdmi_tx_TMDS_DATA_N;
   assign hdmi_tx_0_tmds_data_p[2:0] = hdmi_tx_0_hdmi_tx_TMDS_DATA_P;
+  assign o_BLUE[3:0] = xlslice_2_Dout;
+  assign o_GREEN[3:0] = xlslice_1_Dout;
+  assign o_HSYNC = VGA_controller_0_o_HSYNC;
+  assign o_RED[3:0] = xlslice_0_Dout;
+  assign o_VSYNC = VGA_controller_0_o_VSYNC;
   assign reset_rtl_0_1 = i_RST;
   HDMI_CTRL_VGA_controller_0_0 VGA_controller_0
        (.i_CLK25MHZ(clk_wiz_clk_out1),
@@ -95,4 +113,13 @@ module HDMI_CTRL
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(proc_sys_reset_0_peripheral_aresetn),
         .slowest_sync_clk(clk_wiz_clk_out1));
+  HDMI_CTRL_xlslice_0_0 xlslice_0
+       (.Din(color_logic_0_o_RED),
+        .Dout(xlslice_0_Dout));
+  HDMI_CTRL_xlslice_0_1 xlslice_1
+       (.Din(color_logic_0_o_GREEN),
+        .Dout(xlslice_1_Dout));
+  HDMI_CTRL_xlslice_0_2 xlslice_2
+       (.Din(color_logic_0_o_BLUE),
+        .Dout(xlslice_2_Dout));
 endmodule

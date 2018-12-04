@@ -5,11 +5,13 @@ vlib questa_lib/msim/xil_defaultlib
 vlib questa_lib/msim/xpm
 vlib questa_lib/msim/lib_cdc_v1_0_2
 vlib questa_lib/msim/proc_sys_reset_v5_0_12
+vlib questa_lib/msim/xlslice_v1_0_1
 
 vmap xil_defaultlib questa_lib/msim/xil_defaultlib
 vmap xpm questa_lib/msim/xpm
 vmap lib_cdc_v1_0_2 questa_lib/msim/lib_cdc_v1_0_2
 vmap proc_sys_reset_v5_0_12 questa_lib/msim/proc_sys_reset_v5_0_12
+vmap xlslice_v1_0_1 questa_lib/msim/xlslice_v1_0_1
 
 vlog -work xil_defaultlib -64 -sv "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/b65a" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/b65a" \
 "C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
@@ -43,6 +45,14 @@ vcom -work xil_defaultlib -64 -93 \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/b65a" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/b65a" \
 "../../../bd/HDMI_CTRL/sim/HDMI_CTRL.v" \
+
+vlog -work xlslice_v1_0_1 -64 "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/b65a" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/b65a" \
+"../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v" \
+
+vlog -work xil_defaultlib -64 "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/b65a" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0" "+incdir+../../../../Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/b65a" \
+"../../../bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_0/sim/HDMI_CTRL_xlslice_0_0.v" \
+"../../../bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_1/sim/HDMI_CTRL_xlslice_0_1.v" \
+"../../../bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_2/sim/HDMI_CTRL_xlslice_0_2.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

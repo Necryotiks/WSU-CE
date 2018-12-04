@@ -24,6 +24,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_color
 # IP: bd/HDMI_CTRL/ip/HDMI_CTRL_proc_sys_reset_0_0/HDMI_CTRL_proc_sys_reset_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_proc_sys_reset_0_0 || ORIG_REF_NAME==HDMI_CTRL_proc_sys_reset_0_0} -quiet] -quiet
 
+# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_0/HDMI_CTRL_xlslice_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_xlslice_0_0 || ORIG_REF_NAME==HDMI_CTRL_xlslice_0_0} -quiet] -quiet
+
+# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_1/HDMI_CTRL_xlslice_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_xlslice_0_1 || ORIG_REF_NAME==HDMI_CTRL_xlslice_0_1} -quiet] -quiet
+
+# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_2/HDMI_CTRL_xlslice_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_xlslice_0_2 || ORIG_REF_NAME==HDMI_CTRL_xlslice_0_2} -quiet] -quiet
+
 # XDC: bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0/clk_wiz_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
