@@ -44,8 +44,8 @@ output [7:0] o_BLUE
     assign w_CLK = i_CLK;
     assign w_X_COORD = i_X_COORD;
     assign w_Y_COORD = i_Y_COORD;
-    assign o_RED = r_RED;
-    assign o_GREEN = r_GREEN;
+    assign o_RED = 8'b00001111;
+    assign o_GREEN = 8'b00001111;
     assign o_BLUE = r_BLUE;
     
     always@(posedge w_CLK)

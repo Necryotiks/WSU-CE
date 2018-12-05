@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "VGA_controller,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "HDMI_VGA_VGA_controller_0_0,VGA_controller,{}" *)
-(* CORE_GENERATION_INFO = "HDMI_VGA_VGA_controller_0_0,VGA_controller,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=VGA_controller,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,v_HSYNC_START=16,v_HSYNC_END=112,v_VSYNC_START=491,v_VSYNC_END=493,v_HA_START=160,v_VA_START=0,v_HA_END=800,v_VA_END=524}" *)
+(* CORE_GENERATION_INFO = "HDMI_VGA_VGA_controller_0_0,VGA_controller,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=VGA_controller,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,v_END_OF_LINE=800,v_END_OF_SCREEN=525,v_HA_START=0,v_VA_START=0,v_HA_END=640,v_VA_END=480}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module HDMI_VGA_VGA_controller_0_0 (
@@ -61,10 +61,13 @@ module HDMI_VGA_VGA_controller_0_0 (
   o_VSYNC,
   o_VDE,
   o_X_COORD,
-  o_Y_COORD
+  o_Y_COORD,
+  o_RED,
+  o_GREEN,
+  o_BLUE
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 25000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 25173010, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
 output wire o_HSYNC;
@@ -72,22 +75,26 @@ output wire o_VSYNC;
 output wire o_VDE;
 output wire [9 : 0] o_X_COORD;
 output wire [9 : 0] o_Y_COORD;
+output wire [3 : 0] o_RED;
+output wire [3 : 0] o_GREEN;
+output wire [3 : 0] o_BLUE;
 
   VGA_controller #(
-    .v_HSYNC_START(16),
-    .v_HSYNC_END(112),
-    .v_VSYNC_START(491),
-    .v_VSYNC_END(493),
-    .v_HA_START(160),
+    .v_END_OF_LINE(800),
+    .v_END_OF_SCREEN(525),
+    .v_HA_START(0),
     .v_VA_START(0),
-    .v_HA_END(800),
-    .v_VA_END(524)
+    .v_HA_END(640),
+    .v_VA_END(480)
   ) inst (
     .i_CLK(i_CLK),
     .o_HSYNC(o_HSYNC),
     .o_VSYNC(o_VSYNC),
     .o_VDE(o_VDE),
     .o_X_COORD(o_X_COORD),
-    .o_Y_COORD(o_Y_COORD)
+    .o_Y_COORD(o_Y_COORD),
+    .o_RED(o_RED),
+    .o_GREEN(o_GREEN),
+    .o_BLUE(o_BLUE)
   );
 endmodule
