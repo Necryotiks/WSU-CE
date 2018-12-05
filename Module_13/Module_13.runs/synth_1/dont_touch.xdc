@@ -3,53 +3,53 @@
 
 # XDC: new/hdmi_cons.xdc
 
-# Block Designs: bd/HDMI_CTRL/HDMI_CTRL.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL || ORIG_REF_NAME==HDMI_CTRL} -quiet] -quiet
+# Block Designs: bd/HDMI_VGA/HDMI_VGA.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_VGA || ORIG_REF_NAME==HDMI_VGA} -quiet] -quiet
 
-# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/HDMI_CTRL_hdmi_tx_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_hdmi_tx_0_0 || ORIG_REF_NAME==HDMI_CTRL_hdmi_tx_0_0} -quiet] -quiet
+# IP: bd/HDMI_VGA/ip/HDMI_VGA_VGA_controller_0_0/HDMI_VGA_VGA_controller_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_VGA_VGA_controller_0_0 || ORIG_REF_NAME==HDMI_VGA_VGA_controller_0_0} -quiet] -quiet
 
-# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0/clk_wiz_0.xci
+# IP: bd/HDMI_VGA/ip/HDMI_VGA_color_logic_0_0/HDMI_VGA_color_logic_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_VGA_color_logic_0_0 || ORIG_REF_NAME==HDMI_VGA_color_logic_0_0} -quiet] -quiet
+
+# IP: bd/HDMI_VGA/ip/HDMI_VGA_hdmi_tx_0_0/HDMI_VGA_hdmi_tx_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_VGA_hdmi_tx_0_0 || ORIG_REF_NAME==HDMI_VGA_hdmi_tx_0_0} -quiet] -quiet
+
+# IP: bd/HDMI_VGA/ip/HDMI_VGA_hdmi_tx_0_0/sim/clk_wiz_0/clk_wiz_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] -quiet
 
-# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_clk_wiz_0 || ORIG_REF_NAME==HDMI_CTRL_clk_wiz_0} -quiet] -quiet
+# IP: bd/HDMI_VGA/ip/HDMI_VGA_proc_sys_reset_0_0/HDMI_VGA_proc_sys_reset_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_VGA_proc_sys_reset_0_0 || ORIG_REF_NAME==HDMI_VGA_proc_sys_reset_0_0} -quiet] -quiet
 
-# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_VGA_controller_0_0/HDMI_CTRL_VGA_controller_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_VGA_controller_0_0 || ORIG_REF_NAME==HDMI_CTRL_VGA_controller_0_0} -quiet] -quiet
+# IP: bd/HDMI_VGA/ip/HDMI_VGA_xlslice_0_0/HDMI_VGA_xlslice_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_VGA_xlslice_0_0 || ORIG_REF_NAME==HDMI_VGA_xlslice_0_0} -quiet] -quiet
 
-# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_color_logic_0_0/HDMI_CTRL_color_logic_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_color_logic_0_0 || ORIG_REF_NAME==HDMI_CTRL_color_logic_0_0} -quiet] -quiet
+# IP: bd/HDMI_VGA/ip/HDMI_VGA_xlslice_1_0/HDMI_VGA_xlslice_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_VGA_xlslice_1_0 || ORIG_REF_NAME==HDMI_VGA_xlslice_1_0} -quiet] -quiet
 
-# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_proc_sys_reset_0_0/HDMI_CTRL_proc_sys_reset_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_proc_sys_reset_0_0 || ORIG_REF_NAME==HDMI_CTRL_proc_sys_reset_0_0} -quiet] -quiet
+# IP: bd/HDMI_VGA/ip/HDMI_VGA_xlslice_2_0/HDMI_VGA_xlslice_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_VGA_xlslice_2_0 || ORIG_REF_NAME==HDMI_VGA_xlslice_2_0} -quiet] -quiet
 
-# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_0/HDMI_CTRL_xlslice_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_xlslice_0_0 || ORIG_REF_NAME==HDMI_CTRL_xlslice_0_0} -quiet] -quiet
+# IP: bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_VGA_clk_wiz_0_0 || ORIG_REF_NAME==HDMI_VGA_clk_wiz_0_0} -quiet] -quiet
 
-# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_1/HDMI_CTRL_xlslice_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_xlslice_0_1 || ORIG_REF_NAME==HDMI_CTRL_xlslice_0_1} -quiet] -quiet
-
-# IP: bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_2/HDMI_CTRL_xlslice_0_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==HDMI_CTRL_xlslice_0_2 || ORIG_REF_NAME==HDMI_CTRL_xlslice_0_2} -quiet] -quiet
-
-# XDC: bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0/clk_wiz_0.xdc
+# XDC: bd/HDMI_VGA/ip/HDMI_VGA_hdmi_tx_0_0/sim/clk_wiz_0/clk_wiz_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0/clk_wiz_0_ooc.xdc
+# XDC: bd/HDMI_VGA/ip/HDMI_VGA_hdmi_tx_0_0/sim/clk_wiz_0/clk_wiz_0_ooc.xdc
 
-# XDC: bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0_board.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==HDMI_CTRL_clk_wiz_0 || ORIG_REF_NAME==HDMI_CTRL_clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+# XDC: bd/HDMI_VGA/ip/HDMI_VGA_proc_sys_reset_0_0/HDMI_VGA_proc_sys_reset_0_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==HDMI_VGA_proc_sys_reset_0_0 || ORIG_REF_NAME==HDMI_VGA_proc_sys_reset_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==HDMI_CTRL_clk_wiz_0 || ORIG_REF_NAME==HDMI_CTRL_clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+# XDC: bd/HDMI_VGA/ip/HDMI_VGA_proc_sys_reset_0_0/HDMI_VGA_proc_sys_reset_0_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==HDMI_VGA_proc_sys_reset_0_0 || ORIG_REF_NAME==HDMI_VGA_proc_sys_reset_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0_ooc.xdc
+# XDC: bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==HDMI_VGA_clk_wiz_0_0 || ORIG_REF_NAME==HDMI_VGA_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: bd/HDMI_CTRL/ip/HDMI_CTRL_proc_sys_reset_0_0/HDMI_CTRL_proc_sys_reset_0_0_board.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==HDMI_CTRL_proc_sys_reset_0_0 || ORIG_REF_NAME==HDMI_CTRL_proc_sys_reset_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+# XDC: bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==HDMI_VGA_clk_wiz_0_0 || ORIG_REF_NAME==HDMI_VGA_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: bd/HDMI_CTRL/ip/HDMI_CTRL_proc_sys_reset_0_0/HDMI_CTRL_proc_sys_reset_0_0.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==HDMI_CTRL_proc_sys_reset_0_0 || ORIG_REF_NAME==HDMI_CTRL_proc_sys_reset_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+# XDC: bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0_ooc.xdc
 
-# XDC: bd/HDMI_CTRL/HDMI_CTRL_ooc.xdc
+# XDC: bd/HDMI_VGA/HDMI_VGA_ooc.xdc

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.runs/synth_1'
+HD_PWD='C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log HDMI_CTRL_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDMI_CTRL_wrapper.tcl
+EAStep vivado -log HDMI_VGA_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDMI_VGA_wrapper.tcl

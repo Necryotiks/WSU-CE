@@ -50,8 +50,8 @@ output [7:0] o_BLUE
     
     always@(posedge w_CLK)
     begin
-        if(w_X_COORD >= v_HA_START & w_X_COORD <= v_HA_END)begin
-            if (w_Y_COORD >= v_VA_START &  w_Y_COORD <= v_VA_END)
+        if(w_X_COORD >= v_HA_START && w_X_COORD <= v_HA_END)begin
+            if (w_Y_COORD >= v_VA_START &&  w_Y_COORD <= v_VA_END)
                 begin
                     r_RED = 8'b00001111;
                     r_BLUE = 8'b00001001;

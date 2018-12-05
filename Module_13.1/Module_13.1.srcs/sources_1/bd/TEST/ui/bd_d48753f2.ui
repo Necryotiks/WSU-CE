@@ -1,0 +1,39 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port i_CLK -pg 1 -y 60 -defaultsOSRD
+preplace port o_HSYNC -pg 1 -y 250 -defaultsOSRD
+preplace port i_RST -pg 1 -y 40 -defaultsOSRD
+preplace port o_VSYNC -pg 1 -y 270 -defaultsOSRD
+preplace portBus o_GREEN -pg 1 -y 310 -defaultsOSRD
+preplace portBus o_RED -pg 1 -y 290 -defaultsOSRD
+preplace portBus i_Pattern -pg 1 -y 90 -defaultsOSRD
+preplace portBus o_BLUE -pg 1 -y 330 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -y 50 -defaultsOSRD
+preplace inst VGA_PORCH_0 -pg 1 -lvl 2 -y 290 -defaultsOSRD
+preplace inst VGA_COLOR_0 -pg 1 -lvl 2 -y 100 -defaultsOSRD
+preplace inst VGA_SYNC_0 -pg 1 -lvl 1 -y 190 -defaultsOSRD
+preplace netloc VGA_PORCH_0_o_Red_Video 1 2 1 NJ
+preplace netloc VGA_COLOR_0_o_VSync 1 1 2 -20 420 360
+preplace netloc VGA_PORCH_0_o_HSync 1 2 1 NJ
+preplace netloc VGA_COLOR_0_o_HSync 1 1 2 0 0 340
+preplace netloc i_Pattern_0_1 1 0 2 -320J 290 -30J
+preplace netloc VGA_COLOR_0_o_Grn_Video 1 1 2 -10 -10 350
+preplace netloc VGA_COLOR_0_o_Red_Video 1 1 2 0 410 340
+preplace netloc VGA_SYNC_0_o_VSync 1 1 1 -20
+preplace netloc VGA_PORCH_0_o_Blu_Video 1 2 1 NJ
+preplace netloc VGA_PORCH_0_o_VSync 1 2 1 NJ
+preplace netloc VGA_SYNC_0_o_HSync 1 1 1 -40
+preplace netloc VGA_PORCH_0_o_Grn_Video 1 2 1 NJ
+preplace netloc reset_rtl_0_1 1 0 1 N
+preplace netloc VGA_COLOR_0_o_Blu_Video 1 1 2 10 400 330
+preplace netloc clk_100MHz_1 1 0 1 N
+preplace netloc clk_wiz_clk_out1 1 0 2 -310 280 -50
+levelinfo -pg 1 -340 -180 170 390 -top -20 -bot 560
+",
+}
+{
+   da_board_cnt: "2",
+   da_clkrst_cnt: "1",
+}

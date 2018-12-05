@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log HDMI_CTRL_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDMI_CTRL_wrapper.tcl
+    with args -log HDMI_VGA_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDMI_VGA_wrapper.tcl
 
 
 ****** Vivado v2018.2 (64-bit)
@@ -8,28 +8,28 @@
   **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source HDMI_CTRL_wrapper.tcl -notrace
+source HDMI_VGA_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/IP_REPOS/hdmi_tx_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Sergaljerk/WSU-CPTE/IP_REPOS/hdmi_tx_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 282.313 ; gain = 36.594
-Command: synth_design -top HDMI_CTRL_wrapper -part xc7z007sclg400-1
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 282.422 ; gain = 37.961
+Command: synth_design -top HDMI_VGA_wrapper -part xc7z007sclg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8124 
-WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:145]
-WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:146]
-WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:147]
-WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:148]
+INFO: Helper process launched with PID 10688 
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:145]
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:146]
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:147]
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:148]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 402.137 ; gain = 113.484
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 402.824 ; gain = 111.191
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CTRL_wrapper' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/hdl/HDMI_CTRL_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CTRL' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/synth/HDMI_CTRL.v:13]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CTRL_VGA_controller_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_VGA_controller_0_0/synth/HDMI_CTRL_VGA_controller_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'VGA_controller' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/VGA_controller.v:23]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_wrapper' [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/hdl/HDMI_VGA_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA' [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/synth/HDMI_VGA.v:13]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_VGA_controller_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_VGA_controller_0_0/synth/HDMI_VGA_VGA_controller_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'VGA_controller' [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/VGA_controller.v:23]
 	Parameter v_HSYNC_START bound to: 16 - type: integer 
 	Parameter v_HSYNC_END bound to: 112 - type: integer 
 	Parameter v_VSYNC_START bound to: 491 - type: integer 
@@ -38,10 +38,10 @@ INFO: [Synth 8-6157] synthesizing module 'VGA_controller' [C:/Users/Necryotiks/A
 	Parameter v_VA_START bound to: 0 - type: integer 
 	Parameter v_HA_END bound to: 800 - type: integer 
 	Parameter v_VA_END bound to: 524 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'VGA_controller' (1#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/VGA_controller.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CTRL_VGA_controller_0_0' (2#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_VGA_controller_0_0/synth/HDMI_CTRL_VGA_controller_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CTRL_clk_wiz_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0.v:71]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CTRL_clk_wiz_0_clk_wiz' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_controller' (1#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/VGA_controller.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_VGA_controller_0_0' (2#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_VGA_controller_0_0/synth/HDMI_VGA_VGA_controller_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_clk_wiz_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0.v:71]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_clk_wiz_0_0_clk_wiz' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0_clk_wiz.v:69]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
@@ -101,18 +101,18 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2018.2/s
 INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (4#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (5#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CTRL_clk_wiz_0_clk_wiz' (6#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0_clk_wiz.v:69]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CTRL_clk_wiz_0' (7#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0.v:71]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CTRL_color_logic_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_color_logic_0_0/synth/HDMI_CTRL_color_logic_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'color_logic' [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/color_logic.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_clk_wiz_0_0_clk_wiz' (6#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_clk_wiz_0_0' (7#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0.v:71]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_color_logic_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_color_logic_0_0/synth/HDMI_VGA_color_logic_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'color_logic' [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/color_logic.v:23]
 	Parameter v_HA_START bound to: 160 - type: integer 
 	Parameter v_VA_START bound to: 0 - type: integer 
 	Parameter v_HA_END bound to: 800 - type: integer 
 	Parameter v_VA_END bound to: 524 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'color_logic' (8#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/color_logic.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CTRL_color_logic_0_0' (9#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_color_logic_0_0/synth/HDMI_CTRL_color_logic_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CTRL_hdmi_tx_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/synth/HDMI_CTRL_hdmi_tx_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/hdmi_tx_v1_0.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'color_logic' (8#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/color_logic.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_color_logic_0_0' (9#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_color_logic_0_0/synth/HDMI_VGA_color_logic_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_hdmi_tx_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_hdmi_tx_0_0/synth/HDMI_VGA_hdmi_tx_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/hdmi_tx_v1_0.v:70]
 	Parameter MODE bound to: HDMI - type: string 
 	Parameter C_RED_WIDTH bound to: 8 - type: integer 
 	Parameter C_GREEN_WIDTH bound to: 8 - type: integer 
@@ -121,15 +121,15 @@ INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [c:/Users/Necryotiks/App
 	Parameter VIDEOPREAM bound to: 4'b1000 
 	Parameter NULLCONTRL bound to: 4'b0000 
 	Parameter SRL_DELAY bound to: 4'b1010 
-INFO: [Synth 8-6157] synthesizing module 'srldelay' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/srldelay.v:70]
+INFO: [Synth 8-6157] synthesizing module 'srldelay' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/srldelay.v:70]
 	Parameter WIDTH bound to: 40 - type: integer 
 	Parameter TAPS bound to: 4'b1010 
 INFO: [Synth 8-6157] synthesizing module 'SRL16E' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50711]
 	Parameter INIT bound to: 16'b0000000000000000 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (10#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50711]
-INFO: [Synth 8-6155] done synthesizing module 'srldelay' (11#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/srldelay.v:70]
-INFO: [Synth 8-6157] synthesizing module 'encode' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'srldelay' (11#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/srldelay.v:70]
+INFO: [Synth 8-6157] synthesizing module 'encode' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:79]
 	Parameter CHANNEL bound to: BLUE - type: string 
 	Parameter MODE bound to: HDMI - type: string 
 	Parameter VIDEOGBND bound to: 10'b1011001100 
@@ -138,8 +138,8 @@ INFO: [Synth 8-6157] synthesizing module 'encode' [c:/Users/Necryotiks/AppData/R
 	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
 	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
 	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
-INFO: [Synth 8-6155] done synthesizing module 'encode' (12#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:79]
-INFO: [Synth 8-6157] synthesizing module 'encode__parameterized0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode' (12#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:79]
 	Parameter CHANNEL bound to: GREEN - type: string 
 	Parameter MODE bound to: HDMI - type: string 
 	Parameter VIDEOGBND bound to: 10'b0100110011 
@@ -148,8 +148,8 @@ INFO: [Synth 8-6157] synthesizing module 'encode__parameterized0' [c:/Users/Necr
 	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
 	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
 	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
-INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized0' (12#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:79]
-INFO: [Synth 8-6157] synthesizing module 'encode__parameterized1' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized0' (12#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized1' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:79]
 	Parameter CHANNEL bound to: RED - type: string 
 	Parameter MODE bound to: HDMI - type: string 
 	Parameter VIDEOGBND bound to: 10'b1011001100 
@@ -158,8 +158,8 @@ INFO: [Synth 8-6157] synthesizing module 'encode__parameterized1' [c:/Users/Necr
 	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
 	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
 	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
-INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized1' (12#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:79]
-INFO: [Synth 8-6157] synthesizing module 'serdes_10_to_1' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized1' (12#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'serdes_10_to_1' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/serdes_10_to_1.v:43]
 INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:31227]
 	Parameter DATA_RATE_OQ bound to: DDR - type: string 
 	Parameter DATA_RATE_TQ bound to: SDR - type: string 
@@ -214,17 +214,17 @@ INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [C:/Xilinx/
 	Parameter TBYTE_SRC bound to: FALSE - type: string 
 	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (13#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:31227]
-INFO: [Synth 8-6155] done synthesizing module 'serdes_10_to_1' (14#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'serdes_10_to_1' (14#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/serdes_10_to_1.v:43]
 INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:27289]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (15#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:27289]
-INFO: [Synth 8-4471] merging register 'hdmi_ctl1_reg' into 'hdmi_ctl3_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/hdmi_tx_v1_0.v:148]
-WARNING: [Synth 8-6014] Unused sequential element hdmi_ctl1_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/hdmi_tx_v1_0.v:148]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_v1_0' (16#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/hdmi_tx_v1_0.v:70]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CTRL_hdmi_tx_0_0' (17#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/synth/HDMI_CTRL_hdmi_tx_0_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'HDMI_CTRL_proc_sys_reset_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_proc_sys_reset_0_0/synth/HDMI_CTRL_proc_sys_reset_0_0.vhd:74]
+INFO: [Synth 8-4471] merging register 'hdmi_ctl1_reg' into 'hdmi_ctl3_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/hdmi_tx_v1_0.v:148]
+WARNING: [Synth 8-6014] Unused sequential element hdmi_ctl1_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/hdmi_tx_v1_0.v:148]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_v1_0' (16#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/hdmi_tx_v1_0.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_hdmi_tx_0_0' (17#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_hdmi_tx_0_0/synth/HDMI_VGA_hdmi_tx_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'HDMI_VGA_proc_sys_reset_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_proc_sys_reset_0_0/synth/HDMI_VGA_proc_sys_reset_0_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
@@ -234,8 +234,8 @@ INFO: [Synth 8-638] synthesizing module 'HDMI_CTRL_proc_sys_reset_0_0' [c:/Users
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_proc_sys_reset_0_0/synth/HDMI_CTRL_proc_sys_reset_0_0.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_proc_sys_reset_0_0/synth/HDMI_VGA_proc_sys_reset_0_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
@@ -249,37 +249,37 @@ INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Users/Necryotiks/Ap
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
-INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1'b1 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
-INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
 INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
 	Parameter INIT bound to: 16'b0000000000000000 
 INFO: [Synth 8-6155] done synthesizing module 'SRL16' (18#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -287,51 +287,42 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/Necryotiks/AppData/
 	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (19#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (20#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (19#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (20#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (21#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (22#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (23#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'HDMI_CTRL_proc_sys_reset_0_0' (24#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_proc_sys_reset_0_0/synth/HDMI_CTRL_proc_sys_reset_0_0.vhd:74]
-WARNING: [Synth 8-350] instance 'proc_sys_reset_0' of module 'HDMI_CTRL_proc_sys_reset_0_0' requires 10 connections, but only 6 given [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/synth/HDMI_CTRL.v:109]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CTRL_xlslice_0_0' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_0/synth/HDMI_CTRL_xlslice_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (21#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (22#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (23#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'HDMI_VGA_proc_sys_reset_0_0' (24#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_proc_sys_reset_0_0/synth/HDMI_VGA_proc_sys_reset_0_0.vhd:74]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_0' of module 'HDMI_VGA_proc_sys_reset_0_0' requires 10 connections, but only 6 given [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/synth/HDMI_VGA.v:109]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_xlslice_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_0_0/synth/HDMI_VGA_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 8 - type: integer 
 	Parameter DIN_FROM bound to: 3 - type: integer 
 	Parameter DIN_TO bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice' (25#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CTRL_xlslice_0_0' (26#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_0/synth/HDMI_CTRL_xlslice_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CTRL_xlslice_0_1' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_1/synth/HDMI_CTRL_xlslice_0_1.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CTRL_xlslice_0_1' (27#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_1/synth/HDMI_CTRL_xlslice_0_1.v:57]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CTRL_xlslice_0_2' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_2/synth/HDMI_CTRL_xlslice_0_2.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CTRL_xlslice_0_2' (28#1) [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_xlslice_0_2/synth/HDMI_CTRL_xlslice_0_2.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CTRL' (29#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/synth/HDMI_CTRL.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CTRL_wrapper' (30#1) [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/hdl/HDMI_CTRL_wrapper.v:12]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[7]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[6]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[5]
-WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[4]
-WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_aclk
-WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_resetn
-WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[1]
-WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[0]
-WARNING: [Synth 8-3331] design cdc_sync has unconnected port scndry_resetn
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice' (25#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_xlslice_0_0' (26#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_0_0/synth/HDMI_VGA_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_xlslice_1_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_1_0/synth/HDMI_VGA_xlslice_1_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_xlslice_1_0' (27#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_1_0/synth/HDMI_VGA_xlslice_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_xlslice_2_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_2_0/synth/HDMI_VGA_xlslice_2_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_xlslice_2_0' (28#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_2_0/synth/HDMI_VGA_xlslice_2_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA' (29#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/synth/HDMI_VGA.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_wrapper' (30#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/hdl/HDMI_VGA_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 442.410 ; gain = 153.758
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 442.102 ; gain = 150.469
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -344,10 +335,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 442.410 ; gain = 153.758
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 442.102 ; gain = 150.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 442.410 ; gain = 153.758
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 442.102 ; gain = 150.469
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -356,50 +347,26 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_wiz_0'. The XDC file c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_hdmi_tx_0_0/sim/clk_wiz_0/clk_wiz_0.xdc will not be read for any cell of this module.
-Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0_board.xdc] for cell 'HDMI_CTRL_i/clk_wiz/inst'
-Finished Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0_board.xdc] for cell 'HDMI_CTRL_i/clk_wiz/inst'
-Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0.xdc] for cell 'HDMI_CTRL_i/clk_wiz/inst'
-Finished Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0.xdc] for cell 'HDMI_CTRL_i/clk_wiz/inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_clk_wiz_0/HDMI_CTRL_clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_CTRL_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_CTRL_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_proc_sys_reset_0_0/HDMI_CTRL_proc_sys_reset_0_0_board.xdc] for cell 'HDMI_CTRL_i/proc_sys_reset_0/U0'
-Finished Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_proc_sys_reset_0_0/HDMI_CTRL_proc_sys_reset_0_0_board.xdc] for cell 'HDMI_CTRL_i/proc_sys_reset_0/U0'
-Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_proc_sys_reset_0_0/HDMI_CTRL_proc_sys_reset_0_0.xdc] for cell 'HDMI_CTRL_i/proc_sys_reset_0/U0'
-Finished Parsing XDC File [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ip/HDMI_CTRL_proc_sys_reset_0_0/HDMI_CTRL_proc_sys_reset_0_0.xdc] for cell 'HDMI_CTRL_i/proc_sys_reset_0/U0'
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_wiz_0'. The XDC file c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_hdmi_tx_0_0/sim/clk_wiz_0/clk_wiz_0.xdc will not be read for any cell of this module.
+Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_proc_sys_reset_0_0/HDMI_VGA_proc_sys_reset_0_0_board.xdc] for cell 'HDMI_VGA_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_proc_sys_reset_0_0/HDMI_VGA_proc_sys_reset_0_0_board.xdc] for cell 'HDMI_VGA_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_proc_sys_reset_0_0/HDMI_VGA_proc_sys_reset_0_0.xdc] for cell 'HDMI_VGA_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_proc_sys_reset_0_0/HDMI_VGA_proc_sys_reset_0_0.xdc] for cell 'HDMI_VGA_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0_board.xdc] for cell 'HDMI_VGA_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0_board.xdc] for cell 'HDMI_VGA_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0.xdc] for cell 'HDMI_VGA_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0.xdc] for cell 'HDMI_VGA_i/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_VGA_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_VGA_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc]
-WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_n[0]'. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_p[0]'. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_n[1]'. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_p[1]'. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_n[2]'. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_p[2]'. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'hdmi_clk_n'. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'hdmi_clk_p'. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_CTRL_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_CTRL_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_CTRL_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_CTRL_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc]
+Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/constrs_1/new/hdmi_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_VGA_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_VGA_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_VGA_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_VGA_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
@@ -408,41 +375,41 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 788.383 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 789.102 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:51 . Memory (MB): peak = 788.383 ; gain = 499.730
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 789.102 ; gain = 497.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:51 . Memory (MB): peak = 788.383 ; gain = 499.730
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 789.102 ; gain = 497.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for HDMI_CTRL_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for HDMI_CTRL_i/hdmi_tx_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for HDMI_CTRL_i/clk_wiz. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for HDMI_CTRL_i/VGA_controller_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for HDMI_CTRL_i/color_logic_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for HDMI_CTRL_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for HDMI_CTRL_i/xlslice_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for HDMI_CTRL_i/xlslice_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for HDMI_CTRL_i/xlslice_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for HDMI_CTRL_i/clk_wiz/inst. (constraint file  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc, line 42).
-Applied set_property DONT_TOUCH = true for HDMI_CTRL_i/proc_sys_reset_0/U0. (constraint file  C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc, line 50).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/VGA_controller_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/color_logic_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/hdmi_tx_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/xlslice_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/xlslice_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/xlslice_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/proc_sys_reset_0/U0. (constraint file  C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc, line 42).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/clk_wiz_0/inst. (constraint file  C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc, line 48).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:51 . Memory (MB): peak = 788.383 ; gain = 499.730
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 789.102 ; gain = 497.469
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:222]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:222]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:222]
-INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
-WARNING: [Synth 8-6014] Unused sequential element seq_cnt_en_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:222]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:222]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:222]
+INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
+WARNING: [Synth 8-6014] Unused sequential element seq_cnt_en_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:54 . Memory (MB): peak = 788.383 ; gain = 499.730
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 789.102 ; gain = 497.469
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -464,7 +431,7 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 42    
 +---Registers : 
-	               10 Bit    Registers := 5     
+	               10 Bit    Registers := 7     
 	                9 Bit    Registers := 3     
 	                8 Bit    Registers := 6     
 	                6 Bit    Registers := 1     
@@ -473,7 +440,7 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 3     
 	                1 Bit    Registers := 44    
 +---Muxes : 
-	   2 Input     10 Bit        Muxes := 8     
+	   2 Input     10 Bit        Muxes := 6     
 	  22 Input     10 Bit        Muxes := 1     
 	  23 Input     10 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 5     
@@ -493,10 +460,9 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     10 Bit       Adders := 3     
 +---Registers : 
-	               10 Bit    Registers := 2     
+	               10 Bit    Registers := 4     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     10 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 1     
 Module color_logic 
 Detailed RTL Component Info : 
@@ -613,98 +579,86 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'inst/encg/vde_q_reg' into 'inst/encb/vde_q_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:171]
-INFO: [Synth 8-4471] merging register 'inst/encg/vde_reg_reg' into 'inst/encb/vde_reg_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:172]
-INFO: [Synth 8-4471] merging register 'inst/encg/ade_q_reg' into 'inst/encb/ade_q_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:174]
-INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_reg' into 'inst/encb/ade_reg_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:175]
-INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_q_reg' into 'inst/encb/ade_reg_q_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:176]
-INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_qq_reg' into 'inst/encb/ade_reg_qq_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:177]
-INFO: [Synth 8-4471] merging register 'inst/encr/vde_q_reg' into 'inst/encb/vde_q_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:171]
-INFO: [Synth 8-4471] merging register 'inst/encr/vde_reg_reg' into 'inst/encb/vde_reg_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:172]
-INFO: [Synth 8-4471] merging register 'inst/encr/ade_q_reg' into 'inst/encb/ade_q_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:174]
-INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_reg' into 'inst/encb/ade_reg_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:175]
-INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_q_reg' into 'inst/encb/ade_reg_q_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:176]
-INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_qq_reg' into 'inst/encb/ade_reg_qq_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:177]
-INFO: [Synth 8-4471] merging register 'inst/encr/c1_q_reg' into 'inst/encg/c1_q_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:181]
-INFO: [Synth 8-4471] merging register 'inst/encr/c1_reg_reg' into 'inst/encg/c1_reg_reg' [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:182]
-WARNING: [Synth 8-6014] Unused sequential element inst/encg/vde_q_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:171]
-WARNING: [Synth 8-6014] Unused sequential element inst/encg/vde_reg_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:172]
-WARNING: [Synth 8-6014] Unused sequential element inst/encg/ade_q_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:174]
-WARNING: [Synth 8-6014] Unused sequential element inst/encg/ade_reg_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:175]
-WARNING: [Synth 8-6014] Unused sequential element inst/encg/ade_reg_q_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:176]
-WARNING: [Synth 8-6014] Unused sequential element inst/encg/ade_reg_qq_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:177]
-WARNING: [Synth 8-6014] Unused sequential element inst/encr/vde_q_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:171]
-WARNING: [Synth 8-6014] Unused sequential element inst/encr/vde_reg_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:172]
-WARNING: [Synth 8-6014] Unused sequential element inst/encr/ade_q_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:174]
-WARNING: [Synth 8-6014] Unused sequential element inst/encr/ade_reg_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:175]
-WARNING: [Synth 8-6014] Unused sequential element inst/encr/ade_reg_q_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:176]
-WARNING: [Synth 8-6014] Unused sequential element inst/encr/ade_reg_qq_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:177]
-WARNING: [Synth 8-6014] Unused sequential element inst/encr/c1_q_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:181]
-WARNING: [Synth 8-6014] Unused sequential element inst/encr/c1_reg_reg was removed.  [c:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_CTRL/ipshared/cb76/hdl/encode.v:182]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_2 has unconnected port Din[7]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_2 has unconnected port Din[6]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_2 has unconnected port Din[5]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_2 has unconnected port Din[4]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_1 has unconnected port Din[7]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_1 has unconnected port Din[6]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_1 has unconnected port Din[5]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_1 has unconnected port Din[4]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_0 has unconnected port Din[7]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_0 has unconnected port Din[6]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_0 has unconnected port Din[5]
-WARNING: [Synth 8-3331] design HDMI_CTRL_xlslice_0_0 has unconnected port Din[4]
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[0]' (FDSE) to 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[3]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[1]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[2]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[2]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[4]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[4]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[5]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[5]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[6]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[6]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_BLUE_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_CTRL_i/color_logic_0/\inst/r_BLUE_reg[7] )
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[0]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[7]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[1]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[7]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[2]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[7]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[3]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[7]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[4]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[7]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[5]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[7]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[6]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_GREEN_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_CTRL_i/color_logic_0/\inst/r_GREEN_reg[7] )
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[0]' (FDSE) to 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[1]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[1]' (FDSE) to 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[2]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[2]' (FDSE) to 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[3]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[4]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[5]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[5]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[6]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[6]' (FDRE) to 'HDMI_CTRL_i/color_logic_0/inst/r_RED_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_CTRL_i/color_logic_0/\inst/r_RED_reg[7] )
-INFO: [Synth 8-3332] Sequential element (inst/r_RED_reg[7]) is unused and will be removed from module HDMI_CTRL_color_logic_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/r_GREEN_reg[7]) is unused and will be removed from module HDMI_CTRL_color_logic_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/r_BLUE_reg[7]) is unused and will be removed from module HDMI_CTRL_color_logic_0_0.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_CTRL_i/hdmi_tx_0/\inst/hdmi_ctl3_reg )
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/hdmi_tx_0/inst/encg/c1_q_reg' (FD) to 'HDMI_CTRL_i/hdmi_tx_0/inst/hdmi_ctl3_reg'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/hdmi_tx_0/inst/encb/n0q_m_reg[0]' (FD) to 'HDMI_CTRL_i/hdmi_tx_0/inst/encb/n1q_m_reg[0]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/hdmi_tx_0/inst/encg/n0q_m_reg[0]' (FD) to 'HDMI_CTRL_i/hdmi_tx_0/inst/encg/n1q_m_reg[0]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/hdmi_tx_0/inst/encr/n0q_m_reg[0]' (FD) to 'HDMI_CTRL_i/hdmi_tx_0/inst/encr/n1q_m_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_CTRL_i/hdmi_tx_0/\inst/hdmi_ctl3_reg )
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/hdmi_tx_0/inst/encg/c1_reg_reg' (FD) to 'HDMI_CTRL_i/hdmi_tx_0/inst/hdmi_ctl3_reg'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_CTRL_i/hdmi_tx_0/\inst/hdmi_ctl3_reg )
-INFO: [Synth 8-3332] Sequential element (inst/encb/cnt_reg[0]) is unused and will be removed from module HDMI_CTRL_hdmi_tx_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/encb/adin_q_reg[1]) is unused and will be removed from module HDMI_CTRL_hdmi_tx_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/encb/adin_q_reg[0]) is unused and will be removed from module HDMI_CTRL_hdmi_tx_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/encb/adin_reg_reg[1]) is unused and will be removed from module HDMI_CTRL_hdmi_tx_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/encb/adin_reg_reg[0]) is unused and will be removed from module HDMI_CTRL_hdmi_tx_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/encg/cnt_reg[0]) is unused and will be removed from module HDMI_CTRL_hdmi_tx_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/hdmi_ctl3_reg) is unused and will be removed from module HDMI_CTRL_hdmi_tx_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/encr/cnt_reg[0]) is unused and will be removed from module HDMI_CTRL_hdmi_tx_0_0.
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/proc_sys_reset_0/U0/SEQ/pr_dec_reg[1]' (FD) to 'HDMI_CTRL_i/proc_sys_reset_0/U0/SEQ/bsr_dec_reg[1]'
-INFO: [Synth 8-3886] merging instance 'HDMI_CTRL_i/proc_sys_reset_0/U0/SEQ/bsr_dec_reg[1]' (FD) to 'HDMI_CTRL_i/proc_sys_reset_0/U0/SEQ/core_dec_reg[1]'
+INFO: [Synth 8-4471] merging register 'inst/encg/vde_q_reg' into 'inst/encb/vde_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:171]
+INFO: [Synth 8-4471] merging register 'inst/encg/vde_reg_reg' into 'inst/encb/vde_reg_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:172]
+INFO: [Synth 8-4471] merging register 'inst/encg/ade_q_reg' into 'inst/encb/ade_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:174]
+INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_reg' into 'inst/encb/ade_reg_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:175]
+INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_q_reg' into 'inst/encb/ade_reg_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:176]
+INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_qq_reg' into 'inst/encb/ade_reg_qq_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:177]
+INFO: [Synth 8-4471] merging register 'inst/encr/vde_q_reg' into 'inst/encb/vde_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:171]
+INFO: [Synth 8-4471] merging register 'inst/encr/vde_reg_reg' into 'inst/encb/vde_reg_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:172]
+INFO: [Synth 8-4471] merging register 'inst/encr/ade_q_reg' into 'inst/encb/ade_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:174]
+INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_reg' into 'inst/encb/ade_reg_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:175]
+INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_q_reg' into 'inst/encb/ade_reg_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:176]
+INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_qq_reg' into 'inst/encb/ade_reg_qq_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:177]
+INFO: [Synth 8-4471] merging register 'inst/encr/c1_q_reg' into 'inst/encg/c1_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:181]
+INFO: [Synth 8-4471] merging register 'inst/encr/c1_reg_reg' into 'inst/encg/c1_reg_reg' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:182]
+WARNING: [Synth 8-6014] Unused sequential element inst/encg/vde_q_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:171]
+WARNING: [Synth 8-6014] Unused sequential element inst/encg/vde_reg_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:172]
+WARNING: [Synth 8-6014] Unused sequential element inst/encg/ade_q_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:174]
+WARNING: [Synth 8-6014] Unused sequential element inst/encg/ade_reg_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:175]
+WARNING: [Synth 8-6014] Unused sequential element inst/encg/ade_reg_q_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:176]
+WARNING: [Synth 8-6014] Unused sequential element inst/encg/ade_reg_qq_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:177]
+WARNING: [Synth 8-6014] Unused sequential element inst/encr/vde_q_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:171]
+WARNING: [Synth 8-6014] Unused sequential element inst/encr/vde_reg_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:172]
+WARNING: [Synth 8-6014] Unused sequential element inst/encr/ade_q_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:174]
+WARNING: [Synth 8-6014] Unused sequential element inst/encr/ade_reg_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:175]
+WARNING: [Synth 8-6014] Unused sequential element inst/encr/ade_reg_q_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:176]
+WARNING: [Synth 8-6014] Unused sequential element inst/encr/ade_reg_qq_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:177]
+WARNING: [Synth 8-6014] Unused sequential element inst/encr/c1_q_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:181]
+WARNING: [Synth 8-6014] Unused sequential element inst/encr/c1_reg_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/cb76/hdl/encode.v:182]
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[0]' (FDSE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[3]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[1]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[2]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[2]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[4]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[4]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[5]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[5]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[6]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[6]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_VGA_i/color_logic_0/\inst/r_BLUE_reg[7] )
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[0]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[1]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[2]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[3]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[4]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[5]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[6]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_VGA_i/color_logic_0/\inst/r_GREEN_reg[7] )
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[0]' (FDSE) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[1]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[1]' (FDSE) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[2]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[2]' (FDSE) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[3]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[4]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[5]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[5]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[6]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[6]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_VGA_i/color_logic_0/\inst/r_RED_reg[7] )
+INFO: [Synth 8-3332] Sequential element (inst/r_RED_reg[7]) is unused and will be removed from module HDMI_VGA_color_logic_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/r_GREEN_reg[7]) is unused and will be removed from module HDMI_VGA_color_logic_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/r_BLUE_reg[7]) is unused and will be removed from module HDMI_VGA_color_logic_0_0.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_VGA_i/hdmi_tx_0/\inst/hdmi_ctl3_reg )
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/hdmi_tx_0/inst/encg/c1_q_reg' (FD) to 'HDMI_VGA_i/hdmi_tx_0/inst/hdmi_ctl3_reg'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/hdmi_tx_0/inst/encb/n0q_m_reg[0]' (FD) to 'HDMI_VGA_i/hdmi_tx_0/inst/encb/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/hdmi_tx_0/inst/encg/n0q_m_reg[0]' (FD) to 'HDMI_VGA_i/hdmi_tx_0/inst/encg/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/hdmi_tx_0/inst/encr/n0q_m_reg[0]' (FD) to 'HDMI_VGA_i/hdmi_tx_0/inst/encr/n1q_m_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_VGA_i/hdmi_tx_0/\inst/hdmi_ctl3_reg )
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/hdmi_tx_0/inst/encg/c1_reg_reg' (FD) to 'HDMI_VGA_i/hdmi_tx_0/inst/hdmi_ctl3_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_VGA_i/hdmi_tx_0/\inst/hdmi_ctl3_reg )
+INFO: [Synth 8-3332] Sequential element (inst/encb/cnt_reg[0]) is unused and will be removed from module HDMI_VGA_hdmi_tx_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/encb/adin_q_reg[1]) is unused and will be removed from module HDMI_VGA_hdmi_tx_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/encb/adin_q_reg[0]) is unused and will be removed from module HDMI_VGA_hdmi_tx_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/encb/adin_reg_reg[1]) is unused and will be removed from module HDMI_VGA_hdmi_tx_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/encb/adin_reg_reg[0]) is unused and will be removed from module HDMI_VGA_hdmi_tx_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/encg/cnt_reg[0]) is unused and will be removed from module HDMI_VGA_hdmi_tx_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/hdmi_ctl3_reg) is unused and will be removed from module HDMI_VGA_hdmi_tx_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/encr/cnt_reg[0]) is unused and will be removed from module HDMI_VGA_hdmi_tx_0_0.
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/proc_sys_reset_0/U0/SEQ/pr_dec_reg[1]' (FD) to 'HDMI_VGA_i/proc_sys_reset_0/U0/SEQ/bsr_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/proc_sys_reset_0/U0/SEQ/bsr_dec_reg[1]' (FD) to 'HDMI_VGA_i/proc_sys_reset_0/U0/SEQ/core_dec_reg[1]'
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
-INFO: [Synth 8-3332] Sequential element (inst/encb/n1q_m_reg[0]) is unused and will be removed from module HDMI_CTRL_hdmi_tx_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/encg/n1q_m_reg[0]) is unused and will be removed from module HDMI_CTRL_hdmi_tx_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/encr/n1q_m_reg[0]) is unused and will be removed from module HDMI_CTRL_hdmi_tx_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/encb/n1q_m_reg[0]) is unused and will be removed from module HDMI_VGA_hdmi_tx_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/encg/n1q_m_reg[0]) is unused and will be removed from module HDMI_VGA_hdmi_tx_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/encr/n1q_m_reg[0]) is unused and will be removed from module HDMI_VGA_hdmi_tx_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:05 . Memory (MB): peak = 788.383 ; gain = 499.730
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 789.102 ; gain = 497.469
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -716,13 +670,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:36 . Memory (MB): peak = 788.383 ; gain = 499.730
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 789.102 ; gain = 497.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:38 . Memory (MB): peak = 803.430 ; gain = 514.777
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 805.012 ; gain = 513.379
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -734,7 +688,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:39 . Memory (MB): peak = 808.828 ; gain = 520.176
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 810.414 ; gain = 518.781
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -758,7 +712,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:43 . Memory (MB): peak = 808.828 ; gain = 520.176
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 810.414 ; gain = 518.781
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -771,7 +725,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:43 . Memory (MB): peak = 808.828 ; gain = 520.176
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 810.414 ; gain = 518.781
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -783,37 +737,37 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:43 . Memory (MB): peak = 808.828 ; gain = 520.176
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 810.414 ; gain = 518.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:43 . Memory (MB): peak = 808.828 ; gain = 520.176
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 810.414 ; gain = 518.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:43 . Memory (MB): peak = 808.828 ; gain = 520.176
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 810.414 ; gain = 518.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:43 . Memory (MB): peak = 808.828 ; gain = 520.176
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 810.414 ; gain = 518.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+----------------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name           | RTL Name             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+----------------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|HDMI_CTRL_hdmi_tx_0_0 | inst/encg/c0_reg_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|HDMI_CTRL_hdmi_tx_0_0 | inst/encr/c0_reg_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+----------------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++---------------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name          | RTL Name             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|HDMI_VGA_hdmi_tx_0_0 | inst/encg/c0_reg_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|HDMI_VGA_hdmi_tx_0_0 | inst/encr/c0_reg_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++---------------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -833,12 +787,12 @@ Report Cell Usage:
 |      |Cell        |Count |
 +------+------------+------+
 |1     |BUFG        |     3|
-|2     |LUT1        |     6|
-|3     |LUT2        |    34|
+|2     |LUT1        |     7|
+|3     |LUT2        |    29|
 |4     |LUT3        |    50|
-|5     |LUT4        |    43|
-|6     |LUT5        |   101|
-|7     |LUT6        |   147|
+|5     |LUT4        |    45|
+|6     |LUT5        |    96|
+|7     |LUT6        |   141|
 |8     |MMCME2_ADV  |     1|
 |9     |OSERDESE2   |     4|
 |10    |OSERDESE2_1 |     4|
@@ -846,8 +800,8 @@ Report Cell Usage:
 |12    |SRL16E      |    40|
 |13    |FDCE        |    42|
 |14    |FDR         |     8|
-|15    |FDRE        |   166|
-|16    |FDSE        |     4|
+|15    |FDRE        |   182|
+|16    |FDSE        |     8|
 |17    |IBUF        |     2|
 |18    |OBUF        |    14|
 |19    |OBUFDS      |     4|
@@ -857,15 +811,15 @@ Report Instance Areas:
 +------+---------------------------------------+-----------------------------+------+
 |      |Instance                               |Module                       |Cells |
 +------+---------------------------------------+-----------------------------+------+
-|1     |top                                    |                             |   674|
-|2     |  HDMI_CTRL_i                          |HDMI_CTRL                    |   659|
-|3     |    VGA_controller_0                   |HDMI_CTRL_VGA_controller_0_0 |    82|
-|4     |      inst                             |VGA_controller               |    82|
-|5     |    clk_wiz                            |HDMI_CTRL_clk_wiz_0          |     5|
-|6     |      inst                             |HDMI_CTRL_clk_wiz_0_clk_wiz  |     5|
-|7     |    color_logic_0                      |HDMI_CTRL_color_logic_0_0    |     8|
+|1     |top                                    |                             |   681|
+|2     |  HDMI_VGA_i                           |HDMI_VGA                     |   666|
+|3     |    VGA_controller_0                   |HDMI_VGA_VGA_controller_0_0  |    89|
+|4     |      inst                             |VGA_controller               |    89|
+|5     |    clk_wiz_0                          |HDMI_VGA_clk_wiz_0_0         |     5|
+|6     |      inst                             |HDMI_VGA_clk_wiz_0_0_clk_wiz |     5|
+|7     |    color_logic_0                      |HDMI_VGA_color_logic_0_0     |     8|
 |8     |      inst                             |color_logic                  |     8|
-|9     |    hdmi_tx_0                          |HDMI_CTRL_hdmi_tx_0_0        |   498|
+|9     |    hdmi_tx_0                          |HDMI_VGA_hdmi_tx_0_0         |   498|
 |10    |      inst                             |hdmi_tx_v1_0                 |   498|
 |11    |        encb                           |encode                       |   164|
 |12    |        encg                           |encode__parameterized0       |   142|
@@ -875,23 +829,23 @@ Report Instance Areas:
 |16    |        serial_g                       |serdes_10_to_1_2             |     2|
 |17    |        serial_r                       |serdes_10_to_1_3             |     2|
 |18    |        srldly_0                       |srldelay                     |    41|
-|19    |    proc_sys_reset_0                   |HDMI_CTRL_proc_sys_reset_0_0 |    66|
+|19    |    proc_sys_reset_0                   |HDMI_VGA_proc_sys_reset_0_0  |    66|
 |20    |      U0                               |proc_sys_reset               |    66|
 |21    |        EXT_LPF                        |lpf                          |    23|
 |22    |          \ACTIVE_HIGH_EXT.ACT_HI_EXT  |cdc_sync                     |     6|
 |23    |          \ACTIVE_LOW_AUX.ACT_LO_AUX   |cdc_sync_0                   |     6|
 |24    |        SEQ                            |sequence_psr                 |    38|
 |25    |          SEQ_COUNTER                  |upcnt_n                      |    13|
-|26    |    xlslice_0                          |HDMI_CTRL_xlslice_0_0        |     0|
-|27    |    xlslice_1                          |HDMI_CTRL_xlslice_0_1        |     0|
-|28    |    xlslice_2                          |HDMI_CTRL_xlslice_0_2        |     0|
+|26    |    xlslice_0                          |HDMI_VGA_xlslice_0_0         |     0|
+|27    |    xlslice_1                          |HDMI_VGA_xlslice_1_0         |     0|
+|28    |    xlslice_2                          |HDMI_VGA_xlslice_2_0         |     0|
 +------+---------------------------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:43 . Memory (MB): peak = 808.828 ; gain = 520.176
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 810.414 ; gain = 518.781
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:01:16 . Memory (MB): peak = 808.828 ; gain = 174.203
-Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:43 . Memory (MB): peak = 808.828 ; gain = 520.176
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 810.414 ; gain = 171.781
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 810.414 ; gain = 518.781
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -903,11 +857,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-165 Infos, 54 Warnings, 9 Critical Warnings and 0 Errors encountered.
+165 Infos, 25 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:49 . Memory (MB): peak = 808.828 ; gain = 526.516
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 810.414 ; gain = 527.992
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Necryotiks/AppData/Roaming/SPB_Data/WSU-CPTE/Module_13/Module_13.runs/synth_1/HDMI_CTRL_wrapper.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file HDMI_CTRL_wrapper_utilization_synth.rpt -pb HDMI_CTRL_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.165 . Memory (MB): peak = 808.828 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  3 19:37:07 2018...
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.runs/synth_1/HDMI_VGA_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file HDMI_VGA_wrapper_utilization_synth.rpt -pb HDMI_VGA_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 810.414 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  4 14:25:16 2018...
