@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1544004733">
+<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1544205699">
   <File Type="BITSTR-BMM" Name="HDMI_VGA_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="HDMI_VGA_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="HDMI_VGA_wrapper_timing_summary_init.rpt"/>
@@ -78,6 +78,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/color_logic.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/HDMI_VGA/HDMI_VGA.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -97,14 +104,6 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../Parts/HZ_Counter.v"/>
         <Attr Name="ImportTime" Val="1540875218"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/color_logic.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

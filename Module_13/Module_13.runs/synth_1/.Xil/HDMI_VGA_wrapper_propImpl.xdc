@@ -50,3 +50,7 @@ set_property src_info {type:XDC file:2 line:43 export:INPUT save:INPUT read:READ
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_tx_0_tmds_data_p[1]}]
 set_property src_info {type:XDC file:2 line:44 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_tx_0_tmds_data_p[0]}]
+set_property src_info {type:XDC file:2 line:47 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN R17 IOSTANDARD LVCMOS33} [get_ports {i_SEL[0]}]
+set_property src_info {type:XDC file:2 line:48 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN U20 IOSTANDARD LVCMOS33} [get_ports {i_SEL[1]}]

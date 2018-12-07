@@ -60,10 +60,7 @@ module HDMI_VGA_VGA_controller_0_0 (
   o_VSYNC,
   o_VDE,
   o_X_COORD,
-  o_Y_COORD,
-  o_RED,
-  o_GREEN,
-  o_BLUE
+  o_Y_COORD
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 25173010, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
@@ -74,9 +71,6 @@ output wire o_VSYNC;
 output wire o_VDE;
 output wire [9 : 0] o_X_COORD;
 output wire [9 : 0] o_Y_COORD;
-output wire [3 : 0] o_RED;
-output wire [3 : 0] o_GREEN;
-output wire [3 : 0] o_BLUE;
 
   VGA_controller #(
     .v_END_OF_LINE(800),
@@ -91,9 +85,6 @@ output wire [3 : 0] o_BLUE;
     .o_VSYNC(o_VSYNC),
     .o_VDE(o_VDE),
     .o_X_COORD(o_X_COORD),
-    .o_Y_COORD(o_Y_COORD),
-    .o_RED(o_RED),
-    .o_GREEN(o_GREEN),
-    .o_BLUE(o_BLUE)
+    .o_Y_COORD(o_Y_COORD)
   );
 endmodule

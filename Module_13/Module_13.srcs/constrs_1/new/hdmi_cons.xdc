@@ -42,3 +42,13 @@ set_property PACKAGE_PIN U18 [get_ports hdmi_tx_0_tmds_clk_p]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_tx_0_tmds_data_p[2]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_tx_0_tmds_data_p[1]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_tx_0_tmds_data_p[0]}]
+
+#Switches
+set_property -dict {PACKAGE_PIN R17 IOSTANDARD LVCMOS33} [get_ports {i_SEL[0]}]
+set_property -dict {PACKAGE_PIN U20 IOSTANDARD LVCMOS33} [get_ports {i_SEL[1]}]
+#set_property -dict {PACKAGE_PIN R16 IOSTANDARD LVCMOS33} [get_ports {i_SEL[2]}]
+#set_property -dict {PACKAGE_PIN N16 IOSTANDARD LVCMOS33} [get_ports {i_SW[3]}]
+#set_property -dict {PACKAGE_PIN R14 IOSTANDARD LVCMOS33} [get_ports {i_SW[4]}]
+#set_property -dict {PACKAGE_PIN P14 IOSTANDARD LVCMOS33} [get_ports {i_SW[5]}]
+#set_property -dict {PACKAGE_PIN L15 IOSTANDARD LVCMOS33} [get_ports {i_SW[6]}]
+#set_property -dict {PACKAGE_PIN M15 IOSTANDARD LVCMOS33} [get_ports {i_SW[7]}]

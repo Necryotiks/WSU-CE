@@ -26,10 +26,7 @@ module VGA_controller(
     output o_VSYNC,
     output o_VDE,
     output [9:0] o_X_COORD,
-    output [9:0] o_Y_COORD,
-    output reg [3:0] o_RED,
-    output reg [3:0] o_GREEN,
-    output reg [3:0] o_BLUE
+    output [9:0] o_Y_COORD
     );
     
     
@@ -41,7 +38,7 @@ module VGA_controller(
     parameter v_VA_END = 480;
     wire w_CLK;
     reg r_HSYNC = 1'd0;
-    reg r_VSYNC = 1'd0;
+    reg r_VSYNC = 1'd0; 
     reg [9:0] r_HCNT = 10'd0;
     reg [9:0] r_VCNT = 10'd0;
     reg [9:0] r_X_COORD = 10'd0;
@@ -59,25 +56,10 @@ module VGA_controller(
    // assign o_Y_COORD = (r_VCNT >= v_VA_END) ? (v_VA_END - 1) : r_VCNT; 
     //https://timetoexplore.net/blog/arty-fpga-vga-verilog-01
     
-    always@(posedge w_CLK)
-    begin
-    if(((r_HCNT >= v_HA_START) && (r_HCNT < v_HA_END)) && ((r_VCNT >= v_VA_START) && (r_HCNT < v_VA_END)))
-            begin
-                o_RED = 4'b1101;
-                o_GREEN = 4'b1011;
-                o_BLUE = 4'b0111;
-            end
-    else
-            begin
-              o_RED = 4'b0000;
-              o_GREEN = 4'b0000;
-              o_BLUE = 4'b0000;
-            end
-    end
     
     always@(posedge w_CLK)
     begin
-        if((r_HCNT >= v_HA_START) & (r_HCNT < v_HA_END)) 
+        if((r_HCNT >= v_HA_START) && (r_HCNT < v_HA_END)) 
             begin
             r_X_COORD = r_HCNT;
             end
@@ -106,7 +88,7 @@ module VGA_controller(
     
     always@(posedge w_CLK) //LINE COUNT
         begin
-            if(r_VCNT == v_END_OF_SCREEN-1) begin
+            if(r_VCNT == v_END_OF_SCREEN) begin
                 r_VCNT = 10'd0;
                 end
             else if (r_HCNT == v_END_OF_LINE)

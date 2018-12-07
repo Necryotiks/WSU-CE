@@ -108,9 +108,9 @@ module encode # (
   reg [7:0] vdin_q = 8'd0;
 
   always @ (posedge clkin) begin
-    n1d <=#1 vdin[0] + vdin[1] + vdin[2] + vdin[3] + vdin[4] + vdin[5] + vdin[6] + vdin[7];
+    n1d <= vdin[0] + vdin[1] + vdin[2] + vdin[3] + vdin[4] + vdin[5] + vdin[6] + vdin[7];
 
-    vdin_q <=#1 vdin;
+    vdin_q <= vdin;
   end
 
   ///////////////////////////////////////////////////////
@@ -139,8 +139,8 @@ module encode # (
   reg [3:0] n1q_m = 4'd0; 
   reg [3:0] n0q_m = 4'd0; // number of 1s and 0s for q_m
   always @ (posedge clkin) begin
-    n1q_m  <=#1 q_m[0] + q_m[1] + q_m[2] + q_m[3] + q_m[4] + q_m[5] + q_m[6] + q_m[7];
-    n0q_m  <=#1 4'h8 - (q_m[0] + q_m[1] + q_m[2] + q_m[3] + q_m[4] + q_m[5] + q_m[6] + q_m[7]);
+    n1q_m  <= q_m[0] + q_m[1] + q_m[2] + q_m[3] + q_m[4] + q_m[5] + q_m[6] + q_m[7];
+    n0q_m  <= 4'h8 - (q_m[0] + q_m[1] + q_m[2] + q_m[3] + q_m[4] + q_m[5] + q_m[6] + q_m[7]);
   end
 
   parameter CTRLTOKEN0 = 10'b1101010100;
@@ -168,24 +168,25 @@ module encode # (
   reg [3:0] adin_q = 4'd0, adin_reg = 4'd0;
   reg [8:0] q_m_reg = 9'd0;
 
-  always @ (posedge clkin) begin
-    vde_q      <=#1 vde;
-    vde_reg    <=#1 vde_q;
+  always @ (posedge clkin) 
+  begin
+    vde_q      <= vde;
+    vde_reg    <= vde_q;
 
-    ade_q      <=#1 ade;
-    ade_reg    <=#1 ade_q;
-    ade_reg_q  <=#1 ade_reg;
-    ade_reg_qq <=#1 ade_reg_q;
+    ade_q      <= ade;
+    ade_reg    <= ade_q;
+    ade_reg_q  <= ade_reg;
+    ade_reg_qq <= ade_reg_q;
 
-    c0_q    <=#1 c0;
-    c0_reg  <=#1 c0_q;
-    c1_q    <=#1 c1;
-    c1_reg  <=#1 c1_q;
+    c0_q    <= c0;
+    c0_reg  <= c0_q;
+    c1_q    <= c1;
+    c1_reg  <= c1_q;
 
-    adin_q     <=#1 adin;
-    adin_reg   <=#1 adin_q;
+    adin_q     <= adin;
+    adin_reg   <= adin_q;
 
-    q_m_reg    <=#1 q_m;
+    q_m_reg    <= q_m;
   end
 
   wire digbnd; //data island guard band period
@@ -214,7 +215,7 @@ module encode # (
       dout <= 10'h0;
       cnt <= 5'h0;
     end else begin //TMDS
-      if (vde_reg) begin //Video Data Period
+      if (vde) begin //Video Data Period
         if(decision2) begin
           dout[9]   <=#1 ~q_m_reg[8]; 
           dout[8]   <=#1 q_m_reg[8]; 

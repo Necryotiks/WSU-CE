@@ -17,8 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -ruleid {1}  -id {Synth 8-3331}  -suppress 
 create_project -in_memory -part xc7z007sclg400-1
 
@@ -36,6 +34,7 @@ set_property ip_output_repo c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.cac
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/VGA_controller.v
+  C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/color_logic.v
   C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/hdl/HDMI_VGA_wrapper.v
 }
 add_files C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/HDMI_VGA.bd

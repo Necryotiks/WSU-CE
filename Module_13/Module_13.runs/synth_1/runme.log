@@ -12,14 +12,15 @@ source HDMI_VGA_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Sergaljerk/WSU-CPTE/IP_REPOS/hdmi_tx_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 283.707 ; gain = 39.063
 Command: synth_design -top HDMI_VGA_wrapper -part xc7z007sclg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5728 
+INFO: Helper process launched with PID 2648 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 386.723 ; gain = 96.461
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 388.008 ; gain = 96.883
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_wrapper' [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/hdl/HDMI_VGA_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA' [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/synth/HDMI_VGA.v:13]
@@ -33,7 +34,6 @@ INFO: [Synth 8-6157] synthesizing module 'VGA_controller' [C:/Users/Sergaljerk/W
 	Parameter v_VA_END bound to: 480 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'VGA_controller' (1#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/VGA_controller.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_VGA_controller_0_0' (2#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_VGA_controller_0_0/synth/HDMI_VGA_VGA_controller_0_0.v:58]
-WARNING: [Synth 8-350] instance 'VGA_controller_0' of module 'HDMI_VGA_VGA_controller_0_0' requires 9 connections, but only 6 given [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/synth/HDMI_VGA.v:45]
 INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_clk_wiz_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0.v:70]
 INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_clk_wiz_0_0_clk_wiz' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0_clk_wiz.v:68]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
@@ -97,11 +97,30 @@ INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.2/scripts
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (5#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
 INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_clk_wiz_0_0_clk_wiz' (6#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0_clk_wiz.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_clk_wiz_0_0' (7#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_clk_wiz_0_0/HDMI_VGA_clk_wiz_0_0.v:70]
-WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'HDMI_VGA_clk_wiz_0_0' requires 4 connections, but only 3 given [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/synth/HDMI_VGA.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA' (8#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/synth/HDMI_VGA.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_wrapper' (9#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/hdl/HDMI_VGA_wrapper.v:12]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'HDMI_VGA_clk_wiz_0_0' requires 4 connections, but only 3 given [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/synth/HDMI_VGA.v:62]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_color_logic_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_color_logic_0_0/synth/HDMI_VGA_color_logic_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'color_logic' [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/color_logic.v:23]
+	Parameter v_HA_START bound to: 0 - type: integer 
+	Parameter v_VA_START bound to: 0 - type: integer 
+	Parameter v_HA_END bound to: 640 - type: integer 
+	Parameter v_VA_END bound to: 480 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'color_logic' (8#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/new/color_logic.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_color_logic_0_0' (9#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_color_logic_0_0/synth/HDMI_VGA_color_logic_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_xlslice_0_0' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_0_0/synth/HDMI_VGA_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 8 - type: integer 
+	Parameter DIN_FROM bound to: 3 - type: integer 
+	Parameter DIN_TO bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice' (10#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_xlslice_0_0' (11#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_0_0/synth/HDMI_VGA_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_xlslice_0_1' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_0_1/synth/HDMI_VGA_xlslice_0_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_xlslice_0_1' (12#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_0_1/synth/HDMI_VGA_xlslice_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_VGA_xlslice_0_2' [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_0_2/synth/HDMI_VGA_xlslice_0_2.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_xlslice_0_2' (13#1) [c:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/ip/HDMI_VGA_xlslice_0_2/synth/HDMI_VGA_xlslice_0_2.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA' (14#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/synth/HDMI_VGA.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_VGA_wrapper' (15#1) [C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.srcs/sources_1/bd/HDMI_VGA/hdl/HDMI_VGA_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 441.449 ; gain = 151.188
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 444.008 ; gain = 152.883
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -114,10 +133,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 441.449 ; gain = 151.188
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 444.008 ; gain = 152.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 441.449 ; gain = 151.188
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 444.008 ; gain = 152.883
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -171,16 +190,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 756.102 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 776.793 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 756.102 ; gain = 465.840
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 776.793 ; gain = 485.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 756.102 ; gain = 465.840
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 776.793 ; gain = 485.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -188,13 +207,18 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for HDMI_VGA_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for HDMI_VGA_i/VGA_controller_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for HDMI_VGA_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for HDMI_VGA_i/clk_wiz_0/inst. (constraint file  C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc, line 16).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/color_logic_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/xlslice_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/xlslice_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/xlslice_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for HDMI_VGA_i/clk_wiz_0/inst. (constraint file  C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.runs/synth_1/dont_touch.xdc, line 28).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 756.102 ; gain = 465.840
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 776.793 ; gain = 485.668
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "r_VCNT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "r_SHIFT" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 756.102 ; gain = 465.840
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 776.793 ; gain = 485.668
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -207,13 +231,21 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	               10 Bit    Registers := 4     
-	                4 Bit    Registers := 2     
-	                1 Bit    Registers := 4     
+	               10 Bit    Registers := 5     
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -227,10 +259,26 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit       Adders := 2     
 +---Registers : 
 	               10 Bit    Registers := 4     
-	                4 Bit    Registers := 2     
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
+Module color_logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -248,16 +296,32 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5546] ROM "inst/r_VCNT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/VGA_controller_0/inst/o_GREEN_reg[0]' (FDS) to 'HDMI_VGA_i/VGA_controller_0/inst/o_GREEN_reg[1]'
-INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/VGA_controller_0/inst/o_GREEN_reg[1]' (FDS) to 'HDMI_VGA_i/VGA_controller_0/inst/o_GREEN_reg[3]'
-INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/VGA_controller_0/inst/o_GREEN_reg[2]' (FDR) to 'HDMI_VGA_i/VGA_controller_0/inst/o_RED_reg[1]'
-INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/VGA_controller_0/inst/o_GREEN_reg[3]' (FDS) to 'HDMI_VGA_i/VGA_controller_0/inst/o_RED_reg[0]'
-INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/VGA_controller_0/inst/o_RED_reg[0]' (FDS) to 'HDMI_VGA_i/VGA_controller_0/inst/o_RED_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_VGA_i/VGA_controller_0/\inst/o_RED_reg[1] )
-INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/VGA_controller_0/inst/o_RED_reg[2]' (FDS) to 'HDMI_VGA_i/VGA_controller_0/inst/o_RED_reg[3]'
-INFO: [Synth 8-3332] Sequential element (inst/o_RED_reg[1]) is unused and will be removed from module HDMI_VGA_VGA_controller_0_0.
+INFO: [Synth 8-5546] ROM "inst/r_SHIFT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[0]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[1]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[3]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[2]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[4]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[5]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[6]' (FDRE) to 'HDMI_VGA_i/color_logic_0/inst/r_BLUE_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_VGA_i/color_logic_0/\inst/r_BLUE_reg[7] )
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[0]' (FDR) to 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[3]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[2]' (FDR) to 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[3]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[4]' (FDR) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[4]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[5]' (FDR) to 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[6]' (FDR) to 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_GREEN_reg[7]' (FDR) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[5]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[0]' (FDR) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[1]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[1]' (FDR) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[2]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[2]' (FDR) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_VGA_i/color_logic_0/\inst/r_RED_reg[4] )
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[5]' (FDR) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[6]'
+INFO: [Synth 8-3886] merging instance 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[6]' (FDR) to 'HDMI_VGA_i/color_logic_0/inst/r_RED_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_VGA_i/color_logic_0/\inst/r_RED_reg[7] )
+INFO: [Synth 8-3332] Sequential element (inst/r_BLUE_reg[7]) is unused and will be removed from module HDMI_VGA_color_logic_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/r_RED_reg[4]) is unused and will be removed from module HDMI_VGA_color_logic_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/r_RED_reg[7]) is unused and will be removed from module HDMI_VGA_color_logic_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 756.102 ; gain = 465.840
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 776.793 ; gain = 485.668
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -269,13 +333,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 771.367 ; gain = 481.105
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 776.793 ; gain = 485.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 791.457 ; gain = 501.195
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 794.668 ; gain = 503.543
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -287,7 +351,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 792.707 ; gain = 502.445
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 795.988 ; gain = 504.863
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -311,7 +375,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 792.707 ; gain = 502.445
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 795.988 ; gain = 504.863
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -324,7 +388,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 792.707 ; gain = 502.445
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 795.988 ; gain = 504.863
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -336,25 +400,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 792.707 ; gain = 502.445
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 795.988 ; gain = 504.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 792.707 ; gain = 502.445
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 795.988 ; gain = 504.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 792.707 ; gain = 502.445
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 795.988 ; gain = 504.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 792.707 ; gain = 502.445
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 795.988 ; gain = 504.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -371,37 +435,44 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     2|
-|2     |LUT2       |     3|
-|3     |LUT3       |     8|
-|4     |LUT4       |    10|
-|5     |LUT5       |    12|
-|6     |LUT6       |    14|
-|7     |MMCME2_ADV |     1|
-|8     |FDRE       |    37|
-|9     |FDSE       |     8|
-|10    |IBUF       |     2|
-|11    |OBUF       |    14|
+|2     |CARRY4     |     4|
+|3     |LUT1       |     4|
+|4     |LUT2       |     9|
+|5     |LUT3       |    14|
+|6     |LUT4       |    28|
+|7     |LUT5       |    26|
+|8     |LUT6       |    29|
+|9     |MMCME2_ADV |     1|
+|10    |FDRE       |    57|
+|11    |FDSE       |     8|
+|12    |IBUF       |     4|
+|13    |OBUF       |    14|
 +------+-----------+------+
 
 Report Instance Areas: 
 +------+---------------------+-----------------------------+------+
 |      |Instance             |Module                       |Cells |
 +------+---------------------+-----------------------------+------+
-|1     |top                  |                             |   111|
-|2     |  HDMI_VGA_i         |HDMI_VGA                     |    96|
-|3     |    VGA_controller_0 |HDMI_VGA_VGA_controller_0_0  |    92|
-|4     |      inst           |VGA_controller               |    92|
+|1     |top                  |                             |   200|
+|2     |  HDMI_VGA_i         |HDMI_VGA                     |   183|
+|3     |    VGA_controller_0 |HDMI_VGA_VGA_controller_0_0  |    84|
+|4     |      inst           |VGA_controller               |    84|
 |5     |    clk_wiz_0        |HDMI_VGA_clk_wiz_0_0         |     4|
 |6     |      inst           |HDMI_VGA_clk_wiz_0_0_clk_wiz |     4|
+|7     |    color_logic_0    |HDMI_VGA_color_logic_0_0     |    95|
+|8     |      inst           |color_logic                  |    95|
+|9     |    xlslice_0        |HDMI_VGA_xlslice_0_0         |     0|
+|10    |    xlslice_1        |HDMI_VGA_xlslice_0_1         |     0|
+|11    |    xlslice_2        |HDMI_VGA_xlslice_0_2         |     0|
 +------+---------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 792.707 ; gain = 502.445
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 795.988 ; gain = 504.863
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 792.707 ; gain = 187.793
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 792.707 ; gain = 502.445
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 795.988 ; gain = 172.078
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 795.988 ; gain = 504.863
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -409,11 +480,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-49 Infos, 10 Warnings, 8 Critical Warnings and 0 Errors encountered.
+78 Infos, 9 Warnings, 8 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 792.863 ; gain = 510.051
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 795.988 ; gain = 512.281
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/Module_13/Module_13.runs/synth_1/HDMI_VGA_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file HDMI_VGA_wrapper_utilization_synth.rpt -pb HDMI_VGA_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 792.863 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Dec  5 02:12:58 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 795.988 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  7 10:02:36 2018...

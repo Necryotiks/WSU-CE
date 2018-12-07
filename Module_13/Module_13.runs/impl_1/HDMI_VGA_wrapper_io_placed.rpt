@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date                      : Wed Dec  5 02:13:44 2018
+| Date                      : Fri Dec  7 10:03:38 2018
 | Host                      : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 | Command                   : report_io -file HDMI_VGA_wrapper_io_placed.rpt
 | Design                    : HDMI_VGA_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            16 |
+|            18 |
 +---------------+
 
 
@@ -331,7 +331,7 @@ Table of Contents
 | R14        |             | High Range | IO_L6N_T0_VREF_34       | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R15        |             | High Range | VCCO_34                 | VCCO          |             |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | R16        |             | High Range | IO_L19P_T3_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| R17        |             | High Range | IO_L19N_T3_VREF_34      | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| R17        | i_SEL[0]    | High Range | IO_L19N_T3_VREF_34      | INPUT         | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | R18        |             | High Range | IO_L20N_T3_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R19        |             | High Range | IO_0_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R20        |             |            | GND                     | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
@@ -374,7 +374,7 @@ Table of Contents
 | U17        |             | High Range | IO_L9N_T1_DQS_34        | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | U18        |             | High Range | IO_L12P_T1_MRCC_34      | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | U19        |             | High Range | IO_L12N_T1_MRCC_34      | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| U20        |             | High Range | IO_L15N_T2_DQS_34       | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| U20        | i_SEL[1]    | High Range | IO_L15N_T2_DQS_34       | INPUT         | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | V1         |             |            | PS_DDR_DQ24_502         | PSS IO        |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V2         |             |            | PS_DDR_DQ30_502         | PSS IO        |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V3         |             |            | PS_DDR_DQ31_502         | PSS IO        |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
