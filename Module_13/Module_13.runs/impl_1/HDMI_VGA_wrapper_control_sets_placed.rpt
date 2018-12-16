@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Dec  7 10:03:38 2018
-| Host         : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
+| Date         : Fri Dec  7 13:41:34 2018
+| Host         : LAPTOP-QC2AS776 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file HDMI_VGA_wrapper_control_sets_placed.rpt
 | Design       : HDMI_VGA_wrapper
 | Device       : xc7z007s
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    11 |
-| Unused register locations in slices containing registers |    42 |
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    24 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,10 +34,9 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |            2 |
-|      4 |            1 |
-|      6 |            1 |
-|    16+ |            7 |
+|      8 |            1 |
+|     12 |            1 |
+|    16+ |            8 |
 +--------+--------------+
 
 
@@ -47,12 +46,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              22 |            6 |
-| No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              78 |           21 |
-| Yes          | No                    | No                     |               0 |            0 |
+| No           | No                    | No                     |             224 |           40 |
+| No           | No                    | Yes                    |              84 |           26 |
+| No           | Yes                   | No                     |              72 |           20 |
+| Yes          | No                    | No                     |              20 |            6 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              42 |            7 |
+| Yes          | Yes                   | No                     |              32 |            6 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -62,17 +61,16 @@ Table of Contents
 +-----------------------------------------+----------------------------------------------------+-------------------------------------------------------+------------------+----------------+
 |               Clock Signal              |                    Enable Signal                   |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count |
 +-----------------------------------------+----------------------------------------------------+-------------------------------------------------------+------------------+----------------+
-|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    | HDMI_VGA_i/VGA_controller_0/inst/r_HSYNC0             |                1 |              2 |
-|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    | HDMI_VGA_i/VGA_controller_0/inst/r_VSYNC0             |                1 |              2 |
-|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     | HDMI_VGA_i/color_logic_0/inst/r_BLUE[3]_i_1_n_0    | HDMI_VGA_i/color_logic_0/inst/r_RED[3]_i_1_n_0        |                1 |              4 |
-|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    |                                                       |                3 |              6 |
+|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    | HDMI_VGA_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int        |                2 |              8 |
+|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     | HDMI_VGA_i/proc_sys_reset_0/U0/SEQ/seq_cnt_en      | HDMI_VGA_i/proc_sys_reset_0/U0/SEQ/SEQ_COUNTER/clear  |                2 |             12 |
 | ~HDMI_VGA_i/VGA_controller_0/inst/o_VDE |                                                    |                                                       |                3 |             16 |
-|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    | HDMI_VGA_i/color_logic_0/inst/r_RED[3]_i_1_n_0        |                5 |             16 |
-|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    | HDMI_VGA_i/VGA_controller_0/inst/r_HCNT[9]_i_1_n_0    |                3 |             18 |
-|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     | HDMI_VGA_i/VGA_controller_0/inst/r_VCNT[9]_i_2_n_0 | HDMI_VGA_i/VGA_controller_0/inst/r_VCNT[9]_i_1_n_0    |                3 |             18 |
-| ~HDMI_VGA_i/VGA_controller_0/inst/o_VDE | HDMI_VGA_i/color_logic_0/inst/r_SHIFT              | HDMI_VGA_i/color_logic_0/inst/r_SHIFT[9]_i_1_n_0      |                3 |             20 |
-|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    | HDMI_VGA_i/VGA_controller_0/inst/p_0_in               |                7 |             20 |
+|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    | HDMI_VGA_i/VGA_controller_0/inst/p_0_in               |                5 |             20 |
 |  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    | HDMI_VGA_i/VGA_controller_0/inst/r_Y_COORD[9]_i_1_n_0 |                4 |             20 |
+|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     | HDMI_VGA_i/VGA_controller_0/inst/r_VCNT[9]_i_1_n_0 |                                                       |                6 |             20 |
+| ~HDMI_VGA_i/VGA_controller_0/inst/o_VDE | HDMI_VGA_i/color_logic_0/inst/r_SHIFT              | HDMI_VGA_i/color_logic_0/inst/r_SHIFT[9]_i_1_n_0      |                4 |             20 |
+|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    | HDMI_VGA_i/color_logic_0/inst/r_RED[3]_i_1_n_0        |                9 |             24 |
+|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    | HDMI_VGA_i/hdmi_tx_0/inst/encr/AR[0]                  |               26 |             84 |
+|  HDMI_VGA_i/clk_wiz_0/inst/clk_out1     |                                                    |                                                       |               43 |            238 |
 +-----------------------------------------+----------------------------------------------------+-------------------------------------------------------+------------------+----------------+
 
 

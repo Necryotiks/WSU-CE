@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="HDMI_VGA" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1544205682"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1544205682"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1544205682"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1544205682"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1544217930"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1544217930"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1544217930"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1544217930"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\HDMI_VGA_VGA_controller_0_0\HDMI_VGA_VGA_controller_0_0.xci" Type="IP">
         <Instance HierarchyPath="VGA_controller_0"/>
@@ -64,6 +64,22 @@
       <File Name="sim\HDMI_VGA.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\HDMI_VGA_hdmi_tx_0_0\HDMI_VGA_hdmi_tx_0_0.xci" Type="IP">
+        <Instance HierarchyPath="hdmi_tx_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\HDMI_VGA_proc_sys_reset_0_0\HDMI_VGA_proc_sys_reset_0_0.xci" Type="IP">
+        <Instance HierarchyPath="proc_sys_reset_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="HDMI_VGA_ooc.xdc" Type="XDC">
