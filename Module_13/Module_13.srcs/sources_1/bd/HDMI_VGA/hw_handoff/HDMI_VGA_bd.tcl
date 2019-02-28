@@ -162,6 +162,7 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
+  set hdmi_tx_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:hdmi_rtl:2.0 hdmi_tx_0 ]
 
   # Create ports
   set i_CLK [ create_bd_port -dir I -type clk i_CLK ]
@@ -193,18 +194,18 @@ proc create_root_design { parentCell } {
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
-   CONFIG.CLKOUT1_JITTER {319.783} \
-   CONFIG.CLKOUT1_PHASE_ERROR {246.739} \
+   CONFIG.CLKOUT1_JITTER {181.403} \
+   CONFIG.CLKOUT1_PHASE_ERROR {106.803} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25.175} \
    CONFIG.CLKOUT2_JITTER {130.483} \
    CONFIG.CLKOUT2_PHASE_ERROR {106.803} \
    CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {125} \
-   CONFIG.CLKOUT2_USED {false} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {36.375} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {36.125} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
-   CONFIG.MMCM_DIVCLK_DIVIDE {4} \
-   CONFIG.NUM_OUT_CLKS {1} \
+   CONFIG.CLKOUT2_USED {true} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {8.750} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {34.750} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {7} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {1} \
+   CONFIG.NUM_OUT_CLKS {2} \
  ] $clk_wiz_0
 
   # Create instance: color_logic_0, and set properties
@@ -218,6 +219,15 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: hdmi_tx_0, and set properties
+  set hdmi_tx_0 [ create_bd_cell -type ip -vlnv realdigital.org:realdigital:hdmi_tx:1.0 hdmi_tx_0 ]
+  set_property -dict [ list \
+   CONFIG.MODE {HDMI} \
+ ] $hdmi_tx_0
+
+  # Create instance: proc_sys_reset_0, and set properties
+  set proc_sys_reset_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0 ]
+
   # Create instance: xlslice_0, and set properties
   set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
   set_property -dict [ list \
@@ -245,22 +255,28 @@ proc create_root_design { parentCell } {
    CONFIG.DOUT_WIDTH {4} \
  ] $xlslice_2
 
+  # Create interface connections
+  connect_bd_intf_net -intf_net hdmi_tx_0_hdmi_tx [get_bd_intf_ports hdmi_tx_0] [get_bd_intf_pins hdmi_tx_0/hdmi_tx]
+
   # Create port connections
   connect_bd_net -net VGA_controller_0_o_BLUE [get_bd_ports o_BLUE] [get_bd_pins xlslice_2/Dout]
   connect_bd_net -net VGA_controller_0_o_GREEN [get_bd_ports o_GREEN] [get_bd_pins xlslice_1/Dout]
-  connect_bd_net -net VGA_controller_0_o_HSYNC [get_bd_ports o_HSYNC] [get_bd_pins VGA_controller_0/o_HSYNC]
+  connect_bd_net -net VGA_controller_0_o_HSYNC [get_bd_ports o_HSYNC] [get_bd_pins VGA_controller_0/o_HSYNC] [get_bd_pins hdmi_tx_0/hsync]
   connect_bd_net -net VGA_controller_0_o_RED [get_bd_ports o_RED] [get_bd_pins xlslice_0/Dout]
-  connect_bd_net -net VGA_controller_0_o_VDE [get_bd_pins VGA_controller_0/o_VDE] [get_bd_pins color_logic_0/i_VDE]
-  connect_bd_net -net VGA_controller_0_o_VSYNC [get_bd_ports o_VSYNC] [get_bd_pins VGA_controller_0/o_VSYNC]
+  connect_bd_net -net VGA_controller_0_o_VDE [get_bd_pins VGA_controller_0/o_VDE] [get_bd_pins color_logic_0/i_VDE] [get_bd_pins hdmi_tx_0/vde]
+  connect_bd_net -net VGA_controller_0_o_VSYNC [get_bd_ports o_VSYNC] [get_bd_pins VGA_controller_0/o_VSYNC] [get_bd_pins hdmi_tx_0/vsync]
   connect_bd_net -net VGA_controller_0_o_X_COORD [get_bd_pins VGA_controller_0/o_X_COORD] [get_bd_pins color_logic_0/i_X_COORD]
   connect_bd_net -net VGA_controller_0_o_Y_COORD [get_bd_pins VGA_controller_0/o_Y_COORD] [get_bd_pins color_logic_0/i_Y_COORD]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins VGA_controller_0/i_CLK] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins color_logic_0/i_CLK]
-  connect_bd_net -net color_logic_0_o_BLUE [get_bd_pins color_logic_0/o_BLUE] [get_bd_pins xlslice_2/Din]
-  connect_bd_net -net color_logic_0_o_GREEN [get_bd_pins color_logic_0/o_GREEN] [get_bd_pins xlslice_1/Din]
-  connect_bd_net -net color_logic_0_o_RED [get_bd_pins color_logic_0/o_RED] [get_bd_pins xlslice_0/Din]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins VGA_controller_0/i_CLK] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins color_logic_0/i_CLK] [get_bd_pins hdmi_tx_0/pix_clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins hdmi_tx_0/pix_clkx5]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins hdmi_tx_0/pix_clk_locked]
+  connect_bd_net -net color_logic_0_o_BLUE [get_bd_pins color_logic_0/o_BLUE] [get_bd_pins hdmi_tx_0/blue] [get_bd_pins xlslice_2/Din]
+  connect_bd_net -net color_logic_0_o_GREEN [get_bd_pins color_logic_0/o_GREEN] [get_bd_pins hdmi_tx_0/green] [get_bd_pins xlslice_1/Din]
+  connect_bd_net -net color_logic_0_o_RED [get_bd_pins color_logic_0/o_RED] [get_bd_pins hdmi_tx_0/red] [get_bd_pins xlslice_0/Din]
   connect_bd_net -net i_CLK_1 [get_bd_ports i_CLK] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net i_RST_1 [get_bd_ports i_RST] [get_bd_pins clk_wiz_0/reset]
+  connect_bd_net -net i_RST_1 [get_bd_ports i_RST] [get_bd_pins clk_wiz_0/reset] [get_bd_pins proc_sys_reset_0/ext_reset_in]
   connect_bd_net -net i_SEL_0_1 [get_bd_ports i_SEL] [get_bd_pins color_logic_0/i_SEL]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins hdmi_tx_0/rst] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
 
   # Create address segments
 

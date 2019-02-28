@@ -104,13 +104,13 @@ module encode # (
   // Register Data Input so it matches the pipe lined adder
   // output
   ////////////////////////////////////////////////////////////
-  reg [3:0] n1d = 4'd0; //number of 1s in video din
-  reg [7:0] vdin_q = 8'd0;
+  reg [3:0] n1d; //number of 1s in video din
+  reg [7:0] vdin_q;
 
   always @ (posedge clkin) begin
-    n1d <= vdin[0] + vdin[1] + vdin[2] + vdin[3] + vdin[4] + vdin[5] + vdin[6] + vdin[7];
+    n1d <=#1 vdin[0] + vdin[1] + vdin[2] + vdin[3] + vdin[4] + vdin[5] + vdin[6] + vdin[7];
 
-    vdin_q <= vdin;
+    vdin_q <=#1 vdin;
   end
 
   ///////////////////////////////////////////////////////
@@ -136,11 +136,10 @@ module encode # (
   // Stage 2: 9 bit -> 10 bit
   // Refer to DVI 1.0 Specification, page 29, Figure 3-5
   /////////////////////////////////////////////////////////
-  reg [3:0] n1q_m = 4'd0; 
-  reg [3:0] n0q_m = 4'd0; // number of 1s and 0s for q_m
+  reg [3:0] n1q_m, n0q_m; // number of 1s and 0s for q_m
   always @ (posedge clkin) begin
-    n1q_m  <= q_m[0] + q_m[1] + q_m[2] + q_m[3] + q_m[4] + q_m[5] + q_m[6] + q_m[7];
-    n0q_m  <= 4'h8 - (q_m[0] + q_m[1] + q_m[2] + q_m[3] + q_m[4] + q_m[5] + q_m[6] + q_m[7]);
+    n1q_m  <=#1 q_m[0] + q_m[1] + q_m[2] + q_m[3] + q_m[4] + q_m[5] + q_m[6] + q_m[7];
+    n0q_m  <=#1 4'h8 - (q_m[0] + q_m[1] + q_m[2] + q_m[3] + q_m[4] + q_m[5] + q_m[6] + q_m[7]);
   end
 
   parameter CTRLTOKEN0 = 10'b1101010100;
@@ -148,7 +147,7 @@ module encode # (
   parameter CTRLTOKEN2 = 10'b0101010100;
   parameter CTRLTOKEN3 = 10'b1010101011;
 
-  reg [4:0] cnt = 5'd0; //disparity counter, MSB is the sign bit
+  reg [4:0] cnt; //disparity counter, MSB is the sign bit
   wire decision2, decision3;
 
   assign decision2 = (cnt == 5'h0) | (n1q_m == n0q_m);
@@ -160,33 +159,32 @@ module encode # (
   ////////////////////////////////////
   // pipe line alignment
   ////////////////////////////////////
-  reg       vde_q = 1'd0, vde_reg = 1'd0;
-  reg       ade_q = 1'd0, ade_reg = 1'd0;
-  reg       ade_reg_q = 1'd0, ade_reg_qq = 1'd0;
-  reg       c0_q = 1'd0, c1_q = 1'd0;
-  reg       c0_reg = 1'd0 , c1_reg = 1'd0;
-  reg [3:0] adin_q = 4'd0, adin_reg = 4'd0;
-  reg [8:0] q_m_reg = 9'd0;
+  reg       vde_q, vde_reg;
+  reg       ade_q, ade_reg;
+  reg       ade_reg_q, ade_reg_qq;
+  reg       c0_q, c1_q;
+  reg       c0_reg, c1_reg;
+  reg [3:0] adin_q, adin_reg;
+  reg [8:0] q_m_reg;
 
-  always @ (posedge clkin) 
-  begin
-    vde_q      <= vde;
-    vde_reg    <= vde_q;
+  always @ (posedge clkin) begin
+    vde_q      <=#1 vde;
+    vde_reg    <=#1 vde_q;
 
-    ade_q      <= ade;
-    ade_reg    <= ade_q;
-    ade_reg_q  <= ade_reg;
-    ade_reg_qq <= ade_reg_q;
+    ade_q      <=#1 ade;
+    ade_reg    <=#1 ade_q;
+    ade_reg_q  <=#1 ade_reg;
+    ade_reg_qq <=#1 ade_reg_q;
 
-    c0_q    <= c0;
-    c0_reg  <= c0_q;
-    c1_q    <= c1;
-    c1_reg  <= c1_q;
+    c0_q    <=#1 c0;
+    c0_reg  <=#1 c0_q;
+    c1_q    <=#1 c1;
+    c1_reg  <=#1 c1_q;
 
-    adin_q     <= adin;
-    adin_reg   <= adin_q;
+    adin_q     <=#1 adin;
+    adin_reg   <=#1 adin_q;
 
-    q_m_reg    <= q_m;
+    q_m_reg    <=#1 q_m;
   end
 
   wire digbnd; //data island guard band period
@@ -215,7 +213,7 @@ module encode # (
       dout <= 10'h0;
       cnt <= 5'h0;
     end else begin //TMDS
-      if (vde) begin //Video Data Period
+      if (vde_reg) begin //Video Data Period
         if(decision2) begin
           dout[9]   <=#1 ~q_m_reg[8]; 
           dout[8]   <=#1 q_m_reg[8]; 
