@@ -1,0 +1,18 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port clk_100MHz -pg 1 -y 60 -defaultsOSRD
+preplace port i_RST_0 -pg 1 -y 80 -defaultsOSRD
+preplace port o_Out_0 -pg 1 -y 70 -defaultsOSRD
+preplace inst HZ_Counter_0 -pg 1 -lvl 1 -y 70 -defaultsOSRD
+preplace netloc HZ_Counter_0_o_Out 1 1 1 N
+preplace netloc i_RST_0_1 1 0 1 N
+preplace netloc clk_100MHz_1 1 0 1 N
+levelinfo -pg 1 -90 110 300 -top 0 -bot 330
+",
+}
+{
+   da_board_cnt: "1",
+   da_clkrst_cnt: "1",
+}
