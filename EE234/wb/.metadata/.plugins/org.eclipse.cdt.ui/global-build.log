@@ -1,4 +1,4 @@
-14:12:57 **** Build of project P5_bsp ****
+10:44:44 **** Build of project P6_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -161,966 +161,1209 @@ make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling xadcps"
 'Finished building libraries'
-14:13:47 **** Build of configuration Debug for project P5 ****
+10:45:18 **** Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 'Finished building: ../src/helloworld.c'
 ' '
 'Building file: ../src/platform.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
 'Finished building: ../src/platform.c'
 ' '
-'Building target: P5.elf'
+'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19348	   1144	  22568	  43060	   a834	P5.elf
-'Finished building: P5.elf.size'
+  19348	   1144	  22568	  43060	   a834	P6.elf
+'Finished building: P6.elf.size'
 ' '
-14:17:38 **** Auto Build of configuration Debug for project P5 ****
+10:46:45 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-14:18:25 **** Auto Build of configuration Debug for project P5 ****
+10:50:57 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-14:18:28 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:58:8: warning: implicit declaration of function 'activateLEDS' [-Wimplicit-function-declaration]
-        activateLEDS();
-        ^~~~~~~~~~~~
-../src/helloworld.c:59:8: warning: implicit declaration of function 'disableInterrupts' [-Wimplicit-function-declaration]
-        disableInterrupts();
-        ^~~~~~~~~~~~~~~~~
-../src/helloworld.c:60:8: warning: implicit declaration of function 'GICConfigure' [-Wimplicit-function-declaration]
-        GICConfigure();
-        ^~~~~~~~~~~~
-../src/helloworld.c:61:8: warning: implicit declaration of function 'initalizeGPIOInterrupts' [-Wimplicit-function-declaration]
-        initalizeGPIOInterrupts();
-        ^~~~~~~~~~~~~~~~~~~~~~~
-../src/helloworld.c:62:8: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
-        Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/helloworld.c:62:40: error: 'IRQHandler' undeclared (first use in this function)
-        Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);
-                                        ^~~~~~~~~~
-../src/helloworld.c:62:40: note: each undeclared identifier is reported only once for each function it appears in
-../src/helloworld.c:63:8: warning: implicit declaration of function 'enableInterrupts' [-Wimplicit-function-declaration]
-        enableInterrupts();
-        ^~~~~~~~~~~~~~~~
-make: *** [src/helloworld.o] Error 1
-14:19:19 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:62:8: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
-        Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-./src/helloworld.o: In function `main':
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:58: undefined reference to `activateLEDS'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:59: undefined reference to `disableInterrupts'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:60: undefined reference to `GICConfigure'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:61: undefined reference to `initalizeGPIOInterrupts'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:62: undefined reference to `IRQHandler'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:62: undefined reference to `IRQHandler'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:63: undefined reference to `enableInterrupts'
-collect2.exe: error: ld returned 1 exit status
-make: *** [P5.elf] Error 1
-14:20:16 **** Auto Build of configuration Debug for project P5 ****
+10:51:50 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/myfunctions.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
 'Finished building: ../src/myfunctions.c'
 ' '
-'Building target: P5.elf'
+'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-./src/helloworld.o: In function `main':
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:58: undefined reference to `activateLEDS'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:59: undefined reference to `disableInterrupts'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:60: undefined reference to `GICConfigure'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:61: undefined reference to `initalizeGPIOInterrupts'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:62: undefined reference to `IRQHandler'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:62: undefined reference to `IRQHandler'
-C:\Users\Sergaljerk\wb\P5\Debug/../src/helloworld.c:63: undefined reference to `enableInterrupts'
-collect2.exe: error: ld returned 1 exit status
-make: *** [P5.elf] Error 1
-14:20:22 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  20360	   1248	  22568	  44176	   ac90	P5.elf
-'Finished building: P5.elf.size'
+  19348	   1144	  22568	  43060	   a834	P6.elf
+'Finished building: P6.elf.size'
 ' '
-16:11:35 **** Clean-only build of configuration Debug for project P5 ****
-make clean 
-rm -rf  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o  ./src/helloworld.d ./src/myfunctions.d ./src/platform.d  P5.elf.size  P5.elf
-' '
-16:11:35 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:62:8: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
-        Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  20300	   1248	  22568	  44116	   ac54	P5.elf
-'Finished building: P5.elf.size'
-' '
-16:15:28 **** Auto Build of configuration Debug for project P5 ****
+10:52:03 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/myfunctions.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  20300	   1280	  22568	  44148	   ac74	P5.elf
-'Finished building: P5.elf.size'
-' '
-16:17:03 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:62:8: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
-        Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  20300	   1280	  22568	  44148	   ac74	P5.elf
-'Finished building: P5.elf.size'
-' '
-16:21:08 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  20364	   1280	  22568	  44212	   acb4	P5.elf
-'Finished building: P5.elf.size'
-' '
-16:22:38 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  20364	   1288	  22568	  44220	   acbc	P5.elf
-'Finished building: P5.elf.size'
-' '
-16:30:03 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  20556	   1288	  22568	  44412	   ad7c	P5.elf
-'Finished building: P5.elf.size'
-' '
-16:35:47 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  20556	   1288	  22568	  44412	   ad7c	P5.elf
-'Finished building: P5.elf.size'
-' '
-16:56:07 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  20800	   1288	  22568	  44656	   ae70	P5.elf
-'Finished building: P5.elf.size'
-' '
-17:13:40 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-           ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21044	   1288	  22568	  44900	   af64	P5.elf
-'Finished building: P5.elf.size'
-' '
-17:17:38 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-           ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21236	   1288	  22568	  45092	   b024	P5.elf
-'Finished building: P5.elf.size'
-' '
-17:17:50 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:62:8: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
-        Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-           ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21236	   1288	  22568	  45092	   b024	P5.elf
-'Finished building: P5.elf.size'
-' '
-16:30:48 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-           ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21236	   1288	  22568	  45092	   b024	P5.elf
-'Finished building: P5.elf.size'
-' '
-17:42:54 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:123:10: error: expected expression before ')' token
-  else if()
-          ^
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-           ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+In file included from ../src/myfunctions.c:9:0:
+../src/myfunctions.h:30:20: error: unknown type name 'uint32_t'
+ void UART_GPIO_IRQ(uint32_t btnEvent);
+                    ^~~~~~~~
 make: *** [src/myfunctions.o] Error 1
-17:45:14 **** Auto Build of configuration Debug for project P5 ****
+10:52:29 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/myfunctions.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+In file included from ../src/myfunctions.c:10:0:
+../src/myfunctions.h:30:20: error: unknown type name 'uint32_t'
+ void UART_GPIO_IRQ(uint32_t btnEvent);
+                    ^~~~~~~~
+../src/myfunctions.c:11:1: error: unknown type name 'uint32_t'
+ uint32_t * interruptProcessorTargets= (uint32_t*)0xF8F01800;
+ ^~~~~~~~
+../src/myfunctions.c:11:40: error: 'uint32_t' undeclared here (not in a function)
+ uint32_t * interruptProcessorTargets= (uint32_t*)0xF8F01800;
+                                        ^~~~~~~~
+../src/myfunctions.c:11:49: error: expected expression before ')' token
+ uint32_t * interruptProcessorTargets= (uint32_t*)0xF8F01800;
+                                                 ^
+../src/myfunctions.c:12:1: error: unknown type name 'uint32_t'
+ uint32_t * interruptPriorityMask =  (uint32_t*)0xF8F00104;
+ ^~~~~~~~
+../src/myfunctions.c:12:47: error: expected expression before ')' token
+ uint32_t * interruptPriorityMask =  (uint32_t*)0xF8F00104;
+                                               ^
+../src/myfunctions.c:13:1: error: unknown type name 'uint32_t'
+ uint32_t * cpuInterfaceControl = (uint32_t*)0xF8F00100;
+ ^~~~~~~~
+../src/myfunctions.c:13:44: error: expected expression before ')' token
+ uint32_t * cpuInterfaceControl = (uint32_t*)0xF8F00100;
+                                            ^
+../src/myfunctions.c:14:1: error: unknown type name 'uint32_t'
+ uint32_t * distributorControlReg = (uint32_t*)0xF8F01000;
+ ^~~~~~~~
+../src/myfunctions.c:14:46: error: expected expression before ')' token
+ uint32_t * distributorControlReg = (uint32_t*)0xF8F01000;
+                                              ^
+../src/myfunctions.c:15:1: error: unknown type name 'uint32_t'
+ uint32_t * interruptSetEnable =  (uint32_t*)0xF8F01100;
+ ^~~~~~~~
+../src/myfunctions.c:15:44: error: expected expression before ')' token
+ uint32_t * interruptSetEnable =  (uint32_t*)0xF8F01100;
+                                            ^
+../src/myfunctions.c:16:1: error: unknown type name 'uint32_t'
+ uint32_t * interruptClearEnable =  (uint32_t*) 0xF8F01180;
+ ^~~~~~~~
+../src/myfunctions.c:16:46: error: expected expression before ')' token
+ uint32_t * interruptClearEnable =  (uint32_t*) 0xF8F01180;
+                                              ^
+../src/myfunctions.c:17:1: error: unknown type name 'uint32_t'
+ uint32_t * interruptPriorityReg = (uint32_t*) 0xF8F01400;
+ ^~~~~~~~
+../src/myfunctions.c:17:45: error: expected expression before ')' token
+ uint32_t * interruptPriorityReg = (uint32_t*) 0xF8F01400;
+                                             ^
+../src/myfunctions.c:18:1: error: unknown type name 'uint32_t'
+ uint32_t * interruptConfigReg = (uint32_t*) 0xF8F01C00;
+ ^~~~~~~~
+../src/myfunctions.c:18:43: error: expected expression before ')' token
+ uint32_t * interruptConfigReg = (uint32_t*) 0xF8F01C00;
+                                           ^
+../src/myfunctions.c:20:1: error: unknown type name 'uint32_t'
+ uint32_t * GPIOInterruptDisableBank0 = (uint32_t *) 0xE000A214 ;
+ ^~~~~~~~
+../src/myfunctions.c:20:51: error: expected expression before ')' token
+ uint32_t * GPIOInterruptDisableBank0 = (uint32_t *) 0xE000A214 ;
+                                                   ^
+../src/myfunctions.c:21:1: error: unknown type name 'uint32_t'
+ uint32_t * GPIOInterruptEnableBank1 = (uint32_t *) 0xE000A250;
+ ^~~~~~~~
+../src/myfunctions.c:21:50: error: expected expression before ')' token
+ uint32_t * GPIOInterruptEnableBank1 = (uint32_t *) 0xE000A250;
+                                                  ^
+../src/myfunctions.c:22:1: error: unknown type name 'uint32_t'
+ uint32_t * GPIOInterruptDisableBank1 = (uint32_t *) 0xE000A254;
+ ^~~~~~~~
+../src/myfunctions.c:22:51: error: expected expression before ')' token
+ uint32_t * GPIOInterruptDisableBank1 = (uint32_t *) 0xE000A254;
+                                                   ^
+../src/myfunctions.c:23:1: error: unknown type name 'uint32_t'
+ uint32_t * GPIOInterruptStatusBank1 = (uint32_t *) 0xE000A258;
+ ^~~~~~~~
+../src/myfunctions.c:23:50: error: expected expression before ')' token
+ uint32_t * GPIOInterruptStatusBank1 = (uint32_t *) 0xE000A258;
+                                                  ^
+../src/myfunctions.c:24:1: error: unknown type name 'uint32_t'
+ uint32_t * GPIOInterruptTypeBank1 = (uint32_t *) 0xE000A25C;
+ ^~~~~~~~
+../src/myfunctions.c:24:48: error: expected expression before ')' token
+ uint32_t * GPIOInterruptTypeBank1 = (uint32_t *) 0xE000A25C;
+                                                ^
+../src/myfunctions.c:25:1: error: unknown type name 'uint32_t'
+ uint32_t * GPIOInterruptPolarityBank1 = (uint32_t *) 0xE000A260;
+ ^~~~~~~~
+../src/myfunctions.c:25:52: error: expected expression before ')' token
+ uint32_t * GPIOInterruptPolarityBank1 = (uint32_t *) 0xE000A260;
+                                                    ^
+../src/myfunctions.c:26:1: error: unknown type name 'uint32_t'
+ uint32_t * GPIOInterruptAnyBank1 = (uint32_t *) 0xE000A264;
+ ^~~~~~~~
+../src/myfunctions.c:26:47: error: expected expression before ')' token
+ uint32_t * GPIOInterruptAnyBank1 = (uint32_t *) 0xE000A264;
+                                               ^
+../src/myfunctions.c:28:1: error: unknown type name 'uint32_t'
+ uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+ ^~~~~~~~
+../src/myfunctions.c:28:49: error: expected expression before ')' token
+ uint32_t * interruptAcknowledgeReg = (uint32_t *)0xF8F0010C;
+                                                 ^
+../src/myfunctions.c:29:1: error: unknown type name 'uint32_t'
+ uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+ ^~~~~~~~
+../src/myfunctions.c:29:43: error: expected expression before ')' token
+ uint32_t * endofInterruptReg = (uint32_t *) 0xF8F00110;
+                                           ^
+../src/myfunctions.c:30:1: error: unknown type name 'uint32_t'
+ uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+ ^~~~~~~~
+../src/myfunctions.c:30:39: error: expected expression before ')' token
+ uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
+                                       ^
+../src/myfunctions.c:32:1: error: unknown type name 'uint32_t'
+ uint32_t * BTN_Address = (uint32_t *)0x4BB02004;
+ ^~~~~~~~
+../src/myfunctions.c:32:37: error: expected expression before ')' token
+ uint32_t * BTN_Address = (uint32_t *)0x4BB02004;
+                                     ^
+../src/myfunctions.c:34:1: error: unknown type name 'uint32_t'
+ uint32_t * PIN_16 = (uint32_t *)0xF8000740;
+ ^~~~~~~~
+../src/myfunctions.c:34:32: error: expected expression before ')' token
+ uint32_t * PIN_16 = (uint32_t *)0xF8000740;
+                                ^
+../src/myfunctions.c:35:1: error: unknown type name 'uint32_t'
+ uint32_t * PIN_17 = (uint32_t *)0xF8000744;
+ ^~~~~~~~
+../src/myfunctions.c:35:32: error: expected expression before ')' token
+ uint32_t * PIN_17 = (uint32_t *)0xF8000744;
+                                ^
+../src/myfunctions.c:36:1: error: unknown type name 'uint32_t'
+ uint32_t * PIN_18 = (uint32_t *)0xF8000748;
+ ^~~~~~~~
+../src/myfunctions.c:36:32: error: expected expression before ')' token
+ uint32_t * PIN_18 = (uint32_t *)0xF8000748;
+                                ^
+../src/myfunctions.c:37:1: error: unknown type name 'uint32_t'
+ uint32_t * PIN_50 = (uint32_t *)0xF80007C8; //BTN_4
+ ^~~~~~~~
+../src/myfunctions.c:37:32: error: expected expression before ')' token
+ uint32_t * PIN_50 = (uint32_t *)0xF80007C8; //BTN_4
+                                ^
+../src/myfunctions.c:38:1: error: unknown type name 'uint32_t'
+ uint32_t * PIN_51 = (uint32_t *)0xF80007CC; //BTN_5
+ ^~~~~~~~
+../src/myfunctions.c:38:32: error: expected expression before ')' token
+ uint32_t * PIN_51 = (uint32_t *)0xF80007CC; //BTN_5
+                                ^
+../src/myfunctions.c:39:1: error: unknown type name 'uint32_t'
+ uint32_t * GPIODirectionModeB0 = (uint32_t *)0xE000A204;
+ ^~~~~~~~
+../src/myfunctions.c:39:45: error: expected expression before ')' token
+ uint32_t * GPIODirectionModeB0 = (uint32_t *)0xE000A204;
+                                             ^
+../src/myfunctions.c:40:1: error: unknown type name 'uint32_t'
+ uint32_t * GPIOOutputEnableB0 = (uint32_t *)0xE000A208;
+ ^~~~~~~~
+../src/myfunctions.c:40:44: error: expected expression before ')' token
+ uint32_t * GPIOOutputEnableB0 = (uint32_t *)0xE000A208;
+                                            ^
+../src/myfunctions.c:41:1: error: unknown type name 'uint32_t'
+ uint32_t * GPIODirectionModeB1 = (uint32_t *)0xE000A244;
+ ^~~~~~~~
+../src/myfunctions.c:41:45: error: expected expression before ')' token
+ uint32_t * GPIODirectionModeB1 = (uint32_t *)0xE000A244;
+                                             ^
+../src/myfunctions.c:43:1: error: unknown type name 'uint32_t'
+ uint32_t * SVD = (uint32_t *)0x4BB03000;
+ ^~~~~~~~
+../src/myfunctions.c:43:29: error: expected expression before ')' token
+ uint32_t * SVD = (uint32_t *)0x4BB03000;
+                             ^
+../src/myfunctions.c:52:1: error: unknown type name 'uint8_t'
+ uint8_t D1 =0;
+ ^~~~~~~
+../src/myfunctions.c:53:1: error: unknown type name 'uint8_t'
+ uint8_t D2 =0;
+ ^~~~~~~
+../src/myfunctions.c:54:1: error: unknown type name 'uint8_t'
+ uint8_t D3 =0;
+ ^~~~~~~
+../src/myfunctions.c:55:1: error: unknown type name 'uint8_t'
+ uint8_t D4 =0;
+ ^~~~~~~
+../src/myfunctions.c: In function 'activateLEDS':
+../src/myfunctions.c:60:12: error: 'ledBaseAddress' undeclared (first use in this function); did you mean 'BTN_Address'?
+  uint32_t* ledBaseAddress = (uint32_t*)0x4BB00000;
+            ^~~~~~~~~~~~~~
+            BTN_Address
+../src/myfunctions.c:60:12: note: each undeclared identifier is reported only once for each function it appears in
+../src/myfunctions.c:60:39: error: expected expression before ')' token
+  uint32_t* ledBaseAddress = (uint32_t*)0x4BB00000;
+                                       ^
+../src/myfunctions.c:63:36: error: expected ')' before numeric constant
+  while((BTN_Address[0] & (uint32_t)1) != 1)
+                                    ^
+../src/myfunctions.c: In function 'disableInterrupts':
+../src/myfunctions.c:74:11: error: expected ';' before 'bitsToEnable'
+  uint32_t bitsToEnable = 0xDF; // 1101_1111
+           ^~~~~~~~~~~~
+../src/myfunctions.c:75:11: error: expected ';' before 'readCPSR'
+  uint32_t readCPSR = 0;
+           ^~~~~~~~
+../src/myfunctions.c:76:11: error: expected ';' before 'clearByte'
+  uint32_t clearByte = 0xFF;
+           ^~~~~~~~~
+../src/myfunctions.c:78:47: error: 'readCPSR' undeclared (first use in this function)
+  __asm__ __volatile__("MRS %0,CPSR\n" : "=r" (readCPSR));
+                                               ^~~~~~~~
+../src/myfunctions.c:79:61: error: 'clearByte' undeclared (first use in this function)
+  __asm__ __volatile__("MSR CPSR, %0\n" :: "r"((readCPSR & (~clearByte))|bitsToEnable));
+                                                             ^~~~~~~~~
+../src/myfunctions.c:79:73: error: 'bitsToEnable' undeclared (first use in this function)
+  __asm__ __volatile__("MSR CPSR, %0\n" :: "r"((readCPSR & (~clearByte))|bitsToEnable));
+                                                                         ^~~~~~~~~~~~
+../src/myfunctions.c: In function 'enableInterrupts':
+../src/myfunctions.c:83:11: error: expected ';' before 'bitsToEnable'
+  uint32_t bitsToEnable = 0x5F; // 1101_1111
+           ^~~~~~~~~~~~
+../src/myfunctions.c:84:11: error: expected ';' before 'readCPSR'
+  uint32_t readCPSR = 0;
+           ^~~~~~~~
+../src/myfunctions.c:85:11: error: expected ';' before 'clearByte'
+  uint32_t clearByte = 0xFF;
+           ^~~~~~~~~
+../src/myfunctions.c:87:47: error: 'readCPSR' undeclared (first use in this function)
+  __asm__ __volatile__("MRS %0,CPSR\n" : "=r" (readCPSR));
+                                               ^~~~~~~~
+../src/myfunctions.c:88:61: error: 'clearByte' undeclared (first use in this function)
+  __asm__ __volatile__("MSR CPSR, %0\n" :: "r"((readCPSR & (~clearByte))|bitsToEnable));
+                                                             ^~~~~~~~~
+../src/myfunctions.c:88:73: error: 'bitsToEnable' undeclared (first use in this function)
+  __asm__ __volatile__("MSR CPSR, %0\n" :: "r"((readCPSR & (~clearByte))|bitsToEnable));
+                                                                         ^~~~~~~~~~~~
 ../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:123:10: error: 'interrupt_ID' undeclared (first use in this function); did you mean 'interruptID'?
-  else if(interrupt_ID == 27)
-          ^~~~~~~~~~~~
-          interruptID
-../src/myfunctions.c:123:10: note: each undeclared identifier is reported only once for each function it appears in
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+../src/myfunctions.c:128:11: error: expected ';' before 'interruptID'
+  uint32_t interruptID = interruptAcknowledgeReg[0]; //Get interrupt ID
            ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
-make: *** [src/myfunctions.o] Error 1
-17:45:23 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-           ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21252	   1288	  22568	  45108	   b034	P5.elf
-'Finished building: P5.elf.size'
-' '
-17:52:06 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-           ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
-../src/myfunctions.c: In function 'GPIOIRQ':
-../src/myfunctions.c:223:11: warning: unused variable 'BTN_5' [-Wunused-variable]
-  uint32_t BTN_5 = 0x80000;
-           ^~~~~
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21360	   1288	  22568	  45216	   b0a0	P5.elf
-'Finished building: P5.elf.size'
-' '
-17:58:30 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-           ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
-../src/myfunctions.c: In function 'GPIOIRQ':
-../src/myfunctions.c:224:11: warning: unused variable 'BTN_4' [-Wunused-variable]
-  uint32_t BTN_4 = 0x40000;
-           ^~~~~
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21456	   1288	  22568	  45312	   b100	P5.elf
-'Finished building: P5.elf.size'
-' '
-18:00:11 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-           ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21456	   1288	  22568	  45312	   b100	P5.elf
-'Finished building: P5.elf.size'
-' '
-18:02:37 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-           ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21520	   1288	  22568	  45376	   b140	P5.elf
-'Finished building: P5.elf.size'
-' '
-18:03:14 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:117:11: warning: unused variable 'buttonEvent' [-Wunused-variable]
-  uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
-           ^~~~~~~~~~~
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21544	   1288	  22568	  45400	   b158	P5.elf
-'Finished building: P5.elf.size'
-' '
-18:04:41 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:121:3: warning: implicit declaration of function 'GPIOIRQ'; did you mean 'GTIRQ'? [-Wimplicit-function-declaration]
-   GPIOIRQ(buttonEvent);
-   ^~~~~~~
-   GTIRQ
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
+../src/myfunctions.c:131:5: error: 'interruptID' undeclared (first use in this function)
+  if(interruptID == 52)
+     ^~~~~~~~~~~
+../src/myfunctions.c:133:12: error: expected ';' before 'GPIO_Interrupt'
+   uint32_t GPIO_Interrupt = GPIOInterruptStatusBank1[0]; //check if interrupt happened
+            ^~~~~~~~~~~~~~
+../src/myfunctions.c:134:12: error: expected ';' before 'buttonEvent'
+   uint32_t buttonEvent = 0xC0000 & GPIO_Interrupt; //check if button event occurs.
+            ^~~~~~~~~~~
+../src/myfunctions.c:135:3: warning: implicit declaration of function 'GPIO_IRQ' [-Wimplicit-function-declaration]
+   GPIO_IRQ(buttonEvent);
+   ^~~~~~~~
+../src/myfunctions.c:135:12: error: 'buttonEvent' undeclared (first use in this function)
+   GPIO_IRQ(buttonEvent);
+            ^~~~~~~~~~~
+../src/myfunctions.c:140:3: warning: implicit declaration of function 'GT_IRQ' [-Wimplicit-function-declaration]
+   GT_IRQ();
+   ^~~~~~
+../src/myfunctions.c: In function 'configureIO':
+../src/myfunctions.c:148:14: error: expected expression before ')' token
+  *((uint32_t*) 0xF8000000+0x8/4) = 0x0000DF0D;//???
+              ^
+../src/myfunctions.c: In function 'initGlobalTimer':
+../src/myfunctions.c:175:14: error: expected expression before ')' token
+  *((uint32_t*) GT_CONTROL_ADDRESS) = 0x0000;
+              ^
+../src/myfunctions.c:177:14: error: expected expression before ')' token
+  *((uint32_t*) GT_COUNTER0_ADDRESS) = 0x00000000;
+              ^
+../src/myfunctions.c:179:14: error: expected expression before ')' token
+  *((uint32_t*) GT_COUNTER1_ADDRESS) = 0x00000000;
+              ^
+../src/myfunctions.c:180:14: error: expected expression before ')' token
+  *((uint32_t*) GT_INTSTAT_ADDRESS) = 0x00000001;
+              ^
+../src/myfunctions.c:182:14: error: expected expression before ')' token
+  *((uint32_t*) GT_COMP0_ADDRESS) = 3333333;
+              ^
+../src/myfunctions.c:184:14: error: expected expression before ')' token
+  *((uint32_t*) GT_COMP1_ADDRESS) = 0x00000000;
+              ^
+../src/myfunctions.c:185:14: error: expected expression before ')' token
+  *((uint32_t*) GT_CONTROL_ADDRESS) = 0x0100;
+              ^
+../src/myfunctions.c: In function 'initGTInterrupts':
+../src/myfunctions.c:191:14: error: expected expression before ')' token
+  *((uint32_t*) GT_INTSTAT_ADDRESS) = 0x1;
+              ^
 ../src/myfunctions.c: At top level:
-../src/myfunctions.c:221:6: warning: conflicting types for 'GPIOIRQ'
- void GPIOIRQ(uint32_t b_press)
-      ^~~~~~~
-../src/myfunctions.c:121:3: note: previous implicit declaration of 'GPIOIRQ' was here
-   GPIOIRQ(buttonEvent);
-   ^~~~~~~
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21536	   1288	  22568	  45392	   b150	P5.elf
-'Finished building: P5.elf.size'
-' '
-18:05:17 **** Auto Build of configuration Debug for project P5 ****
+../src/myfunctions.c:209:6: warning: conflicting types for 'GT_IRQ'
+ void GT_IRQ()
+      ^~~~~~
+../src/myfunctions.c:140:3: note: previous implicit declaration of 'GT_IRQ' was here
+   GT_IRQ();
+   ^~~~~~
+../src/myfunctions.c: In function 'GT_IRQ':
+../src/myfunctions.c:241:14: error: expected expression before ')' token
+  *((uint32_t*) GT_COUNTER0_ADDRESS) = 0x00000000;
+              ^
+../src/myfunctions.c:243:14: error: expected expression before ')' token
+  *((uint32_t*) GT_COUNTER1_ADDRESS) = 0x00000000;
+              ^
+../src/myfunctions.c:244:14: error: expected expression before ')' token
+  *((uint32_t*) GT_CONTROL_ADDRESS) = 0x010F;
+              ^
+../src/myfunctions.c:246:14: error: expected expression before ')' token
+  *((uint32_t*) GT_INTSTAT_ADDRESS) = 0x1;
+              ^
+../src/myfunctions.c: At top level:
+../src/myfunctions.c:250:15: error: expected declaration specifiers or '...' before 'uint32_t'
+ void GPIO_IRQ(uint32_t button)
+               ^~~~~~~~
+../src/myfunctions.c: In function 'disableInterrupts':
+../src/myfunctions.c:78:2: error: invalid lvalue in asm output 0
+  __asm__ __volatile__("MRS %0,CPSR\n" : "=r" (readCPSR));
+  ^~~~~~~
+../src/myfunctions.c: In function 'enableInterrupts':
+../src/myfunctions.c:87:2: error: invalid lvalue in asm output 0
+  __asm__ __volatile__("MRS %0,CPSR\n" : "=r" (readCPSR));
+  ^~~~~~~
+make: *** [src/myfunctions.o] Error 1
+10:53:39 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:62:8: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
-        Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
 'Building file: ../src/myfunctions.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
 ../src/myfunctions.c: In function 'IRQHandler':
-../src/myfunctions.c:113:13: warning: unused variable 'GPIOMaskData0' [-Wunused-variable]
-  uint32_t * GPIOMaskData0 = (uint32_t *) 0xE000A004;
-             ^~~~~~~~~~~~~
+../src/myfunctions.c:135:3: warning: implicit declaration of function 'GPIO_IRQ'; did you mean 'UART_GPIO_IRQ'? [-Wimplicit-function-declaration]
+   GPIO_IRQ(buttonEvent);
+   ^~~~~~~~
+   UART_GPIO_IRQ
+../src/myfunctions.c:140:3: warning: implicit declaration of function 'GT_IRQ' [-Wimplicit-function-declaration]
+   GT_IRQ();
+   ^~~~~~
+../src/myfunctions.c: At top level:
+../src/myfunctions.c:209:6: warning: conflicting types for 'GT_IRQ'
+ void GT_IRQ()
+      ^~~~~~
+../src/myfunctions.c:140:3: note: previous implicit declaration of 'GT_IRQ' was here
+   GT_IRQ();
+   ^~~~~~
+../src/myfunctions.c:250:6: warning: conflicting types for 'GPIO_IRQ'
+ void GPIO_IRQ(uint32_t button)
+      ^~~~~~~~
+../src/myfunctions.c:135:3: note: previous implicit declaration of 'GPIO_IRQ' was here
+   GPIO_IRQ(buttonEvent);
+   ^~~~~~~~
 'Finished building: ../src/myfunctions.c'
 ' '
-'Building target: P5.elf'
+'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  21536	   1288	  22568	  45392	   b150	P5.elf
-'Finished building: P5.elf.size'
+  21952	   1256	  22584	  45792	   b2e0	P6.elf
+'Finished building: P6.elf.size'
 ' '
-18:05:55 **** Auto Build of configuration Debug for project P5 ****
+11:08:29 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/myfunctions.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+../src/myfunctions.c: In function 'IRQHandler':
+../src/myfunctions.c:140:3: warning: implicit declaration of function 'GT_IRQ'; did you mean 'GPIO_IRQ'? [-Wimplicit-function-declaration]
+   GT_IRQ();
+   ^~~~~~
+   GPIO_IRQ
+../src/myfunctions.c: At top level:
+../src/myfunctions.c:209:6: warning: conflicting types for 'GT_IRQ'
+ void GT_IRQ()
+      ^~~~~~
+../src/myfunctions.c:140:3: note: previous implicit declaration of 'GT_IRQ' was here
+   GT_IRQ();
+   ^~~~~~
 'Finished building: ../src/myfunctions.c'
 ' '
-'Building target: P5.elf'
+'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  21524	   1288	  22568	  45380	   b144	P5.elf
-'Finished building: P5.elf.size'
+  21952	   1256	  22584	  45792	   b2e0	P6.elf
+'Finished building: P6.elf.size'
 ' '
-18:06:15 **** Auto Build of configuration Debug for project P5 ****
+11:09:36 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/myfunctions.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+../src/myfunctions.c: In function 'IRQHandler':
+../src/myfunctions.c:160:3: warning: implicit declaration of function 'GT_IRQ'; did you mean 'GPIO_IRQ'? [-Wimplicit-function-declaration]
+   GT_IRQ();
+   ^~~~~~
+   GPIO_IRQ
 'Finished building: ../src/myfunctions.c'
 ' '
-'Building target: P5.elf'
+'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21524	   1288	  22568	  45380	   b144	P5.elf
-'Finished building: P5.elf.size'
-' '
-18:06:30 **** Incremental Build of configuration Debug for project P5 ****
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/myfunctions.o: In function `IRQHandler':
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:160: undefined reference to `GT_IRQ'
+collect2.exe: error: ld returned 1 exit status
+make: *** [P6.elf] Error 1
+11:09:58 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for `main-build'.
-18:07:44 **** Auto Build of configuration Debug for project P5 ****
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21436	   1256	  22712	  45404	   b15c	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:18:26 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+../src/myfunctions.c: In function 'GPIO_IRQ':
+../src/myfunctions.c:235:3: warning: implicit declaration of function 'SendChar'; did you mean 'getchar'? [-Wimplicit-function-declaration]
+   SendChar(C);
+   ^~~~~~~~
+   getchar
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/myfunctions.o: In function `GPIO_IRQ':
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:235: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:238: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:245: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:247: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:249: undefined reference to `SendChar'
+./src/myfunctions.o:C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:251: more undefined references to `SendChar' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [P6.elf] Error 1
+11:18:51 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/myfunctions.o: In function `GPIO_IRQ':
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:235: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:238: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:245: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:247: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:249: undefined reference to `SendChar'
+./src/myfunctions.o:C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:251: more undefined references to `SendChar' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [P6.elf] Error 1
+11:19:13 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/myfunctions.o: In function `GPIO_IRQ':
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:235: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:238: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:245: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:247: undefined reference to `SendChar'
+C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:249: undefined reference to `SendChar'
+./src/myfunctions.o:C:\Users\Sergaljerk\wb\P6\Debug/../src/myfunctions.c:251: more undefined references to `SendChar' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [P6.elf] Error 1
+11:19:54 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22056	   1256	  22616	  45928	   b368	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:20:58 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+../src/myfunctions.c:225:6: error: conflicting types for 'SendChar'
+ void SendChar(uint8_t C)
+      ^~~~~~~~
+../src/myfunctions.c:226:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ {
+ ^
+In file included from ../src/myfunctions.c:10:0:
+../src/myfunctions.h:33:6: note: previous declaration of 'SendChar' was here
+ void SendChar();
+      ^~~~~~~~
+make: *** [src/myfunctions.o] Error 1
+11:21:00 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22068	   1256	  22616	  45940	   b374	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:21:44 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22068	   1256	  22616	  45940	   b374	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:26:06 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22120	   1256	  22616	  45992	   b3a8	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:27:09 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+../src/myfunctions.c: In function 'StoreChar':
+../src/myfunctions.c:231:12: error: 'i' undeclared (first use in this function)
+  if(buffer[i] == 0)
+            ^
+../src/myfunctions.c:231:12: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/myfunctions.o] Error 1
+11:27:18 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+../src/myfunctions.c: In function 'StoreChar':
+../src/myfunctions.c:233:13: warning: statement with no effect [-Wunused-value]
+   buffer[j] == C;
+   ~~~~~~~~~~^~~~
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22168	   1256	  22616	  46040	   b3d8	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:27:55 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22192	   1256	  22616	  46064	   b3f0	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:28:08 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22192	   1256	  22616	  46064	   b3f0	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:30:43 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:64:8: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
-        Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:56:5: warning: implicit declaration of function 'initUART1' [-Wimplicit-function-declaration]
+     initUART1();
+     ^~~~~~~~~
+../src/helloworld.c:57:5: warning: implicit declaration of function 'disableInterrupts' [-Wimplicit-function-declaration]
+     disableInterrupts();
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:58:5: warning: implicit declaration of function 'GICConfigure' [-Wimplicit-function-declaration]
+     GICConfigure();
+     ^~~~~~~~~~~~
+../src/helloworld.c:59:5: warning: implicit declaration of function 'initializeGPIOInterrupts' [-Wimplicit-function-declaration]
+     initializeGPIOInterrupts();
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:60:5: warning: implicit declaration of function 'enableInterrupts' [-Wimplicit-function-declaration]
+     enableInterrupts();
+     ^~~~~~~~~~~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
-'Building target: P5.elf'
+'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\Sergaljerk\wb\P6\Debug/../src/helloworld.c:59: undefined reference to `initializeGPIOInterrupts'
+collect2.exe: error: ld returned 1 exit status
+make: *** [P6.elf] Error 1
+11:31:13 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  21532	   1288	  22568	  45388	   b14c	P5.elf
-'Finished building: P5.elf.size'
+  21996	   1256	  22616	  45868	   b32c	P6.elf
+'Finished building: P6.elf.size'
 ' '
-18:07:45 **** Incremental Build of configuration Debug for project P5 ****
+11:33:03 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for `main-build'.
-18:08:18 **** Incremental Build of configuration Debug for project P5 ****
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+../src/myfunctions.c: In function 'sendREADY':
+../src/myfunctions.c:291:10: error: redefinition of 'C'
+  uint8_t C = '>';
+          ^
+../src/myfunctions.c:289:10: note: previous definition of 'C' was here
+  uint8_t C = '>';
+          ^
+make: *** [src/myfunctions.o] Error 1
+11:33:10 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for `main-build'.
-18:08:35 **** Incremental Build of configuration Debug for project P5 ****
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22140	   1256	  22616	  46012	   b3bc	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:33:25 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for `main-build'.
-18:08:58 **** Auto Build of configuration Debug for project P5 ****
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22140	   1256	  22616	  46012	   b3bc	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:33:49 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:63:8: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
-        Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:56:5: warning: implicit declaration of function 'initUART1' [-Wimplicit-function-declaration]
+     initUART1();
+     ^~~~~~~~~
+../src/helloworld.c:57:5: warning: implicit declaration of function 'disableInterrupts' [-Wimplicit-function-declaration]
+     disableInterrupts();
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:58:5: warning: implicit declaration of function 'GICConfigure' [-Wimplicit-function-declaration]
+     GICConfigure();
+     ^~~~~~~~~~~~
+../src/helloworld.c:59:5: warning: implicit declaration of function 'initializeGPIOInterrupts' [-Wimplicit-function-declaration]
+     initializeGPIOInterrupts();
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:60:5: warning: implicit declaration of function 'enableInterrupts' [-Wimplicit-function-declaration]
+     enableInterrupts();
+     ^~~~~~~~~~~~~~~~
+../src/helloworld.c:61:5: warning: implicit declaration of function 'sendReady' [-Wimplicit-function-declaration]
+     sendReady();
+     ^~~~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
-'Building target: P5.elf'
+'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21528	   1288	  22568	  45384	   b148	P5.elf
-'Finished building: P5.elf.size'
-' '
-18:09:00 **** Incremental Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-18:09:23 **** Incremental Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-18:09:55 **** Auto Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/myfunctions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
-' '
-'Building target: P5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21528	   1288	  22568	  45384	   b148	P5.elf
-'Finished building: P5.elf.size'
-' '
-18:09:57 **** Incremental Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-18:10:37 **** Incremental Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-18:11:27 **** Incremental Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-18:11:44 **** Incremental Build of configuration Debug for project P5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-18:13:21 **** Auto Build of configuration Debug for project P5 ****
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\Sergaljerk\wb\P6\Debug/../src/helloworld.c:61: undefined reference to `sendReady'
+collect2.exe: error: ld returned 1 exit status
+make: *** [P6.elf] Error 1
+11:34:12 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:63:8: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
-        Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:56:5: warning: implicit declaration of function 'initUART1' [-Wimplicit-function-declaration]
+     initUART1();
+     ^~~~~~~~~
+../src/helloworld.c:57:5: warning: implicit declaration of function 'disableInterrupts' [-Wimplicit-function-declaration]
+     disableInterrupts();
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:58:5: warning: implicit declaration of function 'GICConfigure' [-Wimplicit-function-declaration]
+     GICConfigure();
+     ^~~~~~~~~~~~
+../src/helloworld.c:59:5: warning: implicit declaration of function 'initializeGPIOInterrupts' [-Wimplicit-function-declaration]
+     initializeGPIOInterrupts();
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:60:5: warning: implicit declaration of function 'enableInterrupts' [-Wimplicit-function-declaration]
+     enableInterrupts();
+     ^~~~~~~~~~~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
-'Building target: P5.elf'
+'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  21516	   1288	  22568	  45372	   b13c	P5.elf
-'Finished building: P5.elf.size'
+  22140	   1256	  22616	  46012	   b3bc	P6.elf
+'Finished building: P6.elf.size'
 ' '
-18:13:31 **** Auto Build of configuration Debug for project P5 ****
+11:34:31 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/myfunctions.c'
+'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: P5.elf'
+'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  21516	   1288	  22568	  45372	   b13c	P5.elf
-'Finished building: P5.elf.size'
+  22140	   1256	  22616	  46012	   b3bc	P6.elf
+'Finished building: P6.elf.size'
 ' '
-18:14:30 **** Auto Build of configuration Debug for project P5 ****
+11:34:35 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/myfunctions.c'
+'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:5: warning: implicit declaration of function 'sendReady'; did you mean 'sendREADY'? [-Wimplicit-function-declaration]
+     sendReady();
+     ^~~~~~~~~
+     sendREADY
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: P5.elf'
+'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  21516	   1288	  22568	  45372	   b13c	P5.elf
-'Finished building: P5.elf.size'
-' '
-18:16:42 **** Auto Build of configuration Debug for project P5 ****
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\Sergaljerk\wb\P6\Debug/../src/helloworld.c:61: undefined reference to `sendReady'
+collect2.exe: error: ld returned 1 exit status
+make: *** [P6.elf] Error 1
+11:34:47 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/myfunctions.c'
+'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
-'Finished building: ../src/myfunctions.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: P5.elf'
+'Building target: P6.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: P5.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  21564	   1288	  22568	  45420	   b16c	P5.elf
-'Finished building: P5.elf.size'
+  22144	   1256	  22616	  46016	   b3c0	P6.elf
+'Finished building: P6.elf.size'
 ' '
-18:17:54 **** Auto Build of configuration Debug for project P5 ****
+11:36:40 **** Auto Build of configuration Debug for project P6 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQ_Handler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:62:37: error: 'IRQ_Handler' undeclared (first use in this function); did you mean 'IRQHandler'?
+     Xil_ExceptionRegisterHandler(5, IRQ_Handler, NULL);// build- in
+                                     ^~~~~~~~~~~
+                                     IRQHandler
+../src/helloworld.c:62:37: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:64:32: error: 'UART1_C_Stat_Addr' undeclared (first use in this function)
+      uint32_t R= *((uint32_t*) UART1_C_Stat_Addr);
+                                ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:67:32: error: 'UART1_FIFO_Addr' undeclared (first use in this function); did you mean 'UART1_C_Stat_Addr'?
+      uint8_t C = *((uint32_t*) UART1_FIFO_Addr);
+                                ^~~~~~~~~~~~~~~
+                                UART1_C_Stat_Addr
+../src/helloworld.c:73:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+11:36:50 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:64:32: error: 'UART1_C_Stat_Addr' undeclared (first use in this function)
+      uint32_t R= *((uint32_t*) UART1_C_Stat_Addr);
+                                ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:64:32: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:67:32: error: 'UART1_FIFO_Addr' undeclared (first use in this function); did you mean 'UART1_C_Stat_Addr'?
+      uint8_t C = *((uint32_t*) UART1_FIFO_Addr);
+                                ^~~~~~~~~~~~~~~
+                                UART1_C_Stat_Addr
+../src/helloworld.c:73:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+11:37:27 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:74:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+11:38:17 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22212	   1256	  22616	  46084	   b404	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:39:44 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22212	   1256	  22616	  46084	   b404	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:39:47 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22212	   1256	  22616	  46084	   b404	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:40:26 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22212	   1256	  22616	  46084	   b404	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:40:58 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22212	   1256	  22616	  46084	   b404	P6.elf
+'Finished building: P6.elf.size'
+' '
+11:41:20 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22212	   1256	  22616	  46084	   b404	P6.elf
+'Finished building: P6.elf.size'
+' '
+<<<<<<< HEAD
+=======
 'Building file: ../src/myfunctions.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
@@ -3868,3 +4111,567 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
+17:07:27 **** Auto Build of project P5_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/H_Bridge_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/H_Bridge_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/RGB_LED_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/RGB_LED_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/SEVEN_SEG_DISP_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/SEVEN_SEG_DISP_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/spips_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/spips_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/SWITCHES_BUTTONS_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/SWITCHES_BUTTONS_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/H_Bridge_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/H_Bridge_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling H_Bridge..."
+H_Bridge_selftest.c: In function 'H_BRIDGE_Reg_SelfTest':
+H_Bridge_selftest.c:52:57: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( H_BRIDGE_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                         ^~
+H_Bridge_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/RGB_LED_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/RGB_LED_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling RGB_LED..."
+RGB_LED_selftest.c: In function 'RGB_LED_Reg_SelfTest':
+RGB_LED_selftest.c:52:56: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( RGB_LED_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                        ^~
+RGB_LED_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/SEVEN_SEG_DISP_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/SEVEN_SEG_DISP_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling SEVEN_SEG_DISP..."
+SEVEN_SEG_DISP_selftest.c: In function 'SEVEN_SEG_DISP_Reg_SelfTest':
+SEVEN_SEG_DISP_selftest.c:52:63: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( SEVEN_SEG_DISP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                               ^~
+SEVEN_SEG_DISP_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/spips_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/spips_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling spips"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/SWITCHES_BUTTONS_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/SWITCHES_BUTTONS_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling SWITCHES_BUTTONS..."
+SWITCHES_BUTTONS_selftest.c: In function 'SWITCHES_BUTTONS_Reg_SelfTest':
+SWITCHES_BUTTONS_selftest.c:52:65: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( SWITCHES_BUTTONS_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                                 ^~
+SWITCHES_BUTTONS_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sysmon"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+17:08:07 **** Auto Build of configuration Debug for project P5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:6: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+      Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: P5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21776	   1256	  22584	  45616	   b230	P5.elf
+'Finished building: P5.elf.size'
+' '
+17:08:34 **** Incremental Build of configuration Debug for project P5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:34:53 **** Auto Build of configuration Debug for project P5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21776	   1256	  22584	  45616	   b230	P5.elf
+'Finished building: P5.elf.size'
+' '
+17:35:52 **** Incremental Build of configuration Debug for project P5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:24:23 **** Incremental Build of configuration Debug for project P5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:42:09 **** Auto Build of configuration Debug for project P5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21792	   1256	  22584	  45632	   b240	P5.elf
+'Finished building: P5.elf.size'
+' '
+16:42:27 **** Incremental Build of configuration Debug for project P5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:43:12 **** Auto Build of configuration Debug for project P5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building target: P5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P5_bsp/ps7_cortexa9_0/lib -o "P5.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P5.elf  |tee "P5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21776	   1256	  22584	  45616	   b230	P5.elf
+'Finished building: P5.elf.size'
+' '
+16:43:27 **** Incremental Build of configuration Debug for project P5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+>>>>>>> 7b1a7e5cc96f65ba9677300f1c7a8c15c4e92bd8
+12:24:47 **** Clean-only build of configuration Debug for project P6 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o  ./src/helloworld.d ./src/myfunctions.d ./src/platform.d  P6.elf.size  P6.elf
+' '
+12:24:48 **** Auto Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22232	   1256	  22616	  46104	   b418	P6.elf
+'Finished building: P6.elf.size'
+' '
+12:28:13 **** Clean-only build of configuration Debug for project P6 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o  ./src/helloworld.d ./src/myfunctions.d ./src/platform.d  P6.elf.size  P6.elf
+' '
+12:28:14 **** Incremental Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22232	   1256	  22616	  46104	   b418	P6.elf
+'Finished building: P6.elf.size'
+' '
+12:28:50 **** Incremental Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+12:30:24 **** Incremental Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+12:35:18 **** Build of project P6_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/H_Bridge_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/H_Bridge_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/RGB_LED_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/RGB_LED_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/SEVEN_SEG_DISP_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/SEVEN_SEG_DISP_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/spips_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/spips_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/SWITCHES_BUTTONS_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/SWITCHES_BUTTONS_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/H_Bridge_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/H_Bridge_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling H_Bridge..."
+H_Bridge_selftest.c: In function 'H_BRIDGE_Reg_SelfTest':
+H_Bridge_selftest.c:52:57: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( H_BRIDGE_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                         ^~
+H_Bridge_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/RGB_LED_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/RGB_LED_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling RGB_LED..."
+RGB_LED_selftest.c: In function 'RGB_LED_Reg_SelfTest':
+RGB_LED_selftest.c:52:56: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( RGB_LED_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                        ^~
+RGB_LED_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/SEVEN_SEG_DISP_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/SEVEN_SEG_DISP_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling SEVEN_SEG_DISP..."
+SEVEN_SEG_DISP_selftest.c: In function 'SEVEN_SEG_DISP_Reg_SelfTest':
+SEVEN_SEG_DISP_selftest.c:52:63: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( SEVEN_SEG_DISP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                               ^~
+SEVEN_SEG_DISP_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/spips_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/spips_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling spips"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/SWITCHES_BUTTONS_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/SWITCHES_BUTTONS_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling SWITCHES_BUTTONS..."
+SWITCHES_BUTTONS_selftest.c: In function 'SWITCHES_BUTTONS_Reg_SelfTest':
+SWITCHES_BUTTONS_selftest.c:52:65: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( SWITCHES_BUTTONS_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                                 ^~
+SWITCHES_BUTTONS_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sysmon"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+12:36:08 **** Build of configuration Debug for project P6 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:5: warning: implicit declaration of function 'Xil_ExceptionRegisterHandler' [-Wimplicit-function-declaration]
+     Xil_ExceptionRegisterHandler(5, IRQHandler, NULL);// build- in
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/myfunctions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myfunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/myfunctions.d" -MT"src/myfunctions.o" -o "src/myfunctions.o" "../src/myfunctions.c"
+'Finished building: ../src/myfunctions.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../P6_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: P6.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../P6_bsp/ps7_cortexa9_0/lib -o "P6.elf"  ./src/helloworld.o ./src/myfunctions.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: P6.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size P6.elf  |tee "P6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22232	   1256	  22616	  46104	   b418	P6.elf
+'Finished building: P6.elf.size'
+' '
