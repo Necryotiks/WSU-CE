@@ -12,21 +12,21 @@
       "xlslice_1": "",
       "xlslice_2": "",
       "xlslice_3": "",
-      "Debounce_RTM_0": "",
-      "Debounce_RTM_1": "",
-      "Debounce_RTM_2": "",
+      "proc_sys_reset_0": "",
       "LSFR_0": "",
       "RTM_FSM_0": "",
+      "stopwatch_ssd_driver_0": "",
+      "ssd_mux_0": "",
       "ssd_dec_0": "",
       "Accumuator_0": "",
       "BCD_TO_BINARY_0": "",
       "BINARY_TO_BCD_0": "",
       "EXTRA_THICC_MUX_0": "",
       "Divider_0": "",
-      "HZ_Counter_0": "",
-      "proc_sys_reset_0": "",
-      "ssd_mux_0": "",
-      "stopwatch_ssd_driver_0": ""
+      "Debounce_RTM_0": "",
+      "Debounce_RTM_1": "",
+      "Debounce_RTM_2": "",
+      "HZ_Counter_0": ""
     },
     "ports": {
       "o_Anodes_0": {
@@ -145,80 +145,9 @@
           }
         }
       },
-      "Debounce_RTM_0": {
-        "vlnv": "xilinx.com:module_ref:Debounce_RTM:1.0",
-        "xci_name": "Reaction_Time_Averager_Debounce_RTM_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Debounce_RTM",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_CLK": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "i_RST": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "i_Signal": {
-            "direction": "I"
-          },
-          "o_Assert": {
-            "direction": "O"
-          }
-        }
-      },
-      "Debounce_RTM_1": {
-        "vlnv": "xilinx.com:module_ref:Debounce_RTM:1.0",
-        "xci_name": "Reaction_Time_Averager_Debounce_RTM_0_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Debounce_RTM",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_CLK": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "i_RST": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "i_Signal": {
-            "direction": "I"
-          },
-          "o_Assert": {
-            "direction": "O"
-          }
-        }
-      },
-      "Debounce_RTM_2": {
-        "vlnv": "xilinx.com:module_ref:Debounce_RTM:1.0",
-        "xci_name": "Reaction_Time_Averager_Debounce_RTM_0_2",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Debounce_RTM",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_CLK": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "i_RST": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "i_Signal": {
-            "direction": "I"
-          },
-          "o_Assert": {
-            "direction": "O"
-          }
-        }
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "Reaction_Time_Averager_proc_sys_reset_0_0"
       },
       "LSFR_0": {
         "vlnv": "xilinx.com:module_ref:LSFR:1.0",
@@ -307,6 +236,96 @@
           },
           "o_CEN": {
             "direction": "O"
+          }
+        }
+      },
+      "stopwatch_ssd_driver_0": {
+        "vlnv": "xilinx.com:module_ref:stopwatch_ssd_driver:1.0",
+        "xci_name": "Reaction_Time_Averager_stopwatch_ssd_driver_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "stopwatch_ssd_driver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_SUBCLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_CLK_EN": {
+            "direction": "I"
+          },
+          "i_SRST": {
+            "direction": "I"
+          },
+          "o_Digit_1_val": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Digit_2_val": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Digit_3_val": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Digit_4_val": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "ssd_mux_0": {
+        "vlnv": "xilinx.com:module_ref:ssd_mux:1.0",
+        "xci_name": "Reaction_Time_Averager_ssd_mux_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ssd_mux",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_Digit_1": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_Digit_2": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_Digit_3": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_Digit_4": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Anodes": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
           }
         }
       },
@@ -543,6 +562,81 @@
           }
         }
       },
+      "Debounce_RTM_0": {
+        "vlnv": "xilinx.com:module_ref:Debounce_RTM:1.0",
+        "xci_name": "Reaction_Time_Averager_Debounce_RTM_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debounce_RTM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_Signal": {
+            "direction": "I"
+          },
+          "o_Assert": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debounce_RTM_1": {
+        "vlnv": "xilinx.com:module_ref:Debounce_RTM:1.0",
+        "xci_name": "Reaction_Time_Averager_Debounce_RTM_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debounce_RTM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_Signal": {
+            "direction": "I"
+          },
+          "o_Assert": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debounce_RTM_2": {
+        "vlnv": "xilinx.com:module_ref:Debounce_RTM:1.0",
+        "xci_name": "Reaction_Time_Averager_Debounce_RTM_0_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debounce_RTM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_Signal": {
+            "direction": "I"
+          },
+          "o_Assert": {
+            "direction": "O"
+          }
+        }
+      },
       "HZ_Counter_0": {
         "vlnv": "xilinx.com:module_ref:HZ_Counter:1.0",
         "xci_name": "Reaction_Time_Averager_HZ_Counter_0_0",
@@ -567,100 +661,6 @@
           },
           "o_Out": {
             "direction": "O"
-          }
-        }
-      },
-      "proc_sys_reset_0": {
-        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "Reaction_Time_Averager_proc_sys_reset_0_0"
-      },
-      "ssd_mux_0": {
-        "vlnv": "xilinx.com:module_ref:ssd_mux:1.0",
-        "xci_name": "Reaction_Time_Averager_ssd_mux_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ssd_mux",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_CLK": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "i_Digit_1": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "i_Digit_2": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "i_Digit_3": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "i_Digit_4": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "o_Out": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "o_Anodes": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          }
-        }
-      },
-      "stopwatch_ssd_driver_0": {
-        "vlnv": "xilinx.com:module_ref:stopwatch_ssd_driver:1.0",
-        "xci_name": "Reaction_Time_Averager_stopwatch_ssd_driver_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "stopwatch_ssd_driver",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_SUBCLK": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "i_RST": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "i_CLK_EN": {
-            "direction": "I"
-          },
-          "i_SRST": {
-            "direction": "I"
-          },
-          "o_Digit_1_val": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "o_Digit_2_val": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "o_Digit_3_val": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "o_Digit_4_val": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
           }
         }
       }
@@ -733,27 +733,27 @@
       "i_CLK_1": {
         "ports": [
           "i_CLK",
-          "Debounce_RTM_2/i_CLK",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "LSFR_0/i_CLK",
+          "ssd_mux_0/i_CLK",
+          "ssd_dec_0/i_CLK",
           "Debounce_RTM_0/i_CLK",
           "Debounce_RTM_1/i_CLK",
-          "LSFR_0/i_CLK",
-          "ssd_dec_0/i_CLK",
-          "HZ_Counter_0/i_CLK",
-          "proc_sys_reset_0/slowest_sync_clk",
-          "ssd_mux_0/i_CLK"
+          "Debounce_RTM_2/i_CLK",
+          "HZ_Counter_0/i_CLK"
         ]
       },
       "proc_sys_reset_0_peripheral_aresetn": {
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
+          "LSFR_0/i_RST",
+          "RTM_FSM_0/i_RST",
+          "stopwatch_ssd_driver_0/i_RST",
+          "Accumuator_0/i_RST",
           "Debounce_RTM_0/i_RST",
           "Debounce_RTM_1/i_RST",
           "Debounce_RTM_2/i_RST",
-          "LSFR_0/i_RST",
-          "RTM_FSM_0/i_RST",
-          "Accumuator_0/i_RST",
-          "HZ_Counter_0/i_RST",
-          "stopwatch_ssd_driver_0/i_RST"
+          "HZ_Counter_0/i_RST"
         ]
       },
       "i_RST_1": {
@@ -772,12 +772,12 @@
         "ports": [
           "HZ_Counter_0/o_Out",
           "RTM_FSM_0/i_CLK1KHZ",
+          "stopwatch_ssd_driver_0/i_SUBCLK",
           "Accumuator_0/i_CLK",
           "BCD_TO_BINARY_0/i_CLK",
           "BINARY_TO_BCD_0/i_Clock",
-          "Divider_0/i_CLK",
           "EXTRA_THICC_MUX_0/i_CLK",
-          "stopwatch_ssd_driver_0/i_SUBCLK"
+          "Divider_0/i_CLK"
         ]
       },
       "BCD_TO_BINARY_0_o_DATA": {

@@ -1,22 +1,22 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Fri Mar  1 22:45:34 2019
-//Host        : Necryotiks running 64-bit unknown
+//Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+//Date        : Sat Mar  2 01:35:55 2019
+//Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target Bounce_Timer.bd
 //Design      : Bounce_Timer
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Bounce_Timer,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Bounce_Timer,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "Bounce_Timer.hwdef" *) 
+(* CORE_GENERATION_INFO = "Bounce_Timer,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Bounce_Timer,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=1,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "Bounce_Timer.hwdef" *) 
 module Bounce_Timer
    (i_CLK,
     i_RST,
     i_Signal,
     o_Anodes_0,
     o_Cathodes_0);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.I_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.I_CLK, CLK_DOMAIN Bounce_Timer_clk_100MHz, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input i_CLK;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.I_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.I_CLK, CLK_DOMAIN Bounce_Timer_i_CLK, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input i_CLK;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.I_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.I_RST, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input i_RST;
   input i_Signal;
   output [3:0]o_Anodes_0;
@@ -39,6 +39,10 @@ module Bounce_Timer
   assign i_Signal_0_1 = i_Signal;
   assign o_Anodes_0[3:0] = ssd_mux_0_o_Anodes;
   assign o_Cathodes_0[6:0] = ssd_dec_0_o_Cathodes;
+  Bounce_Timer_BCD_COUNTER_BD_0_0 BCD_COUNTER_BD_0
+       (.i_CLK(i_CLK),
+        .i_CLK_EN(1'b0),
+        .i_RST(1'b0));
   Bounce_Timer_Bounce_Counter_FSM_0_0 Bounce_Counter_FSM_0
        (.i_CLK(i_CLK),
         .i_RST(rst_clk_100MHz_100M_peripheral_aresetn),

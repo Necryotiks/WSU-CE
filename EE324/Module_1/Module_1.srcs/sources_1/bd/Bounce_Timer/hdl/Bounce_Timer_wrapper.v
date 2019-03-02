@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Fri Mar  1 22:45:34 2019
-//Host        : Necryotiks running 64-bit unknown
+//Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+//Date        : Sat Mar  2 01:35:55 2019
+//Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target Bounce_Timer_wrapper.bd
 //Design      : Bounce_Timer_wrapper
 //Purpose     : IP block netlist

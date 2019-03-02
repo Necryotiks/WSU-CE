@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  1 22:45:34 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar  2 01:35:55 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Bounce_Timer" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -16,9 +16,10 @@
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="slowest_sync_clk"/>
+        <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="Bounce_Counter_FSM_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="BCD_COUNTER_BD_0" PORT="i_CLK"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
@@ -37,6 +38,26 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
+    <MODULE COREREVISION="3" FULLNAME="/BCD_COUNTER_BD_0" HWVERSION="1.0" INSTANCE="BCD_COUNTER_BD_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BCD_COUNTER_BD" VLNV="xilinx.com:user:BCD_COUNTER_BD:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Bounce_Timer_BCD_COUNTER_BD_0_0"/>
+        <PARAMETER NAME="DISPLAY_MODE" VALUE="DECIMAL"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_CLK_EN" SIGIS="undef"/>
+        <PORT DIR="I" NAME="i_RST" SIGIS="rst"/>
+        <PORT DIR="O" NAME="o_NEXT_CLK_EN" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="o_OUT" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/Bounce_Counter_FSM_0" HWVERSION="1.0" INSTANCE="Bounce_Counter_FSM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Bounce_Counter_FSM" VLNV="xilinx.com:module_ref:Bounce_Counter_FSM:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -134,9 +155,9 @@
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="Bounce_Counter_FSM_0" PORT="i_RST"/>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

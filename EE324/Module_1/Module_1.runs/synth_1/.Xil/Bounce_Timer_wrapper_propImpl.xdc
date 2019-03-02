@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc rfile:../../../Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc rfile:../../../Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN K14 [get_ports {o_Cathodes_0[0]}]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]

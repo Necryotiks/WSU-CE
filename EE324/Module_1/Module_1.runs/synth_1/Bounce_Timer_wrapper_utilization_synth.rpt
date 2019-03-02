@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Fri Mar  1 22:46:30 2019
-| Host         : Necryotiks running 64-bit unknown
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Mar  2 01:36:53 2019
+| Host         : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Bounce_Timer_wrapper_utilization_synth.rpt -pb Bounce_Timer_wrapper_utilization_synth.pb
 | Design       : Bounce_Timer_wrapper
 | Device       : 7z007sclg400-1
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  100 |     0 |     14400 |  0.69 |
-|   LUT as Logic             |   99 |     0 |     14400 |  0.69 |
+| Slice LUTs*                |  103 |     0 |     14400 |  0.72 |
+|   LUT as Logic             |  102 |     0 |     14400 |  0.71 |
 |   LUT as Memory            |    1 |     0 |      6000 |  0.02 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    1 |     0 |           |       |
-| Slice Registers            |  102 |     0 |     28800 |  0.35 |
-|   Register as Flip Flop    |  102 |     0 |     28800 |  0.35 |
+| Slice Registers            |  107 |     0 |     28800 |  0.37 |
+|   Register as Flip Flop    |  107 |     0 |     28800 |  0.37 |
 |   Register as Latch        |    0 |     0 |     28800 |  0.00 |
 | F7 Muxes                   |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 1     |          Yes |           - |          Set |
-| 50    |          Yes |           - |        Reset |
+| 55    |          Yes |           - |        Reset |
 | 4     |          Yes |         Set |            - |
 | 47    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -148,15 +148,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |   50 |        Flop & Latch |
+| FDCE     |   55 |        Flop & Latch |
 | LUT5     |   47 |                 LUT |
 | FDRE     |   47 |        Flop & Latch |
+| LUT4     |   23 |                 LUT |
 | LUT6     |   20 |                 LUT |
-| LUT4     |   19 |                 LUT |
 | LUT2     |   16 |                 LUT |
 | OBUF     |   11 |                  IO |
 | CARRY4   |    8 |          CarryLogic |
-| LUT3     |    6 |                 LUT |
+| LUT3     |    7 |                 LUT |
 | LUT1     |    6 |                 LUT |
 | FDSE     |    4 |        Flop & Latch |
 | IBUF     |    3 |                  IO |

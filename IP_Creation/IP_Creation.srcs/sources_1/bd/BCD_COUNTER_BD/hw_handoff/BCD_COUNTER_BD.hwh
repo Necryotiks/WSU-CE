@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar  2 01:21:01 2019" VIVADOVERSION="2018.3">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="BCD_COUNTER_BD" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD_Counter_0" PORT="i_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD_Counter_0" PORT="i_RST"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_CLK_EN" SIGIS="undef" SIGNAME="External_Ports_i_CLK_EN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD_Counter_0" PORT="i_CLK_EN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_NEXT_CLK_EN" SIGIS="undef" SIGNAME="BCD_Counter_0_o_NEXT_CLK_EN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD_Counter_0" PORT="o_NEXT_CLK_EN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_OUT" RIGHT="0" SIGIS="undef" SIGNAME="BCD_Counter_0_o_OUT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD_Counter_0" PORT="o_OUT"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/BCD_Counter_0" HWVERSION="1.0" INSTANCE="BCD_Counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BCD_Counter" VLNV="xilinx.com:module_ref:BCD_Counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DISPLAY_MODE" VALUE="DECIMAL"/>
+        <PARAMETER NAME="Component_Name" VALUE="BCD_COUNTER_BD_BCD_Counter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_CLK_EN" SIGIS="undef" SIGNAME="External_Ports_i_CLK_EN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK_EN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_OUT" RIGHT="0" SIGIS="undef" SIGNAME="BCD_Counter_0_o_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_NEXT_CLK_EN" SIGIS="undef" SIGNAME="BCD_Counter_0_o_NEXT_CLK_EN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_NEXT_CLK_EN"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

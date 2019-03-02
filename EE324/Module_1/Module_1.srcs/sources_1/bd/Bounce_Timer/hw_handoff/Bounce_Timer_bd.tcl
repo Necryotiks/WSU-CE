@@ -176,6 +176,12 @@ proc create_root_design { parentCell } {
   set o_Anodes_0 [ create_bd_port -dir O -from 3 -to 0 o_Anodes_0 ]
   set o_Cathodes_0 [ create_bd_port -dir O -from 6 -to 0 o_Cathodes_0 ]
 
+  # Create instance: BCD_COUNTER_BD_0, and set properties
+  set BCD_COUNTER_BD_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:BCD_COUNTER_BD:1.0 BCD_COUNTER_BD_0 ]
+  set_property -dict [ list \
+   CONFIG.DISPLAY_MODE {DECIMAL} \
+ ] $BCD_COUNTER_BD_0
+
   # Create instance: Bounce_Counter_FSM_0, and set properties
   set block_name Bounce_Counter_FSM
   set block_cell_name Bounce_Counter_FSM_0
@@ -240,7 +246,7 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net Bounce_Counter_FSM_0_o_CEN [get_bd_pins Bounce_Counter_FSM_0/o_CEN] [get_bd_pins stopwatch_ssd_driver_0/i_CLK_EN]
   connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK] [get_bd_pins stopwatch_ssd_driver_0/i_SUBCLK]
-  connect_bd_net -net i_CLK [get_bd_ports i_CLK] [get_bd_pins Bounce_Counter_FSM_0/i_CLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk]
+  connect_bd_net -net i_CLK [get_bd_ports i_CLK] [get_bd_pins BCD_COUNTER_BD_0/i_CLK] [get_bd_pins Bounce_Counter_FSM_0/i_CLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk]
   connect_bd_net -net i_RST [get_bd_ports i_RST] [get_bd_pins rst_clk_100MHz_100M/ext_reset_in] [get_bd_pins stopwatch_ssd_driver_0/i_SRST]
   connect_bd_net -net i_Signal_0_1 [get_bd_ports i_Signal] [get_bd_pins Bounce_Counter_FSM_0/i_Signal]
   connect_bd_net -net rst_clk_100MHz_100M_peripheral_aresetn [get_bd_pins Bounce_Counter_FSM_0/i_RST] [get_bd_pins HZ_Counter_0/i_RST] [get_bd_pins rst_clk_100MHz_100M/peripheral_aresetn] [get_bd_pins stopwatch_ssd_driver_0/i_RST]

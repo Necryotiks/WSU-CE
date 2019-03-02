@@ -1,0 +1,104 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x78AFC73E821D56B0",
+      "device": "xc7z007sclg400-1",
+      "name": "BCD_COUNTER_BD",
+      "synth_flow_mode": "None",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "BCD_Counter_0": ""
+    },
+    "ports": {
+      "i_CLK": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "i_RST": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "i_CLK_EN": {
+        "direction": "I"
+      },
+      "o_NEXT_CLK_EN": {
+        "direction": "O"
+      },
+      "o_OUT": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "BCD_Counter_0": {
+        "vlnv": "xilinx.com:module_ref:BCD_Counter:1.0",
+        "xci_name": "BCD_COUNTER_BD_BCD_Counter_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "BCD_Counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_CLK_EN": {
+            "direction": "I"
+          },
+          "o_OUT": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_NEXT_CLK_EN": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "i_CLK_0_1": {
+        "ports": [
+          "i_CLK",
+          "BCD_Counter_0/i_CLK"
+        ]
+      },
+      "i_RST_0_1": {
+        "ports": [
+          "i_RST",
+          "BCD_Counter_0/i_RST"
+        ]
+      },
+      "i_CLK_EN_0_1": {
+        "ports": [
+          "i_CLK_EN",
+          "BCD_Counter_0/i_CLK_EN"
+        ]
+      },
+      "BCD_Counter_0_o_NEXT_CLK_EN": {
+        "ports": [
+          "BCD_Counter_0/o_NEXT_CLK_EN",
+          "o_NEXT_CLK_EN"
+        ]
+      },
+      "BCD_Counter_0_o_OUT": {
+        "ports": [
+          "BCD_Counter_0/o_OUT",
+          "o_OUT"
+        ]
+      }
+    }
+  }
+}

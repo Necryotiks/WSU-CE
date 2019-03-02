@@ -24,10 +24,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Bounce_Timer_rs
 # IP: bd/Bounce_Timer/ip/Bounce_Timer_Bounce_Counter_FSM_0_0/Bounce_Timer_Bounce_Counter_FSM_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Bounce_Timer_Bounce_Counter_FSM_0_0 || ORIG_REF_NAME==Bounce_Timer_Bounce_Counter_FSM_0_0} -quiet] -quiet
 
+# IP: bd/Bounce_Timer/ip/Bounce_Timer_BCD_COUNTER_BD_0_0/Bounce_Timer_BCD_COUNTER_BD_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Bounce_Timer_BCD_COUNTER_BD_0_0 || ORIG_REF_NAME==Bounce_Timer_BCD_COUNTER_BD_0_0} -quiet] -quiet
+
 # XDC: bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/Bounce_Timer_rst_clk_100MHz_100M_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==Bounce_Timer_rst_clk_100MHz_100M_0 || ORIG_REF_NAME==Bounce_Timer_rst_clk_100MHz_100M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/Bounce_Timer_rst_clk_100MHz_100M_0.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==Bounce_Timer_rst_clk_100MHz_100M_0 || ORIG_REF_NAME==Bounce_Timer_rst_clk_100MHz_100M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/Bounce_Timer/ip/Bounce_Timer_BCD_COUNTER_BD_0_0/src/BCD_COUNTER_BD_ooc.xdc
 
 # XDC: bd/Bounce_Timer/Bounce_Timer_ooc.xdc
