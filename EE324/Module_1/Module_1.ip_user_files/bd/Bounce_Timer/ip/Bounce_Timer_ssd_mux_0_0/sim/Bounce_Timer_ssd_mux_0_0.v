@@ -68,7 +68,7 @@ input wire [3 : 0] i_Digit_1;
 input wire [3 : 0] i_Digit_2;
 input wire [3 : 0] i_Digit_3;
 input wire [3 : 0] i_Digit_4;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 100000000, PHASE 0.000" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
 output wire [3 : 0] o_Out;

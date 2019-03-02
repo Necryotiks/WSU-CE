@@ -60,16 +60,16 @@ module Bounce_Timer_HZ_Counter_0_0 (
   o_Out
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Bounce_Timer_clk_100MHz" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Bounce_Timer_clk_100MHz, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
 input wire i_RST;
 output wire o_Out;
 
   HZ_Counter #(
-    .c_NUM(0)
+    .c_NUM(23809)
   ) inst (
     .i_CLK(i_CLK),
     .i_RST(i_RST),

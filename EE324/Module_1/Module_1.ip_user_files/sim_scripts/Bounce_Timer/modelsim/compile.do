@@ -3,11 +3,11 @@ vlib modelsim_lib/msim
 
 vlib modelsim_lib/msim/xil_defaultlib
 vlib modelsim_lib/msim/lib_cdc_v1_0_2
-vlib modelsim_lib/msim/proc_sys_reset_v5_0_12
+vlib modelsim_lib/msim/proc_sys_reset_v5_0_13
 
 vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 vmap lib_cdc_v1_0_2 modelsim_lib/msim/lib_cdc_v1_0_2
-vmap proc_sys_reset_v5_0_12 modelsim_lib/msim/proc_sys_reset_v5_0_12
+vmap proc_sys_reset_v5_0_13 modelsim_lib/msim/proc_sys_reset_v5_0_13
 
 vlog -work xil_defaultlib -64 -incr \
 "../../../bd/Bounce_Timer/ip/Bounce_Timer_ssd_dec_0_0/sim/Bounce_Timer_ssd_dec_0_0.v" \
@@ -18,8 +18,8 @@ vlog -work xil_defaultlib -64 -incr \
 vcom -work lib_cdc_v1_0_2 -64 -93 \
 "../../../../Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
 
-vcom -work proc_sys_reset_v5_0_12 -64 -93 \
-"../../../../Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+vcom -work proc_sys_reset_v5_0_13 -64 -93 \
+"../../../../Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/sim/Bounce_Timer_rst_clk_100MHz_100M_0.vhd" \

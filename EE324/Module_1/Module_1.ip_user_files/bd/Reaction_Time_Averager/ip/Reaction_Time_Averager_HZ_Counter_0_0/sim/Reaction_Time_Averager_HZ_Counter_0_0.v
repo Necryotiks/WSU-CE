@@ -60,16 +60,16 @@ module Reaction_Time_Averager_HZ_Counter_0_0 (
   o_Out
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Reaction_Time_Averager_i_CLK" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Reaction_Time_Averager_i_CLK, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
 input wire i_RST;
 output wire o_Out;
 
   HZ_Counter #(
-    .c_NUM(50000)
+    .c_NUM(8197)
   ) inst (
     .i_CLK(i_CLK),
     .i_RST(i_RST),

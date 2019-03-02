@@ -61,7 +61,7 @@ module Reaction_Time_Averager_Divider_0_0 (
   o_OUT
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Reaction_Time_Averager_Clock_Divider_0_0_o_Out_0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
 input wire [2 : 0] i_TC;

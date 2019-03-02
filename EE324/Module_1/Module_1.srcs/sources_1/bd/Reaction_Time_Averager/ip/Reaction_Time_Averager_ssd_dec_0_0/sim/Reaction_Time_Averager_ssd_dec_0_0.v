@@ -60,7 +60,7 @@ module Reaction_Time_Averager_ssd_dec_0_0 (
   o_Cathodes
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Reaction_Time_Averager_i_CLK" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Reaction_Time_Averager_i_CLK, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
 input wire [3 : 0] i_Num;

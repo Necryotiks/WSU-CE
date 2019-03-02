@@ -1,578 +1,927 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x985CBE932F102AA2" bd:device="xc7z007sclg400-1" bd:synthFlowMode="None" bd:tool_version="2018.2" bd:top="Reaction_Time_Averager" bd:version="1.00.a">
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram</spirit:library>
-    <spirit:name>Reaction_Time_Averager</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:parameters>
-      <spirit:parameter>
-        <spirit:name>isTop</spirit:name>
-        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
-      </spirit:parameter>
-    </spirit:parameters>
-    <spirit:busInterfaces>
-      <spirit:busInterface>
-        <spirit:name>CLK.I_CLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>i_CLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.I_RST</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>i_RST</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>POLARITY</spirit:name>
-            <spirit:value>ACTIVE_LOW</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-    </spirit:busInterfaces>
-    <spirit:model>
-      <spirit:views>
-        <spirit:view>
-          <spirit:name>BlockDiagram</spirit:name>
-          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
-          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="Reaction_Time_Averager_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-        </spirit:view>
-      </spirit:views>
-      <spirit:ports>
-        <spirit:port>
-          <spirit:name>o_Anodes_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>3</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>o_Cathodes_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>6</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>o_Ready_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>1</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>i_CLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>i_RST</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>o_T_NUM_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>2</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>i_Start_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>i_Terminate_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>i_React_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-      </spirit:ports>
-    </spirit:model>
-  </spirit:component>
-
-  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram</spirit:library>
-    <spirit:name>Reaction_Time_Averager_imp</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:componentInstances>
-      <spirit:componentInstance>
-        <spirit:instanceName>LSFR_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="LSFR" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_LSFR_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">LSFR</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>ssd_mux_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="ssd_mux" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_ssd_mux_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">ssd_mux</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>ssd_dec_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="ssd_dec" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_ssd_dec_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">ssd_dec</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>proc_sys_reset_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_proc_sys_reset_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>EXTRA_THICC_MUX_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="EXTRA_THICC_MUX" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_EXTRA_THICC_MUX_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">EXTRA_THICC_MUX</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>BCD_TO_BINARY_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="BCD_TO_BINARY" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_BCD_TO_BINARY_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">BCD_TO_BINARY</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>BINARY_TO_BCD_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="BINARY_TO_BCD" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_BINARY_TO_BCD_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">BINARY_TO_BCD</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>xlslice_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_xlslice_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_TO">12</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">15</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">16</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">4</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>xlslice_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_xlslice_0_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_TO">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">11</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">16</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">4</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>xlslice_2</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_xlslice_0_2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_TO">4</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">7</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">16</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">4</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>xlslice_3</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_xlslice_0_3</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_TO">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">3</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">16</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">4</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>Accumuator_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="Accumuator" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_Accumuator_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Accumuator</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>Divider_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="Divider" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_Divider_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Divider</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>RTM_FSM_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="RTM_FSM" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_RTM_FSM_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">RTM_FSM</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>Debounce_RTM_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="Debounce_RTM" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_Debounce_RTM_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Debounce_RTM</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>Debounce_RTM_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="Debounce_RTM" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_Debounce_RTM_0_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Debounce_RTM</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>Debounce_RTM_2</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="Debounce_RTM" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_Debounce_RTM_0_2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Debounce_RTM</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>HZ_Counter_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="HZ_Counter" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_HZ_Counter_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="c_NUM">8197</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">HZ_Counter</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>stopwatch_ssd_driver_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="stopwatch_ssd_driver" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">Reaction_Time_Averager_stopwatch_ssd_driver_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">stopwatch_ssd_driver</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-    </spirit:componentInstances>
-    <spirit:adHocConnections>
-      <spirit:adHocConnection>
-        <spirit:name>LSFR_0_o_OUT</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="LSFR_0" spirit:portRef="o_OUT"/>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="i_CVAL"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>RTM_FSM_0_o_CEN</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_CEN"/>
-        <spirit:internalPortReference spirit:componentRef="LSFR_0" spirit:portRef="i_EN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>ssd_mux_0_o_Out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="o_Out"/>
-        <spirit:internalPortReference spirit:componentRef="ssd_dec_0" spirit:portRef="i_Num"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>stopwatch_ssd_driver_0_o_Digit_1_val</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="o_Digit_1_val"/>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_SW_Digit_1"/>
-        <spirit:internalPortReference spirit:componentRef="BCD_TO_BINARY_0" spirit:portRef="i_Digit1"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>stopwatch_ssd_driver_0_o_Digit_2_val</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="o_Digit_2_val"/>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_SW_Digit_2"/>
-        <spirit:internalPortReference spirit:componentRef="BCD_TO_BINARY_0" spirit:portRef="i_Digit2"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>stopwatch_ssd_driver_0_o_Digit_3_val</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="o_Digit_3_val"/>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_SW_Digit_3"/>
-        <spirit:internalPortReference spirit:componentRef="BCD_TO_BINARY_0" spirit:portRef="i_Digit3"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>stopwatch_ssd_driver_0_o_Digit_4_val</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="o_Digit_4_val"/>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_SW_Digit_4"/>
-        <spirit:internalPortReference spirit:componentRef="BCD_TO_BINARY_0" spirit:portRef="i_Digit4"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>ssd_mux_0_o_Anodes</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="o_Anodes"/>
-        <spirit:externalPortReference spirit:portRef="o_Anodes_0"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>ssd_dec_0_o_Cathodes</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ssd_dec_0" spirit:portRef="o_Cathodes"/>
-        <spirit:externalPortReference spirit:portRef="o_Cathodes_0"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>RTM_FSM_0_o_Ready</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_Ready"/>
-        <spirit:externalPortReference spirit:portRef="o_Ready_0"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>i_CLK_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="LSFR_0" spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="ssd_dec_0" spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="slowest_sync_clk"/>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="HZ_Counter_0" spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_2" spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_0" spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_1" spirit:portRef="i_CLK"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>proc_sys_reset_0_peripheral_aresetn</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="peripheral_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="LSFR_0" spirit:portRef="i_RST"/>
-        <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="i_RST"/>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="i_RST"/>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_0" spirit:portRef="i_RST"/>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_1" spirit:portRef="i_RST"/>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_2" spirit:portRef="i_RST"/>
-        <spirit:internalPortReference spirit:componentRef="HZ_Counter_0" spirit:portRef="i_RST"/>
-        <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="i_RST"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>i_RST_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="i_RST"/>
-        <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="ext_reset_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>RTM_FSM_0_o_SWEN</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_SWEN"/>
-        <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="i_CLK_EN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>HZ_Counter_0_o_Out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="HZ_Counter_0" spirit:portRef="o_Out"/>
-        <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="i_Clock"/>
-        <spirit:internalPortReference spirit:componentRef="BCD_TO_BINARY_0" spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="Divider_0" spirit:portRef="i_CLK"/>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="i_CLK1KHZ"/>
-        <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="i_SUBCLK"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BCD_TO_BINARY_0_o_DATA</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BCD_TO_BINARY_0" spirit:portRef="o_DATA"/>
-        <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="i_DATA"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BINARY_TO_BCD_0_o_Digit1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="xlslice_0" spirit:portRef="Dout"/>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_T_Digit_1"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BINARY_TO_BCD_0_o_Digit2</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="xlslice_1" spirit:portRef="Dout"/>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_T_Digit_2"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BINARY_TO_BCD_0_o_Digit3</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="xlslice_2" spirit:portRef="Dout"/>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_T_Digit_3"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BINARY_TO_BCD_0_o_Digit4</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="xlslice_3" spirit:portRef="Dout"/>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_T_Digit_4"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>EXTRA_THICC_MUX_0_o_Digit_4</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="o_Digit_4"/>
-        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="i_Digit_4"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>EXTRA_THICC_MUX_0_o_Digit_3</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="o_Digit_3"/>
-        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="i_Digit_3"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>EXTRA_THICC_MUX_0_o_Digit_2</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="o_Digit_2"/>
-        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="i_Digit_2"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>EXTRA_THICC_MUX_0_o_Digit_1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="o_Digit_1"/>
-        <spirit:internalPortReference spirit:componentRef="ssd_mux_0" spirit:portRef="i_Digit_1"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>RTM_FSM_0_o_ACC_EN</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_ACC_EN"/>
-        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="i_Start"/>
-        <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="i_CLK_EN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>RTM_FSM_0_o_DONE</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_DONE"/>
-        <spirit:internalPortReference spirit:componentRef="EXTRA_THICC_MUX_0" spirit:portRef="i_Sel"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>RTM_FSM_0_o_T_NUM</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_T_NUM"/>
-        <spirit:externalPortReference spirit:portRef="o_T_NUM_0"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BINARY_TO_BCD_0_o_BCD</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="o_BCD"/>
-        <spirit:internalPortReference spirit:componentRef="xlslice_0" spirit:portRef="Din"/>
-        <spirit:internalPortReference spirit:componentRef="xlslice_1" spirit:portRef="Din"/>
-        <spirit:internalPortReference spirit:componentRef="xlslice_2" spirit:portRef="Din"/>
-        <spirit:internalPortReference spirit:componentRef="xlslice_3" spirit:portRef="Din"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>RTM_FSM_0_o_SRST</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_SRST"/>
-        <spirit:internalPortReference spirit:componentRef="stopwatch_ssd_driver_0" spirit:portRef="i_SRST"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Accumuator_0_o_OUT</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Accumuator_0" spirit:portRef="o_OUT"/>
-        <spirit:internalPortReference spirit:componentRef="Divider_0" spirit:portRef="i_DATA"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Divider_0_o_OUT</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Divider_0" spirit:portRef="o_OUT"/>
-        <spirit:internalPortReference spirit:componentRef="BINARY_TO_BCD_0" spirit:portRef="i_Binary"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>RTM_FSM_0_o_TRIAL_NUM</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="o_TRIAL_NUM"/>
-        <spirit:internalPortReference spirit:componentRef="Divider_0" spirit:portRef="i_TC"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>i_Start_0_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="i_Start_0"/>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_0" spirit:portRef="i_Signal"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>i_Terminate_0_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="i_Terminate_0"/>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_1" spirit:portRef="i_Signal"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>i_React_0_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="i_React_0"/>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_2" spirit:portRef="i_Signal"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Debounce_RTM_0_o_Assert</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_0" spirit:portRef="o_Assert"/>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="i_Start"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Debounce_RTM_1_o_Assert</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_1" spirit:portRef="o_Assert"/>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="i_Terminate"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Debounce_RTM_2_o_Assert</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Debounce_RTM_2" spirit:portRef="o_Assert"/>
-        <spirit:internalPortReference spirit:componentRef="RTM_FSM_0" spirit:portRef="i_React"/>
-      </spirit:adHocConnection>
-    </spirit:adHocConnections>
-  </spirit:design>
-
-</bd:repository>
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x985CBE93F118E5F0",
+      "device": "xc7z007sclg400-1",
+      "name": "Reaction_Time_Averager",
+      "synth_flow_mode": "None",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "xlslice_0": "",
+      "xlslice_1": "",
+      "xlslice_2": "",
+      "xlslice_3": "",
+      "Debounce_RTM_0": "",
+      "Debounce_RTM_1": "",
+      "Debounce_RTM_2": "",
+      "LSFR_0": "",
+      "RTM_FSM_0": "",
+      "ssd_dec_0": "",
+      "Accumuator_0": "",
+      "BCD_TO_BINARY_0": "",
+      "BINARY_TO_BCD_0": "",
+      "EXTRA_THICC_MUX_0": "",
+      "Divider_0": "",
+      "HZ_Counter_0": "",
+      "proc_sys_reset_0": "",
+      "ssd_mux_0": "",
+      "stopwatch_ssd_driver_0": ""
+    },
+    "ports": {
+      "o_Anodes_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "o_Cathodes_0": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "o_Ready_0": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "i_CLK": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "i_RST": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "o_T_NUM_0": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "i_Start_0": {
+        "direction": "I"
+      },
+      "i_Terminate_0": {
+        "direction": "I"
+      },
+      "i_React_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Reaction_Time_Averager_xlslice_0_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "15"
+          },
+          "DIN_TO": {
+            "value": "12"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_1": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Reaction_Time_Averager_xlslice_0_1",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "11"
+          },
+          "DIN_TO": {
+            "value": "8"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_2": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Reaction_Time_Averager_xlslice_0_2",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "7"
+          },
+          "DIN_TO": {
+            "value": "4"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_3": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Reaction_Time_Averager_xlslice_0_3",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_TO": {
+            "value": "0"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "Debounce_RTM_0": {
+        "vlnv": "xilinx.com:module_ref:Debounce_RTM:1.0",
+        "xci_name": "Reaction_Time_Averager_Debounce_RTM_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debounce_RTM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_Signal": {
+            "direction": "I"
+          },
+          "o_Assert": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debounce_RTM_1": {
+        "vlnv": "xilinx.com:module_ref:Debounce_RTM:1.0",
+        "xci_name": "Reaction_Time_Averager_Debounce_RTM_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debounce_RTM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_Signal": {
+            "direction": "I"
+          },
+          "o_Assert": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debounce_RTM_2": {
+        "vlnv": "xilinx.com:module_ref:Debounce_RTM:1.0",
+        "xci_name": "Reaction_Time_Averager_Debounce_RTM_0_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debounce_RTM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_Signal": {
+            "direction": "I"
+          },
+          "o_Assert": {
+            "direction": "O"
+          }
+        }
+      },
+      "LSFR_0": {
+        "vlnv": "xilinx.com:module_ref:LSFR:1.0",
+        "xci_name": "Reaction_Time_Averager_LSFR_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "LSFR",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_EN": {
+            "direction": "I"
+          },
+          "o_OUT": {
+            "direction": "O",
+            "left": "12",
+            "right": "0"
+          }
+        }
+      },
+      "RTM_FSM_0": {
+        "vlnv": "xilinx.com:module_ref:RTM_FSM:1.0",
+        "xci_name": "Reaction_Time_Averager_RTM_FSM_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RTM_FSM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK1KHZ": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_CVAL": {
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "i_Start": {
+            "direction": "I"
+          },
+          "i_Terminate": {
+            "direction": "I"
+          },
+          "i_React": {
+            "direction": "I"
+          },
+          "o_Ready": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "o_SWEN": {
+            "direction": "O"
+          },
+          "o_ACC_EN": {
+            "direction": "O"
+          },
+          "o_DONE": {
+            "direction": "O"
+          },
+          "o_T_NUM": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "o_SRST": {
+            "direction": "O"
+          },
+          "o_TRIAL_NUM": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "o_CEN": {
+            "direction": "O"
+          }
+        }
+      },
+      "ssd_dec_0": {
+        "vlnv": "xilinx.com:module_ref:ssd_dec:1.0",
+        "xci_name": "Reaction_Time_Averager_ssd_dec_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ssd_dec",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_Num": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Cathodes": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      },
+      "Accumuator_0": {
+        "vlnv": "xilinx.com:module_ref:Accumuator:1.0",
+        "xci_name": "Reaction_Time_Averager_Accumuator_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Accumuator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_CLK_EN": {
+            "direction": "I"
+          },
+          "i_DATA": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "o_OUT": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
+      },
+      "BCD_TO_BINARY_0": {
+        "vlnv": "xilinx.com:module_ref:BCD_TO_BINARY:1.0",
+        "xci_name": "Reaction_Time_Averager_BCD_TO_BINARY_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "BCD_TO_BINARY",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_Digit1": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_Digit2": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_Digit3": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_Digit4": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "o_DATA": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
+      },
+      "BINARY_TO_BCD_0": {
+        "vlnv": "xilinx.com:module_ref:BINARY_TO_BCD:1.0",
+        "xci_name": "Reaction_Time_Averager_BINARY_TO_BCD_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "BINARY_TO_BCD",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_Binary": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "i_Start": {
+            "direction": "I"
+          },
+          "o_BCD": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "EXTRA_THICC_MUX_0": {
+        "vlnv": "xilinx.com:module_ref:EXTRA_THICC_MUX:1.0",
+        "xci_name": "Reaction_Time_Averager_EXTRA_THICC_MUX_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "EXTRA_THICC_MUX",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_SW_Digit_1": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_SW_Digit_2": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_SW_Digit_3": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_SW_Digit_4": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_T_Digit_1": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_T_Digit_2": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_T_Digit_3": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_T_Digit_4": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_Sel": {
+            "direction": "I"
+          },
+          "o_Digit_1": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Digit_2": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Digit_3": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Digit_4": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Divider_0": {
+        "vlnv": "xilinx.com:module_ref:Divider:1.0",
+        "xci_name": "Reaction_Time_Averager_Divider_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_TC": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "i_DATA": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "o_OUT": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
+      },
+      "HZ_Counter_0": {
+        "vlnv": "xilinx.com:module_ref:HZ_Counter:1.0",
+        "xci_name": "Reaction_Time_Averager_HZ_Counter_0_0",
+        "parameters": {
+          "c_NUM": {
+            "value": "8197"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "HZ_Counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "o_Out": {
+            "direction": "O"
+          }
+        }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "Reaction_Time_Averager_proc_sys_reset_0_0"
+      },
+      "ssd_mux_0": {
+        "vlnv": "xilinx.com:module_ref:ssd_mux:1.0",
+        "xci_name": "Reaction_Time_Averager_ssd_mux_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ssd_mux",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_Digit_1": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_Digit_2": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_Digit_3": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "i_Digit_4": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Anodes": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "stopwatch_ssd_driver_0": {
+        "vlnv": "xilinx.com:module_ref:stopwatch_ssd_driver:1.0",
+        "xci_name": "Reaction_Time_Averager_stopwatch_ssd_driver_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "stopwatch_ssd_driver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_SUBCLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_CLK_EN": {
+            "direction": "I"
+          },
+          "i_SRST": {
+            "direction": "I"
+          },
+          "o_Digit_1_val": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Digit_2_val": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Digit_3_val": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_Digit_4_val": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "LSFR_0_o_OUT": {
+        "ports": [
+          "LSFR_0/o_OUT",
+          "RTM_FSM_0/i_CVAL"
+        ]
+      },
+      "RTM_FSM_0_o_CEN": {
+        "ports": [
+          "RTM_FSM_0/o_CEN",
+          "LSFR_0/i_EN"
+        ]
+      },
+      "ssd_mux_0_o_Out": {
+        "ports": [
+          "ssd_mux_0/o_Out",
+          "ssd_dec_0/i_Num"
+        ]
+      },
+      "stopwatch_ssd_driver_0_o_Digit_1_val": {
+        "ports": [
+          "stopwatch_ssd_driver_0/o_Digit_1_val",
+          "BCD_TO_BINARY_0/i_Digit1",
+          "EXTRA_THICC_MUX_0/i_SW_Digit_1"
+        ]
+      },
+      "stopwatch_ssd_driver_0_o_Digit_2_val": {
+        "ports": [
+          "stopwatch_ssd_driver_0/o_Digit_2_val",
+          "BCD_TO_BINARY_0/i_Digit2",
+          "EXTRA_THICC_MUX_0/i_SW_Digit_2"
+        ]
+      },
+      "stopwatch_ssd_driver_0_o_Digit_3_val": {
+        "ports": [
+          "stopwatch_ssd_driver_0/o_Digit_3_val",
+          "BCD_TO_BINARY_0/i_Digit3",
+          "EXTRA_THICC_MUX_0/i_SW_Digit_3"
+        ]
+      },
+      "stopwatch_ssd_driver_0_o_Digit_4_val": {
+        "ports": [
+          "stopwatch_ssd_driver_0/o_Digit_4_val",
+          "BCD_TO_BINARY_0/i_Digit4",
+          "EXTRA_THICC_MUX_0/i_SW_Digit_4"
+        ]
+      },
+      "ssd_mux_0_o_Anodes": {
+        "ports": [
+          "ssd_mux_0/o_Anodes",
+          "o_Anodes_0"
+        ]
+      },
+      "ssd_dec_0_o_Cathodes": {
+        "ports": [
+          "ssd_dec_0/o_Cathodes",
+          "o_Cathodes_0"
+        ]
+      },
+      "RTM_FSM_0_o_Ready": {
+        "ports": [
+          "RTM_FSM_0/o_Ready",
+          "o_Ready_0"
+        ]
+      },
+      "i_CLK_1": {
+        "ports": [
+          "i_CLK",
+          "Debounce_RTM_2/i_CLK",
+          "Debounce_RTM_0/i_CLK",
+          "Debounce_RTM_1/i_CLK",
+          "LSFR_0/i_CLK",
+          "ssd_dec_0/i_CLK",
+          "HZ_Counter_0/i_CLK",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "ssd_mux_0/i_CLK"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "Debounce_RTM_0/i_RST",
+          "Debounce_RTM_1/i_RST",
+          "Debounce_RTM_2/i_RST",
+          "LSFR_0/i_RST",
+          "RTM_FSM_0/i_RST",
+          "Accumuator_0/i_RST",
+          "HZ_Counter_0/i_RST",
+          "stopwatch_ssd_driver_0/i_RST"
+        ]
+      },
+      "i_RST_1": {
+        "ports": [
+          "i_RST",
+          "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "RTM_FSM_0_o_SWEN": {
+        "ports": [
+          "RTM_FSM_0/o_SWEN",
+          "stopwatch_ssd_driver_0/i_CLK_EN"
+        ]
+      },
+      "HZ_Counter_0_o_Out": {
+        "ports": [
+          "HZ_Counter_0/o_Out",
+          "RTM_FSM_0/i_CLK1KHZ",
+          "Accumuator_0/i_CLK",
+          "BCD_TO_BINARY_0/i_CLK",
+          "BINARY_TO_BCD_0/i_Clock",
+          "Divider_0/i_CLK",
+          "EXTRA_THICC_MUX_0/i_CLK",
+          "stopwatch_ssd_driver_0/i_SUBCLK"
+        ]
+      },
+      "BCD_TO_BINARY_0_o_DATA": {
+        "ports": [
+          "BCD_TO_BINARY_0/o_DATA",
+          "Accumuator_0/i_DATA"
+        ]
+      },
+      "BINARY_TO_BCD_0_o_Digit1": {
+        "ports": [
+          "xlslice_0/Dout",
+          "EXTRA_THICC_MUX_0/i_T_Digit_1"
+        ]
+      },
+      "BINARY_TO_BCD_0_o_Digit2": {
+        "ports": [
+          "xlslice_1/Dout",
+          "EXTRA_THICC_MUX_0/i_T_Digit_2"
+        ]
+      },
+      "BINARY_TO_BCD_0_o_Digit3": {
+        "ports": [
+          "xlslice_2/Dout",
+          "EXTRA_THICC_MUX_0/i_T_Digit_3"
+        ]
+      },
+      "BINARY_TO_BCD_0_o_Digit4": {
+        "ports": [
+          "xlslice_3/Dout",
+          "EXTRA_THICC_MUX_0/i_T_Digit_4"
+        ]
+      },
+      "EXTRA_THICC_MUX_0_o_Digit_4": {
+        "ports": [
+          "EXTRA_THICC_MUX_0/o_Digit_4",
+          "ssd_mux_0/i_Digit_4"
+        ]
+      },
+      "EXTRA_THICC_MUX_0_o_Digit_3": {
+        "ports": [
+          "EXTRA_THICC_MUX_0/o_Digit_3",
+          "ssd_mux_0/i_Digit_3"
+        ]
+      },
+      "EXTRA_THICC_MUX_0_o_Digit_2": {
+        "ports": [
+          "EXTRA_THICC_MUX_0/o_Digit_2",
+          "ssd_mux_0/i_Digit_2"
+        ]
+      },
+      "EXTRA_THICC_MUX_0_o_Digit_1": {
+        "ports": [
+          "EXTRA_THICC_MUX_0/o_Digit_1",
+          "ssd_mux_0/i_Digit_1"
+        ]
+      },
+      "RTM_FSM_0_o_ACC_EN": {
+        "ports": [
+          "RTM_FSM_0/o_ACC_EN",
+          "Accumuator_0/i_CLK_EN",
+          "BINARY_TO_BCD_0/i_Start"
+        ]
+      },
+      "RTM_FSM_0_o_DONE": {
+        "ports": [
+          "RTM_FSM_0/o_DONE",
+          "EXTRA_THICC_MUX_0/i_Sel"
+        ]
+      },
+      "RTM_FSM_0_o_T_NUM": {
+        "ports": [
+          "RTM_FSM_0/o_T_NUM",
+          "o_T_NUM_0"
+        ]
+      },
+      "BINARY_TO_BCD_0_o_BCD": {
+        "ports": [
+          "BINARY_TO_BCD_0/o_BCD",
+          "xlslice_0/Din",
+          "xlslice_1/Din",
+          "xlslice_2/Din",
+          "xlslice_3/Din"
+        ]
+      },
+      "RTM_FSM_0_o_SRST": {
+        "ports": [
+          "RTM_FSM_0/o_SRST",
+          "stopwatch_ssd_driver_0/i_SRST"
+        ]
+      },
+      "Accumuator_0_o_OUT": {
+        "ports": [
+          "Accumuator_0/o_OUT",
+          "Divider_0/i_DATA"
+        ]
+      },
+      "Divider_0_o_OUT": {
+        "ports": [
+          "Divider_0/o_OUT",
+          "BINARY_TO_BCD_0/i_Binary"
+        ]
+      },
+      "RTM_FSM_0_o_TRIAL_NUM": {
+        "ports": [
+          "RTM_FSM_0/o_TRIAL_NUM",
+          "Divider_0/i_TC"
+        ]
+      },
+      "i_Start_0_1": {
+        "ports": [
+          "i_Start_0",
+          "Debounce_RTM_0/i_Signal"
+        ]
+      },
+      "i_Terminate_0_1": {
+        "ports": [
+          "i_Terminate_0",
+          "Debounce_RTM_1/i_Signal"
+        ]
+      },
+      "i_React_0_1": {
+        "ports": [
+          "i_React_0",
+          "Debounce_RTM_2/i_Signal"
+        ]
+      },
+      "Debounce_RTM_0_o_Assert": {
+        "ports": [
+          "Debounce_RTM_0/o_Assert",
+          "RTM_FSM_0/i_Start"
+        ]
+      },
+      "Debounce_RTM_1_o_Assert": {
+        "ports": [
+          "Debounce_RTM_1/o_Assert",
+          "RTM_FSM_0/i_Terminate"
+        ]
+      },
+      "Debounce_RTM_2_o_Assert": {
+        "ports": [
+          "Debounce_RTM_2/o_Assert",
+          "RTM_FSM_0/i_React"
+        ]
+      }
+    }
+  }
+}

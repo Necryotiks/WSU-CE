@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 26 23:06:48 2019" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  1 22:45:34 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Bounce_Timer" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -37,7 +37,7 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE FULLNAME="/Bounce_Counter_FSM_0" HWVERSION="1.0" INSTANCE="Bounce_Counter_FSM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Bounce_Counter_FSM" VLNV="xilinx.com:module_ref:Bounce_Counter_FSM:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/Bounce_Counter_FSM_0" HWVERSION="1.0" INSTANCE="Bounce_Counter_FSM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Bounce_Counter_FSM" VLNV="xilinx.com:module_ref:Bounce_Counter_FSM:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Bounce_Timer_Bounce_Counter_FSM_0_0"/>
@@ -67,10 +67,10 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/HZ_Counter_0" HWVERSION="1.0" INSTANCE="HZ_Counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="HZ_Counter" VLNV="xilinx.com:module_ref:HZ_Counter:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/HZ_Counter_0" HWVERSION="1.0" INSTANCE="HZ_Counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="HZ_Counter" VLNV="xilinx.com:module_ref:HZ_Counter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="c_NUM" VALUE="0"/>
+        <PARAMETER NAME="c_NUM" VALUE="23809"/>
         <PARAMETER NAME="Component_Name" VALUE="Bounce_Timer_HZ_Counter_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -87,15 +87,15 @@
         </PORT>
         <PORT DIR="O" NAME="o_Out" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SUBCLK"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/rst_clk_100MHz_100M" HWVERSION="5.0" INSTANCE="rst_clk_100MHz_100M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+    <MODULE COREREVISION="13" FULLNAME="/rst_clk_100MHz_100M" HWVERSION="5.0" INSTANCE="rst_clk_100MHz_100M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
       </DOCUMENTS>
@@ -135,14 +135,14 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="Bounce_Counter_FSM_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/ssd_dec_0" HWVERSION="1.0" INSTANCE="ssd_dec_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_dec" VLNV="xilinx.com:module_ref:ssd_dec:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/ssd_dec_0" HWVERSION="1.0" INSTANCE="ssd_dec_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_dec" VLNV="xilinx.com:module_ref:ssd_dec:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Bounce_Timer_ssd_dec_0_0"/>
@@ -167,7 +167,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/ssd_mux_0" HWVERSION="1.0" INSTANCE="ssd_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_mux" VLNV="xilinx.com:module_ref:ssd_mux:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/ssd_mux_0" HWVERSION="1.0" INSTANCE="ssd_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_mux" VLNV="xilinx.com:module_ref:ssd_mux:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Bounce_Timer_ssd_mux_0_0"/>
@@ -212,7 +212,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/stopwatch_ssd_driver_0" HWVERSION="1.0" INSTANCE="stopwatch_ssd_driver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="stopwatch_ssd_driver" VLNV="xilinx.com:module_ref:stopwatch_ssd_driver:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/stopwatch_ssd_driver_0" HWVERSION="1.0" INSTANCE="stopwatch_ssd_driver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="stopwatch_ssd_driver" VLNV="xilinx.com:module_ref:stopwatch_ssd_driver:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DISPLAY_MODE" VALUE="9"/>

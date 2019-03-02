@@ -61,7 +61,7 @@ module Reaction_Time_Averager_BINARY_TO_BCD_0_0 (
   o_BCD
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clock, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Reaction_Time_Averager_Clock_Divider_0_0_o_Out_0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clock, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clock CLK" *)
 input wire i_Clock;
 input wire [13 : 0] i_Binary;

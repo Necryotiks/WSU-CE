@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Tue Feb 26 23:06:48 2019
-//Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+//Date        : Fri Mar  1 22:45:34 2019
+//Host        : Necryotiks running 64-bit unknown
 //Command     : generate_target Bounce_Timer.bd
 //Design      : Bounce_Timer
 //Purpose     : IP block netlist
@@ -16,8 +16,8 @@ module Bounce_Timer
     i_Signal,
     o_Anodes_0,
     o_Cathodes_0);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.I_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.I_CLK, CLK_DOMAIN Bounce_Timer_clk_100MHz, FREQ_HZ 100000000, PHASE 0.000" *) input i_CLK;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.I_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.I_RST, POLARITY ACTIVE_LOW" *) input i_RST;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.I_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.I_CLK, CLK_DOMAIN Bounce_Timer_clk_100MHz, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input i_CLK;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.I_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.I_RST, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input i_RST;
   input i_Signal;
   output [3:0]o_Anodes_0;
   output [6:0]o_Cathodes_0;

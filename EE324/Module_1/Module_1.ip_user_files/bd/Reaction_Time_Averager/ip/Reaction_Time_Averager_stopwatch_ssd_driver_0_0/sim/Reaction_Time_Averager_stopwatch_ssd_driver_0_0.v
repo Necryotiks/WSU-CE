@@ -65,10 +65,10 @@ module Reaction_Time_Averager_stopwatch_ssd_driver_0_0 (
   o_Digit_4_val
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_SUBCLK, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Reaction_Time_Averager_Clock_Divider_0_0_o_Out_0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_SUBCLK, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_SUBCLK CLK" *)
 input wire i_SUBCLK;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
 input wire i_RST;
 input wire i_CLK_EN;
@@ -79,7 +79,7 @@ output wire [3 : 0] o_Digit_3_val;
 output wire [3 : 0] o_Digit_4_val;
 
   stopwatch_ssd_driver #(
-    .c_HEX_DEC(9)
+    .DISPLAY_MODE(9)
   ) inst (
     .i_SUBCLK(i_SUBCLK),
     .i_RST(i_RST),

@@ -29,7 +29,7 @@ input i_CLK,
 output  [3:0] o_Out,
 output  [3:0] o_Anodes
     );
-    reg [26:0] r_SUBCLK;
+    reg [1:0] r_SUBCLK;
     
     wire w_CLK;
     wire [3:0] w_Digit_1;
@@ -53,7 +53,7 @@ output  [3:0] o_Anodes
     end 
     always@ (*)
         begin
-            case(r_SUBCLK[17:16])
+            case(r_SUBCLK)
             2'b00: 
             begin
                 r_Out = w_Digit_1;

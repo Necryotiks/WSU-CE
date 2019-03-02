@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue Feb 26 23:11:38 2019
-| Host         : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri Mar  1 22:46:30 2019
+| Host         : Necryotiks running 64-bit unknown
 | Command      : report_utilization -file Bounce_Timer_wrapper_utilization_synth.rpt -pb Bounce_Timer_wrapper_utilization_synth.pb
 | Design       : Bounce_Timer_wrapper
 | Device       : 7z007sclg400-1
@@ -30,14 +30,14 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |   97 |     0 |     14400 |  0.67 |
-|   LUT as Logic             |   96 |     0 |     14400 |  0.67 |
+| Slice LUTs*                |  100 |     0 |     14400 |  0.69 |
+|   LUT as Logic             |   99 |     0 |     14400 |  0.69 |
 |   LUT as Memory            |    1 |     0 |      6000 |  0.02 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    1 |     0 |           |       |
-| Slice Registers            |  118 |     0 |     28800 |  0.41 |
-|   Register as Flip Flop    |  117 |     0 |     28800 |  0.41 |
-|   Register as Latch        |    1 |     0 |     28800 | <0.01 |
+| Slice Registers            |  102 |     0 |     28800 |  0.35 |
+|   Register as Flip Flop    |  102 |     0 |     28800 |  0.35 |
+|   Register as Latch        |    0 |     0 |     28800 |  0.00 |
 | F7 Muxes                   |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 52    |          Yes |           - |        Reset |
+| 1     |          Yes |           - |          Set |
+| 50    |          Yes |           - |        Reset |
 | 4     |          Yes |         Set |            - |
-| 62    |          Yes |       Reset |            - |
+| 47    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,20 +148,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   62 |        Flop & Latch |
-| FDCE     |   51 |        Flop & Latch |
-| LUT5     |   48 |                 LUT |
-| LUT4     |   18 |                 LUT |
-| LUT6     |   17 |                 LUT |
+| FDCE     |   50 |        Flop & Latch |
+| LUT5     |   47 |                 LUT |
+| FDRE     |   47 |        Flop & Latch |
+| LUT6     |   20 |                 LUT |
+| LUT4     |   19 |                 LUT |
 | LUT2     |   16 |                 LUT |
-| CARRY4   |   13 |          CarryLogic |
 | OBUF     |   11 |                  IO |
+| CARRY4   |    8 |          CarryLogic |
+| LUT3     |    6 |                 LUT |
 | LUT1     |    6 |                 LUT |
 | FDSE     |    4 |        Flop & Latch |
-| LUT3     |    3 |                 LUT |
 | IBUF     |    3 |                  IO |
 | SRL16E   |    1 |  Distributed Memory |
-| LDCE     |    1 |        Flop & Latch |
+| FDPE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

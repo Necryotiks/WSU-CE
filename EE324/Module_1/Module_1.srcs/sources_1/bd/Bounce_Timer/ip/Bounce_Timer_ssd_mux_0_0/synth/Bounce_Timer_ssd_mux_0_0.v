@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:ssd_mux:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "ssd_mux,Vivado 2018.2" *)
+(* X_CORE_INFO = "ssd_mux,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "Bounce_Timer_ssd_mux_0_0,ssd_mux,{}" *)
-(* CORE_GENERATION_INFO = "Bounce_Timer_ssd_mux_0_0,ssd_mux,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=ssd_mux,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG}" *)
+(* CORE_GENERATION_INFO = "Bounce_Timer_ssd_mux_0_0,ssd_mux,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=ssd_mux,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Bounce_Timer_ssd_mux_0_0 (
@@ -69,7 +69,7 @@ input wire [3 : 0] i_Digit_1;
 input wire [3 : 0] i_Digit_2;
 input wire [3 : 0] i_Digit_3;
 input wire [3 : 0] i_Digit_4;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 100000000, PHASE 0.000" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
 output wire [3 : 0] o_Out;

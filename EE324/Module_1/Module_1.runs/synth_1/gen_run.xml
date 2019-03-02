@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1551251451">
-  <File Type="PA-TCL" Name="Bounce_Timer_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Bounce_Timer_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="Bounce_Timer_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="Bounce_Timer_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="Bounce_Timer_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Bounce_Timer_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="Bounce_Timer_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Bounce_Timer_wrapper_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1551509141">
   <File Type="VDS-TIMING-PB" Name="Bounce_Timer_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Bounce_Timer_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="Bounce_Timer_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Bounce_Timer_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="Bounce_Timer_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Bounce_Timer_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="Bounce_Timer_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="Bounce_Timer_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="Bounce_Timer_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Parts/ssd_dec.v">
@@ -32,7 +32,7 @@
     <File Path="$PSRCDIR/sources_1/imports/Parts/stopwatch_ssd_driver.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../Parts/stopwatch_ssd_driver.v"/>
-        <Attr Name="ImportTime" Val="1543718052"/>
+        <Attr Name="ImportTime" Val="1551401390"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -181,15 +181,6 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/imports/new/RTM_cons.xdc">
-      <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Module_12/Module_12.srcs/constrs_1/new/RTM_cons.xdc"/>
-        <Attr Name="ImportTime" Val="1543718050"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/constrs_1/new/Bounce_RTM_cons.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -197,7 +188,14 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/Bounce_RTM_cons.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">

@@ -7,8 +7,8 @@
 -makelib xcelium_lib/lib_cdc_v1_0_2 \
   "../../../../Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
 -endlib
--makelib xcelium_lib/proc_sys_reset_v5_0_12 \
-  "../../../../Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-makelib xcelium_lib/proc_sys_reset_v5_0_13 \
+  "../../../../Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/sim/Bounce_Timer_rst_clk_100MHz_100M_0.vhd" \

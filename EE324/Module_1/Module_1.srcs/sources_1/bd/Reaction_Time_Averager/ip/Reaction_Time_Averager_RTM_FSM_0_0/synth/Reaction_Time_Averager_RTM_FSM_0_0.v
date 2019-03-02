@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:RTM_FSM:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "RTM_FSM,Vivado 2018.2" *)
+(* X_CORE_INFO = "RTM_FSM,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "Reaction_Time_Averager_RTM_FSM_0_0,RTM_FSM,{}" *)
-(* CORE_GENERATION_INFO = "Reaction_Time_Averager_RTM_FSM_0_0,RTM_FSM,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=RTM_FSM,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG}" *)
+(* CORE_GENERATION_INFO = "Reaction_Time_Averager_RTM_FSM_0_0,RTM_FSM,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=RTM_FSM,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Reaction_Time_Averager_RTM_FSM_0_0 (
@@ -72,10 +72,10 @@ module Reaction_Time_Averager_RTM_FSM_0_0 (
   o_CEN
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK1KHZ, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Reaction_Time_Averager_Clock_Divider_0_0_o_Out_0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK1KHZ, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK1KHZ CLK" *)
 input wire i_CLK1KHZ;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
 input wire i_RST;
 input wire [12 : 0] i_CVAL;

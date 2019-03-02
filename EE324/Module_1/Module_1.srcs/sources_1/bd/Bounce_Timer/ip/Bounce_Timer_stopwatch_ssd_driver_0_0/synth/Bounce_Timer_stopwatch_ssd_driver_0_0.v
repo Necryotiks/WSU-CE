@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:stopwatch_ssd_driver:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "stopwatch_ssd_driver,Vivado 2018.2" *)
+(* X_CORE_INFO = "stopwatch_ssd_driver,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "Bounce_Timer_stopwatch_ssd_driver_0_0,stopwatch_ssd_driver,{}" *)
-(* CORE_GENERATION_INFO = "Bounce_Timer_stopwatch_ssd_driver_0_0,stopwatch_ssd_driver,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=stopwatch_ssd_driver,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,DISPLAY_MODE=9}" *)
+(* CORE_GENERATION_INFO = "Bounce_Timer_stopwatch_ssd_driver_0_0,stopwatch_ssd_driver,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=stopwatch_ssd_driver,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,DISPLAY_MODE=9}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Bounce_Timer_stopwatch_ssd_driver_0_0 (
@@ -66,10 +66,10 @@ module Bounce_Timer_stopwatch_ssd_driver_0_0 (
   o_Digit_4_val
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_SUBCLK, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_SUBCLK, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_SUBCLK CLK" *)
 input wire i_SUBCLK;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
 input wire i_RST;
 input wire i_CLK_EN;

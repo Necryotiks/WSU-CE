@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb 25 13:31:28 2019" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Feb 28 16:57:39 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Reaction_Time_Averager" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -21,15 +21,15 @@
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
-        <CONNECTION INSTANCE="LSFR_0" PORT="i_CLK"/>
-        <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
-        <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
-        <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_CLK"/>
-        <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="Debounce_RTM_2" PORT="i_CLK"/>
         <CONNECTION INSTANCE="Debounce_RTM_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="Debounce_RTM_1" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="LSFR_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
@@ -62,7 +62,7 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE FULLNAME="/Accumuator_0" HWVERSION="1.0" INSTANCE="Accumuator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Accumuator" VLNV="xilinx.com:module_ref:Accumuator:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/Accumuator_0" HWVERSION="1.0" INSTANCE="Accumuator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Accumuator" VLNV="xilinx.com:module_ref:Accumuator:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_Accumuator_0_0"/>
@@ -97,7 +97,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/BCD_TO_BINARY_0" HWVERSION="1.0" INSTANCE="BCD_TO_BINARY_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BCD_TO_BINARY" VLNV="xilinx.com:module_ref:BCD_TO_BINARY:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/BCD_TO_BINARY_0" HWVERSION="1.0" INSTANCE="BCD_TO_BINARY_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BCD_TO_BINARY" VLNV="xilinx.com:module_ref:BCD_TO_BINARY:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_BCD_TO_BINARY_0_0"/>
@@ -137,7 +137,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/BINARY_TO_BCD_0" HWVERSION="1.0" INSTANCE="BINARY_TO_BCD_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BINARY_TO_BCD" VLNV="xilinx.com:module_ref:BINARY_TO_BCD:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/BINARY_TO_BCD_0" HWVERSION="1.0" INSTANCE="BINARY_TO_BCD_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BINARY_TO_BCD" VLNV="xilinx.com:module_ref:BINARY_TO_BCD:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="INPUT_WIDTH" VALUE="14"/>
@@ -172,7 +172,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/Debounce_RTM_0" HWVERSION="1.0" INSTANCE="Debounce_RTM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Debounce_RTM" VLNV="xilinx.com:module_ref:Debounce_RTM:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/Debounce_RTM_0" HWVERSION="1.0" INSTANCE="Debounce_RTM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Debounce_RTM" VLNV="xilinx.com:module_ref:Debounce_RTM:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_Debounce_RTM_0_0"/>
@@ -202,7 +202,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/Debounce_RTM_1" HWVERSION="1.0" INSTANCE="Debounce_RTM_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Debounce_RTM" VLNV="xilinx.com:module_ref:Debounce_RTM:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/Debounce_RTM_1" HWVERSION="1.0" INSTANCE="Debounce_RTM_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Debounce_RTM" VLNV="xilinx.com:module_ref:Debounce_RTM:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_Debounce_RTM_0_1"/>
@@ -232,7 +232,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/Debounce_RTM_2" HWVERSION="1.0" INSTANCE="Debounce_RTM_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Debounce_RTM" VLNV="xilinx.com:module_ref:Debounce_RTM:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/Debounce_RTM_2" HWVERSION="1.0" INSTANCE="Debounce_RTM_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Debounce_RTM" VLNV="xilinx.com:module_ref:Debounce_RTM:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_Debounce_RTM_0_2"/>
@@ -262,7 +262,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/Divider_0" HWVERSION="1.0" INSTANCE="Divider_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Divider" VLNV="xilinx.com:module_ref:Divider:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/Divider_0" HWVERSION="1.0" INSTANCE="Divider_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Divider" VLNV="xilinx.com:module_ref:Divider:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_Divider_0_0"/>
@@ -292,7 +292,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/EXTRA_THICC_MUX_0" HWVERSION="1.0" INSTANCE="EXTRA_THICC_MUX_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="EXTRA_THICC_MUX" VLNV="xilinx.com:module_ref:EXTRA_THICC_MUX:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/EXTRA_THICC_MUX_0" HWVERSION="1.0" INSTANCE="EXTRA_THICC_MUX_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="EXTRA_THICC_MUX" VLNV="xilinx.com:module_ref:EXTRA_THICC_MUX:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_EXTRA_THICC_MUX_0_0"/>
@@ -372,7 +372,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/HZ_Counter_0" HWVERSION="1.0" INSTANCE="HZ_Counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="HZ_Counter" VLNV="xilinx.com:module_ref:HZ_Counter:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/HZ_Counter_0" HWVERSION="1.0" INSTANCE="HZ_Counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="HZ_Counter" VLNV="xilinx.com:module_ref:HZ_Counter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="c_NUM" VALUE="8197"/>
@@ -392,18 +392,18 @@
         </PORT>
         <PORT DIR="O" NAME="o_Out" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_CLK1KHZ"/>
             <CONNECTION INSTANCE="Accumuator_0" PORT="i_CLK"/>
-            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Clock"/>
             <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Clock"/>
             <CONNECTION INSTANCE="Divider_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SUBCLK"/>
-            <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_CLK1KHZ"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/LSFR_0" HWVERSION="1.0" INSTANCE="LSFR_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="LSFR" VLNV="xilinx.com:module_ref:LSFR:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/LSFR_0" HWVERSION="1.0" INSTANCE="LSFR_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="LSFR" VLNV="xilinx.com:module_ref:LSFR:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_LSFR_0_0"/>
@@ -433,7 +433,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/RTM_FSM_0" HWVERSION="1.0" INSTANCE="RTM_FSM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="RTM_FSM" VLNV="xilinx.com:module_ref:RTM_FSM:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/RTM_FSM_0" HWVERSION="1.0" INSTANCE="RTM_FSM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="RTM_FSM" VLNV="xilinx.com:module_ref:RTM_FSM:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_RTM_FSM_0_0"/>
@@ -482,8 +482,8 @@
         </PORT>
         <PORT DIR="O" NAME="o_ACC_EN" SIGIS="undef" SIGNAME="RTM_FSM_0_o_ACC_EN">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Start"/>
             <CONNECTION INSTANCE="Accumuator_0" PORT="i_CLK_EN"/>
+            <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Start"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_DONE" SIGIS="undef" SIGNAME="RTM_FSM_0_o_DONE">
@@ -514,7 +514,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/proc_sys_reset_0" HWVERSION="5.0" INSTANCE="proc_sys_reset_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+    <MODULE COREREVISION="13" FULLNAME="/proc_sys_reset_0" HWVERSION="5.0" INSTANCE="proc_sys_reset_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
       </DOCUMENTS>
@@ -553,20 +553,20 @@
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="LSFR_0" PORT="i_RST"/>
-            <CONNECTION INSTANCE="Accumuator_0" PORT="i_RST"/>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
-            <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="Debounce_RTM_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="Debounce_RTM_1" PORT="i_RST"/>
             <CONNECTION INSTANCE="Debounce_RTM_2" PORT="i_RST"/>
+            <CONNECTION INSTANCE="LSFR_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="Accumuator_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/ssd_dec_0" HWVERSION="1.0" INSTANCE="ssd_dec_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_dec" VLNV="xilinx.com:module_ref:ssd_dec:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/ssd_dec_0" HWVERSION="1.0" INSTANCE="ssd_dec_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_dec" VLNV="xilinx.com:module_ref:ssd_dec:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_ssd_dec_0_0"/>
@@ -591,7 +591,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/ssd_mux_0" HWVERSION="1.0" INSTANCE="ssd_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_mux" VLNV="xilinx.com:module_ref:ssd_mux:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/ssd_mux_0" HWVERSION="1.0" INSTANCE="ssd_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ssd_mux" VLNV="xilinx.com:module_ref:ssd_mux:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_ssd_mux_0_0"/>
@@ -636,10 +636,10 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/stopwatch_ssd_driver_0" HWVERSION="1.0" INSTANCE="stopwatch_ssd_driver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="stopwatch_ssd_driver" VLNV="xilinx.com:module_ref:stopwatch_ssd_driver:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/stopwatch_ssd_driver_0" HWVERSION="1.0" INSTANCE="stopwatch_ssd_driver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="stopwatch_ssd_driver" VLNV="xilinx.com:module_ref:stopwatch_ssd_driver:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="c_HEX_DEC" VALUE="9"/>
+        <PARAMETER NAME="DISPLAY_MODE" VALUE="9"/>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_stopwatch_ssd_driver_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -666,32 +666,32 @@
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Digit_1_val" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_1_val">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_1"/>
             <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_Digit1"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Digit_2_val" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_2_val">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_2"/>
             <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_Digit2"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Digit_3_val" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_3_val">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_3"/>
             <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_Digit3"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Digit_4_val" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_4_val">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_4"/>
             <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_Digit4"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_SW_Digit_4"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
@@ -715,7 +715,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/xlslice_1" HWVERSION="1.0" INSTANCE="xlslice_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/xlslice_1" HWVERSION="1.0" INSTANCE="xlslice_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
@@ -739,7 +739,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/xlslice_2" HWVERSION="1.0" INSTANCE="xlslice_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/xlslice_2" HWVERSION="1.0" INSTANCE="xlslice_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
@@ -763,7 +763,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/xlslice_3" HWVERSION="1.0" INSTANCE="xlslice_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/xlslice_3" HWVERSION="1.0" INSTANCE="xlslice_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>

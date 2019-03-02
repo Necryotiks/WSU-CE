@@ -47,34 +47,29 @@ module Bounce_Counter_FSM(
         case(r_CURRENT_STATE)
             s_WAIT:
                 begin
-                    if(i_Signal == 1'd1) begin
-                        r_CEN <= 1'd1;
+                    if(i_Signal == 1'd1) 
                         r_NEXT_STATE <= s_ASSERT;
-                        end
                     else 
                     begin
-                        r_CEN <= 1'd0;
                         r_NEXT_STATE <= s_WAIT;
                     end
                 end
             s_ASSERT:
                 begin
                     if(i_Signal == 1'd1) begin
-                        r_CEN <= 1'd1;
                         r_NEXT_STATE <= s_ASSERT;
                         end
                     else
                         begin
-                        r_CEN <= 1'd0;
                         r_NEXT_STATE <= s_DONE;
                         end
                 end
              s_DONE:
                 begin
-                    r_CEN <= 1'd0;
                     r_NEXT_STATE <= s_DONE;
                 end
-              default: r_NEXT_STATE <= s_WAIT;
+              default: 
+              r_NEXT_STATE <= s_WAIT;
              endcase 
    end
     
@@ -84,6 +79,15 @@ module Bounce_Counter_FSM(
             r_CURRENT_STATE <= s_WAIT;
         else
             r_CURRENT_STATE <= r_NEXT_STATE;
+   end
+   
+   
+   always@(posedge w_CLK)
+   begin
+   if((i_Signal == 1'd1) && ((r_CURRENT_STATE == s_WAIT) || (r_CURRENT_STATE == s_ASSERT)))
+        r_CEN <= 1'd1;
+   else
+        r_CEN <= 1'd0;
    end
    
    
