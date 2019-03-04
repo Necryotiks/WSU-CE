@@ -1,0 +1,25 @@
+/*
+ * functions.c
+ *
+ *  Created on: Mar 4, 2019
+ *      Author: Sergaljerk
+ */
+
+#include "functions.h"
+
+void demoLEDS()
+{
+	int i = 0;
+
+
+	LED = 0x00; //LEDS ARE OFF
+	while(1)
+	{
+		LED = ~LED; //FLIP VALUE
+
+		for(i = 0; i <10000000; i++)
+		{
+			;
+		}
+	}
+}

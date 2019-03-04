@@ -1,0 +1,24 @@
+/*
+ * functions.c
+ *
+ *  Created on: Mar 4, 2019
+ *      Author: Sergaljerk
+ */
+
+
+void demoLEDS()
+{
+	int i = 0;
+	uint32_t * LED = (uint32_t *)0x4BB00000;
+
+	LED[0] = 0x00; //LEDS ARE OFF
+	while(1)
+	{
+		LED[0] = ~LED[0]; //FLIP VALUE
+
+		for(i = 0; i <10000000; i++)
+		{
+			;
+		}
+	}
+}

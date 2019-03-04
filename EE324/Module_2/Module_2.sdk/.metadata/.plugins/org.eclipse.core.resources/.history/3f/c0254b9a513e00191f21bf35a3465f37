@@ -1,0 +1,15 @@
+/*
+ * functions.h
+ *
+ *  Created on: Mar 4, 2019
+ *      Author: Sergaljerk
+ */
+
+#ifndef SRC_FUNCTIONS_H_
+#define SRC_FUNCTIONS_H_
+
+
+#endif /* SRC_FUNCTIONS_H_ */
+#include "xil_types.h"
+#define LED *((uint32_t *)0x4BB00000)
+void demoLEDS();
