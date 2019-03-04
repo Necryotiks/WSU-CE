@@ -1,0 +1,182 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x86A01E0B1CAADB69",
+      "device": "xc7z007sclg400-1",
+      "name": "SVD_DRIVER_BD",
+      "synth_flow_mode": "None",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "SVD_DRIVER_0": ""
+    },
+    "ports": {
+      "i_CLK": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "i_RST_0:i_RST",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "SVD_DRIVER_BD_i_CLK_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "o_DIGIT_4": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "i_CLK_EN": {
+        "direction": "I"
+      },
+      "o_DIGIT_3": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "i_RST": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "o_DIGIT_2": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "o_DIGIT_1": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "SVD_DRIVER_0": {
+        "vlnv": "xilinx.com:module_ref:SVD_DRIVER:1.0",
+        "xci_name": "SVD_DRIVER_BD_SVD_DRIVER_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "SVD_DRIVER",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "SVD_DRIVER_BD_i_CLK_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW"
+              }
+            }
+          },
+          "i_CLK_EN": {
+            "direction": "I"
+          },
+          "o_DIGIT_1": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_DIGIT_2": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_DIGIT_3": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "o_DIGIT_4": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "i_CLK_0_1": {
+        "ports": [
+          "i_CLK",
+          "SVD_DRIVER_0/i_CLK"
+        ]
+      },
+      "SVD_DRIVER_0_o_DIGIT_4": {
+        "ports": [
+          "SVD_DRIVER_0/o_DIGIT_4",
+          "o_DIGIT_4"
+        ]
+      },
+      "i_CLK_EN_0_1": {
+        "ports": [
+          "i_CLK_EN",
+          "SVD_DRIVER_0/i_CLK_EN"
+        ]
+      },
+      "SVD_DRIVER_0_o_DIGIT_3": {
+        "ports": [
+          "SVD_DRIVER_0/o_DIGIT_3",
+          "o_DIGIT_3"
+        ]
+      },
+      "i_RST_0_1": {
+        "ports": [
+          "i_RST",
+          "SVD_DRIVER_0/i_RST"
+        ]
+      },
+      "SVD_DRIVER_0_o_DIGIT_2": {
+        "ports": [
+          "SVD_DRIVER_0/o_DIGIT_2",
+          "o_DIGIT_2"
+        ]
+      },
+      "SVD_DRIVER_0_o_DIGIT_1": {
+        "ports": [
+          "SVD_DRIVER_0/o_DIGIT_1",
+          "o_DIGIT_1"
+        ]
+      }
+    }
+  }
+}

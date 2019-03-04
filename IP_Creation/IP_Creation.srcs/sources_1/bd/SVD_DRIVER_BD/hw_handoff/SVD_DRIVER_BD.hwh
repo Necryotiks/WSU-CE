@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar  2 22:09:20 2019" VIVADOVERSION="2018.3">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="SVD_DRIVER_BD" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SVD_DRIVER_0" PORT="i_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_DIGIT_4" RIGHT="0" SIGIS="undef" SIGNAME="SVD_DRIVER_0_o_DIGIT_4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SVD_DRIVER_0" PORT="o_DIGIT_4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_CLK_EN" SIGIS="undef" SIGNAME="External_Ports_i_CLK_EN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SVD_DRIVER_0" PORT="i_CLK_EN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_DIGIT_3" RIGHT="0" SIGIS="undef" SIGNAME="SVD_DRIVER_0_o_DIGIT_3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SVD_DRIVER_0" PORT="o_DIGIT_3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SVD_DRIVER_0" PORT="i_RST"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_DIGIT_2" RIGHT="0" SIGIS="undef" SIGNAME="SVD_DRIVER_0_o_DIGIT_2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SVD_DRIVER_0" PORT="o_DIGIT_2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_DIGIT_1" RIGHT="0" SIGIS="undef" SIGNAME="SVD_DRIVER_0_o_DIGIT_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SVD_DRIVER_0" PORT="o_DIGIT_1"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/SVD_DRIVER_0" HWVERSION="1.0" INSTANCE="SVD_DRIVER_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SVD_DRIVER" VLNV="xilinx.com:module_ref:SVD_DRIVER:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="SVD_DRIVER_BD_SVD_DRIVER_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_CLK_EN" SIGIS="undef" SIGNAME="External_Ports_i_CLK_EN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK_EN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_DIGIT_1" RIGHT="0" SIGIS="undef" SIGNAME="SVD_DRIVER_0_o_DIGIT_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_DIGIT_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_DIGIT_2" RIGHT="0" SIGIS="undef" SIGNAME="SVD_DRIVER_0_o_DIGIT_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_DIGIT_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_DIGIT_3" RIGHT="0" SIGIS="undef" SIGNAME="SVD_DRIVER_0_o_DIGIT_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_DIGIT_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="o_DIGIT_4" RIGHT="0" SIGIS="undef" SIGNAME="SVD_DRIVER_0_o_DIGIT_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_DIGIT_4"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

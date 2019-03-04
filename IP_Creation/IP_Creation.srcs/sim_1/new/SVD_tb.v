@@ -49,8 +49,9 @@ module SVD_tb(
         
         initial begin
         
-        #10 r_RST = 1'd1;
         #10 r_RST = 1'd0;
+        #10 r_RST = 1'd0;
+        #1000 r_CLK_EN = 1'd0;
         #1000 $finish;
         end
 endmodule

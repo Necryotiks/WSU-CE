@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Mar  2 01:36:53 2019
+| Date         : Sun Mar  3 01:16:28 2019
 | Host         : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Bounce_Timer_wrapper_utilization_synth.rpt -pb Bounce_Timer_wrapper_utilization_synth.pb
 | Design       : Bounce_Timer_wrapper
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  103 |     0 |     14400 |  0.72 |
-|   LUT as Logic             |  102 |     0 |     14400 |  0.71 |
+| Slice LUTs*                |  124 |     0 |     14400 |  0.86 |
+|   LUT as Logic             |  123 |     0 |     14400 |  0.85 |
 |   LUT as Memory            |    1 |     0 |      6000 |  0.02 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    1 |     0 |           |       |
-| Slice Registers            |  107 |     0 |     28800 |  0.37 |
-|   Register as Flip Flop    |  107 |     0 |     28800 |  0.37 |
+| Slice Registers            |  142 |     0 |     28800 |  0.49 |
+|   Register as Flip Flop    |  142 |     0 |     28800 |  0.49 |
 |   Register as Latch        |    0 |     0 |     28800 |  0.00 |
 | F7 Muxes                   |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 1     |          Yes |           - |          Set |
-| 55    |          Yes |           - |        Reset |
+| 0     |          Yes |           - |          Set |
+| 35    |          Yes |           - |        Reset |
 | 4     |          Yes |         Set |            - |
-| 47    |          Yes |       Reset |            - |
+| 103   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,20 +148,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |   55 |        Flop & Latch |
-| LUT5     |   47 |                 LUT |
-| FDRE     |   47 |        Flop & Latch |
-| LUT4     |   23 |                 LUT |
-| LUT6     |   20 |                 LUT |
-| LUT2     |   16 |                 LUT |
+| FDRE     |  103 |        Flop & Latch |
+| LUT5     |   45 |                 LUT |
+| FDCE     |   35 |        Flop & Latch |
+| LUT6     |   29 |                 LUT |
+| LUT2     |   24 |                 LUT |
+| LUT3     |   23 |                 LUT |
+| LUT4     |   22 |                 LUT |
+| CARRY4   |   12 |          CarryLogic |
 | OBUF     |   11 |                  IO |
-| CARRY4   |    8 |          CarryLogic |
-| LUT3     |    7 |                 LUT |
-| LUT1     |    6 |                 LUT |
+| LUT1     |    8 |                 LUT |
 | FDSE     |    4 |        Flop & Latch |
 | IBUF     |    3 |                  IO |
 | SRL16E   |    1 |  Distributed Memory |
-| FDPE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

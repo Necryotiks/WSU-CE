@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# Bounce_Counter_FSM, HZ_Counter, ssd_dec, ssd_mux, stopwatch_ssd_driver
+# BINARY_TO_BCD, Bounce_Counter_FSM, HZ_Counter, ssd_dec, ssd_mux
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -176,12 +176,17 @@ proc create_root_design { parentCell } {
   set o_Anodes_0 [ create_bd_port -dir O -from 3 -to 0 o_Anodes_0 ]
   set o_Cathodes_0 [ create_bd_port -dir O -from 6 -to 0 o_Cathodes_0 ]
 
-  # Create instance: BCD_COUNTER_BD_0, and set properties
-  set BCD_COUNTER_BD_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:BCD_COUNTER_BD:1.0 BCD_COUNTER_BD_0 ]
-  set_property -dict [ list \
-   CONFIG.DISPLAY_MODE {DECIMAL} \
- ] $BCD_COUNTER_BD_0
-
+  # Create instance: BINARY_TO_BCD_0, and set properties
+  set block_name BINARY_TO_BCD
+  set block_cell_name BINARY_TO_BCD_0
+  if { [catch {set BINARY_TO_BCD_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $BINARY_TO_BCD_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: Bounce_Counter_FSM_0, and set properties
   set block_name Bounce_Counter_FSM
   set block_cell_name Bounce_Counter_FSM_0
@@ -204,7 +209,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.c_NUM {23809} \
+   CONFIG.c_NUM {50000} \
  ] $HZ_Counter_0
 
   # Create instance: rst_clk_100MHz_100M, and set properties
@@ -232,31 +237,58 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: stopwatch_ssd_driver_0, and set properties
-  set block_name stopwatch_ssd_driver
-  set block_cell_name stopwatch_ssd_driver_0
-  if { [catch {set stopwatch_ssd_driver_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $stopwatch_ssd_driver_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
+  # Create instance: xlslice_0, and set properties
+  set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {15} \
+   CONFIG.DIN_TO {12} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $xlslice_0
+
+  # Create instance: xlslice_1, and set properties
+  set xlslice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_1 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {11} \
+   CONFIG.DIN_TO {8} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $xlslice_1
+
+  # Create instance: xlslice_2, and set properties
+  set xlslice_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_2 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {7} \
+   CONFIG.DIN_TO {4} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $xlslice_2
+
+  # Create instance: xlslice_3, and set properties
+  set xlslice_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_3 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {3} \
+   CONFIG.DIN_TO {0} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {4} \
+ ] $xlslice_3
+
   # Create port connections
-  connect_bd_net -net Bounce_Counter_FSM_0_o_CEN [get_bd_pins Bounce_Counter_FSM_0/o_CEN] [get_bd_pins stopwatch_ssd_driver_0/i_CLK_EN]
-  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK] [get_bd_pins stopwatch_ssd_driver_0/i_SUBCLK]
-  connect_bd_net -net i_CLK [get_bd_ports i_CLK] [get_bd_pins BCD_COUNTER_BD_0/i_CLK] [get_bd_pins Bounce_Counter_FSM_0/i_CLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk]
-  connect_bd_net -net i_RST [get_bd_ports i_RST] [get_bd_pins rst_clk_100MHz_100M/ext_reset_in] [get_bd_pins stopwatch_ssd_driver_0/i_SRST]
+  connect_bd_net -net BINARY_TO_BCD_0_o_BCD [get_bd_pins BINARY_TO_BCD_0/o_BCD] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_3/Din]
+  connect_bd_net -net Bounce_Counter_FSM_0_o_CEN [get_bd_pins BINARY_TO_BCD_0/i_Start] [get_bd_pins Bounce_Counter_FSM_0/o_CEN]
+  connect_bd_net -net Bounce_Counter_FSM_0_o_DATA [get_bd_pins BINARY_TO_BCD_0/i_Binary] [get_bd_pins Bounce_Counter_FSM_0/o_DATA]
+  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins BINARY_TO_BCD_0/i_Clock] [get_bd_pins Bounce_Counter_FSM_0/i_1KHZCLK] [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
+  connect_bd_net -net i_CLK [get_bd_ports i_CLK] [get_bd_pins Bounce_Counter_FSM_0/i_100MHZCLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk]
+  connect_bd_net -net i_RST [get_bd_ports i_RST] [get_bd_pins rst_clk_100MHz_100M/ext_reset_in]
   connect_bd_net -net i_Signal_0_1 [get_bd_ports i_Signal] [get_bd_pins Bounce_Counter_FSM_0/i_Signal]
-  connect_bd_net -net rst_clk_100MHz_100M_peripheral_aresetn [get_bd_pins Bounce_Counter_FSM_0/i_RST] [get_bd_pins HZ_Counter_0/i_RST] [get_bd_pins rst_clk_100MHz_100M/peripheral_aresetn] [get_bd_pins stopwatch_ssd_driver_0/i_RST]
+  connect_bd_net -net rst_clk_100MHz_100M_peripheral_aresetn [get_bd_pins Bounce_Counter_FSM_0/i_RST] [get_bd_pins HZ_Counter_0/i_RST] [get_bd_pins rst_clk_100MHz_100M/peripheral_aresetn]
   connect_bd_net -net ssd_dec_0_o_Cathodes [get_bd_ports o_Cathodes_0] [get_bd_pins ssd_dec_0/o_Cathodes]
   connect_bd_net -net ssd_mux_0_o_Anodes [get_bd_ports o_Anodes_0] [get_bd_pins ssd_mux_0/o_Anodes]
   connect_bd_net -net ssd_mux_0_o_Out [get_bd_pins ssd_dec_0/i_Num] [get_bd_pins ssd_mux_0/o_Out]
-  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_1_val [get_bd_pins ssd_mux_0/i_Digit_1] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_1_val]
-  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_2_val [get_bd_pins ssd_mux_0/i_Digit_2] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_2_val]
-  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_3_val [get_bd_pins ssd_mux_0/i_Digit_3] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_3_val]
-  connect_bd_net -net stopwatch_ssd_driver_0_o_Digit_4_val [get_bd_pins ssd_mux_0/i_Digit_4] [get_bd_pins stopwatch_ssd_driver_0/o_Digit_4_val]
+  connect_bd_net -net xlslice_0_Dout [get_bd_pins ssd_mux_0/i_Digit_1] [get_bd_pins xlslice_0/Dout]
+  connect_bd_net -net xlslice_1_Dout [get_bd_pins ssd_mux_0/i_Digit_2] [get_bd_pins xlslice_1/Dout]
+  connect_bd_net -net xlslice_2_Dout [get_bd_pins ssd_mux_0/i_Digit_3] [get_bd_pins xlslice_2/Dout]
+  connect_bd_net -net xlslice_3_Dout [get_bd_pins ssd_mux_0/i_Digit_4] [get_bd_pins xlslice_3/Dout]
 
   # Create address segments
 

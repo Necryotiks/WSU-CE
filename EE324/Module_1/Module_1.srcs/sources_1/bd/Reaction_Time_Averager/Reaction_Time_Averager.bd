@@ -642,7 +642,7 @@
         "xci_name": "Reaction_Time_Averager_HZ_Counter_0_0",
         "parameters": {
           "c_NUM": {
-            "value": "8197"
+            "value": "50000"
           }
         },
         "reference_info": {
@@ -735,7 +735,6 @@
           "i_CLK",
           "proc_sys_reset_0/slowest_sync_clk",
           "LSFR_0/i_CLK",
-          "ssd_mux_0/i_CLK",
           "ssd_dec_0/i_CLK",
           "Debounce_RTM_0/i_CLK",
           "Debounce_RTM_1/i_CLK",
@@ -777,7 +776,8 @@
           "BCD_TO_BINARY_0/i_CLK",
           "BINARY_TO_BCD_0/i_Clock",
           "EXTRA_THICC_MUX_0/i_CLK",
-          "Divider_0/i_CLK"
+          "Divider_0/i_CLK",
+          "ssd_mux_0/i_CLK"
         ]
       },
       "BCD_TO_BINARY_0_o_DATA": {

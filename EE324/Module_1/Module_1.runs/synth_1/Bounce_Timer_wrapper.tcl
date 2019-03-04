@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized2 has unconnected port Din[15]}}  -suppress 
 set_msg_config  -id {Synth 8-3331}  -suppress 
 create_project -in_memory -part xc7z007sclg400-1
@@ -36,15 +38,14 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_dec.v
   C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_mux.v
-  C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/stopwatch_ssd_driver.v
   C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/HZ_Counter.v
   C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/new/Bounce_Counter_FSM.v
+  C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/new/BINARY_TO_BCD.v
   C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
 }
 add_files C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd
 set_property used_in_implementation false [get_files -all c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/Bounce_Timer_rst_clk_100MHz_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/Bounce_Timer_rst_clk_100MHz_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_BCD_COUNTER_BD_0_0/src/BCD_COUNTER_BD_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

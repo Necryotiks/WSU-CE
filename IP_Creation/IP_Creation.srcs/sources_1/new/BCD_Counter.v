@@ -29,7 +29,7 @@ module BCD_Counter #(parameter DISPLAY_MODE = "DECIMAL")(
     );
     
     localparam MAX_VALUE = (DISPLAY_MODE == "DECIMAL") ? 4'd9 : 
-                           (DISPLAY_MODE == "HEXEDECIMAL") ? 4'd15 : 4'd9;
+                           (DISPLAY_MODE == "HEXEDECIMAL") ? 4'd15 : 4'd9; //Set mode
     wire w_CLK;
     wire w_RST;
     wire  w_CLK_EN;
@@ -48,17 +48,26 @@ module BCD_Counter #(parameter DISPLAY_MODE = "DECIMAL")(
         if(w_RST == 1'b1)
             begin
                 r_OUT <= 4'b0000;
-                r_NEXT_CLK_EN <= 1'b0;
             end
-        else if(r_OUT == MAX_VALUE)
+        else if(r_OUT >= MAX_VALUE)
             begin
                 r_OUT <= 4'b0000;
-                r_NEXT_CLK_EN <= 1'b1;
             end
-        else
+        else if(w_CLK_EN == 1'b1)
             begin
                 r_OUT <= r_OUT + 1'b1;
-                r_NEXT_CLK_EN <= 1'b0;
             end
+        else
+           begin
+                r_OUT <= r_OUT;
+           end 
     end 
+    
+    always@(posedge i_CLK)
+    begin
+        if((r_OUT == (MAX_VALUE - 1) && (w_CLK_EN == 1'b1))) //Issue next clk enable 1 clk cycle earlier and only when clk en is high.
+            r_NEXT_CLK_EN <= 1'b1;
+        else
+            r_NEXT_CLK_EN <= 1'b0;    
+    end
 endmodule

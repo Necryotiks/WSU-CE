@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Feb 28 16:57:39 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar  2 23:33:51 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Reaction_Time_Averager" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -21,15 +21,13 @@
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Debounce_RTM_2" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
+        <CONNECTION INSTANCE="LSFR_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="Debounce_RTM_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="Debounce_RTM_1" PORT="i_CLK"/>
-        <CONNECTION INSTANCE="LSFR_0" PORT="i_CLK"/>
-        <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
-        <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
-        <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_CLK"/>
+        <CONNECTION INSTANCE="Debounce_RTM_2" PORT="i_CLK"/>
         <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_CLK"/>
-        <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
@@ -344,9 +342,9 @@
             <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_DONE"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Digit_1" RIGHT="0" SIGIS="undef" SIGNAME="EXTRA_THICC_MUX_0_o_Digit_1">
@@ -375,7 +373,7 @@
     <MODULE COREREVISION="1" FULLNAME="/HZ_Counter_0" HWVERSION="1.0" INSTANCE="HZ_Counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="HZ_Counter" VLNV="xilinx.com:module_ref:HZ_Counter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="c_NUM" VALUE="8197"/>
+        <PARAMETER NAME="c_NUM" VALUE="16129"/>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_HZ_Counter_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -393,11 +391,13 @@
         <PORT DIR="O" NAME="o_Out" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_CLK1KHZ"/>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SUBCLK"/>
             <CONNECTION INSTANCE="Accumuator_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Clock"/>
+            <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="Divider_0" PORT="i_CLK"/>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SUBCLK"/>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -553,14 +553,14 @@
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="LSFR_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="Accumuator_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="Debounce_RTM_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="Debounce_RTM_1" PORT="i_RST"/>
             <CONNECTION INSTANCE="Debounce_RTM_2" PORT="i_RST"/>
-            <CONNECTION INSTANCE="LSFR_0" PORT="i_RST"/>
-            <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_RST"/>
-            <CONNECTION INSTANCE="Accumuator_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
-            <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -618,9 +618,9 @@
             <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="o_Digit_4"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">

@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Thu Feb 28 16:57:39 2019
-//Host        : Necryotiks running 64-bit unknown
+//Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+//Date        : Sat Mar  2 23:33:51 2019
+//Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target Reaction_Time_Averager_wrapper.bd
 //Design      : Reaction_Time_Averager_wrapper
 //Purpose     : IP block netlist

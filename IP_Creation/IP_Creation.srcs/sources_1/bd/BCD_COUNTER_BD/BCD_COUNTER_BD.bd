@@ -1,11 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x78AFC73E821D56B0",
+      "boundary_crc": "0x78AFC73EE6F6A446",
       "device": "xc7z007sclg400-1",
       "name": "BCD_COUNTER_BD",
       "synth_flow_mode": "None",
-      "tool_version": "2018.3"
+      "tool_version": "2018.3",
+      "validated": "true"
     },
     "design_tree": {
       "BCD_Counter_0": ""
@@ -13,14 +14,40 @@
     "ports": {
       "i_CLK": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "i_RST",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "BCD_COUNTER_BD_i_CLK",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
       },
       "i_RST": {
         "type": "rst",
         "direction": "I",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
-            "value": "ACTIVE_HIGH"
+            "value": "ACTIVE_LOW"
           }
         }
       },
@@ -48,11 +75,27 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "BCD_COUNTER_BD_i_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_RST": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
           },
           "i_CLK_EN": {
             "direction": "I"

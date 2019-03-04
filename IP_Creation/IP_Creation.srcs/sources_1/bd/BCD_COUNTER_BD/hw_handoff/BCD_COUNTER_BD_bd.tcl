@@ -168,7 +168,7 @@ proc create_root_design { parentCell } {
   set i_CLK_EN [ create_bd_port -dir I i_CLK_EN ]
   set i_RST [ create_bd_port -dir I -type rst i_RST ]
   set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_HIGH} \
+   CONFIG.POLARITY {ACTIVE_LOW} \
  ] $i_RST
   set o_NEXT_CLK_EN [ create_bd_port -dir O o_NEXT_CLK_EN ]
   set o_OUT [ create_bd_port -dir O -from 3 -to 0 o_OUT ]
@@ -184,10 +184,6 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_HIGH} \
- ] [get_bd_pins /BCD_Counter_0/i_RST]
-
   # Create port connections
   connect_bd_net -net BCD_Counter_0_o_NEXT_CLK_EN [get_bd_ports o_NEXT_CLK_EN] [get_bd_pins BCD_Counter_0/o_NEXT_CLK_EN]
   connect_bd_net -net BCD_Counter_0_o_OUT [get_bd_ports o_OUT] [get_bd_pins BCD_Counter_0/o_OUT]

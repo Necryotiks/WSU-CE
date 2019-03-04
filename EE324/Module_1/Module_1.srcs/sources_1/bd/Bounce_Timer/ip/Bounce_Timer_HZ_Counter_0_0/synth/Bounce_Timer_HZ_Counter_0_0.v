@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "HZ_Counter,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "Bounce_Timer_HZ_Counter_0_0,HZ_Counter,{}" *)
-(* CORE_GENERATION_INFO = "Bounce_Timer_HZ_Counter_0_0,HZ_Counter,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=HZ_Counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,c_NUM=23809}" *)
+(* CORE_GENERATION_INFO = "Bounce_Timer_HZ_Counter_0_0,HZ_Counter,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=HZ_Counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,c_NUM=50000}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Bounce_Timer_HZ_Counter_0_0 (
@@ -70,7 +70,7 @@ input wire i_RST;
 output wire o_Out;
 
   HZ_Counter #(
-    .c_NUM(23809)
+    .c_NUM(50000)
   ) inst (
     .i_CLK(i_CLK),
     .i_RST(i_RST),

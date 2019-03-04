@@ -11,8 +11,12 @@
       "rst_clk_100MHz_100M": "",
       "ssd_dec_0": "",
       "ssd_mux_0": "",
-      "stopwatch_ssd_driver_0": "",
       "HZ_Counter_0": "",
+      "BINARY_TO_BCD_0": "",
+      "xlslice_0": "",
+      "xlslice_1": "",
+      "xlslice_2": "",
+      "xlslice_3": "",
       "Bounce_Counter_FSM_0": ""
     },
     "ports": {
@@ -123,57 +127,12 @@
           }
         }
       },
-      "stopwatch_ssd_driver_0": {
-        "vlnv": "xilinx.com:module_ref:stopwatch_ssd_driver:1.0",
-        "xci_name": "Bounce_Timer_stopwatch_ssd_driver_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "stopwatch_ssd_driver",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_SUBCLK": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "i_RST": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "i_CLK_EN": {
-            "direction": "I"
-          },
-          "i_SRST": {
-            "direction": "I"
-          },
-          "o_Digit_1_val": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "o_Digit_2_val": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "o_Digit_3_val": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "o_Digit_4_val": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          }
-        }
-      },
       "HZ_Counter_0": {
         "vlnv": "xilinx.com:module_ref:HZ_Counter:1.0",
         "xci_name": "Bounce_Timer_HZ_Counter_0_0",
         "parameters": {
           "c_NUM": {
-            "value": "23809"
+            "value": "50000"
           }
         },
         "reference_info": {
@@ -195,6 +154,106 @@
           }
         }
       },
+      "BINARY_TO_BCD_0": {
+        "vlnv": "xilinx.com:module_ref:BINARY_TO_BCD:1.0",
+        "xci_name": "Bounce_Timer_BINARY_TO_BCD_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "BINARY_TO_BCD",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_Binary": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "i_Start": {
+            "direction": "I"
+          },
+          "o_BCD": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Bounce_Timer_xlslice_0_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "15"
+          },
+          "DIN_TO": {
+            "value": "12"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_1": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Bounce_Timer_xlslice_1_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "11"
+          },
+          "DIN_TO": {
+            "value": "8"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_2": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Bounce_Timer_xlslice_2_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "7"
+          },
+          "DIN_TO": {
+            "value": "4"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_3": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Bounce_Timer_xlslice_3_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_TO": {
+            "value": "0"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
       "Bounce_Counter_FSM_0": {
         "vlnv": "xilinx.com:module_ref:Bounce_Counter_FSM:1.0",
         "xci_name": "Bounce_Timer_Bounce_Counter_FSM_0_0",
@@ -204,16 +263,20 @@
           "boundary_crc": "0x0"
         },
         "ports": {
-          "i_CLK": {
-            "type": "clk",
-            "direction": "I"
-          },
           "i_RST": {
             "type": "rst",
             "direction": "I"
           },
+          "i_100MHZCLK": {
+            "direction": "I"
+          },
           "i_Signal": {
             "direction": "I"
+          },
+          "o_DATA": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
           },
           "o_CEN": {
             "direction": "O"
@@ -228,36 +291,12 @@
           "ssd_dec_0/i_Num"
         ]
       },
-      "stopwatch_ssd_driver_0_o_Digit_1_val": {
-        "ports": [
-          "stopwatch_ssd_driver_0/o_Digit_1_val",
-          "ssd_mux_0/i_Digit_1"
-        ]
-      },
-      "stopwatch_ssd_driver_0_o_Digit_2_val": {
-        "ports": [
-          "stopwatch_ssd_driver_0/o_Digit_2_val",
-          "ssd_mux_0/i_Digit_2"
-        ]
-      },
-      "stopwatch_ssd_driver_0_o_Digit_3_val": {
-        "ports": [
-          "stopwatch_ssd_driver_0/o_Digit_3_val",
-          "ssd_mux_0/i_Digit_3"
-        ]
-      },
-      "stopwatch_ssd_driver_0_o_Digit_4_val": {
-        "ports": [
-          "stopwatch_ssd_driver_0/o_Digit_4_val",
-          "ssd_mux_0/i_Digit_4"
-        ]
-      },
       "HZ_Counter_0_o_Out": {
         "ports": [
           "HZ_Counter_0/o_Out",
           "ssd_dec_0/i_CLK",
           "ssd_mux_0/i_CLK",
-          "stopwatch_ssd_driver_0/i_SUBCLK"
+          "BINARY_TO_BCD_0/i_Clock"
         ]
       },
       "ssd_dec_0_o_Cathodes": {
@@ -277,13 +316,12 @@
           "i_CLK",
           "rst_clk_100MHz_100M/slowest_sync_clk",
           "HZ_Counter_0/i_CLK",
-          "Bounce_Counter_FSM_0/i_CLK"
+          "Bounce_Counter_FSM_0/i_100MHZCLK"
         ]
       },
       "rst_clk_100MHz_100M_peripheral_aresetn": {
         "ports": [
           "rst_clk_100MHz_100M/peripheral_aresetn",
-          "stopwatch_ssd_driver_0/i_RST",
           "HZ_Counter_0/i_RST",
           "Bounce_Counter_FSM_0/i_RST"
         ]
@@ -291,8 +329,7 @@
       "i_RST": {
         "ports": [
           "i_RST",
-          "rst_clk_100MHz_100M/ext_reset_in",
-          "stopwatch_ssd_driver_0/i_SRST"
+          "rst_clk_100MHz_100M/ext_reset_in"
         ]
       },
       "i_Signal_0_1": {
@@ -304,7 +341,46 @@
       "Bounce_Counter_FSM_0_o_CEN": {
         "ports": [
           "Bounce_Counter_FSM_0/o_CEN",
-          "stopwatch_ssd_driver_0/i_CLK_EN"
+          "BINARY_TO_BCD_0/i_Start"
+        ]
+      },
+      "Bounce_Counter_FSM_0_o_DATA": {
+        "ports": [
+          "Bounce_Counter_FSM_0/o_DATA",
+          "BINARY_TO_BCD_0/i_Binary"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "ssd_mux_0/i_Digit_1"
+        ]
+      },
+      "xlslice_1_Dout": {
+        "ports": [
+          "xlslice_1/Dout",
+          "ssd_mux_0/i_Digit_2"
+        ]
+      },
+      "xlslice_3_Dout": {
+        "ports": [
+          "xlslice_3/Dout",
+          "ssd_mux_0/i_Digit_4"
+        ]
+      },
+      "xlslice_2_Dout": {
+        "ports": [
+          "xlslice_2/Dout",
+          "ssd_mux_0/i_Digit_3"
+        ]
+      },
+      "BINARY_TO_BCD_0_o_BCD": {
+        "ports": [
+          "BINARY_TO_BCD_0/o_BCD",
+          "xlslice_2/Din",
+          "xlslice_3/Din",
+          "xlslice_1/Din",
+          "xlslice_0/Din"
         ]
       }
     }

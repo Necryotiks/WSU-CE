@@ -1,8 +1,8 @@
 webtalk_init -webtalk_dir C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.sim/sim_1/behav/xsim/xsim.dir/Bounce_FSM_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Tue Feb 26 23:12:25 2019" -context "software_version_and_target_device"
-webtalk_add_data -client project -key product_version -value "XSIM v2018.2 (64-bit)" -context "software_version_and_target_device"
-webtalk_add_data -client project -key build_version -value "2258646" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Sun Mar  3 01:30:06 2019" -context "software_version_and_target_device"
+webtalk_add_data -client project -key product_version -value "XSIM v2018.3 (64-bit)" -context "software_version_and_target_device"
+webtalk_add_data -client project -key build_version -value "2405991" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
 webtalk_add_data -client project -key registration_id -value "" -context "software_version_and_target_device"
 webtalk_add_data -client project -key tool_flow -value "xsim_vivado" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "873522a8936f5e5eb5cd1f4b641d30ad" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "2acc0b59db0b4f8e903dabd88f08819a" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "12" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "24" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "AMD Ryzen 7 1700 Eight-Core Processor          " -context "user_environment"
@@ -24,9 +24,9 @@ webtalk_add_data -client project -key system_ram -value "10.000 GB" -context "us
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "32 ns" -context "xsim\\usage"
+webtalk_add_data -client xsim -key runtime -value "313 ns" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "0" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.00_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "5620_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1142359742 -regid "" -xml C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.sim/sim_1/behav/xsim/xsim.dir/Bounce_FSM_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.sim/sim_1/behav/xsim/xsim.dir/Bounce_FSM_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.sim/sim_1/behav/xsim/xsim.dir/Bounce_FSM_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.03_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "5616_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 1075054443 -regid "" -xml C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.sim/sim_1/behav/xsim/xsim.dir/Bounce_FSM_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.sim/sim_1/behav/xsim/xsim.dir/Bounce_FSM_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.sim/sim_1/behav/xsim/xsim.dir/Bounce_FSM_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

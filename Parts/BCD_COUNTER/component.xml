@@ -53,7 +53,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RST.I_RST.POLARITY">ACTIVE_HIGH</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RST.I_RST.POLARITY">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -72,7 +72,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b8e8b383</spirit:value>
+            <spirit:value>33dcc5a9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -88,7 +88,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>fbbccc57</spirit:value>
+            <spirit:value>64284e14</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -102,7 +102,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>138da024</spirit:value>
+            <spirit:value>f64a5dae</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -132,9 +132,6 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -182,13 +179,6 @@
       </spirit:port>
     </spirit:ports>
   </spirit:model>
-  <spirit:choices>
-    <spirit:choice>
-      <spirit:name>choice_list_94eb4b9d</spirit:name>
-      <spirit:enumeration>DECIMAL</spirit:enumeration>
-      <spirit:enumeration>HEXEDECIMAL</spirit:enumeration>
-    </spirit:choice>
-  </spirit:choices>
   <spirit:fileSets>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
@@ -196,11 +186,13 @@
         <spirit:name>src/BCD_COUNTER_BD_BCD_Counter_0_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/BCD_Counter.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/BCD_COUNTER_BD_ooc.xdc</spirit:name>
@@ -212,8 +204,13 @@
       <spirit:file>
         <spirit:name>src/BCD_COUNTER_BD.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_a71d1b54</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_4347f260</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -222,16 +219,28 @@
         <spirit:name>sim/BCD_COUNTER_BD_BCD_Counter_0_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/BCD_Counter.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/BCD_COUNTER_BD.protoinst</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>sim/BCD_COUNTER_BD.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -239,7 +248,7 @@
       <spirit:file>
         <spirit:name>xgui/BCD_COUNTER_BD_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_138da024</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -249,11 +258,6 @@
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">BCD_COUNTER_BD_v1_0</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>DISPLAY_MODE</spirit:name>
-      <spirit:displayName>Display Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DISPLAY_MODE" spirit:choiceRef="choice_list_94eb4b9d">DECIMAL</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -266,24 +270,16 @@
       </xilinx:taxonomies>
       <xilinx:displayName>BCD_COUNTER_BD_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
-      <xilinx:coreRevision>3</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-03-02T09:35:08Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-03-03T06:08:15Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f664d2e_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@179ece16_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5113dd2b_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f4a41f7_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b42fa97_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ba42b54_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@e3ef408_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b082f82_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4235af7a_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3de06c32_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@450c9f7e_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@765e7b6a_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c588ecf_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fa83251_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e1aa500_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e2c882e_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@677335e3_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@252a4055_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb5a57c_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ecfa3c2_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c320a3_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6246b0c9_ARCHIVE_LOCATION">c:/Users/Sergaljerk/WSU-CPTE/Parts/BCD_COUNTER</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.I_RST.POLARITY" xilinx:valueSource="user"/>
@@ -291,10 +287,10 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="64e90942"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f0d19e11"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="ce1fd479"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="ad42fd24"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="90394ca5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3d1f3e59"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="4c78cd6b"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="c233998c"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

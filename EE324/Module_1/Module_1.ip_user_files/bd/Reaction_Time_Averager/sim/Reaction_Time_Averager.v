@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Thu Feb 28 16:57:39 2019
-//Host        : Necryotiks running 64-bit unknown
+//Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+//Date        : Sat Mar  2 23:18:55 2019
+//Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target Reaction_Time_Averager.bd
 //Design      : Reaction_Time_Averager
 //Purpose     : IP block netlist
@@ -117,7 +117,7 @@ module Reaction_Time_Averager
         .i_TC(RTM_FSM_0_o_TRIAL_NUM),
         .o_OUT(Divider_0_o_OUT));
   Reaction_Time_Averager_EXTRA_THICC_MUX_0_0 EXTRA_THICC_MUX_0
-       (.i_CLK(i_CLK_1),
+       (.i_CLK(HZ_Counter_0_o_Out),
         .i_SW_Digit_1(stopwatch_ssd_driver_0_o_Digit_1_val),
         .i_SW_Digit_2(stopwatch_ssd_driver_0_o_Digit_2_val),
         .i_SW_Digit_3(stopwatch_ssd_driver_0_o_Digit_3_val),
