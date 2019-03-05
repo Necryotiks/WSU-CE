@@ -12,9 +12,14 @@
 #include "xil_types.h"
 
 #define LED_BASEADDR ((uint32_t *)0x4BB00000)
+#define RGB_BASEADDR ((uint32_t *)0x4BB01000)
 void demoLEDS();
 void shiftLEDS();
 uint32_t readLED();
-uint32_t enableLED();
-uint32_t toggleLED();
-
+void enableLEDS();
+void disableLEDS();
+void toggleLEDS(int ledID);
+void enableRGBS();
+void disableRGBS();
+void toggleRGBS(int led0_ID,int led1_ID,int led2_ID,int led3_ID);
+void demoRGBS();

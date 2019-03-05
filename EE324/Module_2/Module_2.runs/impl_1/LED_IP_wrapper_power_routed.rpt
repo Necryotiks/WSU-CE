@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Mon Mar  4 00:01:12 2019
+| Date             : Mon Mar  4 16:39:12 2019
 | Host             : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 | Command          : report_power -file LED_IP_wrapper_power_routed.rpt -pb LED_IP_wrapper_power_summary_routed.pb -rpx LED_IP_wrapper_power_routed.rpx
 | Design           : LED_IP_wrapper
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.294        |
+| Total On-Chip Power (W)  | 1.291        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.176        |
-| Device Static (W)        | 0.118        |
+| Device Static (W)        | 0.115        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 70.1         |
 | Junction Temperature (C) | 39.9         |
@@ -52,18 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.001 |        3 |       --- |             --- |
-| Slice Logic             |    <0.001 |     1306 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      364 |     14400 |            2.53 |
-|   Register              |    <0.001 |      607 |     28800 |            2.11 |
-|   CARRY4                |    <0.001 |        6 |      4400 |            0.14 |
-|   LUT as Shift Register |    <0.001 |       60 |      6000 |            1.00 |
-|   Others                |     0.000 |      184 |       --- |             --- |
-| Signals                 |    <0.001 |      932 |       --- |             --- |
-| I/O                     |    <0.001 |        4 |       100 |            4.00 |
+| Clocks                  |     0.002 |        3 |       --- |             --- |
+| Slice Logic             |    <0.001 |     2095 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      626 |     14400 |            4.35 |
+|   Register              |    <0.001 |     1053 |     28800 |            3.66 |
+|   CARRY4                |    <0.001 |       12 |      4400 |            0.27 |
+|   LUT as Shift Register |    <0.001 |       62 |      6000 |            1.03 |
+|   Others                |     0.000 |      198 |       --- |             --- |
+| Signals                 |    <0.001 |     1574 |       --- |             --- |
+| I/O                     |     0.000 |       16 |       100 |           16.00 |
 | PS7                     |     1.173 |        1 |       --- |             --- |
-| Static Power            |     0.118 |          |           |                 |
-| Total                   |     1.294 |          |           |                 |
+| Static Power            |     0.115 |          |           |                 |
+| Total                   |     1.291 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.009 |       0.003 |      0.006 |
 | Vccaux    |       1.800 |     0.007 |       0.000 |      0.007 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |

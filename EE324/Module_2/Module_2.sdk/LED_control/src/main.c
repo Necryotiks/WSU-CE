@@ -9,6 +9,12 @@
 
 int main(void)
 {
+	disableLEDS();
+	enableLEDS();
 	//demoLEDS();
+	disableRGBS();
+	enableRGBS();
+	demoRGBS();
 	shiftLEDS();
+
 }

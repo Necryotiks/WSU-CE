@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -71,7 +70,10 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.cache/wt [current_project]
   set_property parent.project_path C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.xpr [current_project]
-  set_property ip_repo_paths C:/Users/Sergaljerk/WSU-CPTE/Parts/LED_CONTROLLER/LED_CONTROLLER_1.0 [current_project]
+  set_property ip_repo_paths {
+  C:/Users/Sergaljerk/WSU-CPTE/Parts/RGB_CONTROLLER/RGB_CONTROLLER_1.0
+  C:/Users/Sergaljerk/WSU-CPTE/Parts/LED_CONTROLLER/LED_CONTROLLER_1.0
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

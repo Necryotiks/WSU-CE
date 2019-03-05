@@ -10,9 +10,10 @@ vlib questa_lib/msim/processing_system7_vip_v1_0_6
 vlib questa_lib/msim/lib_cdc_v1_0_2
 vlib questa_lib/msim/proc_sys_reset_v5_0_13
 vlib questa_lib/msim/generic_baseblocks_v2_1_0
+vlib questa_lib/msim/axi_register_slice_v2_1_18
 vlib questa_lib/msim/fifo_generator_v13_2_3
 vlib questa_lib/msim/axi_data_fifo_v2_1_17
-vlib questa_lib/msim/axi_register_slice_v2_1_18
+vlib questa_lib/msim/axi_crossbar_v2_1_19
 vlib questa_lib/msim/axi_protocol_converter_v2_1_18
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
@@ -24,9 +25,10 @@ vmap processing_system7_vip_v1_0_6 questa_lib/msim/processing_system7_vip_v1_0_6
 vmap lib_cdc_v1_0_2 questa_lib/msim/lib_cdc_v1_0_2
 vmap proc_sys_reset_v5_0_13 questa_lib/msim/proc_sys_reset_v5_0_13
 vmap generic_baseblocks_v2_1_0 questa_lib/msim/generic_baseblocks_v2_1_0
+vmap axi_register_slice_v2_1_18 questa_lib/msim/axi_register_slice_v2_1_18
 vmap fifo_generator_v13_2_3 questa_lib/msim/fifo_generator_v13_2_3
 vmap axi_data_fifo_v2_1_17 questa_lib/msim/axi_data_fifo_v2_1_17
-vmap axi_register_slice_v2_1_18 questa_lib/msim/axi_register_slice_v2_1_18
+vmap axi_crossbar_v2_1_19 questa_lib/msim/axi_crossbar_v2_1_19
 vmap axi_protocol_converter_v2_1_18 questa_lib/msim/axi_protocol_converter_v2_1_18
 
 vlog -work xilinx_vip -64 -sv -L axi_vip_v1_1_4 -L processing_system7_vip_v1_0_6 -L xilinx_vip "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
@@ -58,8 +60,8 @@ vlog -work processing_system7_vip_v1_0_6 -64 -sv -L axi_vip_v1_1_4 -L processing
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/70cf/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/LED_IP/ip/LED_IP_processing_system7_0_0/sim/LED_IP_processing_system7_0_0.v" \
-"../../../bd/LED_IP/ipshared/24eb/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
-"../../../bd/LED_IP/ipshared/24eb/hdl/LED_CONTROLLER_v1_0.v" \
+"../../../bd/LED_IP/ipshared/46b3/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
+"../../../bd/LED_IP/ipshared/46b3/hdl/LED_CONTROLLER_v1_0.v" \
 "../../../bd/LED_IP/ip/LED_IP_LED_CONTROLLER_0_0/sim/LED_IP_LED_CONTROLLER_0_0.v" \
 
 vcom -work lib_cdc_v1_0_2 -64 -93 \
@@ -77,6 +79,9 @@ vlog -work xil_defaultlib -64 "+incdir+../../../../Module_2.srcs/sources_1/bd/LE
 vlog -work generic_baseblocks_v2_1_0 -64 "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/70cf/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 
+vlog -work axi_register_slice_v2_1_18 -64 "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/70cf/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+
 vlog -work fifo_generator_v13_2_3 -64 "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/70cf/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/64f4/simulation/fifo_generator_vlog_beh.v" \
 
@@ -89,8 +94,14 @@ vlog -work fifo_generator_v13_2_3 -64 "+incdir+../../../../Module_2.srcs/sources
 vlog -work axi_data_fifo_v2_1_17 -64 "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/70cf/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 
-vlog -work axi_register_slice_v2_1_18 -64 "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/70cf/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+vlog -work axi_crossbar_v2_1_19 -64 "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/70cf/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib -64 "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/70cf/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../bd/LED_IP/ip/LED_IP_xbar_0/sim/LED_IP_xbar_0.v" \
+"../../../bd/LED_IP/ipshared/b814/hdl/RGB_CONTROLLER_v1_0_S00_AXI.v" \
+"../../../bd/LED_IP/ipshared/b814/hdl/RGB_CONTROLLER_v1_0.v" \
+"../../../bd/LED_IP/ip/LED_IP_RGB_CONTROLLER_0_0/sim/LED_IP_RGB_CONTROLLER_0_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_18 -64 "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/70cf/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

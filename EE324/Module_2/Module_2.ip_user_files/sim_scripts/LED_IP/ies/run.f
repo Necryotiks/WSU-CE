@@ -27,8 +27,8 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/LED_IP/ip/LED_IP_processing_system7_0_0/sim/LED_IP_processing_system7_0_0.v" \
-  "../../../bd/LED_IP/ipshared/24eb/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
-  "../../../bd/LED_IP/ipshared/24eb/hdl/LED_CONTROLLER_v1_0.v" \
+  "../../../bd/LED_IP/ipshared/46b3/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
+  "../../../bd/LED_IP/ipshared/46b3/hdl/LED_CONTROLLER_v1_0.v" \
   "../../../bd/LED_IP/ip/LED_IP_LED_CONTROLLER_0_0/sim/LED_IP_LED_CONTROLLER_0_0.v" \
 -endlib
 -makelib ies_lib/lib_cdc_v1_0_2 \
@@ -46,6 +46,9 @@
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
   "../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 -endlib
+-makelib ies_lib/axi_register_slice_v2_1_18 \
+  "../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-endlib
 -makelib ies_lib/fifo_generator_v13_2_3 \
   "../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/64f4/simulation/fifo_generator_vlog_beh.v" \
 -endlib
@@ -58,8 +61,14 @@
 -makelib ies_lib/axi_data_fifo_v2_1_17 \
   "../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 -endlib
--makelib ies_lib/axi_register_slice_v2_1_18 \
-  "../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-makelib ies_lib/axi_crossbar_v2_1_19 \
+  "../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/LED_IP/ip/LED_IP_xbar_0/sim/LED_IP_xbar_0.v" \
+  "../../../bd/LED_IP/ipshared/b814/hdl/RGB_CONTROLLER_v1_0_S00_AXI.v" \
+  "../../../bd/LED_IP/ipshared/b814/hdl/RGB_CONTROLLER_v1_0.v" \
+  "../../../bd/LED_IP/ip/LED_IP_RGB_CONTROLLER_0_0/sim/LED_IP_RGB_CONTROLLER_0_0.v" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_18 \
   "../../../../Module_2.srcs/sources_1/bd/LED_IP/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
