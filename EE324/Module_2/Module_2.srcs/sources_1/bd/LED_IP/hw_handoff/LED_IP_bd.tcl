@@ -557,6 +557,7 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins LED_CONTROLLER_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets ps7_0_axi_periph_M00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins RGB_CONTROLLER_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
 
   # Create port connections

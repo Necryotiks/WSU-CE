@@ -10,10 +10,12 @@
 void enableLEDS()
 {
 	*LED_BASEADDR = 0xF;
+	*(LED_BASEADDR + 1) = 0xF;
 }
 void disableLEDS()
 {
 	*LED_BASEADDR = 0x0;
+	*(LED_BASEADDR + 1) = 0x00;
 }
 void toggleLEDS(int ledID)
 {
@@ -43,7 +45,7 @@ void shiftLEDS()
 	while(1)
 	{
 
-		for(i = 0; i <10000000; i++)
+		for(i = 0; i <1000000; i++)
 		{
 			;
 		}
@@ -57,7 +59,7 @@ void shiftLEDS()
 			{
 
 
-				for(i = 0; i <10000000; i++)
+				for(i = 0; i <1000000; i++)
 				{
 					;
 				}

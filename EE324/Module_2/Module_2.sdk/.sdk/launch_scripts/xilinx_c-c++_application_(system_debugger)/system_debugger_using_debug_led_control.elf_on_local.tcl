@@ -12,5 +12,4 @@ rst -processor
 targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "RealDigital Bla 887100000093A"} -index 0
 dow C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.sdk/LED_control/Debug/LED_control.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "RealDigital Bla 887100000093A"} -index 0
-con
+bpadd -addr &main

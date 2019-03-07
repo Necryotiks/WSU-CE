@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Mar  4 16:36:24 2019
-# Process ID: 13612
+# Start of session at: Wed Mar  6 22:13:39 2019
+# Process ID: 15624
 # Current directory: C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.runs/synth_1
 # Command line: vivado.exe -log LED_IP_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LED_IP_wrapper.tcl
 # Log file: C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.runs/synth_1/LED_IP_wrapper.vds
@@ -19,9 +19,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7608 
+INFO: Helper process launched with PID 8568 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 415.605 ; gain = 110.262
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 415.836 ; gain = 109.203
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'LED_IP_wrapper' [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/hdl/LED_IP_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'LED_IP' [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/synth/LED_IP.v:13]
@@ -1189,6 +1189,8 @@ INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (47#1) [c:/Users/Ser
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (48#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
 INFO: [Synth 8-256] done synthesizing module 'LED_IP_rst_ps7_0_50M_0' (49#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_rst_ps7_0_50M_0/synth/LED_IP_rst_ps7_0_50M_0.vhd:74]
 WARNING: [Synth 8-350] instance 'rst_ps7_0_50M' of module 'LED_IP_rst_ps7_0_50M_0' requires 10 connections, but only 6 given [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/synth/LED_IP.v:361]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps7_0_axi_periph'. This will prevent further optimization [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/synth/LED_IP.v:276]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'LED_CONTROLLER_0'. This will prevent further optimization [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/synth/LED_IP.v:166]
 INFO: [Synth 8-6155] done synthesizing module 'LED_IP' (50#1) [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/synth/LED_IP.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'LED_IP_wrapper' (51#1) [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/hdl/LED_IP_wrapper.v:12]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_aclk
@@ -1293,7 +1295,7 @@ WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector__parameteriz
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector__parameterized0 has unconnected port s_axi_awlen[0]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 586.234 ; gain = 280.891
+Finished RTL Elaboration : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 586.531 ; gain = 279.898
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1306,10 +1308,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 586.234 ; gain = 280.891
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 586.531 ; gain = 279.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 586.234 ; gain = 280.891
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 586.531 ; gain = 279.898
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1326,7 +1328,7 @@ Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sour
 Finished Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_rst_ps7_0_50M_0/LED_IP_rst_ps7_0_50M_0_board.xdc] for cell 'LED_IP_i/rst_ps7_0_50M/U0'
 Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_rst_ps7_0_50M_0/LED_IP_rst_ps7_0_50M_0.xdc] for cell 'LED_IP_i/rst_ps7_0_50M/U0'
 Finished Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/ip/LED_IP_rst_ps7_0_50M_0/LED_IP_rst_ps7_0_50M_0.xdc] for cell 'LED_IP_i/rst_ps7_0_50M/U0'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 825.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 826.035 ; gain = 0.000
 Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/constrs_1/new/LED_cons.xdc]
 Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/constrs_1/new/LED_cons.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/constrs_1/new/LED_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/LED_IP_wrapper_propImpl.xdc].
@@ -1335,26 +1337,26 @@ Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.runs/synt
 Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/LED_IP_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/LED_IP_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 825.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 826.035 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 825.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 826.035 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 825.672 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 825.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 826.035 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 826.035 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 825.672 ; gain = 520.328
+Finished Constraint Validation : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 826.035 ; gain = 519.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 825.672 ; gain = 520.328
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 826.035 ; gain = 519.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1370,7 +1372,7 @@ Applied set_property DONT_TOUCH = true for LED_IP_i/ps7_0_axi_periph/xbar. (cons
 Applied set_property DONT_TOUCH = true for LED_IP_i/RGB_CONTROLLER_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for LED_IP_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 825.672 ; gain = 520.328
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 826.035 ; gain = 519.402
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm'
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -1398,7 +1400,7 @@ INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/U
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:52 ; elapsed = 00:00:59 . Memory (MB): peak = 825.672 ; gain = 520.328
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 826.035 ; gain = 519.402
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1733,7 +1735,7 @@ WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GE
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:03 . Memory (MB): peak = 825.672 ; gain = 520.328
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 826.035 ; gain = 519.402
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1745,13 +1747,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:06 ; elapsed = 00:01:14 . Memory (MB): peak = 957.559 ; gain = 652.215
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 957.965 ; gain = 651.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:16 . Memory (MB): peak = 1041.906 ; gain = 736.563
+Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 1042.555 ; gain = 735.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1763,7 +1765,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:11 ; elapsed = 00:01:18 . Memory (MB): peak = 1041.906 ; gain = 736.563
+Finished Technology Mapping : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 1042.555 ; gain = 735.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1788,7 +1790,7 @@ INFO: [Synth 8-5365] Flop inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:12 ; elapsed = 00:01:20 . Memory (MB): peak = 1041.906 ; gain = 736.563
+Finished IO Insertion : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1042.555 ; gain = 735.922
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1801,7 +1803,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:12 ; elapsed = 00:01:20 . Memory (MB): peak = 1041.906 ; gain = 736.563
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1042.555 ; gain = 735.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1813,25 +1815,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:20 . Memory (MB): peak = 1041.906 ; gain = 736.563
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 1042.555 ; gain = 735.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:20 . Memory (MB): peak = 1041.906 ; gain = 736.563
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 1042.555 ; gain = 735.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:20 . Memory (MB): peak = 1041.906 ; gain = 736.563
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 1042.555 ; gain = 735.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:20 . Memory (MB): peak = 1041.906 ; gain = 736.563
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 1042.555 ; gain = 735.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1942,29 +1944,31 @@ Report Instance Areas:
 |51    |          SEQ_COUNTER                              |upcnt_n                                                        |    13|
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:20 . Memory (MB): peak = 1041.906 ; gain = 736.563
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 1042.555 ; gain = 735.922
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 134 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:01:09 . Memory (MB): peak = 1041.906 ; gain = 497.125
-Synthesis Optimization Complete : Time (s): cpu = 00:01:13 ; elapsed = 00:01:20 . Memory (MB): peak = 1041.906 ; gain = 736.563
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:01:07 . Memory (MB): peak = 1042.555 ; gain = 496.418
+Synthesis Optimization Complete : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 1042.555 ; gain = 735.922
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1041.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1042.555 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-217 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
+219 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:24 . Memory (MB): peak = 1041.906 ; gain = 743.465
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1041.906 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 1042.555 ; gain = 742.828
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1042.555 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.runs/synth_1/LED_IP_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file LED_IP_wrapper_utilization_synth.rpt -pb LED_IP_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar  4 16:37:55 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  6 22:15:19 2019...

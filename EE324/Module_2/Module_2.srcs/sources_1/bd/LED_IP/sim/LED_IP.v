@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Mon Mar  4 16:35:17 2019
+//Date        : Wed Mar  6 21:13:35 2019
 //Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target LED_IP.bd
 //Design      : LED_IP
@@ -121,25 +121,25 @@ module LED_IP
   wire processing_system7_0_M_AXI_GP0_WREADY;
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
-  wire [31:0]ps7_0_axi_periph_M00_AXI_ARADDR;
-  wire [2:0]ps7_0_axi_periph_M00_AXI_ARPROT;
-  wire ps7_0_axi_periph_M00_AXI_ARREADY;
-  wire ps7_0_axi_periph_M00_AXI_ARVALID;
-  wire [31:0]ps7_0_axi_periph_M00_AXI_AWADDR;
-  wire [2:0]ps7_0_axi_periph_M00_AXI_AWPROT;
-  wire ps7_0_axi_periph_M00_AXI_AWREADY;
-  wire ps7_0_axi_periph_M00_AXI_AWVALID;
-  wire ps7_0_axi_periph_M00_AXI_BREADY;
-  wire [1:0]ps7_0_axi_periph_M00_AXI_BRESP;
-  wire ps7_0_axi_periph_M00_AXI_BVALID;
-  wire [31:0]ps7_0_axi_periph_M00_AXI_RDATA;
-  wire ps7_0_axi_periph_M00_AXI_RREADY;
-  wire [1:0]ps7_0_axi_periph_M00_AXI_RRESP;
-  wire ps7_0_axi_periph_M00_AXI_RVALID;
-  wire [31:0]ps7_0_axi_periph_M00_AXI_WDATA;
-  wire ps7_0_axi_periph_M00_AXI_WREADY;
-  wire [3:0]ps7_0_axi_periph_M00_AXI_WSTRB;
-  wire ps7_0_axi_periph_M00_AXI_WVALID;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]ps7_0_axi_periph_M00_AXI_ARADDR;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [2:0]ps7_0_axi_periph_M00_AXI_ARPROT;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire ps7_0_axi_periph_M00_AXI_ARREADY;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire ps7_0_axi_periph_M00_AXI_ARVALID;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]ps7_0_axi_periph_M00_AXI_AWADDR;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [2:0]ps7_0_axi_periph_M00_AXI_AWPROT;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire ps7_0_axi_periph_M00_AXI_AWREADY;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire ps7_0_axi_periph_M00_AXI_AWVALID;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire ps7_0_axi_periph_M00_AXI_BREADY;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [1:0]ps7_0_axi_periph_M00_AXI_BRESP;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire ps7_0_axi_periph_M00_AXI_BVALID;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]ps7_0_axi_periph_M00_AXI_RDATA;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire ps7_0_axi_periph_M00_AXI_RREADY;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [1:0]ps7_0_axi_periph_M00_AXI_RRESP;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire ps7_0_axi_periph_M00_AXI_RVALID;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]ps7_0_axi_periph_M00_AXI_WDATA;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire ps7_0_axi_periph_M00_AXI_WREADY;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [3:0]ps7_0_axi_periph_M00_AXI_WSTRB;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire ps7_0_axi_periph_M00_AXI_WVALID;
   wire [31:0]ps7_0_axi_periph_M01_AXI_ARADDR;
   wire [2:0]ps7_0_axi_periph_M01_AXI_ARPROT;
   wire ps7_0_axi_periph_M01_AXI_ARREADY;
