@@ -1,0 +1,22 @@
+/*
+ * functions.c
+ *
+ *  Created on: Mar 6, 2019
+ *      Author: root
+ */
+
+#include "functions.h"
+
+void enableLED()
+{
+	*LED_BASEADDR = 0xF;
+}
+void disableLED()
+{
+	*LED_BASEADDR = 0x0;
+}
+void demoLED()
+{
+	*(LED_BASEADDR + 1) = 0xF;
+}
+
