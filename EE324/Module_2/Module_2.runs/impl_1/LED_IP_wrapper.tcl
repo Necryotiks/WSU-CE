@@ -60,36 +60,25 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
   set_param xicom.use_bs_reader 1
-  create_project -in_memory -part xc7z007sclg400-1
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.xpr [current_project]
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.runs/impl_1/LED_IP_wrapper.dcp
+  set_property webtalk.parent_dir /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/wt [current_project]
+  set_property parent.project_path /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.xpr [current_project]
   set_property ip_repo_paths {
-  C:/Users/Sergaljerk/WSU-CPTE/Parts/RGB_CONTROLLER/RGB_CONTROLLER_1.0
-  C:/Users/Sergaljerk/WSU-CPTE/Parts/LED_CONTROLLER/LED_CONTROLLER_1.0
+  /home/necryotiks/Documents/Repos/WSU-CPTE/Parts/RGB_CONTROLLER/RGB_CONTROLLER_1.0
+  /home/necryotiks/Documents/Repos/WSU-CPTE/Parts/LED_CONTROLLER/LED_CONTROLLER_1.0
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.cache/ip [current_project]
+  set_property ip_output_repo /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.runs/synth_1/LED_IP_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  add_files C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/LED_IP/LED_IP.bd
-  set_param project.isImplRun false
-  read_xdc C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_2/Module_2.srcs/constrs_1/new/LED_cons.xdc
-  set_param project.isImplRun true
-  link_design -top LED_IP_wrapper -part xc7z007sclg400-1
-  set_param project.isImplRun false
-  write_hwdef -force -file LED_IP_wrapper.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Wed Mar  6 22:21:45 2019
-| Host             : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Fri Mar  8 15:54:51 2019
+| Host             : Necryotiks running 64-bit unknown
 | Command          : report_power -file LED_IP_wrapper_power_routed.rpt -pb LED_IP_wrapper_power_summary_routed.pb -rpx LED_IP_wrapper_power_routed.rpx
 | Design           : LED_IP_wrapper
 | Device           : xc7z007sclg400-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.313        |
+| Total On-Chip Power (W)  | 1.299        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.198        |
+| Dynamic (W)              | 1.184        |
 | Device Static (W)        | 0.115        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 69.9         |
-| Junction Temperature (C) | 40.1         |
+| Max Ambient (C)          | 70.0         |
+| Junction Temperature (C) | 40.0         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.017 |        4 |       --- |             --- |
-| Slice Logic              |     0.002 |    21146 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     5320 |     14400 |           36.94 |
-|   Register               |    <0.001 |     8533 |     28800 |           29.63 |
-|   LUT as Shift Register  |    <0.001 |     1945 |      6000 |           32.42 |
-|   CARRY4                 |    <0.001 |      569 |      4400 |           12.93 |
-|   LUT as Distributed RAM |    <0.001 |      152 |      6000 |            2.53 |
-|   F7/F8 Muxes            |    <0.001 |      338 |     17600 |            1.92 |
-|   Others                 |     0.000 |     1881 |       --- |             --- |
-| Signals                  |     0.004 |    11876 |       --- |             --- |
-| Block RAM                |     0.002 |      4.5 |        50 |            9.00 |
+| Clocks                   |     0.007 |        4 |       --- |             --- |
+| Slice Logic              |    <0.001 |     7092 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     2055 |     14400 |           14.27 |
+|   Register               |    <0.001 |     3669 |     28800 |           12.74 |
+|   CARRY4                 |    <0.001 |       68 |      4400 |            1.55 |
+|   LUT as Shift Register  |    <0.001 |      250 |      6000 |            4.17 |
+|   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
+|   F7/F8 Muxes            |    <0.001 |        3 |     17600 |            0.02 |
+|   Others                 |     0.000 |      537 |       --- |             --- |
+| Signals                  |     0.002 |     5110 |       --- |             --- |
+| Block RAM                |    <0.001 |      2.5 |        50 |            5.00 |
 | I/O                      |     0.000 |       16 |       100 |           16.00 |
 | PS7                      |     1.173 |        1 |       --- |             --- |
 | Static Power             |     0.115 |          |           |                 |
-| Total                    |     1.313 |          |           |                 |
+| Total                    |     1.299 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.031 |       0.025 |      0.006 |
+| Vccint    |       1.000 |     0.017 |       0.011 |      0.006 |
 | Vccaux    |       1.800 |     0.007 |       0.000 |      0.007 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -89,7 +89,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.688 |       0.661 |      0.026 |
+| Vccpint   |       1.000 |     0.687 |       0.661 |      0.026 |
 | Vccpaux   |       1.800 |     0.037 |       0.026 |      0.010 |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
 | Vcco_ddr  |       1.350 |     0.321 |       0.319 |      0.002 |
@@ -153,7 +153,7 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| LED_IP_wrapper           |     1.198 |
+| LED_IP_wrapper           |     1.184 |
 |   LED_IP_i               |     1.177 |
 |     processing_system7_0 |     1.174 |
 |       inst               |     1.174 |
@@ -162,9 +162,9 @@ Table of Contents
 |   dbg_hub                |     0.002 |
 |     inst                 |     0.002 |
 |       BSCANID.u_xsdbm_id |     0.002 |
-|   u_ila_0                |     0.020 |
-|     inst                 |     0.020 |
-|       ila_core_inst      |     0.020 |
+|   u_ila_0                |     0.005 |
+|     inst                 |     0.005 |
+|       ila_core_inst      |     0.005 |
 +--------------------------+-----------+
 
 
