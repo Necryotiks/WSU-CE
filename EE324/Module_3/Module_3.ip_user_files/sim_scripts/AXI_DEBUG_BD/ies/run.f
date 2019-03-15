@@ -27,8 +27,8 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/AXI_DEBUG_BD/ip/AXI_DEBUG_BD_processing_system7_0_0/sim/AXI_DEBUG_BD_processing_system7_0_0.v" \
-  "../../../bd/AXI_DEBUG_BD/ipshared/46b3/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
-  "../../../bd/AXI_DEBUG_BD/ipshared/46b3/hdl/LED_CONTROLLER_v1_0.v" \
+  "../../../bd/AXI_DEBUG_BD/ipshared/9e04/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
+  "../../../bd/AXI_DEBUG_BD/ipshared/9e04/hdl/LED_CONTROLLER_v1_0.v" \
   "../../../bd/AXI_DEBUG_BD/ip/AXI_DEBUG_BD_LED_CONTROLLER_0_0/sim/AXI_DEBUG_BD_LED_CONTROLLER_0_0.v" \
 -endlib
 -makelib ies_lib/lib_cdc_v1_0_2 \

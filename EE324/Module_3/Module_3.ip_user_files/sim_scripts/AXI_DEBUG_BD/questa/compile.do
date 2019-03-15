@@ -58,8 +58,8 @@ vlog -work processing_system7_vip_v1_0_6 -64 -sv -L axi_vip_v1_1_4 -L processing
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../Module_3.srcs/sources_1/bd/AXI_DEBUG_BD/ipshared/ec67/hdl" "+incdir+../../../../Module_3.srcs/sources_1/bd/AXI_DEBUG_BD/ipshared/70cf/hdl" "+incdir+../../../../Module_3.srcs/sources_1/bd/AXI_DEBUG_BD/ip/AXI_DEBUG_BD_processing_system7_0_0" "+incdir+/tools/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/AXI_DEBUG_BD/ip/AXI_DEBUG_BD_processing_system7_0_0/sim/AXI_DEBUG_BD_processing_system7_0_0.v" \
-"../../../bd/AXI_DEBUG_BD/ipshared/46b3/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
-"../../../bd/AXI_DEBUG_BD/ipshared/46b3/hdl/LED_CONTROLLER_v1_0.v" \
+"../../../bd/AXI_DEBUG_BD/ipshared/9e04/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
+"../../../bd/AXI_DEBUG_BD/ipshared/9e04/hdl/LED_CONTROLLER_v1_0.v" \
 "../../../bd/AXI_DEBUG_BD/ip/AXI_DEBUG_BD_LED_CONTROLLER_0_0/sim/AXI_DEBUG_BD_LED_CONTROLLER_0_0.v" \
 
 vcom -work lib_cdc_v1_0_2 -64 -93 \

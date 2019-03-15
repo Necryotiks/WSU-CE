@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:LED_CONTROLLER:1.0
-// IP Revision: 3
+// IP Revision: 4
 
 (* X_CORE_INFO = "LED_CONTROLLER_v1_0,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "AXI_DEBUG_BD_LED_CONTROLLER_0_0,LED_CONTROLLER_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "AXI_DEBUG_BD_LED_CONTROLLER_0_0,LED_CONTROLLER_v1_0,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=LED_CONTROLLER,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "AXI_DEBUG_BD_LED_CONTROLLER_0_0,LED_CONTROLLER_v1_0,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=LED_CONTROLLER,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module AXI_DEBUG_BD_LED_CONTROLLER_0_0 (
   o_LED,

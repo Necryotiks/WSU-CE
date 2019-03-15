@@ -10,13 +10,13 @@
     },
     "design_tree": {
       "processing_system7_0": "",
-      "LED_CONTROLLER_0": "",
       "ps7_0_axi_periph": {
         "s00_couplers": {
           "auto_pc": ""
         }
       },
-      "rst_ps7_0_50M": ""
+      "rst_ps7_0_50M": "",
+      "LED_CONTROLLER_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -860,10 +860,6 @@
           }
         }
       },
-      "LED_CONTROLLER_0": {
-        "vlnv": "xilinx.com:user:LED_CONTROLLER:1.0",
-        "xci_name": "AXI_DEBUG_BD_LED_CONTROLLER_0_0"
-      },
       "ps7_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
         "xci_name": "AXI_DEBUG_BD_ps7_0_axi_periph_0",
@@ -1063,6 +1059,10 @@
       "rst_ps7_0_50M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "AXI_DEBUG_BD_rst_ps7_0_50M_0"
+      },
+      "LED_CONTROLLER_0": {
+        "vlnv": "xilinx.com:user:LED_CONTROLLER:1.0",
+        "xci_name": "AXI_DEBUG_BD_LED_CONTROLLER_0_0"
       }
     },
     "interface_nets": {
@@ -1072,16 +1072,16 @@
           "processing_system7_0/DDR"
         ]
       },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
-        ]
-      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
         ]
       },
       "ps7_0_axi_periph_M00_AXI": {
@@ -1106,9 +1106,9 @@
           "processing_system7_0/M_AXI_GP0_ACLK",
           "ps7_0_axi_periph/S00_ACLK",
           "rst_ps7_0_50M/slowest_sync_clk",
-          "LED_CONTROLLER_0/s00_axi_aclk",
           "ps7_0_axi_periph/M00_ACLK",
-          "ps7_0_axi_periph/ACLK"
+          "ps7_0_axi_periph/ACLK",
+          "LED_CONTROLLER_0/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1121,9 +1121,9 @@
         "ports": [
           "rst_ps7_0_50M/peripheral_aresetn",
           "ps7_0_axi_periph/S00_ARESETN",
-          "LED_CONTROLLER_0/s00_axi_aresetn",
           "ps7_0_axi_periph/M00_ARESETN",
-          "ps7_0_axi_periph/ARESETN"
+          "ps7_0_axi_periph/ARESETN",
+          "LED_CONTROLLER_0/s00_axi_aresetn"
         ]
       },
       "LED_CONTROLLER_0_o_LED": {
