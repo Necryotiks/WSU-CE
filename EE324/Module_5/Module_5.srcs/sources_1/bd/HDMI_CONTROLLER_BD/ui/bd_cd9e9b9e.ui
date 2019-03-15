@@ -1,0 +1,34 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port hdmi_tx_0 -pg 1 -y 310 -defaultsOSRD
+preplace port i_CLK_100MHZ -pg 1 -y 210 -defaultsOSRD
+preplace port i_RST -pg 1 -y 190 -defaultsOSRD
+preplace portBus i_SEL -pg 1 -y 80 -defaultsOSRD
+preplace inst hdmi_tx_0 -pg 1 -lvl 4 -y 310 -defaultsOSRD
+preplace inst color_logic_0 -pg 1 -lvl 3 -y 100 -defaultsOSRD
+preplace inst VGA_controller_0 -pg 1 -lvl 2 -y 360 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 200 -defaultsOSRD
+preplace netloc hdmi_tx_0_hdmi_tx 1 4 1 N
+preplace netloc VGA_controller_0_o_X_COORD 1 2 1 550
+preplace netloc VGA_controller_0_o_VDE 1 2 2 560 360 NJ
+preplace netloc clk_wiz_0_locked 1 1 3 NJ 220 NJ 220 N
+preplace netloc VGA_controller_0_o_Y_COORD 1 2 1 580
+preplace netloc color_logic_0_o_GREEN 1 3 1 920
+preplace netloc i_SEL_0_1 1 0 3 NJ 80 NJ 80 NJ
+preplace netloc color_logic_0_o_BLUE 1 3 1 900
+preplace netloc color_logic_0_o_RED 1 3 1 940
+preplace netloc VGA_controller_0_o_HSYNC 1 2 2 N 320 NJ
+preplace netloc clk_wiz_0_clk_out1 1 1 3 230 180 570 200 910J
+preplace netloc clk_wiz_0_clk_out2 1 1 3 220J 210 NJ 210 930
+preplace netloc reset_rtl_0_1 1 0 4 -10 120 NJ 120 540J 240 N
+preplace netloc VGA_controller_0_o_VSYNC 1 2 2 N 340 NJ
+preplace netloc clk_100MHz_1 1 0 1 NJ
+levelinfo -pg 1 -30 120 400 740 1070 1220 -top 0 -bot 520
+"
+}
+{
+   "da_board_cnt":"2",
+   "da_clkrst_cnt":"4"
+}

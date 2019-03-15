@@ -1,0 +1,76 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Mar 13 21:15:25 2019
+| Host         : Necryotiks running 64-bit unknown
+| Command      : report_control_sets -verbose -file HDMI_CONTROLLER_BD_wrapper_control_sets_placed.rpt
+| Design       : HDMI_CONTROLLER_BD_wrapper
+| Device       : xc7z007s
+-------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    19 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      8 |            1 |
+|     10 |            1 |
+|    16+ |            6 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              77 |           25 |
+| No           | No                    | Yes                    |              42 |           24 |
+| No           | Yes                   | No                     |              52 |           18 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              26 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+|                    Clock Signal                   |                         Enable Signal                         |                         Set/Reset Signal                         | Slice Load Count | Bel Load Count |
++---------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+|  HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1     |                                                               | HDMI_CONTROLLER_BD_i/color_logic_0/inst/p_0_in                   |                2 |              4 |
+| ~HDMI_CONTROLLER_BD_i/VGA_controller_0/inst/o_VDE |                                                               |                                                                  |                3 |              8 |
+| ~HDMI_CONTROLLER_BD_i/VGA_controller_0/inst/o_VDE | HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT               | HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT[9]_i_1_n_0       |                3 |             10 |
+|  HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1     |                                                               | HDMI_CONTROLLER_BD_i/VGA_controller_0/inst/p_0_in                |                5 |             16 |
+|  HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1     |                                                               | HDMI_CONTROLLER_BD_i/VGA_controller_0/inst/r_HCNT[15]_i_1_n_0    |                5 |             16 |
+|  HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1     |                                                               | HDMI_CONTROLLER_BD_i/VGA_controller_0/inst/r_Y_COORD[15]_i_1_n_0 |                6 |             16 |
+|  HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1     | HDMI_CONTROLLER_BD_i/VGA_controller_0/inst/r_HCNT[15]_i_1_n_0 | HDMI_CONTROLLER_BD_i/VGA_controller_0/inst/r_VCNT[15]_i_1_n_0    |                5 |             16 |
+|  HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1     |                                                               | HDMI_CONTROLLER_BD_i/hdmi_tx_0/inst/encr/AR[0]                   |               24 |             42 |
+|  HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1     |                                                               |                                                                  |               24 |             83 |
++---------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+
+
