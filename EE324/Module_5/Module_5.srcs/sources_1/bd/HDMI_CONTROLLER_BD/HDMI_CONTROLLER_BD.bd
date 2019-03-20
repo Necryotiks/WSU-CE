@@ -9,8 +9,8 @@
     },
     "design_tree": {
       "clk_wiz_0": "",
-      "VGA_controller_0": "",
       "hdmi_tx_0": "",
+      "VGA_controller_0": "",
       "color_logic_0": ""
     },
     "interface_ports": {
@@ -87,6 +87,15 @@
           }
         }
       },
+      "hdmi_tx_0": {
+        "vlnv": "realdigital.org:realdigital:hdmi_tx:1.0",
+        "xci_name": "HDMI_CONTROLLER_BD_hdmi_tx_0_0",
+        "parameters": {
+          "MODE": {
+            "value": "HDMI"
+          }
+        }
+      },
       "VGA_controller_0": {
         "vlnv": "xilinx.com:module_ref:VGA_controller:1.0",
         "xci_name": "HDMI_CONTROLLER_BD_VGA_controller_0_0",
@@ -153,18 +162,17 @@
           }
         }
       },
-      "hdmi_tx_0": {
-        "vlnv": "realdigital.org:realdigital:hdmi_tx:1.0",
-        "xci_name": "HDMI_CONTROLLER_BD_hdmi_tx_0_0",
-        "parameters": {
-          "MODE": {
-            "value": "HDMI"
-          }
-        }
-      },
       "color_logic_0": {
         "vlnv": "xilinx.com:module_ref:color_logic:1.0",
         "xci_name": "HDMI_CONTROLLER_BD_color_logic_0_0",
+        "parameters": {
+          "v_HA_END": {
+            "value": "1280"
+          },
+          "v_VA_END": {
+            "value": "720"
+          }
+        },
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "color_logic",
@@ -236,8 +244,8 @@
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "VGA_controller_0/i_CLK",
           "hdmi_tx_0/pix_clk",
+          "VGA_controller_0/i_CLK",
           "color_logic_0/i_CLK"
         ]
       },

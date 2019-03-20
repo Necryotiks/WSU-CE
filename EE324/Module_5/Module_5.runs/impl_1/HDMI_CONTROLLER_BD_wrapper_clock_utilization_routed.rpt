@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Mar 13 21:15:40 2019
-| Host         : Necryotiks running 64-bit unknown
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Mar 20 13:20:00 2019
+| Host         : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file HDMI_CONTROLLER_BD_wrapper_clock_utilization_routed.rpt
 | Design       : HDMI_CONTROLLER_BD_wrapper
 | Device       : 7z007s-clg400
@@ -16,14 +16,13 @@ Table of Contents
 1. Clock Primitive Utilization
 2. Global Clock Resources
 3. Global Clock Source Details
-4. Local Clock Details
-5. Clock Regions: Key Resource Utilization
-6. Clock Regions : Global Clock Summary
-7. Device Cell Placement Summary for Global Clock g0
-8. Device Cell Placement Summary for Global Clock g1
-9. Device Cell Placement Summary for Global Clock g2
-10. Clock Region Cell Placement per Global Clock: Region X1Y0
-11. Clock Region Cell Placement per Global Clock: Region X1Y1
+4. Clock Regions: Key Resource Utilization
+5. Clock Regions : Global Clock Summary
+6. Device Cell Placement Summary for Global Clock g0
+7. Device Cell Placement Summary for Global Clock g1
+8. Device Cell Placement Summary for Global Clock g2
+9. Clock Region Cell Placement per Global Clock: Region X1Y0
+10. Clock Region Cell Placement per Global Clock: Region X1Y1
 
 1. Clock Primitive Utilization
 ------------------------------
@@ -47,7 +46,7 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+----------+---------------------------------------------------+---------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock    | Driver Pin                                        | Net                                                                             |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+----------+---------------------------------------------------+---------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 1 |         201 |               0 |       13.468 | Multiple | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clkout1_buf/O | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1                                    |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 1 |         194 |               0 |       13.468 | Multiple | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clkout1_buf/O | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1                                    |
 | g1        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 1 |           8 |               0 |        2.694 | Multiple | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clkout2_buf/O | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out2                                    |
 | g2        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                 1 |           1 |               0 |       50.000 | Multiple | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clkf_buf/O    | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clkfbout_buf_HDMI_CONTROLLER_BD_clk_wiz_0_0 |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+----------+---------------------------------------------------+---------------------------------------------------------------------------------+
@@ -69,20 +68,7 @@ Table of Contents
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 
 
-4. Local Clock Details
-----------------------
-
-+----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+--------------------------------------------------------+--------------------------------------------------+
-| Local Id | Driver Type/Pin | Constraint | Site/BEL         | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                             | Net                                              |
-+----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+--------------------------------------------------------+--------------------------------------------------||
-| 0        | FDRE/Q          | None       | SLICE_X42Y10/AFF | X1Y0         |          18 |               3 |              |       | HDMI_CONTROLLER_BD_i/VGA_controller_0/inst/r_VDE_reg/Q | HDMI_CONTROLLER_BD_i/VGA_controller_0/inst/o_VDE - Static -
-+----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+--------------------------------------------------------+--------------------------------------------------||
-* Local Clocks in this context represents only clocks driven by non-global buffers
-** Clock Loads column represents the clock pin loads (pin count)
-*** Non-Clock Loads column represents the non-clock pin loads (pin count)
-
-
-5. Clock Regions: Key Resource Utilization
+4. Clock Regions: Key Resource Utilization
 ------------------------------------------
 
 +-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
@@ -91,14 +77,14 @@ Table of Contents
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1100 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |  197 |  1100 |   79 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |  170 |  1100 |   64 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y1              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1100 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1100 |    0 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
 
-6. Clock Regions : Global Clock Summary
+5. Clock Regions : Global Clock Summary
 ---------------------------------------
 
 All Modules
@@ -110,13 +96,13 @@ All Modules
 +----+----+----+
 
 
-7. Device Cell Placement Summary for Global Clock g0
+6. Device Cell Placement Summary for Global Clock g0
 ----------------------------------------------------
 
 +-----------+-----------------+-------------------+----------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                          |
 +-----------+-----------------+-------------------+----------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------+
-| g0        | BUFG/O          | n/a               | Multiple |      13.468 | {0.000 6.734} |         193 |        8 |              0 |        0 | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1 |
+| g0        | BUFG/O          | n/a               | Multiple |      13.468 | {0.000 6.734} |         186 |        8 |              0 |        0 | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1 |
 +-----------+-----------------+-------------------+----------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -128,11 +114,11 @@ All Modules
 |    | X0 | X1   |
 +----+----+------+
 | Y1 |  0 |    0 |
-| Y0 |  0 |  201 |
+| Y0 |  0 |  194 |
 +----+----+------+
 
 
-8. Device Cell Placement Summary for Global Clock g1
+7. Device Cell Placement Summary for Global Clock g1
 ----------------------------------------------------
 
 +-----------+-----------------+-------------------+----------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------------+
@@ -154,7 +140,7 @@ All Modules
 +----+----+----+
 
 
-9. Device Cell Placement Summary for Global Clock g2
+8. Device Cell Placement Summary for Global Clock g2
 ----------------------------------------------------
 
 +-----------+-----------------+-------------------+----------+-------------+----------------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------+
@@ -176,13 +162,13 @@ All Modules
 +----+----+----+
 
 
-10. Clock Region Cell Placement per Global Clock: Region X1Y0
--------------------------------------------------------------
+9. Clock Region Cell Placement per Global Clock: Region X1Y0
+------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                          |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         201 |               0 | 179 |     14 |    0 |   0 |  0 |    0 |   0 |       0 | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1 |
+| g0        | n/a   | BUFG/O          | None       |         194 |               0 | 170 |     16 |    0 |   0 |  0 |    0 |   0 |       0 | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out1 |
 | g1        | n/a   | BUFG/O          | None       |           8 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | HDMI_CONTROLLER_BD_i/clk_wiz_0/inst/clk_out2 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -190,7 +176,7 @@ All Modules
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-11. Clock Region Cell Placement per Global Clock: Region X1Y1
+10. Clock Region Cell Placement per Global Clock: Region X1Y1
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+

@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Wed Mar 13 21:04:29 2019
-//Host        : Necryotiks running 64-bit unknown
+//Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+//Date        : Wed Mar 20 13:15:15 2019
+//Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target HDMI_CONTROLLER_BD.bd
 //Design      : HDMI_CONTROLLER_BD
 //Purpose     : IP block netlist
@@ -22,7 +22,7 @@ module HDMI_CONTROLLER_BD
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx_0 TMDS_CLK_P" *) output hdmi_tx_0_tmds_clk_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx_0 TMDS_DATA_N" *) output [2:0]hdmi_tx_0_tmds_data_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx_0 TMDS_DATA_P" *) output [2:0]hdmi_tx_0_tmds_data_p;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.I_CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.I_CLK_100MHZ, CLK_DOMAIN HDMI_CONTROLLER_BD_clk_100MHz, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input i_CLK_100MHZ;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.I_CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.I_CLK_100MHZ, CLK_DOMAIN HDMI_CONTROLLER_BD_i_CLK_100MHZ, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input i_CLK_100MHZ;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.I_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.I_RST, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) input i_RST;
   input [1:0]i_SEL;
 

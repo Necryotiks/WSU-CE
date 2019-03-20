@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 13 21:04:29 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 20 13:15:15 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="HDMI_CONTROLLER_BD" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -689,8 +689,8 @@
         </PORT>
         <PORT CLKFREQUENCY="74250000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="VGA_controller_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="pix_clk"/>
+            <CONNECTION INSTANCE="VGA_controller_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="color_logic_0" PORT="i_CLK"/>
           </CONNECTIONS>
         </PORT>

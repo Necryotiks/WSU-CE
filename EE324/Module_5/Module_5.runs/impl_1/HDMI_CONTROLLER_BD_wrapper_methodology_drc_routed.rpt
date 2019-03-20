@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Mar 13 21:15:40 2019
-| Host         : Necryotiks running 64-bit unknown
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Mar 20 13:20:00 2019
+| Host         : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 | Command      : report_methodology -file HDMI_CONTROLLER_BD_wrapper_methodology_drc_routed.rpt -pb HDMI_CONTROLLER_BD_wrapper_methodology_drc_routed.pb -rpx HDMI_CONTROLLER_BD_wrapper_methodology_drc_routed.rpx
 | Design       : HDMI_CONTROLLER_BD_wrapper
 | Device       : xc7z007sclg400-1
@@ -23,14 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 21
-+-----------+----------+------------------------------------------------+------------+
-| Rule      | Severity | Description                                    | Violations |
-+-----------+----------+------------------------------------------------+------------+
-| LUTAR-1   | Warning  | LUT drives async reset alert                   | 1          |
-| TIMING-6  | Warning  | No common primary clock between related clocks | 2          |
-| TIMING-17 | Warning  | Non-clocked sequential cell                    | 18         |
-+-----------+----------+------------------------------------------------+------------+
+             Violations found: 3
++----------+----------+------------------------------------------------+------------+
+| Rule     | Severity | Description                                    | Violations |
++----------+----------+------------------------------------------------+------------+
+| LUTAR-1  | Warning  | LUT drives async reset alert                   | 1          |
+| TIMING-6 | Warning  | No common primary clock between related clocks | 2          |
++----------+----------+------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -47,96 +46,6 @@ Related violations: <none>
 TIMING-6#2 Warning
 No common primary clock between related clocks  
 The clocks clk_out1_HDMI_CONTROLLER_BD_clk_wiz_0_0_1 and clk_out1_HDMI_CONTROLLER_BD_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_HDMI_CONTROLLER_BD_clk_wiz_0_0_1] -to [get_clocks clk_out1_HDMI_CONTROLLER_BD_clk_wiz_0_0]
-Related violations: <none>
-
-TIMING-17#1 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RENDER_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#2 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RENDER_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#3 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RENDER_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#4 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RENDER_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#5 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RENDER_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#6 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RENDER_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#7 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RENDER_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#8 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RENDER_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#9 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#10 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#11 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#12 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#13 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#14 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#15 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#16 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#17 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#18 Warning
-Non-clocked sequential cell  
-The clock pin HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_SHIFT_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 

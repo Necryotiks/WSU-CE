@@ -61,16 +61,13 @@ output [7:0] o_BLUE
             case(i_SEL)
                 2'b00: 
                     begin
-                        r_RED = 8'b00001111;
-                        r_GREEN = 8'b00001101;
-                        r_BLUE = 8 'b00001010;
+                        r_RED = 8'b11111111; //WORKS
+                        r_GREEN = 8'b11111111; //EACH PIXEL IS A 24 BIT VECTOR LIKE THIS (R,G,B).
+                        r_BLUE = 8 'b11111111; //EACH COLOR IS 8 BITS
                     end
                 2'b01:
                     begin
-                        r_RED = (((w_X_COORD >= 310 && w_X_COORD <= 330) && (w_Y_COORD >= 0 && w_Y_COORD <= v_VA_END)) ||
-                         (w_X_COORD >= v_HA_START && w_X_COORD <= v_HA_END && w_Y_COORD >= 230 && w_Y_COORD <= 250)) ? 4'b1111 : 4'd0;
-                        r_GREEN = 8'd0;
-                        r_BLUE = 8'd0;
+                        //TEST CARD HERE
                     end
                  2'b10:
                     begin
@@ -95,18 +92,18 @@ output [7:0] o_BLUE
         end       
     end  
     
-    always@(negedge i_VDE)
-    begin
-        if(r_RENDER == 255) 
-            begin
-                r_RENDER = 8'd0;
-                if (r_SHIFT <= 639)
-                    r_SHIFT = r_SHIFT + 1'b1;
-                else
-                    r_SHIFT = 10'd0;
-            end
-        else
-            r_RENDER = r_RENDER + 1'b1;
-    end
+//    always@(negedge i_VDE)
+//    begin
+//        if(r_RENDER == 255) 
+//            begin
+//                r_RENDER = 8'd0;
+//                if (r_SHIFT <= 639)
+//                    r_SHIFT = r_SHIFT + 1'b1;
+//                else
+//                    r_SHIFT = 10'd0;
+//            end
+//        else
+//            r_RENDER = r_RENDER + 1'b1;
+//    end
 
 endmodule
