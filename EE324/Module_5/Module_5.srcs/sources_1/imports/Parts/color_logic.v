@@ -36,6 +36,7 @@ output [7:0] o_BLUE
     parameter v_HA_END = 640;
     parameter v_VA_END = 480;
     
+    localparam v_TEST_BAR_WIDTH = 160; //HA/6
     wire w_CLK;
     wire [1:0] w_SEL;
     wire [15:0] w_X_COORD;
@@ -67,7 +68,56 @@ output [7:0] o_BLUE
                     end
                 2'b01:
                     begin
-                        //TEST CARD HERE
+                        if((w_X_COORD > v_TEST_BAR_WIDTH*0) && (w_X_COORD <= v_TEST_BAR_WIDTH*1)) //WHITE
+                        begin
+                            r_RED = 8'b11111111; 
+                            r_GREEN = 8'b11111111; 
+                            r_BLUE = 8 'b11111111;                          
+                        end
+                        else if((w_X_COORD > v_TEST_BAR_WIDTH*1) && (w_X_COORD <= v_TEST_BAR_WIDTH*2))//YELLOW
+                        begin
+                            r_RED = 8'b11111111; 
+                            r_GREEN = 8'b11111111; 
+                            r_BLUE = 8 'b00000000;                        
+                        end
+                        else if((w_X_COORD > v_TEST_BAR_WIDTH*2) && (w_X_COORD <= v_TEST_BAR_WIDTH*3))//CYAN
+                        begin
+                            r_RED = 8'b00000000; 
+                            r_GREEN = 8'b11111111; 
+                            r_BLUE = 8 'b11111111;                        
+                        end
+                        else if((w_X_COORD > v_TEST_BAR_WIDTH*3) && (w_X_COORD <= v_TEST_BAR_WIDTH*4))//GREEN
+                        begin
+                            r_RED = 8'b00000000; 
+                            r_GREEN = 8'b11111111; 
+                            r_BLUE = 8 'b11111111;                        
+                        end
+                        else if((w_X_COORD > v_TEST_BAR_WIDTH*4) && (w_X_COORD <= v_TEST_BAR_WIDTH*5))//MAGENTA
+                        begin
+                            r_RED = 8'b11111111; 
+                            r_GREEN = 8'b00000000; 
+                            r_BLUE = 8 'b11111111;                        
+                        end
+                        else if((w_X_COORD > v_TEST_BAR_WIDTH*5) && (w_X_COORD <= v_TEST_BAR_WIDTH*6))//RED
+                        begin
+                            r_RED = 8'b11111111; 
+                            r_GREEN = 8'b00000000; 
+                            r_BLUE = 8 'b00000000;                        
+                        end
+                        else if((w_X_COORD > v_TEST_BAR_WIDTH*6) && (w_X_COORD <= v_TEST_BAR_WIDTH*7))//BLUE
+                        begin
+                            r_RED = 8'b00000000; 
+                            r_GREEN = 8'b00000000; 
+                            r_BLUE = 8 'b11111111;                        
+                        end
+                        else
+                        begin
+                            r_RED = 8'b00000000;
+                            r_GREEN = 8'b00000000;
+                            r_BLUE = 8 'b00000000;
+                        end
+                      
+                        
                     end
                  2'b10:
                     begin
