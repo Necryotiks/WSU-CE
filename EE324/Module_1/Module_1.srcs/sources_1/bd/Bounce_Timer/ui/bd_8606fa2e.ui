@@ -16,23 +16,23 @@ preplace inst xlslice_3 -pg 1 -lvl 4 -y 360 -defaultsOSRD
 preplace inst HZ_Counter_0 -pg 1 -lvl 2 -y 380 -defaultsOSRD
 preplace inst BINARY_TO_BCD_0 -pg 1 -lvl 3 -y 500 -defaultsOSRD
 preplace inst ssd_mux_0 -pg 1 -lvl 5 -y 260 -defaultsOSRD
-preplace inst Bounce_Counter_FSM_0 -pg 1 -lvl 2 -y 520 -defaultsOSRD
-preplace netloc HZ_Counter_0_o_Out 1 2 4 850 420 NJ 420 1340 160 NJ
-preplace netloc xlslice_3_Dout 1 4 1 1350J
-preplace netloc xlslice_1_Dout 1 4 1 1330J
-preplace netloc i_CLK 1 0 2 20 330 540
-preplace netloc i_Signal_0_1 1 0 2 NJ 530 540J
-preplace netloc BINARY_TO_BCD_0_o_BCD 1 3 1 1130
-preplace netloc Bounce_Counter_FSM_0_o_DATA 1 2 1 850
+preplace inst Bounce_Counter_FSM_0 -pg 1 -lvl 2 -y 510 -defaultsOSRD
+preplace netloc HZ_Counter_0_o_Out 1 2 4 650 420 NJ 420 1140 160 NJ
+preplace netloc xlslice_3_Dout 1 4 1 1150J
+preplace netloc xlslice_1_Dout 1 4 1 1130J
+preplace netloc i_CLK 1 0 2 20 330 360
+preplace netloc i_Signal_0_1 1 0 2 NJ 530 NJ
+preplace netloc BINARY_TO_BCD_0_o_BCD 1 3 1 930
+preplace netloc Bounce_Counter_FSM_0_o_DATA 1 2 1 N
 preplace netloc xlslice_2_Dout 1 4 1 NJ
-preplace netloc Bounce_Counter_FSM_0_o_CEN 1 2 1 850
+preplace netloc Bounce_Counter_FSM_0_o_CEN 1 2 1 N
 preplace netloc i_RST 1 0 1 NJ
-preplace netloc rst_clk_100MHz_100M_peripheral_aresetn 1 1 1 550
+preplace netloc rst_clk_100MHz_100M_peripheral_aresetn 1 1 1 370
 preplace netloc ssd_dec_0_o_Cathodes 1 6 1 NJ
 preplace netloc ssd_mux_0_o_Anodes 1 5 2 NJ 270 NJ
-preplace netloc xlslice_0_Dout 1 4 1 1350J
-preplace netloc ssd_mux_0_o_Out 1 5 1 1630
-levelinfo -pg 1 0 370 710 990 1230 1490 1770 1930 -top -130 -bot 610
+preplace netloc xlslice_0_Dout 1 4 1 1150J
+preplace netloc ssd_mux_0_o_Out 1 5 1 1430
+levelinfo -pg 1 0 190 510 790 1030 1290 1570 1730 -top 0 -bot 590
 "
 }
 {

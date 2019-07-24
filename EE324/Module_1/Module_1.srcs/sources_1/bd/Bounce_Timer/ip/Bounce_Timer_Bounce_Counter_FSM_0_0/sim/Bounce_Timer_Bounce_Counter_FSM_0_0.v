@@ -47,33 +47,34 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:module_ref:HZ_Counter:1.0
+// IP VLNV: xilinx.com:module_ref:Bounce_Counter_FSM:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "HZ_Counter,Vivado 2018.3" *)
-(* CHECK_LICENSE_TYPE = "Reaction_Time_Averager_HZ_Counter_0_0,HZ_Counter,{}" *)
-(* CORE_GENERATION_INFO = "Reaction_Time_Averager_HZ_Counter_0_0,HZ_Counter,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=HZ_Counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,c_NUM=16129}" *)
+`timescale 1ns/1ps
+
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module Reaction_Time_Averager_HZ_Counter_0_0 (
-  i_CLK,
+module Bounce_Timer_Bounce_Counter_FSM_0_0 (
+  i_100MHZCLK,
   i_RST,
-  o_Out
+  i_Signal,
+  o_DATA,
+  o_CEN
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, ASSOCIATED_RESET i_RST, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Reaction_Time_Averager_i_CLK, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
-input wire i_CLK;
+input wire i_100MHZCLK;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
 input wire i_RST;
-output wire o_Out;
+input wire i_Signal;
+output wire [13 : 0] o_DATA;
+output wire o_CEN;
 
-  HZ_Counter #(
-    .c_NUM(16129)
-  ) inst (
-    .i_CLK(i_CLK),
+  Bounce_Counter_FSM inst (
+    .i_100MHZCLK(i_100MHZCLK),
     .i_RST(i_RST),
-    .o_Out(o_Out)
+    .i_Signal(i_Signal),
+    .o_DATA(o_DATA),
+    .o_CEN(o_CEN)
   );
 endmodule

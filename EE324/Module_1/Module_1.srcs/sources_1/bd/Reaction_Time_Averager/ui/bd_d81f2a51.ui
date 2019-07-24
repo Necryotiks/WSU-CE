@@ -2,73 +2,73 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port i_CLK -pg 1 -y 670 -defaultsOSRD
-preplace port i_React_0 -pg 1 -y 650 -defaultsOSRD
-preplace port i_RST -pg 1 -y 730 -defaultsOSRD
-preplace port i_Start_0 -pg 1 -y 320 -defaultsOSRD
-preplace port i_Terminate_0 -pg 1 -y 180 -defaultsOSRD
-preplace portBus o_Anodes_0 -pg 1 -y 500 -defaultsOSRD
+preplace port i_CLK -pg 1 -y 480 -defaultsOSRD
+preplace port i_React_0 -pg 1 -y 240 -defaultsOSRD
+preplace port i_RST -pg 1 -y 560 -defaultsOSRD
+preplace port i_Start_0 -pg 1 -y 100 -defaultsOSRD
+preplace port i_Terminate_0 -pg 1 -y 680 -defaultsOSRD
+preplace portBus o_Anodes_0 -pg 1 -y 350 -defaultsOSRD
 preplace portBus o_T_NUM_0 -pg 1 -y 680 -defaultsOSRD
-preplace portBus o_Cathodes_0 -pg 1 -y 400 -defaultsOSRD
-preplace portBus o_Ready_0 -pg 1 -y 660 -defaultsOSRD
-preplace inst ssd_dec_0 -pg 1 -lvl 13 -y 400 -defaultsOSRD
-preplace inst Debounce_RTM_0 -pg 1 -lvl 3 -y 300 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 10 -y 160 -defaultsOSRD
-preplace inst Debounce_RTM_1 -pg 1 -lvl 3 -y 160 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 10 -y 60 -defaultsOSRD
-preplace inst Debounce_RTM_2 -pg 1 -lvl 3 -y 630 -defaultsOSRD
-preplace inst RTM_FSM_0 -pg 1 -lvl 4 -y 400 -defaultsOSRD
-preplace inst xlslice_2 -pg 1 -lvl 10 -y 360 -defaultsOSRD
-preplace inst BCD_TO_BINARY_0 -pg 1 -lvl 6 -y 430 -defaultsOSRD
-preplace inst stopwatch_ssd_driver_0 -pg 1 -lvl 5 -y 440 -defaultsOSRD
-preplace inst xlslice_3 -pg 1 -lvl 10 -y 260 -defaultsOSRD
-preplace inst EXTRA_THICC_MUX_0 -pg 1 -lvl 11 -y 480 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 750 -defaultsOSRD
-preplace inst Divider_0 -pg 1 -lvl 8 -y 320 -defaultsOSRD
-preplace inst HZ_Counter_0 -pg 1 -lvl 2 -y 580 -defaultsOSRD
-preplace inst BINARY_TO_BCD_0 -pg 1 -lvl 9 -y 340 -defaultsOSRD
-preplace inst Accumuator_0 -pg 1 -lvl 7 -y 570 -defaultsOSRD
-preplace inst ssd_mux_0 -pg 1 -lvl 12 -y 490 -defaultsOSRD
-preplace inst LSFR_0 -pg 1 -lvl 3 -y 440 -defaultsOSRD
-preplace netloc BINARY_TO_BCD_0_o_Digit1 1 10 1 3190
-preplace netloc HZ_Counter_0_o_Out 1 2 10 590 80 870 270 1300 320 1610 320 1970 320 2260 410 2560J 420 2860 500 3120 630 3510
-preplace netloc stopwatch_ssd_driver_0_o_Digit_1_val 1 5 6 1590 240 NJ 240 NJ 240 NJ 240 2880J 420 3130
-preplace netloc BINARY_TO_BCD_0_o_Digit2 1 10 1 3200
-preplace netloc i_CLK_1 1 0 13 10 570 360 500 600 550 NJ 550 NJ 550 1590J 560 1920J 450 NJ 450 NJ 450 NJ 450 3120 330 3510 390 NJ
-preplace netloc stopwatch_ssd_driver_0_o_Digit_3_val 1 5 6 1600 550 1940J 460 NJ 460 NJ 460 NJ 460 3160
-preplace netloc Debounce_RTM_2_o_Assert 1 3 1 870
-preplace netloc Accumuator_0_o_OUT 1 7 1 2270
-preplace netloc BINARY_TO_BCD_0_o_Digit3 1 10 1 3140
-preplace netloc BINARY_TO_BCD_0_o_Digit4 1 10 1 3150
-preplace netloc BCD_TO_BINARY_0_o_DATA 1 6 1 1910
-preplace netloc BINARY_TO_BCD_0_o_BCD 1 9 1 2900
-preplace netloc RTM_FSM_0_o_T_NUM 1 4 10 1270J 230 NJ 230 NJ 230 NJ 230 NJ 230 2870J 680 NJ 680 NJ 680 NJ 680 NJ
-preplace netloc RTM_FSM_0_o_ACC_EN 1 4 5 1280J 330 NJ 330 1930 400 NJ 400 2570
-preplace netloc RTM_FSM_0_o_CEN 1 2 3 610 530 NJ 530 1220
-preplace netloc RTM_FSM_0_o_SWEN 1 4 1 1260
-preplace netloc stopwatch_ssd_driver_0_o_Digit_4_val 1 5 6 1590 540 1950J 470 NJ 470 NJ 470 NJ 470 3180
-preplace netloc i_Start_0_1 1 0 3 NJ 320 NJ 320 NJ
-preplace netloc EXTRA_THICC_MUX_0_o_Digit_1 1 11 1 N
-preplace netloc Debounce_RTM_0_o_Assert 1 3 1 850
-preplace netloc RTM_FSM_0_o_TRIAL_NUM 1 4 4 1220J 310 NJ 310 NJ 310 2270
-preplace netloc EXTRA_THICC_MUX_0_o_Digit_2 1 11 1 N
+preplace portBus o_Cathodes_0 -pg 1 -y 750 -defaultsOSRD
+preplace portBus o_Ready_0 -pg 1 -y 180 -defaultsOSRD
+preplace inst ssd_dec_0 -pg 1 -lvl 12 -y 750 -defaultsOSRD
+preplace inst Debounce_RTM_0 -pg 1 -lvl 2 -y 80 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 9 -y 320 -defaultsOSRD
+preplace inst Debounce_RTM_1 -pg 1 -lvl 2 -y 660 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 9 -y 420 -defaultsOSRD
+preplace inst Debounce_RTM_2 -pg 1 -lvl 2 -y 220 -defaultsOSRD
+preplace inst RTM_FSM_0 -pg 1 -lvl 3 -y 420 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 9 -y 620 -defaultsOSRD
+preplace inst BCD_TO_BINARY_0 -pg 1 -lvl 5 -y 350 -defaultsOSRD
+preplace inst stopwatch_ssd_driver_0 -pg 1 -lvl 4 -y 360 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 9 -y 520 -defaultsOSRD
+preplace inst EXTRA_THICC_MUX_0 -pg 1 -lvl 10 -y 330 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 580 -defaultsOSRD
+preplace inst Divider_0 -pg 1 -lvl 7 -y 500 -defaultsOSRD
+preplace inst HZ_Counter_0 -pg 1 -lvl 2 -y 350 -defaultsOSRD
+preplace inst BINARY_TO_BCD_0 -pg 1 -lvl 8 -y 390 -defaultsOSRD
+preplace inst Accumuator_0 -pg 1 -lvl 6 -y 380 -defaultsOSRD
+preplace inst ssd_mux_0 -pg 1 -lvl 11 -y 340 -defaultsOSRD
+preplace inst LSFR_0 -pg 1 -lvl 2 -y 500 -defaultsOSRD
+preplace netloc BINARY_TO_BCD_0_o_Digit1 1 9 1 N
+preplace netloc HZ_Counter_0_o_Out 1 2 9 650 280 1020 270 1340 200 1670 290 1970 290 2260 260 NJ 260 2770 180 3100J
+preplace netloc stopwatch_ssd_driver_0_o_Digit_1_val 1 4 6 1320 220 NJ 220 NJ 220 NJ 220 NJ 220 2790
+preplace netloc BINARY_TO_BCD_0_o_Digit2 1 9 1 2740
+preplace netloc i_CLK_1 1 0 12 20 480 360 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ
+preplace netloc stopwatch_ssd_driver_0_o_Digit_3_val 1 4 6 1350 240 NJ 240 NJ 240 NJ 240 NJ 240 2750
+preplace netloc Debounce_RTM_2_o_Assert 1 2 1 620
+preplace netloc Accumuator_0_o_OUT 1 6 1 1950
+preplace netloc BINARY_TO_BCD_0_o_Digit3 1 9 1 2780
+preplace netloc BINARY_TO_BCD_0_o_Digit4 1 9 1 2790
+preplace netloc BCD_TO_BINARY_0_o_DATA 1 5 1 1640
+preplace netloc BINARY_TO_BCD_0_o_BCD 1 8 1 2540
+preplace netloc RTM_FSM_0_o_T_NUM 1 3 10 1000J 470 NJ 470 NJ 470 1960J 420 2250J 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ
+preplace netloc RTM_FSM_0_o_ACC_EN 1 3 5 1000J 210 NJ 210 1650 280 NJ 280 2250J
+preplace netloc RTM_FSM_0_o_CEN 1 1 3 380 580 NJ 580 1000
+preplace netloc RTM_FSM_0_o_SWEN 1 3 1 N
+preplace netloc stopwatch_ssd_driver_0_o_Digit_4_val 1 4 6 1360 250 NJ 250 NJ 250 NJ 250 NJ 250 2740
+preplace netloc i_Start_0_1 1 0 2 NJ 100 NJ
+preplace netloc EXTRA_THICC_MUX_0_o_Digit_1 1 10 1 N
+preplace netloc Debounce_RTM_0_o_Assert 1 2 1 640
+preplace netloc RTM_FSM_0_o_TRIAL_NUM 1 3 4 980 460 NJ 460 1650J 500 NJ
+preplace netloc EXTRA_THICC_MUX_0_o_Digit_2 1 10 1 N
 preplace netloc i_RST_1 1 0 1 NJ
-preplace netloc RTM_FSM_0_o_Ready 1 4 10 1240J 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ
-preplace netloc stopwatch_ssd_driver_0_o_Digit_2_val 1 5 6 1610 530 1960J 480 NJ 480 NJ 480 NJ 480 3170
-preplace netloc i_Terminate_0_1 1 0 3 NJ 180 NJ 180 NJ
-preplace netloc RTM_FSM_0_o_DONE 1 4 7 1250 220 NJ 220 NJ 220 NJ 220 NJ 220 2890J 490 3130J
-preplace netloc EXTRA_THICC_MUX_0_o_Digit_3 1 11 1 N
-preplace netloc EXTRA_THICC_MUX_0_o_Digit_4 1 11 1 N
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 6 370 510 580 70 880 260 1290 580 NJ 580 NJ
-preplace netloc ssd_dec_0_o_Cathodes 1 13 1 NJ
-preplace netloc Debounce_RTM_1_o_Assert 1 3 1 860
-preplace netloc i_React_0_1 1 0 3 NJ 650 NJ 650 NJ
-preplace netloc Divider_0_o_OUT 1 8 1 2550
-preplace netloc RTM_FSM_0_o_SRST 1 4 1 1230
-preplace netloc ssd_mux_0_o_Anodes 1 12 2 NJ 500 NJ
-preplace netloc ssd_mux_0_o_Out 1 12 1 3810
-preplace netloc LSFR_0_o_OUT 1 3 1 870
-levelinfo -pg 1 -10 190 480 730 1060 1450 1770 2120 2410 2720 3020 3360 3670 3970 4140 -top 0 -bot 850
+preplace netloc RTM_FSM_0_o_Ready 1 3 10 980J 180 NJ 180 1670J 170 NJ 170 NJ 170 NJ 170 NJ 170 NJ 170 NJ 170 3660J
+preplace netloc stopwatch_ssd_driver_0_o_Digit_2_val 1 4 6 1330 230 NJ 230 NJ 230 NJ 230 NJ 230 2780
+preplace netloc i_Terminate_0_1 1 0 2 NJ 680 NJ
+preplace netloc RTM_FSM_0_o_DONE 1 3 7 990J 170 NJ 170 1660J 180 NJ 180 NJ 180 NJ 180 2760
+preplace netloc EXTRA_THICC_MUX_0_o_Digit_3 1 10 1 N
+preplace netloc EXTRA_THICC_MUX_0_o_Digit_4 1 10 1 N
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 5 370 420 630 290 1010 190 NJ 190 1660J
+preplace netloc ssd_dec_0_o_Cathodes 1 12 1 NJ
+preplace netloc Debounce_RTM_1_o_Assert 1 2 1 660
+preplace netloc i_React_0_1 1 0 2 NJ 240 NJ
+preplace netloc Divider_0_o_OUT 1 7 1 2260
+preplace netloc RTM_FSM_0_o_SRST 1 3 1 1020
+preplace netloc ssd_mux_0_o_Anodes 1 11 2 NJ 350 NJ
+preplace netloc ssd_mux_0_o_Out 1 11 1 3380
+preplace netloc LSFR_0_o_OUT 1 2 1 650
+levelinfo -pg 1 0 190 500 820 1180 1500 1810 2110 2400 2640 2950 3240 3520 3680 -top 0 -bot 820
 "
 }
 {

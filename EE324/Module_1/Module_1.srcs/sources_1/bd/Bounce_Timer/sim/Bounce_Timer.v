@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sun Mar  3 01:15:36 2019
+//Date        : Thu Apr 18 14:07:26 2019
 //Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 //Command     : generate_target Bounce_Timer.bd
 //Design      : Bounce_Timer
@@ -48,7 +48,6 @@ module Bounce_Timer
         .o_BCD(BINARY_TO_BCD_0_o_BCD));
   Bounce_Timer_Bounce_Counter_FSM_0_0 Bounce_Counter_FSM_0
        (.i_100MHZCLK(i_CLK),
-        .i_1KHZCLK(HZ_Counter_0_o_Out),
         .i_RST(rst_clk_100MHz_100M_peripheral_aresetn),
         .i_Signal(i_Signal_0_1),
         .o_CEN(Bounce_Counter_FSM_0_o_CEN),

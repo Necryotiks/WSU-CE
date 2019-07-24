@@ -5,19 +5,20 @@
       "device": "xc7z007sclg400-1",
       "name": "Bounce_Timer",
       "synth_flow_mode": "None",
-      "tool_version": "2018.3"
+      "tool_version": "2018.3",
+      "validated": "true"
     },
     "design_tree": {
       "rst_clk_100MHz_100M": "",
       "ssd_dec_0": "",
       "ssd_mux_0": "",
-      "HZ_Counter_0": "",
       "BINARY_TO_BCD_0": "",
       "xlslice_0": "",
       "xlslice_1": "",
       "xlslice_2": "",
       "xlslice_3": "",
-      "Bounce_Counter_FSM_0": ""
+      "Bounce_Counter_FSM_0": "",
+      "HZ_Counter_0": ""
     },
     "ports": {
       "o_Cathodes_0": {
@@ -34,8 +35,20 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "Bounce_Timer_i_CLK",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
           }
         }
       },
@@ -43,6 +56,10 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
           }
@@ -124,33 +141,6 @@
             "direction": "O",
             "left": "3",
             "right": "0"
-          }
-        }
-      },
-      "HZ_Counter_0": {
-        "vlnv": "xilinx.com:module_ref:HZ_Counter:1.0",
-        "xci_name": "Bounce_Timer_HZ_Counter_0_0",
-        "parameters": {
-          "c_NUM": {
-            "value": "50000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "HZ_Counter",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_CLK": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "i_RST": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "o_Out": {
-            "direction": "O"
           }
         }
       },
@@ -265,10 +255,30 @@
         "ports": {
           "i_RST": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "i_100MHZCLK": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Bounce_Timer_i_CLK",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_Signal": {
             "direction": "I"
@@ -279,6 +289,53 @@
             "right": "0"
           },
           "o_CEN": {
+            "direction": "O"
+          }
+        }
+      },
+      "HZ_Counter_0": {
+        "vlnv": "xilinx.com:module_ref:HZ_Counter:1.0",
+        "xci_name": "Bounce_Timer_HZ_Counter_0_0",
+        "parameters": {
+          "c_NUM": {
+            "value": "50000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "HZ_Counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "Bounce_Timer_i_CLK",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "o_Out": {
             "direction": "O"
           }
         }
@@ -315,15 +372,15 @@
         "ports": [
           "i_CLK",
           "rst_clk_100MHz_100M/slowest_sync_clk",
-          "HZ_Counter_0/i_CLK",
-          "Bounce_Counter_FSM_0/i_100MHZCLK"
+          "Bounce_Counter_FSM_0/i_100MHZCLK",
+          "HZ_Counter_0/i_CLK"
         ]
       },
       "rst_clk_100MHz_100M_peripheral_aresetn": {
         "ports": [
           "rst_clk_100MHz_100M/peripheral_aresetn",
-          "HZ_Counter_0/i_RST",
-          "Bounce_Counter_FSM_0/i_RST"
+          "Bounce_Counter_FSM_0/i_RST",
+          "HZ_Counter_0/i_RST"
         ]
       },
       "i_RST": {

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar  3 01:15:36 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 18 14:07:26 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Bounce_Timer" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -17,8 +17,8 @@
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
       <CONNECTIONS>
         <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="slowest_sync_clk"/>
-        <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_CLK"/>
         <CONNECTION INSTANCE="Bounce_Counter_FSM_0" PORT="i_100MHZCLK"/>
+        <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_CLK"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
@@ -78,11 +78,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="i_1KHZCLK" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" NAME="i_100MHZCLK" SIGIS="undef" SIGNAME="External_Ports_i_CLK">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
@@ -134,7 +129,6 @@
             <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Clock"/>
-            <CONNECTION INSTANCE="Bounce_Counter_FSM_0" PORT="i_1KHZCLK"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -179,8 +173,8 @@
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="Bounce_Counter_FSM_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
