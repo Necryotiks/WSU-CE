@@ -277,7 +277,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net BINARY_TO_BCD_0_o_BCD [get_bd_pins BINARY_TO_BCD_0/o_BCD] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_3/Din]
   connect_bd_net -net Bounce_Counter_FSM_0_o_CEN [get_bd_pins BINARY_TO_BCD_0/i_Start] [get_bd_pins Bounce_Counter_FSM_0/o_CEN]
   connect_bd_net -net Bounce_Counter_FSM_0_o_DATA [get_bd_pins BINARY_TO_BCD_0/i_Binary] [get_bd_pins Bounce_Counter_FSM_0/o_DATA]
-  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins BINARY_TO_BCD_0/i_Clock] [get_bd_pins Bounce_Counter_FSM_0/i_1KHZCLK] [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
+  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins BINARY_TO_BCD_0/i_Clock] [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
   connect_bd_net -net i_CLK [get_bd_ports i_CLK] [get_bd_pins Bounce_Counter_FSM_0/i_100MHZCLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk]
   connect_bd_net -net i_RST [get_bd_ports i_RST] [get_bd_pins rst_clk_100MHz_100M/ext_reset_in]
   connect_bd_net -net i_Signal_0_1 [get_bd_ports i_Signal] [get_bd_pins Bounce_Counter_FSM_0/i_Signal]

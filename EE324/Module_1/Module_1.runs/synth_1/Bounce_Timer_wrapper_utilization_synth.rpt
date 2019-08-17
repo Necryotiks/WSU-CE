@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Mar  3 01:16:28 2019
+| Date         : Thu Apr 18 14:08:25 2019
 | Host         : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Bounce_Timer_wrapper_utilization_synth.rpt -pb Bounce_Timer_wrapper_utilization_synth.pb
 | Design       : Bounce_Timer_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  124 |     0 |     14400 |  0.86 |
-|   LUT as Logic             |  123 |     0 |     14400 |  0.85 |
+| Slice LUTs*                |  125 |     0 |     14400 |  0.87 |
+|   LUT as Logic             |  124 |     0 |     14400 |  0.86 |
 |   LUT as Memory            |    1 |     0 |      6000 |  0.02 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    1 |     0 |           |       |
@@ -115,7 +115,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFGCTRL   |    2 |     0 |        32 |  6.25 |
 | BUFIO      |    0 |     0 |         8 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         2 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         2 |  0.00 |
@@ -161,6 +161,7 @@ Table of Contents
 | FDSE     |    4 |        Flop & Latch |
 | IBUF     |    3 |                  IO |
 | SRL16E   |    1 |  Distributed Memory |
+| BUFGCTRL |    1 |               Clock |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

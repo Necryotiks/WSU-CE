@@ -60,7 +60,7 @@ module Debounce_RTM(
                     begin
                         if(w_Signal == 1'd1) 
                         begin
-                            if(r_SAMPLE == 2'd3)
+                            if(r_SAMPLE >= 2'd3)
                                 r_NEXT_STATE <= s_ASSERT;
                             else
                                 r_NEXT_STATE <= s_SAMPLING;
@@ -76,7 +76,7 @@ module Debounce_RTM(
                     begin
                         if(w_Signal == 1'd0) 
                         begin
-                            if(r_SAMPLE == 2'd3)
+                            if(r_SAMPLE >= 2'd3)
                                 r_NEXT_STATE <= s_WAIT;
                             else
                                 r_NEXT_STATE <= s_TEARDOWN;
