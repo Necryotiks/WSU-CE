@@ -1,15 +1,17 @@
-//Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Thu Apr 18 14:07:26 2019
-//Host        : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+//Date        : Sat Aug 24 16:52:04 2019
+//Host        : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
 //Command     : generate_target Bounce_Timer.bd
 //Design      : Bounce_Timer
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Bounce_Timer,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Bounce_Timer,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "Bounce_Timer.hwdef" *) 
+/* This needs to be piped to a BUFGCE
+ */
+(* CORE_GENERATION_INFO = "Bounce_Timer,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Bounce_Timer,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,\"da_board_cnt\"=1,\"da_clkrst_cnt\"=1,synth_mode=Global}" *) (* HW_HANDOFF = "Bounce_Timer.hwdef" *) 
 module Bounce_Timer
    (i_CLK,
     i_RST,
@@ -55,7 +57,7 @@ module Bounce_Timer
   Bounce_Timer_HZ_Counter_0_0 HZ_Counter_0
        (.i_CLK(i_CLK),
         .i_RST(rst_clk_100MHz_100M_peripheral_aresetn),
-        .o_Out(HZ_Counter_0_o_Out));
+        .o_CLK(HZ_Counter_0_o_Out));
   Bounce_Timer_rst_clk_100MHz_100M_0 rst_clk_100MHz_100M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
@@ -64,7 +66,7 @@ module Bounce_Timer
         .peripheral_aresetn(rst_clk_100MHz_100M_peripheral_aresetn),
         .slowest_sync_clk(i_CLK));
   Bounce_Timer_ssd_dec_0_0 ssd_dec_0
-       (.i_CLK(HZ_Counter_0_o_Out),
+       (.i_CLK(i_CLK),
         .i_Num(ssd_mux_0_o_Out),
         .o_Cathodes(ssd_dec_0_o_Cathodes));
   Bounce_Timer_ssd_mux_0_0 ssd_mux_0
