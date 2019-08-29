@@ -8,6 +8,7 @@
 VBounce_Counter_FSM__Syms::VBounce_Counter_FSM__Syms(VBounce_Counter_FSM* topp, const char* namep)
 	// Setup locals
 	: __Vm_namep(namep)
+	, __Vm_activity(false)
 	, __Vm_didInit(false)
 	// Setup submodule names
 {

@@ -50,6 +50,7 @@ void VBounce_Counter_FSM::eval() {
     QData __Vchange = 1;
     do {
 	VL_DEBUG_IF(VL_DBG_MSGF("+ Clock loop\n"););
+	vlSymsp->__Vm_activity = true;
 	_eval(vlSymsp);
 	if (VL_UNLIKELY(++__VclockLoop > 100)) {
 	    // About to fail, so enable debug to see what's not settling.
@@ -68,6 +69,7 @@ void VBounce_Counter_FSM::eval() {
 void VBounce_Counter_FSM::_eval_initial_loop(VBounce_Counter_FSM__Syms* __restrict vlSymsp) {
     vlSymsp->__Vm_didInit = true;
     _eval_initial(vlSymsp);
+    vlSymsp->__Vm_activity = true;
     // Evaluate till stable
     int __VclockLoop = 0;
     QData __Vchange = 1;
@@ -97,12 +99,12 @@ void VBounce_Counter_FSM::_initial__TOP__1(VBounce_Counter_FSM__Syms* __restrict
     // Body
     // INITIAL at Bounce_Counter_FSM.v:40
     vlTOPp->Bounce_Counter_FSM__DOT__r_CEN = 0U;
-    // INITIAL at Bounce_Counter_FSM.v:43
-    vlTOPp->Bounce_Counter_FSM__DOT__r_COUNTER = 0U;
     // INITIAL at Bounce_Counter_FSM.v:42
     vlTOPp->Bounce_Counter_FSM__DOT__r_CURRENT_STATE = 0U;
     // INITIAL at Bounce_Counter_FSM.v:41
     vlTOPp->Bounce_Counter_FSM__DOT__r_NEXT_STATE = 0U;
+    // INITIAL at Bounce_Counter_FSM.v:43
+    vlTOPp->Bounce_Counter_FSM__DOT__r_COUNTER = 0U;
 }
 
 VL_INLINE_OPT void VBounce_Counter_FSM::_sequent__TOP__2(VBounce_Counter_FSM__Syms* __restrict vlSymsp) {
@@ -112,29 +114,29 @@ VL_INLINE_OPT void VBounce_Counter_FSM::_sequent__TOP__2(VBounce_Counter_FSM__Sy
     // ALWAYS at Bounce_Counter_FSM.v:91
     vlTOPp->Bounce_Counter_FSM__DOT__r_CEN = ((~ (IData)(vlTOPp->i_RST)) 
 					      & ((0U 
-						  != (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_CURRENT_STATE)) 
+						  != (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_NEXT_STATE)) 
 						 & (1U 
-						    == (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_CURRENT_STATE))));
+						    == (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_NEXT_STATE))));
     // ALWAYS at Bounce_Counter_FSM.v:91
     vlTOPp->Bounce_Counter_FSM__DOT__r_COUNTER = (0x3fffU 
 						  & ((IData)(vlTOPp->i_RST)
 						      ? 0U
 						      : 
 						     ((0U 
-						       == (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_CURRENT_STATE))
+						       == (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_NEXT_STATE))
 						       ? 0U
 						       : 
 						      ((1U 
-							== (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_CURRENT_STATE))
+							== (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_NEXT_STATE))
 						        ? 
 						       ((IData)(1U) 
 							+ (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_COUNTER))
 						        : (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_COUNTER)))));
-    vlTOPp->o_CEN = vlTOPp->Bounce_Counter_FSM__DOT__r_CEN;
-    vlTOPp->o_DATA = vlTOPp->Bounce_Counter_FSM__DOT__r_COUNTER;
     // ALWAYS at Bounce_Counter_FSM.v:82
     vlTOPp->Bounce_Counter_FSM__DOT__r_CURRENT_STATE 
 	= ((IData)(vlTOPp->i_RST) ? 0U : (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_NEXT_STATE));
+    vlTOPp->o_CEN = vlTOPp->Bounce_Counter_FSM__DOT__r_CEN;
+    vlTOPp->o_DATA = vlTOPp->Bounce_Counter_FSM__DOT__r_COUNTER;
 }
 
 void VBounce_Counter_FSM::_settle__TOP__3(VBounce_Counter_FSM__Syms* __restrict vlSymsp) {
@@ -142,13 +144,13 @@ void VBounce_Counter_FSM::_settle__TOP__3(VBounce_Counter_FSM__Syms* __restrict 
     VBounce_Counter_FSM* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->o_CEN = vlTOPp->Bounce_Counter_FSM__DOT__r_CEN;
-    vlTOPp->o_DATA = vlTOPp->Bounce_Counter_FSM__DOT__r_COUNTER;
     // ALWAYS at Bounce_Counter_FSM.v:51
     vlTOPp->__Vtableidx1 = (((IData)(vlTOPp->i_Signal) 
 			     << 2U) | (IData)(vlTOPp->Bounce_Counter_FSM__DOT__r_CURRENT_STATE));
     vlTOPp->Bounce_Counter_FSM__DOT__r_NEXT_STATE = 
 	vlTOPp->__Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE
 	[vlTOPp->__Vtableidx1];
+    vlTOPp->o_DATA = vlTOPp->Bounce_Counter_FSM__DOT__r_COUNTER;
 }
 
 VL_INLINE_OPT void VBounce_Counter_FSM::_combo__TOP__4(VBounce_Counter_FSM__Syms* __restrict vlSymsp) {
@@ -170,8 +172,10 @@ void VBounce_Counter_FSM::_eval(VBounce_Counter_FSM__Syms* __restrict vlSymsp) {
     if ((((IData)(vlTOPp->i_100MHZCLK) & (~ (IData)(vlTOPp->__Vclklast__TOP__i_100MHZCLK))) 
 	 | ((IData)(vlTOPp->i_RST) & (~ (IData)(vlTOPp->__Vclklast__TOP__i_RST))))) {
 	vlTOPp->_sequent__TOP__2(vlSymsp);
+	vlTOPp->__Vm_traceActivity = (2U | vlTOPp->__Vm_traceActivity);
     }
     vlTOPp->_combo__TOP__4(vlSymsp);
+    vlTOPp->__Vm_traceActivity = (4U | vlTOPp->__Vm_traceActivity);
     // Final
     vlTOPp->__Vclklast__TOP__i_100MHZCLK = vlTOPp->i_100MHZCLK;
     vlTOPp->__Vclklast__TOP__i_RST = vlTOPp->i_RST;
@@ -182,6 +186,7 @@ void VBounce_Counter_FSM::_eval_initial(VBounce_Counter_FSM__Syms* __restrict vl
     VBounce_Counter_FSM* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->_initial__TOP__1(vlSymsp);
+    vlTOPp->__Vm_traceActivity = (1U | vlTOPp->__Vm_traceActivity);
     vlTOPp->__Vclklast__TOP__i_100MHZCLK = vlTOPp->i_100MHZCLK;
     vlTOPp->__Vclklast__TOP__i_RST = vlTOPp->i_RST;
 }
@@ -198,6 +203,7 @@ void VBounce_Counter_FSM::_eval_settle(VBounce_Counter_FSM__Syms* __restrict vlS
     VBounce_Counter_FSM* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->_settle__TOP__3(vlSymsp);
+    vlTOPp->__Vm_traceActivity = (1U | vlTOPp->__Vm_traceActivity);
 }
 
 VL_INLINE_OPT QData VBounce_Counter_FSM::_change_request(VBounce_Counter_FSM__Syms* __restrict vlSymsp) {
@@ -236,11 +242,12 @@ void VBounce_Counter_FSM::_ctor_var_reset() {
     Bounce_Counter_FSM__DOT__r_COUNTER = VL_RAND_RESET_I(14);
     __Vtableidx1 = VL_RAND_RESET_I(3);
     __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[0] = 0U;
-    __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[1] = 2U;
-    __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[2] = 2U;
-    __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[3] = 0U;
+    __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[1] = 3U;
+    __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[2] = 0U;
+    __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[3] = 3U;
     __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[4] = 1U;
     __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[5] = 1U;
-    __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[6] = 2U;
-    __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[7] = 0U;
+    __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[6] = 0U;
+    __Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[7] = 3U;
+    __Vm_traceActivity = VL_RAND_RESET_I(32);
 }

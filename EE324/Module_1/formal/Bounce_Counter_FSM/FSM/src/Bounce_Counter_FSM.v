@@ -31,7 +31,7 @@ module Bounce_Counter_FSM(
     
     localparam s_WAIT = 2'd0;
     localparam s_ASSERT = 2'd1;
-    localparam s_DONE = 2'd2;
+    localparam s_DONE = 2'd3;
   
 
     wire w_100MHZCLK;
@@ -94,16 +94,16 @@ module Bounce_Counter_FSM(
 	   r_COUNTER <= 14'd0;
 	   r_CEN <= 1'd0;
    end
-   else if(r_CURRENT_STATE == s_WAIT)
+   else if(r_NEXT_STATE == s_WAIT)
    begin
         r_COUNTER <= 14'd0;
         r_CEN <= 1'd0;
    end
-   else if(r_CURRENT_STATE == s_ASSERT) begin
+   else if(r_NEXT_STATE == s_ASSERT) begin
         r_COUNTER <= r_COUNTER + 1'b1;
         r_CEN <= 1'd1;
         end
-   else if (r_CURRENT_STATE == s_DONE)
+   else if (r_NEXT_STATE == s_DONE)
         begin
         r_COUNTER <= r_COUNTER;
         r_CEN <= 1'd0;
@@ -119,15 +119,15 @@ reg r_valid = 1'b0;
 always @($global_clock) begin
 	r_valid <= 1'b1;
 	if($rose(w_100MHZCLK) && r_valid == 1'b1) begin
-		if(r_CURRENT_STATE == s_WAIT && r_CURRENT_STATE == $stable(r_CURRENT_STATE)) begin
+		if(r_CURRENT_STATE == s_WAIT) begin
 			assert(r_COUNTER == 0);
 			assert(r_CEN == 0);
 		end
-		else if(r_CURRENT_STATE == s_ASSERT && r_CURRENT_STATE == $stable(r_CURRENT_STATE)) begin
+		else if(r_CURRENT_STATE == s_ASSERT) begin
 			assert(r_COUNTER == $past(r_COUNTER) +1);
 			assert(r_CEN == 1);
 		end
-		else if( r_CURRENT_STATE == s_DONE && r_CURRENT_STATE == $stable(r_CURRENT_STATE)) begin
+		else if( r_CURRENT_STATE == s_DONE ) begin
 			assert(r_COUNTER == $past(r_COUNTER));
 			assert(r_CEN == 0);
 		end

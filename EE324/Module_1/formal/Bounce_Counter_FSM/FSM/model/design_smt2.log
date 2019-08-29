@@ -31,23 +31,23 @@ Input filename: design.il
 
 === Bounce_Counter_FSM ===
 
-   Number of wires:                117
-   Number of wire bits:            242
+   Number of wires:                114
+   Number of wire bits:            238
    Number of public wires:          13
    Number of public wire bits:      41
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                118
+   Number of cells:                115
      $add                            2
      $anyseq                        24
      $assert                         6
      $assume                         3
      $dff                            3
-     $eq                             9
+     $eq                             8
      $ff                            14
-     $logic_and                      5
-     $logic_not                      3
+     $logic_and                      2
+     $logic_not                      4
      $mux                           47
      $not                            1
      $pmux                           1
@@ -55,7 +55,7 @@ Input filename: design.il
 3. Executing SMT2 backend.
 Creating SMT-LIBv2 representation of module Bounce_Counter_FSM.
 
-End of script. Logfile hash: e6f755f583
-CPU: user 0.01s system 0.00s, MEM: 43.82 MB total, 7.86 MB resident
+End of script. Logfile hash: 03656364ad
+CPU: user 0.01s system 0.00s, MEM: 43.72 MB total, 7.92 MB resident
 Yosys 0.8+694 (git sha1 dc9c47b5, clang 6.0.0-1ubuntu2 -fPIC -Os)
-Time spent: 56% 2x write_smt2 (0 sec), 41% 2x read_ilang (0 sec), ...
+Time spent: 57% 2x write_smt2 (0 sec), 40% 2x read_ilang (0 sec), ...

@@ -11,6 +11,7 @@
 #include "verilated.h"
 
 class VBounce_Counter_FSM__Syms;
+class VerilatedVcd;
 
 //----------
 
@@ -41,6 +42,7 @@ VL_MODULE(VBounce_Counter_FSM) {
     VL_SIG8(__Vtableidx1,2,0);
     VL_SIG8(__Vclklast__TOP__i_100MHZCLK,0,0);
     VL_SIG8(__Vclklast__TOP__i_RST,0,0);
+    VL_SIG(__Vm_traceActivity,31,0);
     static VL_ST_SIG8(__Vtable1_Bounce_Counter_FSM__DOT__r_NEXT_STATE[8],1,0);
     
     // INTERNAL VARIABLES
@@ -60,6 +62,8 @@ VL_MODULE(VBounce_Counter_FSM) {
     VBounce_Counter_FSM(const char* name="TOP");
     /// Destroy the model; called (often implicitly) by application code
     ~VBounce_Counter_FSM();
+    /// Trace signals in the model; called by application code
+    void trace(VerilatedVcdC* tfp, int levels, int options=0);
     
     // API METHODS
     /// Evaluate the model.  Application must call when inputs change.
@@ -90,6 +94,17 @@ VL_MODULE(VBounce_Counter_FSM) {
     static void _initial__TOP__1(VBounce_Counter_FSM__Syms* __restrict vlSymsp) VL_ATTR_COLD;
     static void _sequent__TOP__2(VBounce_Counter_FSM__Syms* __restrict vlSymsp);
     static void _settle__TOP__3(VBounce_Counter_FSM__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void traceChgThis(VBounce_Counter_FSM__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__2(VBounce_Counter_FSM__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__3(VBounce_Counter_FSM__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceChgThis__4(VBounce_Counter_FSM__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code);
+    static void traceFullThis(VBounce_Counter_FSM__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code) VL_ATTR_COLD;
+    static void traceFullThis__1(VBounce_Counter_FSM__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code) VL_ATTR_COLD;
+    static void traceInitThis(VBounce_Counter_FSM__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code) VL_ATTR_COLD;
+    static void traceInitThis__1(VBounce_Counter_FSM__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code) VL_ATTR_COLD;
+    static void traceInit(VerilatedVcd* vcdp, void* userthis, uint32_t code);
+    static void traceFull(VerilatedVcd* vcdp, void* userthis, uint32_t code);
+    static void traceChg(VerilatedVcd* vcdp, void* userthis, uint32_t code);
 } VL_ATTR_ALIGNED(128);
 
 #endif // guard

@@ -47,183 +47,177 @@ Module Bounce_Counter_FSM directly or indirectly contains formal properties -> s
 Cleaned up 0 empty switches.
 
 2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 3 switch rules as full_case in process $proc$Bounce_Counter_FSM.v:119$30 in module Bounce_Counter_FSM.
-Marked 4 switch rules as full_case in process $proc$Bounce_Counter_FSM.v:91$24 in module Bounce_Counter_FSM.
-Marked 1 switch rules as full_case in process $proc$Bounce_Counter_FSM.v:82$22 in module Bounce_Counter_FSM.
-Marked 3 switch rules as full_case in process $proc$Bounce_Counter_FSM.v:51$19 in module Bounce_Counter_FSM.
+Marked 3 switch rules as full_case in process $proc$Bounce_Counter_FSM.v:119$27 in module Bounce_Counter_FSM.
+Marked 4 switch rules as full_case in process $proc$Bounce_Counter_FSM.v:91$21 in module Bounce_Counter_FSM.
+Marked 1 switch rules as full_case in process $proc$Bounce_Counter_FSM.v:82$19 in module Bounce_Counter_FSM.
+Marked 3 switch rules as full_case in process $proc$Bounce_Counter_FSM.v:51$16 in module Bounce_Counter_FSM.
 Removed a total of 0 dead cases.
 
 2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
 Removed 3 redundant assignments.
-Promoted 25 assignments to connections.
+Promoted 22 assignments to connections.
 
 2.2.4. Executing PROC_INIT pass (extract init attributes).
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:139$117'.
-  Set init value: $formal$Bounce_Counter_FSM.v:139$18_EN = 1'0
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:138$115'.
-  Set init value: $formal$Bounce_Counter_FSM.v:138$17_EN = 1'0
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:137$113'.
-  Set init value: $formal$Bounce_Counter_FSM.v:137$16_EN = 1'0
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:132$111'.
-  Set init value: $formal$Bounce_Counter_FSM.v:132$15_EN = 1'0
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:131$109'.
-  Set init value: $formal$Bounce_Counter_FSM.v:131$14_EN = 1'0
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:128$107'.
-  Set init value: $formal$Bounce_Counter_FSM.v:128$13_EN = 1'0
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:127$105'.
-  Set init value: $formal$Bounce_Counter_FSM.v:127$12_EN = 1'0
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:124$103'.
-  Set init value: $formal$Bounce_Counter_FSM.v:124$11_EN = 1'0
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:123$101'.
-  Set init value: $formal$Bounce_Counter_FSM.v:123$10_EN = 1'0
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:118$100'.
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:139$102'.
+  Set init value: $formal$Bounce_Counter_FSM.v:139$15_EN = 1'0
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:138$100'.
+  Set init value: $formal$Bounce_Counter_FSM.v:138$14_EN = 1'0
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:137$98'.
+  Set init value: $formal$Bounce_Counter_FSM.v:137$13_EN = 1'0
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:132$96'.
+  Set init value: $formal$Bounce_Counter_FSM.v:132$12_EN = 1'0
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:131$94'.
+  Set init value: $formal$Bounce_Counter_FSM.v:131$11_EN = 1'0
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:128$92'.
+  Set init value: $formal$Bounce_Counter_FSM.v:128$10_EN = 1'0
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:127$90'.
+  Set init value: $formal$Bounce_Counter_FSM.v:127$9_EN = 1'0
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:124$88'.
+  Set init value: $formal$Bounce_Counter_FSM.v:124$8_EN = 1'0
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:123$86'.
+  Set init value: $formal$Bounce_Counter_FSM.v:123$7_EN = 1'0
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:118$85'.
   Set init value: \r_valid = 1'0
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:43$99'.
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:43$84'.
   Set init value: \r_COUNTER = 14'00000000000000
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:42$98'.
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:42$83'.
   Set init value: \r_CURRENT_STATE = 2'00
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:41$97'.
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:41$82'.
   Set init value: \r_NEXT_STATE = 2'00
-Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:40$96'.
+Found init rule in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:40$81'.
   Set init value: \r_CEN = 1'0
 
 2.2.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \w_RST in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$24'.
-Found async reset \w_RST in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:82$22'.
+Found async reset \w_RST in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$21'.
+Found async reset \w_RST in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:82$19'.
 
 2.2.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:139$117'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:138$115'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:137$113'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:132$111'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:131$109'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:128$107'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:127$105'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:124$103'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:123$101'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:118$100'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:43$99'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:42$98'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:41$97'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:40$96'.
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-     1/18: $0$formal$Bounce_Counter_FSM.v:123$10_EN[0:0]$41
-     2/18: $0$formal$Bounce_Counter_FSM.v:123$10_CHECK[0:0]$40
-     3/18: $0$formal$Bounce_Counter_FSM.v:124$11_EN[0:0]$43
-     4/18: $0$formal$Bounce_Counter_FSM.v:124$11_CHECK[0:0]$42
-     5/18: $0$formal$Bounce_Counter_FSM.v:127$12_EN[0:0]$45
-     6/18: $0$formal$Bounce_Counter_FSM.v:127$12_CHECK[0:0]$44
-     7/18: $0$formal$Bounce_Counter_FSM.v:128$13_EN[0:0]$47
-     8/18: $0$formal$Bounce_Counter_FSM.v:128$13_CHECK[0:0]$46
-     9/18: $0$formal$Bounce_Counter_FSM.v:131$14_EN[0:0]$49
-    10/18: $0$formal$Bounce_Counter_FSM.v:131$14_CHECK[0:0]$48
-    11/18: $0$formal$Bounce_Counter_FSM.v:132$15_EN[0:0]$51
-    12/18: $0$formal$Bounce_Counter_FSM.v:132$15_CHECK[0:0]$50
-    13/18: $0$formal$Bounce_Counter_FSM.v:137$16_EN[0:0]$53
-    14/18: $0$formal$Bounce_Counter_FSM.v:137$16_CHECK[0:0]$52
-    15/18: $0$formal$Bounce_Counter_FSM.v:138$17_EN[0:0]$55
-    16/18: $0$formal$Bounce_Counter_FSM.v:138$17_CHECK[0:0]$54
-    17/18: $0$formal$Bounce_Counter_FSM.v:139$18_EN[0:0]$57
-    18/18: $0$formal$Bounce_Counter_FSM.v:139$18_CHECK[0:0]$56
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$24'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:139$102'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:138$100'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:137$98'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:132$96'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:131$94'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:128$92'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:127$90'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:124$88'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:123$86'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:118$85'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:43$84'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:42$83'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:41$82'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:40$81'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+     1/18: $0$formal$Bounce_Counter_FSM.v:123$7_EN[0:0]$35
+     2/18: $0$formal$Bounce_Counter_FSM.v:123$7_CHECK[0:0]$34
+     3/18: $0$formal$Bounce_Counter_FSM.v:124$8_EN[0:0]$37
+     4/18: $0$formal$Bounce_Counter_FSM.v:124$8_CHECK[0:0]$36
+     5/18: $0$formal$Bounce_Counter_FSM.v:127$9_EN[0:0]$39
+     6/18: $0$formal$Bounce_Counter_FSM.v:127$9_CHECK[0:0]$38
+     7/18: $0$formal$Bounce_Counter_FSM.v:128$10_EN[0:0]$41
+     8/18: $0$formal$Bounce_Counter_FSM.v:128$10_CHECK[0:0]$40
+     9/18: $0$formal$Bounce_Counter_FSM.v:131$11_EN[0:0]$43
+    10/18: $0$formal$Bounce_Counter_FSM.v:131$11_CHECK[0:0]$42
+    11/18: $0$formal$Bounce_Counter_FSM.v:132$12_EN[0:0]$45
+    12/18: $0$formal$Bounce_Counter_FSM.v:132$12_CHECK[0:0]$44
+    13/18: $0$formal$Bounce_Counter_FSM.v:137$13_EN[0:0]$47
+    14/18: $0$formal$Bounce_Counter_FSM.v:137$13_CHECK[0:0]$46
+    15/18: $0$formal$Bounce_Counter_FSM.v:138$14_EN[0:0]$49
+    16/18: $0$formal$Bounce_Counter_FSM.v:138$14_CHECK[0:0]$48
+    17/18: $0$formal$Bounce_Counter_FSM.v:139$15_EN[0:0]$51
+    18/18: $0$formal$Bounce_Counter_FSM.v:139$15_CHECK[0:0]$50
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$21'.
      1/2: $0\r_CEN[0:0]
      2/2: $0\r_COUNTER[13:0]
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:82$22'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:82$19'.
      1/1: $0\r_CURRENT_STATE[1:0]
-Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:51$19'.
+Creating decoders for process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:51$16'.
      1/3: $3\r_NEXT_STATE[1:0]
      2/3: $2\r_NEXT_STATE[1:0]
      3/3: $1\r_NEXT_STATE[1:0]
 
 2.2.7. Executing PROC_DLATCH pass (convert process syncs to latches).
-No latch inferred for signal `\Bounce_Counter_FSM.\r_NEXT_STATE' from process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:51$19'.
+No latch inferred for signal `\Bounce_Counter_FSM.\r_NEXT_STATE' from process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:51$16'.
 
 2.2.8. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\Bounce_Counter_FSM.\r_valid' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
+Creating register for signal `\Bounce_Counter_FSM.\r_valid' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$274' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:121$1$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$275' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:127$2$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$276' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:131$3$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$277' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:137$4$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$278' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:138$5$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$279' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:139$6$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$280' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:123$7_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$281' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:123$7_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$282' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:124$8_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$283' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:124$8_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$284' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:127$9_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$285' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:127$9_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$286' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:128$10_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$287' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:128$10_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+  created $ff cell `$procdff$288' with global clock.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:131$11_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
   created $ff cell `$procdff$289' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:121$1$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:131$11_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
   created $ff cell `$procdff$290' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:122$2$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:132$12_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
   created $ff cell `$procdff$291' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:126$3$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:132$12_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
   created $ff cell `$procdff$292' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:127$4$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:137$13_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
   created $ff cell `$procdff$293' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:130$5$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:137$13_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
   created $ff cell `$procdff$294' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:131$6$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:138$14_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
   created $ff cell `$procdff$295' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:137$7$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:138$14_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
   created $ff cell `$procdff$296' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:138$8$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:139$15_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
   created $ff cell `$procdff$297' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$past$Bounce_Counter_FSM.v:139$9$0' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
+Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:139$15_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
   created $ff cell `$procdff$298' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:123$10_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$299' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:123$10_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$300' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:124$11_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$301' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:124$11_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$302' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:127$12_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$303' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:127$12_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$304' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:128$13_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$305' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:128$13_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$306' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:131$14_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$307' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:131$14_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$308' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:132$15_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$309' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:132$15_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$310' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:137$16_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$311' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:137$16_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$312' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:138$17_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$313' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:138$17_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$314' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:139$18_CHECK' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$315' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.$formal$Bounce_Counter_FSM.v:139$18_EN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-  created $ff cell `$procdff$316' with global clock.
-Creating register for signal `\Bounce_Counter_FSM.\r_CEN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$24'.
-  created $adff cell `$procdff$317' with positive edge clock and positive level reset.
-Creating register for signal `\Bounce_Counter_FSM.\r_COUNTER' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$24'.
-  created $adff cell `$procdff$318' with positive edge clock and positive level reset.
-Creating register for signal `\Bounce_Counter_FSM.\r_CURRENT_STATE' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:82$22'.
-  created $adff cell `$procdff$319' with positive edge clock and positive level reset.
+Creating register for signal `\Bounce_Counter_FSM.\r_CEN' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$21'.
+  created $adff cell `$procdff$299' with positive edge clock and positive level reset.
+Creating register for signal `\Bounce_Counter_FSM.\r_COUNTER' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$21'.
+  created $adff cell `$procdff$300' with positive edge clock and positive level reset.
+Creating register for signal `\Bounce_Counter_FSM.\r_CURRENT_STATE' using process `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:82$19'.
+  created $adff cell `$procdff$301' with positive edge clock and positive level reset.
 
 2.2.9. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:139$117'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:138$115'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:137$113'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:132$111'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:131$109'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:128$107'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:127$105'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:124$103'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:123$101'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:118$100'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:43$99'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:42$98'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:41$97'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:40$96'.
-Found and cleaned up 5 empty switches in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$30'.
-Found and cleaned up 3 empty switches in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$24'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$24'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:82$22'.
-Found and cleaned up 3 empty switches in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:51$19'.
-Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:51$19'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:139$102'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:138$100'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:137$98'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:132$96'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:131$94'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:128$92'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:127$90'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:124$88'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:123$86'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:118$85'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:43$84'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:42$83'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:41$82'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:40$81'.
+Found and cleaned up 5 empty switches in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:119$27'.
+Found and cleaned up 3 empty switches in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$21'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:91$21'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:82$19'.
+Found and cleaned up 3 empty switches in `\Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:51$16'.
+Removing empty process `Bounce_Counter_FSM.$proc$Bounce_Counter_FSM.v:51$16'.
 Cleaned up 11 empty switches.
 
 2.3. Executing OPT_EXPR pass (perform const folding).
@@ -232,7 +226,7 @@ Optimizing module Bounce_Counter_FSM.
 
 2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \Bounce_Counter_FSM..
-Removed 2 unused cells and 112 unused wires.
+Removed 2 unused cells and 109 unused wires.
 <suppressed ~3 debug messages>
 
 2.5. Executing CHECK pass (checking for obvious problems).
@@ -246,16 +240,16 @@ Optimizing module Bounce_Counter_FSM.
 
 2.6.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\Bounce_Counter_FSM'.
-<suppressed ~51 debug messages>
-Removed a total of 17 cells.
+<suppressed ~24 debug messages>
+Removed a total of 8 cells.
 
 2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
 Running muxtree optimizer on module \Bounce_Counter_FSM..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
   Analyzing evaluation results.
-    dead port 2/2 on $mux $procmux$274.
-    dead port 2/2 on $mux $procmux$282.
+    dead port 2/2 on $mux $procmux$259.
+    dead port 2/2 on $mux $procmux$267.
 Removed 2 multiplexer ports.
 <suppressed ~21 debug messages>
 
@@ -272,7 +266,7 @@ Removed a total of 18 cells.
 
 2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \Bounce_Counter_FSM..
-Removed 0 unused cells and 37 unused wires.
+Removed 0 unused cells and 28 unused wires.
 <suppressed ~7 debug messages>
 
 2.6.8. Executing OPT_EXPR pass (perform const folding).
@@ -307,19 +301,19 @@ Optimizing module Bounce_Counter_FSM.
 2.6.16. Finished OPT passes. (There is nothing left to do.)
 
 2.7. Executing WREDUCE pass (reducing word size of cells).
-Removed top 1 bits (of 2) from port B of cell Bounce_Counter_FSM.$eq$Bounce_Counter_FSM.v:102$27 ($eq).
-Removed top 31 bits (of 32) from port B of cell Bounce_Counter_FSM.$and$Bounce_Counter_FSM.v:121$58 ($and).
-Removed top 31 bits (of 32) from port Y of cell Bounce_Counter_FSM.$and$Bounce_Counter_FSM.v:121$58 ($and).
-Removed top 31 bits (of 32) from port B of cell Bounce_Counter_FSM.$and$Bounce_Counter_FSM.v:121$60 ($and).
-Removed top 31 bits (of 32) from port Y of cell Bounce_Counter_FSM.$and$Bounce_Counter_FSM.v:121$60 ($and).
-Removed top 1 bits (of 2) from port B of cell Bounce_Counter_FSM.$eq$Bounce_Counter_FSM.v:122$66 ($eq).
-Removed top 31 bits (of 32) from port B of cell Bounce_Counter_FSM.$add$Bounce_Counter_FSM.v:127$74 ($add).
-Removed top 17 bits (of 32) from port Y of cell Bounce_Counter_FSM.$add$Bounce_Counter_FSM.v:127$74 ($add).
-Removed top 17 bits (of 32) from port B of cell Bounce_Counter_FSM.$eq$Bounce_Counter_FSM.v:127$75 ($eq).
-Removed top 1 bits (of 2) from mux cell Bounce_Counter_FSM.$procmux$280 ($mux).
+Removed top 1 bits (of 2) from port B of cell Bounce_Counter_FSM.$eq$Bounce_Counter_FSM.v:102$24 ($eq).
+Removed top 31 bits (of 32) from port B of cell Bounce_Counter_FSM.$and$Bounce_Counter_FSM.v:121$52 ($and).
+Removed top 31 bits (of 32) from port Y of cell Bounce_Counter_FSM.$and$Bounce_Counter_FSM.v:121$52 ($and).
+Removed top 31 bits (of 32) from port B of cell Bounce_Counter_FSM.$and$Bounce_Counter_FSM.v:121$54 ($and).
+Removed top 31 bits (of 32) from port Y of cell Bounce_Counter_FSM.$and$Bounce_Counter_FSM.v:121$54 ($and).
+Removed top 1 bits (of 2) from port B of cell Bounce_Counter_FSM.$eq$Bounce_Counter_FSM.v:126$61 ($eq).
+Removed top 31 bits (of 32) from port B of cell Bounce_Counter_FSM.$add$Bounce_Counter_FSM.v:127$62 ($add).
+Removed top 17 bits (of 32) from port Y of cell Bounce_Counter_FSM.$add$Bounce_Counter_FSM.v:127$62 ($add).
+Removed top 17 bits (of 32) from port B of cell Bounce_Counter_FSM.$eq$Bounce_Counter_FSM.v:127$63 ($eq).
+Removed top 1 bits (of 2) from mux cell Bounce_Counter_FSM.$procmux$265 ($mux).
 Removed top 1 bits (of 2) from wire Bounce_Counter_FSM.$2\r_NEXT_STATE[1:0].
-Removed top 17 bits (of 32) from wire Bounce_Counter_FSM.$add$Bounce_Counter_FSM.v:127$74_Y.
-Removed top 31 bits (of 32) from wire Bounce_Counter_FSM.$and$Bounce_Counter_FSM.v:121$58_Y.
+Removed top 17 bits (of 32) from wire Bounce_Counter_FSM.$add$Bounce_Counter_FSM.v:127$62_Y.
+Removed top 31 bits (of 32) from wire Bounce_Counter_FSM.$and$Bounce_Counter_FSM.v:121$52_Y.
 
 2.8. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
 
@@ -353,22 +347,22 @@ Removed 0 unused cells and 2 unused wires.
 
 === Bounce_Counter_FSM ===
 
-   Number of wires:                 91
-   Number of wire bits:            188
+   Number of wires:                 88
+   Number of wire bits:            184
    Number of public wires:          13
    Number of public wire bits:      41
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 92
+   Number of cells:                 89
      $add                            2
      $adff                           3
      $assert                         6
      $assume                         3
-     $eq                             9
+     $eq                             8
      $ff                            18
-     $logic_and                      5
-     $logic_not                      3
+     $logic_and                      2
+     $logic_not                      4
      $mux                           41
      $not                            1
      $pmux                           1
@@ -380,9 +374,9 @@ found and reported 0 problems.
 3. Executing MEMORY_NORDFF pass (extracting $dff cells from $mem).
 
 4. Executing ASYNC2SYNC pass.
-Replacing Bounce_Counter_FSM.$procdff$317 ($adff): ARST=\i_RST, D=$0\r_CEN[0:0], Q=\r_CEN
-Replacing Bounce_Counter_FSM.$procdff$318 ($adff): ARST=\i_RST, D=$0\r_COUNTER[13:0], Q=\r_COUNTER
-Replacing Bounce_Counter_FSM.$procdff$319 ($adff): ARST=\i_RST, D=\r_NEXT_STATE, Q=\r_CURRENT_STATE
+Replacing Bounce_Counter_FSM.$procdff$299 ($adff): ARST=\i_RST, D=$0\r_CEN[0:0], Q=\r_CEN
+Replacing Bounce_Counter_FSM.$procdff$300 ($adff): ARST=\i_RST, D=$0\r_COUNTER[13:0], Q=\r_COUNTER
+Replacing Bounce_Counter_FSM.$procdff$301 ($adff): ARST=\i_RST, D=\r_NEXT_STATE, Q=\r_CURRENT_STATE
 
 5. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \Bounce_Counter_FSM..
@@ -401,7 +395,7 @@ Finding identical cells in module `\Bounce_Counter_FSM'.
 Removed a total of 0 cells.
 
 7.3. Executing OPT_RMDFF pass (remove dff with constant values).
-Promoting init spec $formal$Bounce_Counter_FSM.v:137$16_EN = 1'0 to constant driver in module Bounce_Counter_FSM.
+Promoting init spec $formal$Bounce_Counter_FSM.v:137$13_EN = 1'0 to constant driver in module Bounce_Counter_FSM.
 Promoted 1 init specs to constant drivers.
 
 7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
@@ -442,7 +436,7 @@ Module Bounce_Counter_FSM directly or indirectly contains formal properties -> s
 10. Executing ILANG backend.
 Output filename: ../model/design.il
 
-End of script. Logfile hash: db7146997a
-CPU: user 0.08s system 0.00s, MEM: 44.36 MB total, 10.15 MB resident
+End of script. Logfile hash: 1368433d8f
+CPU: user 0.07s system 0.00s, MEM: 44.35 MB total, 10.55 MB resident
 Yosys 0.8+694 (git sha1 dc9c47b5, clang 6.0.0-1ubuntu2 -fPIC -Os)
 Time spent: 28% 8x opt_clean (0 sec), 19% 7x opt_expr (0 sec), ...
