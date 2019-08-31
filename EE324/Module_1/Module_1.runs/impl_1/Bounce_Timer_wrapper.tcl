@@ -68,22 +68,23 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 3
+  set_param xicom.use_bs_reader 1
+  set_param chipscope.maxJobs 2
   create_project -in_memory -part xc7z007sclg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.cache/wt [current_project]
-  set_property parent.project_path /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.xpr [current_project]
-  set_property ip_repo_paths /home/sergaljerk/Documents/Repos/WSU-CPTE/Parts [current_project]
+  set_property webtalk.parent_dir /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.cache/wt [current_project]
+  set_property parent.project_path /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.xpr [current_project]
+  set_property ip_repo_paths /home/necryotiks/Documents/Repos/WSU-CPTE/Parts [current_project]
   update_ip_catalog
-  set_property ip_output_repo /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.cache/ip [current_project]
+  set_property ip_output_repo /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/Bounce_Timer_wrapper.dcp
+  add_files -quiet /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/Bounce_Timer_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd
+  add_files /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd
   set_param project.isImplRun false
-  read_xdc /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc
+  read_xdc /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc
   set_param project.isImplRun true
   link_design -top Bounce_Timer_wrapper -part xc7z007sclg400-1
   set_param project.isImplRun false

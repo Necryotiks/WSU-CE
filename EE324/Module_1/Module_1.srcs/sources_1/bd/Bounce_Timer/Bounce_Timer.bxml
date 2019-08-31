@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="Bounce_Timer" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1566690724"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1566690724"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1566690724"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1566690724"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1567116349"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1567116349"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1567116349"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1567116349"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/Bounce_Timer_ssd_dec_0_0/Bounce_Timer_ssd_dec_0_0.xci" Type="IP">
         <Instance HierarchyPath="ssd_dec_0"/>
@@ -25,14 +25,6 @@
       </File>
       <File Name="ip/Bounce_Timer_HZ_Counter_0_0/Bounce_Timer_HZ_Counter_0_0.xci" Type="IP">
         <Instance HierarchyPath="HZ_Counter_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/Bounce_Timer_rst_clk_100MHz_100M_0/Bounce_Timer_rst_clk_100MHz_100M_0.xci" Type="IP">
-        <Instance HierarchyPath="rst_clk_100MHz_100M"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -81,6 +73,14 @@
       </File>
       <File Name="ip/Bounce_Timer_xlslice_3_0/Bounce_Timer_xlslice_3_0.xci" Type="IP">
         <Instance HierarchyPath="xlslice_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/Bounce_Timer_rst_i_CLK_100M_0/Bounce_Timer_rst_i_CLK_100M_0.xci" Type="IP">
+        <Instance HierarchyPath="rst_i_CLK_100M"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

@@ -31,7 +31,8 @@ module Bounce_Counter_FSM(
     
     localparam s_WAIT = 2'd0;
     localparam s_ASSERT = 2'd1;
-    localparam s_DONE = 2'd2;
+    localparam s_ASSERT_2 = 2'd2;
+    localparam s_DONE = 2'd3;
   
 
     wire w_100MHZCLK;
@@ -63,6 +64,7 @@ module Bounce_Counter_FSM(
             s_ASSERT:
                 begin
                     if(w_Signal == 1'd0) begin
+                        //r_NEXT_STATE = s_ASSERT_2;
                         r_NEXT_STATE = s_DONE;
                         end
                     else
@@ -70,6 +72,13 @@ module Bounce_Counter_FSM(
                         r_NEXT_STATE = s_ASSERT;
                         end
                 end
+//             s_ASSERT_2:
+//                begin
+//                    if(w_Signal == 1'd0)
+//                        r_NEXT_STATE = s_ASSERT_2;
+//                    else
+//                        r_NEXT_STATE = s_DONE;
+//                end
              s_DONE:
                 begin
                     r_NEXT_STATE = s_DONE;
@@ -99,7 +108,7 @@ module Bounce_Counter_FSM(
         r_COUNTER <= 14'd0;
         r_CEN <= 1'd0;
    end
-   else if(r_CURRENT_STATE == s_ASSERT) begin
+   else if(r_CURRENT_STATE == s_ASSERT) /*|| (r_CURRENT_STATE == s_ASSERT_2))*/ begin
         r_COUNTER <= r_COUNTER + 1'b1;
         r_CEN <= 1'd1;
         end

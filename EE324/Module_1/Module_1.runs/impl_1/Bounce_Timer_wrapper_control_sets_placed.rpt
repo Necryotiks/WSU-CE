@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Sat Aug 24 16:53:25 2019
-| Host         : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
+| Date         : Thu Aug 29 15:07:20 2019
+| Host         : Necryotiks running 64-bit unknown
 | Command      : report_control_sets -verbose -file Bounce_Timer_wrapper_control_sets_placed.rpt
 | Design       : Bounce_Timer_wrapper
 | Device       : xc7z007s
@@ -42,11 +42,11 @@ Table of Contents
 | Total control sets |    12 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     5 |
-| >= 6 to < 8        |     2 |
+| >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     2 |
+| >= 14 to < 16      |     3 |
 | >= 16              |     2 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
@@ -59,9 +59,9 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              37 |           10 |
-| No           | No                    | Yes                    |              36 |           12 |
-| No           | Yes                   | No                     |               4 |            2 |
-| Yes          | No                    | No                     |              38 |           14 |
+| No           | No                    | Yes                    |              36 |           14 |
+| No           | Yes                   | No                     |               4 |            1 |
+| Yes          | No                    | No                     |              38 |           16 |
 | Yes          | No                    | Yes                    |              14 |            2 |
 | Yes          | Yes                   | No                     |               6 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,21 +70,21 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------------+-------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|               Clock Signal              |                        Enable Signal                        |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
-+-----------------------------------------+-------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_BCD[3]                |                                                             |                2 |              4 |
-|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_BCD[7]                |                                                             |                2 |              4 |
-|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_BCD[15]               |                                                             |                2 |              4 |
-|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_BCD[11]               |                                                             |                2 |              4 |
-|  i_CLK_IBUF_BUFG                        |                                                             | Bounce_Timer_i/rst_clk_100MHz_100M/U0/EXT_LPF/lpf_int       |                2 |              4 |
-|  i_CLK_IBUF_BUFG                        | Bounce_Timer_i/rst_clk_100MHz_100M/U0/SEQ/seq_cnt_en        | Bounce_Timer_i/rst_clk_100MHz_100M/U0/SEQ/SEQ_COUNTER/clear |                1 |              6 |
-|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK |                                                             |                                                             |                3 |              7 |
-|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_Loop_Count[7]_i_1_n_0 |                                                             |                2 |              8 |
-|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_Binary_0              |                                                             |                4 |             14 |
-|  i_CLK_IBUF_BUFG                        | Bounce_Timer_i/Bounce_Counter_FSM_0/inst/r_COUNTER__0       | Bounce_Timer_i/rst_clk_100MHz_100M/U0/peripheral_aresetn[0] |                2 |             14 |
-|  i_CLK_IBUF_BUFG                        |                                                             |                                                             |                8 |             31 |
-|  i_CLK_IBUF_BUFG                        |                                                             | Bounce_Timer_i/rst_clk_100MHz_100M/U0/peripheral_aresetn[0] |               12 |             36 |
-+-----------------------------------------+-------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
++-----------------------------------------+-------------------------------------------------------------+--------------------------------------------------------+------------------+----------------+
+|               Clock Signal              |                        Enable Signal                        |                    Set/Reset Signal                    | Slice Load Count | Bel Load Count |
++-----------------------------------------+-------------------------------------------------------------+--------------------------------------------------------+------------------+----------------+
+|  i_CLK_IBUF_BUFG                        |                                                             | Bounce_Timer_i/rst_i_CLK_100M/U0/EXT_LPF/lpf_int       |                1 |              4 |
+|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_BCD[3]                |                                                        |                2 |              4 |
+|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_BCD[15]               |                                                        |                3 |              4 |
+|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_BCD[11]               |                                                        |                2 |              4 |
+|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_BCD[7]                |                                                        |                2 |              4 |
+|  i_CLK_IBUF_BUFG                        | Bounce_Timer_i/rst_i_CLK_100M/U0/SEQ/seq_cnt_en             | Bounce_Timer_i/rst_i_CLK_100M/U0/SEQ/SEQ_COUNTER/clear |                1 |              6 |
+|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_Loop_Count[7]_i_1_n_0 |                                                        |                3 |              8 |
+|  i_CLK_IBUF_BUFG                        | Bounce_Timer_i/Bounce_Counter_FSM_0/inst/r_COUNTER__0       | Bounce_Timer_i/rst_i_CLK_100M/U0/peripheral_reset[0]   |                2 |             14 |
+|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK |                                                             |                                                        |                4 |             14 |
+|  Bounce_Timer_i/HZ_Counter_0/inst/o_CLK | Bounce_Timer_i/BINARY_TO_BCD_0/inst/r_Binary_0              |                                                        |                4 |             14 |
+|  i_CLK_IBUF_BUFG                        |                                                             |                                                        |                7 |             24 |
+|  i_CLK_IBUF_BUFG                        |                                                             | Bounce_Timer_i/rst_i_CLK_100M/U0/peripheral_reset[0]   |               14 |             36 |
++-----------------------------------------+-------------------------------------------------------------+--------------------------------------------------------+------------------+----------------+
 
 

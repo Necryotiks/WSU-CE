@@ -3,7 +3,7 @@
  |                                                                            |
  |  yosys -- Yosys Open SYnthesis Suite                                       |
  |                                                                            |
- |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |  Copyright (C) 2012 - 2018  Clifford Wolf <clifford@clifford.at>           |
  |                                                                            |
  |  Permission to use, copy, modify, and/or distribute this software for any  |
  |  purpose with or without fee is hereby granted, provided that the above    |
@@ -19,7 +19,7 @@
  |                                                                            |
  \----------------------------------------------------------------------------/
 
- Yosys 0.8+694 (git sha1 dc9c47b5, clang 6.0.0-1ubuntu2 -fPIC -Os)
+ Yosys 0.8 (git sha1 UNKNOWN, clang 7.0.1 -march=x86-64 -mtune=generic -O2 -fstack-protector-strong -fno-plt -fPIC -Os)
 
 
 -- Executing script file `design_smt2.ys' --
@@ -31,31 +31,54 @@ Input filename: design.il
 
 === Bounce_Counter_FSM ===
 
+<<<<<<< HEAD
    Number of wires:                114
    Number of wire bits:            238
+=======
+   Number of wires:                 67
+   Number of wire bits:            192
+>>>>>>> 0b735c85f7f8e6c05c353638da5b2be30f30fc02
    Number of public wires:          13
    Number of public wire bits:      41
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
+<<<<<<< HEAD
    Number of cells:                115
+=======
+   Number of cells:                 68
+>>>>>>> 0b735c85f7f8e6c05c353638da5b2be30f30fc02
      $add                            2
-     $anyseq                        24
      $assert                         6
      $assume                         3
      $dff                            3
+<<<<<<< HEAD
      $eq                             8
      $ff                            14
      $logic_and                      2
      $logic_not                      4
      $mux                           47
+=======
+     $eq                             9
+     $ff                            12
+     $logic_and                      5
+     $logic_not                      3
+     $mux                           23
+>>>>>>> 0b735c85f7f8e6c05c353638da5b2be30f30fc02
      $not                            1
      $pmux                           1
 
 3. Executing SMT2 backend.
 Creating SMT-LIBv2 representation of module Bounce_Counter_FSM.
 
+<<<<<<< HEAD
 End of script. Logfile hash: 03656364ad
 CPU: user 0.01s system 0.00s, MEM: 43.72 MB total, 7.92 MB resident
 Yosys 0.8+694 (git sha1 dc9c47b5, clang 6.0.0-1ubuntu2 -fPIC -Os)
 Time spent: 57% 2x write_smt2 (0 sec), 40% 2x read_ilang (0 sec), ...
+=======
+End of script. Logfile hash: 5375cd2656
+CPU: user 0.00s system 0.00s, MEM: 18.69 MB total, 7.21 MB resident
+Yosys 0.8 (git sha1 UNKNOWN, clang 7.0.1 -march=x86-64 -mtune=generic -O2 -fstack-protector-strong -fno-plt -fPIC -Os)
+Time spent: 61% 2x write_smt2 (0 sec), 35% 2x read_ilang (0 sec), ...
+>>>>>>> 0b735c85f7f8e6c05c353638da5b2be30f30fc02

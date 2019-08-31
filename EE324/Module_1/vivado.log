@@ -1,32 +1,1081 @@
 #-----------------------------------------------------------
-# Vivado v2018.3 (64-bit)
-# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
-# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sat Aug 24 11:48:24 2019
-# Process ID: 21569
-# Current directory: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Aug 29 11:56:36 2019
+# Process ID: 23932
+# Current directory: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1
 # Command line: vivado
-# Log file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/vivado.log
-# Journal file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/vivado.jou
+# Log file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/vivado.log
+# Journal file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.xpr
+xterm: cannot load font "-Misc-Fixed-medium-R-*-*-13-120-75-75-C-120-ISO10646-1"
+open_project /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.xpr
+INFO: [Project 1-313] Project file moved from '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/necryotiks/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:05 . Memory (MB): peak = 6410.195 ; gain = 85.637 ; free physical = 1851 ; free virtual = 12404
+update_compile_order -fileset sources_1
+open_bd_design {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd}
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:module_ref:LSFR:1.0 - LSFR_0
+Adding component instance block -- xilinx.com:module_ref:RTM_FSM:1.0 - RTM_FSM_0
+Adding component instance block -- xilinx.com:module_ref:stopwatch_ssd_driver:1.0 - stopwatch_ssd_driver_0
+Adding component instance block -- xilinx.com:module_ref:ssd_mux:1.0 - ssd_mux_0
+Adding component instance block -- xilinx.com:module_ref:ssd_dec:1.0 - ssd_dec_0
+Adding component instance block -- xilinx.com:module_ref:Accumuator:1.0 - Accumuator_0
+Adding component instance block -- xilinx.com:module_ref:BCD_TO_BINARY:1.0 - BCD_TO_BINARY_0
+Adding component instance block -- xilinx.com:module_ref:BINARY_TO_BCD:1.0 - BINARY_TO_BCD_0
+Adding component instance block -- xilinx.com:module_ref:EXTRA_THICC_MUX:1.0 - EXTRA_THICC_MUX_0
+Adding component instance block -- xilinx.com:module_ref:Divider:1.0 - Divider_0
+Adding component instance block -- xilinx.com:module_ref:Debounce_RTM:1.0 - Debounce_RTM_0
+Adding component instance block -- xilinx.com:module_ref:Debounce_RTM:1.0 - Debounce_RTM_1
+Adding component instance block -- xilinx.com:module_ref:Debounce_RTM:1.0 - Debounce_RTM_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
+Adding component instance block -- xilinx.com:module_ref:HZ_Counter:1.0 - HZ_Counter_0
+Successfully read diagram <Reaction_Time_Averager> from BD file </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd>
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Thu Aug 29 11:58:57 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+set_property is_enabled true [get_files  /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/imports/new/RTM_cons.xdc]
+set_property is_enabled false [get_files  /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Thu Aug 29 12:05:14 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+set_property top Reaction_Time_Averager_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+CRITICAL WARNING: [BD 41-1343] Reset pin /RTM_FSM_0/i_RST (associated clock /RTM_FSM_0/i_CLK1KHZ) is connected to reset source /proc_sys_reset_0/peripheral_aresetn (synchronous to clock source /i_CLK).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /HZ_Counter_0/o_CLK.
+CRITICAL WARNING: [BD 41-1343] Reset pin /stopwatch_ssd_driver_0/i_RST (associated clock /stopwatch_ssd_driver_0/i_SUBCLK) is connected to reset source /proc_sys_reset_0/peripheral_aresetn (synchronous to clock source /i_CLK).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /HZ_Counter_0/o_CLK.
+CRITICAL WARNING: [BD 41-1343] Reset pin /Accumuator_0/i_RST (associated clock /Accumuator_0/i_CLK) is connected to reset source /proc_sys_reset_0/peripheral_aresetn (synchronous to clock source /i_CLK).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /HZ_Counter_0/o_CLK.
+WARNING: [BD 41-927] Following properties on pin /LSFR_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /RTM_FSM_0/i_CLK1KHZ have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /stopwatch_ssd_driver_0/i_SUBCLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /Accumuator_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BCD_TO_BINARY_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /EXTRA_THICC_MUX_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /Divider_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /Debounce_RTM_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /Debounce_RTM_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /Debounce_RTM_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/sim/Reaction_Time_Averager.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block LSFR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RTM_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block stopwatch_ssd_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Accumuator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BCD_TO_BINARY_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block EXTRA_THICC_MUX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Divider_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Debounce_RTM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Debounce_RTM_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Debounce_RTM_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/hw_handoff/Reaction_Time_Averager.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/hw_handoff/Reaction_Time_Averager_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.hwdef
+[Thu Aug 29 12:07:07 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:01:17 ; elapsed = 00:00:28 . Memory (MB): peak = 6825.664 ; gain = 164.102 ; free physical = 1695 ; free virtual = 12296
+reset_run synth_1
+open_bd_design {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd}
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/ui/bd_d81f2a51.ui> 
+launch_runs synth_1 -jobs 8
+[Thu Aug 29 12:09:16 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Thu Aug 29 12:12:03 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
 open_hw
 connect_hw_server
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
 INFO: [Labtools 27-2222] Launching hw_server...
 INFO: [Labtools 27-2221] Launch Output:
 
-****** Xilinx hw_server v2018.3
-  **** Build date : Dec  6 2018-23:53:53
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:06:40
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
+open_hw_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 7697.582 ; gain = 871.918 ; free physical = 585 ; free virtual = 11237
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Aug 29 12:17:03 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Reaction_Time_Averager_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference Reaction_Time_Averager_RTM_FSM_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK1KHZ' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK1KHZ' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK1KHZ': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK1KHZ': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
+Upgrading '/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd'
+INFO: [IP_Flow 19-3420] Updated Reaction_Time_Averager_RTM_FSM_0_0 to use current project options
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd> 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/ui/bd_d81f2a51.ui> 
+update_module_reference: Time (s): cpu = 00:00:54 ; elapsed = 00:00:23 . Memory (MB): peak = 7843.496 ; gain = 56.016 ; free physical = 1235 ; free virtual = 11155
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+CRITICAL WARNING: [BD 41-1343] Reset pin /stopwatch_ssd_driver_0/i_RST (associated clock /stopwatch_ssd_driver_0/i_SUBCLK) is connected to reset source /proc_sys_reset_0/peripheral_aresetn (synchronous to clock source /i_CLK).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /HZ_Counter_0/o_CLK.
+CRITICAL WARNING: [BD 41-1343] Reset pin /Accumuator_0/i_RST (associated clock /Accumuator_0/i_CLK) is connected to reset source /proc_sys_reset_0/peripheral_aresetn (synchronous to clock source /i_CLK).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /HZ_Counter_0/o_CLK.
+CRITICAL WARNING: [BD 41-1343] Reset pin /RTM_FSM_0/i_RST (associated clock /RTM_FSM_0/i_CLK1KHZ) is connected to reset source /proc_sys_reset_0/peripheral_aresetn (synchronous to clock source /i_CLK).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /HZ_Counter_0/o_CLK.
+WARNING: [BD 41-927] Following properties on pin /LSFR_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /stopwatch_ssd_driver_0/i_SUBCLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /Accumuator_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BCD_TO_BINARY_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /EXTRA_THICC_MUX_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /Divider_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /Debounce_RTM_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /Debounce_RTM_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /Debounce_RTM_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /RTM_FSM_0/i_CLK1KHZ have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Reaction_Time_Averager_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/sim/Reaction_Time_Averager.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/hdl/Reaction_Time_Averager_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block LSFR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RTM_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block stopwatch_ssd_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Accumuator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BCD_TO_BINARY_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block EXTRA_THICC_MUX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Divider_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Debounce_RTM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Debounce_RTM_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Debounce_RTM_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/hw_handoff/Reaction_Time_Averager.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/hw_handoff/Reaction_Time_Averager_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/synth/Reaction_Time_Averager.hwdef
+[Thu Aug 29 12:29:44 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 12:29:44 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:29 ; elapsed = 00:00:14 . Memory (MB): peak = 7899.543 ; gain = 10.027 ; free physical = 1156 ; free virtual = 11071
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Reaction_Time_Averager_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Reaction_Time_Averager_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Reaction_Time_Averager_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd}
+open_bd_design {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd}
+open_bd_design {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_100MHz_100M
+Adding component instance block -- xilinx.com:module_ref:ssd_dec:1.0 - ssd_dec_0
+Adding component instance block -- xilinx.com:module_ref:ssd_mux:1.0 - ssd_mux_0
+Adding component instance block -- xilinx.com:module_ref:BINARY_TO_BCD:1.0 - BINARY_TO_BCD_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
+Adding component instance block -- xilinx.com:module_ref:HZ_Counter:1.0 - HZ_Counter_0
+Adding component instance block -- xilinx.com:module_ref:Bounce_Counter_FSM:1.0 - Bounce_Counter_FSM_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0/i_100MHZCLK(undef)
+Successfully read diagram <Bounce_Timer> from BD file </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd>
+set_property top Bounce_Timer_wrapper [current_fileset]
 update_compile_order -fileset sources_1
+set_property is_enabled true [get_files  /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc]
+set_property is_enabled false [get_files  /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/imports/new/RTM_cons.xdc]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Aug 29 13:18:58 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 13:18:58 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Aug 29 13:21:21 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 13:21:21 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Aug 29 13:43:45 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 13:43:45 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference Bounce_Timer_Bounce_Counter_FSM_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
+Upgrading '/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
+INFO: [IP_Flow 19-3420] Updated Bounce_Timer_Bounce_Counter_FSM_0_0 to use current project options
+WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0_upgraded_ipi/i_100MHZCLK(undef)
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 13:48:05 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 13:48:05 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:56 ; elapsed = 00:00:30 . Memory (MB): peak = 8149.145 ; gain = 24.941 ; free physical = 1520 ; free virtual = 10927
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference Bounce_Timer_Bounce_Counter_FSM_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
+Upgrading '/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
+INFO: [IP_Flow 19-3420] Updated Bounce_Timer_Bounce_Counter_FSM_0_0 to use current project options
+WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0_upgraded_ipi/i_100MHZCLK(undef)
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+update_module_reference: Time (s): cpu = 00:00:42 ; elapsed = 00:00:16 . Memory (MB): peak = 8221.180 ; gain = 0.000 ; free physical = 1560 ; free virtual = 10907
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 13:53:28 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 13:53:28 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:23 ; elapsed = 00:00:12 . Memory (MB): peak = 8229.754 ; gain = 8.574 ; free physical = 1476 ; free virtual = 10783
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference Bounce_Timer_Bounce_Counter_FSM_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
+Upgrading '/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
+INFO: [IP_Flow 19-3420] Updated Bounce_Timer_Bounce_Counter_FSM_0_0 to use current project options
+WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0_upgraded_ipi/i_100MHZCLK(undef)
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+update_module_reference: Time (s): cpu = 00:00:40 ; elapsed = 00:00:18 . Memory (MB): peak = 8285.781 ; gain = 0.000 ; free physical = 1626 ; free virtual = 10883
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 13:59:29 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 13:59:29 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:02 ; elapsed = 00:00:41 . Memory (MB): peak = 8305.691 ; gain = 19.910 ; free physical = 1594 ; free virtual = 10846
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference Bounce_Timer_Bounce_Counter_FSM_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
+Upgrading '/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
+INFO: [IP_Flow 19-3420] Updated Bounce_Timer_Bounce_Counter_FSM_0_0 to use current project options
+WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0_upgraded_ipi/i_100MHZCLK(undef)
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 14:05:40 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 14:05:40 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:34 ; elapsed = 00:00:19 . Memory (MB): peak = 8390.738 ; gain = 14.016 ; free physical = 1541 ; free virtual = 10790
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference Bounce_Timer_Bounce_Counter_FSM_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
+Upgrading '/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
+INFO: [IP_Flow 19-3420] Updated Bounce_Timer_Bounce_Counter_FSM_0_0 to use current project options
+WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0_upgraded_ipi/i_100MHZCLK(undef)
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+update_module_reference: Time (s): cpu = 00:00:43 ; elapsed = 00:00:16 . Memory (MB): peak = 8458.770 ; gain = 0.000 ; free physical = 1571 ; free virtual = 10787
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 14:13:57 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 14:13:57 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:46 ; elapsed = 00:00:25 . Memory (MB): peak = 8557.477 ; gain = 52.852 ; free physical = 1436 ; free virtual = 10647
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 9155.594 ; gain = 0.000 ; free physical = 1170 ; free virtual = 10125
+Restored from archive | CPU: 0.040000 secs | Memory: 0.324158 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 9155.594 ; gain = 0.000 ; free physical = 1170 ; free virtual = 10125
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9155.594 ; gain = 0.000 ; free physical = 1171 ; free virtual = 10126
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 9342.078 ; gain = 784.602 ; free physical = 923 ; free virtual = 9876
+save_constraints -force
+reset_run synth_1
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+[Thu Aug 29 14:18:53 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 14:18:53 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+reset_run impl_1
+open_bd_design {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {300} CONFIG.MMCM_CLKFBOUT_MULT_F {10.125} CONFIG.MMCM_CLKOUT0_DIVIDE_F {3.375} CONFIG.CLKOUT1_JITTER {105.610} CONFIG.CLKOUT1_PHASE_ERROR {97.646}] [get_bd_cells clk_wiz_0]
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/reset'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/clk_in1'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /clk_wiz_0/clk_in1'
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {New External Port (ACTIVE_HIGH)}}  [get_bd_pins clk_wiz_0/reset]
+INFO: [board_rule 100-100] create_bd_port -dir I reset_rtl_0 -type rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_HIGH /reset_rtl_0
+INFO: [board_rule 100-100] connect_bd_net /reset_rtl_0 /clk_wiz_0/reset
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_HIGH /reset_rtl_0
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Clk {/i_CLK (100 MHz)} Manual_Source {Auto}}  [get_bd_pins clk_wiz_0/clk_in1]
+endgroup
+delete_bd_objs [get_bd_nets i_CLK]
+connect_bd_net [get_bd_ports i_CLK] [get_bd_pins clk_wiz_0/clk_in1]
+connect_bd_net [get_bd_pins Bounce_Counter_FSM_0/i_100MHZCLK] [get_bd_pins clk_wiz_0/clk_out1]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /Bounce_Counter_FSM_0/i_100MHZCLK(undef) and /clk_wiz_0/clk_out1(clk)
+connect_bd_net [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_ports i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk]
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+open_bd_design {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+CRITICAL WARNING: [BD 41-1343] Reset pin /HZ_Counter_0/i_RST (associated clock /HZ_Counter_0/i_CLK) is connected to reset source /rst_clk_100MHz_100M/peripheral_aresetn (synchronous to clock source /i_CLK).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_0/clk_out1.
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 14:24:10 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 9437.961 ; gain = 35.863 ; free physical = 1115 ; free virtual = 9813
+delete_bd_objs [get_bd_nets i_RST] [get_bd_cells rst_clk_100MHz_100M]
+delete_bd_objs [get_bd_ports i_RST]
+save_bd_design
+WARNING: [BD 41-597] NET <rst_clk_100MHz_100M_peripheral_aresetn> has no source
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+delete_bd_objs [get_bd_nets clk_wiz_0_clk_out1]
+connect_bd_net [get_bd_pins Bounce_Counter_FSM_0/i_100MHZCLK] [get_bd_pins clk_wiz_0/clk_out1]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /Bounce_Counter_FSM_0/i_100MHZCLK(undef) and /clk_wiz_0/clk_out1(clk)
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins HZ_Counter_0/i_RST]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/i_RST(rst) and /clk_wiz_0/locked(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /Bounce_Counter_FSM_0/i_RST(rst) and /clk_wiz_0/locked(undef)
+connect_bd_net [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins HZ_Counter_0/o_CLK]
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+connect_bd_net [get_bd_ports i_CLK] [get_bd_pins HZ_Counter_0/i_CLK]
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 14:27:44 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 9552.977 ; gain = 10.973 ; free physical = 1004 ; free virtual = 9784
+delete_bd_objs [get_bd_nets i_CLK_1]
+connect_bd_net [get_bd_ports i_CLK] [get_bd_pins clk_wiz_0/clk_in1]
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+connect_bd_net [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins clk_wiz_0/clk_out1]
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 14:29:43 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:45 ; elapsed = 00:00:26 . Memory (MB): peak = 9661.641 ; gain = 95.656 ; free physical = 960 ; free virtual = 9740
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Aug 29 14:30:52 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+set_property name i_RST [get_bd_nets reset_rtl_0_1]
+set_property name i_RST [get_bd_ports reset_rtl_0]
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 14:33:13 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 14:33:13 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:55 ; elapsed = 00:00:36 . Memory (MB): peak = 9699.844 ; gain = 10.191 ; free physical = 1064 ; free virtual = 9698
+update_timing
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -jobs 8
+[Thu Aug 29 14:36:24 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+set_property target_constrs_file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc [current_fileset -constrset]
+save_constraints -force
+close_design
+open_bd_design {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
+startgroup
+endgroup
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+[Thu Aug 29 14:42:00 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 14:42:00 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Aug 29 14:43:55 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 9714.848 ; gain = 0.000 ; free physical = 1031 ; free virtual = 9494
+Restored from archive | CPU: 0.040000 secs | Memory: 0.308907 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 9714.848 ; gain = 0.000 ; free physical = 1031 ; free virtual = 9494
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9714.848 ; gain = 0.000 ; free physical = 1032 ; free virtual = 9495
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins Bounce_Counter_FSM_0/i_RST]
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins HZ_Counter_0/i_RST]
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 14:48:54 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 9832.926 ; gain = 9.008 ; free physical = 1295 ; free virtual = 9434
+launch_runs impl_1 -jobs 8
+[Thu Aug 29 14:49:53 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.15 . Memory (MB): peak = 9849.934 ; gain = 0.000 ; free physical = 1254 ; free virtual = 9420
+Restored from archive | CPU: 0.080000 secs | Memory: 0.294159 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.16 . Memory (MB): peak = 9849.934 ; gain = 0.000 ; free physical = 1254 ; free virtual = 9420
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 9859.777 ; gain = 9.844 ; free physical = 1098 ; free virtual = 9264
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+open_bd_design {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.000} CONFIG.CLKOUT1_JITTER {130.958} CONFIG.CLKOUT1_PHASE_ERROR {98.575}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 14:54:39 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 14:54:39 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:01 ; elapsed = 00:00:36 . Memory (MB): peak = 9985.660 ; gain = 125.883 ; free physical = 1158 ; free virtual = 9339
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Aug 29 14:57:47 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
+delete_bd_objs [get_bd_nets i_RST] [get_bd_nets i_CLK_1] [get_bd_cells clk_wiz_0]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/i_CLK (100 MHz)" }  [get_bd_pins HZ_Counter_0/i_CLK]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /Bounce_Counter_FSM_0/i_100MHZCLK(undef) and /i_CLK(clk)
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_i_CLK_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_i_CLK_100M/ext_reset_in'
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_i_CLK_100M/ext_reset_in]
+INFO: [board_rule 100-100] create_bd_port -dir I reset_rtl_0 -type rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset_rtl_0
+INFO: [board_rule 100-100] connect_bd_net /reset_rtl_0 /rst_i_CLK_100M/ext_reset_in
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset_rtl_0
+delete_bd_objs [get_bd_nets reset_rtl_0_1] [get_bd_ports reset_rtl_0]
+connect_bd_net [get_bd_ports i_RST] [get_bd_pins rst_i_CLK_100M/ext_reset_in]
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_i_CLK_100M .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 15:00:57 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 15:00:57 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:51 ; elapsed = 00:00:29 . Memory (MB): peak = 10033.023 ; gain = 12.375 ; free physical = 1375 ; free virtual = 9316
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+CRITICAL WARNING: [HDL 9-806] Syntax error near "begin". [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/new/Bounce_Counter_FSM.v:111]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "else". [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/new/Bounce_Counter_FSM.v:115]
+update_module_reference Bounce_Timer_Bounce_Counter_FSM_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
+Upgrading '/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
+INFO: [IP_Flow 19-3420] Updated Bounce_Timer_Bounce_Counter_FSM_0_0 to use current project options
+WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0_upgraded_ipi/i_100MHZCLK(undef)
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_i_CLK 
+WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
+WARNING: [BD 41-927] Following properties on pin /Bounce_Counter_FSM_0/i_RST have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	POLARITY=ACTIVE_HIGH 
+Wrote  : </home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
+VHDL Output written to : /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_i_CLK_100M .
+Exporting to file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
+Generated Block Design Tcl file /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
+Generated Hardware Definition File /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
+[Thu Aug 29 15:06:02 2019] Launched synth_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
+[Thu Aug 29 15:06:02 2019] Launched impl_1...
+Run output will be captured here: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:24 ; elapsed = 00:00:13 . Memory (MB): peak = 10117.879 ; gain = 12.816 ; free physical = 1464 ; free virtual = 9266
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Aug 24 11:52:34 2019...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 30 13:48:08 2019...
