@@ -18,11 +18,14 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==LED_IP_ps7_0_ax
 # IP: bd/LED_IP/ip/LED_IP_rst_ps7_0_50M_0/LED_IP_rst_ps7_0_50M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==LED_IP_rst_ps7_0_50M_0 || ORIG_REF_NAME==LED_IP_rst_ps7_0_50M_0} -quiet] -quiet
 
-# IP: bd/LED_IP/ip/LED_IP_xbar_0/LED_IP_xbar_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==LED_IP_xbar_0 || ORIG_REF_NAME==LED_IP_xbar_0} -quiet] -quiet
-
 # IP: bd/LED_IP/ip/LED_IP_RGB_CONTROLLER_0_0/LED_IP_RGB_CONTROLLER_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==LED_IP_RGB_CONTROLLER_0_0 || ORIG_REF_NAME==LED_IP_RGB_CONTROLLER_0_0} -quiet] -quiet
+
+# IP: bd/LED_IP/ip/LED_IP_SW_BUTTON_INTERFACE_0_0/LED_IP_SW_BUTTON_INTERFACE_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==LED_IP_SW_BUTTON_INTERFACE_0_0 || ORIG_REF_NAME==LED_IP_SW_BUTTON_INTERFACE_0_0} -quiet] -quiet
+
+# IP: bd/LED_IP/ip/LED_IP_xbar_0/LED_IP_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==LED_IP_xbar_0 || ORIG_REF_NAME==LED_IP_xbar_0} -quiet] -quiet
 
 # IP: bd/LED_IP/ip/LED_IP_auto_pc_0/LED_IP_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==LED_IP_auto_pc_0 || ORIG_REF_NAME==LED_IP_auto_pc_0} -quiet] -quiet

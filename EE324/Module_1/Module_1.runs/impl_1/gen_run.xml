@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1566690730">
+<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1567116361">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="RDI-RDI" Name="Bounce_Timer_wrapper.vdi"/>
   <File Type="BG-DRC" Name="Bounce_Timer_wrapper.drc"/>
   <File Type="BG-BGN" Name="Bounce_Timer_wrapper.bgn"/>
   <File Type="BITSTR-SYSDEF" Name="Bounce_Timer_wrapper.sysdef"/>
@@ -17,13 +16,12 @@
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Bounce_Timer_wrapper_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Bounce_Timer_wrapper_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Bounce_Timer_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="Bounce_Timer_wrapper.vdi"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Bounce_Timer_wrapper_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Bounce_Timer_wrapper_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Bounce_Timer_wrapper_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Bounce_Timer_wrapper_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Bounce_Timer_wrapper_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="Bounce_Timer_wrapper_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="Bounce_Timer_wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW" Name="Bounce_Timer_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="Bounce_Timer_wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-SIMILARITY" Name="Bounce_Timer_wrapper_incremental_reuse_routed.rpt"/>
@@ -58,16 +56,18 @@
   <File Type="PLACE-CLK" Name="Bounce_Timer_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-IO" Name="Bounce_Timer_wrapper_io_placed.rpt"/>
   <File Type="PLACE-DCP" Name="Bounce_Timer_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="Bounce_Timer_wrapper_timing_summary_pwropted.rpt"/>
   <File Type="PWROPT-DRC" Name="Bounce_Timer_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-DCP" Name="Bounce_Timer_wrapper_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="Bounce_Timer_wrapper_timing_summary_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="Bounce_Timer_wrapper.hwdef"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Bounce_Timer_wrapper_methodology_drc_opted.rpt"/>
   <File Type="OPT-DRC" Name="Bounce_Timer_wrapper_drc_opted.rpt"/>
   <File Type="OPT-DCP" Name="Bounce_Timer_wrapper_opt.dcp"/>
   <File Type="INIT-TIMING" Name="Bounce_Timer_wrapper_timing_summary_init.rpt"/>
-  <File Type="PWROPT-TIMING" Name="Bounce_Timer_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Bounce_Timer_wrapper_bus_skew_routed.rpx"/>
   <File Type="REPORTS-TCL" Name="Bounce_Timer_wrapper_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="Bounce_Timer_wrapper_timing_summary_opted.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Bounce_Timer_wrapper_bus_skew_routed.pb"/>
   <File Type="PA-TCL" Name="Bounce_Timer_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -247,6 +247,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/Bounce_RTM_cons.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

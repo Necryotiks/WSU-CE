@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:user:RGB_CONTROLLER:1.0
 // IP Revision: 3
 
-(* X_CORE_INFO = "RGB_CONTROLLER_v1_0,Vivado 2018.3" *)
+(* X_CORE_INFO = "RGB_CONTROLLER_v1_0,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "LED_IP_RGB_CONTROLLER_0_0,RGB_CONTROLLER_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "LED_IP_RGB_CONTROLLER_0_0,RGB_CONTROLLER_v1_0,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=RGB_CONTROLLER,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5}" *)
+(* CORE_GENERATION_INFO = "LED_IP_RGB_CONTROLLER_0_0,RGB_CONTROLLER_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=RGB_CONTROLLER,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module LED_IP_RGB_CONTROLLER_0_0 (
   o_RGB,

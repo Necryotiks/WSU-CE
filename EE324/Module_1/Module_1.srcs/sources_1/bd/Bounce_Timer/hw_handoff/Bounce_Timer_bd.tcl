@@ -174,7 +174,7 @@ proc create_root_design { parentCell } {
  ] $i_CLK
   set i_RST [ create_bd_port -dir I -type rst i_RST ]
   set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_LOW} \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
  ] $i_RST
   set i_Signal [ create_bd_port -dir I i_Signal ]
   set o_Anodes_0 [ create_bd_port -dir O -from 3 -to 0 o_Anodes_0 ]
@@ -216,8 +216,12 @@ proc create_root_design { parentCell } {
    CONFIG.c_NUM {50000} \
  ] $HZ_Counter_0
 
-  # Create instance: rst_clk_100MHz_100M, and set properties
-  set rst_clk_100MHz_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_100MHz_100M ]
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] [get_bd_pins /HZ_Counter_0/i_RST]
+
+  # Create instance: rst_i_CLK_100M, and set properties
+  set rst_i_CLK_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_i_CLK_100M ]
 
   # Create instance: ssd_dec_0, and set properties
   set block_name ssd_dec
@@ -281,11 +285,11 @@ proc create_root_design { parentCell } {
   connect_bd_net -net BINARY_TO_BCD_0_o_BCD [get_bd_pins BINARY_TO_BCD_0/o_BCD] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_3/Din]
   connect_bd_net -net Bounce_Counter_FSM_0_o_CEN [get_bd_pins BINARY_TO_BCD_0/i_Start] [get_bd_pins Bounce_Counter_FSM_0/o_CEN]
   connect_bd_net -net Bounce_Counter_FSM_0_o_DATA [get_bd_pins BINARY_TO_BCD_0/i_Binary] [get_bd_pins Bounce_Counter_FSM_0/o_DATA]
-  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins BINARY_TO_BCD_0/i_Clock] [get_bd_pins HZ_Counter_0/o_CLK] [get_bd_pins ssd_mux_0/i_CLK]
-  connect_bd_net -net i_CLK [get_bd_ports i_CLK] [get_bd_pins Bounce_Counter_FSM_0/i_100MHZCLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins rst_clk_100MHz_100M/slowest_sync_clk] [get_bd_pins ssd_dec_0/i_CLK]
-  connect_bd_net -net i_RST [get_bd_ports i_RST] [get_bd_pins rst_clk_100MHz_100M/ext_reset_in]
+  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins BINARY_TO_BCD_0/i_Clock] [get_bd_pins HZ_Counter_0/o_CLK] [get_bd_pins ssd_dec_0/i_CLK] [get_bd_pins ssd_mux_0/i_CLK]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports i_CLK] [get_bd_pins Bounce_Counter_FSM_0/i_100MHZCLK] [get_bd_pins HZ_Counter_0/i_CLK] [get_bd_pins rst_i_CLK_100M/slowest_sync_clk]
+  connect_bd_net -net i_RST_1 [get_bd_ports i_RST] [get_bd_pins rst_i_CLK_100M/ext_reset_in]
   connect_bd_net -net i_Signal_0_1 [get_bd_ports i_Signal] [get_bd_pins Bounce_Counter_FSM_0/i_Signal]
-  connect_bd_net -net rst_clk_100MHz_100M_peripheral_aresetn [get_bd_pins Bounce_Counter_FSM_0/i_RST] [get_bd_pins HZ_Counter_0/i_RST] [get_bd_pins rst_clk_100MHz_100M/peripheral_aresetn]
+  connect_bd_net -net rst_i_CLK_100M_peripheral_reset [get_bd_pins Bounce_Counter_FSM_0/i_RST] [get_bd_pins HZ_Counter_0/i_RST] [get_bd_pins rst_i_CLK_100M/peripheral_reset]
   connect_bd_net -net ssd_dec_0_o_Cathodes [get_bd_ports o_Cathodes_0] [get_bd_pins ssd_dec_0/o_Cathodes]
   connect_bd_net -net ssd_mux_0_o_Anodes [get_bd_ports o_Anodes_0] [get_bd_pins ssd_mux_0/o_Anodes]
   connect_bd_net -net ssd_mux_0_o_Out [get_bd_pins ssd_dec_0/i_Num] [get_bd_pins ssd_mux_0/o_Out]

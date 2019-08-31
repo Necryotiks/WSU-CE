@@ -149,10 +149,10 @@ module RTM_FSM(
     always@(posedge w_CLK1KHZ or posedge w_RST) //RESET LOGIC
     begin
         if(w_RST == 1'd1) begin
-            r_CURRENT_STATE = s_GET_COUNTER;
+            r_CURRENT_STATE <= s_GET_COUNTER;
             end
         else
-            r_CURRENT_STATE = r_NEXT_STATE;
+            r_CURRENT_STATE <= r_NEXT_STATE;
     end
     
     always@(posedge w_CLK1KHZ or posedge w_RST) //ACCUMULATE
@@ -179,13 +179,13 @@ module RTM_FSM(
     begin
         if(r_CURRENT_STATE == s_SW_RUNNING)
             begin
-            r_SWEN = 1'b1;
-            r_Ready = 2'b11;
+            r_SWEN <= 1'b1;
+            r_Ready <= 2'b11;
             end
         else if (r_CURRENT_STATE == s_GET_COUNTER)
             begin
-            r_Ready = 2'd1;
-            r_SWEN = 1'b0;
+            r_Ready <= 2'd1;
+            r_SWEN <= 1'b0;
             end
          else
             begin
@@ -197,30 +197,30 @@ module RTM_FSM(
     always@(posedge w_CLK1KHZ)
     begin
         if(r_CURRENT_STATE == s_GET_COUNTER)
-            r_CEN = 1'b1;
+            r_CEN <= 1'b1;
         else
-            r_CEN = 1'b0;  
+            r_CEN <= 1'b0;  
     end
     
     always@(posedge w_CLK1KHZ)
         begin
             if(r_CURRENT_STATE == s_COUNTDOWN) begin
-                r_COUNTER = r_COUNTER + 1'd1;
-                r_SRST = 1'd1;
+                r_COUNTER <= r_COUNTER + 1'd1;
+                r_SRST <= 1'd1;
                 end
             else begin
-                r_COUNTER = r_COUNTER + 1'd0;
-                r_SRST = 1'd0;
+                r_COUNTER <= r_COUNTER + 1'd0;
+                r_SRST <= 1'd0;
                 end   
         end
     always@(posedge w_CLK1KHZ)
         begin
             if(r_CURRENT_STATE == s_COLLECTION_COMPLETE) begin
-                r_DONE = 1'b1;
+                r_DONE <= 1'b1;
                 end
             else 
                 begin
-                r_DONE = 1'b0;  
+                r_DONE <= 1'b0;  
                 end
         end
 endmodule

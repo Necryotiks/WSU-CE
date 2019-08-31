@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1566690730">
+<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1567116361">
+  <File Type="VDS-TIMING-PB" Name="Bounce_Timer_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="Bounce_Timer_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="Bounce_Timer_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="Bounce_Timer_wrapper_utilization_synth.pb"/>
@@ -7,7 +8,6 @@
   <File Type="RDS-PROPCONSTRS" Name="Bounce_Timer_wrapper_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="Bounce_Timer_wrapper.vds"/>
   <File Type="REPORTS-TCL" Name="Bounce_Timer_wrapper_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="Bounce_Timer_wrapper_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="Bounce_Timer_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -187,6 +187,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/Bounce_RTM_cons.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

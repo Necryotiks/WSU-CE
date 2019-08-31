@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE2E88357B4B4D87E",
+      "boundary_crc": "0xE2E88357A25CB70F",
       "device": "xc7z007sclg400-1",
       "name": "Bounce_Timer",
       "synth_flow_mode": "None",
@@ -9,7 +9,6 @@
       "validated": "true"
     },
     "design_tree": {
-      "rst_clk_100MHz_100M": "",
       "ssd_dec_0": "",
       "ssd_mux_0": "",
       "BINARY_TO_BCD_0": "",
@@ -18,6 +17,7 @@
       "xlslice_2": "",
       "xlslice_3": "",
       "HZ_Counter_0": "",
+      "rst_i_CLK_100M": "",
       "Bounce_Counter_FSM_0": ""
     },
     "ports": {
@@ -52,6 +52,9 @@
           }
         }
       },
+      "i_Signal": {
+        "direction": "I"
+      },
       "i_RST": {
         "type": "rst",
         "direction": "I",
@@ -61,19 +64,12 @@
             "value_src": "default"
           },
           "POLARITY": {
-            "value": "ACTIVE_LOW"
+            "value": "ACTIVE_HIGH"
           }
         }
-      },
-      "i_Signal": {
-        "direction": "I"
       }
     },
     "components": {
-      "rst_clk_100MHz_100M": {
-        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "Bounce_Timer_rst_clk_100MHz_100M_0"
-      },
       "ssd_dec_0": {
         "vlnv": "xilinx.com:module_ref:ssd_dec:1.0",
         "xci_name": "Bounce_Timer_ssd_dec_0_0",
@@ -88,12 +84,16 @@
             "direction": "I",
             "parameters": {
               "CLK_DOMAIN": {
-                "value": "Bounce_Timer_i_CLK",
+                "value": "Bounce_Timer_HZ_Counter_0_0_o_CLK",
                 "value_src": "default_prop"
               },
               "FREQ_HZ": {
                 "value": "100000000",
-                "value_src": "user_prop"
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
               }
             }
           },
@@ -295,6 +295,10 @@
               "FREQ_HZ": {
                 "value": "100000000",
                 "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
               }
             }
           },
@@ -303,8 +307,7 @@
             "direction": "I",
             "parameters": {
               "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
+                "value": "ACTIVE_HIGH"
               }
             }
           },
@@ -313,6 +316,10 @@
             "direction": "O"
           }
         }
+      },
+      "rst_i_CLK_100M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "Bounce_Timer_rst_i_CLK_100M_0"
       },
       "Bounce_Counter_FSM_0": {
         "vlnv": "xilinx.com:module_ref:Bounce_Counter_FSM:1.0",
@@ -328,7 +335,7 @@
             "direction": "I",
             "parameters": {
               "POLARITY": {
-                "value": "ACTIVE_LOW",
+                "value": "ACTIVE_HIGH",
                 "value_src": "const_prop"
               }
             }
@@ -381,28 +388,6 @@
         "ports": [
           "ssd_mux_0/o_Anodes",
           "o_Anodes_0"
-        ]
-      },
-      "i_CLK": {
-        "ports": [
-          "i_CLK",
-          "rst_clk_100MHz_100M/slowest_sync_clk",
-          "ssd_dec_0/i_CLK",
-          "HZ_Counter_0/i_CLK",
-          "Bounce_Counter_FSM_0/i_100MHZCLK"
-        ]
-      },
-      "rst_clk_100MHz_100M_peripheral_aresetn": {
-        "ports": [
-          "rst_clk_100MHz_100M/peripheral_aresetn",
-          "HZ_Counter_0/i_RST",
-          "Bounce_Counter_FSM_0/i_RST"
-        ]
-      },
-      "i_RST": {
-        "ports": [
-          "i_RST",
-          "rst_clk_100MHz_100M/ext_reset_in"
         ]
       },
       "i_Signal_0_1": {
@@ -460,7 +445,29 @@
         "ports": [
           "HZ_Counter_0/o_CLK",
           "ssd_mux_0/i_CLK",
-          "BINARY_TO_BCD_0/i_Clock"
+          "BINARY_TO_BCD_0/i_Clock",
+          "ssd_dec_0/i_CLK"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "i_CLK",
+          "HZ_Counter_0/i_CLK",
+          "rst_i_CLK_100M/slowest_sync_clk",
+          "Bounce_Counter_FSM_0/i_100MHZCLK"
+        ]
+      },
+      "rst_i_CLK_100M_peripheral_reset": {
+        "ports": [
+          "rst_i_CLK_100M/peripheral_reset",
+          "HZ_Counter_0/i_RST",
+          "Bounce_Counter_FSM_0/i_RST"
+        ]
+      },
+      "i_RST_1": {
+        "ports": [
+          "i_RST",
+          "rst_i_CLK_100M/ext_reset_in"
         ]
       }
     },

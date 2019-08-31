@@ -10,12 +10,12 @@
 
 source Bounce_Timer_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/necryotiks/Xilinx/Vivado/2019.1/data/ip'.
 INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
 WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
 INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'o_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
@@ -24,33 +24,33 @@ WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter
 WARNING: [IP_Flow 19-3153] Bus Interface 'o_CLK': ASSOCIATED_BUSIF bus parameter is missing.
 CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'o_CLK': FREQ_HZ bus parameter is missing for output clock interface.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
 INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
 WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'r_CURRENT_STATE' has a dependency on the module local parameter or undefined parameter 's_IDLE'.
 INFO: [IP_Flow 19-5107] Inferred bus interface 'i_Clock' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
 WARNING: [IP_Flow 19-3153] Bus Interface 'i_Clock': ASSOCIATED_BUSIF bus parameter is missing.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
 INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
 WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/Documents/Repos/WSU-CPTE/Parts'.
 Command: synth_design -top Bounce_Timer_wrapper -part xc7z007sclg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 29489 
+INFO: Helper process launched with PID 5236 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1738.656 ; gain = 152.684 ; free physical = 3251 ; free virtual = 8276
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1696.848 ; gain = 150.082 ; free physical = 829 ; free virtual = 8708
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_wrapper' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v:15]
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_BINARY_TO_BCD_0_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_BINARY_TO_BCD_0_0/synth/Bounce_Timer_BINARY_TO_BCD_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'BINARY_TO_BCD' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/new/BINARY_TO_BCD.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_wrapper' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v:15]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_BINARY_TO_BCD_0_0' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_BINARY_TO_BCD_0_0/synth/Bounce_Timer_BINARY_TO_BCD_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'BINARY_TO_BCD' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/new/BINARY_TO_BCD.v:23]
 	Parameter INPUT_WIDTH bound to: 14 - type: integer 
 	Parameter DECIMAL_DIGITS bound to: 4 - type: integer 
 	Parameter s_IDLE bound to: 3'b000 
@@ -59,36 +59,37 @@ INFO: [Synth 8-6157] synthesizing module 'BINARY_TO_BCD' [/home/sergaljerk/Docum
 	Parameter s_ADD bound to: 3'b011 
 	Parameter s_CHECK_DIGIT_INDEX bound to: 3'b100 
 	Parameter s_BCD_DONE bound to: 3'b101 
-INFO: [Synth 8-6155] done synthesizing module 'BINARY_TO_BCD' (1#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/new/BINARY_TO_BCD.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_BINARY_TO_BCD_0_0' (2#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_BINARY_TO_BCD_0_0/synth/Bounce_Timer_BINARY_TO_BCD_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_Bounce_Counter_FSM_0_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_Bounce_Counter_FSM_0_0/synth/Bounce_Timer_Bounce_Counter_FSM_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Counter_FSM' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/new/Bounce_Counter_FSM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'BINARY_TO_BCD' (1#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/new/BINARY_TO_BCD.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_BINARY_TO_BCD_0_0' (2#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_BINARY_TO_BCD_0_0/synth/Bounce_Timer_BINARY_TO_BCD_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_Bounce_Counter_FSM_0_0' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_Bounce_Counter_FSM_0_0/synth/Bounce_Timer_Bounce_Counter_FSM_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Counter_FSM' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/new/Bounce_Counter_FSM.v:23]
 	Parameter s_WAIT bound to: 2'b00 
 	Parameter s_ASSERT bound to: 2'b01 
-	Parameter s_DONE bound to: 2'b10 
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Counter_FSM' (3#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/new/Bounce_Counter_FSM.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_Bounce_Counter_FSM_0_0' (4#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_Bounce_Counter_FSM_0_0/synth/Bounce_Timer_Bounce_Counter_FSM_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_HZ_Counter_0_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_HZ_Counter_0_0/synth/Bounce_Timer_HZ_Counter_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'HZ_Counter' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/HZ_Counter.v:23]
+	Parameter s_ASSERT_2 bound to: 2'b10 
+	Parameter s_DONE bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Counter_FSM' (3#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/new/Bounce_Counter_FSM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_Bounce_Counter_FSM_0_0' (4#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_Bounce_Counter_FSM_0_0/synth/Bounce_Timer_Bounce_Counter_FSM_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_HZ_Counter_0_0' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_HZ_Counter_0_0/synth/Bounce_Timer_HZ_Counter_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'HZ_Counter' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/HZ_Counter.v:23]
 	Parameter c_NUM bound to: 50000 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'HZ_Counter' (5#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/HZ_Counter.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_HZ_Counter_0_0' (6#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_HZ_Counter_0_0/synth/Bounce_Timer_HZ_Counter_0_0.v:58]
-INFO: [Synth 8-638] synthesizing module 'Bounce_Timer_rst_clk_100MHz_100M_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/synth/Bounce_Timer_rst_clk_100MHz_100M_0.vhd:74]
+INFO: [Synth 8-6155] done synthesizing module 'HZ_Counter' (5#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/HZ_Counter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_HZ_Counter_0_0' (6#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_HZ_Counter_0_0/synth/Bounce_Timer_HZ_Counter_0_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'Bounce_Timer_rst_i_CLK_100M_0' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_i_CLK_100M_0/synth/Bounce_Timer_rst_i_CLK_100M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
-	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b1 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
 	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/synth/Bounce_Timer_rst_clk_100MHz_100M_0.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_i_CLK_100M_0/synth/Bounce_Timer_rst_i_CLK_100M_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
-	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b1 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
 	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
@@ -98,37 +99,37 @@ INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/sergaljerk/Docum
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
-INFO: [Synth 8-638] synthesizing module 'lpf' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
-	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b1 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
-INFO: [Synth 8-3491] module 'SRL16' declared at '/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
-INFO: [Synth 8-6157] synthesizing module 'SRL16' [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684]
+INFO: [Synth 8-3491] module 'SRL16' declared at '/home/necryotiks/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [/home/necryotiks/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684]
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-6155] done synthesizing module 'SRL16' (7#1) [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (7#1) [/home/necryotiks/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -136,68 +137,68 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/sergaljerk/Documents/R
 	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (8#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (9#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (8#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (9#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (10#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (11#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (12#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'Bounce_Timer_rst_clk_100MHz_100M_0' (13#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/synth/Bounce_Timer_rst_clk_100MHz_100M_0.vhd:74]
-WARNING: [Synth 8-7023] instance 'rst_clk_100MHz_100M' of module 'Bounce_Timer_rst_clk_100MHz_100M_0' has 10 connections declared, but only 6 given [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v:61]
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_ssd_dec_0_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_ssd_dec_0_0/synth/Bounce_Timer_ssd_dec_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'ssd_dec' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_dec.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ssd_dec' (14#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_dec.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_ssd_dec_0_0' (15#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_ssd_dec_0_0/synth/Bounce_Timer_ssd_dec_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_ssd_mux_0_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_ssd_mux_0_0/synth/Bounce_Timer_ssd_mux_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'ssd_mux' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_mux.v:23]
-INFO: [Synth 8-226] default block is never used [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_mux.v:56]
-INFO: [Synth 8-6155] done synthesizing module 'ssd_mux' (16#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_mux.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_ssd_mux_0_0' (17#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_ssd_mux_0_0/synth/Bounce_Timer_ssd_mux_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_xlslice_0_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_0_0/synth/Bounce_Timer_xlslice_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (10#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (11#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (12#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'Bounce_Timer_rst_i_CLK_100M_0' (13#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_i_CLK_100M_0/synth/Bounce_Timer_rst_i_CLK_100M_0.vhd:74]
+WARNING: [Synth 8-7023] instance 'rst_i_CLK_100M' of module 'Bounce_Timer_rst_i_CLK_100M_0' has 10 connections declared, but only 6 given [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v:63]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_ssd_dec_0_0' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_ssd_dec_0_0/synth/Bounce_Timer_ssd_dec_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ssd_dec' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_dec.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_dec' (14#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_dec.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_ssd_dec_0_0' (15#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_ssd_dec_0_0/synth/Bounce_Timer_ssd_dec_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_ssd_mux_0_0' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_ssd_mux_0_0/synth/Bounce_Timer_ssd_mux_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ssd_mux' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_mux.v:23]
+INFO: [Synth 8-226] default block is never used [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_mux.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'ssd_mux' (16#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_ssd_mux_0_0' (17#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_ssd_mux_0_0/synth/Bounce_Timer_ssd_mux_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_xlslice_0_0' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_0_0/synth/Bounce_Timer_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 16 - type: integer 
 	Parameter DIN_FROM bound to: 15 - type: integer 
 	Parameter DIN_TO bound to: 12 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (18#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_xlslice_0_0' (19#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_0_0/synth/Bounce_Timer_xlslice_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_xlslice_1_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_1_0/synth/Bounce_Timer_xlslice_1_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (18#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_xlslice_0_0' (19#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_0_0/synth/Bounce_Timer_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_xlslice_1_0' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_1_0/synth/Bounce_Timer_xlslice_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 16 - type: integer 
 	Parameter DIN_FROM bound to: 11 - type: integer 
 	Parameter DIN_TO bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (19#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_xlslice_1_0' (20#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_1_0/synth/Bounce_Timer_xlslice_1_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_xlslice_2_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_2_0/synth/Bounce_Timer_xlslice_2_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (19#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_xlslice_1_0' (20#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_1_0/synth/Bounce_Timer_xlslice_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_xlslice_2_0' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_2_0/synth/Bounce_Timer_xlslice_2_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 16 - type: integer 
 	Parameter DIN_FROM bound to: 7 - type: integer 
 	Parameter DIN_TO bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (20#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_xlslice_2_0' (21#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_2_0/synth/Bounce_Timer_xlslice_2_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_xlslice_3_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_3_0/synth/Bounce_Timer_xlslice_3_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (20#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_xlslice_2_0' (21#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_2_0/synth/Bounce_Timer_xlslice_2_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'Bounce_Timer_xlslice_3_0' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_3_0/synth/Bounce_Timer_xlslice_3_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 16 - type: integer 
 	Parameter DIN_FROM bound to: 3 - type: integer 
 	Parameter DIN_TO bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (21#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_xlslice_3_0' (22#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_3_0/synth/Bounce_Timer_xlslice_3_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer' (23#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_wrapper' (24#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (21#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_xlslice_3_0' (22#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_xlslice_3_0/synth/Bounce_Timer_xlslice_3_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer' (23#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'Bounce_Timer_wrapper' (24#1) [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1793.406 ; gain = 207.434 ; free physical = 3256 ; free virtual = 8284
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1750.598 ; gain = 203.832 ; free physical = 866 ; free virtual = 8730
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -210,10 +211,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1799.344 ; gain = 213.371 ; free physical = 3257 ; free virtual = 8284
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1756.535 ; gain = 209.770 ; free physical = 862 ; free virtual = 8727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1799.344 ; gain = 213.371 ; free physical = 3257 ; free virtual = 8284
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1756.535 ; gain = 209.770 ; free physical = 862 ; free virtual = 8727
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -221,68 +222,68 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/Bounce_Timer_rst_clk_100MHz_100M_0_board.xdc] for cell 'Bounce_Timer_i/rst_clk_100MHz_100M/U0'
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/Bounce_Timer_rst_clk_100MHz_100M_0_board.xdc] for cell 'Bounce_Timer_i/rst_clk_100MHz_100M/U0'
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/Bounce_Timer_rst_clk_100MHz_100M_0.xdc] for cell 'Bounce_Timer_i/rst_clk_100MHz_100M/U0'
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/Bounce_Timer_rst_clk_100MHz_100M_0.xdc] for cell 'Bounce_Timer_i/rst_clk_100MHz_100M/U0'
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc]
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Bounce_Timer_wrapper_propImpl.xdc].
+Parsing XDC File [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_i_CLK_100M_0/Bounce_Timer_rst_i_CLK_100M_0_board.xdc] for cell 'Bounce_Timer_i/rst_i_CLK_100M/U0'
+Finished Parsing XDC File [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_i_CLK_100M_0/Bounce_Timer_rst_i_CLK_100M_0_board.xdc] for cell 'Bounce_Timer_i/rst_i_CLK_100M/U0'
+Parsing XDC File [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_i_CLK_100M_0/Bounce_Timer_rst_i_CLK_100M_0.xdc] for cell 'Bounce_Timer_i/rst_i_CLK_100M/U0'
+Finished Parsing XDC File [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_i_CLK_100M_0/Bounce_Timer_rst_i_CLK_100M_0.xdc] for cell 'Bounce_Timer_i/rst_i_CLK_100M/U0'
+Parsing XDC File [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc]
+Finished Parsing XDC File [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Bounce_Timer_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Bounce_Timer_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Bounce_Timer_wrapper_propImpl.xdc].
+Parsing XDC File [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Bounce_Timer_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Bounce_Timer_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1938.984 ; gain = 0.000 ; free physical = 3163 ; free virtual = 8209
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1893.207 ; gain = 0.000 ; free physical = 771 ; free virtual = 8636
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1938.984 ; gain = 0.000 ; free physical = 3163 ; free virtual = 8208
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1893.207 ; gain = 0.000 ; free physical = 771 ; free virtual = 8636
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3236 ; free virtual = 8281
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 842 ; free virtual = 8708
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3236 ; free virtual = 8281
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 842 ; free virtual = 8707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for Bounce_Timer_i/rst_clk_100MHz_100M/U0. (constraint file  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/dont_touch.xdc, line 40).
+Applied set_property DONT_TOUCH = true for Bounce_Timer_i/rst_i_CLK_100M/U0. (constraint file  /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/dont_touch.xdc, line 40).
 Applied set_property DONT_TOUCH = true for Bounce_Timer_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bounce_Timer_i/ssd_dec_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bounce_Timer_i/ssd_mux_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bounce_Timer_i/HZ_Counter_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for Bounce_Timer_i/rst_clk_100MHz_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bounce_Timer_i/Bounce_Counter_FSM_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bounce_Timer_i/BINARY_TO_BCD_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bounce_Timer_i/xlslice_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bounce_Timer_i/xlslice_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bounce_Timer_i/xlslice_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bounce_Timer_i/xlslice_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Bounce_Timer_i/rst_i_CLK_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3238 ; free virtual = 8284
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 842 ; free virtual = 8707
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'r_CURRENT_STATE_reg' in module 'BINARY_TO_BCD'
 INFO: [Synth 8-802] inferred FSM for state register 'r_CURRENT_STATE_reg' in module 'Bounce_Counter_FSM'
-INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
+INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
                   s_WAIT |                               00 |                               00
                 s_ASSERT |                               01 |                               01
-                  s_DONE |                               10 |                               10
+                  s_DONE |                               10 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_CURRENT_STATE_reg' using encoding 'sequential' in module 'Bounce_Counter_FSM'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3228 ; free virtual = 8274
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 833 ; free virtual = 8699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -423,15 +424,15 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'inst/r_Digit_Index_reg[3:0]' into 'inst/r_Digit_Index_reg[3:0]' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/new/BINARY_TO_BCD.v:113]
-INFO: [Synth 8-3886] merging instance 'Bounce_Timer_i/rst_clk_100MHz_100M/U0/SEQ/pr_dec_reg[1]' (FD) to 'Bounce_Timer_i/rst_clk_100MHz_100M/U0/SEQ/bsr_dec_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Bounce_Timer_i/rst_clk_100MHz_100M/U0/SEQ/bsr_dec_reg[1]' (FD) to 'Bounce_Timer_i/rst_clk_100MHz_100M/U0/SEQ/core_dec_reg[1]'
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+INFO: [Synth 8-4471] merging register 'inst/r_Digit_Index_reg[3:0]' into 'inst/r_Digit_Index_reg[3:0]' [/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/new/BINARY_TO_BCD.v:113]
+INFO: [Synth 8-3886] merging instance 'Bounce_Timer_i/rst_i_CLK_100M/U0/SEQ/pr_dec_reg[1]' (FD) to 'Bounce_Timer_i/rst_i_CLK_100M/U0/SEQ/bsr_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Bounce_Timer_i/rst_i_CLK_100M/U0/SEQ/bsr_dec_reg[1]' (FD) to 'Bounce_Timer_i/rst_i_CLK_100M/U0/SEQ/core_dec_reg[1]'
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3210 ; free virtual = 8260
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 820 ; free virtual = 8689
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -443,13 +444,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3081 ; free virtual = 8139
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 699 ; free virtual = 8567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3079 ; free virtual = 8137
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 695 ; free virtual = 8564
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -461,7 +462,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3079 ; free virtual = 8137
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 696 ; free virtual = 8565
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -485,7 +486,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3082 ; free virtual = 8140
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 696 ; free virtual = 8565
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -498,7 +499,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3082 ; free virtual = 8140
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 696 ; free virtual = 8565
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -510,25 +511,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3082 ; free virtual = 8140
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 696 ; free virtual = 8565
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3082 ; free virtual = 8140
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 696 ; free virtual = 8565
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3082 ; free virtual = 8140
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 696 ; free virtual = 8565
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3082 ; free virtual = 8140
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 696 ; free virtual = 8565
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -562,45 +563,45 @@ Report Cell Usage:
 +------+-------+------+
 
 Report Instance Areas: 
-+------+--------------------------------------+------------------------------------+------+
-|      |Instance                              |Module                              |Cells |
-+------+--------------------------------------+------------------------------------+------+
-|1     |top                                   |                                    |   333|
-|2     |  Bounce_Timer_i                      |Bounce_Timer                        |   318|
-|3     |    BINARY_TO_BCD_0                   |Bounce_Timer_BINARY_TO_BCD_0_0      |   105|
-|4     |      inst                            |BINARY_TO_BCD                       |   105|
-|5     |    Bounce_Counter_FSM_0              |Bounce_Timer_Bounce_Counter_FSM_0_0 |    39|
-|6     |      inst                            |Bounce_Counter_FSM                  |    39|
-|7     |    HZ_Counter_0                      |Bounce_Timer_HZ_Counter_0_0         |    82|
-|8     |      inst                            |HZ_Counter                          |    82|
-|9     |    rst_clk_100MHz_100M               |Bounce_Timer_rst_clk_100MHz_100M_0  |    66|
-|10    |      U0                              |proc_sys_reset                      |    66|
-|11    |        EXT_LPF                       |lpf                                 |    23|
-|12    |          \ACTIVE_LOW_AUX.ACT_LO_AUX  |cdc_sync                            |     6|
-|13    |          \ACTIVE_LOW_EXT.ACT_LO_EXT  |cdc_sync_0                          |     6|
-|14    |        SEQ                           |sequence_psr                        |    38|
-|15    |          SEQ_COUNTER                 |upcnt_n                             |    13|
-|16    |    ssd_dec_0                         |Bounce_Timer_ssd_dec_0_0            |    14|
-|17    |      inst                            |ssd_dec                             |    14|
-|18    |    ssd_mux_0                         |Bounce_Timer_ssd_mux_0_0            |    12|
-|19    |      inst                            |ssd_mux                             |    12|
-|20    |    xlslice_0                         |Bounce_Timer_xlslice_0_0            |     0|
-|21    |    xlslice_1                         |Bounce_Timer_xlslice_1_0            |     0|
-|22    |    xlslice_2                         |Bounce_Timer_xlslice_2_0            |     0|
-|23    |    xlslice_3                         |Bounce_Timer_xlslice_3_0            |     0|
-+------+--------------------------------------+------------------------------------+------+
++------+---------------------------------------+------------------------------------+------+
+|      |Instance                               |Module                              |Cells |
++------+---------------------------------------+------------------------------------+------+
+|1     |top                                    |                                    |   333|
+|2     |  Bounce_Timer_i                       |Bounce_Timer                        |   318|
+|3     |    BINARY_TO_BCD_0                    |Bounce_Timer_BINARY_TO_BCD_0_0      |   105|
+|4     |      inst                             |BINARY_TO_BCD                       |   105|
+|5     |    Bounce_Counter_FSM_0               |Bounce_Timer_Bounce_Counter_FSM_0_0 |    39|
+|6     |      inst                             |Bounce_Counter_FSM                  |    39|
+|7     |    HZ_Counter_0                       |Bounce_Timer_HZ_Counter_0_0         |    82|
+|8     |      inst                             |HZ_Counter                          |    82|
+|9     |    rst_i_CLK_100M                     |Bounce_Timer_rst_i_CLK_100M_0       |    66|
+|10    |      U0                               |proc_sys_reset                      |    66|
+|11    |        EXT_LPF                        |lpf                                 |    23|
+|12    |          \ACTIVE_HIGH_EXT.ACT_HI_EXT  |cdc_sync                            |     6|
+|13    |          \ACTIVE_LOW_AUX.ACT_LO_AUX   |cdc_sync_0                          |     6|
+|14    |        SEQ                            |sequence_psr                        |    38|
+|15    |          SEQ_COUNTER                  |upcnt_n                             |    13|
+|16    |    ssd_dec_0                          |Bounce_Timer_ssd_dec_0_0            |    14|
+|17    |      inst                             |ssd_dec                             |    14|
+|18    |    ssd_mux_0                          |Bounce_Timer_ssd_mux_0_0            |    12|
+|19    |      inst                             |ssd_mux                             |    12|
+|20    |    xlslice_0                          |Bounce_Timer_xlslice_0_0            |     0|
+|21    |    xlslice_1                          |Bounce_Timer_xlslice_1_0            |     0|
+|22    |    xlslice_2                          |Bounce_Timer_xlslice_2_0            |     0|
+|23    |    xlslice_3                          |Bounce_Timer_xlslice_3_0            |     0|
++------+---------------------------------------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3082 ; free virtual = 8140
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 696 ; free virtual = 8565
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 52 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1938.984 ; gain = 213.371 ; free physical = 3136 ; free virtual = 8194
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1938.984 ; gain = 353.012 ; free physical = 3136 ; free virtual = 8194
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1893.207 ; gain = 209.770 ; free physical = 749 ; free virtual = 8618
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 749 ; free virtual = 8618
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1938.984 ; gain = 0.000 ; free physical = 3081 ; free virtual = 8140
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1893.207 ; gain = 0.000 ; free physical = 693 ; free virtual = 8562
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
@@ -609,10 +610,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 111 Infos, 16 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1938.984 ; gain = 459.145 ; free physical = 3178 ; free virtual = 8237
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1938.984 ; gain = 0.000 ; free physical = 3178 ; free virtual = 8237
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1893.207 ; gain = 346.441 ; free physical = 790 ; free virtual = 8659
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1893.207 ; gain = 0.000 ; free physical = 790 ; free virtual = 8659
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/Bounce_Timer_wrapper.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/Bounce_Timer_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Bounce_Timer_wrapper_utilization_synth.rpt -pb Bounce_Timer_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Aug 24 16:52:52 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 29 15:06:50 2019...

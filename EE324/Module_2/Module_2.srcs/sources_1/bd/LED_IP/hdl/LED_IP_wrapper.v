@@ -1,7 +1,7 @@
-//Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Fri Mar  8 18:07:31 2019
+//Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+//Date        : Fri Aug 30 17:20:35 2019
 //Host        : Necryotiks running 64-bit unknown
 //Command     : generate_target LED_IP_wrapper.bd
 //Design      : LED_IP_wrapper
@@ -31,10 +31,10 @@ module LED_IP_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    o_BTN_0,
+    i_BTN_0,
+    i_SW_0,
     o_LED,
-    o_RGB,
-    o_SW_0);
+    o_RGB);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -56,10 +56,10 @@ module LED_IP_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output [3:0]o_BTN_0;
+  input [3:0]i_BTN_0;
+  input [7:0]i_SW_0;
   output [3:0]o_LED;
   output [11:0]o_RGB;
-  output [7:0]o_SW_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -82,10 +82,10 @@ module LED_IP_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [3:0]o_BTN_0;
+  wire [3:0]i_BTN_0;
+  wire [7:0]i_SW_0;
   wire [3:0]o_LED;
   wire [11:0]o_RGB;
-  wire [7:0]o_SW_0;
 
   LED_IP LED_IP_i
        (.DDR_addr(DDR_addr),
@@ -109,8 +109,8 @@ module LED_IP_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .o_BTN_0(o_BTN_0),
+        .i_BTN_0(i_BTN_0),
+        .i_SW_0(i_SW_0),
         .o_LED(o_LED),
-        .o_RGB(o_RGB),
-        .o_SW_0(o_SW_0));
+        .o_RGB(o_RGB));
 endmodule
