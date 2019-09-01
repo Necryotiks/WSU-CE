@@ -15,7 +15,7 @@ def main():
     if len(sys.argv) <= 1:
         print(help_str)
         sys.exit(0)
-    else:
+    else: #TODO:Rewrite this
         if sys.argv[1] == "-h":
             print(help_str)
             sys.exit(0)
@@ -25,7 +25,8 @@ def main():
                 init_build_tcl(pdir=sys.argv[2],part_str='',def_flag=True)
                 path = os.getcwd() + '/'
                 create_verilog_file(path)
-                #write blackboard tcl file here
+                xdc = open(path+"constraints/BlackBoard_Master_XDC.xdc","w+")
+                write_blackboard_xdc(xdc)
                 sys.exit(0)
             elif len(sys.argv) == 5:
                 pstr = sys.argv[4]
@@ -121,6 +122,12 @@ def create_test_harness(path,target,subfile):
                 os.mkdir(path + "bench/sim/" + srcfile) 
                 shutil.copy(srcfile, path + "bench/sim/" + srcfile)
                 shutil.copy(srcfile, path + "bench/formal/" + srcfile)
+                target = open(path + "bench/formal/" + srcfile + srcfile,"a")
+                target.write("\n`ifdef FORMAL \n\n//Formal verification goes here.\n\n`endif\n")
+                target.close()
+                #TODO: create sby files for the test harness
+                #TODO: Make verilator harness
+
     
     #TODO:create test harness
 def create_verilog_file(path):
@@ -132,22 +139,20 @@ def create_verilog_file(path):
     new_f.write("\tif len(sys.argv) > 2 and sys.argv[1] == \"-n\":\n")
     new_f.write("\t\tsrc = open(\"%s.v\"% (sys.argv[2]) ,\"w+\")\n")
     new_f.write("\t\tsrc.write(\"module %s\\n\" % (sys.argv[2]))\n")
-    new_f.write("\t\tsrc.write(\")\\n\")\n")
+    new_f.write("\t\tsrc.write(\");\\n\")\n")
     new_f.write("\t\tsrc.write(\"endmodule\\n\")\n")
     new_f.write("\t\tsrc.write(\"\\n\")\n")
     new_f.write("\t\tsrc.close()\n")
-    new_f.write("\t\tupdate_tcl = open(\"./rtl.tcl\",\"w+\")\n")
-    #TODO: read every file and update src tcl
-    new_f.write("\t\tupdate_tcl.write(\"for _,_,entry in os.walk(path+subfile):\\n\"\n")
-    new_f.write("\t\tupdate_tcl.write(\"\tfor srcfile in entry:\\n\")\n")
-    new_f.write("\t\tupdate_tcl.write(\"\t\tif srcfile.endswith('.v'):\\n\")\n")
-                target.write("read_verilog ./rtl/" + srcfile + '\n') 
-            elif srcfile.endswith('.sv'):
-                target.write("read_verilog -sv ./rtl/" + srcfile + '\n') 
-            elif srcfile.endswith('.xci'):
-                target.write("read_ip ./rtl/" + srcfile + '\n') 
-            elif srcfile.endswith('.xdc'):
-                target.write("read_xdc ./constraints/" + srcfile + '\n')
+    new_f.write("\t\tupdate_tcl = open(\"./src.tcl\",\"w+\")\n")
+    new_f.write("\t\tpath = os.getcwd()\n")
+    new_f.write("\t\tfor _,_,entry in os.walk(path):\n")
+    new_f.write("\t\t\tfor srcfile in entry:\n")
+    new_f.write("\t\t\t\tif srcfile.endswith('.v'):\n")
+    new_f.write("\t\t\t\t\tupdate_tcl.write(\"read_verilog ./rtl/\" + srcfile + '\\n')\n")
+    new_f.write("\t\t\t\telif srcfile.endswith('.sv'):\n")
+    new_f.write("\t\t\t\t\tupdate_tcl.write(\"read_verilog -sv ./rtl/\" + srcfile + '\\n')\n")
+    new_f.write("\t\t\t\telif srcfile.endswith('.xci'):\n")
+    new_f.write("\t\t\t\t\tupdate_tcl.write(\"read_ip ./rtl/\" + srcfile + '\\n')\n")
     new_f.write("main()\n")
     new_f.close()
 
@@ -246,6 +251,7 @@ def write_blackboard_xdc(target):
     target.write("#set_property -dict { PACKAGE_PIN T12   IOSTANDARD LVCMOS33 } [get_ports {HS}]; #IO_L2P_T0_34 Sch=VGA_HS\n")
     target.write("#set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports {VS}]; #IO_L1N_T0_34 Sch=VGA_VS\n")
     target.write("##HDMI Signals\n")
+    target.write("#NOTE: HDMI USES TDMS NOT LVCMOS33\n")
     target.write("#set_property -dict { PACKAGE_PIN U19   IOSTANDARD LVCMOS33 } [get_ports hdmi_clk_n]; #IO_L12N_T1_MRCC_34 Sch=HDMI_TX_CLK_N\n")
     target.write("#set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports hdmi_clk_p]; #IO_L12P_T1_MRCC_34 Sch=HDMI_TX_CLK_P\n")
     target.write("#set_property -dict { PACKAGE_PIN V18   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_n[0]]; #IO_L21N_T3_DQS_34 Sch=HDMI_TX0_N\n")
