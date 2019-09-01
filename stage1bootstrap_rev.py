@@ -8,6 +8,7 @@
 import sys
 import os
 from os import path
+from shutil import copy
 header_str = "###################################################\n#THIS IS A COMPUTER GENERATED FILE, DO NOT MODIFY.#\n#GENERATED: yyyy-mm-dd-hh-mm-ss                   #\n###################################################\n"
 help_str = "Vivado Project Creation Tool: \n -h Help\n -n Create a new Vivado project with the give name\n -p Project part number\n"
 def main():
@@ -115,12 +116,11 @@ def tcl_file_up(path,target,subfile):
 def create_test_harness(path,target,subfile):
     for _,_,entry in os.walk(path+subfile):
         for srcfile in entry:
-            if srcfile.endswith('.v'):
+            if srcfile.endswith('.v') or srcfile.endswith('.sv'):
                 os.mkdir(path + "bench/formal/" + srcfile) 
                 os.mkdir(path + "bench/sim/" + srcfile) 
-                #TDOD: Copy file to the respective directories
-            elif srcfile.endswith('.sv'):
-                target.write("read_verilog -sv ./rtl/" + srcfile + '\n') 
+                shutil.copy(srcfile, path + "bench/sim/" + srcfile)
+                shutil.copy(srcfile, path + "bench/formal/" + srcfile)
     
     #TODO:create test harness
 def create_verilog_file(path):
@@ -137,11 +137,10 @@ def create_verilog_file(path):
     new_f.write("\t\tsrc.write(\"\\n\")\n")
     new_f.write("\t\tsrc.close()\n")
     new_f.write("\t\tupdate_tcl = open(\"./rtl.tcl\",\"w+\")\n")
-    new_f.write("main()\n")
     #TODO: read every file and update src tcl
-    for _,_,entry in os.walk(path+subfile):
-        for srcfile in entry:
-            if srcfile.endswith('.v'):
+    new_f.write("\t\tupdate_tcl.write(\"for _,_,entry in os.walk(path+subfile):\\n\"\n")
+    new_f.write("\t\tupdate_tcl.write(\"\tfor srcfile in entry:\\n\")\n")
+    new_f.write("\t\tupdate_tcl.write(\"\t\tif srcfile.endswith('.v'):\\n\")\n")
                 target.write("read_verilog ./rtl/" + srcfile + '\n') 
             elif srcfile.endswith('.sv'):
                 target.write("read_verilog -sv ./rtl/" + srcfile + '\n') 
@@ -149,9 +148,11 @@ def create_verilog_file(path):
                 target.write("read_ip ./rtl/" + srcfile + '\n') 
             elif srcfile.endswith('.xdc'):
                 target.write("read_xdc ./constraints/" + srcfile + '\n')
+    new_f.write("main()\n")
     new_f.close()
 
 def write_blackboard_xdc(target):
+
     #TODO: correct string spacing
     target.write("##Master XDC")
     target.write("\n")
@@ -165,7 +166,6 @@ def write_blackboard_xdc(target):
     target.write("#set_property -dict { PACKAGE_PIN R19   IOSTANDARD LVCMOS33 } [get_ports { led[2] }]; #IO_L14P_T2_SRCC_34 Schematic=LD2\n")
     target.write("#set_property -dict { PACKAGE_PIN T20   IOSTANDARD LVCMOS33 } [get_ports { led[3] }]; #IO_L14P_T2_SRCC_34 Schematic=LD3\n")
     target.write("\n")
-    #TODO: correct RGB_LED pins
     target.write("##RGB_LEDS\n")
     target.write("#set_property -dict { PACKAGE_PIN U13   IOSTANDARD LVCMOS33 } [get_ports { RGB_led_0[0] }]; #IO_L3P_T0_DWS_PUDC_B_34 Schematic=LD4_R\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN T19   IOSTANDARD LVCMOS33 } [get_ports { RGB_led_0[1] }]; #IO_25_34 Schematic=LD4_G\\n\")\n")
@@ -175,8 +175,10 @@ def write_blackboard_xdc(target):
     target.write("#set_property -dict { PACKAGE_PIN W19   IOSTANDARD LVCMOS33 } [get_ports { RGB_led_1[2] }]; #IO_25_34 Schematic=LD5_B\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN W18   IOSTANDARD LVCMOS33 } [get_ports { RGB_led_2[0] }]; #IO_25_34 Schematic=LD6_R\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { RGB_led_2[1] }]; #IO_25_34 Schematic=LD6_G\\n\")\n")
+    target.write("#set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { RGB_led_2[2] }]; #IO_25_34 Schematic=LD6_G\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN Y14   IOSTANDARD LVCMOS33 } [get_ports { RGB_led_3[0] }]; #IO_L8N_T1_34 Schematic=LD7_R\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { RGB_led_3[1] }]; #IO_L7P_T1_34 Schematic=LD7_G\\n\")\n")
+    target.write("#set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { RGB_led_3[2] }]; #IO_L7P_T1_34 Schematic=LD7_G\\n\")\n")
     target.write("\n")
     target.write("###Switches\n")
     target.write("#set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { sw[0] }]; #IO_L19N_T3_VREF_34 Schematic=SW0\\n\")\n")
@@ -188,14 +190,14 @@ def write_blackboard_xdc(target):
     target.write("#set_property -dict { PACKAGE_PIN L15   IOSTANDARD LVCMOS33 } [get_ports { sw[6] }]; #IO_L19N_T3_VREF_34 Schematic=SW6\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN M15   IOSTANDARD LVCMOS33 } [get_ports { sw[7] }]; #IO_L19N_T3_VREF_34 Schematic=SW7\\n\")\n")
     target.write("\n")
-    target.write("###Buttons\\n\")\n")
+    target.write("###Buttons\n")
     target.write("#set_property -dict { PACKAGE_PIN W14   IOSTANDARD LVCMOS33 } [get_ports { btn[0] }]; #IO_L8P_T1_34 Schematic=BTN0\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports { btn[1] }]; #IO_L8P_T1_34 Schematic=BTN1\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports { btn[2] }]; #IO_L8P_T1_34 Schematic=BTN2\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { btn[3] }]; #IO_L8P_T1_34 Schematic=BTN2\\n\")\n")
     target.write("\n")
     target.write("##SevenSegmentDisplay\\n\")\n")
-    target.write("##Anodes\\n\")\n")
+    target.write("##Anodes\n")
     target.write("#set_property -dict { PACKAGE_PIN K19   IOSTANDARD LVCMOS33 } [get_ports { anode[0] }]; #IO_L10P_T1_AD11P_35 Schematic=SSEG_AN0\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { anode[1] }]; #IO_L10P_T1_AD11P_35 Schematic=SSEG_AN1\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN M18   IOSTANDARD LVCMOS33 } [get_ports { anode[2] }]; #IO_L10P_T1_AD11P_35 Schematic=SSEG_AN2\\n\")\n")
@@ -210,126 +212,78 @@ def write_blackboard_xdc(target):
     target.write("#set_property -dict { PACKAGE_PIN J16   IOSTANDARD LVCMOS33 } [get_ports { cathode[0] }]; #IO_L20P_T3_AD6P_35 Schematic=SSEG_CA\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN H18   IOSTANDARD LVCMOS33 } [get_ports { cathode[0] }]; #IO_L20P_T3_AD6P_35 Schematic=SSEG_CA\\n\")\n")
     target.write("#set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { cathode[0] }]; #IO_L20P_T3_AD6P_35 Schematic=SSEG_CA\\n\")\n")
-    #TODO:Finish
-
-def bootstrap(pathtos2):
-
-    bootstrap_file.write("\tcreate_top.write(\"/*###################################################\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"THIS IS A COMPUTER GENERATED TOP MODULE\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"###################################################\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"###################################################*/\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"`default_nettype none \\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"module top ( \\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\");\\n \")\n")
-    bootstrap_file.write("\tcreate_top.write(\"\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"`ifdef FORMAL\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"//Place formal methods here, for use with SymbiYosys\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"`endif\\n\")\n")
-    bootstrap_file.write("\tcreate_top.write(\"endmodule \\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\tsrc_tcl.write(\\\"###################################################\\\\n\\\")\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\tsrc_tcl.write(\\\"#THIS IS A COMPUTER GENERATED FILE, DO NOT MODIFY.#\\\\n\\\")\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\tsrc_tcl.write(\\\"#GENERATED: yyyy-mm-dd-hh-mm-ss                   #\\\\n\\\")\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\tsrc_tcl.write(\\\"###################################################\\\\n\\\")\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\tfor _,_,entry in os.walk(path):\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\t\tfor srcfile in entry:\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\t\t\tif srcfile.endswith('.v'):\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\t\t\t\tsrc_tcl.write(\\\"read_verilog ./rtl/\\\" + srcfile+ '\\\\n')\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\t\t\tif srcfile.endswith('.xci'):\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\t\t\t\tsrc_tcl.write(\\\"read_ip ./rtl/\\\" + srcfile+ '\\\\n')\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\tsrc_tcl.close()\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"\tnew_file.close()\\n\")\n")
-    bootstrap_file.write("\tcreate_rtl.write(\"main()\\n\")\n")
-    bootstrap_file.write("\tcreate_blackboard_xdc.write(\"\\n\")\n")
-    bootstrap_file.write("\tcreate_blackboard_xdc.write(\"##Master .xdc for the Blackboard\\n\")\n")
-#TODO:Finish transcription later
-##Accelerometer/Gyroscope/Magnetometer
-#set_property -dict { PACKAGE_PIN H20   IOSTANDARD LVCMOS33 } [get_ports { GYRO_SCL }]; #IO_L17N_T2_AD5N_35 Schematic=GYRO_SCL
-#set_property -dict { PACKAGE_PIN J19   IOSTANDARD LVCMOS33 } [get_ports { GYRO_SDA }]; #IO_L10N_T1_AD11N_35 Schematic=GYRO_SDA
-#set_property -dict { PACKAGE_PIN J20   IOSTANDARD LVCMOS33 } [get_ports { GYRO_SDO_A/G }]; #IO_L17P_T2_AD5P_35 Schematic=GYRO_SDO_A/G
-#set_property -dict { PACKAGE_PIN L17   IOSTANDARD LVCMOS33 } [get_ports { GYRO_SDO_M }]; #IO_L11N_T1_SRCC_35 Schematic=GYRO_SDO_M
-#set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { GYRO_CS_A/G }]; #IO_L12P_T1_MRCC_35 Schematic=GYRO_CS_A/G
-#set_property -dict { PACKAGE_PIN K16   IOSTANDARD LVCMOS33 } [get_ports { GYRO_CS_M }]; #IO_L24P_T3_AD15P_35 Schematic=GYRO_CS_M
-#set_property -dict { PACKAGE_PIN J14   IOSTANDARD LVCMOS33 } [get_ports { DEN_A_G }]; #IO_L20N_T3_AD6N_35 Schematic=GYRO_DEN_A/G
-#set_property -dict { PACKAGE_PIN L20   IOSTANDARD LVCMOS33 } [get_ports { DRDY_M }]; #IO_L9N_T1_DQS_AD3N_35 Schematic=GYRO_DRDY_M
-#set_property -dict { PACKAGE_PIN M20   IOSTANDARD LVCMOS33 } [get_ports { INT_A_G }]; #IO_L7N_T1_AD2N_35 Schematic=GYRO_INT_A/G
-#set_property -dict { PACKAGE_PIN L19   IOSTANDARD LVCMOS33 } [get_ports { INT_M }]; #IO_L9P_T1_DQS_AD3P_35 Schematic=GYRO_INT_M
-
-##MIC
-#set_property -dict { PACKAGE_PIN N15   IOSTANDARD LVCMOS33 } [get_ports { M_clk }]; #IO_L21P_T3_DQS_AD14P_35 Schematic=M_CLK
-#set_property -dict { PACKAGE_PIN L14   IOSTANDARD LVCMOS33 } [get_ports { M_data }]; #IO_L22P_T3_AD7P_35 Schematic=M_DATA
-
-##Speaker
-#set_property -dict { PACKAGE_PIN G18  IOSTANDARD LVCMOS33 } [get_ports { audio }]; #IO_L16N_T2_35 Schematic=AUDIO
-
-##VGA
-#set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports { vga_r[0] }]; #IO_L10P_T1_34 Sch=VGA_R4_CON
-#set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS33 } [get_ports { vga_r[1] }]; #IO_L10N_T1_34 Sch=VGA_R5_CON
-#set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { vga_r[2] }]; #IO_L18P_T2_34 Sch=VGA_R6_CON
-#set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { vga_r[3] }]; #IO_L18N_T2_AD13N_35 Sch=VGA_R7_CON
-#set_property -dict { PACKAGE_PIN T15   IOSTANDARD LVCMOS33 } [get_ports { vga_g[0] }]; #IO_L5N_T0_34 Sch=VGA_G4_CON
-#set_property -dict { PACKAGE_PIN V13   IOSTANDARD LVCMOS33 } [get_ports { vga_g[1] }]; #IO_L3N_T0_DQS_34 Sch=VGA_G5_CON
-#set_property -dict { PACKAGE_PIN U14   IOSTANDARD LVCMOS33 } [get_ports { vga_g[2] }]; #IO_L11P_T1_SRCC_34 Sch=VGA_G6_CON
-#set_property -dict { PACKAGE_PIN U15   IOSTANDARD LVCMOS33 } [get_ports { vga_g[3] }]; #IO_L11N_T1_SRCC_34 Sch=VGA_G7_CON
-#set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { vga_b[0] }]; #IO_L1P_T0_34 Sch=VGA_B4_CON
-#set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS33 } [get_ports { vga_b[1] }]; #IO_L5P_T0_34 Sch=VGA_B5_CON
-#set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports { vga_b[2] }]; #IO_L2N_T0_34 Sch=VGA_B6_CON
-#set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { vga_b[3] }]; #IO_L4P_T0_34 Sch=VGA_B7_CON
-#set_property -dict { PACKAGE_PIN T12   IOSTANDARD LVCMOS33 } [get_ports {HS}]; #IO_L2P_T0_34 Sch=VGA_HS
-#set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports {VS}]; #IO_L1N_T0_34 Sch=VGA_VS
-
-##HDMI Signals
-#set_property -dict { PACKAGE_PIN U19   IOSTANDARD LVCMOS33 } [get_ports hdmi_clk_n]; #IO_L12N_T1_MRCC_34 Sch=HDMI_TX_CLK_N
-#set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports hdmi_clk_p]; #IO_L12P_T1_MRCC_34 Sch=HDMI_TX_CLK_P
-#set_property -dict { PACKAGE_PIN V18   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_n[0]]; #IO_L21N_T3_DQS_34 Sch=HDMI_TX0_N
-#set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_p[0]]; #IO_L21P_T3_DQS_34 Sch=HDMI_TX0_P
-#set_property -dict { PACKAGE_PIN P18   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_n[1]]; #IO_L23N_T3_34 Sch=HDMI_TX1_N
-#set_property -dict { PACKAGE_PIN N17   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_p[1]]; #IO_L23P_T3_34 Sch=HDMI_TX1_P
-#set_property -dict { PACKAGE_PIN P19   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_n[2]]; #IO_L13N_T2_MRCC_34 Sch=HDMI_TX2_N
-#set_property -dict { PACKAGE_PIN N18   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_p[2]]; #IO_L13P_T2_MRCC_34 Sch=HDMI_TX2_P
-#set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports hdmi_cec]; #IO_L9N_T1_DQS_34 Sch=HDMI_TX_CEC
-#set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports hdmi_hpd]; #IO_L24N_T3_34 Sch=HDMI_TX_HPD
-#set_property -dict { PACKAGE_PIN F17   IOSTANDARD LVCMOS33 } [get_ports hdmi_out_en]; #IO_L6N_T0_VREF_35 Sch=HDMI_OUT_EN
-#set_property -dict { PACKAGE_PIN T17   IOSTANDARD LVCMOS33 } [get_ports hdmi_scl]; #IO_L20P_T3_34 Sch=HDMI_TX_SCL
-#set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports hdmi_sda]; #IO_L20N_T3_34 Sch=HDMI_TX_SDA
-
-##PmodA                                                                                                        
-#set_property -dict { PACKAGE_PIN F16   IOSTANDARD LVCMOS33 } [get_ports { JA1_P }]; #IO_L6P_T0_35 Sch=JA1_P   
-#set_property -dict { PACKAGE_PIN F17   IOSTANDARD LVCMOS33 } [get_ports { JA1_N }]; #IO_L6N_T0_VREF_35 Sch=JA1_N
-#set_property -dict { PACKAGE_PIN G19   IOSTANDARD LVCMOS33 } [get_ports { JA2_P }]; #IO_L18P_T2_AD13P_35 Sch=JA2_P
-#set_property -dict { PACKAGE_PIN G20   IOSTANDARD LVCMOS33 } [get_ports { JA2_N }]; #IO_L18N_T2_AD13N_35 Sch=JA2_N
-#set_property -dict { PACKAGE_PIN E18   IOSTANDARD LVCMOS33 } [get_ports { JA3_P }]; #IO_L5P_T0_AD9P_35 Sch=JA3_P
-#set_property -dict { PACKAGE_PIN E19   IOSTANDARD LVCMOS33 } [get_ports { JA3_N }]; #IO_L5N_T0_AD9N_35 Sch=JA3_N
-#set_property -dict { PACKAGE_PIN E17   IOSTANDARD LVCMOS33 } [get_ports { JA4_P }]; #IO_L3P_T0_DQS_AD1P_35 Sch=JA4_P
-#set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { JA4_N }]; #IO_L3N_T0_DQS_AD1N_35 Sch=JA4_N
-                           
-##PmodB                                                                                                        
-#set_property -dict { PACKAGE_PIN D19   IOSTANDARD LVCMOS33 } [get_ports { JB1_P }]; #IO_L4P_T0_35 Sch=JB1_P   
-#set_property -dict { PACKAGE_PIN D20   IOSTANDARD LVCMOS33 } [get_ports { JB1_N }]; #IO_L4N_T0_35 Sch=JB1_N   
-#set_property -dict { PACKAGE_PIN F19   IOSTANDARD LVCMOS33 } [get_ports { JB2_P }]; #IO_L15P_T2_DQS_AD12P_35 Sch=JB2_P
-#set_property -dict { PACKAGE_PIN F20   IOSTANDARD LVCMOS33 } [get_ports { JB2_N }]; #IO_L15N_T2_DQS_AD12N_35 Sch=JB2_N
-#set_property -dict { PACKAGE_PIN C20   IOSTANDARD LVCMOS33 } [get_ports { JB3_P }]; #IO_L1P_T0_AD0P_35 Sch=JB3_P
-#set_property -dict { PACKAGE_PIN B20   IOSTANDARD LVCMOS33 } [get_ports { JB3_N }]; #IO_L1N_T0_AD0N_35 Sch=JB3_N
-#set_property -dict { PACKAGE_PIN B19   IOSTANDARD LVCMOS33 } [get_ports { JB4_P }]; #IO_L2P_T0_AD8P_35 Sch=JB4_P
-#set_property -dict { PACKAGE_PIN A20   IOSTANDARD LVCMOS33 } [get_ports { JB4_N }]; #IO_L2N_T0_AD8N_35 Sch=JB4_N
-                                                                                                               
-#Servos                                                                                                        
-#set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports servo1]; #IO_L16P_T2_35 Sch=SERVO1     
-#set_property -dict { PACKAGE_PIN G15   IOSTANDARD LVCMOS33 } [get_ports servo2]; #IO_L19N_T3_VREF_35 Sch=SERVO2
-#set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports servo3]; #IO_0_35 Sch=SERVO3           
-#
-    bootstrap_file.write("\tupdate_rtl.close()\n")
-    bootstrap_file.write("\tcreate_rtl.close()\n")
-    bootstrap_file.write("\tcreate_top.close()\n")
-    bootstrap_file.write("\tcreate_blackboard_xdc.close()\n")
-    bootstrap_file.write("\tprint(\"Successfully completed stage 2 bootstrap!\")\n")
-    
-    bootstrap_file.write("main()")
-
-    bootstrap_file.close()
-    
+    target.write("##Accelerometer/Gyroscope/Magnetometer\n")
+    target.write("#set_property -dict { PACKAGE_PIN H20   IOSTANDARD LVCMOS33 } [get_ports { GYRO_SCL }]; #IO_L17N_T2_AD5N_35 Schematic=GYRO_SCL\n")
+    target.write("#set_property -dict { PACKAGE_PIN J19   IOSTANDARD LVCMOS33 } [get_ports { GYRO_SDA }]; #IO_L10N_T1_AD11N_35 Schematic=GYRO_SDA\n")
+    target.write("#set_property -dict { PACKAGE_PIN J20   IOSTANDARD LVCMOS33 } [get_ports { GYRO_SDO_A/G }]; #IO_L17P_T2_AD5P_35 Schematic=GYRO_SDO_A/G\n")
+    target.write("#set_property -dict { PACKAGE_PIN L17   IOSTANDARD LVCMOS33 } [get_ports { GYRO_SDO_M }]; #IO_L11N_T1_SRCC_35 Schematic=GYRO_SDO_M\n")
+    target.write("#set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { GYRO_CS_A/G }]; #IO_L12P_T1_MRCC_35 Schematic=GYRO_CS_A/G\n")
+    target.write("#set_property -dict { PACKAGE_PIN K16   IOSTANDARD LVCMOS33 } [get_ports { GYRO_CS_M }]; #IO_L24P_T3_AD15P_35 Schematic=GYRO_CS_M\n")
+    target.write("#set_property -dict { PACKAGE_PIN J14   IOSTANDARD LVCMOS33 } [get_ports { DEN_A_G }]; #IO_L20N_T3_AD6N_35 Schematic=GYRO_DEN_A/G\n")
+    target.write("#set_property -dict { PACKAGE_PIN L20   IOSTANDARD LVCMOS33 } [get_ports { DRDY_M }]; #IO_L9N_T1_DQS_AD3N_35 Schematic=GYRO_DRDY_M\n")
+    target.write("#set_property -dict { PACKAGE_PIN M20   IOSTANDARD LVCMOS33 } [get_ports { INT_A_G }]; #IO_L7N_T1_AD2N_35 Schematic=GYRO_INT_A/G\n")
+    target.write("#set_property -dict { PACKAGE_PIN L19   IOSTANDARD LVCMOS33 } [get_ports { INT_M }]; #IO_L9P_T1_DQS_AD3P_35 Schematic=GYRO_INT_M\n")
+    target.write("##MIC\n")
+    target.write("#set_property -dict { PACKAGE_PIN N15   IOSTANDARD LVCMOS33 } [get_ports { M_clk }]; #IO_L21P_T3_DQS_AD14P_35 Schematic=M_CLK\n")
+    target.write("#set_property -dict { PACKAGE_PIN L14   IOSTANDARD LVCMOS33 } [get_ports { M_data }]; #IO_L22P_T3_AD7P_35 Schematic=M_DATA\n")
+    target.write("\n")
+    target.write("##Speaker\n")
+    target.write("#set_property -dict { PACKAGE_PIN G18  IOSTANDARD LVCMOS33 } [get_ports { audio }]; #IO_L16N_T2_35 Schematic=AUDIO\n")
+    target.write("\n")
+    target.write("##VGA\n")
+    target.write("#set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports { vga_r[0] }]; #IO_L10P_T1_34 Sch=VGA_R4_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS33 } [get_ports { vga_r[1] }]; #IO_L10N_T1_34 Sch=VGA_R5_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { vga_r[2] }]; #IO_L18P_T2_34 Sch=VGA_R6_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { vga_r[3] }]; #IO_L18N_T2_AD13N_35 Sch=VGA_R7_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN T15   IOSTANDARD LVCMOS33 } [get_ports { vga_g[0] }]; #IO_L5N_T0_34 Sch=VGA_G4_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN V13   IOSTANDARD LVCMOS33 } [get_ports { vga_g[1] }]; #IO_L3N_T0_DQS_34 Sch=VGA_G5_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN U14   IOSTANDARD LVCMOS33 } [get_ports { vga_g[2] }]; #IO_L11P_T1_SRCC_34 Sch=VGA_G6_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN U15   IOSTANDARD LVCMOS33 } [get_ports { vga_g[3] }]; #IO_L11N_T1_SRCC_34 Sch=VGA_G7_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { vga_b[0] }]; #IO_L1P_T0_34 Sch=VGA_B4_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS33 } [get_ports { vga_b[1] }]; #IO_L5P_T0_34 Sch=VGA_B5_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports { vga_b[2] }]; #IO_L2N_T0_34 Sch=VGA_B6_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { vga_b[3] }]; #IO_L4P_T0_34 Sch=VGA_B7_CON\n")
+    target.write("#set_property -dict { PACKAGE_PIN T12   IOSTANDARD LVCMOS33 } [get_ports {HS}]; #IO_L2P_T0_34 Sch=VGA_HS\n")
+    target.write("#set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports {VS}]; #IO_L1N_T0_34 Sch=VGA_VS\n")
+    target.write("##HDMI Signals\n")
+    target.write("#set_property -dict { PACKAGE_PIN U19   IOSTANDARD LVCMOS33 } [get_ports hdmi_clk_n]; #IO_L12N_T1_MRCC_34 Sch=HDMI_TX_CLK_N\n")
+    target.write("#set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports hdmi_clk_p]; #IO_L12P_T1_MRCC_34 Sch=HDMI_TX_CLK_P\n")
+    target.write("#set_property -dict { PACKAGE_PIN V18   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_n[0]]; #IO_L21N_T3_DQS_34 Sch=HDMI_TX0_N\n")
+    target.write("#set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_p[0]]; #IO_L21P_T3_DQS_34 Sch=HDMI_TX0_P\n")
+    target.write("#set_property -dict { PACKAGE_PIN P18   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_n[1]]; #IO_L23N_T3_34 Sch=HDMI_TX1_N\n")
+    target.write("#set_property -dict { PACKAGE_PIN N17   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_p[1]]; #IO_L23P_T3_34 Sch=HDMI_TX1_P\n")
+    target.write("#set_property -dict { PACKAGE_PIN P19   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_n[2]]; #IO_L13N_T2_MRCC_34 Sch=HDMI_TX2_N\n")
+    target.write("#set_property -dict { PACKAGE_PIN N18   IOSTANDARD LVCMOS33 } [get_ports hdmi_tx_p[2]]; #IO_L13P_T2_MRCC_34 Sch=HDMI_TX2_P\n")
+    target.write("#set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports hdmi_cec]; #IO_L9N_T1_DQS_34 Sch=HDMI_TX_CEC\n")
+    target.write("#set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports hdmi_hpd]; #IO_L24N_T3_34 Sch=HDMI_TX_HPD\n")
+    target.write("#set_property -dict { PACKAGE_PIN F17   IOSTANDARD LVCMOS33 } [get_ports hdmi_out_en]; #IO_L6N_T0_VREF_35 Sch=HDMI_OUT_EN\n")
+    target.write("#set_property -dict { PACKAGE_PIN T17   IOSTANDARD LVCMOS33 } [get_ports hdmi_scl]; #IO_L20P_T3_34 Sch=HDMI_TX_SCL\n")
+    target.write("#set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports hdmi_sda]; #IO_L20N_T3_34 Sch=HDMI_TX_SDA\n")
+    target.write("\n")
+    target.write("##PmodA                                                                                                        \n")
+    target.write("#set_property -dict { PACKAGE_PIN F16   IOSTANDARD LVCMOS33 } [get_ports { JA1_P }]; #IO_L6P_T0_35 Sch=JA1_P   \n")
+    target.write("#set_property -dict { PACKAGE_PIN F17   IOSTANDARD LVCMOS33 } [get_ports { JA1_N }]; #IO_L6N_T0_VREF_35 Sch=JA1_N\n")
+    target.write("#set_property -dict { PACKAGE_PIN G19   IOSTANDARD LVCMOS33 } [get_ports { JA2_P }]; #IO_L18P_T2_AD13P_35 Sch=JA2_P\n")
+    target.write("#set_property -dict { PACKAGE_PIN G20   IOSTANDARD LVCMOS33 } [get_ports { JA2_N }]; #IO_L18N_T2_AD13N_35 Sch=JA2_N\n")
+    target.write("#set_property -dict { PACKAGE_PIN E18   IOSTANDARD LVCMOS33 } [get_ports { JA3_P }]; #IO_L5P_T0_AD9P_35 Sch=JA3_P\n")
+    target.write("#set_property -dict { PACKAGE_PIN E19   IOSTANDARD LVCMOS33 } [get_ports { JA3_N }]; #IO_L5N_T0_AD9N_35 Sch=JA3_N\n")
+    target.write("#set_property -dict { PACKAGE_PIN E17   IOSTANDARD LVCMOS33 } [get_ports { JA4_P }]; #IO_L3P_T0_DQS_AD1P_35 Sch=JA4_P\n")
+    target.write("#set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { JA4_N }]; #IO_L3N_T0_DQS_AD1N_35 Sch=JA4_N\n")
+    target.write("                           \n")
+    target.write("##PmodB                                                                                                        \n")
+    target.write("#set_property -dict { PACKAGE_PIN D19   IOSTANDARD LVCMOS33 } [get_ports { JB1_P }]; #IO_L4P_T0_35 Sch=JB1_P   \n")
+    target.write("#set_property -dict { PACKAGE_PIN D20   IOSTANDARD LVCMOS33 } [get_ports { JB1_N }]; #IO_L4N_T0_35 Sch=JB1_N   \n")
+    target.write("#set_property -dict { PACKAGE_PIN F19   IOSTANDARD LVCMOS33 } [get_ports { JB2_P }]; #IO_L15P_T2_DQS_AD12P_35 Sch=JB2_P\n")
+    target.write("#set_property -dict { PACKAGE_PIN F20   IOSTANDARD LVCMOS33 } [get_ports { JB2_N }]; #IO_L15N_T2_DQS_AD12N_35 Sch=JB2_N\n")
+    target.write("#set_property -dict { PACKAGE_PIN C20   IOSTANDARD LVCMOS33 } [get_ports { JB3_P }]; #IO_L1P_T0_AD0P_35 Sch=JB3_P\n")
+    target.write("#set_property -dict { PACKAGE_PIN B20   IOSTANDARD LVCMOS33 } [get_ports { JB3_N }]; #IO_L1N_T0_AD0N_35 Sch=JB3_N\n")
+    target.write("#set_property -dict { PACKAGE_PIN B19   IOSTANDARD LVCMOS33 } [get_ports { JB4_P }]; #IO_L2P_T0_AD8P_35 Sch=JB4_P\n")
+    target.write("#set_property -dict { PACKAGE_PIN A20   IOSTANDARD LVCMOS33 } [get_ports { JB4_N }]; #IO_L2N_T0_AD8N_35 Sch=JB4_N\n")
+    target.write("                                                                                                               \n")
+    target.write("#Servos                                                                                                        \n")
+    target.write("#set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports servo1]; #IO_L16P_T2_35 Sch=SERVO1     \n")
+    target.write("#set_property -dict { PACKAGE_PIN G15   IOSTANDARD LVCMOS33 } [get_ports servo2]; #IO_L19N_T3_VREF_35 Sch=SERVO2\n")
+    target.write("#set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports servo3]; #IO_0_35 Sch=SERVO3           \n")
+    target.write("#set_property -dict { PACKAGE_PIN M19   IOSTANDARD LVCMOS33 } [get_ports servo4]; #IO_L7P_T1_AD2P_35 Sch=SERVO4\n")
 
 main()
