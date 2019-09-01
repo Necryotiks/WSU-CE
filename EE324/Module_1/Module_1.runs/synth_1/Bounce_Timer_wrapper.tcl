@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 2
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized2 has unconnected port Din[15]}}  -suppress 
 set_msg_config  -id {Synth 8-3331}  -suppress 
@@ -26,26 +28,27 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.cache/wt [current_project]
-set_property parent.project_path C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.xpr [current_project]
+set_property webtalk.parent_dir /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.cache/wt [current_project]
+set_property parent.project_path /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths c:/Users/Sergaljerk/WSU-CPTE/Parts [current_project]
+set_property ip_repo_paths /home/necryotiks/Documents/Repos/WSU-CPTE/Parts [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.cache/ip [current_project]
+set_property ip_output_repo /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_dec.v
-  C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_mux.v
-  C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/HZ_Counter.v
-  C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/new/Bounce_Counter_FSM.v
-  C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/new/BINARY_TO_BCD.v
-  C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
+  /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_dec.v
+  /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/ssd_mux.v
+  /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/HZ_Counter.v
+  /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/new/Bounce_Counter_FSM.v
+  /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/new/BINARY_TO_BCD.v
+  /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
 }
-add_files C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd
-set_property used_in_implementation false [get_files -all c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/Bounce_Timer_rst_clk_100MHz_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_clk_100MHz_100M_0/Bounce_Timer_rst_clk_100MHz_100M_0.xdc]
-set_property used_in_implementation false [get_files -all C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer_ooc.xdc]
+add_files /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd
+set_property used_in_implementation false [get_files -all /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_i_CLK_100M_0/Bounce_Timer_rst_i_CLK_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_i_CLK_100M_0/Bounce_Timer_rst_i_CLK_100M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ip/Bounce_Timer_rst_i_CLK_100M_0/Bounce_Timer_rst_i_CLK_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -55,8 +58,8 @@ set_property used_in_implementation false [get_files -all C:/Users/Sergaljerk/WS
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc
-set_property used_in_implementation false [get_files C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc]
+read_xdc /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc
+set_property used_in_implementation false [get_files /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/constrs_1/new/Bounce_RTM_cons.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

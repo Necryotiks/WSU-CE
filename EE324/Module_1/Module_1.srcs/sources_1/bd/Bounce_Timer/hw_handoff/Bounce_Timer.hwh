@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 18 14:07:26 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Aug 29 15:05:49 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Bounce_Timer" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -16,19 +16,19 @@
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="External_Ports_i_CLK">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="slowest_sync_clk"/>
-        <CONNECTION INSTANCE="Bounce_Counter_FSM_0" PORT="i_100MHZCLK"/>
         <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_CLK"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="ext_reset_in"/>
+        <CONNECTION INSTANCE="rst_i_CLK_100M" PORT="slowest_sync_clk"/>
+        <CONNECTION INSTANCE="Bounce_Counter_FSM_0" PORT="i_100MHZCLK"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_Signal" SIGIS="undef" SIGNAME="External_Ports_i_Signal">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Bounce_Counter_FSM_0" PORT="i_Signal"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="External_Ports_i_RST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rst_i_CLK_100M" PORT="ext_reset_in"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -45,9 +45,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clock" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clock" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="13" NAME="i_Binary" RIGHT="0" SIGIS="undef" SIGNAME="Bounce_Counter_FSM_0_o_DATA">
@@ -62,10 +62,10 @@
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="o_BCD" RIGHT="0" SIGIS="undef" SIGNAME="BINARY_TO_BCD_0_o_BCD">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_1" PORT="Din"/>
             <CONNECTION INSTANCE="xlslice_2" PORT="Din"/>
             <CONNECTION INSTANCE="xlslice_3" PORT="Din"/>
-            <CONNECTION INSTANCE="xlslice_1" PORT="Din"/>
-            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -83,9 +83,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
+        <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="rst_i_CLK_100M_peripheral_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="rst_i_CLK_100M" PORT="peripheral_reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="i_Signal" SIGIS="undef" SIGNAME="External_Ports_i_Signal">
@@ -119,22 +119,22 @@
             <CONNECTION INSTANCE="External_Ports" PORT="i_CLK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
+        <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="rst_i_CLK_100M_peripheral_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_100MHz_100M" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="rst_i_CLK_100M" PORT="peripheral_reset"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="o_Out" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="o_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Clock"/>
+            <CONNECTION INSTANCE="ssd_dec_0" PORT="i_CLK"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="13" FULLNAME="/rst_clk_100MHz_100M" HWVERSION="5.0" INSTANCE="rst_clk_100MHz_100M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+    <MODULE COREREVISION="13" FULLNAME="/rst_i_CLK_100M" HWVERSION="5.0" INSTANCE="rst_i_CLK_100M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
       </DOCUMENTS>
@@ -142,13 +142,13 @@
         <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
         <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="1"/>
         <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
         <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
         <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
         <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
         <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="Bounce_Timer_rst_clk_100MHz_100M_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Bounce_Timer_rst_i_CLK_100M_0"/>
         <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
         <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -169,14 +169,14 @@
         <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
         <PORT DIR="O" NAME="mb_reset" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_100MHz_100M_peripheral_aresetn">
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst" SIGNAME="rst_i_CLK_100M_peripheral_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Bounce_Counter_FSM_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="Bounce_Counter_FSM_0" PORT="i_RST"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -187,9 +187,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="i_Num" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">
@@ -232,9 +232,9 @@
             <CONNECTION INSTANCE="xlslice_3" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">
@@ -250,7 +250,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
@@ -274,7 +274,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/xlslice_1" HWVERSION="1.0" INSTANCE="xlslice_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_1" HWVERSION="1.0" INSTANCE="xlslice_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
@@ -298,7 +298,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/xlslice_2" HWVERSION="1.0" INSTANCE="xlslice_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_2" HWVERSION="1.0" INSTANCE="xlslice_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
@@ -322,7 +322,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/xlslice_3" HWVERSION="1.0" INSTANCE="xlslice_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_3" HWVERSION="1.0" INSTANCE="xlslice_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>

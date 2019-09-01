@@ -1,14 +1,18 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF52791EC043FDCD1",
+      "boundary_crc": "0xFF00B8498E7A501",
       "device": "xc7z007sclg400-1",
       "name": "LED_IP",
       "synth_flow_mode": "None",
-      "tool_version": "2018.3"
+      "tool_version": "2019.1",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
+      "rst_ps7_0_50M": "",
+      "RGB_CONTROLLER_0": "",
+      "LED_CONTROLLER_0": "",
       "ps7_0_axi_periph": {
         "xbar": "",
         "s00_couplers": {
@@ -18,19 +22,72 @@
         "m01_couplers": {},
         "m02_couplers": {}
       },
-      "rst_ps7_0_50M": "",
-      "LED_CONTROLLER_0": "",
-      "RGB_CONTROLLER_0": "",
       "SW_BUTTON_INTERFACE_0": ""
     },
     "interface_ports": {
       "DDR": {
         "mode": "Master",
-        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0"
+        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0",
+        "parameters": {
+          "AXI_ARBITRATION_SCHEME": {
+            "value": "TDM",
+            "value_src": "default"
+          },
+          "BURST_LENGTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "CAS_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CAS_WRITE_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CS_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_MASK_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_WIDTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "MEMORY_TYPE": {
+            "value": "COMPONENTS",
+            "value_src": "default"
+          },
+          "MEM_ADDR_MAP": {
+            "value": "ROW_COLUMN_BANK",
+            "value_src": "default"
+          },
+          "SLOT": {
+            "value": "Single",
+            "value_src": "default"
+          },
+          "TIMEPERIOD_PS": {
+            "value": "1250",
+            "value_src": "default"
+          }
+        }
       },
       "FIXED_IO": {
         "mode": "Master",
-        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0"
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          }
+        }
       }
     },
     "ports": {
@@ -824,6 +881,18 @@
           }
         }
       },
+      "rst_ps7_0_50M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "LED_IP_rst_ps7_0_50M_0"
+      },
+      "RGB_CONTROLLER_0": {
+        "vlnv": "xilinx.com:user:RGB_CONTROLLER:1.0",
+        "xci_name": "LED_IP_RGB_CONTROLLER_0_0"
+      },
+      "LED_CONTROLLER_0": {
+        "vlnv": "xilinx.com:user:LED_CONTROLLER:1.0",
+        "xci_name": "LED_IP_LED_CONTROLLER_0_0"
+      },
       "ps7_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
         "xci_name": "LED_IP_ps7_0_axi_periph_0",
@@ -1005,16 +1074,16 @@
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -1197,10 +1266,10 @@
           }
         },
         "interface_nets": {
-          "xbar_to_m00_couplers": {
+          "xbar_to_m01_couplers": {
             "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
             ]
           },
           "ps7_0_axi_periph_to_s00_couplers": {
@@ -1209,16 +1278,10 @@
               "s00_couplers/S_AXI"
             ]
           },
-          "s00_couplers_to_xbar": {
+          "m01_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
-          "m00_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           },
           "xbar_to_m02_couplers": {
@@ -1227,22 +1290,28 @@
               "m02_couplers/S_AXI"
             ]
           },
+          "m00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
           "m02_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M02_AXI",
               "m02_couplers/M_AXI"
             ]
           },
-          "m01_couplers_to_ps7_0_axi_periph": {
+          "xbar_to_m00_couplers": {
             "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
             ]
           }
         },
@@ -1277,46 +1346,22 @@
           }
         }
       },
-      "rst_ps7_0_50M": {
-        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "LED_IP_rst_ps7_0_50M_0"
-      },
-      "LED_CONTROLLER_0": {
-        "vlnv": "xilinx.com:user:LED_CONTROLLER:1.0",
-        "xci_name": "LED_IP_LED_CONTROLLER_0_0"
-      },
-      "RGB_CONTROLLER_0": {
-        "vlnv": "xilinx.com:user:RGB_CONTROLLER:1.0",
-        "xci_name": "LED_IP_RGB_CONTROLLER_0_0"
-      },
       "SW_BUTTON_INTERFACE_0": {
         "vlnv": "user.org:user:SW_BUTTON_INTERFACE:1.0",
         "xci_name": "LED_IP_SW_BUTTON_INTERFACE_0_0"
       }
     },
     "interface_nets": {
-      "ps7_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M01_AXI",
-          "RGB_CONTROLLER_0/S00_AXI"
-        ]
-      },
-      "ps7_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M00_AXI",
-          "LED_CONTROLLER_0/S00_AXI"
-        ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
-        ]
-      },
       "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
           "processing_system7_0/M_AXI_GP0",
           "ps7_0_axi_periph/S00_AXI"
+        ]
+      },
+      "ps7_0_axi_periph_M02_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M02_AXI",
+          "SW_BUTTON_INTERFACE_0/S00_AXI"
         ]
       },
       "processing_system7_0_DDR": {
@@ -1325,10 +1370,22 @@
           "processing_system7_0/DDR"
         ]
       },
-      "ps7_0_axi_periph_M02_AXI": {
+      "ps7_0_axi_periph_M01_AXI": {
         "interface_ports": [
-          "ps7_0_axi_periph/M02_AXI",
-          "SW_BUTTON_INTERFACE_0/S00_AXI"
+          "ps7_0_axi_periph/M01_AXI",
+          "RGB_CONTROLLER_0/S00_AXI"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "ps7_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M00_AXI",
+          "LED_CONTROLLER_0/S00_AXI"
         ]
       }
     },
@@ -1337,13 +1394,13 @@
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
-          "ps7_0_axi_periph/S00_ACLK",
           "rst_ps7_0_50M/slowest_sync_clk",
-          "ps7_0_axi_periph/M00_ACLK",
-          "ps7_0_axi_periph/ACLK",
-          "LED_CONTROLLER_0/s00_axi_aclk",
-          "ps7_0_axi_periph/M01_ACLK",
           "RGB_CONTROLLER_0/s00_axi_aclk",
+          "LED_CONTROLLER_0/s00_axi_aclk",
+          "ps7_0_axi_periph/ACLK",
+          "ps7_0_axi_periph/S00_ACLK",
+          "ps7_0_axi_periph/M00_ACLK",
+          "ps7_0_axi_periph/M01_ACLK",
           "ps7_0_axi_periph/M02_ACLK",
           "SW_BUTTON_INTERFACE_0/s00_axi_aclk"
         ]
@@ -1357,12 +1414,12 @@
       "rst_ps7_0_50M_peripheral_aresetn": {
         "ports": [
           "rst_ps7_0_50M/peripheral_aresetn",
+          "RGB_CONTROLLER_0/s00_axi_aresetn",
+          "LED_CONTROLLER_0/s00_axi_aresetn",
+          "ps7_0_axi_periph/ARESETN",
           "ps7_0_axi_periph/S00_ARESETN",
           "ps7_0_axi_periph/M00_ARESETN",
-          "ps7_0_axi_periph/ARESETN",
-          "LED_CONTROLLER_0/s00_axi_aresetn",
           "ps7_0_axi_periph/M01_ARESETN",
-          "RGB_CONTROLLER_0/s00_axi_aresetn",
           "ps7_0_axi_periph/M02_ARESETN",
           "SW_BUTTON_INTERFACE_0/s00_axi_aresetn"
         ]

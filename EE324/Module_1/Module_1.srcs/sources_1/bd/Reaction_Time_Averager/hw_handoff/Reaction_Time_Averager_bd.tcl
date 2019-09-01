@@ -20,7 +20,7 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2018.3
+set scripts_vivado_version 2019.1
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
@@ -276,7 +276,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.c_NUM {16129} \
+   CONFIG.c_NUM {50000} \
  ] $HZ_Counter_0
 
   # Create instance: LSFR_0, and set properties
@@ -389,7 +389,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net EXTRA_THICC_MUX_0_o_Digit_2 [get_bd_pins EXTRA_THICC_MUX_0/o_Digit_2] [get_bd_pins ssd_mux_0/i_Digit_2]
   connect_bd_net -net EXTRA_THICC_MUX_0_o_Digit_3 [get_bd_pins EXTRA_THICC_MUX_0/o_Digit_3] [get_bd_pins ssd_mux_0/i_Digit_3]
   connect_bd_net -net EXTRA_THICC_MUX_0_o_Digit_4 [get_bd_pins EXTRA_THICC_MUX_0/o_Digit_4] [get_bd_pins ssd_mux_0/i_Digit_4]
-  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins Accumuator_0/i_CLK] [get_bd_pins BCD_TO_BINARY_0/i_CLK] [get_bd_pins BINARY_TO_BCD_0/i_Clock] [get_bd_pins Divider_0/i_CLK] [get_bd_pins EXTRA_THICC_MUX_0/i_CLK] [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins RTM_FSM_0/i_CLK1KHZ] [get_bd_pins ssd_mux_0/i_CLK] [get_bd_pins stopwatch_ssd_driver_0/i_SUBCLK]
+  connect_bd_net -net HZ_Counter_0_o_Out [get_bd_pins Accumuator_0/i_CLK] [get_bd_pins BCD_TO_BINARY_0/i_CLK] [get_bd_pins BINARY_TO_BCD_0/i_Clock] [get_bd_pins Divider_0/i_CLK] [get_bd_pins EXTRA_THICC_MUX_0/i_CLK] [get_bd_pins HZ_Counter_0/o_CLK] [get_bd_pins RTM_FSM_0/i_CLK1KHZ] [get_bd_pins ssd_mux_0/i_CLK] [get_bd_pins stopwatch_ssd_driver_0/i_SUBCLK]
   connect_bd_net -net LSFR_0_o_OUT [get_bd_pins LSFR_0/o_OUT] [get_bd_pins RTM_FSM_0/i_CVAL]
   connect_bd_net -net RTM_FSM_0_o_ACC_EN [get_bd_pins Accumuator_0/i_CLK_EN] [get_bd_pins BINARY_TO_BCD_0/i_Start] [get_bd_pins RTM_FSM_0/o_ACC_EN]
   connect_bd_net -net RTM_FSM_0_o_CEN [get_bd_pins LSFR_0/i_EN] [get_bd_pins RTM_FSM_0/o_CEN]

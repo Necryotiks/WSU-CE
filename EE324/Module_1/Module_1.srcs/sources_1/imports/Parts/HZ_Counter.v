@@ -23,7 +23,7 @@
 module HZ_Counter(
 input i_CLK,
     input i_RST,
-    output o_Out
+    output o_CLK
     );
     
     parameter c_NUM = 0; //Overide via parameter
@@ -31,10 +31,9 @@ input i_CLK,
     reg r_Out;
     wire w_CLK;
     wire w_RST;
-    wire w_OUT;
     assign w_CLK = i_CLK;
     assign w_RST = i_RST;
-    assign o_Out = w_OUT;
+    assign o_CLK = r_Out;
     always @ (posedge(w_CLK) or posedge(w_RST)) //Counter
     begin
         if (w_RST == 1'b1)
@@ -54,10 +53,4 @@ input i_CLK,
         else
             r_Out <= r_Out;
         end
-        
-        BUFGCE(
-            .I(w_CLK),
-            .O(w_OUT),
-            .CE(r_Out) 
-        );
 endmodule

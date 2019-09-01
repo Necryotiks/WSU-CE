@@ -20,7 +20,7 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2018.3
+set scripts_vivado_version 2019.1
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
@@ -156,13 +156,15 @@ proc create_root_design { parentCell } {
 
   # Create interface ports
   set DDR [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR ]
+
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
+
   # Create ports
-  set o_BTN_0 [ create_bd_port -dir O -from 3 -to 0 o_BTN_0 ]
+  set i_BTN_0 [ create_bd_port -dir I -from 3 -to 0 i_BTN_0 ]
+  set i_SW_0 [ create_bd_port -dir I -from 7 -to 0 i_SW_0 ]
   set o_LED [ create_bd_port -dir O -from 3 -to 0 o_LED ]
   set o_RGB [ create_bd_port -dir O -from 11 -to 0 o_RGB ]
-  set o_SW_0 [ create_bd_port -dir O -from 7 -to 0 o_SW_0 ]
 
   # Create instance: LED_CONTROLLER_0, and set properties
   set LED_CONTROLLER_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:LED_CONTROLLER:1.0 LED_CONTROLLER_0 ]
@@ -568,8 +570,8 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net LED_CONTROLLER_0_o_LED [get_bd_ports o_LED] [get_bd_pins LED_CONTROLLER_0/o_LED]
   connect_bd_net -net RGB_CONTROLLER_0_o_RGB [get_bd_ports o_RGB] [get_bd_pins RGB_CONTROLLER_0/o_RGB]
-  connect_bd_net -net SW_BUTTON_INTERFACE_0_o_BTN [get_bd_ports o_BTN_0]
-  connect_bd_net -net SW_BUTTON_INTERFACE_0_o_SW [get_bd_ports o_SW_0]
+  connect_bd_net -net i_BTN_0_1 [get_bd_ports i_BTN_0] [get_bd_pins SW_BUTTON_INTERFACE_0/i_BTN]
+  connect_bd_net -net i_SW_0_1 [get_bd_ports i_SW_0] [get_bd_pins SW_BUTTON_INTERFACE_0/i_SW]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins LED_CONTROLLER_0/s00_axi_aclk] [get_bd_pins RGB_CONTROLLER_0/s00_axi_aclk] [get_bd_pins SW_BUTTON_INTERFACE_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins LED_CONTROLLER_0/s00_axi_aresetn] [get_bd_pins RGB_CONTROLLER_0/s00_axi_aresetn] [get_bd_pins SW_BUTTON_INTERFACE_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]

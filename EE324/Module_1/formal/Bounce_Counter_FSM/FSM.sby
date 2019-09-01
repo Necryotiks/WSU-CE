@@ -1,0 +1,16 @@
+[options]
+mode prove
+depth 100
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal Bounce_Counter_FSM.v
+prep -top Bounce_Counter_FSM
+
+
+[files]
+Bounce_Counter_FSM.v
+
+

@@ -5,16 +5,12 @@
       "device": "xc7z007sclg400-1",
       "name": "Reaction_Time_Averager",
       "synth_flow_mode": "None",
-      "tool_version": "2018.3"
+      "tool_version": "2019.1",
+      "validated": "true"
     },
     "design_tree": {
-      "xlslice_0": "",
-      "xlslice_1": "",
-      "xlslice_2": "",
-      "xlslice_3": "",
       "proc_sys_reset_0": "",
       "LSFR_0": "",
-      "RTM_FSM_0": "",
       "stopwatch_ssd_driver_0": "",
       "ssd_mux_0": "",
       "ssd_dec_0": "",
@@ -26,7 +22,12 @@
       "Debounce_RTM_0": "",
       "Debounce_RTM_1": "",
       "Debounce_RTM_2": "",
-      "HZ_Counter_0": ""
+      "xlslice_0": "",
+      "xlslice_1": "",
+      "xlslice_2": "",
+      "xlslice_3": "",
+      "HZ_Counter_0": "",
+      "RTM_FSM_0": ""
     },
     "ports": {
       "o_Anodes_0": {
@@ -46,12 +47,34 @@
       },
       "i_CLK": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "Reaction_Time_Averager_i_CLK",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
       },
       "i_RST": {
         "type": "rst",
         "direction": "I",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
           }
@@ -73,78 +96,6 @@
       }
     },
     "components": {
-      "xlslice_0": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "xci_name": "Reaction_Time_Averager_xlslice_0_0",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "15"
-          },
-          "DIN_TO": {
-            "value": "12"
-          },
-          "DIN_WIDTH": {
-            "value": "16"
-          },
-          "DOUT_WIDTH": {
-            "value": "4"
-          }
-        }
-      },
-      "xlslice_1": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "xci_name": "Reaction_Time_Averager_xlslice_0_1",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "11"
-          },
-          "DIN_TO": {
-            "value": "8"
-          },
-          "DIN_WIDTH": {
-            "value": "16"
-          },
-          "DOUT_WIDTH": {
-            "value": "4"
-          }
-        }
-      },
-      "xlslice_2": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "xci_name": "Reaction_Time_Averager_xlslice_0_2",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "7"
-          },
-          "DIN_TO": {
-            "value": "4"
-          },
-          "DIN_WIDTH": {
-            "value": "16"
-          },
-          "DOUT_WIDTH": {
-            "value": "4"
-          }
-        }
-      },
-      "xlslice_3": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "xci_name": "Reaction_Time_Averager_xlslice_0_3",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "3"
-          },
-          "DIN_TO": {
-            "value": "0"
-          },
-          "DIN_WIDTH": {
-            "value": "16"
-          },
-          "DOUT_WIDTH": {
-            "value": "4"
-          }
-        }
-      },
       "proc_sys_reset_0": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "Reaction_Time_Averager_proc_sys_reset_0_0"
@@ -160,11 +111,27 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_i_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_RST": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "i_EN": {
             "direction": "I"
@@ -173,69 +140,6 @@
             "direction": "O",
             "left": "12",
             "right": "0"
-          }
-        }
-      },
-      "RTM_FSM_0": {
-        "vlnv": "xilinx.com:module_ref:RTM_FSM:1.0",
-        "xci_name": "Reaction_Time_Averager_RTM_FSM_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "RTM_FSM",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_CLK1KHZ": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "i_RST": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "i_CVAL": {
-            "direction": "I",
-            "left": "12",
-            "right": "0"
-          },
-          "i_Start": {
-            "direction": "I"
-          },
-          "i_Terminate": {
-            "direction": "I"
-          },
-          "i_React": {
-            "direction": "I"
-          },
-          "o_Ready": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "o_SWEN": {
-            "direction": "O"
-          },
-          "o_ACC_EN": {
-            "direction": "O"
-          },
-          "o_DONE": {
-            "direction": "O"
-          },
-          "o_T_NUM": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "o_SRST": {
-            "direction": "O"
-          },
-          "o_TRIAL_NUM": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "o_CEN": {
-            "direction": "O"
           }
         }
       },
@@ -250,11 +154,27 @@
         "ports": {
           "i_SUBCLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_HZ_Counter_0_0_o_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_RST": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "i_CLK_EN": {
             "direction": "I"
@@ -295,7 +215,13 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_HZ_Counter_0_0_o_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_Digit_1": {
             "direction": "I",
@@ -340,7 +266,13 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_i_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_Num": {
             "direction": "I",
@@ -365,11 +297,27 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_HZ_Counter_0_0_o_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_RST": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "i_CLK_EN": {
             "direction": "I"
@@ -397,7 +345,13 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_HZ_Counter_0_0_o_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_Digit1": {
             "direction": "I",
@@ -437,7 +391,13 @@
         "ports": {
           "i_Clock": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_HZ_Counter_0_0_o_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_Binary": {
             "direction": "I",
@@ -465,7 +425,13 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_HZ_Counter_0_0_o_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_SW_Digit_1": {
             "direction": "I",
@@ -543,7 +509,13 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_HZ_Counter_0_0_o_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_TC": {
             "direction": "I",
@@ -573,11 +545,27 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_i_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_RST": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "i_Signal": {
             "direction": "I"
@@ -598,11 +586,27 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_i_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_RST": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "i_Signal": {
             "direction": "I"
@@ -623,17 +627,105 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_i_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_RST": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "i_Signal": {
             "direction": "I"
           },
           "o_Assert": {
             "direction": "O"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Reaction_Time_Averager_xlslice_0_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "15"
+          },
+          "DIN_TO": {
+            "value": "12"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_1": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Reaction_Time_Averager_xlslice_0_1",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "11"
+          },
+          "DIN_TO": {
+            "value": "8"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_2": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Reaction_Time_Averager_xlslice_0_2",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "7"
+          },
+          "DIN_TO": {
+            "value": "4"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_3": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Reaction_Time_Averager_xlslice_0_3",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_TO": {
+            "value": "0"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
           }
         }
       },
@@ -653,13 +745,109 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_i_CLK",
+                "value_src": "default_prop"
+              }
+            }
           },
           "i_RST": {
             "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "o_CLK": {
+            "type": "clk",
+            "direction": "O"
+          }
+        }
+      },
+      "RTM_FSM_0": {
+        "vlnv": "xilinx.com:module_ref:RTM_FSM:1.0",
+        "xci_name": "Reaction_Time_Averager_RTM_FSM_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RTM_FSM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK1KHZ": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "Reaction_Time_Averager_HZ_Counter_0_0_o_CLK",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_RST": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "i_CVAL": {
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "i_Start": {
             "direction": "I"
           },
-          "o_Out": {
+          "i_Terminate": {
+            "direction": "I"
+          },
+          "i_React": {
+            "direction": "I"
+          },
+          "o_Ready": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "o_SWEN": {
+            "direction": "O"
+          },
+          "o_ACC_EN": {
+            "direction": "O"
+          },
+          "o_DONE": {
+            "direction": "O"
+          },
+          "o_T_NUM": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "o_SRST": {
+            "direction": "O"
+          },
+          "o_TRIAL_NUM": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "o_CEN": {
             "direction": "O"
           }
         }
@@ -746,13 +934,13 @@
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
           "LSFR_0/i_RST",
-          "RTM_FSM_0/i_RST",
           "stopwatch_ssd_driver_0/i_RST",
           "Accumuator_0/i_RST",
           "Debounce_RTM_0/i_RST",
           "Debounce_RTM_1/i_RST",
           "Debounce_RTM_2/i_RST",
-          "HZ_Counter_0/i_RST"
+          "HZ_Counter_0/i_RST",
+          "RTM_FSM_0/i_RST"
         ]
       },
       "i_RST_1": {
@@ -769,15 +957,15 @@
       },
       "HZ_Counter_0_o_Out": {
         "ports": [
-          "HZ_Counter_0/o_Out",
-          "RTM_FSM_0/i_CLK1KHZ",
+          "HZ_Counter_0/o_CLK",
           "stopwatch_ssd_driver_0/i_SUBCLK",
           "ssd_mux_0/i_CLK",
           "Accumuator_0/i_CLK",
           "BCD_TO_BINARY_0/i_CLK",
           "BINARY_TO_BCD_0/i_Clock",
           "EXTRA_THICC_MUX_0/i_CLK",
-          "Divider_0/i_CLK"
+          "Divider_0/i_CLK",
+          "RTM_FSM_0/i_CLK1KHZ"
         ]
       },
       "BCD_TO_BINARY_0_o_DATA": {

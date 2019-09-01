@@ -23,13 +23,18 @@ set_property PACKAGE_PIN W13 [get_ports i_RST]
 set_property IOSTANDARD LVCMOS33 [get_ports i_RST]
 set_property IOSTANDARD LVCMOS33 [get_ports i_CLK]
 set_property PACKAGE_PIN W14 [get_ports i_Signal]
+#set_property PACKAGE_PIN U20 [get_ports i_Signal]
 set_property IOSTANDARD LVCMOS33 [get_ports i_Signal]
 set_property PACKAGE_PIN H18 [get_ports {o_Cathodes_0[6]}]
 
-create_clock -period 21.000 -name i_CLK -waveform {0.000 10.500} -add [get_ports i_CLK]
-set_input_delay -clock [get_clocks i_CLK] -min -add_delay 10.000 [get_ports i_RST]
-set_input_delay -clock [get_clocks i_CLK] -max -add_delay 20.000 [get_ports i_RST]
-set_input_delay -clock [get_clocks i_CLK] -min -add_delay 10.000 [get_ports i_Signal]
-set_input_delay -clock [get_clocks i_CLK] -max -add_delay 20.000 [get_ports i_Signal]
+create_clock -period 10.000 -name i_CLK -waveform {0.000 5.000} -add [get_ports i_CLK]
+set_input_delay -clock [get_clocks i_CLK] -min -add_delay 1.000 [get_ports i_RST]
+set_input_delay -clock [get_clocks i_CLK] -max -add_delay 2.000 [get_ports i_RST]
+set_input_delay -clock [get_clocks i_CLK] -min -add_delay 1.000 [get_ports i_Signal]
+set_input_delay -clock [get_clocks i_CLK] -max -add_delay 2.000 [get_ports i_Signal]
 set_property PACKAGE_PIN H16 [get_ports i_CLK]
+
+
+
+
 

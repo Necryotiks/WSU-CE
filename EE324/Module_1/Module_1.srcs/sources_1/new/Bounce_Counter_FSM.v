@@ -31,7 +31,8 @@ module Bounce_Counter_FSM(
     
     localparam s_WAIT = 2'd0;
     localparam s_ASSERT = 2'd1;
-    localparam s_DONE = 2'd2;
+    localparam s_ASSERT_2 = 2'd2;
+    localparam s_DONE = 2'd3;
   
 
     wire w_100MHZCLK;
@@ -53,7 +54,7 @@ module Bounce_Counter_FSM(
         case(r_CURRENT_STATE)
             s_WAIT:
                 begin
-                    if(i_Signal == 1'd1) 
+                    if(w_Signal == 1'd1) 
                         r_NEXT_STATE = s_ASSERT;
                     else 
                     begin
@@ -62,7 +63,8 @@ module Bounce_Counter_FSM(
                 end
             s_ASSERT:
                 begin
-                    if(i_Signal == 1'd0) begin
+                    if(w_Signal == 1'd0) begin
+                        //r_NEXT_STATE = s_ASSERT_2;
                         r_NEXT_STATE = s_DONE;
                         end
                     else
@@ -70,6 +72,13 @@ module Bounce_Counter_FSM(
                         r_NEXT_STATE = s_ASSERT;
                         end
                 end
+//             s_ASSERT_2:
+//                begin
+//                    if(w_Signal == 1'd0)
+//                        r_NEXT_STATE = s_ASSERT_2;
+//                    else
+//                        r_NEXT_STATE = s_DONE;
+//                end
              s_DONE:
                 begin
                     r_NEXT_STATE = s_DONE;
@@ -79,7 +88,7 @@ module Bounce_Counter_FSM(
              endcase 
    end
     
-   always@(posedge w_100MHZCLK or posedge w_RST)
+   always@(posedge w_100MHZCLK or posedge(w_RST))
    begin
         if(w_RST == 1'd1)
             r_CURRENT_STATE <= s_WAIT;
@@ -88,23 +97,57 @@ module Bounce_Counter_FSM(
    end
    
    
-   always@(posedge w_100MHZCLK)
+   always@(posedge w_100MHZCLK or posedge w_RST)
    begin
-   if(r_CURRENT_STATE == s_WAIT)
+   if (w_RST == 1'd1) begin
+	   r_COUNTER <= 14'd0;
+	   r_CEN <= 1'd0;
+   end
+   else if(r_CURRENT_STATE == s_WAIT)
    begin
         r_COUNTER <= 14'd0;
         r_CEN <= 1'd0;
    end
-   else if((i_Signal == 1'd1) && (r_CURRENT_STATE != s_DONE)) begin
+   else if(r_CURRENT_STATE == s_ASSERT) /*|| (r_CURRENT_STATE == s_ASSERT_2))*/ begin
         r_COUNTER <= r_COUNTER + 1'b1;
         r_CEN <= 1'd1;
         end
-   else
+   else if (r_CURRENT_STATE == s_DONE)
         begin
         r_COUNTER <= r_COUNTER;
         r_CEN <= 1'd0;
         end
+else
+	begin
+        r_COUNTER <= r_COUNTER;
+        r_CEN <= 1'd0;
+	end
    end
-   
+`ifdef FORMAL
+reg r_valid = 1'b0;
+always @($global_clock) begin
+	r_valid <= 1'b1;
+	if($rose(w_100MHZCLK) && r_valid == 1'b1) begin
+		if(r_CURRENT_STATE == s_WAIT && r_CURRENT_STATE == $stable(r_CURRENT_STATE)) begin
+			assert(r_COUNTER == 0);
+			assert(r_CEN == 0);
+		end
+		else if(r_CURRENT_STATE == s_ASSERT && r_CURRENT_STATE == $stable(r_CURRENT_STATE)) begin
+			assert(r_COUNTER == $past(r_COUNTER) +1);
+			assert(r_CEN == 1);
+		end
+		else if( r_CURRENT_STATE == s_DONE && r_CURRENT_STATE == $stable(r_CURRENT_STATE)) begin
+			assert(r_COUNTER == $past(r_COUNTER));
+			assert(r_CEN == 0);
+		end
+	end
+	else if (r_valid == 1'b1)
+	begin
+		assume(r_CURRENT_STATE == $past(r_CURRENT_STATE));
+		assume($stable(r_COUNTER));
+		assume($stable(r_CEN));
+	end
+end
+`endif   
    
 endmodule

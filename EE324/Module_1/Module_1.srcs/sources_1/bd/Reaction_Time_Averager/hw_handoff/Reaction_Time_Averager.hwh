@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar  2 23:33:51 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Aug 29 12:29:31 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="Reaction_Time_Averager" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -67,9 +67,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="i_CLK_EN" SIGIS="undef" SIGNAME="RTM_FSM_0_o_ACC_EN">
@@ -102,9 +102,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="i_Digit1" RIGHT="0" SIGIS="undef" SIGNAME="stopwatch_ssd_driver_0_o_Digit_1_val">
@@ -144,9 +144,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clock" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clock" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="13" NAME="i_Binary" RIGHT="0" SIGIS="undef" SIGNAME="Divider_0_o_OUT">
@@ -267,9 +267,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="2" NAME="i_TC" RIGHT="0" SIGIS="undef" SIGNAME="RTM_FSM_0_o_TRIAL_NUM">
@@ -342,9 +342,9 @@
             <CONNECTION INSTANCE="RTM_FSM_0" PORT="o_DONE"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Digit_1" RIGHT="0" SIGIS="undef" SIGNAME="EXTRA_THICC_MUX_0_o_Digit_1">
@@ -373,7 +373,7 @@
     <MODULE COREREVISION="1" FULLNAME="/HZ_Counter_0" HWVERSION="1.0" INSTANCE="HZ_Counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="HZ_Counter" VLNV="xilinx.com:module_ref:HZ_Counter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="c_NUM" VALUE="16129"/>
+        <PARAMETER NAME="c_NUM" VALUE="50000"/>
         <PARAMETER NAME="Component_Name" VALUE="Reaction_Time_Averager_HZ_Counter_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -388,16 +388,16 @@
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="o_Out" SIGIS="undef" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="o_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_CLK1KHZ"/>
             <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_SUBCLK"/>
+            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="Accumuator_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="BCD_TO_BINARY_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="BINARY_TO_BCD_0" PORT="i_Clock"/>
             <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="Divider_0" PORT="i_CLK"/>
-            <CONNECTION INSTANCE="ssd_mux_0" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_CLK1KHZ"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -440,9 +440,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK1KHZ" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK1KHZ" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
@@ -554,13 +554,13 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="LSFR_0" PORT="i_RST"/>
-            <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="stopwatch_ssd_driver_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="Accumuator_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="Debounce_RTM_0" PORT="i_RST"/>
             <CONNECTION INSTANCE="Debounce_RTM_1" PORT="i_RST"/>
             <CONNECTION INSTANCE="Debounce_RTM_2" PORT="i_RST"/>
             <CONNECTION INSTANCE="HZ_Counter_0" PORT="i_RST"/>
+            <CONNECTION INSTANCE="RTM_FSM_0" PORT="i_RST"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -618,9 +618,9 @@
             <CONNECTION INSTANCE="EXTRA_THICC_MUX_0" PORT="o_Digit_4"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_CLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="o_Out" RIGHT="0" SIGIS="undef" SIGNAME="ssd_mux_0_o_Out">
@@ -644,9 +644,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_SUBCLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_Out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_SUBCLK" SIGIS="clk" SIGNAME="HZ_Counter_0_o_CLK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_Out"/>
+            <CONNECTION INSTANCE="HZ_Counter_0" PORT="o_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="i_RST" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
@@ -691,7 +691,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
@@ -715,7 +715,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/xlslice_1" HWVERSION="1.0" INSTANCE="xlslice_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_1" HWVERSION="1.0" INSTANCE="xlslice_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
@@ -739,7 +739,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/xlslice_2" HWVERSION="1.0" INSTANCE="xlslice_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_2" HWVERSION="1.0" INSTANCE="xlslice_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
@@ -763,7 +763,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/xlslice_3" HWVERSION="1.0" INSTANCE="xlslice_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_3" HWVERSION="1.0" INSTANCE="xlslice_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DIN_WIDTH" VALUE="16"/>
