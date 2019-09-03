@@ -7,40 +7,82 @@
 ################################################
 import sys
 import os
+import shutil
 from os import path
 from shutil import copy
-header_str = "###################################################\n#THIS IS A COMPUTER GENERATED FILE, DO NOT MODIFY.#\n#GENERATED: yyyy-mm-dd-hh-mm-ss                   #\n###################################################\n"
-help_str = "Vivado Project Creation Tool: \n -h Help\n -n Create a new Vivado project with the give name\n -p Project part number\n"
+from datetime import datetime
+# datetime object containing current date and time
+now = datetime.now()
+dt_string = now.strftime("%Y-%m-%d %H:%M:%S")
+header_str = "###################################################\n#THIS IS A COMPUTER GENERATED FILE, DO NOT MODIFY.#\n#GENERATED: %s                   #\n###################################################\n" % (dt_string)
+help_str = "Vivado Project Creation Tool: \n --help: Prints this help menu.\n --new-project: Create a new project for use with Vivado\n --build-test-harness: Construct formal verification and simulation testbenches\n"
+path = os.getcwd() + '/'
+proj_str = ''
+project_created = False
 def main():
     if len(sys.argv) <= 1:
         print(help_str)
         sys.exit(0)
     else: #TODO:Rewrite this
-        if sys.argv[1] == "-h":
-            print(help_str)
-            sys.exit(0)
-        elif sys.argv[1] == "-n":
-            if len(sys.argv) == 3:
-                create_project(sys.argv[2])
-                init_build_tcl(pdir=sys.argv[2],part_str='',def_flag=True)
-                path = os.getcwd() + '/'
-                create_verilog_file(path)
-                xdc = open(path+"constraints/BlackBoard_Master_XDC.xdc","w+")
-                write_blackboard_xdc(xdc)
+        for arg in sys.argv:
+            if(arg == "--help"):
+                print(help_str)
                 sys.exit(0)
-            elif len(sys.argv) == 5:
-                pstr = sys.argv[4]
-                create_project(sys.argv[2])
-                init_build_tcl(pdir=sys.argv[2],part_str=pstr,def_flag=False)
-                sys.exit(0)
-            elif len(sys.argv) < 3:
-                print("Error: Expected directory name as second argument.")
-                sys.exit(0)
-            else:
-                print("Error: Argument list not satisfied.") 
-                sys.exit(0)
+            elif(arg == "--new-project"):
+                proj_str = input("Enter a project name: ")
+                confirmation = input("Is the Real Digital BLACKBOARD being targeted? [Y/N]\n")
+                def_flag = True
+                part_str = ''
+                project_created = True
+                while(True):
+                    if(confirmation == 'Y' or confirmation == 'y'):
+                        def_flag = True
+                        break
+                    elif (confirmation == 'N' or confirmation == 'n'):
+                        def_flag = False
+                        part_str = input("Enter the full part name(i.e xc7z007sclg400-1): \n")
+                        print("Selected part: %s\n" %(part_str))
+                        confirmation = input("Is this correct? [Y/N]\n")
+                        while(True):
+                            if(confirmation == 'Y' or confirmation  == 'y'):
+                                break
+                            elif(confirmation == 'N' or confirmation  == 'n'):
+                                part_str = input("Enter the full part name(i.e xc7z007sclg400-1): \n")
+                                print("Selected part: %s\n" %(part_str))
+                                confirmation = input("Is this correct? [Y/N]\n")
+                            else:
+                                print("Invalid input!\n")
+                                part_str = input("Enter the full part name(i.e xc7z007sclg400-1): \n")
+                                print("Selected part: %s\n" %(part_str))
+                                confirmation = input("Is this correct? [Y/N]\n")
+                        break;
+                    else:
+                        print("Invalid input!\n")
+                        confirmation = input("Is the Real Digital BLACKBOARD being targeted? [Y/N]\n")
+                create_project(proj_str)
+                init_build_tcl(pdir=proj_str,part_str=part_str,def_flag=def_flag)
+                create_verilog_file(path+proj_str)
+                print("File creation script constructed!")
+                if(def_flag == True):
+                    xdc = open(path+proj_str+"/constraints/BLACKBOARD_Master_XDC.xdc","w+")
+                    write_blackboard_xdc(xdc)
+                    print("BLACKBOARD Master XDC file written!")
+            elif(arg == "--build-test-harness"):
+                if(project_created == False):
+                    dst = input("Target project directory: ")
+                else:
+                    dst = proj_str
+                if(os.path.exists(path+dst)):
+                    os.chdir(path+dst)
+                    create_test_harness()
+                    print("Test harness constructed!")
+                else:
+                    print("Project directory does not exist!")
+            elif(arg == "--refresh-tcl-scripts"):
+                #TODO: Check if proj_str,part_str and def_flag are defined
+                break
 
-    #Creute stage 2 bootstrap file
+
 def create_project(pdir):
 # Create main project directory
     if os.path.exists(pdir):
@@ -60,7 +102,7 @@ def create_project(pdir):
            print("Creating the \"" + subdir + "\" subdirectory.")
            os.mkdir(path + subdir)
 
-def init_build_tcl(pdir,part_str,def_flag):
+def init_build_tcl(pdir,part_str='',def_flag=True):
     path = os.getcwd() + '/' + pdir + '/'
     os.chdir(path)
     build_tcl = open(path + "build.tcl","w+")
@@ -70,11 +112,12 @@ def init_build_tcl(pdir,part_str,def_flag):
     tcl_file_up(path=path,target=src_tcl,subfile="rtl")
     src_tcl.close()
     #run TCL update script here
-    cons_tcl = open(path + "constraints/src.tcl", "w+")
+    cons_tcl = open(path + "constraints/cons.tcl", "w+")
     cons_tcl.write(header_str)
     tcl_file_up(path=path,target=cons_tcl,subfile="constraints")
     cons_tcl.close()
 #----------------------------------------------
+#TODO: Have user set top name and auto create it
     build_tcl.write(header_str)
     build_tcl.write("set PROJ_NM \"%s\"\n" % (pdir))
     build_tcl.write("set TOP_MODULE \"top\"\n")
@@ -112,26 +155,45 @@ def tcl_file_up(path,target,subfile):
                 target.write("read_ip ./rtl/" + srcfile + '\n') 
             elif srcfile.endswith('.xdc'):
                 target.write("read_xdc ./constraints/" + srcfile + '\n')
-            #elif srcfile.endswith('.vhd'):
-            #    target.write("read_vhdl ./rtl/" + srcfile + '\n') 
-def create_test_harness(path,target,subfile):
+            elif srcfile.endswith('.vhd'):
+               target.write("read_vhdl ./rtl/" + srcfile + '\n') 
+def create_test_harness():
+    #TODO: Have this test harness be constructed by the stage 1 bootstrap?
+    path = os.getcwd() + '/'
+    subfile = "rtl/"
     for _,_,entry in os.walk(path+subfile):
         for srcfile in entry:
             if srcfile.endswith('.v') or srcfile.endswith('.sv'):
-                os.mkdir(path + "bench/formal/" + srcfile) 
-                os.mkdir(path + "bench/sim/" + srcfile) 
-                shutil.copy(srcfile, path + "bench/sim/" + srcfile)
-                shutil.copy(srcfile, path + "bench/formal/" + srcfile)
-                target = open(path + "bench/formal/" + srcfile + srcfile,"a")
+                fn = os.path.splitext(srcfile)[0]
+                formal_dir= str(path + "bench/formal/" + fn)
+                sim_dir= str(path + "bench/sim/" + fn)
+                if(os.path.exists(formal_dir)):
+                    print("The \"" + "/bench/formal/" +fn + "\" subdirectory already exists, skipping creation.")
+                else: 
+                    print("Creating the \"" + "/bench/formal/" +fn + "\" subdirectory.")
+                    os.mkdir(formal_dir) 
+                if(os.path.exists(sim_dir)):
+                    print("The \"" + "/bench/sim/" +fn + "\" subdirectory already exists, skipping creation.")
+                else: 
+                    print("Creating the \"" + "/bench/sim/" +fn + "\" subdirectory.")
+                    os.mkdir(sim_dir) 
+                shutil.copy(path + subfile + srcfile, path + "bench/sim/" + fn)
+                shutil.copy(path + subfile + srcfile, path + "bench/formal/" + fn)
+                target = open(path + "bench/formal/" + fn + '/'+ srcfile,"a+")
                 target.write("\n`ifdef FORMAL \n\n//Formal verification goes here.\n\n`endif\n")
                 target.close()
-                #TODO: create sby files for the test harness
+                symbi_file = open(path + "bench/formal/" + fn + '/' + "verify.sby","w+")
+                symbi_file.write("[options]\nmode prove\ndepth 100\n\n")
+                symbi_file.write("[engines]\nsmtbmc yices\n\n")
+                symbi_file.write("[script]\nread_verilog -formal %s\nprep -top %s\n\n" % (srcfile,fn))
+                symbi_file.write("[files]\n%s"%(srcfile))
+                symbi_file.close()
                 #TODO: Make verilator harness
 
     
     #TODO:create test harness
 def create_verilog_file(path):
-    new_f = open(path + "rtl/create_file.py","w+")
+    new_f = open(path + "/rtl/create_file.py","w+")
     new_f.write("import os\n")
     new_f.write("import sys\n")
     new_f.write("from os import path\n")
