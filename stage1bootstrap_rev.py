@@ -5,6 +5,15 @@
 # 3. MOVE ANY VERILOG OR XDC FILES ALREADY CREATED TO THE RTL AND CONSTRAINTS DIRECTORIES RESPECTIVELY
 # 4. RUN TCL update
 ################################################
+#TODO: edit and create constraints(edit pins, name, ports, etc)
+#TODO: create parts list for selection
+#TODO: edit and create verilog files with options(pramameter, synchronous,etc)
+#TODO: allow custom top modules
+#TODO: create optional advanced build script
+#TODO: create auto-connect TCL script
+#TODO: create verilator testbench
+#TODO: add default nettype none
+#FIXME: insert FORMAL def before endmodule
 import sys
 import os
 import shutil
