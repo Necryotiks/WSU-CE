@@ -2,1010 +2,274 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Aug 24 12:48:23 2019
-# Process ID: 25828
+# Start of session at: Fri Aug 30 23:16:12 2019
+# Process ID: 8063
 # Current directory: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324
 # Command line: vivado
 # Log file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/vivado.log
 # Journal file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.xpr
-Scanning sources...
-Finished scanning sources
+create_project Module_2 /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2 -part xc7z007sclg400-1
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
+INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'Bounce_Timer.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-Bounce_Timer_xlslice_3_0
-Bounce_Timer_xlslice_2_0
-Bounce_Timer_xlslice_1_0
-Bounce_Timer_xlslice_0_0
-
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'Reaction_Time_Averager.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-Reaction_Time_Averager_xlslice_0_3
-Reaction_Time_Averager_xlslice_0_2
-Reaction_Time_Averager_xlslice_0_1
-Reaction_Time_Averager_xlslice_0_0
-
-INFO: [Project 1-230] Project 'Module_1.xpr' upgraded for this version of Vivado.
-open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 6489.781 ; gain = 102.535 ; free physical = 3146 ; free virtual = 8907
-report_ip_status -name ip_status 
-upgrade_ip [get_ips  {Bounce_Timer_xlslice_0_0 Bounce_Timer_xlslice_3_0 Bounce_Timer_xlslice_2_0 Bounce_Timer_xlslice_1_0 Reaction_Time_Averager_xlslice_0_3 Reaction_Time_Averager_xlslice_0_0 Reaction_Time_Averager_xlslice_0_1 Reaction_Time_Averager_xlslice_0_2}] -log ip_upgrade.log
-Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_100MHz_100M
-Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
-Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
-Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
-Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
-Adding component instance block -- xilinx.com:module_ref:ssd_dec:1.0 - ssd_dec_0
-Adding component instance block -- xilinx.com:module_ref:ssd_mux:1.0 - ssd_mux_0
-Adding component instance block -- xilinx.com:module_ref:HZ_Counter:1.0 - HZ_Counter_0
-Adding component instance block -- xilinx.com:module_ref:BINARY_TO_BCD:1.0 - BINARY_TO_BCD_0
-Adding component instance block -- xilinx.com:module_ref:Bounce_Counter_FSM:1.0 - Bounce_Counter_FSM_0
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /ssd_dec_0/i_CLK(clk)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /ssd_mux_0/i_CLK(clk)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /BINARY_TO_BCD_0/i_Clock(clk)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0/i_100MHZCLK(undef)
-Successfully read diagram <Bounce_Timer> from BD file </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd>
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
-INFO: [IP_Flow 19-3422] Upgraded Bounce_Timer_xlslice_0_0 (Slice 1.0) from revision 1 to revision 2
-INFO: [IP_Flow 19-3422] Upgraded Bounce_Timer_xlslice_1_0 (Slice 1.0) from revision 1 to revision 2
-INFO: [IP_Flow 19-3422] Upgraded Bounce_Timer_xlslice_2_0 (Slice 1.0) from revision 1 to revision 2
-INFO: [IP_Flow 19-3422] Upgraded Bounce_Timer_xlslice_3_0 (Slice 1.0) from revision 1 to revision 2
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
-Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
-Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
-Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
-Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
-Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
-Adding component instance block -- xilinx.com:module_ref:LSFR:1.0 - LSFR_0
-Adding component instance block -- xilinx.com:module_ref:RTM_FSM:1.0 - RTM_FSM_0
-Adding component instance block -- xilinx.com:module_ref:stopwatch_ssd_driver:1.0 - stopwatch_ssd_driver_0
-Adding component instance block -- xilinx.com:module_ref:ssd_mux:1.0 - ssd_mux_0
-Adding component instance block -- xilinx.com:module_ref:ssd_dec:1.0 - ssd_dec_0
-Adding component instance block -- xilinx.com:module_ref:Accumuator:1.0 - Accumuator_0
-Adding component instance block -- xilinx.com:module_ref:BCD_TO_BINARY:1.0 - BCD_TO_BINARY_0
-Adding component instance block -- xilinx.com:module_ref:BINARY_TO_BCD:1.0 - BINARY_TO_BCD_0
-Adding component instance block -- xilinx.com:module_ref:EXTRA_THICC_MUX:1.0 - EXTRA_THICC_MUX_0
-Adding component instance block -- xilinx.com:module_ref:Divider:1.0 - Divider_0
-Adding component instance block -- xilinx.com:module_ref:Debounce_RTM:1.0 - Debounce_RTM_0
-Adding component instance block -- xilinx.com:module_ref:Debounce_RTM:1.0 - Debounce_RTM_1
-Adding component instance block -- xilinx.com:module_ref:Debounce_RTM:1.0 - Debounce_RTM_2
-Adding component instance block -- xilinx.com:module_ref:HZ_Counter:1.0 - HZ_Counter_0
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /RTM_FSM_0/i_CLK1KHZ(clk)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /stopwatch_ssd_driver_0/i_SUBCLK(clk)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /ssd_mux_0/i_CLK(clk)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /Accumuator_0/i_CLK(clk)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /BCD_TO_BINARY_0/i_CLK(clk)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /BINARY_TO_BCD_0/i_Clock(clk)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /EXTRA_THICC_MUX_0/i_CLK(clk)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /Divider_0/i_CLK(clk)
-Successfully read diagram <Reaction_Time_Averager> from BD file </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd>
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd'
-INFO: [IP_Flow 19-3422] Upgraded Reaction_Time_Averager_xlslice_0_0 (Slice 1.0) from revision 1 to revision 2
-INFO: [IP_Flow 19-3422] Upgraded Reaction_Time_Averager_xlslice_0_1 (Slice 1.0) from revision 1 to revision 2
-INFO: [IP_Flow 19-3422] Upgraded Reaction_Time_Averager_xlslice_0_2 (Slice 1.0) from revision 1 to revision 2
-INFO: [IP_Flow 19-3422] Upgraded Reaction_Time_Averager_xlslice_0_3 (Slice 1.0) from revision 1 to revision 2
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/ui/bd_d81f2a51.ui> 
-INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/ip_upgrade.log'.
-upgrade_ip: Time (s): cpu = 00:00:43 ; elapsed = 00:00:07 . Memory (MB): peak = 6659.895 ; gain = 5.676 ; free physical = 2887 ; free virtual = 8707
-export_ip_user_files -of_objects [get_ips {Bounce_Timer_xlslice_0_0 Bounce_Timer_xlslice_3_0 Bounce_Timer_xlslice_2_0 Bounce_Timer_xlslice_1_0 Reaction_Time_Averager_xlslice_0_3 Reaction_Time_Averager_xlslice_0_0 Reaction_Time_Averager_xlslice_0_1 Reaction_Time_Averager_xlslice_0_2}] -no_script -sync -force -quiet
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2019.1
-  **** Build date : May 24 2019 at 15:06:40
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
-open_hw_target: Time (s): cpu = 00:00:26 ; elapsed = 00:00:06 . Memory (MB): peak = 7587.824 ; gain = 850.043 ; free physical = 1862 ; free virtual = 7703
-set_property PROGRAM.FILE {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
-current_hw_device [get_hw_devices xc7z007s_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0]
-INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+create_bd_design "design_1"
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
 update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 14
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
-Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
-Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
-Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
-[Sat Aug 24 12:50:32 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-[Sat Aug 24 12:50:32 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:28 ; elapsed = 00:00:09 . Memory (MB): peak = 8010.664 ; gain = 291.262 ; free physical = 1647 ; free virtual = 7505
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
-open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property PROGRAM.FILE {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
-program_hw_devices [get_hw_devices xc7z007s_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
-INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
-open_run impl_1
-INFO: [Device 21-403] Loading part xc7z007sclg400-1
-INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2019.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 8562.035 ; gain = 0.000 ; free physical = 1122 ; free virtual = 7057
-Restored from archive | CPU: 0.040000 secs | Memory: 0.307503 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 8562.035 ; gain = 0.000 ; free physical = 1122 ; free virtual = 7057
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8562.035 ; gain = 0.000 ; free physical = 1123 ; free virtual = 7058
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 8752.000 ; gain = 741.336 ; free physical = 1039 ; free virtual = 6974
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
 startgroup
-set_property -dict [list CONFIG.c_NUM {500000}] [get_bd_cells HZ_Counter_0]
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
 endgroup
-save_bd_design
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 14
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
-Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
-Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
-Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
-[Sat Aug 24 12:56:52 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-[Sat Aug 24 12:56:52 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:28 ; elapsed = 00:00:08 . Memory (MB): peak = 8923.492 ; gain = 52.434 ; free physical = 830 ; free virtual = 6784
-set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property PROGRAM.FILE {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
-program_hw_devices [get_hw_devices xc7z007s_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
-INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
-open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
-delete_bd_objs [get_bd_nets HZ_Counter_0_o_Out]
-connect_bd_net [get_bd_ports i_CLK] [get_bd_pins ssd_dec_0/i_CLK]
-connect_bd_net [get_bd_pins ssd_mux_0/i_CLK] [get_bd_pins HZ_Counter_0/o_Out]
-WARNING: [BD 41-1731] Type mismatch between connected pins: /ssd_mux_0/i_CLK(clk) and /HZ_Counter_0/o_Out(undef)
-connect_bd_net [get_bd_pins BINARY_TO_BCD_0/i_Clock] [get_bd_pins HZ_Counter_0/o_Out]
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /BINARY_TO_BCD_0/i_Clock(clk)
+WARNING: [Boardtcl 53-1] No current board_part set.
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+create_peripheral user.org user LED_CONTROLLER 1.0 -dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core user.org:user:LED_CONTROLLER:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:LED_CONTROLLER:1.0]
+write_peripheral [ipx::find_open_core user.org:user:LED_CONTROLLER:1.0]
+set_property  ip_repo_paths  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0 [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0'.
+create_bd_cell -type ip -vlnv user.org:user:LED_CONTROLLER:1.0 LED_CONTROLLER_0
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/LED_CONTROLLER_0/S00_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins LED_CONTROLLER_0/S00_AXI]
+Slave segment </LED_CONTROLLER_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
 regenerate_bd_layout
+save_bd_design
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+set_property synth_checkpoint_mode None [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd]
+generate_target all [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block LED_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 6888.551 ; gain = 75.828 ; free physical = 4616 ; free virtual = 9179
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.ip_user_files -ipstatic_source_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/questa} {ies=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+ipx::edit_ip_in_project -upgrade true -name LED_CONTROLLER_v1_0_project -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.tmp/LED_CONTROLLER_v1_0_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/hdl/LED_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/hdl/LED_CONTROLLER_v1_0.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/component.xml' ignored by IP packager.
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:LED_CONTROLLER:1.0 [get_ips  design_1_LED_CONTROLLER_0_0] -log ip_upgrade.log
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_LED_CONTROLLER_0_0 (LED_CONTROLLER_v1.0 1.0) from revision 1 to revision 2
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_LED_CONTROLLER_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block LED_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.ip_user_files -ipstatic_source_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/questa} {ies=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name LED_CONTROLLER_v1_0_project -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.tmp/LED_CONTROLLER_v1_0_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/hdl/LED_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/hdl/LED_CONTROLLER_v1_0.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:LED_CONTROLLER:1.0 [get_ips  design_1_LED_CONTROLLER_0_0] -log ip_upgrade.log
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_LED_CONTROLLER_0_0 (LED_CONTROLLER_v1.0 1.0) from revision 2 to revision 3
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_LED'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_LED_CONTROLLER_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_LED_CONTROLLER_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_LED_CONTROLLER_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block LED_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.ip_user_files -ipstatic_source_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/questa} {ies=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
 startgroup
-set_property -dict [list CONFIG.c_NUM {50000}] [get_bd_cells HZ_Counter_0]
+make_bd_pins_external  [get_bd_pins LED_CONTROLLER_0/o_LED]
 endgroup
 save_bd_design
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 14
-WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
-Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
-Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
-Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
-[Sat Aug 24 13:00:26 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-[Sat Aug 24 13:00:26 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:27 ; elapsed = 00:00:08 . Memory (MB): peak = 8969.508 ; gain = 0.000 ; free physical = 1370 ; free virtual = 6503
-set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property PROGRAM.FILE {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
-program_hw_devices [get_hw_devices xc7z007s_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
-INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
 report_ip_status -name ip_status 
-update_module_reference {Bounce_Timer_HZ_Counter_0_0 Reaction_Time_Averager_HZ_Counter_0_0}
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
-WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
-INFO: [IP_Flow 19-3420] Updated Bounce_Timer_HZ_Counter_0_0 to use current project options
-WARNING: [BD 41-1731] Type mismatch between connected pins: /ssd_mux_0/i_CLK(clk) and /HZ_Counter_0_upgraded_ipi/o_Out(undef)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /BINARY_TO_BCD_0/i_Clock(clk) and /HZ_Counter_0_upgraded_ipi/o_Out(undef)
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd'
-INFO: [IP_Flow 19-3420] Updated Reaction_Time_Averager_HZ_Counter_0_0 to use current project options
-WARNING: [BD 41-1731] Type mismatch between connected pins: /RTM_FSM_0/i_CLK1KHZ(clk) and /HZ_Counter_0_upgraded_ipi/o_Out(undef)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /stopwatch_ssd_driver_0/i_SUBCLK(clk) and /HZ_Counter_0_upgraded_ipi/o_Out(undef)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /ssd_mux_0/i_CLK(clk) and /HZ_Counter_0_upgraded_ipi/o_Out(undef)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /Accumuator_0/i_CLK(clk) and /HZ_Counter_0_upgraded_ipi/o_Out(undef)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /BCD_TO_BINARY_0/i_CLK(clk) and /HZ_Counter_0_upgraded_ipi/o_Out(undef)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /BINARY_TO_BCD_0/i_Clock(clk) and /HZ_Counter_0_upgraded_ipi/o_Out(undef)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /EXTRA_THICC_MUX_0/i_CLK(clk) and /HZ_Counter_0_upgraded_ipi/o_Out(undef)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /Divider_0/i_CLK(clk) and /HZ_Counter_0_upgraded_ipi/o_Out(undef)
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/ui/bd_d81f2a51.ui> 
-update_module_reference: Time (s): cpu = 00:01:10 ; elapsed = 00:00:20 . Memory (MB): peak = 9083.895 ; gain = 61.027 ; free physical = 1593 ; free virtual = 6599
+create_bd_port -dir I i_RST
+set_property location {-60 73} [get_bd_ports i_RST]
+set_property location {-47 441} [get_bd_ports i_RST]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N]
+connect_bd_net [get_bd_ports i_RST] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
+delete_bd_objs [get_bd_nets i_RST_1]
+delete_bd_objs [get_bd_ports i_RST]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+make_wrapper -files [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd] -top
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+add_files -norecurse /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+report_ip_status -name ip_status 
+add_files -fileset constrs_1 -norecurse /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_3/Module_3.srcs/constrs_1/new/AXI_DEBUG_BD_wrapper.xdc
+launch_runs synth_1 -jobs 14
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block LED_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Sat Aug 31 00:04:24 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 14
+[Sat Aug 31 00:06:06 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.runs/impl_1/runme.log
+open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd}
+file mkdir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/constrs_1
+file mkdir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/constrs_1/new
+close [ open /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/constrs_1/new/LED_cons.xdc w ]
+add_files -fileset constrs_1 /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/constrs_1/new/LED_cons.xdc
+export_ip_user_files -of_objects  [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_3/Module_3.srcs/constrs_1/new/AXI_DEBUG_BD_wrapper.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_3/Module_3.srcs/constrs_1/new/AXI_DEBUG_BD_wrapper.xdc
 reset_run synth_1
 launch_runs synth_1 -jobs 14
-WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
-Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
-Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
-Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
-[Sat Aug 24 13:04:22 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:27 ; elapsed = 00:00:08 . Memory (MB): peak = 9083.895 ; gain = 0.000 ; free physical = 1617 ; free virtual = 6619
-current_bd_design [get_bd_designs Bounce_Timer]
+[Sat Aug 31 00:08:36 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.runs/synth_1/runme.log
+reset_run synth_1
+set_property name o_LED [get_bd_ports o_LED_0]
+save_bd_design
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
 launch_runs impl_1 -to_step write_bitstream -jobs 14
-[Sat Aug 24 13:06:07 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property PROGRAM.FILE {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
-program_hw_devices [get_hw_devices xc7z007s_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
-INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
-open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
-update_module_reference Bounce_Timer_Bounce_Counter_FSM_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
-INFO: [IP_Flow 19-3420] Updated Bounce_Timer_Bounce_Counter_FSM_0_0 to use current project options
-WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0_upgraded_ipi/i_100MHZCLK(undef)
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
-update_module_reference: Time (s): cpu = 00:00:39 ; elapsed = 00:00:10 . Memory (MB): peak = 9106.449 ; gain = 20.531 ; free physical = 1640 ; free virtual = 6508
-report_design_analysis -extend -setup
-INFO: [Timing 38-72] No paths found.
-Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Sat Aug 24 13:15:59 2019
-| Host         : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
-| Command      : report_design_analysis -extend -setup
-| Design       : Bounce_Timer_wrapper
-| Device       : xc7z007s
-| Design State : Routed
--------------------------------------------------------------------------------------------
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block LED_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Sat Aug 31 00:10:11 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.runs/synth_1/runme.log
+[Sat Aug 31 00:10:11 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.runs/impl_1/runme.log
+file mkdir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk
+file copy -force /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk/design_1_wrapper.hdf
 
-Report Design Analysis
-
-Table of Contents
------------------
-1. Setup Path Characteristics 1-1
-
-1. Setup Path Characteristics 1-1
----------------------------------
-
-Setup Characteristics for Path #1
-+---------------------------+------------------+----------------------+---------------------+
-|      Characteristics      | WorstPath to Src |        Path #1       |  WorstPath from Dst |
-+---------------------------+------------------+----------------------+---------------------+
-| Requirement               | No Path          |               21.000 |              21.000 |
-| Path Delay                | No Path          |                1.311 |               1.715 |
-| Logic Delay               | No Path          | 0.595(46%)           | 0.606(36%)          |
-| Net Delay                 | No Path          | 0.716(54%)           | 1.109(64%)          |
-| Clock Skew                | No Path          |                1.471 |               0.045 |
-| Slack                     | No Path          |                1.067 |              19.370 |
-| Clock Relationship        | No Path          | Safely Timed         | Safely Timed        |
-| Logic Levels              | No Path          |                    2 |                   1 |
-| Routes                    | No Path          |                    2 |                   1 |
-| Logical Path              | No Path          | IBUF LUT3 FDRE       | FDRE LUT3 FDRE      |
-| Start Point Clock         | No Path          | i_CLK                | i_CLK               |
-| End Point Clock           | No Path          | i_CLK                | i_CLK               |
-| DSP Block                 | No Path          | None                 | None                |
-| BRAM                      | No Path          | None                 | None                |
-| IO Crossings              | No Path          |                    3 |                   0 |
-| Config Crossings          | No Path          |                    0 |                   0 |
-| SLR Crossings             | No Path          |                    0 |                   0 |
-| PBlocks                   | No Path          |                    0 |                   0 |
-| High Fanout               | No Path          |                   14 |                   2 |
-| Dont Touch                | No Path          |                    0 |                   0 |
-| Mark Debug                | No Path          |                    0 |                   0 |
-| Start Point Pin Primitive | No Path          | i_Signal             | FDRE/C              |
-| End Point Pin Primitive   | No Path          | FDRE/CE              | FDRE/D              |
-| Start Point Pin           | No Path          | i_Signal             | r_COUNTER_reg[12]/C |
-| End Point Pin             | No Path          | r_COUNTER_reg[12]/CE | r_Binary_reg[12]/D  |
-+---------------------------+------------------+----------------------+---------------------+
-* Bounding box calculated as % of dimensions for the target device (156, 199)
-
-
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-set_property STEPS.PHYS_OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
-set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/imports/Parts/HZ_Counter.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/new/Bounce_Counter_FSM.v:]
-reset_run synth_1
-update_module_reference Bounce_Timer_Bounce_Counter_FSM_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
-INFO: [IP_Flow 19-3420] Updated Bounce_Timer_Bounce_Counter_FSM_0_0 to use current project options
-WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0_upgraded_ipi/i_100MHZCLK(undef)
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-update_module_reference: Time (s): cpu = 00:00:43 ; elapsed = 00:00:10 . Memory (MB): peak = 9212.574 ; gain = 57.270 ; free physical = 1200 ; free virtual = 6188
-launch_runs impl_1 -jobs 14
-WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
-Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
-Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
-Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
-[Sat Aug 24 13:19:55 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-[Sat Aug 24 13:19:55 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:29 ; elapsed = 00:00:07 . Memory (MB): peak = 9226.590 ; gain = 14.016 ; free physical = 1178 ; free virtual = 6167
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-save_constraints -force
-refresh_design
-INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2019.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 9262.609 ; gain = 0.000 ; free physical = 1258 ; free virtual = 6172
-Restored from archive | CPU: 0.040000 secs | Memory: 0.293404 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 9262.609 ; gain = 0.000 ; free physical = 1258 ; free virtual = 6172
-refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 9262.609 ; gain = 0.000 ; free physical = 1298 ; free virtual = 6213
-reset_run synth_1
-launch_runs impl_1 -jobs 14
-[Sat Aug 24 13:23:20 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-[Sat Aug 24 13:23:20 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-refresh_design
-INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2019.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 9262.609 ; gain = 0.000 ; free physical = 1396 ; free virtual = 6280
-Restored from archive | CPU: 0.050000 secs | Memory: 0.308655 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 9262.609 ; gain = 0.000 ; free physical = 1396 ; free virtual = 6280
-refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 9262.609 ; gain = 0.000 ; free physical = 1258 ; free virtual = 6143
-CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
-open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
-disconnect_bd_net /HZ_Counter_0_o_Out [get_bd_pins HZ_Counter_0/o_Out]
+launch_sdk -workspace /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk -hwspec /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk -hwspec /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
 startgroup
-create_bd_port -dir O -type clk o_Out
-connect_bd_net [get_bd_pins /HZ_Counter_0/o_Out] [get_bd_ports o_Out]
-WARNING: [BD 41-1731] Type mismatch between connected pins: /HZ_Counter_0/o_Out(undef) and /o_Out(clk)
+set_property -dict [list CONFIG.PCW_DDR_RAM_HIGHADDR {0x1FFFFFFF} CONFIG.PCW_UIPARAM_DDR_BANK_ADDR_COUNT {3} CONFIG.PCW_UIPARAM_DDR_ROW_ADDR_COUNT {15} CONFIG.PCW_UIPARAM_DDR_COL_ADDR_COUNT {10} CONFIG.PCW_UIPARAM_DDR_CL {7} CONFIG.PCW_UIPARAM_DDR_CWL {6.000000} CONFIG.PCW_UIPARAM_DDR_T_RCD {13.75} CONFIG.PCW_UIPARAM_DDR_T_RP {13.75} CONFIG.PCW_UIPARAM_DDR_T_RC {48.75} CONFIG.PCW_UIPARAM_DDR_T_RAS_MIN {35.0} CONFIG.PCW_UIPARAM_DDR_T_FAW {40} CONFIG.PCW_QSPI_PERIPHERAL_FREQMHZ {200} CONFIG.PCW_USB0_PERIPHERAL_FREQMHZ {60} CONFIG.PCW_SDIO_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_UART_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_SPI_PERIPHERAL_FREQMHZ {166.666666} CONFIG.PCW_I2C_PERIPHERAL_FREQMHZ {25} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {50} CONFIG.PCW_ACT_APU_PERIPHERAL_FREQMHZ {666.666687} CONFIG.PCW_UIPARAM_ACT_DDR_FREQ_MHZ {533.333374} CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.158730} CONFIG.PCW_ACT_QSPI_PERIPHERAL_FREQMHZ {200.000000} CONFIG.PCW_ACT_SMC_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_SDIO_PERIPHERAL_FREQMHZ {100.000000} CONFIG.PCW_ACT_UART_PERIPHERAL_FREQMHZ {100.000000} CONFIG.PCW_ACT_SPI_PERIPHERAL_FREQMHZ {166.666672} CONFIG.PCW_ACT_CAN_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_WDT_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {200.000000} CONFIG.PCW_ACT_TPIU_PERIPHERAL_FREQMHZ {200.000000} CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {50.000000} CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_CLK0_FREQ {50000000} CONFIG.PCW_CLK1_FREQ {10000000} CONFIG.PCW_CLK2_FREQ {10000000} CONFIG.PCW_CLK3_FREQ {10000000} CONFIG.PCW_CPU_PERIPHERAL_DIVISOR0 {2} CONFIG.PCW_DDR_PERIPHERAL_DIVISOR0 {2} CONFIG.PCW_SMC_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0 {5} CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0 {10} CONFIG.PCW_UART_PERIPHERAL_DIVISOR0 {10} CONFIG.PCW_SPI_PERIPHERAL_DIVISOR0 {6} CONFIG.PCW_CAN_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {5} CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {4} CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_ENET1_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_ENET1_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_TPIU_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_DCI_PERIPHERAL_DIVISOR0 {15} CONFIG.PCW_DCI_PERIPHERAL_DIVISOR1 {7} CONFIG.PCW_PCAP_PERIPHERAL_DIVISOR0 {5} CONFIG.PCW_ARMPLL_CTRL_FBDIV {40} CONFIG.PCW_IOPLL_CTRL_FBDIV {30} CONFIG.PCW_DDRPLL_CTRL_FBDIV {32} CONFIG.PCW_CPU_CPU_PLL_FREQMHZ {1333.333} CONFIG.PCW_IO_IO_PLL_FREQMHZ {1000.000} CONFIG.PCW_DDR_DDR_PLL_FREQMHZ {1066.667} CONFIG.PCW_SDIO_PERIPHERAL_VALID {1} CONFIG.PCW_SPI_PERIPHERAL_VALID {1} CONFIG.PCW_UART_PERIPHERAL_VALID {1} CONFIG.PCW_EN_EMIO_SPI1 {0} CONFIG.PCW_EN_EMIO_UART0 {0} CONFIG.PCW_EN_QSPI {1} CONFIG.PCW_EN_GPIO {1} CONFIG.PCW_EN_SDIO0 {1} CONFIG.PCW_EN_SPI1 {1} CONFIG.PCW_EN_UART0 {1} CONFIG.PCW_EN_UART1 {0} CONFIG.PCW_EN_USB0 {1} CONFIG.PCW_UIPARAM_DDR_MEMORY_TYPE {DDR 3 (Low Voltage)} CONFIG.PCW_UIPARAM_DDR_ECC {Disabled} CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {16 Bit} CONFIG.PCW_UIPARAM_DDR_BL {8} CONFIG.PCW_UIPARAM_DDR_PARTNO {Custom} CONFIG.PCW_UIPARAM_DDR_DRAM_WIDTH {16 Bits} CONFIG.PCW_UIPARAM_DDR_DEVICE_CAPACITY {4096 MBits} CONFIG.PCW_UIPARAM_DDR_SPEED_BIN {DDR3_1600K} CONFIG.PCW_NAND_PERIPHERAL_ENABLE {0} CONFIG.PCW_NAND_GRP_D8_ENABLE {0} CONFIG.PCW_NOR_PERIPHERAL_ENABLE {0} CONFIG.PCW_NOR_GRP_A25_ENABLE {0} CONFIG.PCW_NOR_GRP_CS0_ENABLE {0} CONFIG.PCW_NOR_GRP_SRAM_CS0_ENABLE {0} CONFIG.PCW_NOR_GRP_CS1_ENABLE {0} CONFIG.PCW_NOR_GRP_SRAM_CS1_ENABLE {0} CONFIG.PCW_NOR_GRP_SRAM_INT_ENABLE {0} CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {1} CONFIG.PCW_QSPI_QSPI_IO {MIO 1 .. 6} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_QSPI_GRP_SINGLE_SS_IO {MIO 1 .. 6} CONFIG.PCW_QSPI_GRP_SS1_ENABLE {0} CONFIG.PCW_SINGLE_QSPI_DATA_MODE {x4} CONFIG.PCW_QSPI_GRP_IO1_ENABLE {0} CONFIG.PCW_QSPI_GRP_FBCLK_ENABLE {1} CONFIG.PCW_QSPI_GRP_FBCLK_IO {MIO 8} CONFIG.PCW_ENET_RESET_ENABLE {0} CONFIG.PCW_ENET0_RESET_ENABLE {0} CONFIG.PCW_ENET1_RESET_ENABLE {0} CONFIG.PCW_SD0_PERIPHERAL_ENABLE {1} CONFIG.PCW_SD0_SD0_IO {MIO 40 .. 45} CONFIG.PCW_SD0_GRP_CD_ENABLE {1} CONFIG.PCW_SD0_GRP_CD_IO {MIO 47} CONFIG.PCW_SD0_GRP_WP_ENABLE {0} CONFIG.PCW_SD0_GRP_POW_ENABLE {0} CONFIG.PCW_UART0_PERIPHERAL_ENABLE {1} CONFIG.PCW_UART0_UART0_IO {MIO 14 .. 15} CONFIG.PCW_UART0_GRP_FULL_ENABLE {0} CONFIG.PCW_UART1_PERIPHERAL_ENABLE {0} CONFIG.PCW_UART1_UART1_IO {<Select>} CONFIG.PCW_UART1_GRP_FULL_ENABLE {0} CONFIG.PCW_SPI1_PERIPHERAL_ENABLE {1} CONFIG.PCW_SPI1_SPI1_IO {MIO 10 .. 15} CONFIG.PCW_SPI1_GRP_SS0_ENABLE {1} CONFIG.PCW_SPI1_GRP_SS0_IO {MIO 13} CONFIG.PCW_SPI1_GRP_SS1_ENABLE {0} CONFIG.PCW_SPI1_GRP_SS2_ENABLE {0} CONFIG.PCW_USB0_PERIPHERAL_ENABLE {1} CONFIG.PCW_USB0_USB0_IO {MIO 28 .. 39} CONFIG.PCW_USB_RESET_ENABLE {1} CONFIG.PCW_USB_RESET_SELECT {Share reset pin} CONFIG.PCW_USB0_RESET_ENABLE {1} CONFIG.PCW_USB0_RESET_IO {MIO 46} CONFIG.PCW_USB1_RESET_ENABLE {0} CONFIG.PCW_I2C0_RESET_ENABLE {0} CONFIG.PCW_I2C_RESET_ENABLE {1} CONFIG.PCW_I2C1_RESET_ENABLE {0} CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {1} CONFIG.PCW_GPIO_MIO_GPIO_IO {MIO} CONFIG.PCW_MIO_0_PULLUP {enabled} CONFIG.PCW_MIO_0_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_0_DIRECTION {inout} CONFIG.PCW_MIO_0_SLEW {slow} CONFIG.PCW_MIO_1_PULLUP {enabled} CONFIG.PCW_MIO_1_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_1_DIRECTION {out} CONFIG.PCW_MIO_1_SLEW {slow} CONFIG.PCW_MIO_2_PULLUP {disabled} CONFIG.PCW_MIO_2_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_2_DIRECTION {inout} CONFIG.PCW_MIO_2_SLEW {slow} CONFIG.PCW_MIO_3_PULLUP {disabled} CONFIG.PCW_MIO_3_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_3_DIRECTION {inout} CONFIG.PCW_MIO_3_SLEW {slow} CONFIG.PCW_MIO_4_PULLUP {disabled} CONFIG.PCW_MIO_4_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_4_DIRECTION {inout} CONFIG.PCW_MIO_4_SLEW {slow} CONFIG.PCW_MIO_5_PULLUP {disabled} CONFIG.PCW_MIO_5_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_5_DIRECTION {inout} CONFIG.PCW_MIO_5_SLEW {slow} CONFIG.PCW_MIO_6_PULLUP {disabled} CONFIG.PCW_MIO_6_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_6_DIRECTION {out} CONFIG.PCW_MIO_6_SLEW {slow} CONFIG.PCW_MIO_7_PULLUP {disabled} CONFIG.PCW_MIO_7_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_7_DIRECTION {out} CONFIG.PCW_MIO_7_SLEW {slow} CONFIG.PCW_MIO_8_PULLUP {disabled} CONFIG.PCW_MIO_8_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_8_DIRECTION {out} CONFIG.PCW_MIO_8_SLEW {slow} CONFIG.PCW_MIO_9_PULLUP {enabled} CONFIG.PCW_MIO_9_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_9_DIRECTION {inout} CONFIG.PCW_MIO_9_SLEW {slow} CONFIG.PCW_MIO_10_PULLUP {enabled} CONFIG.PCW_MIO_10_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_10_DIRECTION {inout} CONFIG.PCW_MIO_10_SLEW {slow} CONFIG.PCW_MIO_11_PULLUP {enabled} CONFIG.PCW_MIO_11_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_11_DIRECTION {inout} CONFIG.PCW_MIO_11_SLEW {slow} CONFIG.PCW_MIO_12_PULLUP {enabled} CONFIG.PCW_MIO_12_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_12_DIRECTION {inout} CONFIG.PCW_MIO_12_SLEW {slow} CONFIG.PCW_MIO_13_PULLUP {enabled} CONFIG.PCW_MIO_13_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_13_DIRECTION {inout} CONFIG.PCW_MIO_13_SLEW {slow} CONFIG.PCW_MIO_14_PULLUP {enabled} CONFIG.PCW_MIO_14_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_14_DIRECTION {in} CONFIG.PCW_MIO_14_SLEW {slow} CONFIG.PCW_MIO_15_PULLUP {enabled} CONFIG.PCW_MIO_15_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_15_DIRECTION {out} CONFIG.PCW_MIO_15_SLEW {slow} CONFIG.PCW_MIO_16_PULLUP {enabled} CONFIG.PCW_MIO_16_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_16_DIRECTION {inout} CONFIG.PCW_MIO_16_SLEW {slow} CONFIG.PCW_MIO_17_PULLUP {enabled} CONFIG.PCW_MIO_17_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_17_DIRECTION {inout} CONFIG.PCW_MIO_17_SLEW {slow} CONFIG.PCW_MIO_18_PULLUP {enabled} CONFIG.PCW_MIO_18_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_18_DIRECTION {inout} CONFIG.PCW_MIO_18_SLEW {slow} CONFIG.PCW_MIO_19_PULLUP {enabled} CONFIG.PCW_MIO_19_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_19_DIRECTION {inout} CONFIG.PCW_MIO_19_SLEW {slow} CONFIG.PCW_MIO_20_PULLUP {enabled} CONFIG.PCW_MIO_20_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_20_DIRECTION {inout} CONFIG.PCW_MIO_20_SLEW {slow} CONFIG.PCW_MIO_21_PULLUP {enabled} CONFIG.PCW_MIO_21_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_21_DIRECTION {inout} CONFIG.PCW_MIO_21_SLEW {slow} CONFIG.PCW_MIO_22_PULLUP {enabled} CONFIG.PCW_MIO_22_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_22_DIRECTION {inout} CONFIG.PCW_MIO_22_SLEW {slow} CONFIG.PCW_MIO_23_PULLUP {enabled} CONFIG.PCW_MIO_23_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_23_DIRECTION {inout} CONFIG.PCW_MIO_23_SLEW {slow} CONFIG.PCW_MIO_24_PULLUP {enabled} CONFIG.PCW_MIO_24_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_24_DIRECTION {inout} CONFIG.PCW_MIO_24_SLEW {slow} CONFIG.PCW_MIO_25_PULLUP {enabled} CONFIG.PCW_MIO_25_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_25_DIRECTION {inout} CONFIG.PCW_MIO_25_SLEW {slow} CONFIG.PCW_MIO_26_PULLUP {enabled} CONFIG.PCW_MIO_26_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_26_DIRECTION {inout} CONFIG.PCW_MIO_26_SLEW {slow} CONFIG.PCW_MIO_27_PULLUP {enabled} CONFIG.PCW_MIO_27_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_27_DIRECTION {inout} CONFIG.PCW_MIO_27_SLEW {slow} CONFIG.PCW_MIO_28_PULLUP {enabled} CONFIG.PCW_MIO_28_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_28_DIRECTION {inout} CONFIG.PCW_MIO_28_SLEW {slow} CONFIG.PCW_MIO_29_PULLUP {enabled} CONFIG.PCW_MIO_29_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_29_DIRECTION {in} CONFIG.PCW_MIO_29_SLEW {slow} CONFIG.PCW_MIO_30_PULLUP {enabled} CONFIG.PCW_MIO_30_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_30_DIRECTION {out} CONFIG.PCW_MIO_30_SLEW {slow} CONFIG.PCW_MIO_31_PULLUP {enabled} CONFIG.PCW_MIO_31_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_31_DIRECTION {in} CONFIG.PCW_MIO_31_SLEW {slow} CONFIG.PCW_MIO_32_PULLUP {enabled} CONFIG.PCW_MIO_32_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_32_DIRECTION {inout} CONFIG.PCW_MIO_32_SLEW {slow} CONFIG.PCW_MIO_33_PULLUP {enabled} CONFIG.PCW_MIO_33_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_33_DIRECTION {inout} CONFIG.PCW_MIO_33_SLEW {slow} CONFIG.PCW_MIO_34_PULLUP {enabled} CONFIG.PCW_MIO_34_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_34_DIRECTION {inout} CONFIG.PCW_MIO_34_SLEW {slow} CONFIG.PCW_MIO_35_PULLUP {enabled} CONFIG.PCW_MIO_35_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_35_DIRECTION {inout} CONFIG.PCW_MIO_35_SLEW {slow} CONFIG.PCW_MIO_36_PULLUP {enabled} CONFIG.PCW_MIO_36_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_36_DIRECTION {in} CONFIG.PCW_MIO_36_SLEW {slow} CONFIG.PCW_MIO_37_PULLUP {enabled} CONFIG.PCW_MIO_37_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_37_DIRECTION {inout} CONFIG.PCW_MIO_37_SLEW {slow} CONFIG.PCW_MIO_38_PULLUP {enabled} CONFIG.PCW_MIO_38_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_38_DIRECTION {inout} CONFIG.PCW_MIO_38_SLEW {slow} CONFIG.PCW_MIO_39_PULLUP {enabled} CONFIG.PCW_MIO_39_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_39_DIRECTION {inout} CONFIG.PCW_MIO_39_SLEW {slow} CONFIG.PCW_MIO_40_PULLUP {enabled} CONFIG.PCW_MIO_40_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_40_DIRECTION {inout} CONFIG.PCW_MIO_40_SLEW {slow} CONFIG.PCW_MIO_41_PULLUP {enabled} CONFIG.PCW_MIO_41_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_41_DIRECTION {inout} CONFIG.PCW_MIO_41_SLEW {slow} CONFIG.PCW_MIO_42_PULLUP {enabled} CONFIG.PCW_MIO_42_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_42_DIRECTION {inout} CONFIG.PCW_MIO_42_SLEW {slow} CONFIG.PCW_MIO_43_PULLUP {enabled} CONFIG.PCW_MIO_43_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_43_DIRECTION {inout} CONFIG.PCW_MIO_43_SLEW {slow} CONFIG.PCW_MIO_44_PULLUP {enabled} CONFIG.PCW_MIO_44_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_44_DIRECTION {inout} CONFIG.PCW_MIO_44_SLEW {slow} CONFIG.PCW_MIO_45_PULLUP {enabled} CONFIG.PCW_MIO_45_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_45_DIRECTION {inout} CONFIG.PCW_MIO_45_SLEW {slow} CONFIG.PCW_MIO_46_PULLUP {enabled} CONFIG.PCW_MIO_46_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_46_DIRECTION {out} CONFIG.PCW_MIO_46_SLEW {slow} CONFIG.PCW_MIO_47_PULLUP {enabled} CONFIG.PCW_MIO_47_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_47_DIRECTION {in} CONFIG.PCW_MIO_47_SLEW {slow} CONFIG.PCW_MIO_48_PULLUP {enabled} CONFIG.PCW_MIO_48_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_48_DIRECTION {inout} CONFIG.PCW_MIO_48_SLEW {slow} CONFIG.PCW_MIO_49_PULLUP {enabled} CONFIG.PCW_MIO_49_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_49_DIRECTION {inout} CONFIG.PCW_MIO_49_SLEW {slow} CONFIG.PCW_MIO_50_PULLUP {enabled} CONFIG.PCW_MIO_50_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_50_DIRECTION {inout} CONFIG.PCW_MIO_50_SLEW {slow} CONFIG.PCW_MIO_51_PULLUP {enabled} CONFIG.PCW_MIO_51_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_51_DIRECTION {inout} CONFIG.PCW_MIO_51_SLEW {slow} CONFIG.PCW_MIO_52_PULLUP {enabled} CONFIG.PCW_MIO_52_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_52_DIRECTION {inout} CONFIG.PCW_MIO_52_SLEW {slow} CONFIG.PCW_MIO_53_PULLUP {enabled} CONFIG.PCW_MIO_53_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_53_DIRECTION {inout} CONFIG.PCW_MIO_53_SLEW {slow} CONFIG.PCW_MIO_TREE_PERIPHERALS {GPIO#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO#Quad SPI Flash#GPIO#SPI 1#SPI 1#SPI 1#SPI 1#UART 0#UART 0#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#USB Reset#SD 0#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO} CONFIG.PCW_MIO_TREE_SIGNALS {gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_sclk#gpio[7]#qspi_fbclk#gpio[9]#mosi#miso#sclk#ss[0]#rx#tx#gpio[16]#gpio[17]#gpio[18]#gpio[19]#gpio[20]#gpio[21]#gpio[22]#gpio[23]#gpio[24]#gpio[25]#gpio[26]#gpio[27]#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#reset#cd#gpio[48]#gpio[49]#gpio[50]#gpio[51]#gpio[52]#gpio[53]} CONFIG.PCW_FPGA_FCLK0_ENABLE {1} CONFIG.PCW_FPGA_FCLK1_ENABLE {0} CONFIG.PCW_FPGA_FCLK2_ENABLE {0} CONFIG.PCW_FPGA_FCLK3_ENABLE {0}] [get_bd_cells processing_system7_0]
 endgroup
-delete_bd_objs [get_bd_nets HZ_Counter_0_o_Out1]
-delete_bd_objs [get_bd_ports o_Out]
-set_property USER_COMMENTS.comment_0 {Enter Comments here}  [get_bd_pins HZ_Counter_0/o_Out]
-set_property USER_COMMENTS.comment_0 {This needs to be piped to a BUFGCE
-}  [get_bd_pins HZ_Counter_0/o_Out]
-connect_bd_net [get_bd_pins HZ_Counter_0/o_Out] [get_bd_pins ssd_mux_0/i_CLK]
-WARNING: [BD 41-1731] Type mismatch between connected pins: /ssd_mux_0/i_CLK(clk) and /HZ_Counter_0/o_Out(undef)
-WARNING: [BD 41-1731] Type mismatch between connected pins: /BINARY_TO_BCD_0/i_Clock(clk) and /HZ_Counter_0/o_Out(undef)
-update_module_reference {Bounce_Timer_HZ_Counter_0_0 Reaction_Time_Averager_HZ_Counter_0_0}
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'o_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
-WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
-WARNING: [IP_Flow 19-3153] Bus Interface 'o_CLK': ASSOCIATED_BUSIF bus parameter is missing.
-CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'o_CLK': FREQ_HZ bus parameter is missing for output clock interface.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
-INFO: [IP_Flow 19-3420] Updated Bounce_Timer_HZ_Counter_0_0 to use current project options
-WARNING: [IP_Flow 19-4697] Upgrade has added interface 'o_CLK' (xilinx.com:signal:clock:1.0)
-WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'Bounce_Timer_HZ_Counter_0_0'.
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'o_Out'
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_CLK'
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'Bounce_Timer_HZ_Counter_0_0'. These changes may impact your design.
-CRITICAL WARNING: [BD 41-1167] The pin 'o_Out' is not found on the upgraded version of the cell '/HZ_Counter_0'. Its connection to the net 'HZ_Counter_0_o_Out' has been removed.
-CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'Bounce_Timer_HZ_Counter_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
-WARNING: [BD 41-597] NET <HZ_Counter_0_o_Out> has no source
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd'
-INFO: [IP_Flow 19-3420] Updated Reaction_Time_Averager_HZ_Counter_0_0 to use current project options
-WARNING: [IP_Flow 19-4697] Upgrade has added interface 'o_CLK' (xilinx.com:signal:clock:1.0)
-WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'Reaction_Time_Averager_HZ_Counter_0_0'.
-WARNING: [IP_Flow 19-4700] Upgrade has removed port 'o_Out'
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_CLK'
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'Reaction_Time_Averager_HZ_Counter_0_0'. These changes may impact your design.
-CRITICAL WARNING: [BD 41-1167] The pin 'o_Out' is not found on the upgraded version of the cell '/HZ_Counter_0'. Its connection to the net 'HZ_Counter_0_o_Out' has been removed.
-CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'Reaction_Time_Averager_HZ_Counter_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
-WARNING: [BD 41-597] NET <HZ_Counter_0_o_Out> has no source
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/ui/bd_d81f2a51.ui> 
-update_module_reference: Time (s): cpu = 00:00:29 ; elapsed = 00:00:09 . Memory (MB): peak = 9283.422 ; gain = 19.012 ; free physical = 987 ; free virtual = 5896
-current_bd_design [get_bd_designs Bounce_Timer]
-connect_bd_net [get_bd_pins HZ_Counter_0/o_CLK] [get_bd_pins ssd_mux_0/i_CLK]
 save_bd_design
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-reset_run synth_1
-launch_runs synth_1 -jobs 14
-WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
-Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
-Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
-Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
-[Sat Aug 24 13:39:24 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:01:03 ; elapsed = 00:00:17 . Memory (MB): peak = 9286.445 ; gain = 3.023 ; free physical = 972 ; free virtual = 5879
-launch_runs impl_1 -jobs 14
-[Sat Aug 24 13:41:59 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-refresh_design
-INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2019.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 9330.461 ; gain = 0.000 ; free physical = 1529 ; free virtual = 5963
-Restored from archive | CPU: 0.050000 secs | Memory: 0.310425 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 9330.461 ; gain = 0.000 ; free physical = 1529 ; free virtual = 5963
-refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 9330.461 ; gain = 0.000 ; free physical = 1391 ; free virtual = 5826
-CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
-open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
-report_ip_status -name ip_status 
-report_ip_status
-Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Sat Aug 24 13:46:58 2019
-| Host         : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
-| Command      : report_ip_status
--------------------------------------------------------------------------------------------
-
-IP Status Summary
-
-1. Project IP Status
---------------------
-Your project uses 29 IP. Some of these IP may have undergone changes in this release of the software. Please review the recommended actions.
-
-More information on the Xilinx versioning policy is available at www.xilinx.com.
-
-Project IP Instances
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Instance Name                                   | Status     | Recommendation      | Change    | IP Name            | IP      | New Version   | New        | Original Part        |
-|                                                 |            |                     | Log       |                    | Version |               | License    |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Bounce_Timer_BINARY_TO_BCD_0_0                  | Up-to-date | No changes required | Change    | BINARY_TO_BCD_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Bounce_Timer_Bounce_Counter_FSM_0_0             | Up-to-date | No changes required | Change    | Bounce_Counter_FSM | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Bounce_Timer_HZ_Counter_0_0                     | Up-to-date | No changes required | Change    | HZ_Counter_v1_0    | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Bounce_Timer_rst_clk_100MHz_100M_0              | Up-to-date | No changes required |  *(1)     | Processor System   | 5.0     | 5.0 (Rev. 13) | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     |           | Reset              | (Rev.   |               |            |                      |
-|                                                 |            |                     |           |                    | 13)     |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Bounce_Timer_ssd_dec_0_0                        | Up-to-date | No changes required | Change    | ssd_dec_v1_0       | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Bounce_Timer_ssd_mux_0_0                        | Up-to-date | No changes required | Change    | ssd_mux_v1_0       | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Bounce_Timer_xlslice_0_0                        | Up-to-date | No changes required |  *(2)     | Slice              | 1.0     | 1.0 (Rev. 2)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     |           |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     |           |                    | 2)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Bounce_Timer_xlslice_1_0                        | Up-to-date | No changes required |  *(3)     | Slice              | 1.0     | 1.0 (Rev. 2)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     |           |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     |           |                    | 2)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Bounce_Timer_xlslice_2_0                        | Up-to-date | No changes required |  *(4)     | Slice              | 1.0     | 1.0 (Rev. 2)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     |           |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     |           |                    | 2)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Bounce_Timer_xlslice_3_0                        | Up-to-date | No changes required |  *(5)     | Slice              | 1.0     | 1.0 (Rev. 2)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     |           |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     |           |                    | 2)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_Accumuator_0_0           | Up-to-date | No changes required | Change    | Accumuator_v1_0    | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_BCD_TO_BINARY_0_0        | Up-to-date | No changes required | Change    | BCD_TO_BINARY_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_BINARY_TO_BCD_0_0        | Up-to-date | No changes required | Change    | BINARY_TO_BCD_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_Debounce_RTM_0_0         | Up-to-date | No changes required | Change    | Debounce_RTM_v1_0  | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_Debounce_RTM_0_1         | Up-to-date | No changes required | Change    | Debounce_RTM_v1_0  | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_Debounce_RTM_0_2         | Up-to-date | No changes required | Change    | Debounce_RTM_v1_0  | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_Divider_0_0              | Up-to-date | No changes required | Change    | Divider_v1_0       | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_EXTRA_THICC_MUX_0_0      | Up-to-date | No changes required | Change    | EXTRA_THICC_MUX_v1 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_HZ_Counter_0_0           | Up-to-date | No changes required | Change    | HZ_Counter_v1_0    | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_LSFR_0_0                 | Up-to-date | No changes required | Change    | LSFR_v1_0          | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_RTM_FSM_0_0              | Up-to-date | No changes required | Change    | RTM_FSM_v1_0       | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_proc_sys_reset_0_0       | Up-to-date | No changes required |  *(6)     | Processor System   | 5.0     | 5.0 (Rev. 13) | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     |           | Reset              | (Rev.   |               |            |                      |
-|                                                 |            |                     |           |                    | 13)     |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_ssd_dec_0_0              | Up-to-date | No changes required | Change    | ssd_dec_v1_0       | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_ssd_mux_0_0              | Up-to-date | No changes required | Change    | ssd_mux_v1_0       | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_stopwatch_ssd_driver_0_0 | Up-to-date | No changes required | Change    | stopwatch_ssd_driv | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     | Log not   |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     | available |                    | 1)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_xlslice_0_0              | Up-to-date | No changes required |  *(7)     | Slice              | 1.0     | 1.0 (Rev. 2)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     |           |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     |           |                    | 2)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_xlslice_0_1              | Up-to-date | No changes required |  *(8)     | Slice              | 1.0     | 1.0 (Rev. 2)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     |           |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     |           |                    | 2)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_xlslice_0_2              | Up-to-date | No changes required |  *(9)     | Slice              | 1.0     | 1.0 (Rev. 2)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     |           |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     |           |                    | 2)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-| Reaction_Time_Averager_xlslice_0_3              | Up-to-date | No changes required |  *(10)    | Slice              | 1.0     | 1.0 (Rev. 2)  | Included   | xc7z007sclg400-1     |
-|                                                 |            |                     |           |                    | (Rev.   |               |            |                      |
-|                                                 |            |                     |           |                    | 2)      |               |            |                      |
-+-------------------------------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
-*(1) /opt/Vivado/2019.1/data/ip/xilinx/proc_sys_reset_v5_0/doc/proc_sys_reset_v5_0_changelog.txt
-*(2) /opt/Vivado/2019.1/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
-*(3) /opt/Vivado/2019.1/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
-*(4) /opt/Vivado/2019.1/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
-*(5) /opt/Vivado/2019.1/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
-*(6) /opt/Vivado/2019.1/data/ip/xilinx/proc_sys_reset_v5_0/doc/proc_sys_reset_v5_0_changelog.txt
-*(7) /opt/Vivado/2019.1/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
-*(8) /opt/Vivado/2019.1/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
-*(9) /opt/Vivado/2019.1/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
-*(10) /opt/Vivado/2019.1/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
-
-
-save_constraints -force
-reset_run synth_1
-launch_runs synth_1 -jobs 14
-[Sat Aug 24 13:51:59 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 14
-[Sat Aug 24 13:52:50 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-refresh_design
-INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2019.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 9330.461 ; gain = 0.000 ; free physical = 1531 ; free virtual = 5903
-Restored from archive | CPU: 0.040000 secs | Memory: 0.311081 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 9330.461 ; gain = 0.000 ; free physical = 1531 ; free virtual = 5903
-refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 9330.461 ; gain = 0.000 ; free physical = 1478 ; free virtual = 5850
-launch_runs impl_1 -to_step write_bitstream -jobs 14
-[Sat Aug 24 13:57:42 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property PROGRAM.FILE {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
-program_hw_devices [get_hw_devices xc7z007s_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
-INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
-update_module_reference {Bounce_Timer_HZ_Counter_0_0 Reaction_Time_Averager_HZ_Counter_0_0}
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'o_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
-WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
-WARNING: [IP_Flow 19-3153] Bus Interface 'o_CLK': ASSOCIATED_BUSIF bus parameter is missing.
-CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'o_CLK': FREQ_HZ bus parameter is missing for output clock interface.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
-INFO: [IP_Flow 19-3420] Updated Bounce_Timer_HZ_Counter_0_0 to use current project options
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd'
-INFO: [IP_Flow 19-3420] Updated Reaction_Time_Averager_HZ_Counter_0_0 to use current project options
-WARNING: [BD 41-597] NET <HZ_Counter_0_o_Out> has no source
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd> 
-update_module_reference: Time (s): cpu = 00:00:54 ; elapsed = 00:00:12 . Memory (MB): peak = 9409.648 ; gain = 79.188 ; free physical = 1576 ; free virtual = 5757
-current_bd_design [get_bd_designs Bounce_Timer]
-reset_run synth_1
-launch_runs synth_1 -jobs 14
-WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
-Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
-Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
-Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
-[Sat Aug 24 14:00:52 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:26 ; elapsed = 00:00:08 . Memory (MB): peak = 9429.801 ; gain = 20.152 ; free physical = 1664 ; free virtual = 5800
-launch_runs impl_1 -to_step write_bitstream -jobs 14
-[Sat Aug 24 14:01:53 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property PROGRAM.FILE {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
-program_hw_devices [get_hw_devices xc7z007s_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
-INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
-update_module_reference Bounce_Timer_Bounce_Counter_FSM_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
-INFO: [IP_Flow 19-3420] Updated Bounce_Timer_Bounce_Counter_FSM_0_0 to use current project options
-WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0_upgraded_ipi/i_100MHZCLK(undef)
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
-update_module_reference: Time (s): cpu = 00:00:44 ; elapsed = 00:00:10 . Memory (MB): peak = 9505.605 ; gain = 75.805 ; free physical = 1909 ; free virtual = 5768
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 14
-WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
-Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
-Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
-Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
-[Sat Aug 24 14:08:27 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-[Sat Aug 24 14:08:27 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:28 ; elapsed = 00:00:08 . Memory (MB): peak = 9516.664 ; gain = 11.059 ; free physical = 1846 ; free virtual = 5737
-set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property PROGRAM.FILE {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
-program_hw_devices [get_hw_devices xc7z007s_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
-INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
-update_module_reference {Bounce_Timer_HZ_Counter_0_0 Reaction_Time_Averager_HZ_Counter_0_0}
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'o_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
-WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
-WARNING: [IP_Flow 19-3153] Bus Interface 'o_CLK': ASSOCIATED_BUSIF bus parameter is missing.
-CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'o_CLK': FREQ_HZ bus parameter is missing for output clock interface.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
-INFO: [IP_Flow 19-3420] Updated Bounce_Timer_HZ_Counter_0_0 to use current project options
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd'
-INFO: [IP_Flow 19-3420] Updated Reaction_Time_Averager_HZ_Counter_0_0 to use current project options
-WARNING: [BD 41-597] NET <HZ_Counter_0_o_Out> has no source
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd> 
-update_module_reference: Time (s): cpu = 00:00:50 ; elapsed = 00:00:15 . Memory (MB): peak = 9529.695 ; gain = 0.000 ; free physical = 2017 ; free virtual = 5584
-update_module_reference Bounce_Timer_Bounce_Counter_FSM_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
-INFO: [IP_Flow 19-3420] Updated Bounce_Timer_Bounce_Counter_FSM_0_0 to use current project options
-WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0_upgraded_ipi/i_100MHZCLK(undef)
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/ui/bd_8606fa2e.ui> 
-update_module_reference: Time (s): cpu = 00:00:26 ; elapsed = 00:00:08 . Memory (MB): peak = 9547.543 ; gain = 17.848 ; free physical = 2009 ; free virtual = 5577
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 14
-WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
-Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
-Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
-Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
-[Sat Aug 24 14:12:58 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-[Sat Aug 24 14:12:58 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:47 ; elapsed = 00:00:12 . Memory (MB): peak = 9576.668 ; gain = 29.125 ; free physical = 1874 ; free virtual = 5477
-update_module_reference Bounce_Timer_Bounce_Counter_FSM_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/Parts'.
-Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd'
-INFO: [IP_Flow 19-3420] Updated Bounce_Timer_Bounce_Counter_FSM_0_0 to use current project options
-WARNING: [BD 41-1731] Type mismatch between connected pins: /i_CLK(clk) and /Bounce_Counter_FSM_0_upgraded_ipi/i_100MHZCLK(undef)
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-update_module_reference: Time (s): cpu = 00:00:29 ; elapsed = 00:00:08 . Memory (MB): peak = 9642.152 ; gain = 7.000 ; free physical = 2217 ; free virtual = 5718
-reset_run synth_1
-launch_runs synth_1 -jobs 14
-WARNING: [BD 41-927] Following properties on pin /ssd_dec_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /ssd_mux_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-WARNING: [BD 41-927] Following properties on pin /BINARY_TO_BCD_0/i_Clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_i_CLK 
-WARNING: [BD 41-927] Following properties on pin /HZ_Counter_0/o_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=Bounce_Timer_HZ_Counter_0_0_o_CLK 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd> 
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/sim/Bounce_Timer.v
-VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hdl/Bounce_Timer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_dec_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ssd_mux_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block HZ_Counter_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_100MHz_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block Bounce_Counter_FSM_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block BINARY_TO_BCD_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
-Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer.hwh
-Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/hw_handoff/Bounce_Timer_bd.tcl
-Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/synth/Bounce_Timer.hwdef
-[Sat Aug 24 14:14:14 2019] Launched synth_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:01:05 ; elapsed = 00:00:17 . Memory (MB): peak = 9685.070 ; gain = 42.918 ; free physical = 2206 ; free virtual = 5684
-launch_runs impl_1 -to_step write_bitstream -jobs 14
-[Sat Aug 24 14:15:05 2019] Launched impl_1...
-Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
-set_property PROGRAM.FILE {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.runs/impl_1/Bounce_Timer_wrapper.bit} [get_hw_devices xc7z007s_1]
-program_hw_devices [get_hw_devices xc7z007s_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
-INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
-report_ip_status -name ip_status 
-open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Bounce_Timer/Bounce_Timer.bd}
-current_bd_design [get_bd_designs Reaction_Time_Averager]
-connect_bd_net [get_bd_pins HZ_Counter_0/o_CLK] [get_bd_pins RTM_FSM_0/i_CLK1KHZ]
-save_bd_design
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/Reaction_Time_Averager.bd> 
-Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_1/Module_1.srcs/sources_1/bd/Reaction_Time_Averager/ui/bd_d81f2a51.ui> 
-current_bd_design [get_bd_designs Bounce_Timer]
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block LED_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Sat Aug 31 00:28:20 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.runs/synth_1/runme.log
+[Sat Aug 31 00:28:20 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 7545.969 ; gain = 39.270 ; free physical = 3737 ; free virtual = 8709
+file copy -force /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk -hwspec /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk -hwspec /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Aug 24 15:31:22 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat Aug 31 00:41:20 2019...
