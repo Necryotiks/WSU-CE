@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-//Date        : Sat Aug 31 00:28:03 2019
+//Date        : Tue Sep  3 21:58:35 2019
 //Host        : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -31,7 +31,11 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    o_LED);
+    o_LED,
+    o_RGB_0_0,
+    o_RGB_1_0,
+    o_RGB_2_0,
+    o_RGB_3_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -54,6 +58,10 @@ module design_1_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   output [3:0]o_LED;
+  output [2:0]o_RGB_0_0;
+  output [2:0]o_RGB_1_0;
+  output [2:0]o_RGB_2_0;
+  output [2:0]o_RGB_3_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -77,6 +85,10 @@ module design_1_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire [3:0]o_LED;
+  wire [2:0]o_RGB_0_0;
+  wire [2:0]o_RGB_1_0;
+  wire [2:0]o_RGB_2_0;
+  wire [2:0]o_RGB_3_0;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -100,5 +112,9 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .o_LED(o_LED));
+        .o_LED(o_LED),
+        .o_RGB_0_0(o_RGB_0_0),
+        .o_RGB_1_0(o_RGB_1_0),
+        .o_RGB_2_0(o_RGB_2_0),
+        .o_RGB_3_0(o_RGB_3_0));
 endmodule

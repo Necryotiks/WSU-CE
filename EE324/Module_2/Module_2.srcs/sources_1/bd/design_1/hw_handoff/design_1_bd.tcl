@@ -162,9 +162,16 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set o_LED [ create_bd_port -dir O -from 3 -to 0 o_LED ]
+  set o_RGB_0_0 [ create_bd_port -dir O -from 2 -to 0 o_RGB_0_0 ]
+  set o_RGB_1_0 [ create_bd_port -dir O -from 2 -to 0 o_RGB_1_0 ]
+  set o_RGB_2_0 [ create_bd_port -dir O -from 2 -to 0 o_RGB_2_0 ]
+  set o_RGB_3_0 [ create_bd_port -dir O -from 2 -to 0 o_RGB_3_0 ]
 
   # Create instance: LED_CONTROLLER_0, and set properties
   set LED_CONTROLLER_0 [ create_bd_cell -type ip -vlnv user.org:user:LED_CONTROLLER:1.0 LED_CONTROLLER_0 ]
+
+  # Create instance: RGB_CONTROLLER_0, and set properties
+  set RGB_CONTROLLER_0 [ create_bd_cell -type ip -vlnv user.org:user:RGB_CONTROLLER:1.0 RGB_CONTROLLER_0 ]
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -544,7 +551,7 @@ proc create_root_design { parentCell } {
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {1} \
+   CONFIG.NUM_MI {2} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_50M, and set properties
@@ -555,21 +562,26 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins LED_CONTROLLER_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins RGB_CONTROLLER_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
 
   # Create port connections
   connect_bd_net -net LED_CONTROLLER_0_o_LED [get_bd_ports o_LED] [get_bd_pins LED_CONTROLLER_0/o_LED]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins LED_CONTROLLER_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net RGB_CONTROLLER_0_o_RGB_0 [get_bd_ports o_RGB_0_0] [get_bd_pins RGB_CONTROLLER_0/o_RGB_0]
+  connect_bd_net -net RGB_CONTROLLER_0_o_RGB_1 [get_bd_ports o_RGB_1_0] [get_bd_pins RGB_CONTROLLER_0/o_RGB_1]
+  connect_bd_net -net RGB_CONTROLLER_0_o_RGB_2 [get_bd_ports o_RGB_2_0] [get_bd_pins RGB_CONTROLLER_0/o_RGB_2]
+  connect_bd_net -net RGB_CONTROLLER_0_o_RGB_3 [get_bd_ports o_RGB_3_0] [get_bd_pins RGB_CONTROLLER_0/o_RGB_3]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins LED_CONTROLLER_0/s00_axi_aclk] [get_bd_pins RGB_CONTROLLER_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins LED_CONTROLLER_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins LED_CONTROLLER_0/s00_axi_aresetn] [get_bd_pins RGB_CONTROLLER_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
 
   # Create address segments
-  create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs LED_CONTROLLER_0/S00_AXI/S00_AXI_reg] SEG_LED_CONTROLLER_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x4BB00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs LED_CONTROLLER_0/S00_AXI/S00_AXI_reg] SEG_LED_CONTROLLER_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x4BB01000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs RGB_CONTROLLER_0/S00_AXI/S00_AXI_reg] SEG_RGB_CONTROLLER_0_S00_AXI_reg
 
 
   # Restore current instance
   current_bd_instance $oldCurInst
 
-  validate_bd_design
   save_bd_design
 }
 # End of create_root_design()
@@ -581,4 +593,6 @@ proc create_root_design { parentCell } {
 
 create_root_design ""
 
+
+common::send_msg_id "BD_TCL-1000" "WARNING" "This Tcl script was generated from a block design that has not been validated. It is possible that design <$design_name> may result in errors during validation."
 

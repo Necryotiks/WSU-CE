@@ -27,8 +27,8 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
-  "../../../bd/design_1/ipshared/ba0b/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/ba0b/hdl/LED_CONTROLLER_v1_0.v" \
+  "../../../bd/design_1/ipshared/1b83/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/1b83/hdl/LED_CONTROLLER_v1_0.v" \
   "../../../bd/design_1/ip/design_1_LED_CONTROLLER_0_0/sim/design_1_LED_CONTROLLER_0_0.v" \
 -endlib
 -makelib xcelium_lib/lib_cdc_v1_0_2 \

@@ -58,8 +58,8 @@ vlog -work processing_system7_vip_v1_0_7  -sv2k12 "+incdir+../../../../Module_2.
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Module_2.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../Module_2.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+/opt/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
-"../../../bd/design_1/ipshared/ba0b/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/ba0b/hdl/LED_CONTROLLER_v1_0.v" \
+"../../../bd/design_1/ipshared/1b83/hdl/LED_CONTROLLER_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/1b83/hdl/LED_CONTROLLER_v1_0.v" \
 "../../../bd/design_1/ip/design_1_LED_CONTROLLER_0_0/sim/design_1_LED_CONTROLLER_0_0.v" \
 
 vcom -work lib_cdc_v1_0_2 -93 \

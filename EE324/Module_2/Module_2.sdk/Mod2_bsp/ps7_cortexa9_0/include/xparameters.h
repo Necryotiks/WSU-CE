@@ -36,8 +36,19 @@
 
 /* Definitions for peripheral LED_CONTROLLER_0 */
 #define XPAR_LED_CONTROLLER_0_DEVICE_ID 0
-#define XPAR_LED_CONTROLLER_0_S00_AXI_BASEADDR 0x43C00000
-#define XPAR_LED_CONTROLLER_0_S00_AXI_HIGHADDR 0x43C0FFFF
+#define XPAR_LED_CONTROLLER_0_S00_AXI_BASEADDR 0x4BB00000
+#define XPAR_LED_CONTROLLER_0_S00_AXI_HIGHADDR 0x4BB00FFF
+
+
+/******************************************************************/
+
+/* Definitions for driver RGB_CONTROLLER */
+#define XPAR_RGB_CONTROLLER_NUM_INSTANCES 1
+
+/* Definitions for peripheral RGB_CONTROLLER_0 */
+#define XPAR_RGB_CONTROLLER_0_DEVICE_ID 0
+#define XPAR_RGB_CONTROLLER_0_S00_AXI_BASEADDR 0x4BB01000
+#define XPAR_RGB_CONTROLLER_0_S00_AXI_HIGHADDR 0x4BB01FFF
 
 
 /******************************************************************/

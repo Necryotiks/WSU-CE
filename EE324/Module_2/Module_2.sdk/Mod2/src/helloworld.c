@@ -45,9 +45,7 @@
  *   ps7_uart    115200 (configured by bootrom/bsp)
  */
 
-#include <stdio.h>
-#include "platform.h"
-#include "xil_printf.h"
+#include "functions.h"
 
 
 int main()
@@ -55,6 +53,7 @@ int main()
     init_platform();
 
     print("Hello World\n\r");
+    setLEDPattern(1);
 
     cleanup_platform();
     return 0;
