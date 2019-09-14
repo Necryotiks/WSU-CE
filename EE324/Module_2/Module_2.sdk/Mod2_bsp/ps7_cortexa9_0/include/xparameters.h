@@ -53,6 +53,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver SW_BTN_INTERFACE */
+#define XPAR_SW_BTN_INTERFACE_NUM_INSTANCES 1
+
+/* Definitions for peripheral SW_BTN_INTERFACE_0 */
+#define XPAR_SW_BTN_INTERFACE_0_DEVICE_ID 0
+#define XPAR_SW_BTN_INTERFACE_0_S00_AXI_BASEADDR 0x4BB02000
+#define XPAR_SW_BTN_INTERFACE_0_S00_AXI_HIGHADDR 0x4BB02FFF
+
+
+/******************************************************************/
+
 
 /* Definitions for peripheral PS7_DDR_0 */
 #define XPAR_PS7_DDR_0_S_AXI_BASEADDR 0x00100000

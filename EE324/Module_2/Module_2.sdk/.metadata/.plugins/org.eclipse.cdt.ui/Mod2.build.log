@@ -1,23 +1,8 @@
-21:27:15 **** Auto Build of configuration Debug for project Mod2 ****
+15:16:16 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
- 
-Building target: Mod2.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: Mod2.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19476	   1144	  22568	  43188	   a8b4	Mod2.elf
-Finished building: Mod2.elf.size
- 
+make: Nothing to be done for 'main-build'.
 
-21:27:15 Build Finished (took 114ms)
+15:16:17 Build Finished (took 263ms)
 

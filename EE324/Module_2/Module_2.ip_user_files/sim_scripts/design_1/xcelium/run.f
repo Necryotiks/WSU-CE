@@ -1,20 +1,20 @@
 -makelib xcelium_lib/xilinx_vip -sv \
-  "/opt/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
-  "/opt/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
-  "/opt/Vivado/2019.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
-  "/opt/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
-  "/opt/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
-  "/opt/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
-  "/opt/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_if.sv" \
-  "/opt/Vivado/2019.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
-  "/opt/Vivado/2019.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_if.sv" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "/opt/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-  "/opt/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib xcelium_lib/xpm \
-  "/opt/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
+  "/home/necryotiks/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib xcelium_lib/axi_infrastructure_v1_1_0 \
   "../../../../Module_2.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
@@ -43,6 +43,9 @@
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
   "../../../../Module_2.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 -endlib
+-makelib xcelium_lib/axi_register_slice_v2_1_19 \
+  "../../../../Module_2.srcs/sources_1/bd/design_1/ipshared/4d88/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-endlib
 -makelib xcelium_lib/fifo_generator_v13_2_4 \
   "../../../../Module_2.srcs/sources_1/bd/design_1/ipshared/1f5a/simulation/fifo_generator_vlog_beh.v" \
 -endlib
@@ -55,8 +58,17 @@
 -makelib xcelium_lib/axi_data_fifo_v2_1_18 \
   "../../../../Module_2.srcs/sources_1/bd/design_1/ipshared/5b9c/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 -endlib
--makelib xcelium_lib/axi_register_slice_v2_1_19 \
-  "../../../../Module_2.srcs/sources_1/bd/design_1/ipshared/4d88/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-makelib xcelium_lib/axi_crossbar_v2_1_20 \
+  "../../../../Module_2.srcs/sources_1/bd/design_1/ipshared/ace7/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
+  "../../../bd/design_1/ipshared/057f/hdl/RGB_CONTROLLER_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/057f/hdl/RGB_CONTROLLER_v1_0.v" \
+  "../../../bd/design_1/ip/design_1_RGB_CONTROLLER_0_0/sim/design_1_RGB_CONTROLLER_0_0.v" \
+  "../../../bd/design_1/ipshared/28be/hdl/SW_BTN_INTERFACE_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/28be/hdl/SW_BTN_INTERFACE_v1_0.v" \
+  "../../../bd/design_1/ip/design_1_SW_BTN_INTERFACE_0_0/sim/design_1_SW_BTN_INTERFACE_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_19 \
   "../../../../Module_2.srcs/sources_1/bd/design_1/ipshared/c83a/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

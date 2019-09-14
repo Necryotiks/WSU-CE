@@ -1,28 +1,128 @@
-20:36:10 **** Clean-only build of configuration Debug for project Mod2 ****
-make clean 
-rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  Mod2.elf.size  Mod2.elf
+14:21:52 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
  
-20:36:10 **** Clean-only build of project Mod2_bsp ****
-make -k clean 
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/spips_v3_2/src -s clean 
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s clean 
-make -C ps7_cortexa9_0/libsrc/LED_CONTROLLER_v1_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s clean 
-make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s clean 
-rm -f ps7_cortexa9_0/lib/libxil.a
-20:36:10 **** Build of project Mod2_bsp ****
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/necryotiks/Xilinx/SDK/2019.1/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld: ../../Mod2_bsp/ps7_cortexa9_0/lib/libxil.a(xil-crt0.o): in function `_start':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2.sdk/Mod2_bsp/ps7_cortexa9_0/libsrc/standalone_v7_0/src/xil-crt0.S:138: undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:41: Mod2.elf] Error 1
+14:22:29 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c: In function 'main':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c:53:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c:57:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/necryotiks/Xilinx/SDK/2019.1/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld: ./helloworld.o: in function `main':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c:53: undefined reference to `init_platform'
+/home/necryotiks/Xilinx/SDK/2019.1/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c:57: undefined reference to `cleanup_platform'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:41: Mod2.elf] Error 1
+14:22:39 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19136	   1144	  22568	  42848	   a760	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:23:13 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+In file included from /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:9:
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.h:10: warning: "BASELEDADDR" redefined
+ #define BASELEDADDR (uint32_t *)0x4BB01000
+ 
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.h:9: note: this is the location of the previous definition
+ #define BASELEDADDR (uint32_t *)0x4BB00000
+ 
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+In file included from /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c:48:
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.h:10: warning: "BASELEDADDR" redefined
+ #define BASELEDADDR (uint32_t *)0x4BB01000
+ 
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.h:9: note: this is the location of the previous definition
+ #define BASELEDADDR (uint32_t *)0x4BB00000
+ 
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19136	   1144	  22568	  42848	   a760	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:23:14 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:23:33 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19136	   1144	  22568	  42848	   a760	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:33:30 **** Auto Build of project Mod2_bsp ****
 make -k all 
 Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
 make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -44,6 +144,8 @@ Running Make include in ps7_cortexa9_0/libsrc/LED_CONTROLLER_v1_0/src
 make -C ps7_cortexa9_0/libsrc/LED_CONTROLLER_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/SW_BTN_INTERFACE_v1_0/src
+make -C ps7_cortexa9_0/libsrc/SW_BTN_INTERFACE_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_7/src
 make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
@@ -52,6 +154,8 @@ Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
 make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src
 make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/RGB_CONTROLLER_v1_0/src
+make -C ps7_cortexa9_0/libsrc/RGB_CONTROLLER_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
 make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
@@ -60,8 +164,8 @@ Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
 make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-arm-none-eabi-ar: creating ../../../lib/libxil.a
 Compiling ddrps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
 Running Make libs in ps7_cortexa9_0/libsrc/spips_v3_2/src
 make -C ps7_cortexa9_0/libsrc/spips_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Compiling spips
@@ -80,15 +184,15 @@ Compiling gpiops
 Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src
 make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Compiling standalone
-In file included from xtime_l.c:49:
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
 In file included from sleep.c:53:
 xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
  #pragma message ("For the sleep routines, Global timer is being used")
          ^~~~~~~
 In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
 xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
  #pragma message ("For the sleep routines, Global timer is being used")
          ^~~~~~~
@@ -112,6 +216,16 @@ LED_CONTROLLER_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-varia
 Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/SW_BTN_INTERFACE_v1_0/src
+make -C ps7_cortexa9_0/libsrc/SW_BTN_INTERFACE_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling SW_BTN_INTERFACE...
+SW_BTN_INTERFACE_selftest.c: In function 'SW_BTN_INTERFACE_Reg_SelfTest':
+SW_BTN_INTERFACE_selftest.c:52:65: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( SW_BTN_INTERFACE_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                                 ^~
+SW_BTN_INTERFACE_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
 Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_7/src
 make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Compiling sdps
@@ -124,6 +238,16 @@ Compiling scuwdt
 Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src
 make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Compiling uartps
+Running Make libs in ps7_cortexa9_0/libsrc/RGB_CONTROLLER_v1_0/src
+make -C ps7_cortexa9_0/libsrc/RGB_CONTROLLER_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling RGB_CONTROLLER...
+RGB_CONTROLLER_selftest.c: In function 'RGB_CONTROLLER_Reg_SelfTest':
+RGB_CONTROLLER_selftest.c:52:63: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( RGB_CONTROLLER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                               ^~
+RGB_CONTROLLER_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
 Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
 make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Compiling usbps
@@ -134,261 +258,177 @@ Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Compiling coresightps_dcc
 Finished building libraries
-20:36:20 **** Build of configuration Debug for project Mod2 ****
+14:33:41 **** Auto Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/helloworld.c
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-Finished building: ../src/helloworld.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
  
-Building file: ../src/platform.c
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-Finished building: ../src/platform.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19060	   1144	  22568	  42772	   a714	Mod2.elf
+  19136	   1144	  22568	  42848	   a760	Mod2.elf
 Finished building: Mod2.elf.size
  
-20:37:31 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
- 
-Building target: Mod2.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: Mod2.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19060	   1144	  22568	  42772	   a714	Mod2.elf
-Finished building: Mod2.elf.size
- 
-20:37:45 **** Auto Build of configuration Debug for project Mod2 ****
+14:34:07 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
-20:39:59 **** Auto Build of configuration Debug for project Mod2 ****
+14:35:00 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19136	   1144	  22568	  42848	   a760	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:35:53 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19152	   1144	  22568	  42864	   a770	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:36:10 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
-20:41:36 **** Auto Build of configuration Debug for project Mod2 ****
+14:36:44 **** Auto Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-In file included from ../src/functions.c:9:
-../src/functions.h:16:1: error: unknown type name 'uint32_t'
- uint32_t readLEDS();
- ^~~~~~~~
-../src/functions.h:17:1: error: unknown type name 'uint32_t'
- uint32_t readRGBS();
- ^~~~~~~~
-make: *** [src/functions.o] Error 1
-src/subdir.mk:27: recipe for target 'src/functions.o' failed
-20:42:21 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19128	   1144	  22568	  42840	   a758	Mod2.elf
+  19160	   1144	  22568	  42872	   a778	Mod2.elf
 Finished building: Mod2.elf.size
  
-20:42:24 **** Auto Build of configuration Debug for project Mod2 ****
+14:36:47 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/helloworld.c
+make: Nothing to be done for 'main-build'.
+14:37:12 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:37:26 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:53:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
-     init_platform();
-     ^~~~~~~~~~~~~
-../src/helloworld.c:55:5: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
-     print("Hello World\n\r");
-     ^~~~~
-../src/helloworld.c:57:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
-     cleanup_platform();
-     ^~~~~~~~~~~~~~~~
-Finished building: ../src/helloworld.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c: In function 'main':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c:54:6: warning: variable 'val' set but not used [-Wunused-but-set-variable]
+  int val = *BASESWBTNADDR & 0xFF;
+      ^~~
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19128	   1144	  22568	  42840	   a758	Mod2.elf
+  19160	   1144	  22568	  42872	   a778	Mod2.elf
 Finished building: Mod2.elf.size
  
-20:42:41 **** Auto Build of configuration Debug for project Mod2 ****
+14:37:29 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/helloworld.c
+make: Nothing to be done for 'main-build'.
+14:38:07 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-Finished building: ../src/helloworld.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19128	   1144	  22568	  42840	   a758	Mod2.elf
+  19176	   1144	  22568	  42888	   a788	Mod2.elf
 Finished building: Mod2.elf.size
  
-20:43:07 **** Auto Build of configuration Debug for project Mod2 ****
+14:38:27 **** Auto Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-../src/functions.c: In function 'demoLEDS':
-../src/functions.c:24:2: error: 'BASELEDADDR' undeclared (first use in this function)
-  BASELEDADDR;
-  ^~~~~~~~~~~
-../src/functions.c:24:2: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/functions.o] Error 1
-src/subdir.mk:27: recipe for target 'src/functions.o' failed
-20:43:32 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-In file included from ../src/functions.c:9:
-../src/functions.c: In function 'demoLEDS':
-../src/functions.h:10:21: warning: statement with no effect [-Wunused-value]
- #define BASELEDADDR (uint32_t *)0x4BB00000
-                     ^
-../src/functions.c:24:2: note: in expansion of macro 'BASELEDADDR'
-  BASELEDADDR;
-  ^~~~~~~~~~~
-Finished building: ../src/functions.c
- 
-Building file: ../src/helloworld.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-Finished building: ../src/helloworld.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: Mod2.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19128	   1144	  22568	  42840	   a758	Mod2.elf
-Finished building: Mod2.elf.size
- 
-20:45:38 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/helloworld.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-Finished building: ../src/helloworld.c
- 
-Building target: Mod2.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: Mod2.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19128	   1144	  22568	  42840	   a758	Mod2.elf
-Finished building: Mod2.elf.size
- 
-20:45:41 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-../src/functions.c: In function 'demoLEDS':
-../src/functions.c:30:3: warning: statement with no effect [-Wunused-value]
-   *BASELEDADDR ~= 0xF;
-../src/functions.c:30:16: error: expected ';' before '~' token
-   *BASELEDADDR ~= 0xF;
-                ^
-make: *** [src/functions.o] Error 1
-src/subdir.mk:27: recipe for target 'src/functions.o' failed
-20:45:50 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
- 
-Building target: Mod2.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: Mod2.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19180	   1144	  22568	  42892	   a78c	Mod2.elf
-Finished building: Mod2.elf.size
- 
-20:46:41 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
- 
-Building target: Mod2.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
@@ -397,18 +437,158 @@ arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
   19192	   1144	  22568	  42904	   a798	Mod2.elf
 Finished building: Mod2.elf.size
  
-20:47:58 **** Auto Build of configuration Debug for project Mod2 ****
+14:38:37 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
+make: Nothing to be done for 'main-build'.
+14:38:53 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19184	   1144	  22568	  42896	   a790	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:38:58 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:39:13 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:39:47 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19192	   1144	  22568	  42904	   a798	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:39:50 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:40:17 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19196	   1144	  22568	  42908	   a79c	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:40:19 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:40:37 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19184	   1144	  22568	  42896	   a790	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:40:55 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:41:07 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:41:24 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:42:47 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19196	   1144	  22568	  42908	   a79c	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:43:35 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
@@ -417,30 +597,73 @@ arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
   19208	   1144	  22568	  42920	   a7a8	Mod2.elf
 Finished building: Mod2.elf.size
  
-20:48:09 **** Auto Build of configuration Debug for project Mod2 ****
+14:43:50 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
+make: Nothing to be done for 'main-build'.
+14:44:50 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-../src/functions.c: In function 'setLEDPattern':
-../src/functions.c:16:3: warning: implicit declaration of function 'demoLEDS'; did you mean 'readLEDS'? [-Wimplicit-function-declaration]
-   demoLEDS();
-   ^~~~~~~~
-   readLEDS
-../src/functions.c: At top level:
-../src/functions.c:23:6: warning: conflicting types for 'demoLEDS'
- void demoLEDS()
-      ^~~~~~~~
-../src/functions.c:16:3: note: previous implicit declaration of 'demoLEDS' was here
-   demoLEDS();
-   ^~~~~~~~
-Finished building: ../src/functions.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19176	   1144	  22568	  42888	   a788	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:44:56 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:45:56 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19176	   1144	  22568	  42888	   a788	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:46:25 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
@@ -449,18 +672,83 @@ arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
   19216	   1144	  22568	  42928	   a7b0	Mod2.elf
 Finished building: Mod2.elf.size
  
-20:48:26 **** Auto Build of configuration Debug for project Mod2 ****
+14:46:37 **** Auto Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19220	   1144	  22568	  42932	   a7b4	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:46:41 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:47:16 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19224	   1144	  22568	  42936	   a7b8	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:47:26 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19220	   1144	  22568	  42932	   a7b4	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:47:36 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
@@ -469,277 +757,932 @@ arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
   19216	   1144	  22568	  42928	   a7b0	Mod2.elf
 Finished building: Mod2.elf.size
  
-20:48:57 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/helloworld.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-Finished building: ../src/helloworld.c
- 
-Building target: Mod2.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: Mod2.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19224	   1144	  22568	  42936	   a7b8	Mod2.elf
-Finished building: Mod2.elf.size
- 
-20:53:16 **** Incremental Build of configuration Debug for project Mod2 ****
+14:47:38 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
-20:53:37 **** Incremental Build of configuration Debug for project Mod2 ****
+14:48:34 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19216	   1144	  22568	  42928	   a7b0	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:48:57 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19216	   1144	  22568	  42928	   a7b0	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:49:10 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
-20:53:56 **** Auto Build of configuration Debug for project Mod2 ****
+14:50:27 **** Auto Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19224	   1144	  22568	  42936	   a7b8	Mod2.elf
+  19236	   1144	  22568	  42948	   a7c4	Mod2.elf
 Finished building: Mod2.elf.size
  
-20:53:58 **** Incremental Build of configuration Debug for project Mod2 ****
+14:50:32 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
-20:57:26 **** Auto Build of configuration Debug for project Mod2 ****
+14:51:26 **** Auto Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-../src/functions.c: In function 'shiftLEDS':
-../src/functions.c:34:16: warning: statement with no effect [-Wunused-value]
-   *BASELEDADDR << 0x1; //toggle LEDS
-   ~~~~~~~~~~~~~^~~~~~
-../src/functions.c: In function 'setLEDPattern':
-../src/functions.c:45:2: error: duplicate case value
-  case 0:
-  ^~~~
-../src/functions.c:42:2: note: previously used here
-  case 0:
-  ^~~~
-make: *** [src/functions.o] Error 1
-src/subdir.mk:27: recipe for target 'src/functions.o' failed
-20:57:32 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-../src/functions.c: In function 'shiftLEDS':
-../src/functions.c:34:16: warning: statement with no effect [-Wunused-value]
-   *BASELEDADDR << 0x1; //toggle LEDS
-   ~~~~~~~~~~~~~^~~~~~
-Finished building: ../src/functions.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19328	   1144	  22568	  43040	   a820	Mod2.elf
+  19256	   1144	  22568	  42968	   a7d8	Mod2.elf
 Finished building: Mod2.elf.size
  
-20:58:15 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-../src/functions.c: In function 'shiftLEDS':
-../src/functions.c:34:31: error: invalid operands to binary & (have 'uint32_t *' {aka 'long unsigned int *'} and 'int')
-   *BASELEDADDR = (BASELEDADDR & 0xF) << 0x1; //toggle LEDS
-                               ^
-src/subdir.mk:27: recipe for target 'src/functions.o' failed
-make: *** [src/functions.o] Error 1
-20:59:08 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-src/subdir.mk:27: recipe for target 'src/functions.o' failed
-../src/functions.c: In function 'shiftLEDS':
-../src/functions.c:34:30: error: invalid operands to binary << (have 'uint32_t *' {aka 'long unsigned int *'} and 'int')
-   *BASELEDADDR = BASELEDADDR << 0x1; //toggle LEDS
-                              ^~
-make: *** [src/functions.o] Error 1
-21:00:16 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
- 
-Building target: Mod2.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: Mod2.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19352	   1144	  22568	  43064	   a838	Mod2.elf
-Finished building: Mod2.elf.size
- 
-21:00:41 **** Incremental Build of configuration Debug for project Mod2 ****
+14:51:28 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
-21:00:52 **** Auto Build of configuration Debug for project Mod2 ****
+14:52:42 **** Auto Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/helloworld.c
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-Finished building: ../src/helloworld.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19352	   1144	  22568	  43064	   a838	Mod2.elf
+  19216	   1144	  22568	  42928	   a7b0	Mod2.elf
 Finished building: Mod2.elf.size
  
-21:00:54 **** Incremental Build of configuration Debug for project Mod2 ****
+14:52:53 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
-21:03:41 **** Auto Build of configuration Debug for project Mod2 ****
+14:55:34 **** Auto Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:79:18: error: 'BASESWBTN' undeclared (first use in this function); did you mean 'BASESWBTNADDR'?
+  *BASELEDADDR = *BASESWBTN & 0xF0;
+                  ^~~~~~~~~
+                  BASESWBTNADDR
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:79:18: note: each undeclared identifier is reported only once for each function it appears in
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:81:9: error: 'val' undeclared (first use in this function)
+  return val;
+         ^~~
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:82:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/functions.o] Error 1
+14:55:41 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:81:9: error: 'val' undeclared (first use in this function)
+  return val;
+         ^~~
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:81:9: note: each undeclared identifier is reported only once for each function it appears in
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:82:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/functions.o] Error 1
+14:55:46 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:81:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19396	   1144	  22568	  43108	   a864	Mod2.elf
+  19272	   1144	  22568	  42984	   a7e8	Mod2.elf
 Finished building: Mod2.elf.size
  
-21:03:43 **** Incremental Build of configuration Debug for project Mod2 ****
+14:56:11 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:52:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19276	   1144	  22568	  42988	   a7ec	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:56:16 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
-21:19:11 **** Auto Build of configuration Debug for project Mod2 ****
+14:56:49 **** Auto Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:52:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19416	   1144	  22568	  43128	   a878	Mod2.elf
+  19272	   1144	  22568	  42984	   a7e8	Mod2.elf
 Finished building: Mod2.elf.size
  
-21:26:38 **** Auto Build of configuration Debug for project Mod2 ****
+14:56:54 **** Auto Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-../src/functions.c: In function 'read_myLED':
-../src/functions.c:69:8: error: 'my_LED' undeclared (first use in this function)
-  val = my_LED & 0xF;
-        ^~~~~~
-../src/functions.c:69:8: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/functions.o] Error 1
-src/subdir.mk:27: recipe for target 'src/functions.o' failed
-21:26:54 **** Auto Build of configuration Debug for project Mod2 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-Building file: ../src/functions.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:52:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19476	   1144	  22568	  43188	   a8b4	Mod2.elf
+  19272	   1144	  22568	  42984	   a7e8	Mod2.elf
 Finished building: Mod2.elf.size
  
-21:27:15 **** Auto Build of configuration Debug for project Mod2 ****
+14:57:06 **** Incremental Build of configuration Debug for project Mod2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/functions.c
+make: Nothing to be done for 'main-build'.
+14:57:30 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "../src/functions.c"
-Finished building: ../src/functions.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
  
 Building target: Mod2.elf
 Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 Finished building target: Mod2.elf
  
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19476	   1144	  22568	  43188	   a8b4	Mod2.elf
+  19272	   1144	  22568	  42984	   a7e8	Mod2.elf
 Finished building: Mod2.elf.size
  
+14:58:01 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:52:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19276	   1144	  22568	  42988	   a7ec	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:58:37 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:52:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19276	   1144	  22568	  42988	   a7ec	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+14:59:46 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:50:7: error: 'BASESWBTNADDER' undeclared (first use in this function); did you mean 'BASESWBTNADDR'?
+  if(*(BASESWBTNADDER + 1) & 0x1)
+       ^~~~~~~~~~~~~~
+       BASESWBTNADDR
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:50:7: note: each undeclared identifier is reported only once for each function it appears in
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:56:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/functions.o] Error 1
+14:59:56 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:56:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19300	   1144	  22568	  43012	   a804	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:00:00 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:01:06 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19356	   1144	  22568	  43068	   a83c	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:01:10 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:52:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19304	   1144	  22568	  43016	   a808	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:01:17 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:01:52 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19304	   1144	  22568	  43016	   a808	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:04:08 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:66:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19508	   1144	  22568	  43220	   a8d4	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:04:35 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:67:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19508	   1144	  22568	  43220	   a8d4	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:04:59 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19508	   1144	  22568	  43220	   a8d4	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:05:23 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19508	   1144	  22568	  43220	   a8d4	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:05:45 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19452	   1144	  22568	  43164	   a89c	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:06:28 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'setLEDPattern':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:77:13: error: expected ';' before 'break'
+   demoRGBS()
+             ^
+             ;
+   break;
+   ~~~~~      
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/functions.o] Error 1
+15:06:34 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19456	   1144	  22568	  43168	   a8a0	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:06:59 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19456	   1144	  22568	  43168	   a8a0	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:07:11 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:08:38 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19544	   1144	  22568	  43256	   a8f8	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:09:01 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19548	   1144	  22568	  43260	   a8fc	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:09:31 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:66:6: error: conflicting types for 'writeLEDS'
+ void writeLEDS()
+      ^~~~~~~~~
+In file included from /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:9:
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.h:20:10: note: previous declaration of 'writeLEDS' was here
+ uint32_t writeLEDS();
+          ^~~~~~~~~
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:68:9: warning: 'return' with a value, in function returning void
+  return 0;
+         ^
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:66:6: note: declared here
+ void writeLEDS()
+      ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/functions.o] Error 1
+15:09:36 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:66:6: error: conflicting types for 'writeLEDS'
+ void writeLEDS()
+      ^~~~~~~~~
+In file included from /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:9:
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.h:20:10: note: previous declaration of 'writeLEDS' was here
+ uint32_t writeLEDS();
+          ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/functions.o] Error 1
+15:09:47 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'writeLEDS':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:67:1: error: number of arguments doesn't match prototype
+ {
+ ^
+In file included from /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:9:
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.h:20:6: error: prototype declaration
+ void writeLEDS(int val);
+      ^~~~~~~~~
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'setLEDPattern':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:82:3: error: too few arguments to function 'writeLEDS'
+   writeLEDS();
+   ^~~~~~~~~
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:66:6: note: declared here
+ void writeLEDS()
+      ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/functions.o] Error 1
+15:10:59 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c: In function 'setLEDPattern':
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:82:3: error: too few arguments to function 'writeLEDS'
+   writeLEDS();
+   ^~~~~~~~~
+/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c:66:6: note: declared here
+ void writeLEDS(int val)
+      ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/functions.o] Error 1
+15:11:29 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/helloworld.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19556	   1144	  22568	  43268	   a904	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:11:39 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:13:00 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19576	   1144	  22568	  43288	   a918	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:13:01 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:14:17 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19528	   1144	  22568	  43240	   a8e8	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:14:19 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:14:29 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:15:00 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19576	   1144	  22568	  43288	   a918	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:15:08 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19572	   1144	  22568	  43284	   a914	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:15:10 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:15:41 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19576	   1144	  22568	  43288	   a918	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:16:13 **** Auto Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Mod2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/functions.d" -MT"src/functions.o" -o "src/functions.o" "/home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c"
+Finished building: /home/necryotiks/Documents/Repos/WSU-CPTE/EE324/Module_2/Module_2_C_Code/functions.c
+ 
+Building target: Mod2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Mod2_bsp/ps7_cortexa9_0/lib -o "Mod2.elf"  ./src/functions.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Mod2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Mod2.elf  |tee "Mod2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19572	   1144	  22568	  43284	   a914	Mod2.elf
+Finished building: Mod2.elf.size
+ 
+15:16:16 **** Incremental Build of configuration Debug for project Mod2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1567574407">
+<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1567718671">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="RDI-RDI" Name="design_1_wrapper.vdi"/>
   <File Type="BG-DRC" Name="design_1_wrapper.drc"/>
   <File Type="BG-BGN" Name="design_1_wrapper.bgn"/>
   <File Type="BITSTR-SYSDEF" Name="design_1_wrapper.sysdef"/>
@@ -17,13 +16,12 @@
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="design_1_wrapper_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="design_1_wrapper_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="design_1_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="design_1_wrapper.vdi"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="design_1_wrapper_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="design_1_wrapper_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="design_1_wrapper_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="design_1_wrapper_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="design_1_wrapper_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="design_1_wrapper_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="design_1_wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW" Name="design_1_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="design_1_wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-SIMILARITY" Name="design_1_wrapper_incremental_reuse_routed.rpt"/>
@@ -58,16 +56,18 @@
   <File Type="PLACE-CLK" Name="design_1_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-IO" Name="design_1_wrapper_io_placed.rpt"/>
   <File Type="PLACE-DCP" Name="design_1_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="design_1_wrapper_timing_summary_pwropted.rpt"/>
   <File Type="PWROPT-DRC" Name="design_1_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-DCP" Name="design_1_wrapper_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="design_1_wrapper_timing_summary_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="design_1_wrapper.hwdef"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
   <File Type="OPT-DRC" Name="design_1_wrapper_drc_opted.rpt"/>
   <File Type="OPT-DCP" Name="design_1_wrapper_opt.dcp"/>
   <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>
-  <File Type="PWROPT-TIMING" Name="design_1_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="design_1_wrapper_bus_skew_routed.rpx"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="design_1_wrapper_timing_summary_opted.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="design_1_wrapper_bus_skew_routed.pb"/>
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>

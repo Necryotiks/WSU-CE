@@ -1,8 +1,8 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-//Date        : Tue Sep  3 21:58:35 2019
-//Host        : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
+//Date        : Thu Sep  5 14:24:28 2019
+//Host        : Necryotiks running 64-bit Antergos Linux
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
@@ -31,6 +31,8 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    i_BTN_0,
+    i_SW_0,
     o_LED,
     o_RGB_0_0,
     o_RGB_1_0,
@@ -57,6 +59,8 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  input [3:0]i_BTN_0;
+  input [7:0]i_SW_0;
   output [3:0]o_LED;
   output [2:0]o_RGB_0_0;
   output [2:0]o_RGB_1_0;
@@ -84,6 +88,8 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire [3:0]i_BTN_0;
+  wire [7:0]i_SW_0;
   wire [3:0]o_LED;
   wire [2:0]o_RGB_0_0;
   wire [2:0]o_RGB_1_0;
@@ -112,6 +118,8 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .i_BTN_0(i_BTN_0),
+        .i_SW_0(i_SW_0),
         .o_LED(o_LED),
         .o_RGB_0_0(o_RGB_0_0),
         .o_RGB_1_0(o_RGB_1_0),

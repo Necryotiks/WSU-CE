@@ -401,7 +401,7 @@
 	// Add user logic here
     always@(posedge S_AXI_ACLK)
     begin
-    slv_reg0 <= i_SW;
+    slv_reg0[7:0] <= i_SW;
     slv_reg1 <= i_BTN;
     end
 	// User logic ends
