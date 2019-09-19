@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Sep 17 22:17:03 2019
+# Process ID: 13883
+# Current directory: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/MOD_3
+# Command line: vivado
+# Log file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/MOD_3/vivado.log
+# Journal file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/MOD_3/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/MOD_3/MOD_3.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/MOD_3/MOD_3.srcs/sources_1/bd/design_1/design_1.bd}
+ipx::edit_ip_in_project -upgrade true -name LED_CONTROLLER_v1_0_project -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/MOD_3/MOD_3.tmp/LED_CONTROLLER_v1_0_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/component.xml
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+set_property library work [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/hdl/LED_tb.v]
+launch_simulation
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/hdl/ldtb.v w ]
+add_files -fileset sim_1 /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/hdl/ldtb.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ldtb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source ldtb.tcl
+close_sim
+launch_simulation
+launch_simulation
+set_property LIBRARY {} [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/hdl/ldtb.v]
+launch_simulation
+set_property LIBRARY yeet [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/hdl/ldtb.v]
+launch_simulation
+set_property library work [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/LED_CONTROLLER_1.0/hdl/LED_CONTROLLER_v1_0.v]
+launch_simulation
+launch_simulation
+launch_simulation
+current_project MOD_3
+close_project
