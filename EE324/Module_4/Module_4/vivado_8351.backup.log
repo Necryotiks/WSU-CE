@@ -1,0 +1,1105 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Oct 29 12:02:52 2019
+# Process ID: 8351
+# Current directory: /home/sergaljerk/Module_5
+# Command line: vivado
+# Log file: /home/sergaljerk/Module_5/vivado.log
+# Journal file: /home/sergaljerk/Module_5/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sergaljerk/Module_5/m5/m5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/Parts/HZ_Counter.v] -no_script -reset -force -quiet
+remove_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/Parts/HZ_Counter.v
+file mkdir /home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v w ]
+add_files -fileset sim_1 /home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v
+update_compile_order -fileset sim_1
+set_property top dctb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+generate_target Simulation [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-1343] Reset pin /DUTY_CYCLE_0/i_RST (associated clock /DUTY_CYCLE_0/i_CLK) is connected to reset source /rst_ps7_0_50M/peripheral_aresetn (synchronous to clock source /processing_system7_0/FCLK_CLK0).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /i_CLK_0.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_i_CLK_0 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/DUTY_CYCLE_0/i_EN
+/DUTY_CYCLE_0/i_DC_VAL
+/DUTY_CYCLE_0/i_PULSE_WINDOW
+
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 6856.086 ; gain = 137.629 ; free physical = 5078 ; free virtual = 9516
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_DC_VAL' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:37]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PULSE_WINDOW' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:38]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim/xsim.dir/dctb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim/xsim.dir/dctb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Oct 29 12:15:04 2019. For additional details about this file, please refer to the WebTalk help file at /opt/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 29 12:15:04 2019...
+run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 6967.387 ; gain = 0.000 ; free physical = 4992 ; free virtual = 9517
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 7061.641 ; gain = 94.254 ; free physical = 4937 ; free virtual = 9471
+reset_run synth_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_DC_VAL' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:37]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PULSE_WINDOW' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:38]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7073.891 ; gain = 12.250 ; free physical = 4957 ; free virtual = 9492
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_DC_VAL' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:37]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PULSE_WINDOW' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:38]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7088.898 ; gain = 15.008 ; free physical = 4942 ; free virtual = 9477
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_DC_VAL' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:37]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PULSE_WINDOW' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:38]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7093.902 ; gain = 5.004 ; free physical = 4942 ; free virtual = 9477
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_DC_VAL' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:37]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PULSE_WINDOW' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:38]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7107.906 ; gain = 5.996 ; free physical = 4938 ; free virtual = 9474
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_DC_VAL' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:37]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PULSE_WINDOW' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:38]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7123.914 ; gain = 16.008 ; free physical = 4923 ; free virtual = 9459
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_DC_VAL' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:37]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PULSE_WINDOW' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:38]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7125.914 ; gain = 2.000 ; free physical = 4911 ; free virtual = 9447
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:36]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7136.918 ; gain = 11.004 ; free physical = 4921 ; free virtual = 9457
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:36]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7171.934 ; gain = 0.000 ; free physical = 4917 ; free virtual = 9453
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:36]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7176.938 ; gain = 5.004 ; free physical = 4881 ; free virtual = 9418
+run 10 us
+$finish called at time : 1270 ns : File "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" Line 54
+run 10 us
+update_module_reference design_1_DUTY_CYCLE_0_4
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- user.org:user:PWM_CONTROLLER:1.0 - PWM_CONTROLLER_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_0
+Successfully read diagram <design_1> from BD file </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd>
+Upgrading '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_4 to use current project options
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_PWM_FREQ_VAL_1] [get_bd_pins DUTY_CYCLE_0/i_PULSE_WINDOW]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_1] [get_bd_pins DUTY_CYCLE_0/i_DC_VAL]
+ipx::edit_ip_in_project -upgrade true -name PWM_CONTROLLER_v1_0_project -directory /home/sergaljerk/Module_5/m5/m5.tmp/PWM_CONTROLLER_v1_0_project /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/hdl/PWM_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/hdl/PWM_CONTROLLER_v1_0.v:]
+update_compile_order -fileset sources_1
+set_property core_revision 6 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:PWM_CONTROLLER:1.0 [get_ips  design_1_PWM_CONTROLLER_0_1] -log ip_upgrade.log
+Upgrading '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_PWM_CONTROLLER_0_1 (PWM_CONTROLLER_v1.0 1.0) from revision 5 to revision 6
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/sergaljerk/Module_5/m5/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_PWM_CONTROLLER_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-1343] Reset pin /DUTY_CYCLE_0/i_RST (associated clock /DUTY_CYCLE_0/i_CLK) is connected to reset source /rst_ps7_0_50M/peripheral_aresetn (synchronous to clock source /processing_system7_0/FCLK_CLK0).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /i_CLK_0.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_i_CLK_0 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/DUTY_CYCLE_0/i_EN
+
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+WARNING: [IP_Flow 19-3452] Invalid long/float value '5e+07' specified for parameter 'FREQ_HZ(clock)' for design_1_rst_ps7_0_50M_1.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-3452] Invalid long/float value '5e+07' specified for parameter 'FREQ_HZ(CLK)' for design_1_auto_pc_0.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 7198.824 ; gain = 0.000 ; free physical = 4700 ; free virtual = 9283
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+copy_bd_objs /  [get_bd_cells {DUTY_CYCLE_0}]
+copy_bd_objs /  [get_bd_cells {DUTY_CYCLE_0}]
+copy_bd_objs /  [get_bd_cells {DUTY_CYCLE_0}]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/i_CLK_0 (100 MHz)" }  [get_bd_pins DUTY_CYCLE_1/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/i_CLK_0 (100 MHz)" }  [get_bd_pins DUTY_CYCLE_2/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/i_CLK_0 (100 MHz)" }  [get_bd_pins DUTY_CYCLE_3/i_CLK]
+endgroup
+connect_bd_net [get_bd_pins DUTY_CYCLE_1/i_EN] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_2]
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins DUTY_CYCLE_1/i_EN] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_2]'
+connect_bd_net [get_bd_pins DUTY_CYCLE_1/i_DC_VAL] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_2]
+connect_bd_net [get_bd_pins DUTY_CYCLE_1/i_PULSE_WINDOW] [get_bd_pins PWM_CONTROLLER_0/o_PWM_FREQ_VAL_2]
+connect_bd_net [get_bd_pins DUTY_CYCLE_2/i_DC_VAL] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_3]
+connect_bd_net [get_bd_pins DUTY_CYCLE_2/i_PULSE_WINDOW] [get_bd_pins PWM_CONTROLLER_0/o_PWM_FREQ_VAL_3]
+connect_bd_net [get_bd_pins DUTY_CYCLE_3/i_EN] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_4]
+connect_bd_net [get_bd_pins DUTY_CYCLE_3/i_PULSE_WINDOW] [get_bd_pins PWM_CONTROLLER_0/o_PWM_FREQ_VAL_4]
+regenerate_bd_layout
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_i_CLK_0_100M/ext_reset_in'
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins /rst_i_CLK_0_100M/ext_reset_in'
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_i_CLK_0_100M/ext_reset_in]
+INFO: [board_rule 100-100] create_bd_port -dir I reset_rtl_0 -type rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset_rtl_0
+INFO: [board_rule 100-100] connect_bd_net /reset_rtl_0 /rst_i_CLK_0_100M/ext_reset_in
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_LOW /reset_rtl_0
+delete_bd_objs [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_4]
+connect_bd_net [get_bd_pins DUTY_CYCLE_3/i_EN] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_4]
+startgroup
+make_bd_pins_external  [get_bd_pins DUTY_CYCLE_0/o_OUT]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins DUTY_CYCLE_3/o_OUT] [get_bd_pins DUTY_CYCLE_2/o_OUT] [get_bd_pins DUTY_CYCLE_1/o_OUT]
+endgroup
+delete_bd_objs [get_bd_nets reset_rtl_0_1] [get_bd_cells rst_i_CLK_0_100M]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_cells rst_ps7_0_50M]
+delete_bd_objs [get_bd_nets i_CLK_0_1]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins DUTY_CYCLE_0/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins DUTY_CYCLE_1/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins DUTY_CYCLE_2/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins DUTY_CYCLE_3/i_CLK]
+endgroup
+delete_bd_objs [get_bd_ports i_CLK_0]
+delete_bd_objs [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_4]
+connect_bd_net [get_bd_pins DUTY_CYCLE_3/i_EN] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_4]
+delete_bd_objs [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_4]
+connect_bd_net [get_bd_pins DUTY_CYCLE_3/i_DC_VAL] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_4]
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_reduced_logic:2.0 util_reduced_logic_0
+endgroup
+delete_bd_objs [get_bd_cells util_reduced_logic_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0
+endgroup
+set_property -dict [list CONFIG.C_SIZE {1} CONFIG.C_OPERATION {not} CONFIG.LOGO_FILE {data/sym_notgate.png}] [get_bd_cells util_vector_logic_0]
+connect_bd_net [get_bd_pins util_vector_logic_0/Res] [get_bd_pins rst_ps7_0_50M/aux_reset_in]
+connect_bd_net [get_bd_ports reset_rtl_0] [get_bd_pins util_vector_logic_0/Op1]
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property -dict [list CONFIG.DIN_WIDTH {4} CONFIG.DIN_TO {0} CONFIG.DIN_FROM {0}] [get_bd_cells xlslice_0]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_EN] [get_bd_pins xlslice_0/Din]
+connect_bd_net [get_bd_pins DUTY_CYCLE_0/i_EN] [get_bd_pins xlslice_0/Dout]
+copy_bd_objs /  [get_bd_cells {xlslice_0}]
+copy_bd_objs /  [get_bd_cells {xlslice_0}]
+copy_bd_objs /  [get_bd_cells {xlslice_0}]
+connect_bd_net [get_bd_pins xlslice_3/Din] [get_bd_pins PWM_CONTROLLER_0/o_EN]
+connect_bd_net [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_0/Dout]
+connect_bd_net [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_0/Dout]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {1} CONFIG.DIN_FROM {1} CONFIG.DIN_FROM {1} CONFIG.DOUT_WIDTH {1}] [get_bd_cells xlslice_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.DIN_TO {2} CONFIG.DIN_FROM {2} CONFIG.DIN_FROM {2} CONFIG.DOUT_WIDTH {1}] [get_bd_cells xlslice_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.DIN_TO {3} CONFIG.DIN_FROM {3} CONFIG.DIN_FROM {3} CONFIG.DOUT_WIDTH {1}] [get_bd_cells xlslice_3]
+endgroup
+connect_bd_net [get_bd_pins DUTY_CYCLE_1/i_EN] [get_bd_pins xlslice_1/Dout]
+connect_bd_net [get_bd_pins xlslice_2/Dout] [get_bd_pins DUTY_CYCLE_2/i_EN]
+connect_bd_net [get_bd_pins DUTY_CYCLE_3/i_EN] [get_bd_pins xlslice_3/Dout]
+regenerate_bd_layout
+disconnect_bd_net /xlslice_0_Dout [get_bd_pins xlslice_1/Din]
+connect_bd_net [get_bd_pins xlslice_1/Din] [get_bd_pins PWM_CONTROLLER_0/o_EN]
+disconnect_bd_net /xlslice_0_Dout [get_bd_pins xlslice_2/Din]
+connect_bd_net [get_bd_pins xlslice_2/Din] [get_bd_pins PWM_CONTROLLER_0/o_EN]
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+report_ip_status -name ip_status 
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+WARNING: [IP_Flow 19-3452] Invalid long/float value '5e+07' specified for parameter 'FREQ_HZ(clock)' for design_1_rst_ps7_0_50M_2.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+WARNING: [IP_Flow 19-3452] Invalid long/float value '5e+07' specified for parameter 'FREQ_HZ(CLK)' for design_1_auto_pc_0.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Tue Oct 29 12:46:58 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Tue Oct 29 12:46:58 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 7600.398 ; gain = 118.363 ; free physical = 4555 ; free virtual = 9166
+report_ip_status -name ip_status 
+reset_run synth_1
+ipx::edit_ip_in_project -upgrade true -name PWM_CONTROLLER_v1_0_project -directory /home/sergaljerk/Module_5/m5/m5.tmp/PWM_CONTROLLER_v1_0_project /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/hdl/PWM_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/hdl/PWM_CONTROLLER_v1_0.v:]
+update_compile_order -fileset sources_1
+set_property core_revision 7 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:PWM_CONTROLLER:1.0 [get_ips  design_1_PWM_CONTROLLER_0_1] -log ip_upgrade.log
+Upgrading '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_PWM_CONTROLLER_0_1 (PWM_CONTROLLER_v1.0 1.0) from revision 6 to revision 7
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/sergaljerk/Module_5/m5/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_PWM_CONTROLLER_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+WARNING: [IP_Flow 19-3452] Invalid long/float value '5e+07' specified for parameter 'FREQ_HZ(CLK)' for design_1_auto_pc_0.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+launch_runs synth_1 -jobs 14
+[Tue Oct 29 12:49:22 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+update_module_reference {design_1_DUTY_CYCLE_0_4 design_1_DUTY_CYCLE_0_5 design_1_DUTY_CYCLE_0_6 design_1_DUTY_CYCLE_0_7}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+Upgrading '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_4 to use current project options
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_5 to use current project options
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_6 to use current project options
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_7 to use current project options
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+update_module_reference: Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 7677.270 ; gain = 0.000 ; free physical = 4380 ; free virtual = 9050
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+WARNING: [IP_Flow 19-3452] Invalid long/float value '5e+07' specified for parameter 'FREQ_HZ(CLK)' for design_1_auto_pc_0.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Tue Oct 29 12:55:00 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Tue Oct 29 12:55:00 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 7750.605 ; gain = 73.336 ; free physical = 4353 ; free virtual = 9021
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_DDR_RAM_HIGHADDR {0x1FFFFFFF} CONFIG.PCW_UIPARAM_DDR_BANK_ADDR_COUNT {3} CONFIG.PCW_UIPARAM_DDR_ROW_ADDR_COUNT {15} CONFIG.PCW_UIPARAM_DDR_COL_ADDR_COUNT {10} CONFIG.PCW_UIPARAM_DDR_CL {7} CONFIG.PCW_UIPARAM_DDR_CWL {6.000000} CONFIG.PCW_UIPARAM_DDR_T_RCD {13.75} CONFIG.PCW_UIPARAM_DDR_T_RP {13.75} CONFIG.PCW_UIPARAM_DDR_T_RC {48.75} CONFIG.PCW_UIPARAM_DDR_T_RAS_MIN {35.0} CONFIG.PCW_UIPARAM_DDR_T_FAW {40} CONFIG.PCW_QSPI_PERIPHERAL_FREQMHZ {200} CONFIG.PCW_USB0_PERIPHERAL_FREQMHZ {60} CONFIG.PCW_SDIO_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_UART_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_SPI_PERIPHERAL_FREQMHZ {166.666666} CONFIG.PCW_I2C_PERIPHERAL_FREQMHZ {25} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {50} CONFIG.PCW_ACT_APU_PERIPHERAL_FREQMHZ {666.666687} CONFIG.PCW_UIPARAM_ACT_DDR_FREQ_MHZ {533.333374} CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.158730} CONFIG.PCW_ACT_QSPI_PERIPHERAL_FREQMHZ {200.000000} CONFIG.PCW_ACT_SMC_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_SDIO_PERIPHERAL_FREQMHZ {100.000000} CONFIG.PCW_ACT_UART_PERIPHERAL_FREQMHZ {100.000000} CONFIG.PCW_ACT_SPI_PERIPHERAL_FREQMHZ {166.666672} CONFIG.PCW_ACT_CAN_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_WDT_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {200.000000} CONFIG.PCW_ACT_TPIU_PERIPHERAL_FREQMHZ {200.000000} CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {50.000000} CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_CLK0_FREQ {50000000} CONFIG.PCW_CLK1_FREQ {10000000} CONFIG.PCW_CLK2_FREQ {10000000} CONFIG.PCW_CLK3_FREQ {10000000} CONFIG.PCW_CPU_PERIPHERAL_DIVISOR0 {2} CONFIG.PCW_DDR_PERIPHERAL_DIVISOR0 {2} CONFIG.PCW_SMC_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0 {5} CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0 {10} CONFIG.PCW_UART_PERIPHERAL_DIVISOR0 {10} CONFIG.PCW_SPI_PERIPHERAL_DIVISOR0 {6} CONFIG.PCW_CAN_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {5} CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {4} CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_ENET1_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_ENET1_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_TPIU_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_DCI_PERIPHERAL_DIVISOR0 {15} CONFIG.PCW_DCI_PERIPHERAL_DIVISOR1 {7} CONFIG.PCW_PCAP_PERIPHERAL_DIVISOR0 {5} CONFIG.PCW_ARMPLL_CTRL_FBDIV {40} CONFIG.PCW_IOPLL_CTRL_FBDIV {30} CONFIG.PCW_DDRPLL_CTRL_FBDIV {32} CONFIG.PCW_CPU_CPU_PLL_FREQMHZ {1333.333} CONFIG.PCW_IO_IO_PLL_FREQMHZ {1000.000} CONFIG.PCW_DDR_DDR_PLL_FREQMHZ {1066.667} CONFIG.PCW_SDIO_PERIPHERAL_VALID {1} CONFIG.PCW_SPI_PERIPHERAL_VALID {1} CONFIG.PCW_UART_PERIPHERAL_VALID {1} CONFIG.PCW_EN_EMIO_SPI1 {0} CONFIG.PCW_EN_EMIO_UART0 {0} CONFIG.PCW_EN_QSPI {1} CONFIG.PCW_EN_GPIO {1} CONFIG.PCW_EN_SDIO0 {1} CONFIG.PCW_EN_SPI1 {1} CONFIG.PCW_EN_UART0 {1} CONFIG.PCW_EN_UART1 {0} CONFIG.PCW_EN_USB0 {1} CONFIG.PCW_UIPARAM_DDR_MEMORY_TYPE {DDR 3 (Low Voltage)} CONFIG.PCW_UIPARAM_DDR_ECC {Disabled} CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {16 Bit} CONFIG.PCW_UIPARAM_DDR_BL {8} CONFIG.PCW_UIPARAM_DDR_PARTNO {Custom} CONFIG.PCW_UIPARAM_DDR_DRAM_WIDTH {16 Bits} CONFIG.PCW_UIPARAM_DDR_DEVICE_CAPACITY {4096 MBits} CONFIG.PCW_UIPARAM_DDR_SPEED_BIN {DDR3_1600K} CONFIG.PCW_NAND_PERIPHERAL_ENABLE {0} CONFIG.PCW_NAND_GRP_D8_ENABLE {0} CONFIG.PCW_NOR_PERIPHERAL_ENABLE {0} CONFIG.PCW_NOR_GRP_A25_ENABLE {0} CONFIG.PCW_NOR_GRP_CS0_ENABLE {0} CONFIG.PCW_NOR_GRP_SRAM_CS0_ENABLE {0} CONFIG.PCW_NOR_GRP_CS1_ENABLE {0} CONFIG.PCW_NOR_GRP_SRAM_CS1_ENABLE {0} CONFIG.PCW_NOR_GRP_SRAM_INT_ENABLE {0} CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {1} CONFIG.PCW_QSPI_QSPI_IO {MIO 1 .. 6} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_QSPI_GRP_SINGLE_SS_IO {MIO 1 .. 6} CONFIG.PCW_QSPI_GRP_SS1_ENABLE {0} CONFIG.PCW_SINGLE_QSPI_DATA_MODE {x4} CONFIG.PCW_QSPI_GRP_IO1_ENABLE {0} CONFIG.PCW_QSPI_GRP_FBCLK_ENABLE {1} CONFIG.PCW_QSPI_GRP_FBCLK_IO {MIO 8} CONFIG.PCW_ENET_RESET_ENABLE {0} CONFIG.PCW_ENET0_RESET_ENABLE {0} CONFIG.PCW_ENET1_RESET_ENABLE {0} CONFIG.PCW_SD0_PERIPHERAL_ENABLE {1} CONFIG.PCW_SD0_SD0_IO {MIO 40 .. 45} CONFIG.PCW_SD0_GRP_CD_ENABLE {1} CONFIG.PCW_SD0_GRP_CD_IO {MIO 47} CONFIG.PCW_SD0_GRP_WP_ENABLE {0} CONFIG.PCW_SD0_GRP_POW_ENABLE {0} CONFIG.PCW_UART0_PERIPHERAL_ENABLE {1} CONFIG.PCW_UART0_UART0_IO {MIO 14 .. 15} CONFIG.PCW_UART0_GRP_FULL_ENABLE {0} CONFIG.PCW_UART1_PERIPHERAL_ENABLE {0} CONFIG.PCW_UART1_UART1_IO {<Select>} CONFIG.PCW_UART1_GRP_FULL_ENABLE {0} CONFIG.PCW_SPI1_PERIPHERAL_ENABLE {1} CONFIG.PCW_SPI1_SPI1_IO {MIO 10 .. 15} CONFIG.PCW_SPI1_GRP_SS0_ENABLE {1} CONFIG.PCW_SPI1_GRP_SS0_IO {MIO 13} CONFIG.PCW_SPI1_GRP_SS1_ENABLE {0} CONFIG.PCW_SPI1_GRP_SS2_ENABLE {0} CONFIG.PCW_USB0_PERIPHERAL_ENABLE {1} CONFIG.PCW_USB0_USB0_IO {MIO 28 .. 39} CONFIG.PCW_USB_RESET_ENABLE {1} CONFIG.PCW_USB_RESET_SELECT {Share reset pin} CONFIG.PCW_USB0_RESET_ENABLE {1} CONFIG.PCW_USB0_RESET_IO {MIO 46} CONFIG.PCW_USB1_RESET_ENABLE {0} CONFIG.PCW_I2C0_RESET_ENABLE {0} CONFIG.PCW_I2C_RESET_ENABLE {1} CONFIG.PCW_I2C1_RESET_ENABLE {0} CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {1} CONFIG.PCW_GPIO_MIO_GPIO_IO {MIO} CONFIG.PCW_MIO_0_PULLUP {enabled} CONFIG.PCW_MIO_0_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_0_DIRECTION {inout} CONFIG.PCW_MIO_0_SLEW {slow} CONFIG.PCW_MIO_1_PULLUP {enabled} CONFIG.PCW_MIO_1_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_1_DIRECTION {out} CONFIG.PCW_MIO_1_SLEW {slow} CONFIG.PCW_MIO_2_PULLUP {disabled} CONFIG.PCW_MIO_2_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_2_DIRECTION {inout} CONFIG.PCW_MIO_2_SLEW {slow} CONFIG.PCW_MIO_3_PULLUP {disabled} CONFIG.PCW_MIO_3_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_3_DIRECTION {inout} CONFIG.PCW_MIO_3_SLEW {slow} CONFIG.PCW_MIO_4_PULLUP {disabled} CONFIG.PCW_MIO_4_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_4_DIRECTION {inout} CONFIG.PCW_MIO_4_SLEW {slow} CONFIG.PCW_MIO_5_PULLUP {disabled} CONFIG.PCW_MIO_5_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_5_DIRECTION {inout} CONFIG.PCW_MIO_5_SLEW {slow} CONFIG.PCW_MIO_6_PULLUP {disabled} CONFIG.PCW_MIO_6_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_6_DIRECTION {out} CONFIG.PCW_MIO_6_SLEW {slow} CONFIG.PCW_MIO_7_PULLUP {disabled} CONFIG.PCW_MIO_7_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_7_DIRECTION {out} CONFIG.PCW_MIO_7_SLEW {slow} CONFIG.PCW_MIO_8_PULLUP {disabled} CONFIG.PCW_MIO_8_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_8_DIRECTION {out} CONFIG.PCW_MIO_8_SLEW {slow} CONFIG.PCW_MIO_9_PULLUP {enabled} CONFIG.PCW_MIO_9_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_9_DIRECTION {inout} CONFIG.PCW_MIO_9_SLEW {slow} CONFIG.PCW_MIO_10_PULLUP {enabled} CONFIG.PCW_MIO_10_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_10_DIRECTION {inout} CONFIG.PCW_MIO_10_SLEW {slow} CONFIG.PCW_MIO_11_PULLUP {enabled} CONFIG.PCW_MIO_11_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_11_DIRECTION {inout} CONFIG.PCW_MIO_11_SLEW {slow} CONFIG.PCW_MIO_12_PULLUP {enabled} CONFIG.PCW_MIO_12_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_12_DIRECTION {inout} CONFIG.PCW_MIO_12_SLEW {slow} CONFIG.PCW_MIO_13_PULLUP {enabled} CONFIG.PCW_MIO_13_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_13_DIRECTION {inout} CONFIG.PCW_MIO_13_SLEW {slow} CONFIG.PCW_MIO_14_PULLUP {enabled} CONFIG.PCW_MIO_14_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_14_DIRECTION {in} CONFIG.PCW_MIO_14_SLEW {slow} CONFIG.PCW_MIO_15_PULLUP {enabled} CONFIG.PCW_MIO_15_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_15_DIRECTION {out} CONFIG.PCW_MIO_15_SLEW {slow} CONFIG.PCW_MIO_16_PULLUP {enabled} CONFIG.PCW_MIO_16_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_16_DIRECTION {inout} CONFIG.PCW_MIO_16_SLEW {slow} CONFIG.PCW_MIO_17_PULLUP {enabled} CONFIG.PCW_MIO_17_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_17_DIRECTION {inout} CONFIG.PCW_MIO_17_SLEW {slow} CONFIG.PCW_MIO_18_PULLUP {enabled} CONFIG.PCW_MIO_18_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_18_DIRECTION {inout} CONFIG.PCW_MIO_18_SLEW {slow} CONFIG.PCW_MIO_19_PULLUP {enabled} CONFIG.PCW_MIO_19_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_19_DIRECTION {inout} CONFIG.PCW_MIO_19_SLEW {slow} CONFIG.PCW_MIO_20_PULLUP {enabled} CONFIG.PCW_MIO_20_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_20_DIRECTION {inout} CONFIG.PCW_MIO_20_SLEW {slow} CONFIG.PCW_MIO_21_PULLUP {enabled} CONFIG.PCW_MIO_21_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_21_DIRECTION {inout} CONFIG.PCW_MIO_21_SLEW {slow} CONFIG.PCW_MIO_22_PULLUP {enabled} CONFIG.PCW_MIO_22_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_22_DIRECTION {inout} CONFIG.PCW_MIO_22_SLEW {slow} CONFIG.PCW_MIO_23_PULLUP {enabled} CONFIG.PCW_MIO_23_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_23_DIRECTION {inout} CONFIG.PCW_MIO_23_SLEW {slow} CONFIG.PCW_MIO_24_PULLUP {enabled} CONFIG.PCW_MIO_24_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_24_DIRECTION {inout} CONFIG.PCW_MIO_24_SLEW {slow} CONFIG.PCW_MIO_25_PULLUP {enabled} CONFIG.PCW_MIO_25_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_25_DIRECTION {inout} CONFIG.PCW_MIO_25_SLEW {slow} CONFIG.PCW_MIO_26_PULLUP {enabled} CONFIG.PCW_MIO_26_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_26_DIRECTION {inout} CONFIG.PCW_MIO_26_SLEW {slow} CONFIG.PCW_MIO_27_PULLUP {enabled} CONFIG.PCW_MIO_27_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_27_DIRECTION {inout} CONFIG.PCW_MIO_27_SLEW {slow} CONFIG.PCW_MIO_28_PULLUP {enabled} CONFIG.PCW_MIO_28_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_28_DIRECTION {inout} CONFIG.PCW_MIO_28_SLEW {slow} CONFIG.PCW_MIO_29_PULLUP {enabled} CONFIG.PCW_MIO_29_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_29_DIRECTION {in} CONFIG.PCW_MIO_29_SLEW {slow} CONFIG.PCW_MIO_30_PULLUP {enabled} CONFIG.PCW_MIO_30_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_30_DIRECTION {out} CONFIG.PCW_MIO_30_SLEW {slow} CONFIG.PCW_MIO_31_PULLUP {enabled} CONFIG.PCW_MIO_31_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_31_DIRECTION {in} CONFIG.PCW_MIO_31_SLEW {slow} CONFIG.PCW_MIO_32_PULLUP {enabled} CONFIG.PCW_MIO_32_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_32_DIRECTION {inout} CONFIG.PCW_MIO_32_SLEW {slow} CONFIG.PCW_MIO_33_PULLUP {enabled} CONFIG.PCW_MIO_33_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_33_DIRECTION {inout} CONFIG.PCW_MIO_33_SLEW {slow} CONFIG.PCW_MIO_34_PULLUP {enabled} CONFIG.PCW_MIO_34_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_34_DIRECTION {inout} CONFIG.PCW_MIO_34_SLEW {slow} CONFIG.PCW_MIO_35_PULLUP {enabled} CONFIG.PCW_MIO_35_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_35_DIRECTION {inout} CONFIG.PCW_MIO_35_SLEW {slow} CONFIG.PCW_MIO_36_PULLUP {enabled} CONFIG.PCW_MIO_36_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_36_DIRECTION {in} CONFIG.PCW_MIO_36_SLEW {slow} CONFIG.PCW_MIO_37_PULLUP {enabled} CONFIG.PCW_MIO_37_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_37_DIRECTION {inout} CONFIG.PCW_MIO_37_SLEW {slow} CONFIG.PCW_MIO_38_PULLUP {enabled} CONFIG.PCW_MIO_38_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_38_DIRECTION {inout} CONFIG.PCW_MIO_38_SLEW {slow} CONFIG.PCW_MIO_39_PULLUP {enabled} CONFIG.PCW_MIO_39_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_39_DIRECTION {inout} CONFIG.PCW_MIO_39_SLEW {slow} CONFIG.PCW_MIO_40_PULLUP {enabled} CONFIG.PCW_MIO_40_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_40_DIRECTION {inout} CONFIG.PCW_MIO_40_SLEW {slow} CONFIG.PCW_MIO_41_PULLUP {enabled} CONFIG.PCW_MIO_41_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_41_DIRECTION {inout} CONFIG.PCW_MIO_41_SLEW {slow} CONFIG.PCW_MIO_42_PULLUP {enabled} CONFIG.PCW_MIO_42_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_42_DIRECTION {inout} CONFIG.PCW_MIO_42_SLEW {slow} CONFIG.PCW_MIO_43_PULLUP {enabled} CONFIG.PCW_MIO_43_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_43_DIRECTION {inout} CONFIG.PCW_MIO_43_SLEW {slow} CONFIG.PCW_MIO_44_PULLUP {enabled} CONFIG.PCW_MIO_44_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_44_DIRECTION {inout} CONFIG.PCW_MIO_44_SLEW {slow} CONFIG.PCW_MIO_45_PULLUP {enabled} CONFIG.PCW_MIO_45_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_45_DIRECTION {inout} CONFIG.PCW_MIO_45_SLEW {slow} CONFIG.PCW_MIO_46_PULLUP {enabled} CONFIG.PCW_MIO_46_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_46_DIRECTION {out} CONFIG.PCW_MIO_46_SLEW {slow} CONFIG.PCW_MIO_47_PULLUP {enabled} CONFIG.PCW_MIO_47_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_47_DIRECTION {in} CONFIG.PCW_MIO_47_SLEW {slow} CONFIG.PCW_MIO_48_PULLUP {enabled} CONFIG.PCW_MIO_48_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_48_DIRECTION {inout} CONFIG.PCW_MIO_48_SLEW {slow} CONFIG.PCW_MIO_49_PULLUP {enabled} CONFIG.PCW_MIO_49_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_49_DIRECTION {inout} CONFIG.PCW_MIO_49_SLEW {slow} CONFIG.PCW_MIO_50_PULLUP {enabled} CONFIG.PCW_MIO_50_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_50_DIRECTION {inout} CONFIG.PCW_MIO_50_SLEW {slow} CONFIG.PCW_MIO_51_PULLUP {enabled} CONFIG.PCW_MIO_51_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_51_DIRECTION {inout} CONFIG.PCW_MIO_51_SLEW {slow} CONFIG.PCW_MIO_52_PULLUP {enabled} CONFIG.PCW_MIO_52_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_52_DIRECTION {inout} CONFIG.PCW_MIO_52_SLEW {slow} CONFIG.PCW_MIO_53_PULLUP {enabled} CONFIG.PCW_MIO_53_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_53_DIRECTION {inout} CONFIG.PCW_MIO_53_SLEW {slow} CONFIG.PCW_MIO_TREE_PERIPHERALS {GPIO#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO#Quad SPI Flash#GPIO#SPI 1#SPI 1#SPI 1#SPI 1#UART 0#UART 0#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#USB Reset#SD 0#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO} CONFIG.PCW_MIO_TREE_SIGNALS {gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_sclk#gpio[7]#qspi_fbclk#gpio[9]#mosi#miso#sclk#ss[0]#rx#tx#gpio[16]#gpio[17]#gpio[18]#gpio[19]#gpio[20]#gpio[21]#gpio[22]#gpio[23]#gpio[24]#gpio[25]#gpio[26]#gpio[27]#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#reset#cd#gpio[48]#gpio[49]#gpio[50]#gpio[51]#gpio[52]#gpio[53]} CONFIG.PCW_FPGA_FCLK0_ENABLE {1} CONFIG.PCW_FPGA_FCLK1_ENABLE {0} CONFIG.PCW_FPGA_FCLK2_ENABLE {0} CONFIG.PCW_FPGA_FCLK3_ENABLE {0}] [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Tue Oct 29 13:04:35 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Tue Oct 29 13:04:35 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:34 ; elapsed = 00:00:26 . Memory (MB): peak = 7878.996 ; gain = 64.270 ; free physical = 3506 ; free virtual = 8578
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ipx::edit_ip_in_project -upgrade true -name PWM_CONTROLLER_v1_0_project -directory /home/sergaljerk/Module_5/m5/m5.tmp/PWM_CONTROLLER_v1_0_project /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/hdl/PWM_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/hdl/PWM_CONTROLLER_v1_0.v:]
+update_compile_order -fileset sources_1
+close_project
+delete_bd_objs [get_bd_nets DUTY_CYCLE_1_o_OUT] [get_bd_ports o_OUT_3]
+delete_bd_objs [get_bd_nets DUTY_CYCLE_3_o_OUT] [get_bd_ports o_OUT_1]
+startgroup
+make_bd_pins_external  [get_bd_pins DUTY_CYCLE_1/o_OUT]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins DUTY_CYCLE_3/o_OUT]
+endgroup
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 29 19:08:26 2019...

@@ -1,0 +1,93 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Oct 29 10:48:56 2019
+# Process ID: 4074
+# Current directory: /home/sergaljerk/Module_5
+# Command line: vivado
+# Log file: /home/sergaljerk/Module_5/vivado.log
+# Journal file: /home/sergaljerk/Module_5/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sergaljerk/Module_5/m5/m5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 6495.902 ; gain = 90.809 ; free physical = 5652 ; free virtual = 9859
+update_compile_order -fileset sources_1
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:module_ref:HZ_Counter:1.0 - HZ_Counter_0
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_0
+Adding component instance block -- xilinx.com:module_ref:HZ_Counter:1.0 - HZ_Counter_1
+Adding component instance block -- xilinx.com:module_ref:HZ_Counter:1.0 - HZ_Counter_2
+Adding component instance block -- xilinx.com:module_ref:HZ_Counter:1.0 - HZ_Counter_3
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_1
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_2
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
+Adding component instance block -- user.org:user:PWM_CONTROLLER:1.0 - PWM_CONTROLLER_0
+Successfully read diagram <design_1> from BD file </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd>
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "New External Port (100 MHz)" }  [get_bd_pins DUTY_CYCLE_0/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "New External Port (100 MHz)" }  [get_bd_pins DUTY_CYCLE_1/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "New External Port (100 MHz)" }  [get_bd_pins DUTY_CYCLE_2/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "New External Port (100 MHz)" }  [get_bd_pins DUTY_CYCLE_3/i_CLK]
+endgroup
+delete_bd_objs [get_bd_nets xlslice_3_Dout] [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4] [get_bd_nets HZ_Counter_3_o_ENABLE_OUT] [get_bd_cells HZ_Counter_3]
+delete_bd_objs [get_bd_nets xlslice_2_Dout] [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3] [get_bd_nets HZ_Counter_2_o_ENABLE_OUT] [get_bd_cells HZ_Counter_2]
+delete_bd_objs [get_bd_nets xlslice_1_Dout] [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2] [get_bd_nets HZ_Counter_1_o_ENABLE_OUT] [get_bd_cells HZ_Counter_1]
+delete_bd_objs [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1] [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_1] [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_2] [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_3] [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_4] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells PWM_CONTROLLER_0]
+startgroup
+delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets processing_system7_0_FIXED_IO] [get_bd_intf_nets processing_system7_0_DDR]
+delete_bd_objs [get_bd_nets rst_ps7_0_50M_peripheral_aresetn] [get_bd_nets HZ_Counter_0_o_ENABLE_OUT] [get_bd_nets DUTY_CYCLE_0_o_OUT] [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_nets clk_100MHz_1_1] [get_bd_nets clk_100MHz_1] [get_bd_nets DUTY_CYCLE_1_o_OUT] [get_bd_nets DUTY_CYCLE_3_o_OUT] [get_bd_nets xlslice_0_Dout] [get_bd_nets util_vector_logic_0_Res] [get_bd_nets DUTY_CYCLE_2_o_OUT] [get_bd_nets clk_100MHz_3_1] [get_bd_nets reset_rtl_0_1] [get_bd_nets PWM_CONTROLLER_0_o_EN] [get_bd_nets clk_100MHz_2_1]
+delete_bd_objs [get_bd_intf_ports DDR] [get_bd_intf_ports FIXED_IO]
+delete_bd_objs [get_bd_cells processing_system7_0] [get_bd_cells DUTY_CYCLE_0] [get_bd_cells DUTY_CYCLE_1] [get_bd_cells xlslice_0] [get_bd_cells util_vector_logic_0] [get_bd_cells xlslice_1] [get_bd_cells DUTY_CYCLE_2] [get_bd_cells xlslice_2] [get_bd_cells DUTY_CYCLE_3] [get_bd_cells xlslice_3] [get_bd_cells HZ_Counter_0] [get_bd_cells rst_ps7_0_50M]
+delete_bd_objs [get_bd_cells ps7_0_axi_periph]
+delete_bd_objs [get_bd_ports clk_100MHz_3] [get_bd_ports clk_100MHz_2] [get_bd_ports o_OUT_3] [get_bd_ports clk_100MHz_1] [get_bd_ports o_OUT_2] [get_bd_ports clk_100MHz] [get_bd_ports o_OUT_1] [get_bd_ports reset_rtl_0] [get_bd_ports o_OUT_0]
+endgroup
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+WARNING: [Boardtcl 53-1] No current board_part set.
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:PWM_CONTROLLER:1.0 PWM_CONTROLLER_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/PWM_CONTROLLER_0/S00_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins PWM_CONTROLLER_0/S00_AXI]
+Slave segment </PWM_CONTROLLER_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
+create_bd_cell -type module -reference DUTY_CYCLE DUTY_CYCLE_0
+startgroup
+make_bd_pins_external  [get_bd_pins DUTY_CYCLE_0/i_CLK]
+endgroup
+connect_bd_net [get_bd_pins DUTY_CYCLE_0/i_RST] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+update_module_reference {design_1_DUTY_CYCLE_0_0 design_1_DUTY_CYCLE_0_1 design_1_DUTY_CYCLE_0_2 design_1_DUTY_CYCLE_0_3 design_1_DUTY_CYCLE_0_4}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+Upgrading '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_4 to use current project options
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_PULSE_WINDOW'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_DUTY_CYCLE_0_4'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_DUTY_CYCLE_0_4' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+update_module_reference: Time (s): cpu = 00:00:32 ; elapsed = 00:00:09 . Memory (MB): peak = 6943.133 ; gain = 57.930 ; free physical = 5576 ; free virtual = 9820
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 29 11:02:58 2019...

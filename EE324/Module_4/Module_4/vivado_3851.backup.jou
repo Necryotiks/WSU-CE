@@ -1,0 +1,220 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Oct 26 09:34:43 2019
+# Process ID: 3851
+# Current directory: /home/sergaljerk/Module_5
+# Command line: vivado
+# Log file: /home/sergaljerk/Module_5/vivado.log
+# Journal file: /home/sergaljerk/Module_5/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project m5 /home/sergaljerk/Module_5/m5 -part xc7z007sclg400-1
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+add_files -norecurse /home/sergaljerk/Documents/Repos/WSU-CPTE/Parts/HZ_Counter.v
+update_compile_order -fileset sources_1
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+create_bd_cell -type module -reference HZ_Counter HZ_Counter_0
+update_module_reference design_1_HZ_Counter_0_0
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "New Clocking Wizard (100 MHz)" }  [get_bd_pins HZ_Counter_0/i_CLK]
+startgroup
+set_property -dict [list CONFIG.USE_MIN_POWER {true} CONFIG.JITTER_SEL {No_Jitter} CONFIG.MMCM_CLKFBOUT_MULT_F {6.125} CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.125} CONFIG.MMCM_CLKOUT0_DUTY_CYCLE {0.5} CONFIG.CLKOUT1_JITTER {149.849} CONFIG.CLKOUT1_PHASE_ERROR {130.058}] [get_bd_cells clk_wiz]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {New External Port (ACTIVE_HIGH)}}  [get_bd_pins clk_wiz/reset]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Clk {New External Port (100 MHz)} Manual_Source {Auto}}  [get_bd_pins clk_wiz/clk_in1]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
+endgroup
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0
+endgroup
+set_property -dict [list CONFIG.C_SIZE {1} CONFIG.C_OPERATION {not} CONFIG.LOGO_FILE {data/sym_notgate.png}] [get_bd_cells util_vector_logic_0]
+delete_bd_objs [get_bd_nets reset_rtl_0_0_1] [get_bd_ports reset_rtl_0_0]
+connect_bd_net [get_bd_ports reset_rtl_0] [get_bd_pins util_vector_logic_0/Op1]
+connect_bd_net [get_bd_pins util_vector_logic_0/Res] [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+delete_bd_objs [get_bd_nets clk_wiz_locked] [get_bd_nets util_vector_logic_0_Res] [get_bd_nets rst_clk_wiz_100M_peripheral_aresetn] [get_bd_cells rst_clk_wiz_100M]
+delete_bd_objs [get_bd_nets clk_wiz_clk_out1] [get_bd_nets clk_100MHz_1] [get_bd_cells clk_wiz]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins HZ_Counter_0/i_CLK]
+connect_bd_net [get_bd_pins rst_ps7_0_50M/aux_reset_in] [get_bd_pins util_vector_logic_0/Res]
+disconnect_bd_net /processing_system7_0_FCLK_CLK0 [get_bd_pins HZ_Counter_0/i_CLK]
+delete_bd_objs [get_bd_ports clk_100MHz]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "New Clocking Wizard (100 MHz)" }  [get_bd_pins HZ_Counter_0/i_CLK]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins clk_wiz/reset]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Clk {/processing_system7_0/FCLK_CLK0 (50 MHz)} Manual_Source {Auto}}  [get_bd_pins clk_wiz/clk_in1]
+endgroup
+regenerate_bd_layout
+connect_bd_net [get_bd_pins clk_wiz/locked] [get_bd_pins rst_ps7_0_50M/dcm_locked]
+regenerate_bd_layout
+create_peripheral user.org user PWM_CONTROLLER 1.0 -dir /home/sergaljerk/Module_5/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core user.org:user:PWM_CONTROLLER:1.0]
+set_property VALUE 9 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core user.org:user:PWM_CONTROLLER:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design -force [ipx::find_open_core user.org:user:PWM_CONTROLLER:1.0]
+write_peripheral [ipx::find_open_core user.org:user:PWM_CONTROLLER:1.0]
+set_property  ip_repo_paths  /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0 [current_project]
+update_ip_catalog -rebuild
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:PWM_CONTROLLER:1.0 PWM_CONTROLLER_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/PWM_CONTROLLER_0/S00_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins PWM_CONTROLLER_0/S00_AXI]
+regenerate_bd_layout
+save_bd_design
+file mkdir /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new
+close [ open /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/COUNTER_BASED_CD.sv w ]
+add_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/COUNTER_BASED_CD.sv
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/COUNTER_BASED_CD.sv] -no_script -reset -force -quiet
+remove_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/COUNTER_BASED_CD.sv
+file delete -force /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/COUNTER_BASED_CD.sv
+update_module_reference design_1_HZ_Counter_0_0
+ipx::edit_ip_in_project -upgrade true -name PWM_CONTROLLER_v1_0_project -directory /home/sergaljerk/Module_5/m5/m5.tmp/PWM_CONTROLLER_v1_0_project /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/component.xml
+update_compile_order -fileset sources_1
+current_project m5
+update_module_reference design_1_HZ_Counter_0_0
+current_project PWM_CONTROLLER_v1_0_project
+current_project m5
+current_project PWM_CONTROLLER_v1_0_project
+current_project m5
+set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_PWM_CONTROLLER_0_S00_AXI_reg}]
+set_property offset 0x4BB03000 [get_bd_addr_segs {processing_system7_0/Data/SEG_PWM_CONTROLLER_0_S00_AXI_reg}]
+current_project PWM_CONTROLLER_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:PWM_CONTROLLER:1.0 [get_ips  design_1_PWM_CONTROLLER_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_PWM_CONTROLLER_0_0] -no_script -sync -force -quiet
+set_property synth_checkpoint_mode None [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+update_module_reference design_1_HZ_Counter_0_0
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property -dict [list CONFIG.DIN_WIDTH {4} CONFIG.DIN_TO {0} CONFIG.DIN_FROM {0}] [get_bd_cells xlslice_0]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_EN] [get_bd_pins xlslice_0/Din]
+connect_bd_net [get_bd_pins xlslice_0/Dout] [get_bd_pins HZ_Counter_0/i_EN]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_PWM_FREQ_VAL_1] [get_bd_pins HZ_Counter_0/i_DIV_VALUE]
+regenerate_bd_layout
+save_bd_design
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+update_module_reference design_1_HZ_Counter_0_0
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v w ]
+add_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference DUTY_CYCLE DUTY_CYCLE_0
+connect_bd_net [get_bd_pins HZ_Counter_0/o_ENABLE_OUT] [get_bd_pins DUTY_CYCLE_0/i_EN]
+connect_bd_net [get_bd_pins DUTY_CYCLE_0/i_CLK] [get_bd_pins clk_wiz/clk_out1]
+connect_bd_net [get_bd_pins DUTY_CYCLE_0/i_RST] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_1] [get_bd_pins DUTY_CYCLE_0/i_DC_VAL]
+regenerate_bd_layout
+update_module_reference design_1_DUTY_CYCLE_0_0
+update_compile_order -fileset sources_1
+ipx::edit_ip_in_project -upgrade true -name PWM_CONTROLLER_v1_0_project -directory /home/sergaljerk/Module_5/m5/m5.tmp/PWM_CONTROLLER_v1_0_project /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:PWM_CONTROLLER:1.0 [get_ips  design_1_PWM_CONTROLLER_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_PWM_CONTROLLER_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+copy_bd_objs /  [get_bd_cells {HZ_Counter_0}]
+copy_bd_objs /  [get_bd_cells {HZ_Counter_0}]
+copy_bd_objs /  [get_bd_cells {HZ_Counter_0}]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_PWM_FREQ_VAL_2] [get_bd_pins HZ_Counter_1/i_CLK]
+delete_bd_objs [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2]
+connect_bd_net [get_bd_pins HZ_Counter_1/i_DIV_VALUE] [get_bd_pins PWM_CONTROLLER_0/o_PWM_FREQ_VAL_2]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_PWM_FREQ_VAL_3] [get_bd_pins HZ_Counter_2/i_DIV_VALUE]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_PWM_FREQ_VAL_4] [get_bd_pins HZ_Counter_3/i_DIV_VALUE]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins HZ_Counter_1/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins HZ_Counter_2/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins HZ_Counter_3/i_CLK]
+endgroup
+regenerate_bd_layout
+copy_bd_objs /  [get_bd_cells {DUTY_CYCLE_0}]
+copy_bd_objs /  [get_bd_cells {DUTY_CYCLE_0}]
+copy_bd_objs /  [get_bd_cells {DUTY_CYCLE_0}]
+report_ip_status -name ip_status 
+connect_bd_net [get_bd_pins DUTY_CYCLE_1/i_DC_VAL] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_2]
+connect_bd_net [get_bd_pins DUTY_CYCLE_2/i_DC_VAL] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_3]
+connect_bd_net [get_bd_pins DUTY_CYCLE_3/i_DC_VAL] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_4]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins DUTY_CYCLE_1/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins DUTY_CYCLE_2/i_CLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins DUTY_CYCLE_3/i_CLK]
+endgroup
+regenerate_bd_layout
+connect_bd_net [get_bd_pins HZ_Counter_1/o_ENABLE_OUT] [get_bd_pins DUTY_CYCLE_1/i_EN]
+connect_bd_net [get_bd_pins HZ_Counter_2/o_ENABLE_OUT] [get_bd_pins DUTY_CYCLE_2/i_EN]
+connect_bd_net [get_bd_pins HZ_Counter_3/o_ENABLE_OUT] [get_bd_pins DUTY_CYCLE_3/i_EN]
+regenerate_bd_layout
+copy_bd_objs /  [get_bd_cells {xlslice_0}]
+set_property -dict [list CONFIG.DIN_TO {1} CONFIG.DIN_FROM {1} CONFIG.DIN_FROM {1} CONFIG.DOUT_WIDTH {1}] [get_bd_cells xlslice_1]
+connect_bd_net [get_bd_pins xlslice_1/Din] [get_bd_pins PWM_CONTROLLER_0/o_EN]
+connect_bd_net [get_bd_pins xlslice_1/Dout] [get_bd_pins HZ_Counter_1/i_EN]
+copy_bd_objs /  [get_bd_cells {xlslice_1}]
+copy_bd_objs /  [get_bd_cells {xlslice_1}]
+connect_bd_net [get_bd_pins xlslice_3/Din] [get_bd_pins PWM_CONTROLLER_0/o_EN]
+connect_bd_net [get_bd_pins xlslice_2/Din] [get_bd_pins PWM_CONTROLLER_0/o_EN]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {2} CONFIG.DIN_FROM {2} CONFIG.DIN_FROM {2} CONFIG.DOUT_WIDTH {1}] [get_bd_cells xlslice_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.DIN_TO {3} CONFIG.DIN_FROM {3} CONFIG.DIN_FROM {3} CONFIG.DOUT_WIDTH {1}] [get_bd_cells xlslice_3]
+endgroup
+connect_bd_net [get_bd_pins xlslice_2/Dout] [get_bd_pins HZ_Counter_2/i_EN]
+connect_bd_net [get_bd_pins xlslice_3/Dout] [get_bd_pins HZ_Counter_3/i_EN]
+regenerate_bd_layout
+report_ip_status -name ip_status 
+startgroup
+make_bd_pins_external  [get_bd_pins DUTY_CYCLE_0/o_OUT]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins DUTY_CYCLE_1/o_OUT]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins DUTY_CYCLE_2/o_OUT]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins DUTY_CYCLE_3/o_OUT]
+endgroup
+save_bd_design

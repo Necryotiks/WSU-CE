@@ -1,0 +1,345 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Oct 30 17:06:24 2019
+# Process ID: 21405
+# Current directory: /home/sergaljerk/Module_5
+# Command line: vivado
+# Log file: /home/sergaljerk/Module_5/vivado.log
+# Journal file: /home/sergaljerk/Module_5/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sergaljerk/Module_5/m5/m5.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+file mkdir /home/sergaljerk/Module_5/m5/m5.sdk
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+set_property PROBES.FILE {/home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {/home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z007s_1]
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'hX [get_hw_probes design_1_i/system_ila_0/inst/probe0_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe0_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'b0000 [get_hw_probes design_1_i/system_ila_0/inst/probe0_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_PWM_CONTROLLER_0_S00_AXI_reg}]
+set_property offset 0x4BB03000 [get_bd_addr_segs {processing_system7_0/Data/SEG_PWM_CONTROLLER_0_S00_AXI_reg}]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+file mkdir /home/sergaljerk/Module_5/m5/m5.sdk
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u10 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe1_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe1_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+set_property TRIGGER_COMPARE_VALUE neq32'u10 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+set_property TRIGGER_COMPARE_VALUE eq32'u10 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'u10 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_cells system_ila_0]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2 }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_DC_VAL_2 }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {DUTY_CYCLE_0_o_OUT }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {DUTY_CYCLE_1_o_OUT }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3 }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_DC_VAL_3 }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {DUTY_CYCLE_3_o_OUT }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4 }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_DC_VAL_4 }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {DUTY_CYCLE_2_o_OUT }]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_2] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_3] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets DUTY_CYCLE_0_o_OUT] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets DUTY_CYCLE_2_o_OUT] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_4] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_EN] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets DUTY_CYCLE_1_o_OUT] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets DUTY_CYCLE_3_o_OUT] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {23.5} CONFIG.C_PROBE12_WIDTH {32} CONFIG.C_PROBE11_WIDTH {32} CONFIG.C_PROBE10_WIDTH {32} CONFIG.C_PROBE9_WIDTH {32} CONFIG.C_PROBE8_WIDTH {32} CONFIG.C_PROBE7_WIDTH {32} CONFIG.C_PROBE6_WIDTH {32} CONFIG.C_PROBE5_WIDTH {32} CONFIG.C_PROBE4_WIDTH {32} CONFIG.C_PROBE3_WIDTH {32} CONFIG.C_PROBE2_WIDTH {32} CONFIG.C_PROBE1_WIDTH {32} CONFIG.C_PROBE0_WIDTH {32} CONFIG.C_DATA_DEPTH {2048} CONFIG.C_PROBE_WIDTH_PROPAGATION {MANUAL}] [get_bd_cells system_ila_0]
+endgroup
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+reset_run impl_1
+startgroup
+set_property -dict [list CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_PROBE12_MU_CNT {2} CONFIG.C_PROBE11_MU_CNT {2} CONFIG.C_PROBE10_MU_CNT {2} CONFIG.C_PROBE9_MU_CNT {2} CONFIG.C_PROBE8_MU_CNT {2} CONFIG.C_PROBE7_MU_CNT {2} CONFIG.C_PROBE6_MU_CNT {2} CONFIG.C_PROBE5_MU_CNT {2} CONFIG.C_PROBE4_MU_CNT {2} CONFIG.C_PROBE3_MU_CNT {2} CONFIG.C_PROBE2_MU_CNT {2} CONFIG.C_PROBE1_MU_CNT {2} CONFIG.C_PROBE0_MU_CNT {2} CONFIG.ALL_PROBE_SAME_MU_CNT {2}] [get_bd_cells system_ila_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/system_ila_0/inst/probe7_1} {design_1_i/system_ila_0/inst/probe11_1} {design_1_i/system_ila_0/inst/probe8_1} {design_1_i/system_ila_0/inst/probe12_1} {design_1_i/system_ila_0/inst/probe10_1} {design_1_i/system_ila_0/inst/probe1_1} {design_1_i/system_ila_0/inst/probe2_1} {design_1_i/system_ila_0/inst/probe4_1} {design_1_i/system_ila_0/inst/probe9_1} {design_1_i/system_ila_0/inst/probe0_1} {design_1_i/system_ila_0/inst/probe3_1} {design_1_i/system_ila_0/inst/probe5_1} {design_1_i/system_ila_0/inst/probe6_1} }
+set_property NAME.CUSTOM DUTY_CYCLE_0_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe7_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_1_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe11_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_2_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe8_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_3_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe12_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_EN [get_hw_probes design_1_i/system_ila_0/inst/probe10_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_1 [get_hw_probes design_1_i/system_ila_0/inst/probe1_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_2 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_3 [get_hw_probes design_1_i/system_ila_0/inst/probe4_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_4 [get_hw_probes design_1_i/system_ila_0/inst/probe9_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1 [get_hw_probes design_1_i/system_ila_0/inst/probe0_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2 [get_hw_probes design_1_i/system_ila_0/inst/probe3_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3 [get_hw_probes design_1_i/system_ila_0/inst/probe5_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4 [get_hw_probes design_1_i/system_ila_0/inst/probe6_1] 
+set_property TRIGGER_COMPARE_VALUE eq32'bXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe7_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'bXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXX1 [get_hw_probes design_1_i/system_ila_0/inst/probe7_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+update_module_reference {design_1_DUTY_CYCLE_0_4 design_1_DUTY_CYCLE_0_5 design_1_DUTY_CYCLE_0_6 design_1_DUTY_CYCLE_0_7}
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {18} CONFIG.C_PROBE13_WIDTH {32} CONFIG.C_PROBE12_WIDTH {1} CONFIG.C_PROBE11_WIDTH {1} CONFIG.C_PROBE8_WIDTH {1} CONFIG.C_PROBE7_WIDTH {1} CONFIG.C_NUM_OF_PROBES {14} CONFIG.C_PROBE13_MU_CNT {2}] [get_bd_cells system_ila_0]
+endgroup
+connect_bd_net [get_bd_pins system_ila_0/probe13] [get_bd_pins DUTY_CYCLE_3/o_SIGNAL_TAP]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {DUTY_CYCLE_3_o_SIGNAL_TAP }]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+reset_run synth_1
+startgroup
+connect_bd_net -net o_SIGNAL_TAP [get_bd_pins DUTY_CYCLE_2/o_SIGNAL_TAP]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {o_SIGNAL_TAP }]
+endgroup
+startgroup
+connect_bd_net -net o_SIGNAL_TAP_1 [get_bd_pins DUTY_CYCLE_1/o_SIGNAL_TAP]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {o_SIGNAL_TAP_1 }]
+endgroup
+startgroup
+connect_bd_net -net o_SIGNAL_TAP_2 [get_bd_pins DUTY_CYCLE_0/o_SIGNAL_TAP]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {o_SIGNAL_TAP_2 }]
+endgroup
+delete_bd_objs [get_bd_nets DUTY_CYCLE_3_o_SIGNAL_TAP]
+startgroup
+connect_bd_net -net o_SIGNAL_TAP_3 [get_bd_pins DUTY_CYCLE_3/o_SIGNAL_TAP]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {o_SIGNAL_TAP_3 }]
+endgroup
+connect_bd_net [get_bd_pins system_ila_0/probe13] [get_bd_pins DUTY_CYCLE_0/o_SIGNAL_TAP]
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {23.5} CONFIG.C_PROBE16_WIDTH {31} CONFIG.C_PROBE15_WIDTH {31} CONFIG.C_PROBE14_WIDTH {31} CONFIG.C_NUM_OF_PROBES {17} CONFIG.C_PROBE16_MU_CNT {2} CONFIG.C_PROBE15_MU_CNT {2} CONFIG.C_PROBE14_MU_CNT {2}] [get_bd_cells system_ila_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {22} CONFIG.C_PROBE10_WIDTH {4}] [get_bd_cells system_ila_0]
+endgroup
+connect_bd_net [get_bd_pins DUTY_CYCLE_3/o_SIGNAL_TAP] [get_bd_pins system_ila_0/probe16]
+connect_bd_net [get_bd_pins DUTY_CYCLE_2/o_SIGNAL_TAP] [get_bd_pins system_ila_0/probe15]
+connect_bd_net [get_bd_pins DUTY_CYCLE_1/o_SIGNAL_TAP] [get_bd_pins system_ila_0/probe14]
+regenerate_bd_layout
+save_bd_design
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/system_ila_0/inst/probe7_1} {design_1_i/system_ila_0/inst/probe11_1} {design_1_i/system_ila_0/inst/probe8_1} {design_1_i/system_ila_0/inst/probe12_1} {design_1_i/system_ila_0/inst/probe15_1} {design_1_i/system_ila_0/inst/probe14_1} {design_1_i/system_ila_0/inst/probe13_1} {design_1_i/system_ila_0/inst/probe16_1} {design_1_i/system_ila_0/inst/probe10_1} {design_1_i/system_ila_0/inst/probe1_1} {design_1_i/system_ila_0/inst/probe2_1} {design_1_i/system_ila_0/inst/probe4_1} {design_1_i/system_ila_0/inst/probe9_1} {design_1_i/system_ila_0/inst/probe0_1} {design_1_i/system_ila_0/inst/probe3_1} {design_1_i/system_ila_0/inst/probe5_1} {design_1_i/system_ila_0/inst/probe6_1} }
+set_property NAME.CUSTOM DUTY_CYCLE_0_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe7_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_1_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe11_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_2_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe8_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_3_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe12_1] 
+set_property NAME.CUSTOM o_SIGNAL_TAP [get_hw_probes design_1_i/system_ila_0/inst/probe15_1] 
+set_property NAME.CUSTOM o_SIGNAL_TAP_1 [get_hw_probes design_1_i/system_ila_0/inst/probe14_1] 
+set_property NAME.CUSTOM o_SIGNAL_TAP_2 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1] 
+set_property NAME.CUSTOM o_SIGNAL_TAP_3 [get_hw_probes design_1_i/system_ila_0/inst/probe16_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_EN [get_hw_probes design_1_i/system_ila_0/inst/probe10_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_1 [get_hw_probes design_1_i/system_ila_0/inst/probe1_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_2 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_3 [get_hw_probes design_1_i/system_ila_0/inst/probe4_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_4 [get_hw_probes design_1_i/system_ila_0/inst/probe9_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1 [get_hw_probes design_1_i/system_ila_0/inst/probe0_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2 [get_hw_probes design_1_i/system_ila_0/inst/probe3_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3 [get_hw_probes design_1_i/system_ila_0/inst/probe5_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4 [get_hw_probes design_1_i/system_ila_0/inst/probe6_1] 
+set_property TRIGGER_COMPARE_VALUE eq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe1_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq31'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe15_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq31'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe15_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq31'u1000 [get_hw_probes design_1_i/system_ila_0/inst/probe15_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq31'u1000 [get_hw_probes design_1_i/system_ila_0/inst/probe15_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+set_property TRIGGER_COMPARE_VALUE eq31'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe15_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u1000 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+set_property TRIGGER_COMPARE_VALUE eq32'b0000_0000_0000_0000_0000_0011_1110_1000 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+update_module_reference {design_1_DUTY_CYCLE_0_4 design_1_DUTY_CYCLE_0_5 design_1_DUTY_CYCLE_0_6 design_1_DUTY_CYCLE_0_7}
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins DUTY_CYCLE_3/i_RST]
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins DUTY_CYCLE_0/i_RST]
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins DUTY_CYCLE_2/i_RST]
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins DUTY_CYCLE_1/i_RST]
+disconnect_bd_net /rst_ps7_0_50M_peripheral_aresetn [get_bd_pins DUTY_CYCLE_1/i_RST]
+disconnect_bd_net /rst_ps7_0_50M_peripheral_aresetn [get_bd_pins DUTY_CYCLE_0/i_RST]
+disconnect_bd_net /rst_ps7_0_50M_peripheral_aresetn [get_bd_pins DUTY_CYCLE_3/i_RST]
+disconnect_bd_net /rst_ps7_0_50M_peripheral_aresetn [get_bd_pins DUTY_CYCLE_2/i_RST]
+connect_bd_net [get_bd_pins DUTY_CYCLE_1/i_RST] [get_bd_pins DUTY_CYCLE_2/i_RST]
+connect_bd_net [get_bd_pins DUTY_CYCLE_0/i_RST] [get_bd_pins DUTY_CYCLE_1/i_RST]
+connect_bd_net [get_bd_pins DUTY_CYCLE_3/i_RST] [get_bd_pins DUTY_CYCLE_1/i_RST]
+set_property location {-162 718} [get_bd_ports reset_rtl_0]
+undo
+connect_bd_net [get_bd_ports reset_rtl_0] [get_bd_pins DUTY_CYCLE_0/i_RST]
+save_bd_design
+launch_simulation
+source dctb.tcl
+close_sim
+launch_simulation
+source dctb.tcl
+run 10 us
+run 10 ms
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+set_property CONFIG.POLARITY ACTIVE_HIGH [get_bd_ports reset_rtl_0]
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+reset_run synth_1
+startgroup
+set_property -dict [list CONFIG.C_PROBE16_WIDTH {32} CONFIG.C_PROBE15_WIDTH {32} CONFIG.C_PROBE14_WIDTH {32}] [get_bd_cells system_ila_0]
+endgroup
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u1000 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u14 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_nets util_vector_logic_0_Res]
+delete_bd_objs [get_bd_cells util_vector_logic_0]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+set_property TRIGGER_COMPARE_VALUE eq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe16_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u14 [get_hw_probes design_1_i/system_ila_0/inst/probe16_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+update_module_reference {design_1_DUTY_CYCLE_0_4 design_1_DUTY_CYCLE_0_5 design_1_DUTY_CYCLE_0_6 design_1_DUTY_CYCLE_0_7}
+delete_bd_objs [get_bd_nets reset_rtl_0_1] [get_bd_ports reset_rtl_0]
+save_bd_design
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+open_run impl_1
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+set_property TRIGGER_COMPARE_VALUE eq4'hF [get_hw_probes design_1_i/system_ila_0/inst/probe10_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u24 [get_hw_probes design_1_i/system_ila_0/inst/probe16_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+close_sim

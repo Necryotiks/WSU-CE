@@ -1,0 +1,25 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 30, 2019
+ *      Author: root
+ */
+
+
+#include "PWM_CONTROLLER.h"
+
+int main(void)
+{
+	while(1)
+	{
+		enablePWM(0xF);
+		setPWMPulseWindow(1,100);
+		setPWMPulseWindow(2,100);
+		setPWMPulseWindow(3,100);
+		setPWMPulseWindow(4,100);
+		*(PWM_ADDR + 5) = 15;
+		*(PWM_ADDR + 6) = 15;
+		*(PWM_ADDR + 7) = 15;
+		*(PWM_ADDR + 8) = 15;
+	}
+}

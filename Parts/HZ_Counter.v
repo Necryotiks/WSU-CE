@@ -21,30 +21,44 @@
 
 
 module HZ_Counter(
-input i_CLK,
-    input i_RST,
-    output reg o_Out
+    input wire i_CLK,
+    input wire i_RST,
+    input wire i_EN,
+    input wire [31:0] i_DIV_VALUE,
+    output reg o_ENABLE_OUT
     );
     
-    parameter c_NUM = 0; //Overide via parameter
+    //parameter c_NUM = 0; //Overide via parameter
+    genvar i;
+
     reg [31:0] r_Count;
-    always @ (posedge(i_CLK), posedge(i_RST)) //Counter
+    always @ (posedge(i_CLK)) //Counter
     begin
         if (i_RST == 1'b1)
+        begin
             r_Count <= 32'b0;
-        else if (r_Count == c_NUM - 1)
-            r_Count <= 32'b0;
+        end
         else
-            r_Count <= r_Count + 1;
+            begin
+                if(i_EN) 
+                begin
+                    if (r_Count == i_DIV_VALUE - 1)
+                        r_Count <= 32'b0;
+                    else
+                        r_Count <= r_Count + 1;
+                end
+                else
+                    r_Count <= r_Count;
+            end
     end
     
-    always @ (posedge(i_CLK), posedge(i_RST)) //FF with comparator
+    always @ (posedge(i_CLK)) //FF with comparator
     begin
         if (i_RST == 1'b1)
-            o_Out <= 1'b0;
-        else if (r_Count == c_NUM - 1) // if r_Count = 49999999 flip output
-            o_Out <= ~o_Out;
+            o_ENABLE_OUT <= 1'b0;
+        else if (r_Count == i_DIV_VALUE - 1) // if r_Count = 49999999 flip output
+            o_ENABLE_OUT <= ~o_ENABLE_OUT;
         else
-            o_Out <= o_Out;
+            o_ENABLE_OUT <= o_ENABLE_OUT;
         end
 endmodule

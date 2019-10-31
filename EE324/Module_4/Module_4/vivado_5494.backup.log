@@ -1,0 +1,327 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Oct 30 16:23:57 2019
+# Process ID: 5494
+# Current directory: /home/sergaljerk/Module_5
+# Command line: vivado
+# Log file: /home/sergaljerk/Module_5/vivado.log
+# Journal file: /home/sergaljerk/Module_5/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sergaljerk/Module_5/m5/m5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 6486.707 ; gain = 77.656 ; free physical = 4057 ; free virtual = 8951
+update_compile_order -fileset sources_1
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
+Adding component instance block -- user.org:user:PWM_CONTROLLER:1.0 - PWM_CONTROLLER_0
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_0
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_1
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_2
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_3
+Successfully read diagram <design_1> from BD file </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 6633.773 ; gain = 0.000 ; free physical = 3940 ; free virtual = 8876
+set_property  ip_repo_paths  {/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0 /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo'.
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:SW_BTN_INTERFACE:1.0 SW_BTN_INTERFACE_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/SW_BTN_INTERFACE_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins SW_BTN_INTERFACE_0/S00_AXI]
+Slave segment </SW_BTN_INTERFACE_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C1_0000 [ 64K ]>
+startgroup
+make_bd_pins_external  [get_bd_pins SW_BTN_INTERFACE_0/i_BTN] [get_bd_pins SW_BTN_INTERFACE_0/i_SW]
+endgroup
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets i_BTN_0_1]
+regenerate_bd_layout
+delete_bd_objs [get_bd_ports i_BTN_0]
+ipx::edit_ip_in_project -upgrade true -name PWM_CONTROLLER_v1_0_project -directory /home/sergaljerk/Module_5/m5/m5.tmp/PWM_CONTROLLER_v1_0_project /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/hdl/PWM_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/hdl/PWM_CONTROLLER_v1_0.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 6756.164 ; gain = 0.000 ; free physical = 3907 ; free virtual = 8899
+update_compile_order -fileset sources_1
+set_property core_revision 8 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:PWM_CONTROLLER:1.0 [get_ips  design_1_PWM_CONTROLLER_0_1] -log ip_upgrade.log
+Upgrading '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_PWM_CONTROLLER_0_1 (PWM_CONTROLLER_v1.0 1.0) from revision 7 to revision 8
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/sergaljerk/Module_5/m5/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_PWM_CONTROLLER_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/SW_BTN_INTERFACE_0/i_BTN
+
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SW_BTN_INTERFACE_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_nets i_SW_0_1] [get_bd_cells SW_BTN_INTERFACE_0]
+regenerate_bd_layout
+delete_bd_objs [get_bd_ports i_SW_0]
+ipx::edit_ip_in_project -upgrade true -name PWM_CONTROLLER_v1_0_project -directory /home/sergaljerk/Module_5/m5/m5.tmp/PWM_CONTROLLER_v1_0_project /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/hdl/PWM_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/hdl/PWM_CONTROLLER_v1_0.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 9 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:PWM_CONTROLLER:1.0 [get_ips  design_1_PWM_CONTROLLER_0_1] -log ip_upgrade.log
+Upgrading '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_PWM_CONTROLLER_0_1 (PWM_CONTROLLER_v1.0 1.0) from revision 8 to revision 9
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'o_PWM_FREQ_VAL_1'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'o_PWM_FREQ_VAL_2'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'o_PWM_FREQ_VAL_3'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'o_PWM_FREQ_VAL_4'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_PWM_PULSE_WINDOW_VAL_1'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_PWM_PULSE_WINDOW_VAL_2'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_PWM_PULSE_WINDOW_VAL_3'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_PWM_PULSE_WINDOW_VAL_4'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_PWM_CONTROLLER_0_1'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'o_PWM_FREQ_VAL_1' is not found on the upgraded version of the cell '/PWM_CONTROLLER_0'. Its connection to the net 'PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1' has been removed.
+CRITICAL WARNING: [BD 41-1167] The pin 'o_PWM_FREQ_VAL_2' is not found on the upgraded version of the cell '/PWM_CONTROLLER_0'. Its connection to the net 'PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2' has been removed.
+CRITICAL WARNING: [BD 41-1167] The pin 'o_PWM_FREQ_VAL_3' is not found on the upgraded version of the cell '/PWM_CONTROLLER_0'. Its connection to the net 'PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3' has been removed.
+CRITICAL WARNING: [BD 41-1167] The pin 'o_PWM_FREQ_VAL_4' is not found on the upgraded version of the cell '/PWM_CONTROLLER_0'. Its connection to the net 'PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4' has been removed.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_PWM_CONTROLLER_0_1' has identified issues that may require user intervention. Please review the upgrade log '/home/sergaljerk/Module_5/m5/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+WARNING: [BD 41-597] NET <PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1> has no source
+WARNING: [BD 41-597] NET <PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2> has no source
+WARNING: [BD 41-597] NET <PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3> has no source
+WARNING: [BD 41-597] NET <PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4> has no source
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/sergaljerk/Module_5/m5/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_PWM_CONTROLLER_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/DUTY_CYCLE_0/i_PULSE_WINDOW
+/DUTY_CYCLE_1/i_PULSE_WINDOW
+/DUTY_CYCLE_2/i_PULSE_WINDOW
+/DUTY_CYCLE_3/i_PULSE_WINDOW
+
+WARNING: [BD 41-597] NET <PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1> has no source
+WARNING: [BD 41-597] NET <PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2> has no source
+WARNING: [BD 41-597] NET <PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3> has no source
+WARNING: [BD 41-597] NET <PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4> has no source
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-166] Source port for the net:PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1 is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2 is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3 is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4 is NULL! Connection will be grounded!
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-166] Source port for the net:PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1 is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2 is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3 is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4 is NULL! Connection will be grounded!
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_PWM_PULSE_WINDOW_VAL_1] [get_bd_pins DUTY_CYCLE_0/i_PULSE_WINDOW]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_PWM_PULSE_WINDOW_VAL_2] [get_bd_pins DUTY_CYCLE_1/i_PULSE_WINDOW]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_PWM_PULSE_WINDOW_VAL_3] [get_bd_pins DUTY_CYCLE_2/i_PULSE_WINDOW]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_PWM_PULSE_WINDOW_VAL_4] [get_bd_pins DUTY_CYCLE_3/i_PULSE_WINDOW]
+report_ip_status -name ip_status 
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_EN }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1 PWM_CONTROLLER_0_o_EN PWM_CONTROLLER_0_o_PWM_DC_VAL_1 }]
+true
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_EN] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode NATIVE, 0 slot interface pins and 3 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /processing_system7_0/FCLK_CLK0 to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1, to System ILA probe pin /system_ila_0/probe0 for debug.
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_PWM_DC_VAL_1, to System ILA probe pin /system_ila_0/probe1 for debug.
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_EN, to System ILA probe pin /system_ila_0/probe2 for debug.
+endgroup
+report_ip_status -name ip_status 
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {2} CONFIG.C_PROBE2_WIDTH {32} CONFIG.C_PROBE1_WIDTH {32} CONFIG.C_PROBE0_WIDTH {4} CONFIG.C_PROBE2_MU_CNT {3} CONFIG.C_PROBE1_MU_CNT {3} CONFIG.C_PROBE0_MU_CNT {3} CONFIG.ALL_PROBE_SAME_MU {true} CONFIG.ALL_PROBE_SAME_MU_CNT {3} CONFIG.C_NUM_MONITOR_SLOTS {0} CONFIG.C_MON_TYPE {NATIVE} CONFIG.C_PROBE_WIDTH_PROPAGATION {MANUAL}] [get_bd_cells system_ila_0]
+endgroup
+disconnect_bd_net /PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1 [get_bd_pins system_ila_0/probe0]
+disconnect_bd_net /PWM_CONTROLLER_0_o_PWM_DC_VAL_1 [get_bd_pins system_ila_0/probe1]
+disconnect_bd_net /PWM_CONTROLLER_0_o_EN [get_bd_pins system_ila_0/probe2]
+startgroup
+connect_bd_net [get_bd_pins system_ila_0/probe0] [get_bd_pins PWM_CONTROLLER_0/o_EN]
+connect_bd_net [get_bd_pins PWM_CONTROLLER_0/o_EN] [get_bd_pins system_ila_0/probe2]
+endgroup
+disconnect_bd_net /PWM_CONTROLLER_0_o_EN [get_bd_pins system_ila_0/probe2]
+connect_bd_net [get_bd_pins system_ila_0/probe1] [get_bd_pins PWM_CONTROLLER_0/o_PWM_PULSE_WINDOW_VAL_1]
+connect_bd_net [get_bd_pins system_ila_0/probe2] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_1]
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Oct 30 16:44:18 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Wed Oct 30 16:44:18 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 7492.473 ; gain = 147.695 ; free physical = 3226 ; free virtual = 8406
+report_ip_status -name ip_status 
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 30 17:05:55 2019...
