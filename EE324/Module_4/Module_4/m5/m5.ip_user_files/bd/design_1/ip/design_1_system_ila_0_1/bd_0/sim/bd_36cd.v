@@ -6,7 +6,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "bd_36cd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_36cd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=1,numReposBlks=1,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1_system_ila_0_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "bd_36cd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_36cd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=1,numReposBlks=1,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=Global}" *) (* HW_HANDOFF = "design_1_system_ila_0_1.hwdef" *) 
 module bd_36cd
    (clk,
     probe0,
@@ -33,9 +33,9 @@ module bd_36cd
   input [0:0]probe11;
   input [0:0]probe12;
   input [31:0]probe13;
-  input [30:0]probe14;
-  input [30:0]probe15;
-  input [30:0]probe16;
+  input [31:0]probe14;
+  input [31:0]probe15;
+  input [31:0]probe16;
   input [31:0]probe2;
   input [31:0]probe3;
   input [31:0]probe4;
@@ -51,9 +51,9 @@ module bd_36cd
   wire [0:0]probe11_1;
   wire [0:0]probe12_1;
   wire [31:0]probe13_1;
-  wire [30:0]probe14_1;
-  wire [30:0]probe15_1;
-  wire [30:0]probe16_1;
+  wire [31:0]probe14_1;
+  wire [31:0]probe15_1;
+  wire [31:0]probe16_1;
   wire [31:0]probe1_1;
   wire [31:0]probe2_1;
   wire [31:0]probe3_1;
@@ -70,9 +70,9 @@ module bd_36cd
   assign probe11_1 = probe11[0];
   assign probe12_1 = probe12[0];
   assign probe13_1 = probe13[31:0];
-  assign probe14_1 = probe14[30:0];
-  assign probe15_1 = probe15[30:0];
-  assign probe16_1 = probe16[30:0];
+  assign probe14_1 = probe14[31:0];
+  assign probe15_1 = probe15[31:0];
+  assign probe16_1 = probe16[31:0];
   assign probe1_1 = probe1[31:0];
   assign probe2_1 = probe2[31:0];
   assign probe3_1 = probe3[31:0];

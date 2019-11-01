@@ -1,15 +1,15 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-//Date        : Wed Oct 30 19:25:55 2019
-//Host        : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
+//Date        : Thu Oct 31 14:11:47 2019
+//Host        : Necryotiks running 64-bit Antergos Linux
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=14,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=6,da_clkrst_cnt=21,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=20,numReposBlks=16,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=6,da_clkrst_cnt=23,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -66,7 +66,8 @@ module design_1
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire DUTY_CYCLE_1_o_OUT;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire DUTY_CYCLE_2_o_OUT;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire DUTY_CYCLE_3_o_OUT;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [3:0]PWM_CONTROLLER_0_o_EN;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire PWM_CLK_EN_0_o_CLK_EN;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]PWM_CONTROLLER_0_o_EN;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]PWM_CONTROLLER_0_o_PWM_DC_VAL_1;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]PWM_CONTROLLER_0_o_PWM_DC_VAL_2;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]PWM_CONTROLLER_0_o_PWM_DC_VAL_3;
@@ -164,39 +165,48 @@ module design_1
   wire [0:0]xlslice_1_Dout;
   wire [0:0]xlslice_2_Dout;
   wire [0:0]xlslice_3_Dout;
+  wire [27:0]xlslice_5_Dout;
 
   assign o_OUT_0 = DUTY_CYCLE_0_o_OUT;
   assign o_OUT_1 = DUTY_CYCLE_1_o_OUT;
   assign o_OUT_2 = DUTY_CYCLE_2_o_OUT;
   assign o_OUT_3 = DUTY_CYCLE_3_o_OUT;
   design_1_DUTY_CYCLE_0_4 DUTY_CYCLE_0
-       (.i_CLK(processing_system7_0_FCLK_CLK0),
+       (.i_CEN(PWM_CLK_EN_0_o_CLK_EN),
+        .i_CLK(processing_system7_0_FCLK_CLK0),
         .i_DC_VAL(PWM_CONTROLLER_0_o_PWM_DC_VAL_1),
         .i_EN(xlslice_0_Dout),
         .i_PULSE_WINDOW(PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1),
         .o_OUT(DUTY_CYCLE_0_o_OUT),
         .o_SIGNAL_TAP(o_SIGNAL_TAP_2));
   design_1_DUTY_CYCLE_0_5 DUTY_CYCLE_1
-       (.i_CLK(processing_system7_0_FCLK_CLK0),
+       (.i_CEN(PWM_CLK_EN_0_o_CLK_EN),
+        .i_CLK(processing_system7_0_FCLK_CLK0),
         .i_DC_VAL(PWM_CONTROLLER_0_o_PWM_DC_VAL_2),
         .i_EN(xlslice_1_Dout),
         .i_PULSE_WINDOW(PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2),
         .o_OUT(DUTY_CYCLE_1_o_OUT),
         .o_SIGNAL_TAP(o_SIGNAL_TAP_1));
   design_1_DUTY_CYCLE_0_6 DUTY_CYCLE_2
-       (.i_CLK(processing_system7_0_FCLK_CLK0),
+       (.i_CEN(PWM_CLK_EN_0_o_CLK_EN),
+        .i_CLK(processing_system7_0_FCLK_CLK0),
         .i_DC_VAL(PWM_CONTROLLER_0_o_PWM_DC_VAL_3),
         .i_EN(xlslice_2_Dout),
         .i_PULSE_WINDOW(PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3),
         .o_OUT(DUTY_CYCLE_2_o_OUT),
         .o_SIGNAL_TAP(o_SIGNAL_TAP));
   design_1_DUTY_CYCLE_0_7 DUTY_CYCLE_3
-       (.i_CLK(processing_system7_0_FCLK_CLK0),
+       (.i_CEN(PWM_CLK_EN_0_o_CLK_EN),
+        .i_CLK(processing_system7_0_FCLK_CLK0),
         .i_DC_VAL(PWM_CONTROLLER_0_o_PWM_DC_VAL_4),
         .i_EN(xlslice_3_Dout),
         .i_PULSE_WINDOW(PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4),
         .o_OUT(DUTY_CYCLE_3_o_OUT),
         .o_SIGNAL_TAP(o_SIGNAL_TAP_3));
+  design_1_PWM_CLK_EN_0_0 PWM_CLK_EN_0
+       (.i_CLK(processing_system7_0_FCLK_CLK0),
+        .i_PWM_FREQ(xlslice_5_Dout),
+        .o_CLK_EN(PWM_CLK_EN_0_o_CLK_EN));
   design_1_PWM_CONTROLLER_0_1 PWM_CONTROLLER_0
        (.o_EN(PWM_CONTROLLER_0_o_EN),
         .o_PWM_DC_VAL_1(PWM_CONTROLLER_0_o_PWM_DC_VAL_1),
@@ -384,6 +394,7 @@ module design_1
         .probe14(o_SIGNAL_TAP_1),
         .probe15(o_SIGNAL_TAP),
         .probe16(o_SIGNAL_TAP_3),
+        .probe17(PWM_CLK_EN_0_o_CLK_EN),
         .probe2(PWM_CONTROLLER_0_o_PWM_DC_VAL_2),
         .probe3(PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2),
         .probe4(PWM_CONTROLLER_0_o_PWM_DC_VAL_3),
@@ -404,6 +415,9 @@ module design_1
   design_1_xlslice_0_3 xlslice_3
        (.Din(PWM_CONTROLLER_0_o_EN),
         .Dout(xlslice_3_Dout));
+  design_1_xlslice_4_0 xlslice_5
+       (.Din(PWM_CONTROLLER_0_o_EN),
+        .Dout(xlslice_5_Dout));
 endmodule
 
 module design_1_ps7_0_axi_periph_1

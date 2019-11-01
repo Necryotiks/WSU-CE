@@ -168,13 +168,14 @@ proc create_root_design { parentCell } {
   set probe7 [ create_bd_port -dir I -from 0 -to 0 probe7 ]
   set probe8 [ create_bd_port -dir I -from 0 -to 0 probe8 ]
   set probe9 [ create_bd_port -dir I -from 31 -to 0 probe9 ]
-  set probe10 [ create_bd_port -dir I -from 3 -to 0 probe10 ]
+  set probe10 [ create_bd_port -dir I -from 31 -to 0 probe10 ]
   set probe11 [ create_bd_port -dir I -from 0 -to 0 probe11 ]
   set probe12 [ create_bd_port -dir I -from 0 -to 0 probe12 ]
   set probe13 [ create_bd_port -dir I -from 31 -to 0 probe13 ]
   set probe14 [ create_bd_port -dir I -from 31 -to 0 probe14 ]
   set probe15 [ create_bd_port -dir I -from 31 -to 0 probe15 ]
   set probe16 [ create_bd_port -dir I -from 31 -to 0 probe16 ]
+  set probe17 [ create_bd_port -dir I -from 0 -to 0 probe17 ]
 
   # Create instance: ila_lib, and set properties
   set ila_lib [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_lib ]
@@ -188,13 +189,13 @@ proc create_root_design { parentCell } {
    CONFIG.C_ILA_CLK_FREQ {50000000} \
    CONFIG.C_INPUT_PIPE_STAGES {0} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {17} \
+   CONFIG.C_NUM_OF_PROBES {18} \
    CONFIG.C_PROBE0_MU_CNT {2} \
    CONFIG.C_PROBE0_TYPE {0} \
    CONFIG.C_PROBE0_WIDTH {32} \
    CONFIG.C_PROBE10_MU_CNT {2} \
    CONFIG.C_PROBE10_TYPE {0} \
-   CONFIG.C_PROBE10_WIDTH {4} \
+   CONFIG.C_PROBE10_WIDTH {32} \
    CONFIG.C_PROBE11_MU_CNT {2} \
    CONFIG.C_PROBE11_TYPE {0} \
    CONFIG.C_PROBE11_WIDTH {1} \
@@ -213,6 +214,9 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE16_MU_CNT {2} \
    CONFIG.C_PROBE16_TYPE {0} \
    CONFIG.C_PROBE16_WIDTH {32} \
+   CONFIG.C_PROBE17_MU_CNT {2} \
+   CONFIG.C_PROBE17_TYPE {0} \
+   CONFIG.C_PROBE17_WIDTH {1} \
    CONFIG.C_PROBE1_MU_CNT {2} \
    CONFIG.C_PROBE1_TYPE {0} \
    CONFIG.C_PROBE1_WIDTH {32} \
@@ -256,6 +260,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net probe14_1 [get_bd_ports probe14] [get_bd_pins ila_lib/probe14]
   connect_bd_net -net probe15_1 [get_bd_ports probe15] [get_bd_pins ila_lib/probe15]
   connect_bd_net -net probe16_1 [get_bd_ports probe16] [get_bd_pins ila_lib/probe16]
+  connect_bd_net -net probe17_1 [get_bd_ports probe17] [get_bd_pins ila_lib/probe17]
   connect_bd_net -net probe1_1 [get_bd_ports probe1] [get_bd_pins ila_lib/probe1]
   connect_bd_net -net probe2_1 [get_bd_ports probe2] [get_bd_pins ila_lib/probe2]
   connect_bd_net -net probe3_1 [get_bd_ports probe3] [get_bd_pins ila_lib/probe3]

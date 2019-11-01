@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# DUTY_CYCLE, DUTY_CYCLE, DUTY_CYCLE, DUTY_CYCLE
+# DUTY_CYCLE, DUTY_CYCLE, DUTY_CYCLE, DUTY_CYCLE, PWM_CLK_EN
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -213,6 +213,17 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $DUTY_CYCLE_3 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: PWM_CLK_EN_0, and set properties
+  set block_name PWM_CLK_EN
+  set block_cell_name PWM_CLK_EN_0
+  if { [catch {set PWM_CLK_EN_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $PWM_CLK_EN_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -609,17 +620,17 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.ALL_PROBE_SAME_MU_CNT {2} \
    CONFIG.C_ADV_TRIGGER {true} \
-   CONFIG.C_BRAM_CNT {22} \
+   CONFIG.C_BRAM_CNT {23.5} \
    CONFIG.C_DATA_DEPTH {2048} \
    CONFIG.C_EN_STRG_QUAL {1} \
    CONFIG.C_MON_TYPE {NATIVE} \
-   CONFIG.C_NUM_OF_PROBES {17} \
+   CONFIG.C_NUM_OF_PROBES {18} \
    CONFIG.C_PROBE0_MU_CNT {2} \
    CONFIG.C_PROBE0_TYPE {0} \
    CONFIG.C_PROBE0_WIDTH {32} \
    CONFIG.C_PROBE10_MU_CNT {2} \
    CONFIG.C_PROBE10_TYPE {0} \
-   CONFIG.C_PROBE10_WIDTH {4} \
+   CONFIG.C_PROBE10_WIDTH {32} \
    CONFIG.C_PROBE11_MU_CNT {2} \
    CONFIG.C_PROBE11_TYPE {0} \
    CONFIG.C_PROBE11_WIDTH {1} \
@@ -634,6 +645,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE15_WIDTH {32} \
    CONFIG.C_PROBE16_MU_CNT {2} \
    CONFIG.C_PROBE16_WIDTH {32} \
+   CONFIG.C_PROBE17_MU_CNT {2} \
    CONFIG.C_PROBE1_MU_CNT {2} \
    CONFIG.C_PROBE1_TYPE {0} \
    CONFIG.C_PROBE1_WIDTH {32} \
@@ -669,7 +681,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.DIN_FROM {0} \
    CONFIG.DIN_TO {0} \
-   CONFIG.DIN_WIDTH {4} \
+   CONFIG.DIN_WIDTH {32} \
  ] $xlslice_0
 
   # Create instance: xlslice_1, and set properties
@@ -677,7 +689,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.DIN_FROM {1} \
    CONFIG.DIN_TO {1} \
-   CONFIG.DIN_WIDTH {4} \
+   CONFIG.DIN_WIDTH {32} \
    CONFIG.DOUT_WIDTH {1} \
  ] $xlslice_1
 
@@ -686,7 +698,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.DIN_FROM {2} \
    CONFIG.DIN_TO {2} \
-   CONFIG.DIN_WIDTH {4} \
+   CONFIG.DIN_WIDTH {32} \
    CONFIG.DOUT_WIDTH {1} \
  ] $xlslice_2
 
@@ -695,9 +707,18 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.DIN_FROM {3} \
    CONFIG.DIN_TO {3} \
-   CONFIG.DIN_WIDTH {4} \
+   CONFIG.DIN_WIDTH {32} \
    CONFIG.DOUT_WIDTH {1} \
  ] $xlslice_3
+
+  # Create instance: xlslice_5, and set properties
+  set xlslice_5 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_5 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {31} \
+   CONFIG.DIN_TO {4} \
+   CONFIG.DIN_WIDTH {32} \
+   CONFIG.DOUT_WIDTH {28} \
+ ] $xlslice_5
 
   # Create interface connections
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
@@ -714,7 +735,9 @@ proc create_root_design { parentCell } {
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets DUTY_CYCLE_2_o_OUT]
   connect_bd_net -net DUTY_CYCLE_3_o_OUT [get_bd_ports o_OUT_3] [get_bd_pins DUTY_CYCLE_3/o_OUT] [get_bd_pins system_ila_0/probe12]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets DUTY_CYCLE_3_o_OUT]
-  connect_bd_net -net PWM_CONTROLLER_0_o_EN [get_bd_pins PWM_CONTROLLER_0/o_EN] [get_bd_pins system_ila_0/probe10] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_3/Din]
+  connect_bd_net -net PWM_CLK_EN_0_o_CLK_EN [get_bd_pins DUTY_CYCLE_0/i_CEN] [get_bd_pins DUTY_CYCLE_1/i_CEN] [get_bd_pins DUTY_CYCLE_2/i_CEN] [get_bd_pins DUTY_CYCLE_3/i_CEN] [get_bd_pins PWM_CLK_EN_0/o_CLK_EN] [get_bd_pins system_ila_0/probe17]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets PWM_CLK_EN_0_o_CLK_EN]
+  connect_bd_net -net PWM_CONTROLLER_0_o_EN [get_bd_pins PWM_CONTROLLER_0/o_EN] [get_bd_pins system_ila_0/probe10] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_3/Din] [get_bd_pins xlslice_5/Din]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets PWM_CONTROLLER_0_o_EN]
   connect_bd_net -net PWM_CONTROLLER_0_o_PWM_DC_VAL_1 [get_bd_pins DUTY_CYCLE_0/i_DC_VAL] [get_bd_pins PWM_CONTROLLER_0/o_PWM_DC_VAL_1] [get_bd_pins system_ila_0/probe1]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_1]
@@ -740,13 +763,14 @@ proc create_root_design { parentCell } {
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets o_SIGNAL_TAP_2]
   connect_bd_net -net o_SIGNAL_TAP_3 [get_bd_pins DUTY_CYCLE_3/o_SIGNAL_TAP] [get_bd_pins system_ila_0/probe16]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets o_SIGNAL_TAP_3]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins DUTY_CYCLE_0/i_CLK] [get_bd_pins DUTY_CYCLE_1/i_CLK] [get_bd_pins DUTY_CYCLE_2/i_CLK] [get_bd_pins DUTY_CYCLE_3/i_CLK] [get_bd_pins PWM_CONTROLLER_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk] [get_bd_pins system_ila_0/clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins DUTY_CYCLE_0/i_CLK] [get_bd_pins DUTY_CYCLE_1/i_CLK] [get_bd_pins DUTY_CYCLE_2/i_CLK] [get_bd_pins DUTY_CYCLE_3/i_CLK] [get_bd_pins PWM_CLK_EN_0/i_CLK] [get_bd_pins PWM_CONTROLLER_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk] [get_bd_pins system_ila_0/clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins PWM_CONTROLLER_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
   connect_bd_net -net xlslice_0_Dout [get_bd_pins DUTY_CYCLE_0/i_EN] [get_bd_pins xlslice_0/Dout]
   connect_bd_net -net xlslice_1_Dout [get_bd_pins DUTY_CYCLE_1/i_EN] [get_bd_pins xlslice_1/Dout]
   connect_bd_net -net xlslice_2_Dout [get_bd_pins DUTY_CYCLE_2/i_EN] [get_bd_pins xlslice_2/Dout]
   connect_bd_net -net xlslice_3_Dout [get_bd_pins DUTY_CYCLE_3/i_EN] [get_bd_pins xlslice_3/Dout]
+  connect_bd_net -net xlslice_5_Dout [get_bd_pins PWM_CLK_EN_0/i_PWM_FREQ] [get_bd_pins xlslice_5/Dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x00001000 -offset 0x4BB03000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PWM_CONTROLLER_0/S00_AXI/S00_AXI_reg] SEG_PWM_CONTROLLER_0_S00_AXI_reg

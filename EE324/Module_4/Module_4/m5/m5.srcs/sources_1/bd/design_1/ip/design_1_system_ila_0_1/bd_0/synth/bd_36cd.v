@@ -18,6 +18,7 @@ module bd_36cd
     probe14,
     probe15,
     probe16,
+    probe17,
     probe2,
     probe3,
     probe4,
@@ -29,13 +30,14 @@ module bd_36cd
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN design_1_processing_system7_0_1_FCLK_CLK0, FREQ_HZ 50000000, INSERT_VIP 0, PHASE 0.000" *) input clk;
   input [31:0]probe0;
   input [31:0]probe1;
-  input [3:0]probe10;
+  input [31:0]probe10;
   input [0:0]probe11;
   input [0:0]probe12;
   input [31:0]probe13;
   input [31:0]probe14;
   input [31:0]probe15;
   input [31:0]probe16;
+  input [0:0]probe17;
   input [31:0]probe2;
   input [31:0]probe3;
   input [31:0]probe4;
@@ -47,13 +49,14 @@ module bd_36cd
 
   wire clk_1;
   wire [31:0]probe0_1;
-  wire [3:0]probe10_1;
+  wire [31:0]probe10_1;
   wire [0:0]probe11_1;
   wire [0:0]probe12_1;
   wire [31:0]probe13_1;
   wire [31:0]probe14_1;
   wire [31:0]probe15_1;
   wire [31:0]probe16_1;
+  wire [0:0]probe17_1;
   wire [31:0]probe1_1;
   wire [31:0]probe2_1;
   wire [31:0]probe3_1;
@@ -66,13 +69,14 @@ module bd_36cd
 
   assign clk_1 = clk;
   assign probe0_1 = probe0[31:0];
-  assign probe10_1 = probe10[3:0];
+  assign probe10_1 = probe10[31:0];
   assign probe11_1 = probe11[0];
   assign probe12_1 = probe12[0];
   assign probe13_1 = probe13[31:0];
   assign probe14_1 = probe14[31:0];
   assign probe15_1 = probe15[31:0];
   assign probe16_1 = probe16[31:0];
+  assign probe17_1 = probe17[0];
   assign probe1_1 = probe1[31:0];
   assign probe2_1 = probe2[31:0];
   assign probe3_1 = probe3[31:0];
@@ -93,6 +97,7 @@ module bd_36cd
         .probe14(probe14_1),
         .probe15(probe15_1),
         .probe16(probe16_1),
+        .probe17(probe17_1),
         .probe2(probe2_1),
         .probe3(probe3_1),
         .probe4(probe4_1),

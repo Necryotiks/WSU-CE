@@ -5,8 +5,7 @@
       "device": "xc7z007sclg400-1",
       "name": "design_1",
       "synth_flow_mode": "None",
-      "tool_version": "2019.1",
-      "validated": "true"
+      "tool_version": "2019.1"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -23,77 +22,24 @@
       "xlslice_1": "",
       "xlslice_2": "",
       "xlslice_3": "",
-      "PWM_CONTROLLER_0": "",
       "system_ila_0": "",
+      "PWM_CONTROLLER_0": "",
+      "xlslice_5": "",
       "DUTY_CYCLE_0": "",
       "DUTY_CYCLE_1": "",
       "DUTY_CYCLE_2": "",
-      "DUTY_CYCLE_3": ""
+      "DUTY_CYCLE_3": "",
+      "PWM_CLK_EN_0": "",
+      "RGB_PWM_0": ""
     },
     "interface_ports": {
       "DDR": {
         "mode": "Master",
-        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0",
-        "parameters": {
-          "AXI_ARBITRATION_SCHEME": {
-            "value": "TDM",
-            "value_src": "default"
-          },
-          "BURST_LENGTH": {
-            "value": "8",
-            "value_src": "default"
-          },
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "default"
-          },
-          "CAS_LATENCY": {
-            "value": "11",
-            "value_src": "default"
-          },
-          "CAS_WRITE_LATENCY": {
-            "value": "11",
-            "value_src": "default"
-          },
-          "CS_ENABLED": {
-            "value": "true",
-            "value_src": "default"
-          },
-          "DATA_MASK_ENABLED": {
-            "value": "true",
-            "value_src": "default"
-          },
-          "DATA_WIDTH": {
-            "value": "8",
-            "value_src": "default"
-          },
-          "MEMORY_TYPE": {
-            "value": "COMPONENTS",
-            "value_src": "default"
-          },
-          "MEM_ADDR_MAP": {
-            "value": "ROW_COLUMN_BANK",
-            "value_src": "default"
-          },
-          "SLOT": {
-            "value": "Single",
-            "value_src": "default"
-          },
-          "TIMEPERIOD_PS": {
-            "value": "1250",
-            "value_src": "default"
-          }
-        }
+        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0"
       },
       "FIXED_IO": {
         "mode": "Master",
-        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
-        "parameters": {
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "default"
-          }
-        }
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0"
       }
     },
     "ports": {
@@ -1178,12 +1124,6 @@
           }
         },
         "interface_nets": {
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
           "m01_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M01_AXI",
@@ -1196,16 +1136,22 @@
               "m00_couplers/M_AXI"
             ]
           },
-          "ps7_0_axi_periph_to_s00_couplers": {
+          "s00_couplers_to_xbar": {
             "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
             "interface_ports": [
               "xbar/M00_AXI",
               "m00_couplers/S_AXI"
+            ]
+          },
+          "ps7_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           },
           "xbar_to_m01_couplers": {
@@ -1257,7 +1203,7 @@
             "value": "0"
           },
           "DIN_WIDTH": {
-            "value": "4"
+            "value": "32"
           }
         }
       },
@@ -1272,7 +1218,7 @@
             "value": "1"
           },
           "DIN_WIDTH": {
-            "value": "4"
+            "value": "32"
           },
           "DOUT_WIDTH": {
             "value": "1"
@@ -1290,7 +1236,7 @@
             "value": "2"
           },
           "DIN_WIDTH": {
-            "value": "4"
+            "value": "32"
           },
           "DOUT_WIDTH": {
             "value": "1"
@@ -1308,16 +1254,12 @@
             "value": "3"
           },
           "DIN_WIDTH": {
-            "value": "4"
+            "value": "32"
           },
           "DOUT_WIDTH": {
             "value": "1"
           }
         }
-      },
-      "PWM_CONTROLLER_0": {
-        "vlnv": "user.org:user:PWM_CONTROLLER:1.0",
-        "xci_name": "design_1_PWM_CONTROLLER_0_1"
       },
       "system_ila_0": {
         "vlnv": "xilinx.com:ip:system_ila:1.1",
@@ -1339,7 +1281,7 @@
             "value": "NATIVE"
           },
           "C_NUM_OF_PROBES": {
-            "value": "17"
+            "value": "18"
           },
           "C_PROBE0_MU_CNT": {
             "value": "2"
@@ -1357,7 +1299,7 @@
             "value": "0"
           },
           "C_PROBE10_WIDTH": {
-            "value": "4"
+            "value": "32"
           },
           "C_PROBE11_MU_CNT": {
             "value": "2"
@@ -1400,6 +1342,9 @@
           },
           "C_PROBE16_WIDTH": {
             "value": "32"
+          },
+          "C_PROBE17_MU_CNT": {
+            "value": "2"
           },
           "C_PROBE1_MU_CNT": {
             "value": "2"
@@ -1487,6 +1432,28 @@
           }
         }
       },
+      "PWM_CONTROLLER_0": {
+        "vlnv": "user.org:user:PWM_CONTROLLER:1.0",
+        "xci_name": "design_1_PWM_CONTROLLER_0_1"
+      },
+      "xlslice_5": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_xlslice_4_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "31"
+          },
+          "DIN_TO": {
+            "value": "4"
+          },
+          "DIN_WIDTH": {
+            "value": "32"
+          },
+          "DOUT_WIDTH": {
+            "value": "28"
+          }
+        }
+      },
       "DUTY_CYCLE_0": {
         "vlnv": "xilinx.com:module_ref:DUTY_CYCLE:1.0",
         "xci_name": "design_1_DUTY_CYCLE_0_4",
@@ -1498,19 +1465,12 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_1_FCLK_CLK0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              }
-            }
+            "direction": "I"
           },
           "i_EN": {
+            "direction": "I"
+          },
+          "i_CEN": {
             "direction": "I"
           },
           "i_DC_VAL": {
@@ -1544,19 +1504,12 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_1_FCLK_CLK0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              }
-            }
+            "direction": "I"
           },
           "i_EN": {
+            "direction": "I"
+          },
+          "i_CEN": {
             "direction": "I"
           },
           "i_DC_VAL": {
@@ -1590,19 +1543,12 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_1_FCLK_CLK0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              }
-            }
+            "direction": "I"
           },
           "i_EN": {
+            "direction": "I"
+          },
+          "i_CEN": {
             "direction": "I"
           },
           "i_DC_VAL": {
@@ -1636,19 +1582,12 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_1_FCLK_CLK0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              }
-            }
+            "direction": "I"
           },
           "i_EN": {
+            "direction": "I"
+          },
+          "i_CEN": {
             "direction": "I"
           },
           "i_DC_VAL": {
@@ -1670,15 +1609,36 @@
             "direction": "O"
           }
         }
+      },
+      "PWM_CLK_EN_0": {
+        "vlnv": "xilinx.com:module_ref:PWM_CLK_EN:1.0",
+        "xci_name": "design_1_PWM_CLK_EN_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PWM_CLK_EN",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_PWM_FREQ": {
+            "direction": "I",
+            "left": "27",
+            "right": "0"
+          },
+          "o_CLK_EN": {
+            "direction": "O"
+          }
+        }
+      },
+      "RGB_PWM_0": {
+        "vlnv": "user.org:user:RGB_PWM:1.0",
+        "xci_name": "design_1_RGB_PWM_0_0"
       }
     },
     "interface_nets": {
-      "processing_system7_0_DDR": {
-        "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
-        ]
-      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
@@ -1696,6 +1656,18 @@
           "processing_system7_0/M_AXI_GP0",
           "ps7_0_axi_periph/S00_AXI"
         ]
+      },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
+        ]
+      },
+      "ps7_0_axi_periph_M01_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M01_AXI",
+          "RGB_PWM_0/S00_AXI"
+        ]
       }
     },
     "nets": {
@@ -1708,12 +1680,14 @@
           "ps7_0_axi_periph/ACLK",
           "rst_ps7_0_50M/slowest_sync_clk",
           "ps7_0_axi_periph/M01_ACLK",
-          "PWM_CONTROLLER_0/s00_axi_aclk",
           "system_ila_0/clk",
+          "PWM_CONTROLLER_0/s00_axi_aclk",
           "DUTY_CYCLE_0/i_CLK",
           "DUTY_CYCLE_1/i_CLK",
           "DUTY_CYCLE_2/i_CLK",
-          "DUTY_CYCLE_3/i_CLK"
+          "DUTY_CYCLE_3/i_CLK",
+          "PWM_CLK_EN_0/i_CLK",
+          "RGB_PWM_0/s00_axi_aclk"
         ]
       },
       "PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1": {
@@ -1864,7 +1838,8 @@
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
           "ps7_0_axi_periph/M01_ARESETN",
-          "PWM_CONTROLLER_0/s00_axi_aresetn"
+          "PWM_CONTROLLER_0/s00_axi_aresetn",
+          "RGB_PWM_0/s00_axi_aresetn"
         ]
       },
       "PWM_CONTROLLER_0_o_PWM_DC_VAL_4": {
@@ -1889,7 +1864,8 @@
           "xlslice_3/Din",
           "xlslice_1/Din",
           "xlslice_2/Din",
-          "system_ila_0/probe10"
+          "system_ila_0/probe10",
+          "xlslice_5/Din"
         ],
         "hdl_attributes": {
           "DEBUG": {
@@ -2009,6 +1985,30 @@
             "value": "true"
           }
         }
+      },
+      "xlslice_5_Dout": {
+        "ports": [
+          "xlslice_5/Dout",
+          "PWM_CLK_EN_0/i_PWM_FREQ"
+        ]
+      },
+      "PWM_CLK_EN_0_o_CLK_EN": {
+        "ports": [
+          "PWM_CLK_EN_0/o_CLK_EN",
+          "DUTY_CYCLE_0/i_CEN",
+          "DUTY_CYCLE_2/i_CEN",
+          "DUTY_CYCLE_1/i_CEN",
+          "DUTY_CYCLE_3/i_CEN",
+          "system_ila_0/probe17"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       }
     },
     "addressing": {
@@ -2022,6 +2022,11 @@
                 "address_block": "/PWM_CONTROLLER_0/S00_AXI/S00_AXI_reg",
                 "offset": "0x4BB03000",
                 "range": "4K"
+              },
+              "SEG_RGB_PWM_0_S00_AXI_reg": {
+                "address_block": "/RGB_PWM_0/S00_AXI/S00_AXI_reg",
+                "offset": "0x43C00000",
+                "range": "64K"
               }
             }
           }

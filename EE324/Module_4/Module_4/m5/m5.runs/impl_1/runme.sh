@@ -7,9 +7,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/opt/SDK/2019.1/bin:/opt/Vivado/2019.1/ids_lite/ISE/bin/lin64:/opt/Vivado/2019.1/bin
+  PATH=/home/necryotiks/Xilinx/SDK/2019.1/bin:/home/necryotiks/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/home/necryotiks/Xilinx/Vivado/2019.1/bin
 else
-  PATH=/opt/SDK/2019.1/bin:/opt/Vivado/2019.1/ids_lite/ISE/bin/lin64:/opt/Vivado/2019.1/bin:$PATH
+  PATH=/home/necryotiks/Xilinx/SDK/2019.1/bin:/home/necryotiks/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/home/necryotiks/Xilinx/Vivado/2019.1/bin:$PATH
 fi
 export PATH
 
@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/sergaljerk/Module_5/m5/m5.runs/impl_1'
+HD_PWD='/home/necryotiks/Documents/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

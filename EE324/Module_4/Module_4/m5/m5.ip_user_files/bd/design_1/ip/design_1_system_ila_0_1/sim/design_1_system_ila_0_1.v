@@ -91,9 +91,9 @@ input wire [3 : 0] probe10;
 input wire [0 : 0] probe11;
 input wire [0 : 0] probe12;
 input wire [31 : 0] probe13;
-input wire [30 : 0] probe14;
-input wire [30 : 0] probe15;
-input wire [30 : 0] probe16;
+input wire [31 : 0] probe14;
+input wire [31 : 0] probe15;
+input wire [31 : 0] probe16;
 
   bd_36cd inst (
     .clk(clk),

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:PWM_CONTROLLER:1.0
-// IP Revision: 9
+// IP Revision: 10
 
 `timescale 1ns/1ps
 
@@ -86,7 +86,7 @@ module design_1_PWM_CONTROLLER_0_1 (
   s00_axi_aresetn
 );
 
-output wire [3 : 0] o_EN;
+output wire [31 : 0] o_EN;
 output wire [31 : 0] o_PWM_PULSE_WINDOW_VAL_1;
 output wire [31 : 0] o_PWM_DC_VAL_1;
 output wire [31 : 0] o_PWM_PULSE_WINDOW_VAL_2;

@@ -1,0 +1,1209 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Oct 30 17:06:24 2019
+# Process ID: 21405
+# Current directory: /home/sergaljerk/Module_5
+# Command line: vivado
+# Log file: /home/sergaljerk/Module_5/vivado.log
+# Journal file: /home/sergaljerk/Module_5/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sergaljerk/Module_5/m5/m5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 6492.293 ; gain = 118.621 ; free physical = 3158 ; free virtual = 9062
+update_compile_order -fileset sources_1
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_0
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_1
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_2
+Adding component instance block -- xilinx.com:module_ref:DUTY_CYCLE:1.0 - DUTY_CYCLE_3
+Adding component instance block -- user.org:user:PWM_CONTROLLER:1.0 - PWM_CONTROLLER_0
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Successfully read diagram <design_1> from BD file </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd>
+file mkdir /home/sergaljerk/Module_5/m5/m5.sdk
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
+set_property PROGRAM.FILE {/home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+set_property PROBES.FILE {/home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {/home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z007s_1]
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-2302] Device xc7z007s (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'hX [get_hw_probes design_1_i/system_ila_0/inst/probe0_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe0_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'b0000 [get_hw_probes design_1_i/system_ila_0/inst/probe0_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 17:13:03
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2019-Oct-30 17:13:36
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 17:13:37
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_PWM_CONTROLLER_0_S00_AXI_reg}]
+set_property offset 0x4BB03000 [get_bd_addr_segs {processing_system7_0/Data/SEG_PWM_CONTROLLER_0_S00_AXI_reg}]
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Oct 30 17:17:06 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Wed Oct 30 17:17:06 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 8099.609 ; gain = 238.336 ; free physical = 1723 ; free virtual = 7662
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+file mkdir /home/sergaljerk/Module_5/m5/m5.sdk
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-2302] Device xc7z007s (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 17:31:03
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 17:31:03
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-2302] Device xc7z007s (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u10 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 17:36:14
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 17:36:14
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-2302] Device xc7z007s (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe1_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe1_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 17:39:02
+set_property TRIGGER_COMPARE_VALUE neq32'u10 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2019-Oct-30 17:39:25
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+set_property TRIGGER_COMPARE_VALUE eq32'u10 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'u10 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 17:39:31
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 17:39:31
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_cells system_ila_0]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2 }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_DC_VAL_2 }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {DUTY_CYCLE_0_o_OUT }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {DUTY_CYCLE_1_o_OUT }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3 }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_DC_VAL_3 }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {DUTY_CYCLE_3_o_OUT }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4 }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {PWM_CONTROLLER_0_o_PWM_DC_VAL_4 }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {DUTY_CYCLE_2_o_OUT }]
+true
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_2] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_3] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets DUTY_CYCLE_0_o_OUT] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets DUTY_CYCLE_2_o_OUT] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_PWM_DC_VAL_4] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets PWM_CONTROLLER_0_o_EN] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets DUTY_CYCLE_1_o_OUT] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets DUTY_CYCLE_3_o_OUT] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode NATIVE, 0 slot interface pins and 13 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /processing_system7_0/FCLK_CLK0 to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1, to System ILA probe pin /system_ila_0/probe0 for debug.
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_PWM_DC_VAL_1, to System ILA probe pin /system_ila_0/probe1 for debug.
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_PWM_DC_VAL_2, to System ILA probe pin /system_ila_0/probe2 for debug.
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2, to System ILA probe pin /system_ila_0/probe3 for debug.
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_PWM_DC_VAL_3, to System ILA probe pin /system_ila_0/probe4 for debug.
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3, to System ILA probe pin /system_ila_0/probe5 for debug.
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4, to System ILA probe pin /system_ila_0/probe6 for debug.
+Debug Automation : Connecting net /DUTY_CYCLE_0_o_OUT, to System ILA probe pin /system_ila_0/probe7 for debug.
+Debug Automation : Connecting net /DUTY_CYCLE_2_o_OUT, to System ILA probe pin /system_ila_0/probe8 for debug.
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_PWM_DC_VAL_4, to System ILA probe pin /system_ila_0/probe9 for debug.
+Debug Automation : Connecting net /PWM_CONTROLLER_0_o_EN, to System ILA probe pin /system_ila_0/probe10 for debug.
+Debug Automation : Connecting net /DUTY_CYCLE_1_o_OUT, to System ILA probe pin /system_ila_0/probe11 for debug.
+Debug Automation : Connecting net /DUTY_CYCLE_3_o_OUT, to System ILA probe pin /system_ila_0/probe12 for debug.
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {23.5} CONFIG.C_PROBE12_WIDTH {32} CONFIG.C_PROBE11_WIDTH {32} CONFIG.C_PROBE10_WIDTH {32} CONFIG.C_PROBE9_WIDTH {32} CONFIG.C_PROBE8_WIDTH {32} CONFIG.C_PROBE7_WIDTH {32} CONFIG.C_PROBE6_WIDTH {32} CONFIG.C_PROBE5_WIDTH {32} CONFIG.C_PROBE4_WIDTH {32} CONFIG.C_PROBE3_WIDTH {32} CONFIG.C_PROBE2_WIDTH {32} CONFIG.C_PROBE1_WIDTH {32} CONFIG.C_PROBE0_WIDTH {32} CONFIG.C_DATA_DEPTH {2048} CONFIG.C_PROBE_WIDTH_PROPAGATION {MANUAL}] [get_bd_cells system_ila_0]
+endgroup
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe10'(32) to net 'PWM_CONTROLLER_0_o_EN'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe10'(32) to net 'PWM_CONTROLLER_0_o_EN'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8296.973 ; gain = 0.000 ; free physical = 875 ; free virtual = 6596
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+[Wed Oct 30 17:48:09 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Wed Oct 30 17:48:09 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+reset_run impl_1
+startgroup
+set_property -dict [list CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_PROBE12_MU_CNT {2} CONFIG.C_PROBE11_MU_CNT {2} CONFIG.C_PROBE10_MU_CNT {2} CONFIG.C_PROBE9_MU_CNT {2} CONFIG.C_PROBE8_MU_CNT {2} CONFIG.C_PROBE7_MU_CNT {2} CONFIG.C_PROBE6_MU_CNT {2} CONFIG.C_PROBE5_MU_CNT {2} CONFIG.C_PROBE4_MU_CNT {2} CONFIG.C_PROBE3_MU_CNT {2} CONFIG.C_PROBE2_MU_CNT {2} CONFIG.C_PROBE1_MU_CNT {2} CONFIG.C_PROBE0_MU_CNT {2} CONFIG.ALL_PROBE_SAME_MU_CNT {2}] [get_bd_cells system_ila_0]
+endgroup
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe10'(32) to net 'PWM_CONTROLLER_0_o_EN'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe10'(32) to net 'PWM_CONTROLLER_0_o_EN'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Oct 30 17:55:01 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Wed Oct 30 17:55:01 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 8608.062 ; gain = 92.086 ; free physical = 1289 ; free virtual = 6630
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-2302] Device xc7z007s (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/system_ila_0/inst/probe7_1} {design_1_i/system_ila_0/inst/probe11_1} {design_1_i/system_ila_0/inst/probe8_1} {design_1_i/system_ila_0/inst/probe12_1} {design_1_i/system_ila_0/inst/probe10_1} {design_1_i/system_ila_0/inst/probe1_1} {design_1_i/system_ila_0/inst/probe2_1} {design_1_i/system_ila_0/inst/probe4_1} {design_1_i/system_ila_0/inst/probe9_1} {design_1_i/system_ila_0/inst/probe0_1} {design_1_i/system_ila_0/inst/probe3_1} {design_1_i/system_ila_0/inst/probe5_1} {design_1_i/system_ila_0/inst/probe6_1} }
+set_property NAME.CUSTOM DUTY_CYCLE_0_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe7_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_1_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe11_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_2_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe8_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_3_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe12_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_EN [get_hw_probes design_1_i/system_ila_0/inst/probe10_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_1 [get_hw_probes design_1_i/system_ila_0/inst/probe1_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_2 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_3 [get_hw_probes design_1_i/system_ila_0/inst/probe4_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_4 [get_hw_probes design_1_i/system_ila_0/inst/probe9_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1 [get_hw_probes design_1_i/system_ila_0/inst/probe0_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2 [get_hw_probes design_1_i/system_ila_0/inst/probe3_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3 [get_hw_probes design_1_i/system_ila_0/inst/probe5_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4 [get_hw_probes design_1_i/system_ila_0/inst/probe6_1] 
+set_property TRIGGER_COMPARE_VALUE eq32'bXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe7_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'bXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXX1 [get_hw_probes design_1_i/system_ila_0/inst/probe7_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 18:10:49
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 18:10:49
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+update_module_reference {design_1_DUTY_CYCLE_0_4 design_1_DUTY_CYCLE_0_5 design_1_DUTY_CYCLE_0_6 design_1_DUTY_CYCLE_0_7}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo'.
+Upgrading '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_4 to use current project options
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_SIGNAL_TAP'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_DUTY_CYCLE_0_4'. These changes may impact your design.
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_5 to use current project options
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_SIGNAL_TAP'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_DUTY_CYCLE_0_5'. These changes may impact your design.
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_6 to use current project options
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_SIGNAL_TAP'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_DUTY_CYCLE_0_6'. These changes may impact your design.
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_7 to use current project options
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_SIGNAL_TAP'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_DUTY_CYCLE_0_7'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_DUTY_CYCLE_0_4' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_DUTY_CYCLE_0_5' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_DUTY_CYCLE_0_6' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_DUTY_CYCLE_0_7' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+update_module_reference: Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 8608.062 ; gain = 0.000 ; free physical = 1381 ; free virtual = 6272
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {18} CONFIG.C_PROBE13_WIDTH {32} CONFIG.C_PROBE12_WIDTH {1} CONFIG.C_PROBE11_WIDTH {1} CONFIG.C_PROBE8_WIDTH {1} CONFIG.C_PROBE7_WIDTH {1} CONFIG.C_NUM_OF_PROBES {14} CONFIG.C_PROBE13_MU_CNT {2}] [get_bd_cells system_ila_0]
+endgroup
+connect_bd_net [get_bd_pins system_ila_0/probe13] [get_bd_pins DUTY_CYCLE_3/o_SIGNAL_TAP]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {DUTY_CYCLE_3_o_SIGNAL_TAP }]
+true
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe10'(32) to net 'PWM_CONTROLLER_0_o_EN'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe10'(32) to net 'PWM_CONTROLLER_0_o_EN'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Oct 30 18:16:31 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Wed Oct 30 18:16:31 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 8727.992 ; gain = 119.930 ; free physical = 1723 ; free virtual = 6594
+reset_run synth_1
+startgroup
+connect_bd_net -net o_SIGNAL_TAP [get_bd_pins DUTY_CYCLE_2/o_SIGNAL_TAP]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {o_SIGNAL_TAP }]
+true
+endgroup
+startgroup
+connect_bd_net -net o_SIGNAL_TAP_1 [get_bd_pins DUTY_CYCLE_1/o_SIGNAL_TAP]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {o_SIGNAL_TAP_1 }]
+true
+endgroup
+startgroup
+connect_bd_net -net o_SIGNAL_TAP_2 [get_bd_pins DUTY_CYCLE_0/o_SIGNAL_TAP]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {o_SIGNAL_TAP_2 }]
+true
+endgroup
+delete_bd_objs [get_bd_nets DUTY_CYCLE_3_o_SIGNAL_TAP]
+startgroup
+connect_bd_net -net o_SIGNAL_TAP_3 [get_bd_pins DUTY_CYCLE_3/o_SIGNAL_TAP]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {o_SIGNAL_TAP_3 }]
+true
+endgroup
+connect_bd_net [get_bd_pins system_ila_0/probe13] [get_bd_pins DUTY_CYCLE_0/o_SIGNAL_TAP]
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {23.5} CONFIG.C_PROBE16_WIDTH {31} CONFIG.C_PROBE15_WIDTH {31} CONFIG.C_PROBE14_WIDTH {31} CONFIG.C_NUM_OF_PROBES {17} CONFIG.C_PROBE16_MU_CNT {2} CONFIG.C_PROBE15_MU_CNT {2} CONFIG.C_PROBE14_MU_CNT {2}] [get_bd_cells system_ila_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {22} CONFIG.C_PROBE10_WIDTH {4}] [get_bd_cells system_ila_0]
+endgroup
+connect_bd_net [get_bd_pins DUTY_CYCLE_3/o_SIGNAL_TAP] [get_bd_pins system_ila_0/probe16]
+connect_bd_net [get_bd_pins DUTY_CYCLE_2/o_SIGNAL_TAP] [get_bd_pins system_ila_0/probe15]
+connect_bd_net [get_bd_pins DUTY_CYCLE_1/o_SIGNAL_TAP] [get_bd_pins system_ila_0/probe14]
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+generate_target all [get_files  /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe15'(31) to net 'o_SIGNAL_TAP'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe14'(31) to net 'o_SIGNAL_TAP_1'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe16'(31) to net 'o_SIGNAL_TAP_3'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe15'(31) to net 'o_SIGNAL_TAP'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe14'(31) to net 'o_SIGNAL_TAP_1'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe16'(31) to net 'o_SIGNAL_TAP_3'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 8743.836 ; gain = 0.000 ; free physical = 1113 ; free virtual = 5987
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/sergaljerk/Module_5/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Module_5/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Module_5/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+[Wed Oct 30 18:25:06 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Wed Oct 30 18:25:06 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-2302] Device xc7z007s (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/system_ila_0/inst/probe7_1} {design_1_i/system_ila_0/inst/probe11_1} {design_1_i/system_ila_0/inst/probe8_1} {design_1_i/system_ila_0/inst/probe12_1} {design_1_i/system_ila_0/inst/probe15_1} {design_1_i/system_ila_0/inst/probe14_1} {design_1_i/system_ila_0/inst/probe13_1} {design_1_i/system_ila_0/inst/probe16_1} {design_1_i/system_ila_0/inst/probe10_1} {design_1_i/system_ila_0/inst/probe1_1} {design_1_i/system_ila_0/inst/probe2_1} {design_1_i/system_ila_0/inst/probe4_1} {design_1_i/system_ila_0/inst/probe9_1} {design_1_i/system_ila_0/inst/probe0_1} {design_1_i/system_ila_0/inst/probe3_1} {design_1_i/system_ila_0/inst/probe5_1} {design_1_i/system_ila_0/inst/probe6_1} }
+set_property NAME.CUSTOM DUTY_CYCLE_0_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe7_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_1_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe11_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_2_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe8_1] 
+set_property NAME.CUSTOM DUTY_CYCLE_3_o_OUT [get_hw_probes design_1_i/system_ila_0/inst/probe12_1] 
+set_property NAME.CUSTOM o_SIGNAL_TAP [get_hw_probes design_1_i/system_ila_0/inst/probe15_1] 
+set_property NAME.CUSTOM o_SIGNAL_TAP_1 [get_hw_probes design_1_i/system_ila_0/inst/probe14_1] 
+set_property NAME.CUSTOM o_SIGNAL_TAP_2 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1] 
+set_property NAME.CUSTOM o_SIGNAL_TAP_3 [get_hw_probes design_1_i/system_ila_0/inst/probe16_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_EN [get_hw_probes design_1_i/system_ila_0/inst/probe10_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_1 [get_hw_probes design_1_i/system_ila_0/inst/probe1_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_2 [get_hw_probes design_1_i/system_ila_0/inst/probe2_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_3 [get_hw_probes design_1_i/system_ila_0/inst/probe4_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_DC_VAL_4 [get_hw_probes design_1_i/system_ila_0/inst/probe9_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1 [get_hw_probes design_1_i/system_ila_0/inst/probe0_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2 [get_hw_probes design_1_i/system_ila_0/inst/probe3_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3 [get_hw_probes design_1_i/system_ila_0/inst/probe5_1] 
+set_property NAME.CUSTOM PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4 [get_hw_probes design_1_i/system_ila_0/inst/probe6_1] 
+set_property TRIGGER_COMPARE_VALUE eq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe1_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq31'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe15_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq31'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe15_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq31'u1000 [get_hw_probes design_1_i/system_ila_0/inst/probe15_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 18:36:08
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 18:36:08
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq31'u1000 [get_hw_probes design_1_i/system_ila_0/inst/probe15_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 18:36:24
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+set_property TRIGGER_COMPARE_VALUE eq31'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe15_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u1000 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2019-Oct-30 18:37:18
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 18:37:21
+set_property TRIGGER_COMPARE_VALUE eq32'b0000_0000_0000_0000_0000_0011_1110_1000 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2019-Oct-30 18:37:55
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 18:37:56
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 18:37:56
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 18:38:19
+update_module_reference {design_1_DUTY_CYCLE_0_4 design_1_DUTY_CYCLE_0_5 design_1_DUTY_CYCLE_0_6 design_1_DUTY_CYCLE_0_7}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo'.
+Upgrading '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_4 to use current project options
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_5 to use current project options
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_6 to use current project options
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_7 to use current project options
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+update_module_reference: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 8878.207 ; gain = 12.215 ; free physical = 1240 ; free virtual = 5800
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins DUTY_CYCLE_3/i_RST]
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins DUTY_CYCLE_0/i_RST]
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins DUTY_CYCLE_2/i_RST]
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins DUTY_CYCLE_1/i_RST]
+disconnect_bd_net /rst_ps7_0_50M_peripheral_aresetn [get_bd_pins DUTY_CYCLE_1/i_RST]
+disconnect_bd_net /rst_ps7_0_50M_peripheral_aresetn [get_bd_pins DUTY_CYCLE_0/i_RST]
+disconnect_bd_net /rst_ps7_0_50M_peripheral_aresetn [get_bd_pins DUTY_CYCLE_3/i_RST]
+disconnect_bd_net /rst_ps7_0_50M_peripheral_aresetn [get_bd_pins DUTY_CYCLE_2/i_RST]
+connect_bd_net [get_bd_pins DUTY_CYCLE_1/i_RST] [get_bd_pins DUTY_CYCLE_2/i_RST]
+connect_bd_net [get_bd_pins DUTY_CYCLE_0/i_RST] [get_bd_pins DUTY_CYCLE_1/i_RST]
+connect_bd_net [get_bd_pins DUTY_CYCLE_3/i_RST] [get_bd_pins DUTY_CYCLE_1/i_RST]
+set_property location {-162 718} [get_bd_ports reset_rtl_0]
+undo
+INFO: [Common 17-17] undo 'set_property location {-162 718} [get_bd_ports reset_rtl_0]'
+connect_bd_net [get_bd_ports reset_rtl_0] [get_bd_pins DUTY_CYCLE_0/i_RST]
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:37]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim/xsim.dir/dctb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim/xsim.dir/dctb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Oct 30 18:45:36 2019. For additional details about this file, please refer to the WebTalk help file at /opt/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Oct 30 18:45:36 2019...
+run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 8878.211 ; gain = 0.000 ; free physical = 1326 ; free virtual = 5817
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/bd_36cd.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_36cd.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_36cd.protoinst for the following reason(s):
+There are no instances of module "bd_36cd" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 8947.023 ; gain = 68.812 ; free physical = 1306 ; free virtual = 5804
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dctb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj dctb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/new/DUTY_CYCLE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DUTY_CYCLE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dctb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto c4e92715f0d44f9090a199db67af1979 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dctb_behav xil_defaultlib.dctb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_EN' [/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v:37]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DUTY_CYCLE
+Compiling module xil_defaultlib.dctb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dctb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/sergaljerk/Module_5/m5/m5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dctb_behav -key {Behavioral:sim_1:Functional:dctb} -tclbatch {dctb.tcl} -protoinst "protoinst_files/bd_36cd.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_36cd.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_36cd.protoinst for the following reason(s):
+There are no instances of module "bd_36cd" in the design.
+
+Time resolution is 1 ps
+source dctb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dctb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 8958.035 ; gain = 0.000 ; free physical = 1329 ; free virtual = 5806
+run 10 us
+$finish called at time : 1270 ns : File "/home/sergaljerk/Module_5/m5/m5.srcs/sim_1/new/dctb.v" Line 56
+run 10 ms
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_0/i_RST (associated clock /DUTY_CYCLE_0/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_1/i_RST (associated clock /DUTY_CYCLE_1/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_2/i_RST (associated clock /DUTY_CYCLE_2/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_3/i_RST (associated clock /DUTY_CYCLE_3/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+ERROR: [BD 41-238] Port/Pin property POLARITY does not match between /DUTY_CYCLE_1/i_RST(ACTIVE_HIGH) and /reset_rtl_0(ACTIVE_LOW)
+ERROR: [BD 41-238] Port/Pin property POLARITY does not match between /DUTY_CYCLE_2/i_RST(ACTIVE_HIGH) and /reset_rtl_0(ACTIVE_LOW)
+ERROR: [BD 41-238] Port/Pin property POLARITY does not match between /DUTY_CYCLE_0/i_RST(ACTIVE_HIGH) and /reset_rtl_0(ACTIVE_LOW)
+ERROR: [BD 41-238] Port/Pin property POLARITY does not match between /DUTY_CYCLE_3/i_RST(ACTIVE_HIGH) and /reset_rtl_0(ACTIVE_LOW)
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd 
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+set_property CONFIG.POLARITY ACTIVE_HIGH [get_bd_ports reset_rtl_0]
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_0/i_RST (associated clock /DUTY_CYCLE_0/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_1/i_RST (associated clock /DUTY_CYCLE_1/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_2/i_RST (associated clock /DUTY_CYCLE_2/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_3/i_RST (associated clock /DUTY_CYCLE_3/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe15'(31) to net 'o_SIGNAL_TAP'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe14'(31) to net 'o_SIGNAL_TAP_1'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe16'(31) to net 'o_SIGNAL_TAP_3'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe15'(31) to net 'o_SIGNAL_TAP'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe14'(31) to net 'o_SIGNAL_TAP_1'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/system_ila_0/probe16'(31) to net 'o_SIGNAL_TAP_3'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Oct 30 18:49:31 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Wed Oct 30 18:49:31 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 9130.469 ; gain = 129.453 ; free physical = 1291 ; free virtual = 5735
+reset_run synth_1
+startgroup
+set_property -dict [list CONFIG.C_PROBE16_WIDTH {32} CONFIG.C_PROBE15_WIDTH {32} CONFIG.C_PROBE14_WIDTH {32}] [get_bd_cells system_ila_0]
+endgroup
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_0/i_RST (associated clock /DUTY_CYCLE_0/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_1/i_RST (associated clock /DUTY_CYCLE_1/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_2/i_RST (associated clock /DUTY_CYCLE_2/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_3/i_RST (associated clock /DUTY_CYCLE_3/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Oct 30 18:52:13 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Wed Oct 30 18:52:13 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 9246.844 ; gain = 116.375 ; free physical = 934 ; free virtual = 5376
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 18:56:44
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-2302] Device xc7z007s (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u1000 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u14 [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 19:02:35
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2019-Oct-30 19:02:45
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 19:02:46
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 19:02:48
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_nets util_vector_logic_0_Res]
+delete_bd_objs [get_bd_cells util_vector_logic_0]
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_0/i_RST (associated clock /DUTY_CYCLE_0/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_1/i_RST (associated clock /DUTY_CYCLE_1/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_2/i_RST (associated clock /DUTY_CYCLE_2/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+CRITICAL WARNING: [BD 41-1347] Reset pin /DUTY_CYCLE_3/i_RST (associated clock /DUTY_CYCLE_3/i_CLK) is connected to asynchronous reset source /reset_rtl_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_reset.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Oct 30 19:05:31 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Wed Oct 30 19:05:31 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 9367.133 ; gain = 99.855 ; free physical = 1751 ; free virtual = 5916
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-2302] Device xc7z007s (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+set_property TRIGGER_COMPARE_VALUE eq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/inst/probe13_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u0 [get_hw_probes design_1_i/system_ila_0/inst/probe16_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'u14 [get_hw_probes design_1_i/system_ila_0/inst/probe16_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 19:19:10
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 19:19:15
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+update_module_reference {design_1_DUTY_CYCLE_0_4 design_1_DUTY_CYCLE_0_5 design_1_DUTY_CYCLE_0_6 design_1_DUTY_CYCLE_0_7}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Module_5/ip_repo/PWM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo'.
+Upgrading '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_4 to use current project options
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'i_RST'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_DUTY_CYCLE_0_4'.
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'i_RST'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_DUTY_CYCLE_0_4'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'i_RST' is not found on the upgraded version of the cell '/DUTY_CYCLE_0'. Its connection to the net 'reset_rtl_0_1' has been removed.
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_5 to use current project options
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'i_RST'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_DUTY_CYCLE_0_5'.
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'i_RST'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_DUTY_CYCLE_0_5'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'i_RST' is not found on the upgraded version of the cell '/DUTY_CYCLE_1'. Its connection to the net 'reset_rtl_0_1' has been removed.
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_6 to use current project options
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'i_RST'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_DUTY_CYCLE_0_6'.
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'i_RST'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_DUTY_CYCLE_0_6'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'i_RST' is not found on the upgraded version of the cell '/DUTY_CYCLE_2'. Its connection to the net 'reset_rtl_0_1' has been removed.
+INFO: [IP_Flow 19-3420] Updated design_1_DUTY_CYCLE_0_7 to use current project options
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'i_RST'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_DUTY_CYCLE_0_7'.
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'i_RST'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_DUTY_CYCLE_0_7'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'i_RST' is not found on the upgraded version of the cell '/DUTY_CYCLE_3'. Its connection to the net 'reset_rtl_0_1' has been removed.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_DUTY_CYCLE_0_4' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_DUTY_CYCLE_0_5' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_DUTY_CYCLE_0_6' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_DUTY_CYCLE_0_7' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+update_module_reference: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 9390.145 ; gain = 23.012 ; free physical = 1451 ; free virtual = 5496
+delete_bd_objs [get_bd_nets reset_rtl_0_1] [get_bd_ports reset_rtl_0]
+save_bd_design
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_1/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_2/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /DUTY_CYCLE_3/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_1_FCLK_CLK0 
+Wrote  : </home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DUTY_CYCLE_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Oct 30 19:26:03 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/synth_1/runme.log
+[Wed Oct 30 19:26:03 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Module_5/m5/m5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 9499.629 ; gain = 109.484 ; free physical = 2104 ; free virtual = 6112
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Netlist 29-17] Analyzing 1880 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 9499.629 ; gain = 0.000 ; free physical = 1797 ; free virtual = 5906
+INFO: [Common 17-344] 'open_run' was cancelled
+file copy -force /home/sergaljerk/Module_5/m5/m5.runs/impl_1/design_1_wrapper.sysdef /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/sergaljerk/Module_5/m5/m5.sdk -hwspec /home/sergaljerk/Module_5/m5/m5.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000093A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z007s (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+INFO: [Labtools 27-2302] Device xc7z007s (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 19:40:09
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2019-Oct-30 19:40:38
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+set_property TRIGGER_COMPARE_VALUE eq4'hF [get_hw_probes design_1_i/system_ila_0/inst/probe10_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 19:40:56
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 19:41:10
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 19:42:55
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 19:44:01
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq32'u24 [get_hw_probes design_1_i/system_ila_0/inst/probe16_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 19:47:46
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 19:47:46
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 19:49:24
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 19:49:24
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2019-Oct-30 19:50:21
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z007s_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2019-Oct-30 19:50:21
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/sergaljerk/Module_5/m5/m5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+open_bd_design {/home/sergaljerk/Module_5/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/887100000093A
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 30 19:53:10 2019...

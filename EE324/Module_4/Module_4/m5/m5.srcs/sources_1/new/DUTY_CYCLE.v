@@ -23,6 +23,7 @@
 module DUTY_CYCLE(
     input wire i_CLK,
     input wire i_EN,
+    input wire i_CEN,
     input  wire [31:0] i_DC_VAL, //Duty cycle numerator
     input  wire [31:0] i_PULSE_WINDOW, //Duty cycle denominator
     output wire [31:0] o_SIGNAL_TAP,
@@ -35,7 +36,8 @@ module DUTY_CYCLE(
 assign o_SIGNAL_TAP = r_COUNT;
     always@(posedge i_CLK)
     begin
-
+            if(i_CEN) 
+            begin
             if( r_COUNT == i_PULSE_WINDOW - 1)
                 begin
                     r_COUNT <= 0;
@@ -44,10 +46,13 @@ assign o_SIGNAL_TAP = r_COUNT;
                 begin
                     r_COUNT <= r_COUNT + 1;
                 end
+            end
+            else
+                r_COUNT <= r_COUNT;
     end
     always@(posedge i_CLK)
     begin
-        if(r_COUNT < i_DC_VAL)
+        if((r_COUNT < i_DC_VAL))
             begin
                 o_OUT <= (1 & i_EN);
             end

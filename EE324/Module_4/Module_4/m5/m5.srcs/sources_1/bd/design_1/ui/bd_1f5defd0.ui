@@ -2,60 +2,66 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 8 -x 2580 -y 990 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 8 -x 2580 -y 1010 -defaultsOSRD
-preplace port o_OUT_0 -pg 1 -lvl 8 -x 2580 -y 480 -defaultsOSRD
-preplace port o_OUT_2 -pg 1 -lvl 8 -x 2580 -y 930 -defaultsOSRD
-preplace port o_OUT_1 -pg 1 -lvl 8 -x 2580 -y 950 -defaultsOSRD
-preplace port o_OUT_3 -pg 1 -lvl 8 -x 2580 -y 970 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 530 -y 1040 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 910 -y 820 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -x 530 -y 820 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 5 -x 1660 -y 480 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 5 -x 1660 -y 100 -defaultsOSRD
-preplace inst xlslice_2 -pg 1 -lvl 5 -x 1660 -y 280 -defaultsOSRD
-preplace inst xlslice_3 -pg 1 -lvl 5 -x 1660 -y 710 -defaultsOSRD
-preplace inst PWM_CONTROLLER_0 -pg 1 -lvl 4 -x 1280 -y 830 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 7 -x 2460 -y 710 -defaultsOSRD
-preplace inst DUTY_CYCLE_0 -pg 1 -lvl 6 -x 2050 -y 480 -defaultsOSRD
-preplace inst DUTY_CYCLE_1 -pg 1 -lvl 6 -x 2050 -y 100 -defaultsOSRD
-preplace inst DUTY_CYCLE_2 -pg 1 -lvl 6 -x 2050 -y 280 -defaultsOSRD
-preplace inst DUTY_CYCLE_3 -pg 1 -lvl 6 -x 2050 -y 1110 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 6 190 710 740 670 1070 650 NJ 650 1800 590 2280J
-preplace netloc PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1 1 4 3 1510J 580 1760 570 2290
-preplace netloc PWM_CONTROLLER_0_o_PWM_DC_VAL_1 1 4 3 1520J 590 1790 580 N
-preplace netloc PWM_CONTROLLER_0_o_PWM_DC_VAL_2 1 4 3 1530J 600 1770 600 NJ
-preplace netloc PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2 1 4 3 1540J 620 1780 620 NJ
-preplace netloc PWM_CONTROLLER_0_o_PWM_DC_VAL_3 1 4 3 1550J 630 1820 640 NJ
-preplace netloc PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3 1 4 3 1560J 640 1810 660 NJ
-preplace netloc PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4 1 4 3 NJ 890 1810 680 NJ
-preplace netloc DUTY_CYCLE_0_o_OUT 1 6 2 2330 480 NJ
-preplace netloc DUTY_CYCLE_2_o_OUT 1 6 2 2260 940 2560J
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 200 720 730
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 2 2 760 680 1060
-preplace netloc PWM_CONTROLLER_0_o_PWM_DC_VAL_4 1 4 3 NJ 910 1820 740 NJ
-preplace netloc PWM_CONTROLLER_0_o_EN 1 4 3 1500 610 NJ 610 2290
-preplace netloc xlslice_0_Dout 1 5 1 1790 470n
-preplace netloc xlslice_1_Dout 1 5 1 1760 90n
-preplace netloc xlslice_2_Dout 1 5 1 1760 270n
-preplace netloc xlslice_3_Dout 1 5 1 1780 710n
-preplace netloc DUTY_CYCLE_1_o_OUT 1 6 2 2270 950 NJ
-preplace netloc DUTY_CYCLE_3_o_OUT 1 6 2 2330 970 NJ
+preplace port DDR -pg 1 -lvl 8 -x 2590 -y 890 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2590 -y 910 -defaultsOSRD
+preplace port o_OUT_0 -pg 1 -lvl 8 -x 2590 -y 290 -defaultsOSRD
+preplace port o_OUT_2 -pg 1 -lvl 8 -x 2590 -y 770 -defaultsOSRD
+preplace port o_OUT_1 -pg 1 -lvl 8 -x 2590 -y 790 -defaultsOSRD
+preplace port o_OUT_3 -pg 1 -lvl 8 -x 2590 -y 810 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 230 -y 940 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 610 -y 750 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 230 -y 730 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 5 -x 1600 -y 480 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 5 -x 1600 -y 80 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 5 -x 1600 -y 260 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 5 -x 1600 -y 730 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 7 -x 2470 -y 530 -defaultsOSRD
+preplace inst PWM_CONTROLLER_0 -pg 1 -lvl 3 -x 990 -y 580 -defaultsOSRD
+preplace inst xlslice_5 -pg 1 -lvl 4 -x 1320 -y 380 -defaultsOSRD
+preplace inst DUTY_CYCLE_0 -pg 1 -lvl 6 -x 2040 -y 540 -defaultsOSRD
+preplace inst DUTY_CYCLE_1 -pg 1 -lvl 6 -x 2040 -y 100 -defaultsOSRD
+preplace inst DUTY_CYCLE_2 -pg 1 -lvl 6 -x 2040 -y 280 -defaultsOSRD
+preplace inst DUTY_CYCLE_3 -pg 1 -lvl 6 -x 2040 -y 750 -defaultsOSRD
+preplace inst PWM_CLK_EN_0 -pg 1 -lvl 5 -x 1600 -y 370 -defaultsOSRD
+preplace inst RGB_PWM_0 -pg 1 -lvl 3 -x 990 -y 780 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 7 20 630 450 610 780 320 NJ 320 1450 200 1800 380 2250J
+preplace netloc PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1 1 3 4 NJ 520 1450J 540 1780 420 2280J
+preplace netloc PWM_CONTROLLER_0_o_PWM_DC_VAL_1 1 3 4 NJ 540 1430J 550 1840 390 NJ
+preplace netloc PWM_CONTROLLER_0_o_PWM_DC_VAL_2 1 3 4 NJ 580 NJ 580 1760 400 2360J
+preplace netloc PWM_CONTROLLER_0_o_PWM_FREQ_VAL_2 1 3 4 NJ 560 NJ 560 1770 410 2320J
+preplace netloc PWM_CONTROLLER_0_o_PWM_DC_VAL_3 1 3 4 NJ 620 NJ 620 1810 430 2300J
+preplace netloc PWM_CONTROLLER_0_o_PWM_FREQ_VAL_3 1 3 4 NJ 600 NJ 600 1820 440 2280J
+preplace netloc PWM_CONTROLLER_0_o_PWM_FREQ_VAL_4 1 3 4 NJ 640 NJ 640 1760 640 2280J
+preplace netloc DUTY_CYCLE_0_o_OUT 1 6 2 2270 290 NJ
+preplace netloc DUTY_CYCLE_2_o_OUT 1 6 2 2260 770 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 830 430
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 440 600 760
+preplace netloc PWM_CONTROLLER_0_o_PWM_DC_VAL_4 1 3 4 NJ 660 NJ 660 1830 650 2320J
+preplace netloc PWM_CONTROLLER_0_o_EN 1 3 4 1210 500 1440 850 NJ 850 2340J
+preplace netloc xlslice_0_Dout 1 5 1 1830J 480n
+preplace netloc xlslice_1_Dout 1 5 1 NJ 80
+preplace netloc xlslice_2_Dout 1 5 1 NJ 260
+preplace netloc xlslice_3_Dout 1 5 1 NJ 730
+preplace netloc DUTY_CYCLE_1_o_OUT 1 6 2 2290 790 NJ
+preplace netloc DUTY_CYCLE_3_o_OUT 1 6 2 2360 810 NJ
 preplace netloc o_SIGNAL_TAP 1 6 1 2310 270n
-preplace netloc o_SIGNAL_TAP_1 1 6 1 2320 90n
-preplace netloc o_SIGNAL_TAP_2 1 6 1 2300 470n
-preplace netloc o_SIGNAL_TAP_3 1 6 1 2340 880n
-preplace netloc processing_system7_0_FIXED_IO 1 2 6 NJ 1010 NJ 1010 NJ 1010 NJ 1010 NJ 1010 NJ
-preplace netloc processing_system7_0_DDR 1 2 6 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ
-preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 N 810
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 750 740n
-levelinfo -pg 1 0 170 530 910 1280 1660 2050 2460 2580
-pagesize -pg 1 -db -bbox -sgen 0 0 2700 1210
+preplace netloc o_SIGNAL_TAP_1 1 6 1 2330 90n
+preplace netloc o_SIGNAL_TAP_2 1 6 1 2250 530n
+preplace netloc o_SIGNAL_TAP_3 1 6 1 2350 690n
+preplace netloc xlslice_5_Dout 1 4 1 NJ 380
+preplace netloc PWM_CLK_EN_0_o_CLK_EN 1 5 2 1790 860 2370J
+preplace netloc processing_system7_0_DDR 1 1 7 NJ 890 NJ 890 NJ 890 NJ 890 NJ 890 NJ 890 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 7 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 770 560n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 460 670n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N 760
+levelinfo -pg 1 0 230 610 990 1320 1600 2040 2470 2590
+pagesize -pg 1 -db -bbox -sgen 0 0 2710 1050
 "
 }
 {
-   "da_axi4_cnt":"3",
+   "da_axi4_cnt":"4",
    "da_board_cnt":"6",
-   "da_clkrst_cnt":"21",
+   "da_clkrst_cnt":"23",
    "da_ps7_cnt":"2"
 }

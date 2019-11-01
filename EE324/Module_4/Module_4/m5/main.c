@@ -1,22 +1,28 @@
 /*
  * main.c
  *
- *  Created on: Oct 27, 2019
+ *  Created on: Oct 30, 2019
  *      Author: root
  */
+
 
 #include "PWM_CONTROLLER.h"
 
 int main(void)
 {
-enablePWM(0xF);
-setPWMFreq(ONE,MASTER_CLK_FREQ);
-setPWMFreq(TWO,MASTER_CLK_FREQ);
-setPWMFreq(THREE,MASTER_CLK_FREQ);
-setPWMFreq(FOUR,MASTER_CLK_FREQ);
-setDC(FOUR,100);
-setDC(THREE,75);
-setDC(TWO,50);
-setDC(ONE,25);
+	while(1)
+	{
+		enablePWM(0xF);
+		//SET PWM Window
+		*(PWM_ADDR + 1) = 100;
+		*(PWM_ADDR + 2) = 100;
+		*(PWM_ADDR + 3) = 100;
+		*(PWM_ADDR + 4) = 100;
 
+		//SET DC VALUE
+		*(PWM_ADDR + 5) = 100;
+		*(PWM_ADDR + 6) = 75;
+		*(PWM_ADDR + 7) = 50;
+		*(PWM_ADDR + 8) = 25;
+	}
 }

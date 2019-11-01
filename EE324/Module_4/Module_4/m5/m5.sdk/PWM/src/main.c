@@ -1,7 +1,7 @@
 /*
  * main.c
  *
- *  Created on: Oct 30, 2019
+ *  Created on: Oct 31, 2019
  *      Author: root
  */
 
@@ -12,8 +12,9 @@ int main(void)
 {
 	while(1)
 	{
-		enablePWM(0xF);
+		//enablePWM(0xF);
 		//SET PWM Window
+		*(PWM_ADDR) = 0x0111111F;
 		*(PWM_ADDR + 1) = 100;
 		*(PWM_ADDR + 2) = 100;
 		*(PWM_ADDR + 3) = 100;
@@ -21,8 +22,9 @@ int main(void)
 
 		//SET DC VALUE
 		*(PWM_ADDR + 5) = 100;
-		*(PWM_ADDR + 6) = 75;
-		*(PWM_ADDR + 7) = 50;
-		*(PWM_ADDR + 8) = 25;
+		*(PWM_ADDR + 6) = 10;
+		*(PWM_ADDR + 7) = 10;
+		*(PWM_ADDR + 8) = 100;
+
 	}
 }

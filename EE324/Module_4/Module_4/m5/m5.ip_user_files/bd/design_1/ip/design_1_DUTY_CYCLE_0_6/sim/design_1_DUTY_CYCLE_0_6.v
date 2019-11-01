@@ -56,21 +56,19 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_DUTY_CYCLE_0_6 (
   i_CLK,
-  i_RST,
   i_EN,
+  i_CEN,
   i_DC_VAL,
   i_PULSE_WINDOW,
   o_SIGNAL_TAP,
   o_OUT
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, ASSOCIATED_RESET i_RST, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
-input wire i_RST;
 input wire i_EN;
+input wire i_CEN;
 input wire [31 : 0] i_DC_VAL;
 input wire [31 : 0] i_PULSE_WINDOW;
 output wire [31 : 0] o_SIGNAL_TAP;
@@ -78,8 +76,8 @@ output wire o_OUT;
 
   DUTY_CYCLE inst (
     .i_CLK(i_CLK),
-    .i_RST(i_RST),
     .i_EN(i_EN),
+    .i_CEN(i_CEN),
     .i_DC_VAL(i_DC_VAL),
     .i_PULSE_WINDOW(i_PULSE_WINDOW),
     .o_SIGNAL_TAP(o_SIGNAL_TAP),

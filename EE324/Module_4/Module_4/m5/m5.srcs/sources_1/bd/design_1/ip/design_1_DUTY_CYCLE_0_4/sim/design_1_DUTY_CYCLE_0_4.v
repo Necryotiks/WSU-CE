@@ -57,6 +57,7 @@
 module design_1_DUTY_CYCLE_0_4 (
   i_CLK,
   i_EN,
+  i_CEN,
   i_DC_VAL,
   i_PULSE_WINDOW,
   o_SIGNAL_TAP,
@@ -67,6 +68,7 @@ module design_1_DUTY_CYCLE_0_4 (
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
 input wire i_EN;
+input wire i_CEN;
 input wire [31 : 0] i_DC_VAL;
 input wire [31 : 0] i_PULSE_WINDOW;
 output wire [31 : 0] o_SIGNAL_TAP;
@@ -75,6 +77,7 @@ output wire o_OUT;
   DUTY_CYCLE inst (
     .i_CLK(i_CLK),
     .i_EN(i_EN),
+    .i_CEN(i_CEN),
     .i_DC_VAL(i_DC_VAL),
     .i_PULSE_WINDOW(i_PULSE_WINDOW),
     .o_SIGNAL_TAP(o_SIGNAL_TAP),
