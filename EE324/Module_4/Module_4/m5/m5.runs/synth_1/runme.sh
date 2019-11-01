@@ -7,9 +7,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/necryotiks/Xilinx/SDK/2019.1/bin:/home/necryotiks/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/home/necryotiks/Xilinx/Vivado/2019.1/bin
+  PATH=/opt/SDK/2019.1/bin:/opt/Vivado/2019.1/ids_lite/ISE/bin/lin64:/opt/Vivado/2019.1/bin
 else
-  PATH=/home/necryotiks/Xilinx/SDK/2019.1/bin:/home/necryotiks/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/home/necryotiks/Xilinx/Vivado/2019.1/bin:$PATH
+  PATH=/opt/SDK/2019.1/bin:/opt/Vivado/2019.1/ids_lite/ISE/bin/lin64:/opt/Vivado/2019.1/bin:$PATH
 fi
 export PATH
 
@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/necryotiks/Documents/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.runs/synth_1'
+HD_PWD='/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+EAStep vivado -log design_2_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_2_wrapper.tcl

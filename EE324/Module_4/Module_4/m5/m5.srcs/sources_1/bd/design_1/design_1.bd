@@ -5,7 +5,8 @@
       "device": "xc7z007sclg400-1",
       "name": "design_1",
       "synth_flow_mode": "None",
-      "tool_version": "2019.1"
+      "tool_version": "2019.1",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -29,17 +30,72 @@
       "DUTY_CYCLE_1": "",
       "DUTY_CYCLE_2": "",
       "DUTY_CYCLE_3": "",
-      "PWM_CLK_EN_0": "",
-      "RGB_PWM_0": ""
+      "PWM_CLK_EN_0": ""
     },
     "interface_ports": {
       "DDR": {
         "mode": "Master",
-        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0"
+        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0",
+        "parameters": {
+          "AXI_ARBITRATION_SCHEME": {
+            "value": "TDM",
+            "value_src": "default"
+          },
+          "BURST_LENGTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "CAS_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CAS_WRITE_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CS_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_MASK_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_WIDTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "MEMORY_TYPE": {
+            "value": "COMPONENTS",
+            "value_src": "default"
+          },
+          "MEM_ADDR_MAP": {
+            "value": "ROW_COLUMN_BANK",
+            "value_src": "default"
+          },
+          "SLOT": {
+            "value": "Single",
+            "value_src": "default"
+          },
+          "TIMEPERIOD_PS": {
+            "value": "1250",
+            "value_src": "default"
+          }
+        }
       },
       "FIXED_IO": {
         "mode": "Master",
-        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0"
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          }
+        }
       }
     },
     "ports": {
@@ -1124,12 +1180,6 @@
           }
         },
         "interface_nets": {
-          "m01_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
-            ]
-          },
           "m00_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
@@ -1140,6 +1190,12 @@
             "interface_ports": [
               "s00_couplers/M_AXI",
               "xbar/S00_AXI"
+            ]
+          },
+          "m01_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -1465,7 +1521,17 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_1_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
           },
           "i_EN": {
             "direction": "I"
@@ -1504,7 +1570,17 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_1_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
           },
           "i_EN": {
             "direction": "I"
@@ -1543,7 +1619,17 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_1_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
           },
           "i_EN": {
             "direction": "I"
@@ -1582,7 +1668,17 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_1_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
           },
           "i_EN": {
             "direction": "I"
@@ -1621,7 +1717,17 @@
         "ports": {
           "i_CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_1_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
           },
           "i_PWM_FREQ": {
             "direction": "I",
@@ -1632,23 +1738,19 @@
             "direction": "O"
           }
         }
-      },
-      "RGB_PWM_0": {
-        "vlnv": "user.org:user:RGB_PWM:1.0",
-        "xci_name": "design_1_RGB_PWM_0_0"
       }
     },
     "interface_nets": {
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
-        ]
-      },
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
           "PWM_CONTROLLER_0/S00_AXI"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       },
       "processing_system7_0_M_AXI_GP0": {
@@ -1661,12 +1763,6 @@
         "interface_ports": [
           "DDR",
           "processing_system7_0/DDR"
-        ]
-      },
-      "ps7_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M01_AXI",
-          "RGB_PWM_0/S00_AXI"
         ]
       }
     },
@@ -1686,8 +1782,7 @@
           "DUTY_CYCLE_1/i_CLK",
           "DUTY_CYCLE_2/i_CLK",
           "DUTY_CYCLE_3/i_CLK",
-          "PWM_CLK_EN_0/i_CLK",
-          "RGB_PWM_0/s00_axi_aclk"
+          "PWM_CLK_EN_0/i_CLK"
         ]
       },
       "PWM_CONTROLLER_0_o_PWM_FREQ_VAL_1": {
@@ -1838,8 +1933,7 @@
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
           "ps7_0_axi_periph/M01_ARESETN",
-          "PWM_CONTROLLER_0/s00_axi_aresetn",
-          "RGB_PWM_0/s00_axi_aresetn"
+          "PWM_CONTROLLER_0/s00_axi_aresetn"
         ]
       },
       "PWM_CONTROLLER_0_o_PWM_DC_VAL_4": {
@@ -2022,11 +2116,6 @@
                 "address_block": "/PWM_CONTROLLER_0/S00_AXI/S00_AXI_reg",
                 "offset": "0x4BB03000",
                 "range": "4K"
-              },
-              "SEG_RGB_PWM_0_S00_AXI_reg": {
-                "address_block": "/RGB_PWM_0/S00_AXI/S00_AXI_reg",
-                "offset": "0x43C00000",
-                "range": "64K"
               }
             }
           }

@@ -1,4 +1,54 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Thu Oct 31 21:15:50 2019
+| Host         : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+-------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_RGB_PWM_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_2_RGB_PWM_0_0 (user.org:user:RGB_PWM:1.0) from (Rev. 1) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_2_RGB_PWM_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'o_DC_VAL_B'
+
+-Upgrade has added port 'o_DC_VAL_G'
+
+-Upgrade has added port 'o_DC_VAL_R'
+
+-Upgrade has added port 'o_EN'
+
+-Upgrade has added port 'o_PFREQ_VAL_B'
+
+-Upgrade has added port 'o_PFREQ_VAL_G'
+
+-Upgrade has added port 'o_PFREQ_VAL_R'
+
+-Upgrade has added port 'o_PSW_VAL_B'
+
+-Upgrade has added port 'o_PSW_VAL_G'
+
+-Upgrade has added port 'o_PSW_VAL_R'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
 | Date         : Thu Oct 31 12:48:36 2019
