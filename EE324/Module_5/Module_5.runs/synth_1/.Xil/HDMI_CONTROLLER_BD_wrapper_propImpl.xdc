@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.xdc rfile:../../../Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.xdc id:1 order:EARLY scoped_inst:HDMI_CONTROLLER_BD_i/clk_wiz_0/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc rfile:../../../Module_5.srcs/constrs_1/new/hdmi_cons.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.xdc rfile:../../../Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.xdc id:1 order:EARLY scoped_inst:HDMI_CONTROLLER_BD_i/clk_wiz_0/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc rfile:../../../Module_5.srcs/constrs_1/new/hdmi_cons.xdc id:2} [current_design]
 current_instance HDMI_CONTROLLER_BD_i/clk_wiz_0/inst
 set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.1

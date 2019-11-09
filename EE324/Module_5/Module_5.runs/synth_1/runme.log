@@ -3,32 +3,44 @@
     with args -log HDMI_CONTROLLER_BD_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDMI_CONTROLLER_BD_wrapper.tcl
 
 
-****** Vivado v2018.3 (64-bit)
-  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source HDMI_CONTROLLER_BD_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Sergaljerk/WSU-CPTE/IP_REPOS'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
 Command: synth_design -top HDMI_CONTROLLER_BD_wrapper -part xc7z007sclg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9416 
-WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:145]
-WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:146]
-WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:147]
-WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:148]
+INFO: Helper process launched with PID 17116 
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:145]
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:146]
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:147]
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:148]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 408.773 ; gain = 110.871
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1742.562 ; gain = 155.652 ; free physical = 3203 ; free virtual = 8559
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_wrapper' [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/hdl/HDMI_CONTROLLER_BD_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD' [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/synth/HDMI_CONTROLLER_BD.v:13]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_VGA_controller_0_0' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_VGA_controller_0_0/synth/HDMI_CONTROLLER_BD_VGA_controller_0_0.v:59]
-INFO: [Synth 8-6157] synthesizing module 'VGA_controller' [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/VGA_controller.v:23]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_wrapper' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/hdl/HDMI_CONTROLLER_BD_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/synth/HDMI_CONTROLLER_BD.v:13]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_VGA_controller_0_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_VGA_controller_0_0/synth/HDMI_CONTROLLER_BD_VGA_controller_0_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'VGA_controller' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/VGA_controller.v:23]
 	Parameter v_END_OF_LINE bound to: 1650 - type: integer 
 	Parameter v_END_OF_SCREEN bound to: 750 - type: integer 
 	Parameter v_HORIZONTAL_ACTIVE_START bound to: 0 - type: integer 
@@ -41,18 +53,18 @@ INFO: [Synth 8-6157] synthesizing module 'VGA_controller' [C:/Users/Sergaljerk/W
 	Parameter v_VERTICAL_FRONT_PORCH bound to: 5 - type: integer 
 	Parameter v_VERTICAL_BACK_PORCH bound to: 20 - type: integer 
 	Parameter v_VERTICAL_SYNC_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'VGA_controller' (1#1) [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/VGA_controller.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_VGA_controller_0_0' (2#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_VGA_controller_0_0/synth/HDMI_CONTROLLER_BD_VGA_controller_0_0.v:59]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_clk_wiz_0_0' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.v:71]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_clk_wiz_0_0_clk_wiz' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0_clk_wiz.v:69]
-INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_controller' (1#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/VGA_controller.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_VGA_controller_0_0' (2#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_VGA_controller_0_0/synth/HDMI_CONTROLLER_BD_VGA_controller_0_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_clk_wiz_0_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.v:71]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_clk_wiz_0_0_clk_wiz' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32856]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IBUF' (3#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
-INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26717]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (3#1) [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32856]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39813]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 37.125000 - type: float 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
@@ -101,21 +113,22 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2018.3/s
 	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
 	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (4#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26717]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (5#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_clk_wiz_0_0_clk_wiz' (6#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0_clk_wiz.v:69]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_clk_wiz_0_0' (7#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.v:71]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_color_logic_0_0' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_color_logic_0_0/synth/HDMI_CONTROLLER_BD_color_logic_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'color_logic' [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/color_logic.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (4#1) [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39813]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (5#1) [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_clk_wiz_0_0_clk_wiz' (6#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_clk_wiz_0_0' (7#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.v:71]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_color_logic_0_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_color_logic_0_0/synth/HDMI_CONTROLLER_BD_color_logic_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'color_logic' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/color_logic.v:23]
 	Parameter v_HA_START bound to: 0 - type: integer 
 	Parameter v_VA_START bound to: 0 - type: integer 
-	Parameter v_HA_END bound to: 640 - type: integer 
-	Parameter v_VA_END bound to: 480 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'color_logic' (8#1) [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/color_logic.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_color_logic_0_0' (9#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_color_logic_0_0/synth/HDMI_CONTROLLER_BD_color_logic_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_hdmi_tx_0_0' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_hdmi_tx_0_0/synth/HDMI_CONTROLLER_BD_hdmi_tx_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/hdmi_tx_v1_0.v:70]
+	Parameter v_HA_END bound to: 1280 - type: integer 
+	Parameter v_VA_END bound to: 720 - type: integer 
+	Parameter v_TEST_BAR_WIDTH bound to: 160 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'color_logic' (8#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/color_logic.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_color_logic_0_0' (9#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_color_logic_0_0/synth/HDMI_CONTROLLER_BD_color_logic_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_CONTROLLER_BD_hdmi_tx_0_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_hdmi_tx_0_0/synth/HDMI_CONTROLLER_BD_hdmi_tx_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/hdmi_tx_v1_0.v:70]
 	Parameter MODE bound to: HDMI - type: string 
 	Parameter C_RED_WIDTH bound to: 8 - type: integer 
 	Parameter C_GREEN_WIDTH bound to: 8 - type: integer 
@@ -124,15 +137,15 @@ INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [c:/Users/Sergaljerk/WSU
 	Parameter VIDEOPREAM bound to: 4'b1000 
 	Parameter NULLCONTRL bound to: 4'b0000 
 	Parameter SRL_DELAY bound to: 4'b1010 
-INFO: [Synth 8-6157] synthesizing module 'srldelay' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/srldelay.v:70]
+INFO: [Synth 8-6157] synthesizing module 'srldelay' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/srldelay.v:70]
 	Parameter WIDTH bound to: 40 - type: integer 
 	Parameter TAPS bound to: 4'b1010 
-INFO: [Synth 8-6157] synthesizing module 'SRL16E' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77700]
 	Parameter INIT bound to: 16'b0000000000000000 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (10#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699]
-INFO: [Synth 8-6155] done synthesizing module 'srldelay' (11#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/srldelay.v:70]
-INFO: [Synth 8-6157] synthesizing module 'encode' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (10#1) [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77700]
+INFO: [Synth 8-6155] done synthesizing module 'srldelay' (11#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/srldelay.v:70]
+INFO: [Synth 8-6157] synthesizing module 'encode' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
 	Parameter CHANNEL bound to: BLUE - type: string 
 	Parameter MODE bound to: HDMI - type: string 
 	Parameter VIDEOGBND bound to: 10'b1011001100 
@@ -141,8 +154,8 @@ INFO: [Synth 8-6157] synthesizing module 'encode' [c:/Users/Sergaljerk/WSU-CPTE/
 	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
 	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
 	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
-INFO: [Synth 8-6155] done synthesizing module 'encode' (12#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
-INFO: [Synth 8-6157] synthesizing module 'encode__parameterized0' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode' (12#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized0' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
 	Parameter CHANNEL bound to: GREEN - type: string 
 	Parameter MODE bound to: HDMI - type: string 
 	Parameter VIDEOGBND bound to: 10'b0100110011 
@@ -151,8 +164,8 @@ INFO: [Synth 8-6157] synthesizing module 'encode__parameterized0' [c:/Users/Serg
 	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
 	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
 	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
-INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized0' (12#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
-INFO: [Synth 8-6157] synthesizing module 'encode__parameterized1' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized0' (12#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized1' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
 	Parameter CHANNEL bound to: RED - type: string 
 	Parameter MODE bound to: HDMI - type: string 
 	Parameter VIDEOGBND bound to: 10'b1011001100 
@@ -161,9 +174,9 @@ INFO: [Synth 8-6157] synthesizing module 'encode__parameterized1' [c:/Users/Serg
 	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
 	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
 	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
-INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized1' (12#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
-INFO: [Synth 8-6157] synthesizing module 'serdes_10_to_1' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/serdes_10_to_1.v:43]
-INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized1' (12#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'serdes_10_to_1' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:50071]
 	Parameter DATA_RATE_OQ bound to: DDR - type: string 
 	Parameter DATA_RATE_TQ bound to: SDR - type: string 
 	Parameter DATA_WIDTH bound to: 10 - type: integer 
@@ -189,8 +202,8 @@ INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [C:/Xilinx/Vivado/2018.3/sc
 	Parameter TBYTE_CTL bound to: FALSE - type: string 
 	Parameter TBYTE_SRC bound to: FALSE - type: string 
 	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (13#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
-INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (13#1) [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:50071]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:50071]
 	Parameter DATA_RATE_OQ bound to: DDR - type: string 
 	Parameter DATA_RATE_TQ bound to: SDR - type: string 
 	Parameter DATA_WIDTH bound to: 10 - type: integer 
@@ -216,21 +229,21 @@ INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [C:/Xilinx/
 	Parameter TBYTE_CTL bound to: FALSE - type: string 
 	Parameter TBYTE_SRC bound to: FALSE - type: string 
 	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (13#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
-INFO: [Synth 8-6155] done synthesizing module 'serdes_10_to_1' (14#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/serdes_10_to_1.v:43]
-INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (13#1) [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:50071]
+INFO: [Synth 8-6155] done synthesizing module 'serdes_10_to_1' (14#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:46012]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (15#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
-INFO: [Synth 8-4471] merging register 'hdmi_ctl1_reg' into 'hdmi_ctl3_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/hdmi_tx_v1_0.v:148]
-WARNING: [Synth 8-6014] Unused sequential element hdmi_ctl1_reg was removed.  [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/hdmi_tx_v1_0.v:148]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_v1_0' (16#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/hdmi_tx_v1_0.v:70]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_hdmi_tx_0_0' (17#1) [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_hdmi_tx_0_0/synth/HDMI_CONTROLLER_BD_hdmi_tx_0_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD' (18#1) [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/synth/HDMI_CONTROLLER_BD.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_wrapper' (19#1) [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/hdl/HDMI_CONTROLLER_BD_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (15#1) [/opt/Vivado/2019.1/scripts/rt/data/unisim_comp.v:46012]
+INFO: [Synth 8-4471] merging register 'hdmi_ctl1_reg' into 'hdmi_ctl3_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/hdmi_tx_v1_0.v:148]
+WARNING: [Synth 8-6014] Unused sequential element hdmi_ctl1_reg was removed.  [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/hdmi_tx_v1_0.v:148]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_v1_0' (16#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/hdmi_tx_v1_0.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_hdmi_tx_0_0' (17#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_hdmi_tx_0_0/synth/HDMI_CONTROLLER_BD_hdmi_tx_0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD' (18#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/synth/HDMI_CONTROLLER_BD.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_CONTROLLER_BD_wrapper' (19#1) [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/hdl/HDMI_CONTROLLER_BD_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 447.688 ; gain = 149.785
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1777.438 ; gain = 190.527 ; free physical = 3228 ; free virtual = 8585
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -243,78 +256,73 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 447.688 ; gain = 149.785
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1796.250 ; gain = 209.340 ; free physical = 3228 ; free virtual = 8584
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 447.688 ; gain = 149.785
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1796.250 ; gain = 209.340 ; free physical = 3228 ; free virtual = 8584
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0_board.xdc] for cell 'HDMI_CONTROLLER_BD_i/clk_wiz_0/inst'
-Finished Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0_board.xdc] for cell 'HDMI_CONTROLLER_BD_i/clk_wiz_0/inst'
-Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.xdc] for cell 'HDMI_CONTROLLER_BD_i/clk_wiz_0/inst'
-Finished Parsing XDC File [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.xdc] for cell 'HDMI_CONTROLLER_BD_i/clk_wiz_0/inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_CONTROLLER_BD_wrapper_propImpl.xdc].
+Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0_board.xdc] for cell 'HDMI_CONTROLLER_BD_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0_board.xdc] for cell 'HDMI_CONTROLLER_BD_i/clk_wiz_0/inst'
+Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.xdc] for cell 'HDMI_CONTROLLER_BD_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.xdc] for cell 'HDMI_CONTROLLER_BD_i/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_CONTROLLER_BD_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_CONTROLLER_BD_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 790.602 ; gain = 0.000
-Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
-Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_CONTROLLER_BD_wrapper_propImpl.xdc].
+Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_CONTROLLER_BD_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_CONTROLLER_BD_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/imports/Repos/BlackboardRevB_MasterXDC.xdc]
-Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/imports/Repos/BlackboardRevB_MasterXDC.xdc]
-Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_CONTROLLER_BD_wrapper_propImpl.xdc].
+Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/imports/Repos/BlackboardRevB_MasterXDC.xdc]
+Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/imports/Repos/BlackboardRevB_MasterXDC.xdc]
+Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_CONTROLLER_BD_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_CONTROLLER_BD_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 794.742 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 794.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1945.859 ; gain = 0.000 ; free physical = 3132 ; free virtual = 8489
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 794.742 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 794.742 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1945.859 ; gain = 0.000 ; free physical = 3132 ; free virtual = 8489
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 794.742 ; gain = 496.840
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3212 ; free virtual = 8569
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 794.742 ; gain = 496.840
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3212 ; free virtual = 8569
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for HDMI_CONTROLLER_BD_i/clk_wiz_0/inst. (constraint file  C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/dont_touch.xdc, line 24).
+Applied set_property DONT_TOUCH = true for HDMI_CONTROLLER_BD_i/clk_wiz_0/inst. (constraint file  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/dont_touch.xdc, line 24).
 Applied set_property DONT_TOUCH = true for HDMI_CONTROLLER_BD_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for HDMI_CONTROLLER_BD_i/VGA_controller_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for HDMI_CONTROLLER_BD_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for HDMI_CONTROLLER_BD_i/color_logic_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for HDMI_CONTROLLER_BD_i/hdmi_tx_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 794.742 ; gain = 496.840
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3212 ; free virtual = 8569
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "r_VCNT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:222]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:222]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:222]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:222]
 INFO: [Synth 8-5544] ROM "dout" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "dout" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:222]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:222]
 INFO: [Synth 8-5544] ROM "dout" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "dout" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 794.742 ; gain = 496.840
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3204 ; free virtual = 8562
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -338,21 +346,20 @@ Detailed RTL Component Info :
 	               16 Bit    Registers := 4     
 	               10 Bit    Registers := 3     
 	                9 Bit    Registers := 3     
-	                8 Bit    Registers := 5     
+	                8 Bit    Registers := 6     
 	                5 Bit    Registers := 3     
-	                4 Bit    Registers := 16    
+	                4 Bit    Registers := 15    
 	                1 Bit    Registers := 36    
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 6     
 	  22 Input     10 Bit        Muxes := 1     
 	   4 Input     10 Bit        Muxes := 2     
-	   4 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 3     
+	   4 Input      8 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
 	   2 Input      5 Bit        Muxes := 12    
-	   2 Input      4 Bit        Muxes := 6     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 23    
+	   2 Input      4 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 22    
 	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -369,17 +376,16 @@ Detailed RTL Component Info :
 	               16 Bit    Registers := 4     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
 Module color_logic 
 Detailed RTL Component Info : 
 +---Registers : 
-	                8 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
 +---Muxes : 
-	   4 Input      8 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 1     
 Module encode 
 Detailed RTL Component Info : 
@@ -470,21 +476,20 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "inst/r_VCNT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-4471] merging register 'inst/encg/vde_q_reg' into 'inst/encb/vde_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:171]
-INFO: [Synth 8-4471] merging register 'inst/encg/vde_reg_reg' into 'inst/encb/vde_reg_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:172]
-INFO: [Synth 8-4471] merging register 'inst/encg/ade_q_reg' into 'inst/encb/ade_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:174]
-INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_reg' into 'inst/encb/ade_reg_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:175]
-INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_q_reg' into 'inst/encb/ade_reg_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:176]
-INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_qq_reg' into 'inst/encb/ade_reg_qq_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:177]
-INFO: [Synth 8-4471] merging register 'inst/encr/vde_q_reg' into 'inst/encb/vde_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:171]
-INFO: [Synth 8-4471] merging register 'inst/encr/vde_reg_reg' into 'inst/encb/vde_reg_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:172]
-INFO: [Synth 8-4471] merging register 'inst/encr/c1_q_reg' into 'inst/encg/c1_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:181]
-INFO: [Synth 8-4471] merging register 'inst/encr/c1_reg_reg' into 'inst/encg/c1_reg_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:182]
-INFO: [Synth 8-4471] merging register 'inst/encr/ade_q_reg' into 'inst/encb/ade_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:174]
-INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_reg' into 'inst/encb/ade_reg_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:175]
-INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_q_reg' into 'inst/encb/ade_reg_q_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:176]
-INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_qq_reg' into 'inst/encb/ade_reg_qq_reg' [c:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:177]
+INFO: [Synth 8-4471] merging register 'inst/encg/vde_q_reg' into 'inst/encb/vde_q_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:171]
+INFO: [Synth 8-4471] merging register 'inst/encg/vde_reg_reg' into 'inst/encb/vde_reg_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:172]
+INFO: [Synth 8-4471] merging register 'inst/encg/ade_q_reg' into 'inst/encb/ade_q_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:174]
+INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_reg' into 'inst/encb/ade_reg_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:175]
+INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_q_reg' into 'inst/encb/ade_reg_q_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:176]
+INFO: [Synth 8-4471] merging register 'inst/encg/ade_reg_qq_reg' into 'inst/encb/ade_reg_qq_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:177]
+INFO: [Synth 8-4471] merging register 'inst/encr/vde_q_reg' into 'inst/encb/vde_q_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:171]
+INFO: [Synth 8-4471] merging register 'inst/encr/vde_reg_reg' into 'inst/encb/vde_reg_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:172]
+INFO: [Synth 8-4471] merging register 'inst/encr/c1_q_reg' into 'inst/encg/c1_q_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:181]
+INFO: [Synth 8-4471] merging register 'inst/encr/c1_reg_reg' into 'inst/encg/c1_reg_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:182]
+INFO: [Synth 8-4471] merging register 'inst/encr/ade_q_reg' into 'inst/encb/ade_q_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:174]
+INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_reg' into 'inst/encb/ade_reg_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:175]
+INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_q_reg' into 'inst/encb/ade_reg_q_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:176]
+INFO: [Synth 8-4471] merging register 'inst/encr/ade_reg_qq_reg' into 'inst/encb/ade_reg_qq_reg' [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ipshared/afa8/hdl/encode.v:177]
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[0]' (FDRE) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[1]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[1]' (FDRE) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[2]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[2]' (FDRE) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[3]'
@@ -492,13 +497,16 @@ INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[4]' (FDRE) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[5]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[5]' (FDRE) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[6]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[6]' (FDRE) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_BLUE_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_CONTROLLER_BD_i/color_logic_0/\inst/r_BLUE_reg[7] )
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[0]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[1]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[1]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[2]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[2]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[3]'
+INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[4]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[5]'
+INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[5]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[6]'
+INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[6]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_GREEN_reg[7]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[0]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[1]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[1]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[2]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[2]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[3]'
+INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[3]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[4]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[4]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[5]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[5]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[6]'
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[6]' (FDR) to 'HDMI_CONTROLLER_BD_i/color_logic_0/inst/r_RED_reg[7]'
@@ -511,7 +519,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_CONT
 INFO: [Synth 8-3886] merging instance 'HDMI_CONTROLLER_BD_i/hdmi_tx_0/inst/encg/c1_reg_reg' (FD) to 'HDMI_CONTROLLER_BD_i/hdmi_tx_0/inst/hdmi_ctl3_reg'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (HDMI_CONTROLLER_BD_i/hdmi_tx_0/\inst/hdmi_ctl3_reg )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 794.742 ; gain = 496.840
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3184 ; free virtual = 8544
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -523,13 +531,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 794.742 ; gain = 496.840
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3063 ; free virtual = 8424
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 813.762 ; gain = 515.859
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3058 ; free virtual = 8418
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -541,7 +549,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 819.012 ; gain = 521.109
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3056 ; free virtual = 8416
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -565,7 +573,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 819.012 ; gain = 521.109
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3056 ; free virtual = 8416
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -578,7 +586,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 819.012 ; gain = 521.109
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3056 ; free virtual = 8416
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -590,25 +598,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 819.012 ; gain = 521.109
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3056 ; free virtual = 8416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 819.012 ; gain = 521.109
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3056 ; free virtual = 8416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 819.012 ; gain = 521.109
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3056 ; free virtual = 8416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 819.012 ; gain = 521.109
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3056 ; free virtual = 8416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -641,19 +649,19 @@ Report Cell Usage:
 +------+------------+------+
 |1     |BUFG        |     3|
 |2     |CARRY4      |     8|
-|3     |LUT1        |     3|
-|4     |LUT2        |    12|
-|5     |LUT3        |    45|
-|6     |LUT4        |    42|
-|7     |LUT5        |    85|
-|8     |LUT6        |   138|
+|3     |LUT1        |     4|
+|4     |LUT2        |    18|
+|5     |LUT3        |    42|
+|6     |LUT4        |    38|
+|7     |LUT5        |    83|
+|8     |LUT6        |   143|
 |9     |MMCME2_ADV  |     1|
 |10    |MUXF7       |     1|
 |11    |OSERDESE2   |     4|
 |12    |OSERDESE2_1 |     4|
 |13    |SRL16E      |    40|
 |14    |FDCE        |    42|
-|15    |FDRE        |   176|
+|15    |FDRE        |   177|
 |16    |FDSE        |     7|
 |17    |IBUF        |     4|
 |18    |OBUFDS      |     4|
@@ -663,14 +671,14 @@ Report Instance Areas:
 +------+-----------------------+---------------------------------------+------+
 |      |Instance               |Module                                 |Cells |
 +------+-----------------------+---------------------------------------+------+
-|1     |top                    |                                       |   619|
-|2     |  HDMI_CONTROLLER_BD_i |HDMI_CONTROLLER_BD                     |   616|
+|1     |top                    |                                       |   623|
+|2     |  HDMI_CONTROLLER_BD_i |HDMI_CONTROLLER_BD                     |   620|
 |3     |    VGA_controller_0   |HDMI_CONTROLLER_BD_VGA_controller_0_0  |    99|
 |4     |      inst             |VGA_controller                         |    99|
 |5     |    clk_wiz_0          |HDMI_CONTROLLER_BD_clk_wiz_0_0         |     5|
 |6     |      inst             |HDMI_CONTROLLER_BD_clk_wiz_0_0_clk_wiz |     5|
-|7     |    color_logic_0      |HDMI_CONTROLLER_BD_color_logic_0_0     |    26|
-|8     |      inst             |color_logic                            |    26|
+|7     |    color_logic_0      |HDMI_CONTROLLER_BD_color_logic_0_0     |    30|
+|8     |      inst             |color_logic                            |    30|
 |9     |    hdmi_tx_0          |HDMI_CONTROLLER_BD_hdmi_tx_0_0         |   486|
 |10    |      inst             |hdmi_tx_v1_0                           |   486|
 |11    |        encb           |encode                                 |   163|
@@ -683,27 +691,27 @@ Report Instance Areas:
 |18    |        srldly_0       |srldelay                               |    38|
 +------+-----------------------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 819.012 ; gain = 521.109
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3056 ; free virtual = 8416
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 819.012 ; gain = 174.055
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 819.012 ; gain = 521.109
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1945.859 ; gain = 209.340 ; free physical = 3111 ; free virtual = 8471
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1945.859 ; gain = 358.949 ; free physical = 3111 ; free virtual = 8471
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 819.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1945.859 ; gain = 0.000 ; free physical = 3057 ; free virtual = 8417
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-114 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+124 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 819.012 ; gain = 529.887
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 819.012 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1945.859 ; gain = 456.051 ; free physical = 3153 ; free virtual = 8513
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1945.859 ; gain = 0.000 ; free physical = 3153 ; free virtual = 8513
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Sergaljerk/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/HDMI_CONTROLLER_BD_wrapper.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/HDMI_CONTROLLER_BD_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file HDMI_CONTROLLER_BD_wrapper_utilization_synth.rpt -pb HDMI_CONTROLLER_BD_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 20 13:18:59 2019...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  8 21:25:47 2019...

@@ -73,18 +73,18 @@ output wire [15 : 0] o_X_COORD;
 output wire [15 : 0] o_Y_COORD;
 
   VGA_controller #(
-    .v_END_OF_LINE(800),
-    .v_END_OF_SCREEN(525),
+    .v_END_OF_LINE(1650),
+    .v_END_OF_SCREEN(750),
     .v_HORIZONTAL_ACTIVE_START(0),
     .v_VERTICAL_ACTIVE_START(0),
-    .v_HA_END(640),
-    .v_VA_END(480),
-    .v_HORIZONTAL_FRONT_PORCH(16),
-    .v_HORIZONTAL_BACK_PORCH(48),
-    .v_HORIZONTAL_SYNC_WIDTH(96),
-    .v_VERTICAL_FRONT_PORCH(10),
-    .v_VERTICAL_BACK_PORCH(33),
-    .v_VERTICAL_SYNC_WIDTH(2)
+    .v_HA_END(1280),
+    .v_VA_END(720),
+    .v_HORIZONTAL_FRONT_PORCH(110),
+    .v_HORIZONTAL_BACK_PORCH(220),
+    .v_HORIZONTAL_SYNC_WIDTH(40),
+    .v_VERTICAL_FRONT_PORCH(5),
+    .v_VERTICAL_BACK_PORCH(20),
+    .v_VERTICAL_SYNC_WIDTH(5)
   ) inst (
     .i_CLK(i_CLK),
     .o_HSYNC(o_HSYNC),

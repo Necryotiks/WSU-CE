@@ -50,7 +50,7 @@
 // IP VLNV: realdigital.org:realdigital:hdmi_tx:1.0
 // IP Revision: 2
 
-(* X_CORE_INFO = "hdmi_tx_v1_0,Vivado 2018.3" *)
+(* X_CORE_INFO = "hdmi_tx_v1_0,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "HDMI_CONTROLLER_BD_hdmi_tx_0_0,hdmi_tx_v1_0,{}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)

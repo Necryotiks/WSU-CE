@@ -1,3 +1,9 @@
+-makelib xcelium_lib/xil_defaultlib -sv \
+  "/opt/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+-endlib
+-makelib xcelium_lib/xpm \
+  "/opt/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
+-endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_VGA_controller_0_0/sim/HDMI_CONTROLLER_BD_VGA_controller_0_0.v" \
   "../../../bd/HDMI_CONTROLLER_BD/ip/HDMI_CONTROLLER_BD_clk_wiz_0_0/HDMI_CONTROLLER_BD_clk_wiz_0_0_clk_wiz.v" \

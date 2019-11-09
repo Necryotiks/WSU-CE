@@ -21,27 +21,37 @@
 
 
 module VGA_controller(
-    input i_CLK,
-    output o_HSYNC,
-    output o_VSYNC,
-    output o_VDE,
-    output [15:0] o_X_COORD,
-    output [15:0] o_Y_COORD
+    input wire i_CLK,
+    output wire o_HSYNC,
+    output wire o_VSYNC,
+    output wire o_VDE,
+    input wire [15:0] i_END_OF_LINE,
+    input wire [15:0] i_END_OF_SCREEN,
+    input wire [15:0] i_HA_END,
+    input wire [15:0] i_VA_END,
+    input wire [15:0] i_HORIZONTAL_FRONT_PORCH,
+    input wire [15:0] i_HORIZONTAL_BACK_PORCH,
+    input wire [15:0] i_HORIZONTAL_SYNC_WIDTH,
+    input wire [15:0] i_VERTICAL_FRONT_PORCH,
+    input wire [15:0] i_VERTICAL_BACK_PORCH,
+    input wire [15:0] i_VERTICAL_SYNC_WIDTH,
+    output wire [15:0] o_X_COORD,
+    output wire [15:0] o_Y_COORD
     );
     
     
-    parameter v_END_OF_LINE = 800;
-    parameter v_END_OF_SCREEN = 525;
-    parameter v_HORIZONTAL_ACTIVE_START = 0;
-    parameter v_VERTICAL_ACTIVE_START = 0;
-    parameter v_HA_END = 640;
-    parameter v_VA_END = 480;
-    parameter v_HORIZONTAL_FRONT_PORCH = 16;
-    parameter v_HORIZONTAL_BACK_PORCH = 48;
-     parameter v_HORIZONTAL_SYNC_WIDTH = 96;
-     parameter v_VERTICAL_FRONT_PORCH = 10;
-    parameter v_VERTICAL_BACK_PORCH = 33;
-     parameter v_VERTICAL_SYNC_WIDTH = 2;
+    localparam v_END_OF_LINE = 800;
+    localparam v_END_OF_SCREEN = 525;
+    localparam v_HORIZONTAL_ACTIVE_START = 0;
+    localparam v_VERTICAL_ACTIVE_START = 0;
+    localparam v_HA_END = 640;
+    localparam v_VA_END = 480;
+    localparam v_HORIZONTAL_FRONT_PORCH = 16;
+    localparam v_HORIZONTAL_BACK_PORCH = 48;
+    localparam v_HORIZONTAL_SYNC_WIDTH = 96;
+    localparam v_VERTICAL_FRONT_PORCH = 10;
+    localparam v_VERTICAL_BACK_PORCH = 33;
+    localparam v_VERTICAL_SYNC_WIDTH = 2;
     wire w_CLK;
     reg r_HSYNC = 1'd0;
     reg r_VSYNC = 1'd0; 
@@ -65,7 +75,7 @@ module VGA_controller(
     
     always@(posedge w_CLK)
     begin
-        if((r_HCNT >= v_HORIZONTAL_ACTIVE_START) && (r_HCNT < v_HA_END)) 
+        if((r_HCNT >= 0) && (r_HCNT < i_HA_END)) 
             begin
             r_X_COORD = r_HCNT;
             end
@@ -75,15 +85,15 @@ module VGA_controller(
     
     always@(posedge w_CLK)
     begin
-        if(r_VCNT >= v_VA_END)
-            r_Y_COORD = v_VA_END - 1'b1;
+        if(r_VCNT >= i_VA_END)
+            r_Y_COORD = i_VA_END - 1'b1;
         else
             r_Y_COORD = r_VCNT;
     end
     
     always@(posedge w_CLK) //PIXEL COUNT
     begin
-        if(r_HCNT == v_END_OF_LINE) begin
+        if(r_HCNT == i_END_OF_LINE - 1) begin
             r_HCNT = 16'd0;
             end
         else
@@ -94,10 +104,10 @@ module VGA_controller(
     
     always@(posedge w_CLK) //LINE COUNT
         begin
-            if(r_VCNT == v_END_OF_SCREEN) begin
+            if(r_VCNT == i_END_OF_SCREEN - 1) begin
                 r_VCNT = 16'd0;
                 end
-            else if (r_HCNT == v_END_OF_LINE)
+            else if (r_HCNT == i_END_OF_LINE - 1)
                 begin
                 r_VCNT = r_VCNT + 1'b1;
                 end
@@ -109,7 +119,7 @@ module VGA_controller(
         
         always@(posedge w_CLK)
         begin
-            if((r_HCNT > v_HA_END + v_HORIZONTAL_FRONT_PORCH) && (r_HCNT <= v_HA_END + v_HORIZONTAL_FRONT_PORCH + v_HORIZONTAL_SYNC_WIDTH))
+            if((r_HCNT > i_HA_END + i_HORIZONTAL_FRONT_PORCH) && (r_HCNT <= i_HA_END + i_HORIZONTAL_FRONT_PORCH + i_HORIZONTAL_SYNC_WIDTH))
                 r_HSYNC = 1'b0;
             else
                 r_HSYNC = 1'b1;
@@ -117,7 +127,7 @@ module VGA_controller(
         
         always@(posedge w_CLK)
         begin
-            if((r_VCNT > v_VA_END + v_VERTICAL_FRONT_PORCH ) && (r_VCNT <= v_VA_END + v_VERTICAL_FRONT_PORCH + v_VERTICAL_SYNC_WIDTH))
+            if((r_VCNT > i_VA_END + i_VERTICAL_FRONT_PORCH ) && (r_VCNT <= i_VA_END + i_VERTICAL_FRONT_PORCH + i_VERTICAL_SYNC_WIDTH))
                 r_VSYNC = 1'b0;
             else
                 r_VSYNC = 1'b1;
@@ -125,7 +135,7 @@ module VGA_controller(
         
         always@(posedge w_CLK)
         begin
-            if((r_HCNT <= v_HA_END) && (r_VCNT <= v_VA_END))
+            if((r_HCNT <= i_HA_END) && (r_VCNT <= i_VA_END))
                 r_VDE = 1'b1;
             else
                 r_VDE = 1'b0;

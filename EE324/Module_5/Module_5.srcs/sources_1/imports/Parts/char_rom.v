@@ -21,7 +21,7 @@
 
 
 module char_rom(
-   output [15:0] DO,     // Output data, width defined by READ_WIDTH parameter
+   output [15:0] o_DATA,     // Output data, width defined by READ_WIDTH parameter
    input [10:0] ADDR,   // Input address, width defined by read/write port depth
    input CLK,           // 1-bit input clock
    input [15:0] DI,      // Input data port, width defined by WRITE_WIDTH parameter
@@ -213,7 +213,7 @@ BRAM_SINGLE_MACRO #(
    .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
    .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000)
 ) BRAM_SINGLE_MACRO_inst (
-   .DO(DO),       // Output data, width defined by READ_WIDTH parameter
+   .DO(o_DATA),       // Output data, width defined by READ_WIDTH parameter
    .ADDR(ADDR),   // Input address, width defined by read/write port depth
    .CLK(CLK),     // 1-bit input clock
    .DI(DI),       // Input data port, width defined by WRITE_WIDTH parameter

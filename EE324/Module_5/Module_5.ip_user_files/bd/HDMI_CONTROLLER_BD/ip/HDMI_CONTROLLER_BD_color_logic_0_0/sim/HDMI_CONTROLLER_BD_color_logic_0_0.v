@@ -79,8 +79,8 @@ output wire [7 : 0] o_BLUE;
   color_logic #(
     .v_HA_START(0),
     .v_VA_START(0),
-    .v_HA_END(640),
-    .v_VA_END(480)
+    .v_HA_END(1280),
+    .v_VA_END(720)
   ) inst (
     .i_CLK(i_CLK),
     .i_SEL(i_SEL),

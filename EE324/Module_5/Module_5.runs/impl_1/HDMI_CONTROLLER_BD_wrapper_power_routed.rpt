@@ -1,8 +1,8 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Wed Mar 20 13:20:00 2019
-| Host             : DESKTOP-3VDLSPS running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date             : Fri Nov  8 21:28:10 2019
+| Host             : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
 | Command          : report_power -file HDMI_CONTROLLER_BD_wrapper_power_routed.rpt -pb HDMI_CONTROLLER_BD_wrapper_power_summary_routed.pb -rpx HDMI_CONTROLLER_BD_wrapper_power_routed.rpx
 | Design           : HDMI_CONTROLLER_BD_wrapper
 | Device           : xc7z007sclg400-1
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.336        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.240        |
+| Dynamic (W)              | 0.241        |
 | Device Static (W)        | 0.096        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 81.1         |
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.003 |       10 |       --- |             --- |
-| Slice Logic             |    <0.001 |      458 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      204 |     14400 |            1.42 |
+| Slice Logic             |    <0.001 |      552 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      241 |     14400 |            1.67 |
 |   CARRY4                |    <0.001 |        8 |      4400 |            0.18 |
-|   Register              |    <0.001 |      170 |     28800 |            0.59 |
-|   LUT as Shift Register |    <0.001 |       12 |      6000 |            0.20 |
+|   Register              |    <0.001 |      200 |     28800 |            0.69 |
+|   LUT as Shift Register |    <0.001 |       16 |      6000 |            0.27 |
 |   F7/F8 Muxes           |    <0.001 |        1 |     17600 |           <0.01 |
-|   Others                |     0.000 |       27 |       --- |             --- |
-| Signals                 |    <0.001 |      370 |       --- |             --- |
+|   Others                |     0.000 |       25 |       --- |             --- |
+| Signals                 |    <0.001 |      450 |       --- |             --- |
 | MMCM                    |     0.105 |        1 |         2 |           50.00 |
 | I/O                     |     0.132 |       12 |       100 |           12.00 |
 | Static Power            |     0.096 |          |           |                 |
@@ -157,12 +157,12 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| HDMI_CONTROLLER_BD_wrapper |     0.240 |
-|   HDMI_CONTROLLER_BD_i     |     0.240 |
+| HDMI_CONTROLLER_BD_wrapper |     0.241 |
+|   HDMI_CONTROLLER_BD_i     |     0.241 |
 |     clk_wiz_0              |     0.105 |
 |       inst                 |     0.105 |
-|     hdmi_tx_0              |     0.134 |
-|       inst                 |     0.134 |
+|     hdmi_tx_0              |     0.135 |
+|       inst                 |     0.135 |
 +----------------------------+-----------+
 
 

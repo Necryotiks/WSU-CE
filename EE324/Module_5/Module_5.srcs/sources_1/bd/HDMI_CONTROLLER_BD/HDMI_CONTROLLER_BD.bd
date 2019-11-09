@@ -5,13 +5,13 @@
       "device": "xc7z007sclg400-1",
       "name": "HDMI_CONTROLLER_BD",
       "synth_flow_mode": "None",
-      "tool_version": "2018.3"
+      "tool_version": "2019.1"
     },
     "design_tree": {
-      "clk_wiz_0": "",
       "hdmi_tx_0": "",
-      "VGA_controller_0": "",
-      "color_logic_0": ""
+      "color_logic_0": "",
+      "clk_wiz_0": "",
+      "VGA_controller_0": ""
     },
     "interface_ports": {
       "hdmi_tx_0": {
@@ -45,120 +45,12 @@
       }
     },
     "components": {
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "HDMI_CONTROLLER_BD_clk_wiz_0_0",
-        "parameters": {
-          "CLKOUT1_JITTER": {
-            "value": "337.616"
-          },
-          "CLKOUT1_PHASE_ERROR": {
-            "value": "322.999"
-          },
-          "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "74.25"
-          },
-          "CLKOUT2_JITTER": {
-            "value": "258.703"
-          },
-          "CLKOUT2_PHASE_ERROR": {
-            "value": "322.999"
-          },
-          "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "371.25"
-          },
-          "CLKOUT2_USED": {
-            "value": "true"
-          },
-          "MMCM_CLKFBOUT_MULT_F": {
-            "value": "37.125"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "10.000"
-          },
-          "MMCM_CLKOUT1_DIVIDE": {
-            "value": "2"
-          },
-          "MMCM_DIVCLK_DIVIDE": {
-            "value": "5"
-          },
-          "NUM_OUT_CLKS": {
-            "value": "2"
-          }
-        }
-      },
       "hdmi_tx_0": {
         "vlnv": "realdigital.org:realdigital:hdmi_tx:1.0",
         "xci_name": "HDMI_CONTROLLER_BD_hdmi_tx_0_0",
         "parameters": {
           "MODE": {
             "value": "HDMI"
-          }
-        }
-      },
-      "VGA_controller_0": {
-        "vlnv": "xilinx.com:module_ref:VGA_controller:1.0",
-        "xci_name": "HDMI_CONTROLLER_BD_VGA_controller_0_0",
-        "parameters": {
-          "v_END_OF_LINE": {
-            "value": "1650"
-          },
-          "v_END_OF_SCREEN": {
-            "value": "750"
-          },
-          "v_HA_END": {
-            "value": "1280"
-          },
-          "v_HORIZONTAL_BACK_PORCH": {
-            "value": "220"
-          },
-          "v_HORIZONTAL_FRONT_PORCH": {
-            "value": "110"
-          },
-          "v_HORIZONTAL_SYNC_WIDTH": {
-            "value": "40"
-          },
-          "v_VA_END": {
-            "value": "720"
-          },
-          "v_VERTICAL_BACK_PORCH": {
-            "value": "20"
-          },
-          "v_VERTICAL_FRONT_PORCH": {
-            "value": "5"
-          },
-          "v_VERTICAL_SYNC_WIDTH": {
-            "value": "5"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "VGA_controller",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_CLK": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "o_HSYNC": {
-            "direction": "O"
-          },
-          "o_VSYNC": {
-            "direction": "O"
-          },
-          "o_VDE": {
-            "direction": "O"
-          },
-          "o_X_COORD": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "o_Y_COORD": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
           }
         }
       },
@@ -217,6 +109,132 @@
             "right": "0"
           }
         }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "HDMI_CONTROLLER_BD_clk_wiz_0_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "337.616"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "322.999"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "74.25"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "258.703"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "322.999"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "371.25"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "37.125"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "2"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "5"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          }
+        }
+      },
+      "VGA_controller_0": {
+        "vlnv": "xilinx.com:module_ref:VGA_controller:1.0",
+        "xci_name": "HDMI_CONTROLLER_BD_VGA_controller_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "VGA_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "o_HSYNC": {
+            "direction": "O"
+          },
+          "o_VSYNC": {
+            "direction": "O"
+          },
+          "o_VDE": {
+            "direction": "O"
+          },
+          "i_END_OF_LINE": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_END_OF_SCREEN": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_HA_END": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_VA_END": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_HORIZONTAL_FRONT_PORCH": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_HORIZONTAL_BACK_PORCH": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_HORIZONTAL_SYNC_WIDTH": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_VERTICAL_FRONT_PORCH": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_VERTICAL_BACK_PORCH": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_VERTICAL_SYNC_WIDTH": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "o_X_COORD": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "o_Y_COORD": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -231,8 +249,8 @@
       "reset_rtl_0_1": {
         "ports": [
           "i_RST",
-          "clk_wiz_0/reset",
-          "hdmi_tx_0/rst"
+          "hdmi_tx_0/rst",
+          "clk_wiz_0/reset"
         ]
       },
       "clk_100MHz_1": {
@@ -245,8 +263,8 @@
         "ports": [
           "clk_wiz_0/clk_out1",
           "hdmi_tx_0/pix_clk",
-          "VGA_controller_0/i_CLK",
-          "color_logic_0/i_CLK"
+          "color_logic_0/i_CLK",
+          "VGA_controller_0/i_CLK"
         ]
       },
       "clk_wiz_0_clk_out2": {
