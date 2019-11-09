@@ -1,0 +1,129 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Nov  7 10:45:13 2019
+# Process ID: 3361
+# Current directory: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5
+# Command line: vivado
+# Log file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/vivado.log
+# Journal file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.xpr
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+upgrade_ip -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  HDMI_CONTROLLER_BD_clk_wiz_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips HDMI_CONTROLLER_BD_clk_wiz_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/HDMI_CONTROLLER_BD.bd]
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/HDMI_CONTROLLER_BD.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/HDMI_CONTROLLER_BD.bd] -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+file mkdir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/new
+close [ open /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/new/ASCII_addr_gen.v w ]
+add_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/new/ASCII_addr_gen.v
+update_compile_order -fileset sources_1
+open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/HDMI_CONTROLLER_BD.bd}
+create_bd_design "CHAR_ROM_DISPLAY"
+update_compile_order -fileset sources_1
+current_bd_design [get_bd_designs HDMI_CONTROLLER_BD]
+current_bd_design [get_bd_designs CHAR_ROM_DISPLAY]
+current_bd_design HDMI_CONTROLLER_BD
+set tmpCopyObjs [concat  [get_bd_cells {color_logic_0 hdmi_tx_0 VGA_controller_0 clk_wiz_0}] [get_bd_intf_ports {hdmi_tx_0}] [get_bd_ports {i_CLK_100MHZ i_RST i_SEL}] [get_bd_intf_nets {hdmi_tx_0_hdmi_tx}] [get_bd_nets {VGA_controller_0_o_VDE color_logic_0_o_GREEN clk_wiz_0_clk_out1 color_logic_0_o_RED clk_wiz_0_clk_out2 clk_100MHz_1 i_SEL_0_1 VGA_controller_0_o_X_COORD VGA_controller_0_o_HSYNC clk_wiz_0_locked VGA_controller_0_o_Y_COORD color_logic_0_o_BLUE reset_rtl_0_1 VGA_controller_0_o_VSYNC}]]
+current_bd_design CHAR_ROM_DISPLAY
+copy_bd_objs -from_design HDMI_CONTROLLER_BD / $tmpCopyObjs
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets VGA_controller_0_o_X_COORD] [get_bd_nets VGA_controller_0_o_Y_COORD] [get_bd_nets color_logic_0_o_RED] [get_bd_nets color_logic_0_o_GREEN] [get_bd_nets color_logic_0_o_BLUE] [get_bd_nets i_SEL_0_1] [get_bd_cells color_logic_0]
+delete_bd_objs [get_bd_ports i_SEL]
+create_bd_cell -type module -reference ASCII_addr_gen ASCII_addr_gen_0
+set_property location {2 475 -88} [get_bd_cells ASCII_addr_gen_0]
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins ASCII_addr_gen_0/i_RST]
+connect_bd_net [get_bd_ports i_RST] [get_bd_pins ASCII_addr_gen_0/i_RST]
+connect_bd_net [get_bd_pins VGA_controller_0/o_X_COORD] [get_bd_pins ASCII_addr_gen_0/i_X_COORD]
+connect_bd_net [get_bd_pins VGA_controller_0/o_Y_COORD] [get_bd_pins ASCII_addr_gen_0/i_Y_COORD]
+create_bd_cell -type module -reference char_rom char_rom_0
+connect_bd_net [get_bd_pins char_rom_0/ADDR] [get_bd_pins ASCII_addr_gen_0/o_BRAM_ADDR]
+connect_bd_net [get_bd_pins ASCII_addr_gen_0/i_CLK] [get_bd_pins clk_wiz_0/clk_out1]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/clk_wiz_0/clk_out1 (74 MHz)" }  [get_bd_pins char_rom_0/CLK]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+save_bd_design
+create_peripheral user.org user CHAR_ROM_CONTROLLER 1.0 -dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core user.org:user:CHAR_ROM_CONTROLLER:1.0]
+set_property VALUE 12 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core user.org:user:CHAR_ROM_CONTROLLER:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:CHAR_ROM_CONTROLLER:1.0]
+write_peripheral [ipx::find_open_core user.org:user:CHAR_ROM_CONTROLLER:1.0]
+set_property  ip_repo_paths  {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0 /home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS} [current_project]
+update_ip_catalog -rebuild
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:CHAR_ROM_CONTROLLER:1.0 CHAR_ROM_CONTROLLER_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/CHAR_ROM_CONTROLLER_0/S00_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins CHAR_ROM_CONTROLLER_0/S00_AXI]
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.USE_DYN_RECONFIG {true}] [get_bd_cells clk_wiz_0]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/clk_wiz_0/s_axi_lite} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins clk_wiz_0/s_axi_lite]
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets reset_rtl_0_1]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_74M/ext_reset_in]
+delete_bd_objs [get_bd_nets reset_rtl_0_1]
+delete_bd_objs [get_bd_ports reset_rtl_0]
+delete_bd_objs [get_bd_ports i_RST]
+delete_bd_objs [get_bd_nets rst_clk_wiz_0_74M_peripheral_aresetn] [get_bd_cells rst_clk_wiz_0_74M]
+save_bd_design
+close [ open /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/new/C_ROM_LOGIC.v w ]
+add_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/new/C_ROM_LOGIC.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference C_ROM_LOGIC C_ROM_LOGIC_0
+connect_bd_net [get_bd_pins VGA_controller_0/o_VDE] [get_bd_pins C_ROM_LOGIC_0/i_VDE]
+connect_bd_net [get_bd_pins C_ROM_LOGIC_0/i_CLK] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins VGA_controller_0/o_VDE] [get_bd_pins C_ROM_LOGIC_0/i_X_COORD]
+connect_bd_net [get_bd_pins VGA_controller_0/o_Y_COORD] [get_bd_pins C_ROM_LOGIC_0/i_Y_COORD]
+connect_bd_net [get_bd_pins hdmi_tx_0/red] [get_bd_pins C_ROM_LOGIC_0/o_RED]
+connect_bd_net [get_bd_pins hdmi_tx_0/green] [get_bd_pins C_ROM_LOGIC_0/o_GREEN]
+connect_bd_net [get_bd_pins hdmi_tx_0/blue] [get_bd_pins C_ROM_LOGIC_0/o_BLUE]
+regenerate_bd_layout
+set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_CHAR_ROM_CONTROLLER_0_S00_AXI_reg}]
+set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_clk_wiz_0_Reg}]
+set_property offset 0x4BB00000 [get_bd_addr_segs {processing_system7_0/Data/SEG_CHAR_ROM_CONTROLLER_0_S00_AXI_reg}]
+set_property offset 0x4CC00000 [get_bd_addr_segs {processing_system7_0/Data/SEG_clk_wiz_0_Reg}]
+ipx::edit_ip_in_project -upgrade true -name CHAR_ROM_CONTROLLER_v1_0_project -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.tmp/CHAR_ROM_CONTROLLER_v1_0_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:CHAR_ROM_CONTROLLER:1.0 [get_ips  CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd]
+catch { config_ip_cache -export [get_ips -all CHAR_ROM_DISPLAY_clk_wiz_0_0] }
+catch { config_ip_cache -export [get_ips -all CHAR_ROM_DISPLAY_hdmi_tx_0_0] }
+catch { config_ip_cache -export [get_ips -all CHAR_ROM_DISPLAY_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0] }
+catch { config_ip_cache -export [get_ips -all CHAR_ROM_DISPLAY_xbar_0] }
+catch { config_ip_cache -export [get_ips -all CHAR_ROM_DISPLAY_rst_ps7_0_50M_0] }
+catch { config_ip_cache -export [get_ips -all CHAR_ROM_DISPLAY_auto_pc_0] }
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd]
+launch_runs -jobs 14 {CHAR_ROM_DISPLAY_VGA_controller_0_0_synth_1 CHAR_ROM_DISPLAY_clk_wiz_0_0_synth_1 CHAR_ROM_DISPLAY_hdmi_tx_0_0_synth_1 CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0_synth_1 CHAR_ROM_DISPLAY_char_rom_0_0_synth_1 CHAR_ROM_DISPLAY_processing_system7_0_0_synth_1 CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0_synth_1 CHAR_ROM_DISPLAY_xbar_0_synth_1 CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_synth_1 CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0_synth_1 CHAR_ROM_DISPLAY_auto_pc_0_synth_1}
+export_simulation -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd] -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run CHAR_ROM_DISPLAY_clk_wiz_0_0_synth_1
+open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd}
+open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd}
+update_module_reference CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0
+connect_bd_net [get_bd_pins char_rom_0/DO] [get_bd_pins C_ROM_LOGIC_0/i_CHAR_LINE]
+regenerate_bd_layout
+update_module_reference CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0
+open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd}
+update_module_reference CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0
+update_module_reference CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0

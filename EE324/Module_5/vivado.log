@@ -1,0 +1,828 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov  8 19:49:04 2019
+# Process ID: 4297
+# Current directory: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5
+# Command line: vivado
+# Log file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/vivado.log
+# Journal file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 6506.723 ; gain = 107.441 ; free physical = 4599 ; free virtual = 9703
+update_compile_order -fileset sources_1
+open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd}
+Adding component instance block -- xilinx.com:module_ref:VGA_controller:1.0 - VGA_controller_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- realdigital.org:realdigital:hdmi_tx:1.0 - hdmi_tx_0
+Adding component instance block -- xilinx.com:module_ref:char_rom:1.0 - char_rom_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- user.org:user:CHAR_ROM_CONTROLLER:1.0 - CHAR_ROM_CONTROLLER_0
+Adding component instance block -- xilinx.com:module_ref:C_ROM_LOGIC:1.0 - C_ROM_LOGIC_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_4
+Adding component instance block -- xilinx.com:module_ref:ASCII_addr_gen:1.0 - ASCII_addr_gen_0
+Successfully read diagram <CHAR_ROM_DISPLAY> from BD file </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 6654.797 ; gain = 0.000 ; free physical = 4454 ; free virtual = 9589
+update_module_reference CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd'
+INFO: [IP_Flow 19-3420] Updated CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0 to use current project options
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+connect_bd_net [get_bd_pins CHAR_ROM_CONTROLLER_0/o_TARGET_X_COORD] [get_bd_pins ASCII_addr_gen_0/i_TARGET_X_COORD]
+connect_bd_net [get_bd_pins CHAR_ROM_CONTROLLER_0/o_TARGET_Y_COORD] [get_bd_pins ASCII_addr_gen_0/i_TARGET_Y_COORD]
+update_module_reference CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd'
+INFO: [IP_Flow 19-3420] Updated CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0 to use current project options
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_TARGET_X_COORD' width 16 differs from original width 10
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_TARGET_Y_COORD' width 16 differs from original width 10
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 14
+[Fri Nov  8 20:24:07 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/runme.log
+ipx::edit_ip_in_project -upgrade true -name CHAR_ROM_CONTROLLER_v1_0_project -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.tmp/CHAR_ROM_CONTROLLER_v1_0_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/hdl/CHAR_ROM_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/hdl/CHAR_ROM_CONTROLLER_v1_0.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 7000.969 ; gain = 0.000 ; free physical = 4269 ; free virtual = 9532
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+launch_runs synth_1 -jobs 14
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/hdl/CHAR_ROM_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/hdl/CHAR_ROM_CONTROLLER_v1_0.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/hdl/CHAR_ROM_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/hdl/CHAR_ROM_CONTROLLER_v1_0.v:]
+[Fri Nov  8 21:12:47 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.tmp/CHAR_ROM_CONTROLLER_v1_0_project/CHAR_ROM_CONTROLLER_v1_0_project.runs/synth_1/runme.log
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0 CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0}] -log ip_upgrade.log
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'i_CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'i_RST'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd'
+INFO: [IP_Flow 19-3420] Updated CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'i_TARGET_X_COORD'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'i_TARGET_Y_COORD'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_START_X_COORD'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_START_Y_COORD'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'i_TARGET_X_COORD' is not found on the upgraded version of the cell '/ASCII_addr_gen_0'. Its connection to the net 'CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD' has been removed.
+CRITICAL WARNING: [BD 41-1167] The pin 'i_TARGET_Y_COORD' is not found on the upgraded version of the cell '/ASCII_addr_gen_0'. Its connection to the net 'CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD' has been removed.
+INFO: [IP_Flow 19-3422] Upgraded CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0 (CHAR_ROM_CONTROLLER_v1.0 1.0) from revision 2 to revision 3
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'o_TARGET_X_COORD'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'o_TARGET_Y_COORD'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_BG_BLUE'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_BG_GREEN'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_BG_RED'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_FG_BLUE'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_FG_GREEN'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_FG_RED'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_START_X_COORD'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_START_Y_COORD'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'o_TARGET_X_COORD' is not found on the upgraded version of the cell '/CHAR_ROM_CONTROLLER_0'. Its connection to the net 'CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD' has been removed.
+CRITICAL WARNING: [BD 41-1167] The pin 'o_TARGET_Y_COORD' is not found on the upgraded version of the cell '/CHAR_ROM_CONTROLLER_0'. Its connection to the net 'CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD' has been removed.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips {CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0 CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0}] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd]
+CRITICAL WARNING: [BD 41-1367] The port name 'DO' of cell '/char_rom_0' is a reserved keyword in a Hardware Description Language. Please consider renaming the port.
+WARNING: [BD 41-927] Following properties on pin /VGA_controller_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /hdmi_tx_0/pix_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /hdmi_tx_0/pix_clkx5 have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /char_rom_0/CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /C_ROM_LOGIC_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /ASCII_addr_gen_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/ASCII_addr_gen_0/i_START_X_COORD
+/ASCII_addr_gen_0/i_START_Y_COORD
+
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD is NULL! Connection will be grounded!
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/synth/CHAR_ROM_DISPLAY.v
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD is NULL! Connection will be grounded!
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/sim/CHAR_ROM_DISPLAY.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hdl/CHAR_ROM_DISPLAY_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VGA_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ASCII_addr_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block char_rom_0 .
+WARNING: [IP_Flow 19-5160] IP 'CHAR_ROM_DISPLAY_processing_system7_0_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'Verilog' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'CHAR_ROM_DISPLAY_processing_system7_0_0' detected simulation language mismatch. Simulation type 'tlm_dpi' does not support 'Verilog' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block CHAR_ROM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block C_ROM_LOGIC_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_4 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_auto_pc_0/CHAR_ROM_DISPLAY_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hw_handoff/CHAR_ROM_DISPLAY.hwh
+Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hw_handoff/CHAR_ROM_DISPLAY_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/synth/CHAR_ROM_DISPLAY.hwdef
+generate_target: Time (s): cpu = 00:00:34 ; elapsed = 00:00:18 . Memory (MB): peak = 7196.848 ; gain = 141.762 ; free physical = 4030 ; free virtual = 9322
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd] -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+connect_bd_net [get_bd_pins ASCII_addr_gen_0/i_START_X_COORD] [get_bd_pins CHAR_ROM_CONTROLLER_0/o_START_X_COORD]
+connect_bd_net [get_bd_pins ASCII_addr_gen_0/i_START_Y_COORD] [get_bd_pins CHAR_ROM_CONTROLLER_0/o_START_Y_COORD]
+save_bd_design
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+update_module_reference CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd'
+INFO: [IP_Flow 19-3420] Updated CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0 to use current project options
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_BG_BLUE'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_BG_GREEN'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_BG_RED'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_FG_BLUE'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_FG_GREEN'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_FG_RED'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+report_ip_status -name ip_status 
+connect_bd_net [get_bd_pins C_ROM_LOGIC_0/i_BG_RED] [get_bd_pins CHAR_ROM_CONTROLLER_0/o_BG_RED]
+connect_bd_net [get_bd_pins C_ROM_LOGIC_0/i_BG_GREEN] [get_bd_pins CHAR_ROM_CONTROLLER_0/o_BG_GREEN]
+connect_bd_net [get_bd_pins C_ROM_LOGIC_0/i_BG_BLUE] [get_bd_pins CHAR_ROM_CONTROLLER_0/o_BG_BLUE]
+connect_bd_net [get_bd_pins C_ROM_LOGIC_0/i_FG_RED] [get_bd_pins CHAR_ROM_CONTROLLER_0/o_FG_RED]
+connect_bd_net [get_bd_pins C_ROM_LOGIC_0/i_FG_GREEN] [get_bd_pins CHAR_ROM_CONTROLLER_0/o_FG_GREEN]
+connect_bd_net [get_bd_pins C_ROM_LOGIC_0/i_FG_BLUE] [get_bd_pins CHAR_ROM_CONTROLLER_0/o_FG_BLUE]
+regenerate_bd_layout
+save_bd_design
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 14
+[Fri Nov  8 21:19:43 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/runme.log
+update_module_reference CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd'
+INFO: [IP_Flow 19-3420] Updated CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0 to use current project options
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 14
+[Fri Nov  8 21:25:04 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_1/runme.log
+set_property -dict [list CONFIG.POLARITY {ACTIVE_HIGH}] [get_bd_pins ASCII_addr_gen_0/i_RST]
+regenerate_bd_layout
+save_bd_design
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+[Fri Nov  8 21:27:20 2019] Launched impl_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_1/runme.log
+update_module_reference {CHAR_ROM_DISPLAY_VGA_controller_0_0 HDMI_CONTROLLER_BD_VGA_controller_0_0}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd'
+WARNING: [IP_Flow 19-4316] Parameter 'v_END_OF_LINE' is no longer present on the upgraded IP 'CHAR_ROM_DISPLAY_VGA_controller_0_0', and cannot be set to '1650'
+WARNING: [IP_Flow 19-4316] Parameter 'v_END_OF_SCREEN' is no longer present on the upgraded IP 'CHAR_ROM_DISPLAY_VGA_controller_0_0', and cannot be set to '750'
+WARNING: [IP_Flow 19-4316] Parameter 'v_HA_END' is no longer present on the upgraded IP 'CHAR_ROM_DISPLAY_VGA_controller_0_0', and cannot be set to '1280'
+WARNING: [IP_Flow 19-4316] Parameter 'v_VA_END' is no longer present on the upgraded IP 'CHAR_ROM_DISPLAY_VGA_controller_0_0', and cannot be set to '720'
+WARNING: [IP_Flow 19-4316] Parameter 'v_HORIZONTAL_FRONT_PORCH' is no longer present on the upgraded IP 'CHAR_ROM_DISPLAY_VGA_controller_0_0', and cannot be set to '110'
+WARNING: [IP_Flow 19-4316] Parameter 'v_HORIZONTAL_BACK_PORCH' is no longer present on the upgraded IP 'CHAR_ROM_DISPLAY_VGA_controller_0_0', and cannot be set to '220'
+WARNING: [IP_Flow 19-4316] Parameter 'v_HORIZONTAL_SYNC_WIDTH' is no longer present on the upgraded IP 'CHAR_ROM_DISPLAY_VGA_controller_0_0', and cannot be set to '40'
+WARNING: [IP_Flow 19-4316] Parameter 'v_VERTICAL_FRONT_PORCH' is no longer present on the upgraded IP 'CHAR_ROM_DISPLAY_VGA_controller_0_0', and cannot be set to '5'
+WARNING: [IP_Flow 19-4316] Parameter 'v_VERTICAL_BACK_PORCH' is no longer present on the upgraded IP 'CHAR_ROM_DISPLAY_VGA_controller_0_0', and cannot be set to '20'
+WARNING: [IP_Flow 19-4316] Parameter 'v_VERTICAL_SYNC_WIDTH' is no longer present on the upgraded IP 'CHAR_ROM_DISPLAY_VGA_controller_0_0', and cannot be set to '5'
+INFO: [IP_Flow 19-3420] Updated CHAR_ROM_DISPLAY_VGA_controller_0_0 to use current project options
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_END_OF_LINE'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_END_OF_SCREEN'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_HA_END'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_HORIZONTAL_BACK_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_HORIZONTAL_FRONT_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_HORIZONTAL_SYNC_WIDTH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_VA_END'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_VERTICAL_BACK_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_VERTICAL_FRONT_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_VERTICAL_SYNC_WIDTH'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'CHAR_ROM_DISPLAY_VGA_controller_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'CHAR_ROM_DISPLAY_VGA_controller_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+Adding component instance block -- realdigital.org:realdigital:hdmi_tx:1.0 - hdmi_tx_0
+Adding component instance block -- xilinx.com:module_ref:VGA_controller:1.0 - VGA_controller_0
+Adding component instance block -- xilinx.com:module_ref:color_logic:1.0 - color_logic_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Successfully read diagram <HDMI_CONTROLLER_BD> from BD file </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/HDMI_CONTROLLER_BD.bd>
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/HDMI_CONTROLLER_BD.bd'
+WARNING: [IP_Flow 19-4316] Parameter 'v_END_OF_LINE' is no longer present on the upgraded IP 'HDMI_CONTROLLER_BD_VGA_controller_0_0', and cannot be set to '1650'
+WARNING: [IP_Flow 19-4316] Parameter 'v_END_OF_SCREEN' is no longer present on the upgraded IP 'HDMI_CONTROLLER_BD_VGA_controller_0_0', and cannot be set to '750'
+WARNING: [IP_Flow 19-4316] Parameter 'v_HA_END' is no longer present on the upgraded IP 'HDMI_CONTROLLER_BD_VGA_controller_0_0', and cannot be set to '1280'
+WARNING: [IP_Flow 19-4316] Parameter 'v_VA_END' is no longer present on the upgraded IP 'HDMI_CONTROLLER_BD_VGA_controller_0_0', and cannot be set to '720'
+WARNING: [IP_Flow 19-4316] Parameter 'v_HORIZONTAL_FRONT_PORCH' is no longer present on the upgraded IP 'HDMI_CONTROLLER_BD_VGA_controller_0_0', and cannot be set to '110'
+WARNING: [IP_Flow 19-4316] Parameter 'v_HORIZONTAL_BACK_PORCH' is no longer present on the upgraded IP 'HDMI_CONTROLLER_BD_VGA_controller_0_0', and cannot be set to '220'
+WARNING: [IP_Flow 19-4316] Parameter 'v_HORIZONTAL_SYNC_WIDTH' is no longer present on the upgraded IP 'HDMI_CONTROLLER_BD_VGA_controller_0_0', and cannot be set to '40'
+WARNING: [IP_Flow 19-4316] Parameter 'v_VERTICAL_FRONT_PORCH' is no longer present on the upgraded IP 'HDMI_CONTROLLER_BD_VGA_controller_0_0', and cannot be set to '5'
+WARNING: [IP_Flow 19-4316] Parameter 'v_VERTICAL_BACK_PORCH' is no longer present on the upgraded IP 'HDMI_CONTROLLER_BD_VGA_controller_0_0', and cannot be set to '20'
+WARNING: [IP_Flow 19-4316] Parameter 'v_VERTICAL_SYNC_WIDTH' is no longer present on the upgraded IP 'HDMI_CONTROLLER_BD_VGA_controller_0_0', and cannot be set to '5'
+INFO: [IP_Flow 19-3420] Updated HDMI_CONTROLLER_BD_VGA_controller_0_0 to use current project options
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_END_OF_LINE'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_END_OF_SCREEN'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_HA_END'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_HORIZONTAL_BACK_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_HORIZONTAL_FRONT_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_HORIZONTAL_SYNC_WIDTH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_VA_END'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_VERTICAL_BACK_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_VERTICAL_FRONT_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'i_VERTICAL_SYNC_WIDTH'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'HDMI_CONTROLLER_BD_VGA_controller_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'HDMI_CONTROLLER_BD_VGA_controller_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/HDMI_CONTROLLER_BD.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ui/bd_cd9e9b9e.ui> 
+open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd}
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+create_peripheral user.org user RESOLUTION_CONTROLLER 1.0 -dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core user.org:user:RESOLUTION_CONTROLLER:1.0]
+set_property VALUE 10 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core user.org:user:RESOLUTION_CONTROLLER:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:RESOLUTION_CONTROLLER:1.0]
+write_peripheral [ipx::find_open_core user.org:user:RESOLUTION_CONTROLLER:1.0]
+set_property  ip_repo_paths  {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0 /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0 /home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS} [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:RESOLUTION_CONTROLLER:1.0 RESOLUTION_CONTROLLER_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/RESOLUTION_CONTROLLER_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins RESOLUTION_CONTROLLER_0/S00_AXI]
+Slave segment </RESOLUTION_CONTROLLER_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
+ipx::edit_ip_in_project -upgrade true -name RESOLUTION_CONTROLLER_v1_0_project -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.tmp/RESOLUTION_CONTROLLER_v1_0_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0.v:]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 14
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0.v:]
+[Fri Nov  8 22:07:37 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.tmp/RESOLUTION_CONTROLLER_v1_0_project/RESOLUTION_CONTROLLER_v1_0_project.runs/synth_1/runme.log
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/component.xml' ignored by IP packager.
+current_project Module_5
+current_bd_design [get_bd_designs HDMI_CONTROLLER_BD]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project RESOLUTION_CONTROLLER_v1_0_project
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'
+current_bd_design [get_bd_designs CHAR_ROM_DISPLAY]
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0] -log ip_upgrade.log
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd'
+INFO: [IP_Flow 19-3422] Upgraded CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0 (RESOLUTION_CONTROLLER_v1.0 1.0) from revision 1 to revision 2
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_END_OF_LINE'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_END_OF_SCREEN'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_HA_END'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_HORIZONTAL_BACK_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_HORIZONTAL_FRONT_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_HORIZONTAL_SYNC_WIDTH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_VA_END'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_VERTICAL_BACK_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_VERTICAL_FRONT_PORCH'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_VERTICAL_SYNC_WIDTH'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd]
+CRITICAL WARNING: [BD 41-1367] The port name 'DO' of cell '/char_rom_0' is a reserved keyword in a Hardware Description Language. Please consider renaming the port.
+WARNING: [BD 41-927] Following properties on pin /hdmi_tx_0/pix_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /hdmi_tx_0/pix_clkx5 have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /char_rom_0/CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /ASCII_addr_gen_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /C_ROM_LOGIC_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /VGA_controller_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/VGA_controller_0/i_END_OF_LINE
+/VGA_controller_0/i_END_OF_SCREEN
+/VGA_controller_0/i_HA_END
+/VGA_controller_0/i_VA_END
+/VGA_controller_0/i_HORIZONTAL_FRONT_PORCH
+/VGA_controller_0/i_HORIZONTAL_BACK_PORCH
+/VGA_controller_0/i_HORIZONTAL_SYNC_WIDTH
+/VGA_controller_0/i_VERTICAL_FRONT_PORCH
+/VGA_controller_0/i_VERTICAL_BACK_PORCH
+/VGA_controller_0/i_VERTICAL_SYNC_WIDTH
+
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD is NULL! Connection will be grounded!
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/synth/CHAR_ROM_DISPLAY.v
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD is NULL! Connection will be grounded!
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/sim/CHAR_ROM_DISPLAY.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hdl/CHAR_ROM_DISPLAY_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VGA_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ASCII_addr_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block char_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block CHAR_ROM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block C_ROM_LOGIC_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RESOLUTION_CONTROLLER_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_auto_pc_0/CHAR_ROM_DISPLAY_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hw_handoff/CHAR_ROM_DISPLAY.hwh
+Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hw_handoff/CHAR_ROM_DISPLAY_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/synth/CHAR_ROM_DISPLAY.hwdef
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd] -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+connect_bd_net [get_bd_pins VGA_controller_0/i_END_OF_LINE] [get_bd_pins RESOLUTION_CONTROLLER_0/o_END_OF_LINE]
+connect_bd_net [get_bd_pins VGA_controller_0/i_END_OF_SCREEN] [get_bd_pins RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN]
+connect_bd_net [get_bd_pins VGA_controller_0/i_HA_END] [get_bd_pins RESOLUTION_CONTROLLER_0/o_HA_END]
+connect_bd_net [get_bd_pins VGA_controller_0/i_VA_END] [get_bd_pins RESOLUTION_CONTROLLER_0/o_VA_END]
+connect_bd_net [get_bd_pins VGA_controller_0/i_HORIZONTAL_FRONT_PORCH] [get_bd_pins RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH]
+update_module_reference {CHAR_ROM_DISPLAY_VGA_controller_0_0 HDMI_CONTROLLER_BD_VGA_controller_0_0}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'i_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'i_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd'
+INFO: [IP_Flow 19-3420] Updated CHAR_ROM_DISPLAY_VGA_controller_0_0 to use current project options
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_END_OF_LINE' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_END_OF_SCREEN' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_HA_END' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_HORIZONTAL_BACK_PORCH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_HORIZONTAL_FRONT_PORCH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_HORIZONTAL_SYNC_WIDTH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_VA_END' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_VERTICAL_BACK_PORCH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_VERTICAL_FRONT_PORCH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_VERTICAL_SYNC_WIDTH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'CHAR_ROM_DISPLAY_VGA_controller_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'CHAR_ROM_DISPLAY_VGA_controller_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/HDMI_CONTROLLER_BD.bd'
+INFO: [IP_Flow 19-3420] Updated HDMI_CONTROLLER_BD_VGA_controller_0_0 to use current project options
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_END_OF_LINE' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_END_OF_SCREEN' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_HA_END' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_HORIZONTAL_BACK_PORCH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_HORIZONTAL_FRONT_PORCH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_HORIZONTAL_SYNC_WIDTH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_VA_END' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_VERTICAL_BACK_PORCH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_VERTICAL_FRONT_PORCH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'i_VERTICAL_SYNC_WIDTH' width 16 differs from original width 1
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'HDMI_CONTROLLER_BD_VGA_controller_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'HDMI_CONTROLLER_BD_VGA_controller_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/HDMI_CONTROLLER_BD.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/HDMI_CONTROLLER_BD/ui/bd_cd9e9b9e.ui> 
+update_module_reference: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 7607.324 ; gain = 19.008 ; free physical = 3085 ; free virtual = 8587
+current_bd_design [get_bd_designs CHAR_ROM_DISPLAY]
+ipx::edit_ip_in_project -upgrade true -name CHAR_ROM_CONTROLLER_v1_0_project -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.tmp/CHAR_ROM_CONTROLLER_v1_0_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/hdl/CHAR_ROM_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0/hdl/CHAR_ROM_CONTROLLER_v1_0.v:]
+update_compile_order -fileset sources_1
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name RESOLUTION_CONTROLLER_v1_0_project -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.tmp/RESOLUTION_CONTROLLER_v1_0_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/component.xml' ignored by IP packager.
+launch_runs synth_1 -jobs 14
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0.v:]
+[Fri Nov  8 23:13:01 2019] Launched synth_1...
+Run output will be captured here: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.tmp/RESOLUTION_CONTROLLER_v1_0_project/RESOLUTION_CONTROLLER_v1_0_project.runs/synth_1/runme.log
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0 CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0}] -log ip_upgrade.log
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd'
+INFO: [IP_Flow 19-3422] Upgraded CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0 (CHAR_ROM_CONTROLLER_v1.0 1.0) from revision 3 to revision 4
+INFO: [IP_Flow 19-3422] Upgraded CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0 (RESOLUTION_CONTROLLER_v1.0 1.0) from revision 2 to revision 3
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_END_OF_LINE' width 17 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_END_OF_SCREEN' width 17 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_HA_END' width 17 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_HORIZONTAL_BACK_PORCH' width 17 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_HORIZONTAL_FRONT_PORCH' width 17 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_HORIZONTAL_SYNC_WIDTH' width 17 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_VA_END' width 17 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_VERTICAL_BACK_PORCH' width 17 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_VERTICAL_FRONT_PORCH' width 17 differs from original width 1
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_VERTICAL_SYNC_WIDTH' width 17 differs from original width 1
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips {CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0 CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0}] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd]
+CRITICAL WARNING: [BD 41-1367] The port name 'DO' of cell '/char_rom_0' is a reserved keyword in a Hardware Description Language. Please consider renaming the port.
+WARNING: [BD 41-927] Following properties on pin /hdmi_tx_0/pix_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /hdmi_tx_0/pix_clkx5 have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /char_rom_0/CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /ASCII_addr_gen_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /C_ROM_LOGIC_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /VGA_controller_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/VGA_controller_0/i_HORIZONTAL_BACK_PORCH
+/VGA_controller_0/i_HORIZONTAL_SYNC_WIDTH
+/VGA_controller_0/i_VERTICAL_FRONT_PORCH
+/VGA_controller_0/i_VERTICAL_BACK_PORCH
+/VGA_controller_0/i_VERTICAL_SYNC_WIDTH
+
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD is NULL! Connection will be grounded!
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/VGA_controller_0/i_END_OF_LINE'(16) to net 'RESOLUTION_CONTROLLER_0_o_END_OF_LINE'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/VGA_controller_0/i_END_OF_SCREEN'(16) to net 'RESOLUTION_CONTROLLER_0_o_END_OF_SCREEN'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/VGA_controller_0/i_HA_END'(16) to net 'RESOLUTION_CONTROLLER_0_o_HA_END'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/VGA_controller_0/i_VA_END'(16) to net 'RESOLUTION_CONTROLLER_0_o_VA_END'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/VGA_controller_0/i_HORIZONTAL_FRONT_PORCH'(16) to net 'RESOLUTION_CONTROLLER_0_o_HORIZONTAL_FRONT_PORCH'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/synth/CHAR_ROM_DISPLAY.v
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD is NULL! Connection will be grounded!
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/VGA_controller_0/i_END_OF_LINE'(16) to net 'RESOLUTION_CONTROLLER_0_o_END_OF_LINE'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/VGA_controller_0/i_END_OF_SCREEN'(16) to net 'RESOLUTION_CONTROLLER_0_o_END_OF_SCREEN'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/VGA_controller_0/i_HA_END'(16) to net 'RESOLUTION_CONTROLLER_0_o_HA_END'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/VGA_controller_0/i_VA_END'(16) to net 'RESOLUTION_CONTROLLER_0_o_VA_END'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/VGA_controller_0/i_HORIZONTAL_FRONT_PORCH'(16) to net 'RESOLUTION_CONTROLLER_0_o_HORIZONTAL_FRONT_PORCH'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/sim/CHAR_ROM_DISPLAY.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hdl/CHAR_ROM_DISPLAY_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VGA_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ASCII_addr_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block char_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block CHAR_ROM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block C_ROM_LOGIC_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RESOLUTION_CONTROLLER_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_auto_pc_0/CHAR_ROM_DISPLAY_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hw_handoff/CHAR_ROM_DISPLAY.hwh
+Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hw_handoff/CHAR_ROM_DISPLAY_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/synth/CHAR_ROM_DISPLAY.hwdef
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd] -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+connect_bd_net [get_bd_pins VGA_controller_0/i_HORIZONTAL_BACK_PORCH] [get_bd_pins RESOLUTION_CONTROLLER_0/o_HORIZONTAL_BACK_PORCH]
+connect_bd_net [get_bd_pins VGA_controller_0/i_HORIZONTAL_SYNC_WIDTH] [get_bd_pins RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH]
+connect_bd_net [get_bd_pins VGA_controller_0/i_VERTICAL_FRONT_PORCH] [get_bd_pins RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH]
+connect_bd_net [get_bd_pins VGA_controller_0/i_VERTICAL_BACK_PORCH] [get_bd_pins RESOLUTION_CONTROLLER_0/o_VERTICAL_BACK_PORCH]
+connect_bd_net [get_bd_pins VGA_controller_0/i_VERTICAL_SYNC_WIDTH] [get_bd_pins RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH]
+save_bd_design
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+regenerate_bd_layout
+ipx::edit_ip_in_project -upgrade true -name RESOLUTION_CONTROLLER_v1_0_project -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.tmp/RESOLUTION_CONTROLLER_v1_0_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/hdl/RESOLUTION_CONTROLLER_v1_0.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-5226] Project source file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0/component.xml' ignored by IP packager.
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'
+upgrade_ip -vlnv user.org:user:RESOLUTION_CONTROLLER:1.0 [get_ips  CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0] -log ip_upgrade.log
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd'
+INFO: [IP_Flow 19-3422] Upgraded CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0 (RESOLUTION_CONTROLLER_v1.0 1.0) from revision 3 to revision 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_END_OF_LINE' width 16 differs from original width 17
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_END_OF_SCREEN' width 16 differs from original width 17
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_HA_END' width 16 differs from original width 17
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_HORIZONTAL_BACK_PORCH' width 16 differs from original width 17
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_HORIZONTAL_FRONT_PORCH' width 16 differs from original width 17
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_HORIZONTAL_SYNC_WIDTH' width 16 differs from original width 17
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_VA_END' width 16 differs from original width 17
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_VERTICAL_BACK_PORCH' width 16 differs from original width 17
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_VERTICAL_FRONT_PORCH' width 16 differs from original width 17
+WARNING: [IP_Flow 19-4706] Upgraded port 'o_VERTICAL_SYNC_WIDTH' width 16 differs from original width 17
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd]
+CRITICAL WARNING: [BD 41-1367] The port name 'DO' of cell '/char_rom_0' is a reserved keyword in a Hardware Description Language. Please consider renaming the port.
+WARNING: [BD 41-927] Following properties on pin /hdmi_tx_0/pix_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /hdmi_tx_0/pix_clkx5 have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /char_rom_0/CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /ASCII_addr_gen_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /C_ROM_LOGIC_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /VGA_controller_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD is NULL! Connection will be grounded!
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/synth/CHAR_ROM_DISPLAY.v
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD is NULL! Connection will be grounded!
+WARNING: [BD 41-166] Source port for the net:CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD is NULL! Connection will be grounded!
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/sim/CHAR_ROM_DISPLAY.v
+VHDL Output written to : /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hdl/CHAR_ROM_DISPLAY_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VGA_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ASCII_addr_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block char_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block CHAR_ROM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block C_ROM_LOGIC_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RESOLUTION_CONTROLLER_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_auto_pc_0/CHAR_ROM_DISPLAY_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hw_handoff/CHAR_ROM_DISPLAY.hwh
+Generated Block Design Tcl file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hw_handoff/CHAR_ROM_DISPLAY_bd.tcl
+Generated Hardware Definition File /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/synth/CHAR_ROM_DISPLAY.hwdef
+export_ip_user_files -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd] -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd}
+report_ip_status -name ip_status 
+update_module_reference CHAR_ROM_DISPLAY_char_rom_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'RST' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'RST'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'CLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
+Upgrading '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd'
+INFO: [IP_Flow 19-3420] Updated CHAR_ROM_DISPLAY_char_rom_0_0 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'DO'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'o_DATA'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'CHAR_ROM_DISPLAY_char_rom_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'DO' is not found on the upgraded version of the cell '/char_rom_0'. Its connection to the net 'char_rom_0_DO' has been removed.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'CHAR_ROM_DISPLAY_char_rom_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+WARNING: [BD 41-597] NET <char_rom_0_DO> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+connect_bd_net [get_bd_pins char_rom_0/o_DATA] [get_bd_pins C_ROM_LOGIC_0/i_CHAR_LINE]
+save_bd_design
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+regenerate_bd_layout
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins rst_ps7_0_50M/dcm_locked]
+disconnect_bd_net /clk_wiz_0_locked [get_bd_pins rst_ps7_0_50M/dcm_locked]
+save_bd_design
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_RESOLUTION_CONTROLLER_0_S00_AXI_reg}]
+set_property offset 0x4DD00000 [get_bd_addr_segs {processing_system7_0/Data/SEG_RESOLUTION_CONTROLLER_0_S00_AXI_reg}]
+save_bd_design
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_X_COORD> has no source
+WARNING: [BD 41-597] NET <CHAR_ROM_CONTROLLER_0_o_TARGET_Y_COORD> has no source
+Wrote  : </home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  9 00:02:59 2019...
