@@ -1,0 +1,18 @@
+[tasks]
+cov
+prv
+[options]
+prv:mode prove
+prv:depth 100
+cov:mode cover
+cov:depth 1000
+
+[engines]
+aigbmc
+
+[files]
+VGA_controller.v
+
+[script]
+read_verilog -formal VGA_controller.v
+prep -top VGA_controller

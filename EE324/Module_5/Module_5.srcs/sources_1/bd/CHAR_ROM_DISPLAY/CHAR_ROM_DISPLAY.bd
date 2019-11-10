@@ -29,10 +29,11 @@
       "xlconstant_4": "",
       "ASCII_addr_gen_0": "",
       "C_ROM_LOGIC_0": "",
-      "VGA_controller_0": "",
-      "CHAR_ROM_CONTROLLER_0": "",
       "RESOLUTION_CONTROLLER_0": "",
-      "char_rom_0": ""
+      "char_rom_0": "",
+      "CHAR_ROM_CONTROLLER_0": "",
+      "VGA_controller_0": "",
+      "RAM_RANGLER_FSM_0": ""
     },
     "interface_ports": {
       "hdmi_tx_0": {
@@ -1089,16 +1090,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -1335,22 +1336,16 @@
           }
         },
         "interface_nets": {
-          "s01_couplers_to_xbar": {
-            "interface_ports": [
-              "s01_couplers/M_AXI",
-              "xbar/S01_AXI"
-            ]
-          },
           "s00_couplers_to_xbar": {
             "interface_ports": [
               "s00_couplers/M_AXI",
               "xbar/S00_AXI"
             ]
           },
-          "ps7_0_axi_periph_to_s01_couplers": {
+          "m01_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "S01_AXI",
-              "s01_couplers/S_AXI"
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           },
           "ps7_0_axi_periph_to_s00_couplers": {
@@ -1359,16 +1354,22 @@
               "s00_couplers/S_AXI"
             ]
           },
-          "xbar_to_m02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
-            ]
-          },
           "m00_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
+            ]
+          },
+          "ps7_0_axi_periph_to_s01_couplers": {
+            "interface_ports": [
+              "S01_AXI",
+              "s01_couplers/S_AXI"
+            ]
+          },
+          "s01_couplers_to_xbar": {
+            "interface_ports": [
+              "s01_couplers/M_AXI",
+              "xbar/S01_AXI"
             ]
           },
           "m02_couplers_to_ps7_0_axi_periph": {
@@ -1377,10 +1378,10 @@
               "m02_couplers/M_AXI"
             ]
           },
-          "xbar_to_m01_couplers": {
+          "xbar_to_m02_couplers": {
             "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
+              "xbar/M02_AXI",
+              "m02_couplers/S_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -1389,10 +1390,10 @@
               "m00_couplers/S_AXI"
             ]
           },
-          "m01_couplers_to_ps7_0_axi_periph": {
+          "xbar_to_m01_couplers": {
             "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
             ]
           }
         },
@@ -1624,94 +1625,6 @@
           }
         }
       },
-      "VGA_controller_0": {
-        "vlnv": "xilinx.com:module_ref:VGA_controller:1.0",
-        "xci_name": "CHAR_ROM_DISPLAY_VGA_controller_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "VGA_controller",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_CLK": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "o_HSYNC": {
-            "direction": "O"
-          },
-          "o_VSYNC": {
-            "direction": "O"
-          },
-          "o_VDE": {
-            "direction": "O"
-          },
-          "i_END_OF_LINE": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "i_END_OF_SCREEN": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "i_HA_END": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "i_VA_END": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "i_HORIZONTAL_FRONT_PORCH": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "i_HORIZONTAL_BACK_PORCH": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "i_HORIZONTAL_SYNC_WIDTH": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "i_VERTICAL_FRONT_PORCH": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "i_VERTICAL_BACK_PORCH": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "i_VERTICAL_SYNC_WIDTH": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "o_X_COORD": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "o_Y_COORD": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          }
-        }
-      },
-      "CHAR_ROM_CONTROLLER_0": {
-        "vlnv": "user.org:user:CHAR_ROM_CONTROLLER:1.0",
-        "xci_name": "CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0"
-      },
       "RESOLUTION_CONTROLLER_0": {
         "vlnv": "user.org:user:RESOLUTION_CONTROLLER:1.0",
         "xci_name": "CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0"
@@ -1760,19 +1673,145 @@
             "right": "0"
           }
         }
+      },
+      "CHAR_ROM_CONTROLLER_0": {
+        "vlnv": "user.org:user:CHAR_ROM_CONTROLLER:1.0",
+        "xci_name": "CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0"
+      },
+      "VGA_controller_0": {
+        "vlnv": "xilinx.com:module_ref:VGA_controller:1.0",
+        "xci_name": "CHAR_ROM_DISPLAY_VGA_controller_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "VGA_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RSTN": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_END_OF_LINE": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_END_OF_SCREEN": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_HA_END": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_VA_END": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_HORIZONTAL_FRONT_PORCH": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_HORIZONTAL_SYNC_WIDTH": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_VERTICAL_FRONT_PORCH": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_VERTICAL_SYNC_WIDTH": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "o_HSYNC": {
+            "direction": "O"
+          },
+          "o_VSYNC": {
+            "direction": "O"
+          },
+          "o_VDE": {
+            "direction": "O"
+          },
+          "o_X_COORD": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "o_Y_COORD": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "RAM_RANGLER_FSM_0": {
+        "vlnv": "xilinx.com:module_ref:RAM_RANGLER_FSM:1.0",
+        "xci_name": "CHAR_ROM_DISPLAY_RAM_RANGLER_FSM_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RAM_RANGLER_FSM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RSTN": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_DATA": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_VDE": {
+            "direction": "I"
+          },
+          "i_WRITE_REQUEST": {
+            "direction": "I"
+          },
+          "o_ASCII_VAL": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "o_FG_RED": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "o_FG_GREEN": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "o_FG_BLUE": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
-      "ps7_0_axi_periph_M00_AXI": {
+      "processing_system7_0_FIXED_IO": {
         "interface_ports": [
-          "ps7_0_axi_periph/M00_AXI",
-          "CHAR_ROM_CONTROLLER_0/S00_AXI"
-        ]
-      },
-      "ps7_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M01_AXI",
-          "clk_wiz_0/s_axi_lite"
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       },
       "processing_system7_0_M_AXI_GP0": {
@@ -1781,22 +1820,28 @@
           "ps7_0_axi_periph/S00_AXI"
         ]
       },
-      "processing_system7_0_DDR": {
+      "ps7_0_axi_periph_M01_AXI": {
         "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
+          "ps7_0_axi_periph/M01_AXI",
+          "clk_wiz_0/s_axi_lite"
         ]
       },
-      "processing_system7_0_FIXED_IO": {
+      "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
+          "ps7_0_axi_periph/M00_AXI",
+          "CHAR_ROM_CONTROLLER_0/S00_AXI"
         ]
       },
       "ps7_0_axi_periph_M02_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M02_AXI",
           "RESOLUTION_CONTROLLER_0/S00_AXI"
+        ]
+      },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
         ]
       },
       "hdmi_tx_0_hdmi_tx": {
@@ -1817,7 +1862,8 @@
         "ports": [
           "VGA_controller_0/o_VDE",
           "hdmi_tx_0/vde",
-          "C_ROM_LOGIC_0/i_VDE"
+          "C_ROM_LOGIC_0/i_VDE",
+          "RAM_RANGLER_FSM_0/i_VDE"
         ]
       },
       "VGA_controller_0_o_VSYNC": {
@@ -1838,8 +1884,9 @@
           "hdmi_tx_0/pix_clk",
           "ASCII_addr_gen_0/i_CLK",
           "C_ROM_LOGIC_0/i_CLK",
+          "char_rom_0/CLK",
           "VGA_controller_0/i_CLK",
-          "char_rom_0/CLK"
+          "RAM_RANGLER_FSM_0/i_CLK"
         ]
       },
       "clk_wiz_0_clk_out2": {
@@ -1886,8 +1933,8 @@
           "ps7_0_axi_periph/M01_ACLK",
           "ps7_0_axi_periph/S01_ACLK",
           "ps7_0_axi_periph/M02_ACLK",
-          "CHAR_ROM_CONTROLLER_0/s00_axi_aclk",
-          "RESOLUTION_CONTROLLER_0/s00_axi_aclk"
+          "RESOLUTION_CONTROLLER_0/s00_axi_aclk",
+          "CHAR_ROM_CONTROLLER_0/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1906,8 +1953,10 @@
           "ps7_0_axi_periph/M01_ARESETN",
           "ps7_0_axi_periph/S01_ARESETN",
           "ps7_0_axi_periph/M02_ARESETN",
+          "RESOLUTION_CONTROLLER_0/s00_axi_aresetn",
           "CHAR_ROM_CONTROLLER_0/s00_axi_aresetn",
-          "RESOLUTION_CONTROLLER_0/s00_axi_aresetn"
+          "VGA_controller_0/i_RSTN",
+          "RAM_RANGLER_FSM_0/i_RSTN"
         ]
       },
       "C_ROM_LOGIC_0_o_RED": {
@@ -1955,9 +2004,7 @@
       "xlconstant_3_dout": {
         "ports": [
           "xlconstant_3/dout",
-          "hdmi_tx_0/rst",
-          "ASCII_addr_gen_0/i_RST",
-          "char_rom_0/RST"
+          "hdmi_tx_0/rst"
         ]
       },
       "xlconstant_4_dout": {
@@ -1968,7 +2015,7 @@
       },
       "CHAR_ROM_CONTROLLER_0_o_ASCII_VAL": {
         "ports": [
-          "CHAR_ROM_CONTROLLER_0/o_ASCII_VAL",
+          "RAM_RANGLER_FSM_0/o_ASCII_VAL",
           "ASCII_addr_gen_0/i_ASCII_VAL"
         ]
       },
@@ -2004,19 +2051,19 @@
       },
       "CHAR_ROM_CONTROLLER_0_o_FG_RED": {
         "ports": [
-          "CHAR_ROM_CONTROLLER_0/o_FG_RED",
+          "RAM_RANGLER_FSM_0/o_FG_RED",
           "C_ROM_LOGIC_0/i_FG_RED"
         ]
       },
       "CHAR_ROM_CONTROLLER_0_o_FG_GREEN": {
         "ports": [
-          "CHAR_ROM_CONTROLLER_0/o_FG_GREEN",
+          "RAM_RANGLER_FSM_0/o_FG_GREEN",
           "C_ROM_LOGIC_0/i_FG_GREEN"
         ]
       },
       "CHAR_ROM_CONTROLLER_0_o_FG_BLUE": {
         "ports": [
-          "CHAR_ROM_CONTROLLER_0/o_FG_BLUE",
+          "RAM_RANGLER_FSM_0/o_FG_BLUE",
           "C_ROM_LOGIC_0/i_FG_BLUE"
         ]
       },
@@ -2052,8 +2099,7 @@
       },
       "RESOLUTION_CONTROLLER_0_o_HORIZONTAL_BACK_PORCH": {
         "ports": [
-          "RESOLUTION_CONTROLLER_0/o_HORIZONTAL_BACK_PORCH",
-          "VGA_controller_0/i_HORIZONTAL_BACK_PORCH"
+          "RESOLUTION_CONTROLLER_0/o_HORIZONTAL_BACK_PORCH"
         ]
       },
       "RESOLUTION_CONTROLLER_0_o_HORIZONTAL_SYNC_WIDTH": {
@@ -2070,14 +2116,19 @@
       },
       "RESOLUTION_CONTROLLER_0_o_VERTICAL_BACK_PORCH": {
         "ports": [
-          "RESOLUTION_CONTROLLER_0/o_VERTICAL_BACK_PORCH",
-          "VGA_controller_0/i_VERTICAL_BACK_PORCH"
+          "RESOLUTION_CONTROLLER_0/o_VERTICAL_BACK_PORCH"
         ]
       },
       "RESOLUTION_CONTROLLER_0_o_VERTICAL_SYNC_WIDTH": {
         "ports": [
           "RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH",
           "VGA_controller_0/i_VERTICAL_SYNC_WIDTH"
+        ]
+      },
+      "CHAR_ROM_CONTROLLER_0_o_DATA_PACKET": {
+        "ports": [
+          "CHAR_ROM_CONTROLLER_0/o_DATA_PACKET",
+          "RAM_RANGLER_FSM_0/i_DATA"
         ]
       }
     },

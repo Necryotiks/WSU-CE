@@ -1,0 +1,13 @@
+[options]
+mode prove
+depth 100
+
+[engines]
+aigbmc
+
+[files]
+VGA_controller.v
+
+[script]
+read_verilog -formal VGA_controller.v
+prep -top VGA_controller

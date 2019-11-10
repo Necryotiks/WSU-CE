@@ -1,0 +1,67 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+932 (git sha1 65f197e2, clang 6.0.0-1ubuntu2 -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing ILANG frontend.
+Input filename: design.il
+
+2. Printing statistics.
+
+=== VGA_controller ===
+
+   Number of wires:                158
+   Number of wire bits:            672
+   Number of public wires:          24
+   Number of public wire bits:     234
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                161
+     $add                            8
+     $anyseq                        16
+     $assert                         7
+     $assume                        12
+     $cover                          1
+     $dff                           26
+     $eq                            15
+     $ge                             5
+     $gt                             2
+     $initstate                      1
+     $le                             4
+     $logic_and                      8
+     $logic_not                      6
+     $logic_or                       4
+     $lt                             1
+     $mux                           39
+     $ne                             3
+     $sub                            3
+
+3. Executing SMT2 backend.
+Creating SMT-LIBv2 representation of module VGA_controller.
+
+End of script. Logfile hash: c63550e70f
+CPU: user 0.01s system 0.00s, MEM: 44.78 MB total, 9.02 MB resident
+Yosys 0.9+932 (git sha1 65f197e2, clang 6.0.0-1ubuntu2 -fPIC -Os)
+Time spent: 56% 2x write_smt2 (0 sec), 41% 2x read_ilang (0 sec), ...

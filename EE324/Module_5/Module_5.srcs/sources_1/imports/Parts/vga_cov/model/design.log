@@ -1,0 +1,557 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+932 (git sha1 65f197e2, clang 6.0.0-1ubuntu2 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: VGA_controller.v
+Parsing formal Verilog input from `VGA_controller.v' to AST representation.
+Generating RTLIL representation for module `\VGA_controller'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \VGA_controller
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \VGA_controller
+Removed 0 unused modules.
+Module VGA_controller directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$VGA_controller.v:149$69 in module VGA_controller.
+Marked 1 switch rules as full_case in process $proc$VGA_controller.v:137$65 in module VGA_controller.
+Marked 1 switch rules as full_case in process $proc$VGA_controller.v:129$56 in module VGA_controller.
+Marked 1 switch rules as full_case in process $proc$VGA_controller.v:121$47 in module VGA_controller.
+Marked 2 switch rules as full_case in process $proc$VGA_controller.v:106$39 in module VGA_controller.
+Marked 1 switch rules as full_case in process $proc$VGA_controller.v:95$33 in module VGA_controller.
+Marked 1 switch rules as full_case in process $proc$VGA_controller.v:87$30 in module VGA_controller.
+Marked 1 switch rules as full_case in process $proc$VGA_controller.v:77$28 in module VGA_controller.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 7 redundant assignments.
+Promoted 60 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:192$223'.
+  Set init value: $formal$VGA_controller.v:192$27_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:190$221'.
+  Set init value: $formal$VGA_controller.v:190$26_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:188$219'.
+  Set init value: $formal$VGA_controller.v:188$25_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:180$217'.
+  Set init value: $formal$VGA_controller.v:180$24_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:176$215'.
+  Set init value: $formal$VGA_controller.v:176$23_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:172$213'.
+  Set init value: $formal$VGA_controller.v:172$22_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:168$211'.
+  Set init value: $formal$VGA_controller.v:168$21_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:163$209'.
+  Set init value: $formal$VGA_controller.v:163$20_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:161$207'.
+  Set init value: $formal$VGA_controller.v:161$19_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:160$205'.
+  Set init value: $formal$VGA_controller.v:160$18_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:159$203'.
+  Set init value: $formal$VGA_controller.v:159$17_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:158$201'.
+  Set init value: $formal$VGA_controller.v:158$16_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:157$199'.
+  Set init value: $formal$VGA_controller.v:157$15_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:156$197'.
+  Set init value: $formal$VGA_controller.v:156$14_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:155$195'.
+  Set init value: $formal$VGA_controller.v:155$13_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:154$193'.
+  Set init value: $formal$VGA_controller.v:154$12_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:153$191'.
+  Set init value: $formal$VGA_controller.v:153$11_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:152$189'.
+  Set init value: $formal$VGA_controller.v:152$10_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:151$187'.
+  Set init value: $formal$VGA_controller.v:151$9_EN = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:145$182'.
+  Set init value: \r_past_valid = 1'0
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:63$181'.
+  Set init value: \r_VDE = 1'1
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:62$180'.
+  Set init value: \r_Y_COORD = 16'0000000000000000
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:61$179'.
+  Set init value: \r_X_COORD = 16'0000000000000000
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:60$178'.
+  Set init value: \r_VCNT = 16'0000000000000000
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:59$177'.
+  Set init value: \r_HCNT = 16'0000000000000000
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:58$176'.
+  Set init value: \r_VSYNC = 1'1
+Found init rule in `\VGA_controller.$proc$VGA_controller.v:57$175'.
+  Set init value: \r_HSYNC = 1'1
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:192$223'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:190$221'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:188$219'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:180$217'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:176$215'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:172$213'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:168$211'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:163$209'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:161$207'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:160$205'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:159$203'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:158$201'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:157$199'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:156$197'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:155$195'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:154$193'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:153$191'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:152$189'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:151$187'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:146$183'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:145$182'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:63$181'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:62$180'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:61$179'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:60$178'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:59$177'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:58$176'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:57$175'.
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+     1/14: $0$formal$VGA_controller.v:168$21_EN[0:0]$101
+     2/14: $0$formal$VGA_controller.v:168$21_CHECK[0:0]$100
+     3/14: $0$formal$VGA_controller.v:172$22_EN[0:0]$103
+     4/14: $0$formal$VGA_controller.v:172$22_CHECK[0:0]$102
+     5/14: $0$formal$VGA_controller.v:176$23_EN[0:0]$105
+     6/14: $0$formal$VGA_controller.v:176$23_CHECK[0:0]$104
+     7/14: $0$formal$VGA_controller.v:180$24_EN[0:0]$107
+     8/14: $0$formal$VGA_controller.v:180$24_CHECK[0:0]$106
+     9/14: $0$formal$VGA_controller.v:188$25_EN[0:0]$109
+    10/14: $0$formal$VGA_controller.v:188$25_CHECK[0:0]$108
+    11/14: $0$formal$VGA_controller.v:190$26_EN[0:0]$111
+    12/14: $0$formal$VGA_controller.v:190$26_CHECK[0:0]$110
+    13/14: $0$formal$VGA_controller.v:192$27_EN[0:0]$113
+    14/14: $0$formal$VGA_controller.v:192$27_CHECK[0:0]$112
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:137$65'.
+     1/1: $0\r_VDE[0:0]
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:129$56'.
+     1/1: $0\r_VSYNC[0:0]
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:121$47'.
+     1/1: $0\r_HSYNC[0:0]
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:106$39'.
+     1/1: $0\r_VCNT[15:0]
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:95$33'.
+     1/1: $0\r_HCNT[15:0]
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:87$30'.
+     1/1: $0\r_Y_COORD[15:0]
+Creating decoders for process `\VGA_controller.$proc$VGA_controller.v:77$28'.
+     1/1: $0\r_X_COORD[15:0]
+
+2.2.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\VGA_controller.$formal$VGA_controller.v:147$7_CHECK' from process `\VGA_controller.$proc$VGA_controller.v:146$183'.
+No latch inferred for signal `\VGA_controller.$formal$VGA_controller.v:147$7_EN' from process `\VGA_controller.$proc$VGA_controller.v:146$183'.
+
+2.2.8. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\VGA_controller.\r_past_valid' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$321' with positive edge clock.
+Creating register for signal `\VGA_controller.$past$VGA_controller.v:151$1$0' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$322' with positive edge clock.
+Creating register for signal `\VGA_controller.$past$VGA_controller.v:164$2$0' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$323' with positive edge clock.
+Creating register for signal `\VGA_controller.$past$VGA_controller.v:168$3$0' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$324' with positive edge clock.
+Creating register for signal `\VGA_controller.$past$VGA_controller.v:170$4$0' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$325' with positive edge clock.
+Creating register for signal `\VGA_controller.$past$VGA_controller.v:176$5$0' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$326' with positive edge clock.
+Creating register for signal `\VGA_controller.$past$VGA_controller.v:178$6$0' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$327' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:151$9_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$328' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:151$9_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$329' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:152$10_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$330' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:152$10_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$331' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:153$11_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$332' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:153$11_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$333' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:154$12_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$334' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:154$12_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$335' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:155$13_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$336' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:155$13_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$337' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:156$14_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$338' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:156$14_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$339' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:157$15_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$340' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:157$15_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$341' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:158$16_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$342' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:158$16_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$343' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:159$17_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$344' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:159$17_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$345' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:160$18_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$346' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:160$18_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$347' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:161$19_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$348' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:161$19_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$349' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:163$20_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$350' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:163$20_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$351' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:168$21_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$352' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:168$21_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$353' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:172$22_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$354' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:172$22_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$355' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:176$23_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$356' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:176$23_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$357' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:180$24_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$358' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:180$24_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$359' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:188$25_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$360' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:188$25_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$361' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:190$26_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$362' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:190$26_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$363' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:192$27_CHECK' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$364' with positive edge clock.
+Creating register for signal `\VGA_controller.$formal$VGA_controller.v:192$27_EN' using process `\VGA_controller.$proc$VGA_controller.v:149$69'.
+  created $dff cell `$procdff$365' with positive edge clock.
+Creating register for signal `\VGA_controller.\r_VDE' using process `\VGA_controller.$proc$VGA_controller.v:137$65'.
+  created $dff cell `$procdff$366' with positive edge clock.
+Creating register for signal `\VGA_controller.\r_VSYNC' using process `\VGA_controller.$proc$VGA_controller.v:129$56'.
+  created $dff cell `$procdff$367' with positive edge clock.
+Creating register for signal `\VGA_controller.\r_HSYNC' using process `\VGA_controller.$proc$VGA_controller.v:121$47'.
+  created $dff cell `$procdff$368' with positive edge clock.
+Creating register for signal `\VGA_controller.\r_VCNT' using process `\VGA_controller.$proc$VGA_controller.v:106$39'.
+  created $dff cell `$procdff$369' with positive edge clock.
+Creating register for signal `\VGA_controller.\r_HCNT' using process `\VGA_controller.$proc$VGA_controller.v:95$33'.
+  created $dff cell `$procdff$370' with positive edge clock.
+Creating register for signal `\VGA_controller.\r_Y_COORD' using process `\VGA_controller.$proc$VGA_controller.v:87$30'.
+  created $dff cell `$procdff$371' with positive edge clock.
+Creating register for signal `\VGA_controller.\r_X_COORD' using process `\VGA_controller.$proc$VGA_controller.v:77$28'.
+  created $dff cell `$procdff$372' with positive edge clock.
+
+2.2.9. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `VGA_controller.$proc$VGA_controller.v:192$223'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:190$221'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:188$219'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:180$217'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:176$215'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:172$213'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:168$211'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:163$209'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:161$207'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:160$205'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:159$203'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:158$201'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:157$199'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:156$197'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:155$195'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:154$193'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:153$191'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:152$189'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:151$187'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:146$183'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:145$182'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:63$181'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:62$180'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:61$179'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:60$178'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:59$177'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:58$176'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:57$175'.
+Found and cleaned up 8 empty switches in `\VGA_controller.$proc$VGA_controller.v:149$69'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:149$69'.
+Found and cleaned up 1 empty switch in `\VGA_controller.$proc$VGA_controller.v:137$65'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:137$65'.
+Found and cleaned up 1 empty switch in `\VGA_controller.$proc$VGA_controller.v:129$56'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:129$56'.
+Found and cleaned up 1 empty switch in `\VGA_controller.$proc$VGA_controller.v:121$47'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:121$47'.
+Found and cleaned up 2 empty switches in `\VGA_controller.$proc$VGA_controller.v:106$39'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:106$39'.
+Found and cleaned up 1 empty switch in `\VGA_controller.$proc$VGA_controller.v:95$33'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:95$33'.
+Found and cleaned up 1 empty switch in `\VGA_controller.$proc$VGA_controller.v:87$30'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:87$30'.
+Found and cleaned up 1 empty switch in `\VGA_controller.$proc$VGA_controller.v:77$28'.
+Removing empty process `VGA_controller.$proc$VGA_controller.v:77$28'.
+Cleaned up 16 empty switches.
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module VGA_controller.
+<suppressed ~5 debug messages>
+
+2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \VGA_controller..
+Removed 1 unused cells and 124 unused wires.
+<suppressed ~2 debug messages>
+
+2.5. Executing CHECK pass (checking for obvious problems).
+checking module VGA_controller..
+found and reported 0 problems.
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module VGA_controller.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\VGA_controller'.
+<suppressed ~105 debug messages>
+Removed a total of 35 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \VGA_controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~21 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \VGA_controller.
+Performed a total of 0 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\VGA_controller'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+Promoting init spec \r_past_valid = 1'0 to constant driver in module VGA_controller.
+Promoted 1 init specs to constant drivers.
+
+2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \VGA_controller..
+Removed 0 unused cells and 36 unused wires.
+<suppressed ~13 debug messages>
+
+2.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module VGA_controller.
+
+2.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \VGA_controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~21 debug messages>
+
+2.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \VGA_controller.
+Performed a total of 0 changes.
+
+2.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\VGA_controller'.
+Removed a total of 0 cells.
+
+2.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \VGA_controller..
+
+2.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module VGA_controller.
+
+2.6.16. Finished OPT passes. (There is nothing left to do.)
+
+2.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell VGA_controller.$sub$VGA_controller.v:108$41 ($sub).
+Removed top 15 bits (of 32) from port Y of cell VGA_controller.$sub$VGA_controller.v:108$41 ($sub).
+Removed top 31 bits (of 32) from port B of cell VGA_controller.$sub$VGA_controller.v:111$44 ($sub).
+Removed top 15 bits (of 32) from port Y of cell VGA_controller.$sub$VGA_controller.v:111$44 ($sub).
+Removed top 6 bits (of 16) from port B of cell VGA_controller.$eq$VGA_controller.v:152$115 ($eq).
+Removed top 6 bits (of 16) from port B of cell VGA_controller.$eq$VGA_controller.v:153$116 ($eq).
+Removed top 6 bits (of 16) from port B of cell VGA_controller.$eq$VGA_controller.v:154$117 ($eq).
+Removed top 7 bits (of 16) from port B of cell VGA_controller.$eq$VGA_controller.v:155$118 ($eq).
+Removed top 11 bits (of 16) from port B of cell VGA_controller.$eq$VGA_controller.v:156$119 ($eq).
+Removed top 9 bits (of 16) from port B of cell VGA_controller.$eq$VGA_controller.v:157$120 ($eq).
+Removed top 12 bits (of 16) from port B of cell VGA_controller.$eq$VGA_controller.v:158$121 ($eq).
+Removed top 14 bits (of 16) from port B of cell VGA_controller.$eq$VGA_controller.v:159$122 ($eq).
+Removed top 9 bits (of 16) from port B of cell VGA_controller.$eq$VGA_controller.v:163$125 ($eq).
+Removed top 31 bits (of 32) from port B of cell VGA_controller.$and$VGA_controller.v:164$126 ($and).
+Removed top 31 bits (of 32) from port Y of cell VGA_controller.$and$VGA_controller.v:164$126 ($and).
+Removed top 31 bits (of 32) from port B of cell VGA_controller.$and$VGA_controller.v:164$128 ($and).
+Removed top 31 bits (of 32) from port Y of cell VGA_controller.$and$VGA_controller.v:164$128 ($and).
+Removed top 31 bits (of 32) from port B of cell VGA_controller.$ge$VGA_controller.v:166$132 ($ge).
+Removed top 31 bits (of 32) from port B of cell VGA_controller.$add$VGA_controller.v:168$134 ($add).
+Removed top 15 bits (of 32) from port Y of cell VGA_controller.$add$VGA_controller.v:168$134 ($add).
+Removed top 15 bits (of 32) from port B of cell VGA_controller.$eq$VGA_controller.v:168$135 ($eq).
+Removed top 31 bits (of 32) from port B of cell VGA_controller.$ge$VGA_controller.v:174$139 ($ge).
+Removed top 31 bits (of 32) from port B of cell VGA_controller.$add$VGA_controller.v:176$141 ($add).
+Removed top 15 bits (of 32) from port Y of cell VGA_controller.$add$VGA_controller.v:176$141 ($add).
+Removed top 15 bits (of 32) from port B of cell VGA_controller.$eq$VGA_controller.v:176$142 ($eq).
+Removed top 15 bits (of 32) from wire VGA_controller.$add$VGA_controller.v:168$134_Y.
+Removed top 15 bits (of 32) from wire VGA_controller.$add$VGA_controller.v:176$141_Y.
+Removed top 31 bits (of 32) from wire VGA_controller.$and$VGA_controller.v:164$126_Y.
+
+2.8. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \VGA_controller..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+2.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module VGA_controller.
+<suppressed ~2 debug messages>
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\VGA_controller'.
+Removed a total of 0 cells.
+
+2.11.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \VGA_controller..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+2.11.5. Finished fast OPT passes.
+
+2.12. Printing statistics.
+
+=== VGA_controller ===
+
+   Number of wires:                153
+   Number of wire bits:            667
+   Number of public wires:          24
+   Number of public wire bits:     234
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                156
+     $add                            8
+     $assert                         7
+     $assume                        12
+     $cover                          1
+     $dff                           37
+     $eq                            15
+     $ge                             5
+     $gt                             2
+     $initstate                      1
+     $le                             4
+     $logic_and                      8
+     $logic_not                      6
+     $logic_or                       4
+     $lt                             1
+     $mux                           39
+     $ne                             3
+     $sub                            3
+
+2.13. Executing CHECK pass (checking for obvious problems).
+checking module VGA_controller..
+found and reported 0 problems.
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from $mem).
+
+4. Executing ASYNC2SYNC pass.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \VGA_controller..
+Removed 11 unused cells and 11 unused wires.
+<suppressed ~12 debug messages>
+
+6. Executing SETUNDEF pass (replace undef values with defined constants).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module VGA_controller.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\VGA_controller'.
+Removed a total of 0 cells.
+
+7.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \VGA_controller..
+
+7.5. Finished fast OPT passes.
+
+8. Executing CHECK pass (checking for obvious problems).
+checking module VGA_controller..
+found and reported 0 problems.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1. Analyzing design hierarchy..
+Top module:  \VGA_controller
+
+9.2. Analyzing design hierarchy..
+Top module:  \VGA_controller
+Removed 0 unused modules.
+Module VGA_controller directly or indirectly contains formal properties -> setting "keep" attribute.
+
+10. Executing ILANG backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: d3e527d32e
+CPU: user 0.12s system 0.00s, MEM: 45.95 MB total, 11.57 MB resident
+Yosys 0.9+932 (git sha1 65f197e2, clang 6.0.0-1ubuntu2 -fPIC -Os)
+Time spent: 27% 7x opt_clean (0 sec), 19% 3x check (0 sec), ...

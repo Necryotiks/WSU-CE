@@ -84,6 +84,7 @@
  */
 XStatus CHAR_ROM_CONTROLLER_Reg_SelfTest(void * baseaddr_p);
 
+void write_char(uint32_t data);
 void set_bg_color(int red,int green, int blue);
-void set_fg_color(int red,int green, int blue);
+void set_start_pos(uint32_t x, uint32_t y);
 #endif // CHAR_ROM_CONTROLLER_H

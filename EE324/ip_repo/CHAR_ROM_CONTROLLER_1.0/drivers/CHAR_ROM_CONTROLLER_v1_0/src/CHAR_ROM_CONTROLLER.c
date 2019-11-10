@@ -4,18 +4,21 @@
 #include "CHAR_ROM_CONTROLLER.h"
 
 /************************** Function Definitions ***************************/
-extern uint32_t BaseAddress;
+extern uint32_t CHAR_BASE_ADDR;
 
+void write_char(uint32_t data)
+{
+    CHAR_ROM_CONTROLLER_mWriteReg(CHAR_BASE_ADDR, 0, data); //32 bit data packet that contains B,G,R,CHAR values.
+}
+void set_start_pos(uint32_t x, uint32_t y)
+{
+    CHAR_ROM_CONTROLLER_mWriteReg(CHAR_BASE_ADDR, 1, x);
+    CHAR_ROM_CONTROLLER_mWriteReg(CHAR_BASE_ADDR, 2, y);
+}
 void set_bg_color(int red,int green, int blue)
 {
-    CHAR_ROM_CONTROLLER_mWriteReg(BaseAddress, 3, red);
-    CHAR_ROM_CONTROLLER_mWriteReg(BaseAddress, 4, green);
-    CHAR_ROM_CONTROLLER_mWriteReg(BaseAddress, 5, blue);
+    CHAR_ROM_CONTROLLER_mWriteReg(CHAR_BASE_ADDR, 3, (uint32_t)red);
+    CHAR_ROM_CONTROLLER_mWriteReg(CHAR_BASE_ADDR, 4, (uint32_t)green);
+    CHAR_ROM_CONTROLLER_mWriteReg(CHAR_BASE_ADDR, 5, (uint32_t)blue);
 }
 
-void set_fg_color(int red,int green, int blue)
-{
-    CHAR_ROM_CONTROLLER_mWriteReg(BaseAddress, 6, red);
-    CHAR_ROM_CONTROLLER_mWriteReg(BaseAddress, 7, green);
-    CHAR_ROM_CONTROLLER_mWriteReg(BaseAddress, 8, blue);
-}

@@ -17,13 +17,10 @@
 		// Users to add ports here
         output reg [15:0] o_START_X_COORD,
         output reg [15:0] o_START_Y_COORD,
-        output reg [7:0] o_ASCII_VAL,
+        output reg [31:0] o_DATA_PACKET,
         output reg [7:0] o_BG_RED,
         output reg [7:0] o_BG_GREEN,
         output reg [7:0] o_BG_BLUE,
-        output reg [7:0] o_FG_RED,
-        output reg [7:0] o_FG_GREEN,
-        output reg [7:0] o_FG_BLUE,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -496,15 +493,13 @@
 	// Add user logic here
     always@(posedge S_AXI_ACLK)
     begin
-    o_ASCII_VAL <= slv_reg0[7:0];
+    o_DATA_PACKET <= slv_reg0; //char + fg info
     o_START_X_COORD <= slv_reg1[15:0];
     o_START_Y_COORD <= slv_reg2[15:0];
     o_BG_RED <= slv_reg3[7:0];
     o_BG_GREEN <= slv_reg4[7:0];
     o_BG_BLUE <= slv_reg5[7:0];
-    o_FG_RED <= slv_reg6[7:0];
-    o_FG_GREEN <= slv_reg7[7:0];
-    o_FG_BLUE <= slv_reg8[7:0];
+
     end
 	// User logic ends
 

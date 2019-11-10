@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites disabled="0" errors="1" failures="0" tests="1" time="0">
+<testsuite disabled="0" errors="1" failures="0" name="vga" skipped="0" tests="1" time="0">
+<properties>
+<property name="os" value="posix"/>
+</properties>
+<testcase classname="vga" name="prv" status="ERROR" time="0">
+<error message="ERROR" type="ERROR"/>
+<system-out>SBY 15:33:33 [vga_prv] Removing direcory 'vga_prv'.
+SBY 15:33:33 [vga_prv] Copy 'VGA_controller.v' to 'vga_prv/src/VGA_controller.v'.
+SBY 15:33:33 [vga_prv] engine_0: aigbmc
+SBY 15:33:33 [vga_prv] ERROR: Invalid engine 'aigbmc' for prove mode.
+SBY 15:33:33 [vga_prv] DONE (ERROR, rc=16)
+</system-out></testcase></testsuite></testsuites>

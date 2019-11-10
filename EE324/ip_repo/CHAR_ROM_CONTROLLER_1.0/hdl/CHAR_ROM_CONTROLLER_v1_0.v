@@ -17,13 +17,11 @@
 		// Users to add ports here
         output wire [15:0] o_START_X_COORD,
         output wire [15:0] o_START_Y_COORD,
-        output wire [7:0] o_ASCII_VAL,
+        output wire [31:0] o_DATA_PACKET,
         output wire [7:0] o_BG_RED,
         output wire [7:0] o_BG_GREEN,
         output wire [7:0] o_BG_BLUE,
-        output wire [7:0] o_FG_RED,
-        output wire [7:0] o_FG_GREEN,
-        output wire [7:0] o_FG_BLUE,
+
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -56,15 +54,12 @@
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst (
-	    .o_ASCII_VAL(o_ASCII_VAL),
+	    .o_DATA_PACKET(o_DATA_PACKET),
 	    .o_START_X_COORD(o_START_X_COORD),
 	    .o_START_Y_COORD(o_START_Y_COORD),
 	    .o_BG_RED(o_BG_RED),
         .o_BG_GREEN(o_BG_GREEN),
         .o_BG_BLUE(o_BG_BLUE),
-        .o_FG_RED(o_FG_RED),
-        .o_FG_GREEN(o_FG_GREEN),
-        .o_FG_BLUE(o_FG_BLUE),
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),

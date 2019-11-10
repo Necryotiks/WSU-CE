@@ -1,6 +1,46 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Sat Nov  9 12:16:35 2019
+| Host         : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+-------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0 (user.org:user:CHAR_ROM_CONTROLLER:1.0) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'CHAR_ROM_DISPLAY_CHAR_ROM_CONTROLLER_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'o_ASCII_VAL'
+
+-Upgrade has removed port 'o_FG_BLUE'
+
+-Upgrade has removed port 'o_FG_GREEN'
+
+-Upgrade has removed port 'o_FG_RED'
+
+-Upgrade has added port 'o_DATA_PACKET'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
 | Date         : Fri Nov  8 23:17:58 2019
 | Host         : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
 | Command      : upgrade_ip
