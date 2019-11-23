@@ -22,46 +22,18 @@
 
 module ASCII_addr_gen(
     input wire i_CLK,
-    input wire i_RST,
-    input wire [15:0] i_X_COORD, //upper left corner of char matrix
-    input wire [15:0] i_Y_COORD,
-    input wire [15:0] i_START_X_COORD,
-    input wire [15:0] i_START_Y_COORD,
+    input wire i_RESETN,
     input wire [7:0] i_ASCII_VAL, //comes from processor.
+    input wire [3:0] i_LINE_CNT,
     output reg[10:0] o_BRAM_ADDR
     );
     
-    //NOTE: upper 7 bits determine the add of the char and lower 4 bits are the address of the line
-    //maybe local 4-bit counter?
-    //FSM that can handle sequences?
-    
-    //TODO:Finish
-    reg [3:0] r_CHAR_LINE_CNT = 0;
-    reg [3:0] r_PIX_CNT = 0;
-    
-    //Every 16 clk cycles, request a new character.
     always@(posedge i_CLK)
     begin
-        if(r_PIX_CNT == 15)
-        begin
-        end
-        else
-            r_PIX_CNT <= r_PIX_CNT + 1;
-    end
-
-    
-    
-    always@(posedge i_CLK)
-    begin
-        if(i_X_COORD >= i_START_X_COORD)
-        begin
-            o_BRAM_ADDR <= {i_ASCII_VAL,r_CHAR_LINE_CNT};
-        end
-        else
-        begin
-            o_BRAM_ADDR <= 11'd0;
-        end
-        
+    if(!i_RESETN)
+        o_BRAM_ADDR <= 11'd0;
+    else
+        o_BRAM_ADDR <= {i_ASCII_VAL,i_LINE_CNT};   
     end
     
     

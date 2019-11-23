@@ -1,7 +1,4 @@
 
-#Clock
-set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVCMOS33} [get_ports i_CLK_100MHZ]
-create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports i_CLK_100MHZ]
 
 
 ##HDMI Signals
@@ -14,12 +11,12 @@ create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_
 #set_property -dict {PACKAGE_PIN P19 IOSTANDARD TMDS_33} [get_ports {TMDS_DATA_N[2]}]
 #set_property -dict {PACKAGE_PIN N18 IOSTANDARD TMDS_33} [get_ports {TMDS_DATA_P[2]}]
 
-#Switches
-set_property -dict {PACKAGE_PIN R17 IOSTANDARD LVCMOS33} [get_ports {i_SEL[0]}]
-set_property -dict {PACKAGE_PIN U20 IOSTANDARD LVCMOS33} [get_ports {i_SEL[1]}]
+##Switches
+#set_property -dict {PACKAGE_PIN R17 IOSTANDARD LVCMOS33} [get_ports {i_SEL[0]}]
+#set_property -dict {PACKAGE_PIN U20 IOSTANDARD LVCMOS33} [get_ports {i_SEL[1]}]
 
-#Buttons
-set_property -dict {PACKAGE_PIN W14 IOSTANDARD LVCMOS33} [get_ports i_RST]
+##Buttons
+#set_property -dict {PACKAGE_PIN W14 IOSTANDARD LVCMOS33} [get_ports i_RST]
 
 
 set_property PACKAGE_PIN U18 [get_ports hdmi_tx_0_tmds_clk_p]
@@ -29,4 +26,12 @@ set_property PACKAGE_PIN N18 [get_ports {hdmi_tx_0_tmds_data_p[2]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_tx_0_tmds_data_p[0]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_tx_0_tmds_data_p[1]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_tx_0_tmds_data_p[2]}]
-set_property IOSTANDARD TMDS_33 [get_ports {hdmi_tx_0_tmds_clk_p}]
+set_property IOSTANDARD TMDS_33 [get_ports hdmi_tx_0_tmds_clk_p]
+
+
+set_property LOC RAMB36_X1Y9 [get_cells CHAR_ROM_DISPLAY_i/char_rom_0/inst/BRAM_SINGLE_MACRO_inst/genblk3_0.bram36_single_bl.bram36_single_bl]
+
+set_max_delay -datapath_only -from [get_clocks clk_fpga_0] -to [get_clocks -of_objects [get_pins CHAR_ROM_DISPLAY_i/clk_wiz_0/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT0]] 1.000
+
+
+

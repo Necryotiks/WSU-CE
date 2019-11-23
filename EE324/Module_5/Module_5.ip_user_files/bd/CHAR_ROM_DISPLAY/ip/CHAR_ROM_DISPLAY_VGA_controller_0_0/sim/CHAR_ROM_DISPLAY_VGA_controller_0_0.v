@@ -56,58 +56,63 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module CHAR_ROM_DISPLAY_VGA_controller_0_0 (
   i_CLK,
-  o_HSYNC,
-  o_VSYNC,
-  o_VDE,
+  i_RESETN,
   i_END_OF_LINE,
   i_END_OF_SCREEN,
   i_HA_END,
   i_VA_END,
   i_HORIZONTAL_FRONT_PORCH,
-  i_HORIZONTAL_BACK_PORCH,
   i_HORIZONTAL_SYNC_WIDTH,
   i_VERTICAL_FRONT_PORCH,
-  i_VERTICAL_BACK_PORCH,
   i_VERTICAL_SYNC_WIDTH,
+  o_HSYNC,
+  o_VSYNC,
+  o_VDE,
   o_X_COORD,
-  o_Y_COORD
+  o_Y_COORD,
+  o_HCNT,
+  o_VCNT
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, FREQ_HZ 74250000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, ASSOCIATED_RESET i_RESETN, FREQ_HZ 74250000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
-output wire o_HSYNC;
-output wire o_VSYNC;
-output wire o_VDE;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RESETN RST" *)
+input wire i_RESETN;
 input wire [15 : 0] i_END_OF_LINE;
 input wire [15 : 0] i_END_OF_SCREEN;
 input wire [15 : 0] i_HA_END;
 input wire [15 : 0] i_VA_END;
 input wire [15 : 0] i_HORIZONTAL_FRONT_PORCH;
-input wire [15 : 0] i_HORIZONTAL_BACK_PORCH;
 input wire [15 : 0] i_HORIZONTAL_SYNC_WIDTH;
 input wire [15 : 0] i_VERTICAL_FRONT_PORCH;
-input wire [15 : 0] i_VERTICAL_BACK_PORCH;
 input wire [15 : 0] i_VERTICAL_SYNC_WIDTH;
+output wire o_HSYNC;
+output wire o_VSYNC;
+output wire o_VDE;
 output wire [15 : 0] o_X_COORD;
 output wire [15 : 0] o_Y_COORD;
+output wire [15 : 0] o_HCNT;
+output wire [15 : 0] o_VCNT;
 
   VGA_controller inst (
     .i_CLK(i_CLK),
-    .o_HSYNC(o_HSYNC),
-    .o_VSYNC(o_VSYNC),
-    .o_VDE(o_VDE),
+    .i_RESETN(i_RESETN),
     .i_END_OF_LINE(i_END_OF_LINE),
     .i_END_OF_SCREEN(i_END_OF_SCREEN),
     .i_HA_END(i_HA_END),
     .i_VA_END(i_VA_END),
     .i_HORIZONTAL_FRONT_PORCH(i_HORIZONTAL_FRONT_PORCH),
-    .i_HORIZONTAL_BACK_PORCH(i_HORIZONTAL_BACK_PORCH),
     .i_HORIZONTAL_SYNC_WIDTH(i_HORIZONTAL_SYNC_WIDTH),
     .i_VERTICAL_FRONT_PORCH(i_VERTICAL_FRONT_PORCH),
-    .i_VERTICAL_BACK_PORCH(i_VERTICAL_BACK_PORCH),
     .i_VERTICAL_SYNC_WIDTH(i_VERTICAL_SYNC_WIDTH),
+    .o_HSYNC(o_HSYNC),
+    .o_VSYNC(o_VSYNC),
+    .o_VDE(o_VDE),
     .o_X_COORD(o_X_COORD),
-    .o_Y_COORD(o_Y_COORD)
+    .o_Y_COORD(o_Y_COORD),
+    .o_HCNT(o_HCNT),
+    .o_VCNT(o_VCNT)
   );
 endmodule

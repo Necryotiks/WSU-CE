@@ -15,16 +15,17 @@
 	)
 	(
 		// Users to add ports here
-output wire [15:0] o_END_OF_LINE,           
-output wire [15:0] o_END_OF_SCREEN,         
-output wire [15:0] o_HA_END,                
-output wire [15:0] o_VA_END,                
-output wire [15:0] o_HORIZONTAL_FRONT_PORCH,
+output reg [15:0] o_END_OF_LINE,           
+output reg [15:0] o_END_OF_SCREEN,         
+output reg [15:0] o_HA_END,                
+output reg [15:0] o_VA_END,                
+output reg [15:0] o_HORIZONTAL_FRONT_PORCH,
 //output wire [15:0] o_HORIZONTAL_BACK_PORCH, 
-output wire [15:0] o_HORIZONTAL_SYNC_WIDTH, 
-output wire [15:0] o_VERTICAL_FRONT_PORCH,  
+output reg [15:0] o_HORIZONTAL_SYNC_WIDTH, 
+output reg [15:0] o_VERTICAL_FRONT_PORCH,  
 //output wire [15:0] o_VERTICAL_BACK_PORCH,   
-output wire [15:0] o_VERTICAL_SYNC_WIDTH,   
+output reg [15:0] o_VERTICAL_SYNC_WIDTH,
+  
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -53,20 +54,30 @@ output wire [15:0] o_VERTICAL_SYNC_WIDTH,
 		input wire  s00_axi_rready
 	);
 // Instantiation of Axi Bus Interface S00_AXI
+wire [15:0] w_END_OF_LINE;           
+wire [15:0] w_END_OF_SCREEN;         
+wire [15:0] w_HA_END;                
+wire [15:0] w_VA_END;                
+wire [15:0] w_HORIZONTAL_FRONT_PORCH;
+
+wire [15:0] w_HORIZONTAL_SYNC_WIDTH; 
+wire [15:0] w_VERTICAL_FRONT_PORCH; 
+ 
+wire [15:0] w_VERTICAL_SYNC_WIDTH; 
 	RESOLUTION_CONTROLLER_v1_0_S00_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) RESOLUTION_CONTROLLER_v1_0_S00_AXI_inst (
-	    .o_END_OF_LINE(o_END_OF_LINE),           
-        .o_END_OF_SCREEN(o_END_OF_SCREEN),        
-        .o_HA_END(o_HA_END),                
-        .o_VA_END(o_VA_END),              
-        .o_HORIZONTAL_FRONT_PORCH(o_HORIZONTAL_FRONT_PORCH),
+	    .o_END_OF_LINE(w_END_OF_LINE),           
+        .o_END_OF_SCREEN(w_END_OF_SCREEN),        
+        .o_HA_END(w_HA_END),                
+        .o_VA_END(w_VA_END),              
+        .o_HORIZONTAL_FRONT_PORCH(w_HORIZONTAL_FRONT_PORCH),
         //.o_HORIZONTAL_BACK_PORCH(o_HORIZONTAL_BACK_PORCH),
-        .o_HORIZONTAL_SYNC_WIDTH(o_HORIZONTAL_SYNC_WIDTH),
-        .o_VERTICAL_FRONT_PORCH(o_VERTICAL_FRONT_PORCH),
+        .o_HORIZONTAL_SYNC_WIDTH(w_HORIZONTAL_SYNC_WIDTH),
+        .o_VERTICAL_FRONT_PORCH(w_VERTICAL_FRONT_PORCH),
         //.o_VERTICAL_BACK_PORCH(o_VERTICAL_BACK_PORCH),   
-        .o_VERTICAL_SYNC_WIDTH(o_VERTICAL_SYNC_WIDTH), 
+        .o_VERTICAL_SYNC_WIDTH(w_VERTICAL_SYNC_WIDTH), 
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),
@@ -91,7 +102,17 @@ output wire [15:0] o_VERTICAL_SYNC_WIDTH,
 	);
 
 	// Add user logic here
-
+    always@(posedge s00_axi_aclk)
+    begin
+        o_END_OF_LINE <= w_END_OF_LINE;           
+        o_END_OF_SCREEN <= w_END_OF_SCREEN;         
+        o_HA_END <= w_HA_END;                
+        o_VA_END <= w_VA_END;                
+        o_HORIZONTAL_FRONT_PORCH <= w_HORIZONTAL_FRONT_PORCH;
+        o_HORIZONTAL_SYNC_WIDTH <= w_HORIZONTAL_SYNC_WIDTH; 
+        o_VERTICAL_FRONT_PORCH  <=w_VERTICAL_FRONT_PORCH; 
+        o_VERTICAL_SYNC_WIDTH  <= w_VERTICAL_SYNC_WIDTH; 
+    end
 	// User logic ends
 
 	endmodule

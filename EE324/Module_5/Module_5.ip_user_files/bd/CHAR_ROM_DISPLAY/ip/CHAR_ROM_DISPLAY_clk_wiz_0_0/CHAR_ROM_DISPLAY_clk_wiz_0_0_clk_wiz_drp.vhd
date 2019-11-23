@@ -255,7 +255,7 @@ type mem_type is array (0 to 31) of std_logic_vector(31 downto 0);
 
 signal ram_clk_config : mem_type := (
 -- initialize memory with valid clock configuration
-   X"047D2505", 
+   X"047D2501", 
    X"00000000",
    X"0000000A", 
    X"00000000",
@@ -323,7 +323,7 @@ signal load_enable_reg_actual         :std_logic;
 signal SEN         :std_logic;
 signal Reset_axi         :std_logic;
 signal load_enable_reg           :std_logic_vector(0 to 31);
-signal clkfbout_reg           :std_logic_vector(0 to 31) := X"047D2505";
+signal clkfbout_reg           :std_logic_vector(0 to 31) := X"047D2501";
 signal clkout0_reg           :std_logic_vector(0 to 31) := X"0000000A" ;
 signal config_reg           :std_logic_vector(0 to 31);
 begin
@@ -374,7 +374,7 @@ begin
     if (Bus2IP_Clk'event and Bus2IP_Clk='1') then
       if(Bus2IP_Rst = RESET_ACTIVE) then
        -- reset values
-	    ram_clk_config(0)  <=    X"047D2505";
+	    ram_clk_config(0)  <=    X"047D2501";
 	    ram_clk_config(1)  <=    X"00000000";
 	    ram_clk_config(2)  <=    X"0000000A";
 	    ram_clk_config(3)  <=    X"00000000";
@@ -577,7 +577,7 @@ mmcm_drp_inst: CHAR_ROM_DISPLAY_clk_wiz_0_0_mmcm_drp generic map (
   S1_CLKFBOUT_FRAC          =>  1149,
   S1_CLKFBOUT_FRAC_EN       =>  1, 
   S1_BANDWIDTH              => "OPTIMIZED",
-  S1_DIVCLK_DIVIDE          =>  5,
+  S1_DIVCLK_DIVIDE          =>  1,
   S1_CLKOUT0_DIVIDE         =>  10,
   S1_CLKOUT0_PHASE          =>  0,
   S1_CLKOUT0_DUTY           =>  50000, 

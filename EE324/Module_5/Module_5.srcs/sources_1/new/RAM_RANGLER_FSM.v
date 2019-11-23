@@ -22,10 +22,15 @@
 
 module RAM_RANGLER_FSM(
 	input i_CLK,
-	input i_RSTN,
+	input i_RESETN,
 	input [31:0] i_DATA,
 	input i_VDE,
+	input [15:0] i_HCNT,
+	input [15:0] i_VCNT,
+	input [15:0] i_END_OF_LINE,
+	input [15:0]i_END_OF_SCREEN,
 	input i_WRITE_REQUEST,
+	output reg [3:0] o_CHAR_LINE_CNT,
 	output reg [7:0] o_ASCII_VAL,
 	output reg [7:0] o_FG_RED,
 	output reg [7:0] o_FG_GREEN,
@@ -35,15 +40,15 @@ localparam s_INIT = 0; //init bram
 localparam s_READ = 1; //get char from bram
 localparam s_WRITE = 2; //put char in bram
 localparam s_WHOLD = 3; //wait for wren to deassert
-localparam s_RHOLD = 3; //count for 16
+localparam s_RHOLD = 4; //count for 16
 //TODO: hold states
 
-reg [1:0] r_NEXT_STATE = 0;
-reg [1:0] r_CURRENT_STATE = 0;
+reg [4:0] r_NEXT_STATE = 0;
+reg [4:0] r_CURRENT_STATE = 0;
 reg [9:0] r_ENTRY_CNT = 0;
 reg [9:0] r_CURRENT_CHAR_ADDR= 0;
 reg [3:0] r_PIX_CNT = 0;
-reg [31:0] r_RETRIEVED_ENTRY = 0;
+wire [31:0] w_RETRIEVED_ENTRY = 0;
 reg r_SRST = 0;
 always@(*)
 begin
@@ -58,12 +63,12 @@ begin
 				r_NEXT_STATE = s_WRITE;
 			else
 			begin 
-			if(r_CURRENT_CHAR_ADDR <= r_ENTRY_CNT)
+			if((r_CURRENT_CHAR_ADDR <= r_ENTRY_CNT)  && (o_CHAR_LINE_CNT != 15))
 				r_NEXT_STATE = s_RHOLD;
 			else
 				r_NEXT_STATE = s_READ;
-		end
-	end
+		    end
+	   end
 	s_WRITE:
 	begin
 		r_NEXT_STATE = s_WHOLD;
@@ -82,13 +87,15 @@ begin
 		else
 			r_NEXT_STATE = s_READ;
 	end
+	default:
+	   r_NEXT_STATE = s_READ;
 
 endcase
     end
 
     always@(posedge i_CLK)
     begin
-	    if(!i_RSTN)
+	    if(!i_RESETN)
 		    r_CURRENT_STATE <= s_INIT;
 	    else
 		    r_CURRENT_STATE <= r_NEXT_STATE;
@@ -107,7 +114,7 @@ endcase
 	    .SRVAL(32'h00000000), // Set/Reset value for port output
 	    .WRITE_MODE("WRITE_FIRST") // "WRITE_FIRST", "READ_FIRST", or "NO_CHANGE" 
     ) BRAM_SINGLE_MACRO_inst (
-	    .DO(r_RETRIEVED_ENTRY),       // Output data, width defined by READ_WIDTH parameter
+	    .DO(w_RETRIEVED_ENTRY),       // Output data, width defined by READ_WIDTH parameter
 	    .ADDR(r_CURRENT_CHAR_ADDR),   // Input address, width defined by read/write port depth
 	    .CLK(i_CLK),     // 1-bit input clock
 	    .DI(i_DATA),       // Input data port, width defined by WRITE_WIDTH parameter
@@ -128,14 +135,13 @@ endcase
     begin
 	    if(r_CURRENT_STATE == s_RHOLD)
 	    begin
-		    o_ASCII_VAL <= r_RETRIEVED_ENTRY[7:0];
-		    o_FG_RED <= r_RETRIEVED_ENTRY[15:8];
-		    o_FG_GREEN <= r_RETRIEVED_ENTRY[23:16];
-		    o_FG_BLUE <= r_RETRIEVED_ENTRY[31:24];
+		    o_ASCII_VAL <= w_RETRIEVED_ENTRY[7:0];
+		    o_FG_RED <= w_RETRIEVED_ENTRY[15:8];
+		    o_FG_GREEN <= w_RETRIEVED_ENTRY[23:16];
+		    o_FG_BLUE <= w_RETRIEVED_ENTRY[31:24];
 		    r_PIX_CNT <= r_PIX_CNT + 1;
-		    if(i_VDE)
+		    if((i_HCNT != i_END_OF_LINE)) //and line cnt != 16
 		    begin
-			    r_PIX_CNT <= r_PIX_CNT + 1;
 			    if((r_PIX_CNT == 15))
 				    r_CURRENT_CHAR_ADDR <= r_CURRENT_CHAR_ADDR + 1;
 			    else 
@@ -153,5 +159,35 @@ endcase
 		    o_FG_BLUE <= 8'd0;
 		    r_PIX_CNT <= 4'd0;
 	    end
+    end
+    always@(posedge i_CLK)
+    begin
+        if(!i_RESETN)
+            o_CHAR_LINE_CNT <= 4'd0;
+        else 
+        begin
+            if(i_VCNT != i_END_OF_SCREEN -1) 
+            begin
+                if(i_HCNT == i_END_OF_LINE -1)
+                    o_CHAR_LINE_CNT <= o_CHAR_LINE_CNT + 1;
+                else
+                    o_CHAR_LINE_CNT <= o_CHAR_LINE_CNT;
+            end
+        else
+            o_CHAR_LINE_CNT <= 4'd0;
+            
+    end
+    end
+    always@(posedge i_CLK)
+    begin
+    if(!i_RESETN)
+        r_ENTRY_CNT <= 10'd0;
+    else
+        begin
+            if(r_CURRENT_STATE == s_WRITE)
+                r_ENTRY_CNT <= r_ENTRY_CNT + 1;
+            else
+                r_ENTRY_CNT <= r_ENTRY_CNT;   
+        end
     end
     endmodule

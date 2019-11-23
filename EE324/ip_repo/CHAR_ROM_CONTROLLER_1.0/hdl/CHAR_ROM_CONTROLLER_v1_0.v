@@ -21,7 +21,7 @@
         output wire [7:0] o_BG_RED,
         output wire [7:0] o_BG_GREEN,
         output wire [7:0] o_BG_BLUE,
-
+        output wire o_WRITE_REQUEST,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -60,6 +60,7 @@
 	    .o_BG_RED(o_BG_RED),
         .o_BG_GREEN(o_BG_GREEN),
         .o_BG_BLUE(o_BG_BLUE),
+        .o_WRITE_REQUEST(o_WRITE_REQUEST),
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),

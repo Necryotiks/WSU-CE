@@ -58,8 +58,6 @@ module CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0 (
   i_CLK,
   i_VDE,
   i_CHAR_LINE,
-  i_X_COORD,
-  i_Y_COORD,
   i_BG_RED,
   i_BG_GREEN,
   i_BG_BLUE,
@@ -76,8 +74,6 @@ module CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0 (
 input wire i_CLK;
 input wire i_VDE;
 input wire [15 : 0] i_CHAR_LINE;
-input wire [15 : 0] i_X_COORD;
-input wire [15 : 0] i_Y_COORD;
 input wire [7 : 0] i_BG_RED;
 input wire [7 : 0] i_BG_GREEN;
 input wire [7 : 0] i_BG_BLUE;
@@ -92,8 +88,6 @@ output wire [7 : 0] o_BLUE;
     .i_CLK(i_CLK),
     .i_VDE(i_VDE),
     .i_CHAR_LINE(i_CHAR_LINE),
-    .i_X_COORD(i_X_COORD),
-    .i_Y_COORD(i_Y_COORD),
     .i_BG_RED(i_BG_RED),
     .i_BG_GREEN(i_BG_GREEN),
     .i_BG_BLUE(i_BG_BLUE),

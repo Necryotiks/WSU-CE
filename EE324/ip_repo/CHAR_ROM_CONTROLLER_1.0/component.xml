@@ -266,7 +266,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>962ac760</spirit:value>
+            <spirit:value>9fe9a35b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -282,7 +282,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>962ac760</spirit:value>
+            <spirit:value>9fe9a35b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -296,7 +296,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>87a22fb2</spirit:value>
+            <spirit:value>c63a089d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -423,6 +423,19 @@
             <spirit:left spirit:format="long">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>o_WRITE_REQUEST</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -783,7 +796,7 @@
       <spirit:file>
         <spirit:name>hdl/CHAR_ROM_CONTROLLER_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_43abaf1e</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_6474ea45</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -912,8 +925,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>CHAR_ROM_CONTROLLER_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>5</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-11-09T19:59:25Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>6</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-11-17T20:08:59Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2b6425e5_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@c175ffc_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
@@ -972,14 +985,31 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@21b87be_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@53445989_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6beafbf_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7aed65db_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70f4ed92_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@771ba3a1_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35b2c256_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@baaa40c_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2965489c_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d07022e_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f1790b_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@209751de_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32149fae_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3706c9fe_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f0d3ac2_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60b61b49_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3478c616_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3342fc43_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e50458d_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d387c9a_ARCHIVE_LOCATION">/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="9bdbf060"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="932ddf6a"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="b2d8ec45"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="80869586"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="9082d680"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e7b50784"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="ddd2af3e"/>
     </xilinx:packagingInfo>

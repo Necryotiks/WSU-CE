@@ -21,6 +21,7 @@
         output reg [7:0] o_BG_RED,
         output reg [7:0] o_BG_GREEN,
         output reg [7:0] o_BG_BLUE,
+        output reg o_WRITE_REQUEST,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -499,7 +500,7 @@
     o_BG_RED <= slv_reg3[7:0];
     o_BG_GREEN <= slv_reg4[7:0];
     o_BG_BLUE <= slv_reg5[7:0];
-
+    o_WRITE_REQUEST <= slv_reg6[0];
     end
 	// User logic ends
 

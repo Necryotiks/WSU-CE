@@ -2,83 +2,73 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
-preplace port hdmi_tx_0 -pg 1 -lvl 9 -x 3370 -y 450 -defaultsOSRD
-preplace port DDR -pg 1 -lvl 9 -x 3370 -y 980 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 9 -x 3370 -y 1000 -defaultsOSRD
-preplace port i_CLK_100MHZ -pg 1 -lvl 0 -x 0 -y 710 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 1010 -y 800 -defaultsOSRD
-preplace inst hdmi_tx_0 -pg 1 -lvl 8 -x 3220 -y 450 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 230 -y 1030 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 620 -y 640 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 230 -y 810 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 5 -x 2120 -y 620 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 5 -x 2120 -y 720 -defaultsOSRD
-preplace inst xlconstant_2 -pg 1 -lvl 5 -x 2120 -y 820 -defaultsOSRD
-preplace inst xlconstant_3 -pg 1 -lvl 7 -x 2870 -y 380 -defaultsOSRD
-preplace inst xlconstant_4 -pg 1 -lvl 5 -x 2120 -y 920 -defaultsOSRD
-preplace inst ASCII_addr_gen_0 -pg 1 -lvl 5 -x 2120 -y 390 -defaultsOSRD
-preplace inst C_ROM_LOGIC_0 -pg 1 -lvl 7 -x 2870 -y 160 -defaultsOSRD
-preplace inst RESOLUTION_CONTROLLER_0 -pg 1 -lvl 3 -x 1010 -y 580 -defaultsOSRD
-preplace inst char_rom_0 -pg 1 -lvl 6 -x 2500 -y 720 -defaultsOSRD
-preplace inst CHAR_ROM_CONTROLLER_0 -pg 1 -lvl 3 -x 1010 -y 320 -defaultsOSRD
-preplace inst VGA_controller_0 -pg 1 -lvl 4 -x 1560 -y 540 -defaultsOSRD
-preplace inst RAM_RANGLER_FSM_0 -pg 1 -lvl 4 -x 1560 -y 280 -defaultsOSRD
-preplace netloc VGA_controller_0_o_HSYNC 1 4 4 1810 510 2330J 470 NJ 470 3060J
-preplace netloc VGA_controller_0_o_VDE 1 3 5 1320 180 1800J 190 NJ 190 2690 500 NJ
-preplace netloc VGA_controller_0_o_VSYNC 1 4 4 NJ 520 2340J 490 NJ 490 3080
-preplace netloc clk_100MHz_1 1 0 3 NJ 710 440J 830 NJ
-preplace netloc clk_wiz_0_clk_out1 1 3 5 1280 140 1850 560 2360 320 2650 320 N
-preplace netloc clk_wiz_0_clk_out2 1 3 5 1300J 380 1830J 540 NJ 540 NJ 540 3050
-preplace netloc clk_wiz_0_locked 1 3 5 1320J 390 1790J 550 NJ 550 NJ 550 3070
-preplace netloc VGA_controller_0_o_X_COORD 1 4 3 1820 120 NJ 120 N
-preplace netloc VGA_controller_0_o_Y_COORD 1 4 3 1890 140 NJ 140 N
-preplace netloc ASCII_addr_gen_0_o_BRAM_ADDR 1 5 1 2350 390n
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 690 450 450 780
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 700 430
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 3 470 840 790 430 1290
-preplace netloc C_ROM_LOGIC_0_o_RED 1 7 1 3080 140n
-preplace netloc C_ROM_LOGIC_0_o_GREEN 1 7 1 3060 160n
-preplace netloc C_ROM_LOGIC_0_o_BLUE 1 7 1 3040 180n
-preplace netloc char_rom_0_DO 1 6 1 2670 100n
-preplace netloc xlconstant_0_dout 1 5 1 2330J 620n
-preplace netloc xlconstant_1_dout 1 5 1 NJ 720
-preplace netloc xlconstant_2_dout 1 5 1 2340J 740n
-preplace netloc xlconstant_3_dout 1 7 1 NJ 380
-preplace netloc xlconstant_4_dout 1 5 1 2360J 780n
-preplace netloc CHAR_ROM_CONTROLLER_0_o_ASCII_VAL 1 4 1 1870 250n
-preplace netloc CHAR_ROM_CONTROLLER_0_o_START_X_COORD 1 3 2 1220 120 1810J
-preplace netloc CHAR_ROM_CONTROLLER_0_o_START_Y_COORD 1 3 2 1230 130 1910J
-preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_RED 1 3 4 1240 160 NJ 160 NJ 160 NJ
-preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_GREEN 1 3 4 1260 170 1900J 180 NJ 180 NJ
-preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_BLUE 1 3 4 1250 150 NJ 150 NJ 150 2660J
-preplace netloc CHAR_ROM_CONTROLLER_0_o_FG_RED 1 4 3 1860J 260 NJ 260 2640
-preplace netloc CHAR_ROM_CONTROLLER_0_o_FG_GREEN 1 4 3 1880J 270 NJ 270 2680
-preplace netloc CHAR_ROM_CONTROLLER_0_o_FG_BLUE 1 4 3 1840J 530 NJ 530 2700
-preplace netloc RESOLUTION_CONTROLLER_0_o_END_OF_LINE 1 3 1 N 490
-preplace netloc RESOLUTION_CONTROLLER_0_o_END_OF_SCREEN 1 3 1 N 510
-preplace netloc RESOLUTION_CONTROLLER_0_o_HA_END 1 3 1 N 530
-preplace netloc RESOLUTION_CONTROLLER_0_o_VA_END 1 3 1 N 550
-preplace netloc RESOLUTION_CONTROLLER_0_o_HORIZONTAL_FRONT_PORCH 1 3 1 N 570
-preplace netloc RESOLUTION_CONTROLLER_0_o_HORIZONTAL_BACK_PORCH 1 3 1 N 590
-preplace netloc RESOLUTION_CONTROLLER_0_o_HORIZONTAL_SYNC_WIDTH 1 3 1 1290 590n
-preplace netloc RESOLUTION_CONTROLLER_0_o_VERTICAL_FRONT_PORCH 1 3 1 1310 610n
-preplace netloc RESOLUTION_CONTROLLER_0_o_VERTICAL_BACK_PORCH 1 3 1 N 650
-preplace netloc RESOLUTION_CONTROLLER_0_o_VERTICAL_SYNC_WIDTH 1 3 1 1330 630n
-preplace netloc CHAR_ROM_CONTROLLER_0_o_DATA_PACKET 1 3 1 1270 280n
-preplace netloc processing_system7_0_FIXED_IO 1 1 8 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ
-preplace netloc processing_system7_0_DDR 1 1 8 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ
-preplace netloc hdmi_tx_0_hdmi_tx 1 8 1 NJ 450
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 770 640n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 770 300n
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 460 510n
-preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 800 560n
-levelinfo -pg 1 0 230 620 1010 1560 2120 2500 2870 3220 3370
-pagesize -pg 1 -db -bbox -sgen -160 0 3500 1140
+preplace port hdmi_tx_0 -pg 1 -lvl 10 -x 3840 -y 380 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 10 -x 3840 -y 880 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 10 -x 3840 -y 900 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 1010 -y 330 -defaultsOSRD
+preplace inst hdmi_tx_0 -pg 1 -lvl 9 -x 3690 -y 380 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 230 -y 930 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 610 -y 680 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 230 -y 740 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 6 -x 2590 -y 400 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 6 -x 2590 -y 500 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 6 -x 2590 -y 600 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 6 -x 2590 -y 700 -defaultsOSRD
+preplace inst xlconstant_4 -pg 1 -lvl 6 -x 2590 -y 800 -defaultsOSRD
+preplace inst char_rom_0 -pg 1 -lvl 7 -x 2940 -y 500 -defaultsOSRD
+preplace inst CHAR_ROM_CONTROLLER_0 -pg 1 -lvl 3 -x 1010 -y 760 -defaultsOSRD
+preplace inst ASCII_addr_gen_0 -pg 1 -lvl 6 -x 2590 -y 190 -defaultsOSRD
+preplace inst RAM_RANGLER_FSM_0 -pg 1 -lvl 5 -x 2110 -y 160 -defaultsOSRD
+preplace inst C_ROM_LOGIC_0 -pg 1 -lvl 8 -x 3330 -y 140 -defaultsOSRD
+preplace inst VGA_controller_0 -pg 1 -lvl 4 -x 1600 -y 370 -defaultsOSRD
+preplace netloc VGA_controller_0_o_HSYNC 1 4 5 N 310 2390J 300 NJ 300 NJ 300 3520J
+preplace netloc VGA_controller_0_o_VDE 1 4 5 1890 350 2410J 320 NJ 320 3130 320 3510J
+preplace netloc VGA_controller_0_o_VSYNC 1 4 5 N 330 NJ 330 NJ 330 NJ 330 3500J
+preplace netloc clk_wiz_0_clk_out1 1 3 6 1190 170 1840 360 2400 280 2800 280 3110 280 3500J
+preplace netloc clk_wiz_0_clk_out2 1 3 6 1240 180 1830J 340 NJ 340 NJ 340 NJ 340 3540J
+preplace netloc clk_wiz_0_locked 1 3 6 1220 160 1850 320 2380 290 NJ 290 NJ 290 NJ
+preplace netloc ASCII_addr_gen_0_o_BRAM_ADDR 1 6 1 2790 190n
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 630 450 890 780
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 640 430
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 460 870 790
+preplace netloc C_ROM_LOGIC_0_o_RED 1 8 1 3560 120n
+preplace netloc C_ROM_LOGIC_0_o_GREEN 1 8 1 3550 140n
+preplace netloc C_ROM_LOGIC_0_o_BLUE 1 8 1 3530 160n
+preplace netloc char_rom_0_DO 1 7 1 3120 100n
+preplace netloc xlconstant_0_dout 1 6 1 2770J 400n
+preplace netloc xlconstant_1_dout 1 6 1 NJ 500
+preplace netloc xlconstant_2_dout 1 6 1 2790J 520n
+preplace netloc xlconstant_3_dout 1 6 3 2780 310 NJ 310 NJ
+preplace netloc xlconstant_4_dout 1 6 1 2800J 560n
+preplace netloc CHAR_ROM_CONTROLLER_0_o_ASCII_VAL 1 5 1 2360 140n
+preplace netloc CHAR_ROM_CONTROLLER_0_o_START_X_COORD 1 3 1 N 700
+preplace netloc CHAR_ROM_CONTROLLER_0_o_START_Y_COORD 1 3 1 N 720
+preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_RED 1 3 5 1200J 20 NJ 20 NJ 20 NJ 20 3160
+preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_GREEN 1 3 5 1250J 190 1880J 300 2330J 70 NJ 70 3140
+preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_BLUE 1 3 5 1230J 10 NJ 10 NJ 10 NJ 10 3150
+preplace netloc CHAR_ROM_CONTROLLER_0_o_FG_RED 1 5 3 2320J 90 NJ 90 3100
+preplace netloc CHAR_ROM_CONTROLLER_0_o_FG_GREEN 1 5 3 2350J 100 NJ 100 3080
+preplace netloc CHAR_ROM_CONTROLLER_0_o_FG_BLUE 1 5 3 2340J 80 NJ 80 3090
+preplace netloc RESOLUTION_CONTROLLER_0_o_END_OF_LINE 1 3 2 1270 200 N
+preplace netloc RESOLUTION_CONTROLLER_0_o_END_OF_SCREEN 1 3 2 1280 220 N
+preplace netloc CHAR_ROM_CONTROLLER_0_o_DATA_PACKET 1 3 2 1210 120 NJ
+preplace netloc VGA_controller_0_o_HCNT 1 4 1 1860 160n
+preplace netloc VGA_controller_0_o_VCNT 1 4 1 1900 180n
+preplace netloc RAM_RANGLER_FSM_0_o_CHAR_LINE_CNT 1 5 1 2370 120n
+preplace netloc CHAR_ROM_CONTROLLER_0_o_WRITE_REQUEST 1 3 2 1260J 210 1870
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 440 550n
+preplace netloc processing_system7_0_FIXED_IO 1 1 9 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 760 300n
+preplace netloc processing_system7_0_DDR 1 1 9 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ
+preplace netloc hdmi_tx_0_hdmi_tx 1 9 1 NJ 380
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 770 660n
+levelinfo -pg 1 0 230 610 1010 1600 2110 2590 2940 3330 3690 3840
+pagesize -pg 1 -db -bbox -sgen 0 0 3970 1040
 "
 }
 {
-   "da_axi4_cnt":"5",
-   "da_board_cnt":"2",
+   "da_axi4_cnt":"6",
+   "da_board_cnt":"4",
    "da_bram_cntlr_cnt":"2",
    "da_clkrst_cnt":"3",
    "da_ps7_cnt":"1"

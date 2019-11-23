@@ -8,7 +8,9 @@ extern uint32_t CHAR_BASE_ADDR;
 
 void write_char(uint32_t data)
 {
+    CHAR_ROM_CONTROLLER_mWriteReg(CHAR_BASE_ADDR, 6, 0x1); //WRITE REQ
     CHAR_ROM_CONTROLLER_mWriteReg(CHAR_BASE_ADDR, 0, data); //32 bit data packet that contains B,G,R,CHAR values.
+    CHAR_ROM_CONTROLLER_mWriteReg(CHAR_BASE_ADDR, 6, 0x0); //WRITE REQ
 }
 void set_start_pos(uint32_t x, uint32_t y)
 {

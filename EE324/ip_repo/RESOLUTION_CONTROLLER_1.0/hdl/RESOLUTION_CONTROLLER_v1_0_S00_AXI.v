@@ -20,10 +20,10 @@
            output reg [15:0] o_HA_END,
            output reg [15:0] o_VA_END,
            output reg [15:0] o_HORIZONTAL_FRONT_PORCH,
-           output reg [15:0] o_HORIZONTAL_BACK_PORCH,
+           //output reg [15:0] o_HORIZONTAL_BACK_PORCH,
            output reg [15:0] o_HORIZONTAL_SYNC_WIDTH,
            output reg [15:0] o_VERTICAL_FRONT_PORCH,
-           output reg [15:0] o_VERTICAL_BACK_PORCH,
+           //output reg [15:0] o_VERTICAL_BACK_PORCH,
            output reg [15:0] o_VERTICAL_SYNC_WIDTH,
 		// User ports ends
 		// Do not modify the ports beyond this line
@@ -480,11 +480,9 @@
         o_HA_END <= slv_reg2[15:0];                 
         o_VA_END <= slv_reg3[15:0];                 
         o_HORIZONTAL_FRONT_PORCH <= slv_reg4[15:0]; 
-        o_HORIZONTAL_BACK_PORCH <= slv_reg5[15:0]; 
-        o_HORIZONTAL_SYNC_WIDTH <= slv_reg6[15:0];  
-        o_VERTICAL_FRONT_PORCH <= slv_reg7[15:0];   
-        o_VERTICAL_BACK_PORCH <= slv_reg8[15:0];    
-        o_VERTICAL_SYNC_WIDTH <= slv_reg9[15:0];
+        o_HORIZONTAL_SYNC_WIDTH <= slv_reg5[15:0];  
+        o_VERTICAL_FRONT_PORCH <= slv_reg6[15:0];    
+        o_VERTICAL_SYNC_WIDTH <= slv_reg7[15:0];
     end    
 	// User logic ends
 

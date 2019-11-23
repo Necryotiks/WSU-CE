@@ -57,36 +57,27 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module CHAR_ROM_DISPLAY_ASCII_addr_gen_0_0 (
   i_CLK,
-  i_RST,
-  i_X_COORD,
-  i_Y_COORD,
-  i_START_X_COORD,
-  i_START_Y_COORD,
+  i_RESETN,
   i_ASCII_VAL,
+  i_LINE_CNT,
   o_BRAM_ADDR
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, ASSOCIATED_RESET i_RST, FREQ_HZ 74250000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_CLK, ASSOCIATED_RESET i_RESETN, FREQ_HZ 74250000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CLK CLK" *)
 input wire i_CLK;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RST RST" *)
-input wire i_RST;
-input wire [15 : 0] i_X_COORD;
-input wire [15 : 0] i_Y_COORD;
-input wire [15 : 0] i_START_X_COORD;
-input wire [15 : 0] i_START_Y_COORD;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RESETN RST" *)
+input wire i_RESETN;
 input wire [7 : 0] i_ASCII_VAL;
+input wire [3 : 0] i_LINE_CNT;
 output wire [10 : 0] o_BRAM_ADDR;
 
   ASCII_addr_gen inst (
     .i_CLK(i_CLK),
-    .i_RST(i_RST),
-    .i_X_COORD(i_X_COORD),
-    .i_Y_COORD(i_Y_COORD),
-    .i_START_X_COORD(i_START_X_COORD),
-    .i_START_Y_COORD(i_START_Y_COORD),
+    .i_RESETN(i_RESETN),
     .i_ASCII_VAL(i_ASCII_VAL),
+    .i_LINE_CNT(i_LINE_CNT),
     .o_BRAM_ADDR(o_BRAM_ADDR)
   );
 endmodule

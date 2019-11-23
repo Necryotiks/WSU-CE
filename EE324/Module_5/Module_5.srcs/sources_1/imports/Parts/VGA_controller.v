@@ -22,22 +22,24 @@
 
 module VGA_controller(
     input wire i_CLK,
-    input wire i_RSTN,
+    input wire i_RESETN,
     input wire [15:0] i_END_OF_LINE,
     input wire [15:0] i_END_OF_SCREEN,
     input wire [15:0] i_HA_END,
     input wire [15:0] i_VA_END,
     input wire [15:0] i_HORIZONTAL_FRONT_PORCH,
-//    input wire [15:0] i_HORIZONTAL_BACK_PORCH,
+
     input wire [15:0] i_HORIZONTAL_SYNC_WIDTH,
     input wire [15:0] i_VERTICAL_FRONT_PORCH,
- //   input wire [15:0] i_VERTICAL_BACK_PORCH,
+
     input wire [15:0] i_VERTICAL_SYNC_WIDTH,
-    output wire o_HSYNC,
-    output wire o_VSYNC,
-    output wire o_VDE,
-    output wire [15:0] o_X_COORD,
-    output wire [15:0] o_Y_COORD
+    output reg o_HSYNC,
+    output reg o_VSYNC,
+    output reg o_VDE,
+    output wire [15:0] o_X_COORD, //normalized coordinates
+    output wire [15:0] o_Y_COORD,
+    output reg [15:0] o_HCNT, //raw counter data
+    output reg [15:0] o_VCNT
     );
     
     
@@ -54,18 +56,18 @@ module VGA_controller(
     localparam v_VERTICAL_BACK_PORCH = 33;
     localparam v_VERTICAL_SYNC_WIDTH = 2;
     wire w_CLK;
-    reg r_HSYNC = 1'd1;
-    reg r_VSYNC = 1'd1; 
-    reg [15:0] r_HCNT = 16'd0;
-    reg [15:0] r_VCNT = 16'd0;
+
+
     reg [15:0] r_X_COORD = 16'd0;
     reg [15:0] r_Y_COORD = 16'd0;
+    reg [15:0] r_HCNT;
+    reg [15:0] r_VCNT;
     reg r_VDE = 1'd1;
     
-    assign w_CLK = i_CLK;
-    assign o_HSYNC = r_HSYNC;
-    assign o_VSYNC = r_VSYNC;
-    assign o_VDE = r_VDE;
+    //assign w_CLK = i_CLK;
+    //assign o_HSYNC = r_HSYNC;
+    //assign o_VSYNC = r_VSYNC;
+    //assign o_VDE = r_VDE;
     assign o_X_COORD = r_X_COORD;
     assign o_Y_COORD = r_Y_COORD;
      
@@ -73,10 +75,11 @@ module VGA_controller(
    // assign o_Y_COORD = (r_VCNT >= v_VA_END) ? (v_VA_END - 1) : r_VCNT; 
     //https://timetoexplore.net/blog/arty-fpga-vga-verilog-01
     
+
     
-    always@(posedge w_CLK)
+    always@(posedge i_CLK)
     begin
-        if(r_HCNT < i_HA_END)
+        if(r_HCNT < v_HA_END)
             begin
             r_X_COORD <= r_HCNT;
             end
@@ -84,67 +87,67 @@ module VGA_controller(
             r_X_COORD <= 16'd0;
     end
     
-    always@(posedge w_CLK)
+    always@(posedge i_CLK)
     begin
-        if(r_VCNT >= i_VA_END)
-            r_Y_COORD <= i_VA_END - 1'b1;
+        if(o_VCNT >= v_VA_END)
+            r_Y_COORD <= v_VA_END - 1'b1;
         else
-            r_Y_COORD <= r_VCNT;
+            r_Y_COORD <= o_VCNT;
     end
     
-    always@(posedge w_CLK) //PIXEL COUNT
+    always@(posedge i_CLK) //PIXEL COUNT
     begin
-        if(!i_RSTN || r_HCNT == i_END_OF_LINE - 1) begin
-            r_HCNT <= 16'd0;
+        if(!i_RESETN || o_HCNT == v_END_OF_LINE - 1) begin
+            o_HCNT <= 16'd0;
             end
         else
             begin
-            r_HCNT <= r_HCNT + 1'b1;
+            o_HCNT <= o_HCNT + 1'b1;
             end
     end
     
-    always@(posedge w_CLK) //LINE COUNT
+    always@(posedge i_CLK) //LINE COUNT
         begin
-            if(!i_RSTN || r_VCNT == i_END_OF_SCREEN - 1) begin
-                r_VCNT <= 16'd0;
+            if(!i_RESETN || o_VCNT == v_END_OF_SCREEN - 1) begin
+                o_VCNT <= 16'd0;
                 end
-            else if (r_HCNT == i_END_OF_LINE - 1)
+            else if (o_HCNT == i_END_OF_LINE - 1)
                 begin
-                r_VCNT <= r_VCNT + 1'b1;
+                o_VCNT <= o_VCNT + 1'b1;
                 end
            else
                 begin
-                r_VCNT <= r_VCNT;
+                o_VCNT <= o_VCNT;
                 end
         end
         
-        always@(posedge w_CLK)
+        always@(posedge i_CLK)
         begin
-            if((!i_RSTN) || (r_HCNT > i_HA_END + i_HORIZONTAL_FRONT_PORCH) && (r_HCNT <= i_HA_END + i_HORIZONTAL_FRONT_PORCH + i_HORIZONTAL_SYNC_WIDTH))
-                r_HSYNC <= 1'b0;
+            if((!i_RESETN) || (o_HCNT > v_HA_END + v_HORIZONTAL_FRONT_PORCH) && (r_HCNT <= v_HA_END + v_HORIZONTAL_FRONT_PORCH + v_HORIZONTAL_SYNC_WIDTH))
+                o_HSYNC <= 1'b0;
             else
-                r_HSYNC <= 1'b1;
+                o_HSYNC <= 1'b1;
         end
         
-        always@(posedge w_CLK)
+        always@(posedge i_CLK)
         begin
-            if((!i_RSTN) || (r_VCNT > i_VA_END + i_VERTICAL_FRONT_PORCH ) && (r_VCNT <= i_VA_END + i_VERTICAL_FRONT_PORCH + i_VERTICAL_SYNC_WIDTH))
-                r_VSYNC <= 1'b0;
+            if((!i_RESETN) || (o_VCNT > v_VA_END + v_VERTICAL_FRONT_PORCH ) && (o_VCNT <= v_VA_END + v_VERTICAL_FRONT_PORCH + v_VERTICAL_SYNC_WIDTH))
+                o_VSYNC <= 1'b0;
             else
-                r_VSYNC <= 1'b1;
+                o_VSYNC <= 1'b1;
         end
         
-        always@(posedge w_CLK)
+        always@(posedge i_CLK)
         begin
-            if((r_HCNT <= i_HA_END) && (r_VCNT <= i_VA_END))
-                r_VDE <= 1'b1;
+            if((o_HCNT <= v_HA_END) && (o_VCNT <= v_VA_END))
+                o_VDE <= 1'b1;
             else
-                r_VDE <= 1'b0;
+                o_VDE <= 1'b0;
         end
 `ifdef FORMAL
 reg r_past_valid = 0;
 initial begin
-	assume(!i_RSTN);
+	assume(!i_RESETN);
 end
 always@(posedge w_CLK)
 begin

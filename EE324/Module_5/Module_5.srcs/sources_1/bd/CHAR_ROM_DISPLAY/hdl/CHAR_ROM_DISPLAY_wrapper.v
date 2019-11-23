@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-//Date        : Fri Nov  8 23:18:03 2019
+//Date        : Thu Nov 21 15:59:17 2019
 //Host        : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
 //Command     : generate_target CHAR_ROM_DISPLAY_wrapper.bd
 //Design      : CHAR_ROM_DISPLAY_wrapper
@@ -34,8 +34,7 @@ module CHAR_ROM_DISPLAY_wrapper
     hdmi_tx_0_tmds_clk_n,
     hdmi_tx_0_tmds_clk_p,
     hdmi_tx_0_tmds_data_n,
-    hdmi_tx_0_tmds_data_p,
-    i_CLK_100MHZ);
+    hdmi_tx_0_tmds_data_p);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -61,7 +60,6 @@ module CHAR_ROM_DISPLAY_wrapper
   output hdmi_tx_0_tmds_clk_p;
   output [2:0]hdmi_tx_0_tmds_data_n;
   output [2:0]hdmi_tx_0_tmds_data_p;
-  input i_CLK_100MHZ;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -88,7 +86,6 @@ module CHAR_ROM_DISPLAY_wrapper
   wire hdmi_tx_0_tmds_clk_p;
   wire [2:0]hdmi_tx_0_tmds_data_n;
   wire [2:0]hdmi_tx_0_tmds_data_p;
-  wire i_CLK_100MHZ;
 
   CHAR_ROM_DISPLAY CHAR_ROM_DISPLAY_i
        (.DDR_addr(DDR_addr),
@@ -115,6 +112,5 @@ module CHAR_ROM_DISPLAY_wrapper
         .hdmi_tx_0_tmds_clk_n(hdmi_tx_0_tmds_clk_n),
         .hdmi_tx_0_tmds_clk_p(hdmi_tx_0_tmds_clk_p),
         .hdmi_tx_0_tmds_data_n(hdmi_tx_0_tmds_data_n),
-        .hdmi_tx_0_tmds_data_p(hdmi_tx_0_tmds_data_p),
-        .i_CLK_100MHZ(i_CLK_100MHZ));
+        .hdmi_tx_0_tmds_data_p(hdmi_tx_0_tmds_data_p));
 endmodule
