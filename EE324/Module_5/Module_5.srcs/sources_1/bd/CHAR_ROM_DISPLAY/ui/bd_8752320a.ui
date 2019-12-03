@@ -18,15 +18,16 @@ preplace inst xlconstant_4 -pg 1 -lvl 6 -x 2590 -y 800 -defaultsOSRD
 preplace inst char_rom_0 -pg 1 -lvl 7 -x 2940 -y 500 -defaultsOSRD
 preplace inst CHAR_ROM_CONTROLLER_0 -pg 1 -lvl 3 -x 1010 -y 760 -defaultsOSRD
 preplace inst ASCII_addr_gen_0 -pg 1 -lvl 6 -x 2590 -y 190 -defaultsOSRD
-preplace inst RAM_RANGLER_FSM_0 -pg 1 -lvl 5 -x 2110 -y 160 -defaultsOSRD
-preplace inst C_ROM_LOGIC_0 -pg 1 -lvl 8 -x 3330 -y 140 -defaultsOSRD
+preplace inst RESOLUTION_CONTROLLER_0 -pg 1 -lvl 3 -x 1010 -y 530 -defaultsOSRD
 preplace inst VGA_controller_0 -pg 1 -lvl 4 -x 1600 -y 370 -defaultsOSRD
+preplace inst C_ROM_LOGIC_0 -pg 1 -lvl 8 -x 3330 -y 140 -defaultsOSRD
+preplace inst RAM_RANGLER_FSM_0 -pg 1 -lvl 5 -x 2110 -y 160 -defaultsOSRD
 preplace netloc VGA_controller_0_o_HSYNC 1 4 5 N 310 2390J 300 NJ 300 NJ 300 3520J
 preplace netloc VGA_controller_0_o_VDE 1 4 5 1890 350 2410J 320 NJ 320 3130 320 3510J
 preplace netloc VGA_controller_0_o_VSYNC 1 4 5 N 330 NJ 330 NJ 330 NJ 330 3500J
-preplace netloc clk_wiz_0_clk_out1 1 3 6 1190 170 1840 360 2400 280 2800 280 3110 280 3500J
+preplace netloc clk_wiz_0_clk_out1 1 3 6 1220 170 1840 360 2400 280 2800 280 3110 280 3500J
 preplace netloc clk_wiz_0_clk_out2 1 3 6 1240 180 1830J 340 NJ 340 NJ 340 NJ 340 3540J
-preplace netloc clk_wiz_0_locked 1 3 6 1220 160 1850 320 2380 290 NJ 290 NJ 290 NJ
+preplace netloc clk_wiz_0_locked 1 3 6 1230 160 1850 320 2380 290 NJ 290 NJ 290 NJ
 preplace netloc ASCII_addr_gen_0_o_BRAM_ADDR 1 6 1 2790 190n
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 630 450 890 780
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 640 430
@@ -43,21 +44,28 @@ preplace netloc xlconstant_4_dout 1 6 1 2800J 560n
 preplace netloc CHAR_ROM_CONTROLLER_0_o_ASCII_VAL 1 5 1 2360 140n
 preplace netloc CHAR_ROM_CONTROLLER_0_o_START_X_COORD 1 3 1 N 700
 preplace netloc CHAR_ROM_CONTROLLER_0_o_START_Y_COORD 1 3 1 N 720
-preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_RED 1 3 5 1200J 20 NJ 20 NJ 20 NJ 20 3160
-preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_GREEN 1 3 5 1250J 190 1880J 300 2330J 70 NJ 70 3140
-preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_BLUE 1 3 5 1230J 10 NJ 10 NJ 10 NJ 10 3150
+preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_RED 1 3 5 1260J 20 NJ 20 NJ 20 NJ 20 3160
+preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_GREEN 1 3 5 1320J 190 1880J 300 2330J 70 NJ 70 3140
+preplace netloc CHAR_ROM_CONTROLLER_0_o_BG_BLUE 1 3 5 1290J 10 NJ 10 NJ 10 NJ 10 3150
 preplace netloc CHAR_ROM_CONTROLLER_0_o_FG_RED 1 5 3 2320J 90 NJ 90 3100
 preplace netloc CHAR_ROM_CONTROLLER_0_o_FG_GREEN 1 5 3 2350J 100 NJ 100 3080
 preplace netloc CHAR_ROM_CONTROLLER_0_o_FG_BLUE 1 5 3 2340J 80 NJ 80 3090
-preplace netloc RESOLUTION_CONTROLLER_0_o_END_OF_LINE 1 3 2 1270 200 N
+preplace netloc RESOLUTION_CONTROLLER_0_o_END_OF_LINE 1 3 2 1250 200 N
 preplace netloc RESOLUTION_CONTROLLER_0_o_END_OF_SCREEN 1 3 2 1280 220 N
-preplace netloc CHAR_ROM_CONTROLLER_0_o_DATA_PACKET 1 3 2 1210 120 NJ
+preplace netloc CHAR_ROM_CONTROLLER_0_o_DATA_PACKET 1 3 2 1270 120 NJ
 preplace netloc VGA_controller_0_o_HCNT 1 4 1 1860 160n
 preplace netloc VGA_controller_0_o_VCNT 1 4 1 1900 180n
 preplace netloc RAM_RANGLER_FSM_0_o_CHAR_LINE_CNT 1 5 1 2370 120n
-preplace netloc CHAR_ROM_CONTROLLER_0_o_WRITE_REQUEST 1 3 2 1260J 210 1870
+preplace netloc CHAR_ROM_CONTROLLER_0_o_WRITE_REQUEST 1 3 2 1350J 210 1870
+preplace netloc RESOLUTION_CONTROLLER_0_o_HA_END 1 3 1 1300 360n
+preplace netloc RESOLUTION_CONTROLLER_0_o_VA_END 1 3 1 1310 380n
+preplace netloc RESOLUTION_CONTROLLER_0_o_HORIZONTAL_FRONT_PORCH 1 3 1 1330 400n
+preplace netloc RESOLUTION_CONTROLLER_0_o_HORIZONTAL_SYNC_WIDTH 1 3 1 1340 420n
+preplace netloc RESOLUTION_CONTROLLER_0_o_VERTICAL_FRONT_PORCH 1 3 1 1360 440n
+preplace netloc RESOLUTION_CONTROLLER_0_o_VERTICAL_SYNC_WIDTH 1 3 1 1370 460n
 preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 440 550n
 preplace netloc processing_system7_0_FIXED_IO 1 1 9 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 800 510n
 preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 760 300n
 preplace netloc processing_system7_0_DDR 1 1 9 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ
 preplace netloc hdmi_tx_0_hdmi_tx 1 9 1 NJ 380
@@ -67,7 +75,7 @@ pagesize -pg 1 -db -bbox -sgen 0 0 3970 1040
 "
 }
 {
-   "da_axi4_cnt":"6",
+   "da_axi4_cnt":"7",
    "da_board_cnt":"4",
    "da_bram_cntlr_cnt":"2",
    "da_clkrst_cnt":"3",

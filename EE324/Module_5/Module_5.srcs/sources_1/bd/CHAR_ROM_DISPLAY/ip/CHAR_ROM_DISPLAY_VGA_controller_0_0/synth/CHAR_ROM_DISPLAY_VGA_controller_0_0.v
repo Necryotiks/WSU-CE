@@ -81,21 +81,21 @@ input wire i_CLK;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_RESETN RST" *)
 input wire i_RESETN;
-input wire [15 : 0] i_END_OF_LINE;
-input wire [15 : 0] i_END_OF_SCREEN;
-input wire [15 : 0] i_HA_END;
-input wire [15 : 0] i_VA_END;
-input wire [15 : 0] i_HORIZONTAL_FRONT_PORCH;
-input wire [15 : 0] i_HORIZONTAL_SYNC_WIDTH;
-input wire [15 : 0] i_VERTICAL_FRONT_PORCH;
-input wire [15 : 0] i_VERTICAL_SYNC_WIDTH;
+input wire [10 : 0] i_END_OF_LINE;
+input wire [10 : 0] i_END_OF_SCREEN;
+input wire [10 : 0] i_HA_END;
+input wire [10 : 0] i_VA_END;
+input wire [10 : 0] i_HORIZONTAL_FRONT_PORCH;
+input wire [10 : 0] i_HORIZONTAL_SYNC_WIDTH;
+input wire [10 : 0] i_VERTICAL_FRONT_PORCH;
+input wire [10 : 0] i_VERTICAL_SYNC_WIDTH;
 output wire o_HSYNC;
 output wire o_VSYNC;
 output wire o_VDE;
-output wire [15 : 0] o_X_COORD;
-output wire [15 : 0] o_Y_COORD;
-output wire [15 : 0] o_HCNT;
-output wire [15 : 0] o_VCNT;
+output wire [10 : 0] o_X_COORD;
+output wire [10 : 0] o_Y_COORD;
+output wire [10 : 0] o_HCNT;
+output wire [10 : 0] o_VCNT;
 
   VGA_controller inst (
     .i_CLK(i_CLK),

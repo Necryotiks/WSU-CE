@@ -28,10 +28,6 @@ set_property IOSTANDARD TMDS_33 [get_ports {hdmi_tx_0_tmds_data_p[1]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_tx_0_tmds_data_p[2]}]
 set_property IOSTANDARD TMDS_33 [get_ports hdmi_tx_0_tmds_clk_p]
 
-
-set_property LOC RAMB36_X1Y9 [get_cells CHAR_ROM_DISPLAY_i/char_rom_0/inst/BRAM_SINGLE_MACRO_inst/genblk3_0.bram36_single_bl.bram36_single_bl]
-
 set_max_delay -datapath_only -from [get_clocks clk_fpga_0] -to [get_clocks -of_objects [get_pins CHAR_ROM_DISPLAY_i/clk_wiz_0/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT0]] 1.000
-
 
 

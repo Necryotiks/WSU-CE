@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Nov 21 21:28:31 2019
-| Host         : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
+| Date         : Fri Nov 29 19:37:17 2019
+| Host         : Necryotiks running 64-bit Antergos Linux
 | Command      : report_methodology -file CHAR_ROM_DISPLAY_wrapper_methodology_drc_routed.rpt -pb CHAR_ROM_DISPLAY_wrapper_methodology_drc_routed.pb -rpx CHAR_ROM_DISPLAY_wrapper_methodology_drc_routed.rpx
 | Design       : CHAR_ROM_DISPLAY_wrapper
 | Device       : xc7z007sclg400-1
@@ -20,7 +20,7 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: design_1
+          Floorplan: checkpoint_CHAR_ROM_DISPLAY_wrapper
       Design limits: <entire design considered>
              Max violations: <unlimited>
              Violations found: 4
@@ -47,7 +47,7 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encr/q_m_reg[1]_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/cnt_reg[0]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/cnt_reg[1]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/cnt_reg[2]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/cnt_reg[3]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/cnt_reg[4]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[0]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[1]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[2]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[3]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[4]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[5]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[6]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[7]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[8]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[9]/CLR (the first 15 of 45 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell CHAR_ROM_DISPLAY_i/hdmi_tx_0/q_m_reg[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/cnt_reg[0]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/cnt_reg[1]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/cnt_reg[2]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/cnt_reg[3]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/cnt_reg[4]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[0]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[1]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[2]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[3]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[4]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[5]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[6]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[7]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[8]/CLR, CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/encb/dout_reg[9]/CLR (the first 15 of 45 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-9#1 Warning

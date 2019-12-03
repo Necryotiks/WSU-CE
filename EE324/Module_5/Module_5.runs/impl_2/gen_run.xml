@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_2" LaunchPart="xc7z007sclg400-1" LaunchTime="1574400242">
+<GenRun Id="impl_2" LaunchPart="xc7z007sclg400-1" LaunchTime="1575084892">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="RDI-RDI" Name="CHAR_ROM_DISPLAY_wrapper.vdi"/>
   <File Type="BG-DRC" Name="CHAR_ROM_DISPLAY_wrapper.drc"/>
   <File Type="BG-BGN" Name="CHAR_ROM_DISPLAY_wrapper.bgn"/>
   <File Type="BITSTR-SYSDEF" Name="CHAR_ROM_DISPLAY_wrapper.sysdef"/>
@@ -16,14 +15,12 @@
   <File Type="BG-BIT" Name="CHAR_ROM_DISPLAY_wrapper.bit"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="CHAR_ROM_DISPLAY_wrapper_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="CHAR_ROM_DISPLAY_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="CHAR_ROM_DISPLAY_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="CHAR_ROM_DISPLAY_wrapper.vdi"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="CHAR_ROM_DISPLAY_wrapper_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="CHAR_ROM_DISPLAY_wrapper_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="CHAR_ROM_DISPLAY_wrapper_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="CHAR_ROM_DISPLAY_wrapper_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="CHAR_ROM_DISPLAY_wrapper_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="CHAR_ROM_DISPLAY_wrapper_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="CHAR_ROM_DISPLAY_wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW" Name="CHAR_ROM_DISPLAY_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="CHAR_ROM_DISPLAY_wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-SIMILARITY" Name="CHAR_ROM_DISPLAY_wrapper_incremental_reuse_routed.rpt"/>
@@ -58,17 +55,21 @@
   <File Type="PLACE-CLK" Name="CHAR_ROM_DISPLAY_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-IO" Name="CHAR_ROM_DISPLAY_wrapper_io_placed.rpt"/>
   <File Type="PLACE-DCP" Name="CHAR_ROM_DISPLAY_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="CHAR_ROM_DISPLAY_wrapper_timing_summary_pwropted.rpt"/>
   <File Type="PWROPT-DRC" Name="CHAR_ROM_DISPLAY_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-DCP" Name="CHAR_ROM_DISPLAY_wrapper_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="CHAR_ROM_DISPLAY_wrapper_timing_summary_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="CHAR_ROM_DISPLAY_wrapper.hwdef"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="CHAR_ROM_DISPLAY_wrapper_methodology_drc_opted.rpt"/>
   <File Type="OPT-DRC" Name="CHAR_ROM_DISPLAY_wrapper_drc_opted.rpt"/>
   <File Type="OPT-DCP" Name="CHAR_ROM_DISPLAY_wrapper_opt.dcp"/>
   <File Type="INIT-TIMING" Name="CHAR_ROM_DISPLAY_wrapper_timing_summary_init.rpt"/>
-  <File Type="PWROPT-TIMING" Name="CHAR_ROM_DISPLAY_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="CHAR_ROM_DISPLAY_wrapper_bus_skew_routed.rpx"/>
   <File Type="REPORTS-TCL" Name="CHAR_ROM_DISPLAY_wrapper_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="CHAR_ROM_DISPLAY_wrapper_timing_summary_opted.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="CHAR_ROM_DISPLAY_wrapper_bus_skew_routed.pb"/>
   <File Type="PA-TCL" Name="CHAR_ROM_DISPLAY_wrapper.tcl"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="CHAR_ROM_DISPLAY_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="PA-DCP" Name="CHAR_ROM_DISPLAY_wrapper.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Parts/VGA_controller.v">
@@ -168,9 +169,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Performance_ExtraTimingOpt" Flow="Vivado Implementation 2019">
-      <Desc>Includes alternate algorithms for timing-driven optimization</Desc>
-    </StratHandle>
+    <StratHandle Name="Performance_ExtraTimingOpt" Flow="Vivado Implementation 2019"/>
     <Step Id="init_design"/>
     <Step Id="opt_design">
       <Option Id="Directive">0</Option>

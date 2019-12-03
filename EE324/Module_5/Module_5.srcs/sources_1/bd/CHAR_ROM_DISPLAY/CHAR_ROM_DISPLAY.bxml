@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="CHAR_ROM_DISPLAY" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1574380758"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1574380758"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1574380758"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1574380758"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1575082876"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1575082876"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1575082876"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1575082876"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/CHAR_ROM_DISPLAY_VGA_controller_0_0/CHAR_ROM_DISPLAY_VGA_controller_0_0.xci" Type="IP">
         <Instance HierarchyPath="VGA_controller_0"/>
@@ -137,6 +137,14 @@
       </File>
       <File Name="ip/CHAR_ROM_DISPLAY_RAM_RANGLER_FSM_0_0/CHAR_ROM_DISPLAY_RAM_RANGLER_FSM_0_0.xci" Type="IP">
         <Instance HierarchyPath="RAM_RANGLER_FSM_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0/CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0.xci" Type="IP">
+        <Instance HierarchyPath="RESOLUTION_CONTROLLER_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

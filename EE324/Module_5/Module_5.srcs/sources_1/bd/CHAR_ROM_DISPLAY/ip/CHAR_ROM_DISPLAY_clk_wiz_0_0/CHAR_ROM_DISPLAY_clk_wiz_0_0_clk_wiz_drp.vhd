@@ -258,10 +258,10 @@ signal ram_clk_config : mem_type := (
    X"047D2505", 
    X"00000000",
    X"0000000A", 
-   X"00000000",
+   X"00006978",
    X"0000C350",
    X"00000002",
-   X"00000000",
+   X"000057e4",
    X"0000C350",
    X"00000001",
    X"00000000",
@@ -377,10 +377,10 @@ begin
 	    ram_clk_config(0)  <=    X"047D2505";
 	    ram_clk_config(1)  <=    X"00000000";
 	    ram_clk_config(2)  <=    X"0000000A";
-	    ram_clk_config(3)  <=    X"00000000";
+	    ram_clk_config(3)  <=    X"00006978";
 	    ram_clk_config(4)  <=    X"0000C350";
 	    ram_clk_config(5)  <=    X"00000002";
-	    ram_clk_config(6)  <=    X"00000000";
+	    ram_clk_config(6)  <=    X"000057e4";
 	    ram_clk_config(7)  <=    X"0000C350";
 	    ram_clk_config(8)  <=    X"00000001";
 	    ram_clk_config(9)  <=    X"00000000";
@@ -579,13 +579,13 @@ mmcm_drp_inst: CHAR_ROM_DISPLAY_clk_wiz_0_0_mmcm_drp generic map (
   S1_BANDWIDTH              => "OPTIMIZED",
   S1_DIVCLK_DIVIDE          =>  5,
   S1_CLKOUT0_DIVIDE         =>  10,
-  S1_CLKOUT0_PHASE          =>  0,
+  S1_CLKOUT0_PHASE          =>  27000,
   S1_CLKOUT0_DUTY           =>  50000, 
   S1_CLKOUT0_FRAC           =>  0, 
   S1_CLKOUT0_FRAC_EN        =>  0,  
   
   S1_CLKOUT1_DIVIDE         =>  2,
-  S1_CLKOUT1_PHASE          =>  0,
+  S1_CLKOUT1_PHASE          =>  22500,
   S1_CLKOUT1_DUTY           =>  50000,
   
   S1_CLKOUT2_DIVIDE         =>  1,         

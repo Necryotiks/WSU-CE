@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 3
+set_param chipscope.maxJobs 2
 set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z007sclg400-1
 
@@ -25,42 +25,42 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/wt [current_project]
-set_property parent.project_path /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.xpr [current_project]
+set_property webtalk.parent_dir /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.cache/wt [current_project]
+set_property parent.project_path /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
-  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0
-  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0
-  /home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS
+  /home/necryotiks/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0
+  /home/necryotiks/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0
+  /home/necryotiks/WSU-CPTE/IP_REPOS
 } [current_project]
 update_ip_catalog
-set_property ip_output_repo /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.cache/ip [current_project]
+set_property ip_output_repo /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/VGA_controller.v
-  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/new/ASCII_addr_gen.v
-  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/char_rom.v
-  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/new/C_ROM_LOGIC.v
-  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/new/RAM_RANGLER_FSM.v
-  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hdl/CHAR_ROM_DISPLAY_wrapper.v
+  /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/VGA_controller.v
+  /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/new/ASCII_addr_gen.v
+  /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/imports/Parts/char_rom.v
+  /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/new/C_ROM_LOGIC.v
+  /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/new/RAM_RANGLER_FSM.v
+  /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hdl/CHAR_ROM_DISPLAY_wrapper.v
 }
-add_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_data_fifo_0/CHAR_ROM_DISPLAY_s00_data_fifo_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_auto_pc_0/CHAR_ROM_DISPLAY_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_data_fifo_0/CHAR_ROM_DISPLAY_m00_data_fifo_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY_ooc.xdc]
+add_files /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_data_fifo_0/CHAR_ROM_DISPLAY_s00_data_fifo_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_auto_pc_0/CHAR_ROM_DISPLAY_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_data_fifo_0/CHAR_ROM_DISPLAY_m00_data_fifo_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -70,15 +70,15 @@ set_property used_in_implementation false [get_files -all /home/sergaljerk/Docum
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc
-set_property used_in_implementation false [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+read_xdc /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc
+set_property used_in_implementation false [get_files /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top CHAR_ROM_DISPLAY_wrapper -part xc7z007sclg400-1 -fanout_limit 400 -retiming -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+synth_design -top CHAR_ROM_DISPLAY_wrapper -part xc7z007sclg400-1 -flatten_hierarchy full -bufg 40 -fanout_limit 0 -retiming -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 7
 
 
 # disable binary constraint mode for synth run checkpoints

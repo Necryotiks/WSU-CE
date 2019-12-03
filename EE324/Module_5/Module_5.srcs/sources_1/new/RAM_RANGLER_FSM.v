@@ -21,15 +21,15 @@
 
 
 module RAM_RANGLER_FSM(
-	input i_CLK,
-	input i_RESETN,
-	input [31:0] i_DATA,
-	input i_VDE,
-	input [15:0] i_HCNT,
-	input [15:0] i_VCNT,
-	input [15:0] i_END_OF_LINE,
-	input [15:0]i_END_OF_SCREEN,
-	input i_WRITE_REQUEST,
+	input wire i_CLK,
+	input wire i_RESETN,
+	input wire [31:0] i_DATA,
+	input wire i_VDE,
+	input wire [15:0] i_HCNT,
+	input wire [15:0] i_VCNT,
+	input wire [15:0] i_END_OF_LINE,
+	input wire [15:0]i_END_OF_SCREEN,
+	input wire i_WRITE_REQUEST,
 	output reg [3:0] o_CHAR_LINE_CNT,
 	output reg [7:0] o_ASCII_VAL,
 	output reg [7:0] o_FG_RED,
@@ -42,14 +42,21 @@ localparam s_WRITE = 2; //put char in bram
 localparam s_WHOLD = 3; //wait for wren to deassert
 localparam s_RHOLD = 4; //count for 16
 //TODO: hold states
-
+//TODO: redisgn this
 reg [4:0] r_NEXT_STATE = 0;
 reg [4:0] r_CURRENT_STATE = 0;
 reg [9:0] r_ENTRY_CNT = 0;
 reg [9:0] r_CURRENT_CHAR_ADDR= 0;
 reg [3:0] r_PIX_CNT = 0;
 wire [31:0] w_RETRIEVED_ENTRY = 0;
+reg [15:0] r_END_OF_LINE;
+reg [15:0] r_END_OF_SCREEN;
 reg r_SRST = 0;
+always@(posedge i_CLK)
+begin
+r_END_OF_LINE <= i_END_OF_LINE;
+r_END_OF_SCREEN <= i_END_OF_SCREEN;
+end
 always@(*)
 begin
 	case(r_CURRENT_STATE)
@@ -140,7 +147,7 @@ endcase
 		    o_FG_GREEN <= w_RETRIEVED_ENTRY[23:16];
 		    o_FG_BLUE <= w_RETRIEVED_ENTRY[31:24];
 		    r_PIX_CNT <= r_PIX_CNT + 1;
-		    if((i_HCNT != i_END_OF_LINE)) //and line cnt != 16
+		    if((i_HCNT != r_END_OF_LINE)) //and line cnt != 16
 		    begin
 			    if((r_PIX_CNT == 15))
 				    r_CURRENT_CHAR_ADDR <= r_CURRENT_CHAR_ADDR + 1;
@@ -166,9 +173,9 @@ endcase
             o_CHAR_LINE_CNT <= 4'd0;
         else 
         begin
-            if(i_VCNT != i_END_OF_SCREEN -1) 
+            if(i_VCNT != r_END_OF_SCREEN -1) 
             begin
-                if(i_HCNT == i_END_OF_LINE -1)
+                if(i_HCNT == r_END_OF_LINE -1)
                     o_CHAR_LINE_CNT <= o_CHAR_LINE_CNT + 1;
                 else
                     o_CHAR_LINE_CNT <= o_CHAR_LINE_CNT;

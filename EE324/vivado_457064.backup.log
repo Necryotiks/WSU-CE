@@ -1,0 +1,477 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov 29 14:20:59 2019
+# Process ID: 457064
+# Current directory: /home/necryotiks/WSU-CPTE/EE324
+# Command line: vivado
+# Log file: /home/necryotiks/WSU-CPTE/EE324/vivado.log
+# Journal file: /home/necryotiks/WSU-CPTE/EE324/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.xpr
+INFO: [Project 1-313] Project file moved from '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/WSU-CPTE/IP_REPOS'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/necryotiks/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 6433.305 ; gain = 88.574 ; free physical = 368 ; free virtual = 11936
+update_compile_order -fileset sources_1
+open_bd_design {/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd}
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- realdigital.org:realdigital:hdmi_tx:1.0 - hdmi_tx_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - s00_data_fifo
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - m00_data_fifo
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m00_regslice
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_4
+Adding component instance block -- xilinx.com:module_ref:char_rom:1.0 - char_rom_0
+Adding component instance block -- user.org:user:CHAR_ROM_CONTROLLER:1.0 - CHAR_ROM_CONTROLLER_0
+Adding component instance block -- xilinx.com:module_ref:ASCII_addr_gen:1.0 - ASCII_addr_gen_0
+Adding component instance block -- xilinx.com:module_ref:RAM_RANGLER_FSM:1.0 - RAM_RANGLER_FSM_0
+Adding component instance block -- xilinx.com:module_ref:C_ROM_LOGIC:1.0 - C_ROM_LOGIC_0
+Adding component instance block -- xilinx.com:module_ref:VGA_controller:1.0 - VGA_controller_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /ASCII_addr_gen_0/i_RESETN(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /RAM_RANGLER_FSM_0/i_RESETN(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /VGA_controller_0/i_RESETN(rst)
+Successfully read diagram <CHAR_ROM_DISPLAY> from BD file </home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd>
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+[Fri Nov 29 14:23:32 2019] Launched synth_2...
+Run output will be captured here: /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_2/runme.log
+open_run synth_2 -name synth_2
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z007sclg400-1
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Netlist 29-17] Analyzing 209 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 7378.473 ; gain = 541.793 ; free physical = 601 ; free virtual = 11359
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7383.477 ; gain = 0.000 ; free physical = 587 ; free virtual = 11354
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:35 ; elapsed = 00:00:24 . Memory (MB): peak = 7464.352 ; gain = 815.945 ; free physical = 489 ; free virtual = 11260
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+open_bd_design {/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd}
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:RESOLUTION_CONTROLLER:1.0 RESOLUTION_CONTROLLER_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/RESOLUTION_CONTROLLER_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins RESOLUTION_CONTROLLER_0/S00_AXI]
+Slave segment </RESOLUTION_CONTROLLER_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
+regenerate_bd_layout
+connect_bd_net [get_bd_pins VGA_controller_0/i_HA_END] [get_bd_pins RESOLUTION_CONTROLLER_0/o_HA_END]
+connect_bd_net [get_bd_pins VGA_controller_0/i_VA_END] [get_bd_pins RESOLUTION_CONTROLLER_0/o_VA_END]
+connect_bd_net [get_bd_pins VGA_controller_0/i_HORIZONTAL_FRONT_PORCH] [get_bd_pins RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH]
+connect_bd_net [get_bd_pins VGA_controller_0/i_HORIZONTAL_SYNC_WIDTH] [get_bd_pins RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH]
+connect_bd_net [get_bd_pins VGA_controller_0/i_VERTICAL_FRONT_PORCH] [get_bd_pins RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH]
+connect_bd_net [get_bd_pins VGA_controller_0/i_VERTICAL_SYNC_WIDTH] [get_bd_pins RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH]
+connect_bd_net [get_bd_pins VGA_controller_0/i_END_OF_LINE] [get_bd_pins RESOLUTION_CONTROLLER_0/o_END_OF_LINE]
+connect_bd_net [get_bd_pins VGA_controller_0/i_END_OF_SCREEN] [get_bd_pins RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN]
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+Wrote  : </home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ui/bd_8752320a.ui> 
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+WARNING: [BD 41-927] Following properties on pin /hdmi_tx_0/pix_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /hdmi_tx_0/pix_clkx5 have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /char_rom_0/CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /ASCII_addr_gen_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /RAM_RANGLER_FSM_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /C_ROM_LOGIC_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /VGA_controller_0/i_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+Wrote  : </home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd> 
+VHDL Output written to : /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/synth/CHAR_ROM_DISPLAY.v
+VHDL Output written to : /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/sim/CHAR_ROM_DISPLAY.v
+VHDL Output written to : /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hdl/CHAR_ROM_DISPLAY_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VGA_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ASCII_addr_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block char_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block CHAR_ROM_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block C_ROM_LOGIC_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RAM_RANGLER_FSM_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RESOLUTION_CONTROLLER_0 .
+WARNING: [IP_Flow 19-5160] IP 'CHAR_ROM_DISPLAY_s00_regslice_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'Verilog' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.AWUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.WUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.BUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.ARUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.RUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.AWUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.WUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.BUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.ARUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.RUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/s00_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_data_fifo_0/CHAR_ROM_DISPLAY_s00_data_fifo_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'CHAR_ROM_DISPLAY_s00_data_fifo_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'Verilog' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.ID_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.AWUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.WUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.BUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.ARUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.RUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.ID_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.AWUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.WUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.BUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.ARUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.RUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/s00_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_auto_pc_0/CHAR_ROM_DISPLAY_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_data_fifo_0/CHAR_ROM_DISPLAY_m00_data_fifo_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'CHAR_ROM_DISPLAY_m00_data_fifo_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'Verilog' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.ID_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.AWUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.WUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.BUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.ARUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.RUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.ID_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.AWUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.WUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.BUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.ARUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.RUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m00_couplers/m00_data_fifo .
+WARNING: [IP_Flow 19-5160] IP 'CHAR_ROM_DISPLAY_m00_regslice_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'Verilog' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.ID_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.AWUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.WUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.BUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.ARUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'M_AXI.RUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.ID_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.AWUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.WUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.BUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.ARUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.RUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m00_couplers/m00_regslice .
+Exporting to file /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hw_handoff/CHAR_ROM_DISPLAY.hwh
+Generated Block Design Tcl file /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/hw_handoff/CHAR_ROM_DISPLAY_bd.tcl
+Generated Hardware Definition File /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/synth/CHAR_ROM_DISPLAY.hwdef
+[Fri Nov 29 14:47:47 2019] Launched synth_2...
+Run output will be captured here: /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_2/runme.log
+launch_runs: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 7727.449 ; gain = 0.000 ; free physical = 442 ; free virtual = 10682
+refresh_design
+INFO: [Netlist 29-17] Analyzing 209 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 7848.477 ; gain = 0.000 ; free physical = 1424 ; free virtual = 11022
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property STEPS.SYNTH_DESIGN.ARGS.FANOUT_LIMIT 5 [get_runs synth_2]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+[Fri Nov 29 14:58:27 2019] Launched synth_2...
+Run output will be captured here: /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_2/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 209 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 7848.477 ; gain = 0.000 ; free physical = 1493 ; free virtual = 10487
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY full [get_runs synth_2]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property STEPS.SYNTH_DESIGN.ARGS.FANOUT_LIMIT 4 [get_runs synth_2]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+[Fri Nov 29 15:04:22 2019] Launched synth_2...
+Run output will be captured here: /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_2/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 209 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 7848.477 ; gain = 0.000 ; free physical = 1216 ; free virtual = 10278
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property STEPS.SYNTH_DESIGN.ARGS.FANOUT_LIMIT 0 [get_runs synth_2]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property STEPS.SYNTH_DESIGN.ARGS.BUFG 40 [get_runs synth_2]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property STEPS.SYNTH_DESIGN.ARGS.SHREG_MIN_SIZE 7 [get_runs synth_2]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_max_delay -from [get_pins {CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[4]/C}] -to [get_pins {CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/o_VCNT_reg[12]/CE}] 6.0
+save_constraints
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+[Fri Nov 29 15:11:25 2019] Launched synth_2...
+Run output will be captured here: /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_2/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 209 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 7848.477 ; gain = 0.000 ; free physical = 1479 ; free virtual = 10095
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+set_max_delay -from [get_pins {CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[4]/C}] -to [get_pins {CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/o_VCNT_reg[15]/CE}] 6.0
+set_max_delay -from [get_pins {CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[4]/C}] -to [get_pins {CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/o_VCNT_reg[13]/CE}] 6.0
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+save_constraints
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+[Fri Nov 29 15:16:18 2019] Launched synth_2...
+Run output will be captured here: /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_2/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 209 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 7848.477 ; gain = 0.000 ; free physical = 1313 ; free virtual = 9990
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+set_max_delay -from [get_pins {CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[4]/C}] -to [get_pins {CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/o_VCNT_reg[2]/CE}] 5.0
+set_max_delay -from [get_pins {CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[4]/C}] -to [get_pins {CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/o_VCNT_reg[2]/CE}] 5.0
+set_multicycle_path -from [get_pins {CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[4]/C}] -to [get_pins {CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/o_VCNT_reg[2]/CE}] 5
+set_max_delay -from [get_pins {CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[4]/C}] -to [get_pins {CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/o_VCNT_reg[1]/CE}] 5.0
+set_max_delay -from [get_pins {CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[4]/C}] -to [get_pins {CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/o_VCNT_reg[11]/CE}] 5.0
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+save_constraints
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+[Fri Nov 29 15:23:13 2019] Launched synth_2...
+Run output will be captured here: /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/synth_2/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 209 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+Finished Parsing XDC File [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 7848.477 ; gain = 0.000 ; free physical = 1219 ; free virtual = 9985
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc:39]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 15:28:45 2019...

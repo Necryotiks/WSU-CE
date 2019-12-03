@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date             : Thu Nov 21 21:28:33 2019
-| Host             : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
+| Date             : Fri Nov 29 19:37:22 2019
+| Host             : Necryotiks running 64-bit Antergos Linux
 | Command          : report_power -file CHAR_ROM_DISPLAY_wrapper_power_routed.rpt -pb CHAR_ROM_DISPLAY_wrapper_power_summary_routed.pb -rpx CHAR_ROM_DISPLAY_wrapper_power_routed.rpx
 | Design           : CHAR_ROM_DISPLAY_wrapper
 | Device           : xc7z007sclg400-1
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 1.555        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.432        |
+| Dynamic (W)              | 1.433        |
 | Device Static (W)        | 0.122        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 67.1         |
@@ -52,21 +52,22 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.014 |        7 |       --- |             --- |
-| Slice Logic             |     0.002 |     6888 |       --- |             --- |
-|   LUT as Logic          |     0.002 |     2713 |     14400 |           18.84 |
-|   Register              |    <0.001 |     3580 |     28800 |           12.43 |
-|   CARRY4                |    <0.001 |       72 |      4400 |            1.64 |
+| Clocks                  |     0.016 |        7 |       --- |             --- |
+| Slice Logic             |     0.002 |     8845 |       --- |             --- |
+|   LUT as Logic          |     0.002 |     3680 |     14400 |           25.56 |
+|   Register              |    <0.001 |     4221 |     28800 |           14.66 |
+|   CARRY4                |    <0.001 |      236 |      4400 |            5.36 |
 |   F7/F8 Muxes           |    <0.001 |      122 |     17600 |            0.69 |
 |   LUT as Shift Register |    <0.001 |       63 |      6000 |            1.05 |
-|   Others                |     0.000 |      281 |       --- |             --- |
-| Signals                 |     0.004 |     5519 |       --- |             --- |
-| Block RAM               |     0.001 |        1 |        50 |            2.00 |
+|   Others                |     0.000 |      176 |       --- |             --- |
+| Signals                 |     0.003 |     7180 |       --- |             --- |
+| Block RAM               |    <0.001 |        1 |        50 |            2.00 |
 | MMCM                    |     0.105 |        1 |         2 |           50.00 |
+| DSPs                    |     0.000 |        3 |        66 |            4.55 |
 | I/O                     |     0.132 |        8 |       100 |            8.00 |
 | PS7                     |     1.174 |        1 |       --- |             --- |
 | Static Power            |     0.122 |          |           |                 |
-| Total                   |     1.554 |          |           |                 |
+| Total                   |     1.555 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.030 |       0.023 |      0.007 |
+| Vccint    |       1.000 |     0.031 |       0.024 |      0.007 |
 | Vccaux    |       1.800 |     0.066 |       0.058 |      0.008 |
 | Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -136,15 +137,15 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+---------------------------------------+-------------------------------------------------------------------------------------------------+-----------------+
-| Clock                                 | Domain                                                                                          | Constraint (ns) |
-+---------------------------------------+-------------------------------------------------------------------------------------------------+-----------------+
-| clk_fpga_0                            | CHAR_ROM_DISPLAY_i/processing_system7_0/inst/FCLK_CLK0                                          |            10.0 |
-| clk_fpga_0                            | CHAR_ROM_DISPLAY_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]                             |            10.0 |
-| clk_out1_CHAR_ROM_DISPLAY_clk_wiz_0_0 | CHAR_ROM_DISPLAY_i/clk_wiz_0/inst/CLK_CORE_DRP_I/clk_inst/clk_out1_CHAR_ROM_DISPLAY_clk_wiz_0_0 |            13.5 |
-| clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0 | CHAR_ROM_DISPLAY_i/clk_wiz_0/inst/CLK_CORE_DRP_I/clk_inst/clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0 |             2.7 |
-| clkfbout_CHAR_ROM_DISPLAY_clk_wiz_0_0 | CHAR_ROM_DISPLAY_i/clk_wiz_0/inst/CLK_CORE_DRP_I/clk_inst/clkfbout_CHAR_ROM_DISPLAY_clk_wiz_0_0 |            50.0 |
-+---------------------------------------+-------------------------------------------------------------------------------------------------+-----------------+
++---------------------------------------------------------------+-------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                         | Domain                                                                                          | Constraint (ns) |
++---------------------------------------------------------------+-------------------------------------------------------------------------------------------------+-----------------+
+| CLK_CORE_DRP_I/clk_inst/clk_out1_CHAR_ROM_DISPLAY_clk_wiz_0_0 | CHAR_ROM_DISPLAY_i/clk_wiz_0/inst/CLK_CORE_DRP_I/clk_inst/clk_out1_CHAR_ROM_DISPLAY_clk_wiz_0_0 |            13.5 |
+| CLK_CORE_DRP_I/clk_inst/clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0 | CHAR_ROM_DISPLAY_i/clk_wiz_0/inst/CLK_CORE_DRP_I/clk_inst/clk_out2_CHAR_ROM_DISPLAY_clk_wiz_0_0 |             2.7 |
+| CLK_CORE_DRP_I/clk_inst/clkfbout_CHAR_ROM_DISPLAY_clk_wiz_0_0 | CHAR_ROM_DISPLAY_i/clk_wiz_0/inst/CLK_CORE_DRP_I/clk_inst/clkfbout_CHAR_ROM_DISPLAY_clk_wiz_0_0 |            50.0 |
+| clk_fpga_0                                                    | CHAR_ROM_DISPLAY_i/processing_system7_0/inst/FCLK_CLK0                                          |            10.0 |
+| clk_fpga_0                                                    | CHAR_ROM_DISPLAY_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]                             |            10.0 |
++---------------------------------------------------------------+-------------------------------------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -153,25 +154,22 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------------------+-----------+
-| Name                      | Power (W) |
-+---------------------------+-----------+
-| CHAR_ROM_DISPLAY_wrapper  |     1.432 |
-|   CHAR_ROM_DISPLAY_i      |     1.432 |
-|     CHAR_ROM_CONTROLLER_0 |     0.002 |
-|       inst                |     0.002 |
-|     C_ROM_LOGIC_0         |     0.001 |
-|       inst                |     0.001 |
-|     char_rom_0            |     0.001 |
-|       inst                |     0.001 |
-|     clk_wiz_0             |     0.110 |
-|       inst                |     0.110 |
-|     hdmi_tx_0             |     0.135 |
-|       inst                |     0.135 |
-|     processing_system7_0  |     1.175 |
-|       inst                |     1.175 |
-|     ps7_0_axi_periph      |     0.007 |
-|       s00_couplers        |     0.006 |
-+---------------------------+-----------+
++---------------------------------+-----------+
+| Name                            | Power (W) |
++---------------------------------+-----------+
+| CHAR_ROM_DISPLAY_wrapper        |     1.433 |
+|   CHAR_ROM_DISPLAY_i            |     1.433 |
+|     CHAR_ROM_CONTROLLER_0       |     0.001 |
+|     RESOLUTION_CONTROLLER_0     |     0.002 |
+|     VGA_controller_0            |     0.001 |
+|     clk_wiz_0                   |     0.110 |
+|       inst                      |     0.110 |
+|     hdmi_tx_0                   |     0.135 |
+|     processing_system7_0        |     1.175 |
+|       inst                      |     1.175 |
+|     ps7_0_axi_periph            |     0.007 |
+|       s00_couplers/auto_pc      |     0.004 |
+|       s00_couplers/s00_regslice |     0.001 |
++---------------------------------+-----------+
 
 

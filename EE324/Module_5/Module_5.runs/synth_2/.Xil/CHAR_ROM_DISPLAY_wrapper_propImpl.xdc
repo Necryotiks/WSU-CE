@@ -1,6 +1,6 @@
-set_property SRC_FILE_INFO {cfile:/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc rfile:../../../Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc id:1 order:EARLY scoped_inst:CHAR_ROM_DISPLAY_i/clk_wiz_0/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc rfile:../../../Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc id:2 order:EARLY scoped_inst:CHAR_ROM_DISPLAY_i/processing_system7_0/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc rfile:../../../Module_5.srcs/constrs_1/new/hdmi_cons.xdc id:3} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc rfile:../../../Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc id:1 order:EARLY scoped_inst:CHAR_ROM_DISPLAY_i/clk_wiz_0/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc rfile:../../../Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc id:2 order:EARLY scoped_inst:CHAR_ROM_DISPLAY_i/processing_system7_0/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc rfile:../../../Module_5.srcs/constrs_1/new/hdmi_cons.xdc id:3} [current_design]
 current_instance CHAR_ROM_DISPLAY_i/clk_wiz_0/inst
 set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.1
@@ -277,7 +277,5 @@ set_property src_info {type:XDC file:3 line:24 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN N17 [get_ports {hdmi_tx_0_tmds_data_p[1]}]
 set_property src_info {type:XDC file:3 line:25 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N18 [get_ports {hdmi_tx_0_tmds_data_p[2]}]
-set_property src_info {type:XDC file:3 line:32 export:INPUT save:INPUT read:READ} [current_design]
-set_property LOC RAMB36_X1Y9 [get_cells CHAR_ROM_DISPLAY_i/char_rom_0/inst/BRAM_SINGLE_MACRO_inst/genblk3_0.bram36_single_bl.bram36_single_bl]
-set_property src_info {type:XDC file:3 line:34 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:31 export:INPUT save:INPUT read:READ} [current_design]
 set_max_delay -datapath_only -from [get_clocks clk_fpga_0] -to [get_clocks -of_objects [get_pins CHAR_ROM_DISPLAY_i/clk_wiz_0/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT0]] 1.000

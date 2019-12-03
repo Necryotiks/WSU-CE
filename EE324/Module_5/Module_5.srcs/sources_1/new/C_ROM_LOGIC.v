@@ -43,12 +43,12 @@ module C_ROM_LOGIC(
     reg [7:0] r_BG_BLUE;
     reg [15:0] r_CHAR_LINE;
     
-//    always@(posedge i_CLK)
-//    begin
-//         r_BG_RED <= i_BG_RED;
-//         r_BG_GREEN <= i_BG_GREEN;
-//         r_BG_BLUE <= i_BG_BLUE;   
-//    end
+    always@(posedge i_CLK)
+    begin
+         r_BG_RED <= i_BG_RED;
+         r_BG_GREEN <= i_BG_GREEN;
+         r_BG_BLUE <= i_BG_BLUE;   
+    end
     always@(posedge i_CLK)
     begin
         r_PIX_CNT <= r_PIX_CNT + 1;
@@ -65,9 +65,9 @@ module C_ROM_LOGIC(
             end
             else
             begin
-                o_RED <= i_BG_RED;
-                o_GREEN <= i_BG_GREEN;
-                o_BLUE <= i_BG_BLUE;
+                o_RED <= r_BG_RED;
+                o_GREEN <= r_BG_GREEN;
+                o_BLUE <= r_BG_BLUE;
             end
         end
         else

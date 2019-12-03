@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov 21 15:59:18 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov 29 19:01:16 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="CHAR_ROM_DISPLAY" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -535,8 +535,16 @@
             <CONNECTION INSTANCE="VGA_controller_0" PORT="o_VCNT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="i_END_OF_LINE" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="i_END_OF_SCREEN" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="i_END_OF_LINE" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_END_OF_LINE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="o_END_OF_LINE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="i_END_OF_SCREEN" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_END_OF_SCREEN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="o_END_OF_SCREEN"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="i_WRITE_REQUEST" SIGIS="undef" SIGNAME="CHAR_ROM_CONTROLLER_0_o_WRITE_REQUEST">
           <CONNECTIONS>
             <CONNECTION INSTANCE="CHAR_ROM_CONTROLLER_0" PORT="o_WRITE_REQUEST"/>
@@ -570,6 +578,227 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="8" FULLNAME="/RESOLUTION_CONTROLLER_0" HWVERSION="1.0" INSTANCE="RESOLUTION_CONTROLLER_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="RESOLUTION_CONTROLLER" VLNV="user.org:user:RESOLUTION_CONTROLLER:1.0">
+      <DOCUMENTS/>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
+      </ADDRESSBLOCKS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_S00_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXI_ADDR_WIDTH" VALUE="6"/>
+        <PARAMETER NAME="Component_Name" VALUE="CHAR_ROM_DISPLAY_RESOLUTION_CONTROLLER_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="C_S00_AXI_BASEADDR" VALUE="0x43C00000"/>
+        <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0x43C0FFFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="15" NAME="o_END_OF_LINE" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_END_OF_LINE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_controller_0" PORT="i_END_OF_LINE"/>
+            <CONNECTION INSTANCE="RAM_RANGLER_FSM_0" PORT="i_END_OF_LINE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="o_END_OF_SCREEN" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_END_OF_SCREEN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_controller_0" PORT="i_END_OF_SCREEN"/>
+            <CONNECTION INSTANCE="RAM_RANGLER_FSM_0" PORT="i_END_OF_SCREEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="o_HA_END" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_HA_END">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_controller_0" PORT="i_HA_END"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="o_VA_END" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_VA_END">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_controller_0" PORT="i_VA_END"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="o_HORIZONTAL_FRONT_PORCH" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_HORIZONTAL_FRONT_PORCH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_controller_0" PORT="i_HORIZONTAL_FRONT_PORCH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="o_HORIZONTAL_SYNC_WIDTH" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_HORIZONTAL_SYNC_WIDTH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_controller_0" PORT="i_HORIZONTAL_SYNC_WIDTH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="o_VERTICAL_FRONT_PORCH" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_VERTICAL_FRONT_PORCH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_controller_0" PORT="i_VERTICAL_FRONT_PORCH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="o_VERTICAL_SYNC_WIDTH" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_VERTICAL_SYNC_WIDTH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_controller_0" PORT="i_VERTICAL_SYNC_WIDTH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="s00_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s00_axi_awprot" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_awvalid" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_awready" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s00_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s00_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_wvalid" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_wready" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s00_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_bvalid" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_bready" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="s00_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s00_axi_arprot" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_arvalid" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_arready" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="s00_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s00_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_rvalid" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_rready" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s00_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_aresetn" SIGIS="rst" SIGNAME="rst_ps7_0_50M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps7_0_50M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="ps7_0_axi_periph_M02_AXI" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="WIZ_NUM_REG" VALUE="10"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="6"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="CHAR_ROM_DISPLAY_processing_system7_0_0_FCLK_CLK0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s00_axi_awaddr"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="s00_axi_awprot"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s00_axi_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s00_axi_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="s00_axi_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s00_axi_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="s00_axi_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="s00_axi_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="s00_axi_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="s00_axi_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="s00_axi_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s00_axi_araddr"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="s00_axi_arprot"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s00_axi_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s00_axi_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="s00_axi_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="s00_axi_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="s00_axi_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="s00_axi_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/VGA_controller_0" HWVERSION="1.0" INSTANCE="VGA_controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="VGA_controller" VLNV="xilinx.com:module_ref:VGA_controller:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -587,14 +816,46 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="locked"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="i_END_OF_LINE" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="i_END_OF_SCREEN" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="i_HA_END" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="i_VA_END" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="i_HORIZONTAL_FRONT_PORCH" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="i_HORIZONTAL_SYNC_WIDTH" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="i_VERTICAL_FRONT_PORCH" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="i_VERTICAL_SYNC_WIDTH" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="10" NAME="i_END_OF_LINE" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_END_OF_LINE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="o_END_OF_LINE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="i_END_OF_SCREEN" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_END_OF_SCREEN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="o_END_OF_SCREEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="i_HA_END" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_HA_END">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="o_HA_END"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="i_VA_END" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_VA_END">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="o_VA_END"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="i_HORIZONTAL_FRONT_PORCH" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_HORIZONTAL_FRONT_PORCH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="o_HORIZONTAL_FRONT_PORCH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="i_HORIZONTAL_SYNC_WIDTH" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_HORIZONTAL_SYNC_WIDTH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="o_HORIZONTAL_SYNC_WIDTH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="i_VERTICAL_FRONT_PORCH" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_VERTICAL_FRONT_PORCH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="o_VERTICAL_FRONT_PORCH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="i_VERTICAL_SYNC_WIDTH" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_o_VERTICAL_SYNC_WIDTH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="o_VERTICAL_SYNC_WIDTH"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="o_HSYNC" SIGIS="undef" SIGNAME="VGA_controller_0_o_HSYNC">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="hsync"/>
@@ -608,18 +869,18 @@
         <PORT DIR="O" NAME="o_VDE" SIGIS="undef" SIGNAME="VGA_controller_0_o_VDE">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="vde"/>
-            <CONNECTION INSTANCE="RAM_RANGLER_FSM_0" PORT="i_VDE"/>
             <CONNECTION INSTANCE="C_ROM_LOGIC_0" PORT="i_VDE"/>
+            <CONNECTION INSTANCE="RAM_RANGLER_FSM_0" PORT="i_VDE"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="o_X_COORD" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="o_Y_COORD" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="o_HCNT" RIGHT="0" SIGIS="undef" SIGNAME="VGA_controller_0_o_HCNT">
+        <PORT DIR="O" LEFT="10" NAME="o_X_COORD" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="10" NAME="o_Y_COORD" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="10" NAME="o_HCNT" RIGHT="0" SIGIS="undef" SIGNAME="VGA_controller_0_o_HCNT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="RAM_RANGLER_FSM_0" PORT="i_HCNT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="o_VCNT" RIGHT="0" SIGIS="undef" SIGNAME="VGA_controller_0_o_VCNT">
+        <PORT DIR="O" LEFT="10" NAME="o_VCNT" RIGHT="0" SIGIS="undef" SIGNAME="VGA_controller_0_o_VCNT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="RAM_RANGLER_FSM_0" PORT="i_VCNT"/>
           </CONNECTIONS>
@@ -754,8 +1015,8 @@
         <PARAMETER NAME="C_INCLK_SUM_ROW2" VALUE="no_secondary_input_clock"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0A" VALUE="Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0B" VALUE="Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="clk_out1____74.250______0.000______50.0______337.616____322.999"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="clk_out2___371.250______0.000______50.0______258.703____322.999"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="clk_out1____74.250_____27.000______50.0______337.616____322.999"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="clk_out2___371.250_____22.500______50.0______258.703____322.999"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW3" VALUE="no_CLK_OUT3_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW4" VALUE="no_CLK_OUT4_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW5" VALUE="no_CLK_OUT5_output"/>
@@ -768,8 +1029,8 @@
         <PARAMETER NAME="C_CLKOUT5_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT6_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT7_REQUESTED_OUT_FREQ" VALUE="100.000"/>
-        <PARAMETER NAME="C_CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
-        <PARAMETER NAME="C_CLKOUT2_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT1_REQUESTED_PHASE" VALUE="25"/>
+        <PARAMETER NAME="C_CLKOUT2_REQUESTED_PHASE" VALUE="25"/>
         <PARAMETER NAME="C_CLKOUT3_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="C_CLKOUT4_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="C_CLKOUT5_REQUESTED_PHASE" VALUE="0.000"/>
@@ -789,8 +1050,8 @@
         <PARAMETER NAME="C_CLKOUT5_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT6_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT7_OUT_FREQ" VALUE="100.000"/>
-        <PARAMETER NAME="C_CLKOUT1_PHASE" VALUE="0.000"/>
-        <PARAMETER NAME="C_CLKOUT2_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT1_PHASE" VALUE="27.000"/>
+        <PARAMETER NAME="C_CLKOUT2_PHASE" VALUE="22.500"/>
         <PARAMETER NAME="C_CLKOUT3_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="C_CLKOUT4_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="C_CLKOUT5_PHASE" VALUE="0.000"/>
@@ -839,8 +1100,8 @@
         <PARAMETER NAME="C_MMCM_CLKOUT5_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="C_MMCM_CLKOUT6_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="C_MMCM_CLKFBOUT_PHASE" VALUE="0.000"/>
-        <PARAMETER NAME="C_MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
-        <PARAMETER NAME="C_MMCM_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT0_PHASE" VALUE="27.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_PHASE" VALUE="22.500"/>
         <PARAMETER NAME="C_MMCM_CLKOUT2_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="C_MMCM_CLKOUT3_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="C_MMCM_CLKOUT4_PHASE" VALUE="0.000"/>
@@ -1066,10 +1327,10 @@
         <PARAMETER NAME="PSINCDEC_PORT" VALUE="psincdec"/>
         <PARAMETER NAME="PSDONE_PORT" VALUE="psdone"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="74.25"/>
-        <PARAMETER NAME="CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT1_REQUESTED_PHASE" VALUE="25"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="371.25"/>
-        <PARAMETER NAME="CLKOUT2_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT2_REQUESTED_PHASE" VALUE="25"/>
         <PARAMETER NAME="CLKOUT2_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="CLKOUT3_REQUESTED_PHASE" VALUE="0.000"/>
@@ -1150,11 +1411,11 @@
         <PARAMETER NAME="MMCM_STARTUP_WAIT" VALUE="false"/>
         <PARAMETER NAME="MMCM_CLKOUT0_DIVIDE_F" VALUE="10.000"/>
         <PARAMETER NAME="MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
-        <PARAMETER NAME="MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT0_PHASE" VALUE="27.000"/>
         <PARAMETER NAME="MMCM_CLKOUT0_USE_FINE_PS" VALUE="false"/>
         <PARAMETER NAME="MMCM_CLKOUT1_DIVIDE" VALUE="2"/>
         <PARAMETER NAME="MMCM_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
-        <PARAMETER NAME="MMCM_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_PHASE" VALUE="22.500"/>
         <PARAMETER NAME="MMCM_CLKOUT1_USE_FINE_PS" VALUE="false"/>
         <PARAMETER NAME="MMCM_CLKOUT2_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="MMCM_CLKOUT2_DUTY_CYCLE" VALUE="0.500"/>
@@ -1354,9 +1615,9 @@
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="pix_clk"/>
             <CONNECTION INSTANCE="char_rom_0" PORT="CLK"/>
             <CONNECTION INSTANCE="ASCII_addr_gen_0" PORT="i_CLK"/>
-            <CONNECTION INSTANCE="RAM_RANGLER_FSM_0" PORT="i_CLK"/>
-            <CONNECTION INSTANCE="C_ROM_LOGIC_0" PORT="i_CLK"/>
             <CONNECTION INSTANCE="VGA_controller_0" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="C_ROM_LOGIC_0" PORT="i_CLK"/>
+            <CONNECTION INSTANCE="RAM_RANGLER_FSM_0" PORT="i_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="371250000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out2">
@@ -1368,8 +1629,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="hdmi_tx_0" PORT="pix_clk_locked"/>
             <CONNECTION INSTANCE="ASCII_addr_gen_0" PORT="i_RESETN"/>
-            <CONNECTION INSTANCE="RAM_RANGLER_FSM_0" PORT="i_RESETN"/>
             <CONNECTION INSTANCE="VGA_controller_0" PORT="i_RESETN"/>
+            <CONNECTION INSTANCE="RAM_RANGLER_FSM_0" PORT="i_RESETN"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2678,6 +2939,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_ACLK"/>
             <CONNECTION INSTANCE="CHAR_ROM_CONTROLLER_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -2918,10 +3180,12 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
+        <MEMRANGE ADDRESSBLOCK="S00_AXI_reg" BASENAME="C_S00_AXI_BASEADDR" BASEVALUE="0x43C00000" HIGHNAME="C_S00_AXI_HIGHADDR" HIGHVALUE="0x43C0FFFF" INSTANCE="RESOLUTION_CONTROLLER_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S00_AXI"/>
         <MEMRANGE ADDRESSBLOCK="S00_AXI_reg" BASENAME="C_S00_AXI_BASEADDR" BASEVALUE="0x4BB00000" HIGHNAME="C_S00_AXI_HIGHADDR" HIGHVALUE="0x4BB00FFF" INSTANCE="CHAR_ROM_CONTROLLER_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S00_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x4CC00000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4CC00FFF" INSTANCE="clk_wiz_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi_lite"/>
       </MEMORYMAP>
       <PERIPHERALS>
+        <PERIPHERAL INSTANCE="RESOLUTION_CONTROLLER_0"/>
         <PERIPHERAL INSTANCE="CHAR_ROM_CONTROLLER_0"/>
         <PERIPHERAL INSTANCE="clk_wiz_0"/>
       </PERIPHERALS>
@@ -3499,25 +3763,25 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="M02_AXI_awprot" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_awvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M02_AXI_awready" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_wdata" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="M02_AXI_wstrb" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_wvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M02_AXI_wready" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_bresp" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M02_AXI_bvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_bready" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_araddr" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="M02_AXI_arprot" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_arvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M02_AXI_arready" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="M02_AXI_rdata" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_rresp" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M02_AXI_rvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_rready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_awaddr" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_awvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="S01_AXI_awready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_wdata" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_wstrb" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_wvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="S01_AXI_wready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="S01_AXI_bresp" SIGIS="undef"/>
+        <PORT DIR="O" NAME="S01_AXI_bvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_bready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_araddr" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_arvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="S01_AXI_arready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="S01_AXI_rdata" SIGIS="undef"/>
+        <PORT DIR="O" NAME="S01_AXI_rresp" SIGIS="undef"/>
+        <PORT DIR="O" NAME="S01_AXI_rvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_rready" SIGIS="undef"/>
         <PORT DIR="O" LEFT="5" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="CHAR_ROM_CONTROLLER_0_s00_axi_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="CHAR_ROM_CONTROLLER_0" PORT="s00_axi_araddr"/>
@@ -3613,6 +3877,101 @@
             <CONNECTION INSTANCE="CHAR_ROM_CONTROLLER_0" PORT="s00_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M02_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_awvalid" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_awready" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M02_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_wvalid" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_wready" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M02_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_bvalid" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_bready" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M02_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_arvalid" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_arready" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_rvalid" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_rready" SIGIS="undef" SIGNAME="RESOLUTION_CONTROLLER_0_s00_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="clk_wiz_0_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="s_axi_awaddr"/>
@@ -3700,25 +4059,6 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S01_AXI_awaddr" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_awvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_awready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_wdata" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_wstrb" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_wvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_wready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_bresp" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_bvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_bready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_araddr" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_arready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_rdata" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_rresp" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_rvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_rready" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="processing_system7_0_M_AXI_GP0" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -3832,7 +4172,7 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="S01_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="M02_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="ps7_0_axi_periph_M02_AXI" DATAWIDTH="32" NAME="M02_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M02_AXI_awaddr"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M02_AXI_awprot"/>
@@ -3904,6 +4244,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S01_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_ARESETN"/>
             <CONNECTION INSTANCE="CHAR_ROM_CONTROLLER_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="RESOLUTION_CONTROLLER_0" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Nov 21 21:26:56 2019
-| Host         : sergaljerk-Standard-PC-i440FX-PIIX-1996 running 64-bit Ubuntu 18.04.3 LTS
+| Date         : Fri Nov 29 19:31:40 2019
+| Host         : Necryotiks running 64-bit Antergos Linux
 | Command      : report_utilization -file CHAR_ROM_DISPLAY_wrapper_utilization_synth.rpt -pb CHAR_ROM_DISPLAY_wrapper_utilization_synth.pb
 | Design       : CHAR_ROM_DISPLAY_wrapper
 | Device       : 7z007sclg400-1
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 3124 |     0 |     14400 | 21.69 |
-|   LUT as Logic             | 3038 |     0 |     14400 | 21.10 |
+| Slice LUTs*                | 4042 |     0 |     14400 | 28.07 |
+|   LUT as Logic             | 3956 |     0 |     14400 | 27.47 |
 |   LUT as Memory            |   86 |     0 |      6000 |  1.43 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   86 |     0 |           |       |
-| Slice Registers            | 3821 |     0 |     28800 | 13.27 |
-|   Register as Flip Flop    | 3821 |     0 |     28800 | 13.27 |
+| Slice Registers            | 4481 |     0 |     28800 | 15.56 |
+|   Register as Flip Flop    | 4481 |     0 |     28800 | 15.56 |
 |   Register as Latch        |    0 |     0 |     28800 |  0.00 |
 | F7 Muxes                   |  100 |     0 |      8800 |  1.14 |
 | F8 Muxes                   |   22 |     0 |      4400 |  0.50 |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 45    |          Yes |           - |        Reset |
-| 229   |          Yes |         Set |            - |
-| 3547  |          Yes |       Reset |            - |
+| 240   |          Yes |         Set |            - |
+| 4196  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -80,11 +80,12 @@ Table of Contents
 3. DSP
 ------
 
-+-----------+------+-------+-----------+-------+
-| Site Type | Used | Fixed | Available | Util% |
-+-----------+------+-------+-----------+-------+
-| DSPs      |    0 |     0 |        66 |  0.00 |
-+-----------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |    3 |     0 |        66 |  4.55 |
+|   DSP48E1 only |    3 |       |           |       |
++----------------+------+-------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -150,17 +151,17 @@ Table of Contents
 +------------+------+----------------------+
 |  Ref Name  | Used |  Functional Category |
 +------------+------+----------------------+
-| FDRE       | 3547 |         Flop & Latch |
-| LUT6       | 1343 |                  LUT |
-| LUT3       |  641 |                  LUT |
-| LUT5       |  398 |                  LUT |
-| LUT4       |  258 |                  LUT |
-| LUT2       |  244 |                  LUT |
-| FDSE       |  229 |         Flop & Latch |
-| LUT1       |  187 |                  LUT |
+| FDRE       | 4196 |         Flop & Latch |
+| LUT6       | 1553 |                  LUT |
+| LUT3       |  890 |                  LUT |
+| LUT4       |  588 |                  LUT |
+| LUT5       |  577 |                  LUT |
+| LUT2       |  488 |                  LUT |
+| FDSE       |  240 |         Flop & Latch |
+| CARRY4     |  236 |           CarryLogic |
+| LUT1       |  184 |                  LUT |
 | BIBUF      |  130 |                   IO |
 | MUXF7      |  100 |                MuxFx |
-| CARRY4     |   81 |           CarryLogic |
 | SRLC32E    |   47 |   Distributed Memory |
 | FDCE       |   45 |         Flop & Latch |
 | SRL16E     |   39 |   Distributed Memory |
@@ -168,6 +169,7 @@ Table of Contents
 | OSERDESE2  |    8 |                   IO |
 | OBUFDS     |    4 |                   IO |
 | BUFG       |    4 |                Clock |
+| DSP48E1    |    3 |     Block Arithmetic |
 | RAMB36E1   |    1 |         Block Memory |
 | PS7        |    1 | Specialized Resource |
 | MMCME2_ADV |    1 |                Clock |

@@ -2,54 +2,46 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Nov 21 21:26:58 2019
-# Process ID: 19861
-# Current directory: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2
+# Start of session at: Fri Nov 29 19:34:56 2019
+# Process ID: 526816
+# Current directory: /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2
 # Command line: vivado -log CHAR_ROM_DISPLAY_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source CHAR_ROM_DISPLAY_wrapper.tcl -notrace
-# Log file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper.vdi
-# Journal file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/vivado.jou
+# Log file: /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper.vdi
+# Journal file: /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/vivado.jou
 #-----------------------------------------------------------
 source CHAR_ROM_DISPLAY_wrapper.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sergaljerk/Documents/Repos/WSU-CPTE/IP_REPOS'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Vivado/2019.1/data/ip'.
-Command: link_design -top CHAR_ROM_DISPLAY_wrapper -part xc7z007sclg400-1
-Design is defaulting to srcset: sources_1
-Design is defaulting to constrset: constrs_1
+Command: open_checkpoint /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1324.172 ; gain = 0.000 ; free physical = 634 ; free virtual = 8985
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
-INFO: [Netlist 29-17] Analyzing 209 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 367 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2267.453 ; gain = 535.820 ; free physical = 188 ; free virtual = 5367
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_clk_wiz_0_0/CHAR_ROM_DISPLAY_clk_wiz_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/clk_wiz_0/inst'
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_processing_system7_0_0/CHAR_ROM_DISPLAY_processing_system7_0_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/processing_system7_0/inst'
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0_board.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0/CHAR_ROM_DISPLAY_rst_ps7_0_50M_0.xdc] for cell 'CHAR_ROM_DISPLAY_i/rst_ps7_0_50M/U0'
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/constrs_1/new/hdmi_cons.xdc]
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_s00_regslice_0/CHAR_ROM_DISPLAY_s00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
-Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
-Finished Parsing XDC File [/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/ip/CHAR_ROM_DISPLAY_m00_regslice_0/CHAR_ROM_DISPLAY_m00_regslice_0_clocks.xdc] for cell 'CHAR_ROM_DISPLAY_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2363.504 ; gain = 0.000 ; free physical = 208 ; free virtual = 5362
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.60 . Memory (MB): peak = 2100.859 ; gain = 5.938 ; free physical = 113 ; free virtual = 8237
+Restored from archive | CPU: 0.340000 secs | Memory: 1.323845 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.60 . Memory (MB): peak = 2100.859 ; gain = 5.938 ; free physical = 113 ; free virtual = 8237
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2100.859 ; gain = 0.000 ; free physical = 114 ; free virtual = 8234
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-14 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-link_design completed successfully
-link_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2363.504 ; gain = 866.688 ; free physical = 207 ; free virtual = 5362
+INFO: [Project 1-604] Checkpoint was created with Vivado v2019.1 (64-bit) build 2552052
+open_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 2100.859 ; gain = 776.688 ; free physical = 113 ; free virtual = 8233
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/WSU-CPTE/EE324/ip_repo/RESOLUTION_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/WSU-CPTE/EE324/ip_repo/CHAR_ROM_CONTROLLER_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/necryotiks/WSU-CPTE/IP_REPOS'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/necryotiks/Xilinx/Vivado/2019.1/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:08 . Memory (MB): peak = 2100.859 ; gain = 0.000 ; free physical = 189 ; free virtual = 8167
 Command: opt_design -directive Explore
 INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z007s'
@@ -61,56 +53,55 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2363.504 ; gain = 0.000 ; free physical = 202 ; free virtual = 5355
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2268.016 ; gain = 158.250 ; free physical = 333 ; free virtual = 8275
 
 Starting Cache Timing Information Task
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1692334d4
+Ending Cache Timing Information Task | Checksum: e52f2485
 
-Time (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2363.504 ; gain = 0.000 ; free physical = 198 ; free virtual = 5351
+Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.35 . Memory (MB): peak = 2268.016 ; gain = 0.000 ; free physical = 333 ; free virtual = 8276
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: c0ecd393
+Phase 1 Retarget | Checksum: 1706244c2
 
-Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:00.48 . Memory (MB): peak = 2418.281 ; gain = 0.000 ; free physical = 151 ; free virtual = 5247
-INFO: [Opt 31-389] Phase Retarget created 147 cells and removed 231 cells
+Time (s): cpu = 00:00:00.93 ; elapsed = 00:00:01 . Memory (MB): peak = 2268.016 ; gain = 0.000 ; free physical = 228 ; free virtual = 8187
+INFO: [Opt 31-389] Phase Retarget created 131 cells and removed 169 cells
 INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 4 inverter(s) to 4 load pin(s).
-Phase 2 Constant propagation | Checksum: 19ce208bd
+Phase 2 Constant propagation | Checksum: 1de83769e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.72 . Memory (MB): peak = 2418.281 ; gain = 0.000 ; free physical = 149 ; free virtual = 5245
-INFO: [Opt 31-389] Phase Constant propagation created 89 cells and removed 288 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2268.016 ; gain = 0.000 ; free physical = 227 ; free virtual = 8187
+INFO: [Opt 31-389] Phase Constant propagation created 40 cells and removed 205 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1112ebb66
+Phase 3 Sweep | Checksum: 1bddd9b1b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2418.281 ; gain = 0.000 ; free physical = 150 ; free virtual = 5246
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 291 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2268.016 ; gain = 0.000 ; free physical = 226 ; free virtual = 8186
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 334 cells
 INFO: [Opt 31-1021] In phase Sweep, 8 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 1112ebb66
+Phase 4 BUFG optimization | Checksum: 1bddd9b1b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2418.281 ; gain = 0.000 ; free physical = 150 ; free virtual = 5246
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2268.016 ; gain = 0.000 ; free physical = 226 ; free virtual = 8186
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1112ebb66
+Phase 5 Shift Register Optimization | Checksum: 1bddd9b1b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2418.281 ; gain = 0.000 ; free physical = 150 ; free virtual = 5246
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2268.016 ; gain = 0.000 ; free physical = 226 ; free virtual = 8186
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1112ebb66
+Phase 6 Post Processing Netlist | Checksum: 1bddd9b1b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2418.281 ; gain = 0.000 ; free physical = 150 ; free virtual = 5246
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2268.016 ; gain = 0.000 ; free physical = 226 ; free virtual = 8186
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -119,9 +110,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             147  |             231  |                                              1  |
-|  Constant propagation         |              89  |             288  |                                              0  |
-|  Sweep                        |               0  |             291  |                                              8  |
+|  Retarget                     |             131  |             169  |                                              1  |
+|  Constant propagation         |              40  |             205  |                                              0  |
+|  Sweep                        |               0  |             334  |                                              8  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                              0  |
@@ -131,17 +122,17 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2418.281 ; gain = 0.000 ; free physical = 150 ; free virtual = 5246
-Ending Logic Optimization Task | Checksum: 15f5ba0f3
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2268.016 ; gain = 0.000 ; free physical = 226 ; free virtual = 8186
+Ending Logic Optimization Task | Checksum: 1aceb315b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2418.281 ; gain = 0.000 ; free physical = 150 ; free virtual = 5246
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2278.012 ; gain = 9.996 ; free physical = 226 ; free virtual = 8186
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.025 | TNS=-0.600 |
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.036 | TNS=-4.084 |
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
@@ -150,41 +141,41 @@ Finished Running Vector-less Activity Propagation
 Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 2
-Ending PowerOpt Patch Enables Task | Checksum: 15f5ba0f3
+Number of BRAM Ports augmented: 0 newly gated: 1 Total Ports: 2
+Ending PowerOpt Patch Enables Task | Checksum: 1a378fb74
 
-Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2585.055 ; gain = 0.000 ; free physical = 203 ; free virtual = 5226
-Ending Power Optimization Task | Checksum: 15f5ba0f3
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2469.785 ; gain = 0.000 ; free physical = 198 ; free virtual = 8168
+Ending Power Optimization Task | Checksum: 1a378fb74
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2585.055 ; gain = 166.773 ; free physical = 208 ; free virtual = 5231
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2469.785 ; gain = 191.773 ; free physical = 205 ; free virtual = 8175
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 15f5ba0f3
+Ending Final Cleanup Task | Checksum: 1a378fb74
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2585.055 ; gain = 0.000 ; free physical = 208 ; free virtual = 5231
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2469.785 ; gain = 0.000 ; free physical = 205 ; free virtual = 8175
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2585.055 ; gain = 0.000 ; free physical = 208 ; free virtual = 5231
-Ending Netlist Obfuscation Task | Checksum: 15f5ba0f3
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2469.785 ; gain = 0.000 ; free physical = 205 ; free virtual = 8175
+Ending Netlist Obfuscation Task | Checksum: 14a137b04
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2585.055 ; gain = 0.000 ; free physical = 208 ; free virtual = 5231
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2469.785 ; gain = 0.000 ; free physical = 205 ; free virtual = 8175
 INFO: [Common 17-83] Releasing license: Implementation
-40 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+41 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2585.055 ; gain = 221.551 ; free physical = 208 ; free virtual = 5231
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2585.055 ; gain = 0.000 ; free physical = 208 ; free virtual = 5231
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2469.785 ; gain = 368.926 ; free physical = 205 ; free virtual = 8175
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2469.785 ; gain = 0.000 ; free physical = 205 ; free virtual = 8175
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2585.055 ; gain = 0.000 ; free physical = 202 ; free virtual = 5226
-INFO: [Common 17-1381] The checkpoint '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_opt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2469.785 ; gain = 0.000 ; free physical = 201 ; free virtual = 8173
+INFO: [Common 17-1381] The checkpoint '/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file CHAR_ROM_DISPLAY_wrapper_drc_opted.rpt -pb CHAR_ROM_DISPLAY_wrapper_drc_opted.pb -rpx CHAR_ROM_DISPLAY_wrapper_drc_opted.rpx
 Command: report_drc -file CHAR_ROM_DISPLAY_wrapper_drc_opted.rpt -pb CHAR_ROM_DISPLAY_wrapper_drc_opted.pb -rpx CHAR_ROM_DISPLAY_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Coretcl 2-168] The results of DRC are in file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_drc_opted.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_drc_opted.rpt.
 report_drc completed successfully
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z007s'
@@ -203,37 +194,37 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 197 ; free virtual = 5222
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: f0a37287
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 197 ; free virtual = 8172
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: f4f3fb65
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 197 ; free virtual = 5222
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 197 ; free virtual = 5222
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 197 ; free virtual = 8172
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 197 ; free virtual = 8172
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 182d04412
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: b41efbf1
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 191 ; free virtual = 5218
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 188 ; free virtual = 8169
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 194fdae89
+Phase 1.3 Build Placer Netlist Model | Checksum: 1366114a3
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 181 ; free virtual = 5208
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 170 ; free virtual = 8154
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 194fdae89
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1366114a3
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 181 ; free virtual = 5208
-Phase 1 Placer Initialization | Checksum: 194fdae89
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 170 ; free virtual = 8154
+Phase 1 Placer Initialization | Checksum: 1366114a3
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 181 ; free virtual = 5208
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 170 ; free virtual = 8154
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1e53aa885
+Phase 2.1 Floorplanning | Checksum: ef0983aa
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 164 ; free virtual = 5191
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 159 ; free virtual = 8145
 
 Phase 2.2 Global Placement Core
 
@@ -249,7 +240,7 @@ INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 159 ; free virtual = 5187
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 179 ; free virtual = 8143
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -267,60 +258,60 @@ Summary of Physical Synthesis Optimizations
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 18d0cf82d
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 6b984e3f
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 160 ; free virtual = 5187
-Phase 2.2 Global Placement Core | Checksum: 16501fa8c
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:09 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 179 ; free virtual = 8143
+Phase 2.2 Global Placement Core | Checksum: b9b96998
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:07 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 160 ; free virtual = 5187
-Phase 2 Global Placement | Checksum: 16501fa8c
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:09 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 177 ; free virtual = 8142
+Phase 2 Global Placement | Checksum: b9b96998
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:07 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 160 ; free virtual = 5187
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:09 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 179 ; free virtual = 8143
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 18551b0b8
+Phase 3.1 Commit Multi Column Macros | Checksum: cda16558
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 160 ; free virtual = 5187
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:10 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 178 ; free virtual = 8143
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 14a95dd53
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 94db66a8
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 158 ; free virtual = 5185
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:10 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 177 ; free virtual = 8142
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 14401e4a3
+Phase 3.3 Area Swap Optimization | Checksum: 11a05e0f3
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 158 ; free virtual = 5185
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:10 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 177 ; free virtual = 8142
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 14ba49522
+Phase 3.4 Pipeline Register Optimization | Checksum: 14ceb63e8
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 158 ; free virtual = 5185
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:10 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 177 ; free virtual = 8142
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 170f45002
+Phase 3.5 Fast Optimization | Checksum: 15d08f409
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:08 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 148 ; free virtual = 5175
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:11 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 178 ; free virtual = 8143
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: bbae3847
+Phase 3.6 Small Shape Detail Placement | Checksum: a8ce3cd6
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 184 ; free virtual = 5199
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 171 ; free virtual = 8137
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 110cd0eec
+Phase 3.7 Re-assign LUT pins | Checksum: 106ba54ee
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 185 ; free virtual = 5199
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:14 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 170 ; free virtual = 8137
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: fa01d3f8
+Phase 3.8 Pipeline Register Optimization | Checksum: 1302f6df3
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 185 ; free virtual = 5199
-Phase 3 Detail Placement | Checksum: fa01d3f8
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:14 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 170 ; free virtual = 8137
+Phase 3 Detail Placement | Checksum: 1302f6df3
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 185 ; free virtual = 5199
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:14 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 170 ; free virtual = 8137
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -328,269 +319,530 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 18a51c26a
+Post Placement Optimization Initialization | Checksum: 8970da51
 
 Phase 4.1.1.1 BUFG Insertion
-INFO: [Place 46-33] Processed net CHAR_ROM_DISPLAY_i/clk_wiz_0/inst/SOFT_RESET_I/reset2ip_reset, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net CHAR_ROM_DISPLAY_i/clk_wiz_0/inst/reset2ip_reset, BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 18a51c26a
+Phase 4.1.1.1 BUFG Insertion | Checksum: 8970da51
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:13 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 167 ; free virtual = 5180
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.179. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 16f550d3d
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:15 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 167 ; free virtual = 8134
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.154. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 182196858
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 180 ; free virtual = 5192
-Phase 4.1 Post Commit Optimization | Checksum: 16f550d3d
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:27 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 308 ; free virtual = 8136
+Phase 4.1 Post Commit Optimization | Checksum: 182196858
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 180 ; free virtual = 5192
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:27 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 308 ; free virtual = 8136
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 16f550d3d
+Phase 4.2 Post Placement Cleanup | Checksum: 182196858
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 180 ; free virtual = 5193
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 309 ; free virtual = 8137
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 16f550d3d
+Phase 4.3 Placer Reporting | Checksum: 182196858
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 180 ; free virtual = 5193
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 309 ; free virtual = 8137
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 180 ; free virtual = 5193
-Phase 4.4 Final Placement Cleanup | Checksum: 1a3e9ac92
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 309 ; free virtual = 8137
+Phase 4.4 Final Placement Cleanup | Checksum: 1cdace129
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 180 ; free virtual = 5193
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1a3e9ac92
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 309 ; free virtual = 8137
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1cdace129
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 180 ; free virtual = 5193
-Ending Placer Task | Checksum: 1537609ff
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 309 ; free virtual = 8137
+Ending Placer Task | Checksum: 136b2fafb
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 180 ; free virtual = 5193
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 309 ; free virtual = 8137
 INFO: [Common 17-83] Releasing license: Implementation
-71 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+72 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:21 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 186 ; free virtual = 5198
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 186 ; free virtual = 5198
+place_design: Time (s): cpu = 00:00:58 ; elapsed = 00:00:29 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 314 ; free virtual = 8143
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 314 ; free virtual = 8143
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.67 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 172 ; free virtual = 5195
-INFO: [Common 17-1381] The checkpoint '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_placed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.51 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 293 ; free virtual = 8134
+INFO: [Common 17-1381] The checkpoint '/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file CHAR_ROM_DISPLAY_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 179 ; free virtual = 5194
+report_io: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.60 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 290 ; free virtual = 8125
 INFO: [runtcl-4] Executing : report_utilization -file CHAR_ROM_DISPLAY_wrapper_utilization_placed.rpt -pb CHAR_ROM_DISPLAY_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file CHAR_ROM_DISPLAY_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 192 ; free virtual = 5207
+report_control_sets: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 295 ; free virtual = 8132
 Command: phys_opt_design -directive AggressiveExplore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z007s'
 INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 160 ; free virtual = 5176
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 284 ; free virtual = 8122
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.038 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: 8f5230d4
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.017 | TNS=-0.026 |
+Phase 1 Physical Synthesis Initialization | Checksum: 212bd2b57
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.58 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 160 ; free virtual = 5176
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.91 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 282 ; free virtual = 8120
 
 Phase 2 Slr Crossing Optimization
-Phase 2 Slr Crossing Optimization | Checksum: 8f5230d4
+Phase 2 Slr Crossing Optimization | Checksum: 212bd2b57
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.76 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 158 ; free virtual = 5173
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.038 | TNS=0.000 |
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 282 ; free virtual = 8120
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.017 | TNS=-0.026 |
 
 Phase 3 Fanout Optimization
-INFO: [Physopt 32-670] No setup violation found.  Fanout Optimization was not performed.
-Phase 3 Fanout Optimization | Checksum: 8f5230d4
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 3 Fanout Optimization | Checksum: 212bd2b57
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.78 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 158 ; free virtual = 5173
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 282 ; free virtual = 8120
 
 Phase 4 Placement Based Optimization
-INFO: [Physopt 32-670] No setup violation found.  Placement Based Optimization was not performed.
-Phase 4 Placement Based Optimization | Checksum: 8f5230d4
+INFO: [Physopt 32-660] Identified 250 candidate nets for placement-based optimization.
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH[3].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_FRONT_PORCH_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_FRONT_PORCH[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_FRONT_PORCH_reg[3]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[14].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[14]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[14].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[14]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[10]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_LINE[10].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_LINE_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[12].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[12]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[2].  Re-placed instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[2]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[12].  Re-placed instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[12]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[4]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_LINE[3].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_LINE_reg[3]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_SCREEN[4].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_SCREEN_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_FRONT_PORCH_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_FRONT_PORCH[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_FRONT_PORCH_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VA_END[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VA_END_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VA_END[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VA_END_reg[7]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_RED[3].  Re-placed instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_RED_reg[3]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[11].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[11]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[11].  Re-placed instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[11]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_RED[3].  Re-placed instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_RED_reg[3]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_GREEN[2].  Re-placed instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_GREEN_reg[2]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_SCREEN[5].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_SCREEN_reg[5]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_GREEN[2].  Re-placed instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_GREEN_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_LINE[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_LINE_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HA_END[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HA_END_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_FRONT_PORCH_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_SCREEN[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_SCREEN_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_SCREEN[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_SCREEN_reg[2]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HA_END[10].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HA_END_reg[10]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_FRONT_PORCH[10].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_FRONT_PORCH_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[7]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH[4].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_FRONT_PORCH_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[7]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_FRONT_PORCH[4].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_FRONT_PORCH_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_LINE[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_LINE_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_GREEN[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_GREEN_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HA_END[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HA_END_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_FRONT_PORCH_reg[0]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HA_END[8].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HA_END_reg[8]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_GREEN[7].  Re-placed instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_GREEN_reg[7]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_FRONT_PORCH[0].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_FRONT_PORCH_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[9].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[9]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_SYNC_WIDTH_reg[10]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[9].  Re-placed instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[9]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_SYNC_WIDTH[10].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_SYNC_WIDTH_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[12].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[12]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH[9].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_FRONT_PORCH_reg[9]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_LINE[8].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_LINE_reg[8]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_SCREEN[10].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_SCREEN_reg[10]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[12].  Re-placed instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[12]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_FRONT_PORCH[9].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_FRONT_PORCH_reg[9]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH[2].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_FRONT_PORCH_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_FRONT_PORCH[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_FRONT_PORCH_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_BLUE[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_BLUE_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_BLUE[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_BLUE_reg[3]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_RED[1].  Re-placed instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_RED_reg[1]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_BLUE[0].  Re-placed instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_BLUE_reg[0]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_BLUE[3].  Re-placed instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_BLUE_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_RED[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_RED_reg[1]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_GREEN[3].  Re-placed instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_GREEN_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[14].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[14]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH[9].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_SYNC_WIDTH_reg[9]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_LINE[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_LINE_reg[1]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[10].  Re-placed instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[10]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[14].  Re-placed instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[14]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_GREEN[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_GREEN_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_SYNC_WIDTH[9].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_SYNC_WIDTH_reg[9]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[15].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[15]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH[5].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_SYNC_WIDTH_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[15].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[15]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_SYNC_WIDTH[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_SYNC_WIDTH_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HA_END[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HA_END_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VA_END[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VA_END_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VA_END[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VA_END_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_SYNC_WIDTH_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_SYNC_WIDTH_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_LINE[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_LINE_reg[6]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HA_END[5].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HA_END_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VA_END[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VA_END_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VA_END[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VA_END_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_SYNC_WIDTH[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_SYNC_WIDTH_reg[2]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_SYNC_WIDTH[5].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_SYNC_WIDTH_reg[5]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH[3].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_SYNC_WIDTH_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_SYNC_WIDTH_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_SYNC_WIDTH[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_SYNC_WIDTH_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_SYNC_WIDTH[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_SYNC_WIDTH_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[8]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_RED[7].  Re-placed instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_RED_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HA_END[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HA_END_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_FRONT_PORCH_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_SCREEN[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_SCREEN_reg[8]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HA_END[6].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HA_END_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_RED[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_RED_reg[7]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_FRONT_PORCH[3].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_FRONT_PORCH_reg[3]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VA_END[2].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VA_END_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VA_END[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VA_END_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HA_END[9].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HA_END_reg[9]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HA_END[9].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HA_END_reg[9]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_SCREEN[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_SCREEN_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_SCREEN[9].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_SCREEN_reg[9]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_SYNC_WIDTH_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[10]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_SYNC_WIDTH[8].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_SYNC_WIDTH_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_FRONT_PORCH_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_FRONT_PORCH[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_FRONT_PORCH_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HA_END[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HA_END_reg[1]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH[8].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_FRONT_PORCH_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VA_END[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VA_END_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_SYNC_WIDTH_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HA_END[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HA_END_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VA_END[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VA_END_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_FRONT_PORCH[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_FRONT_PORCH_reg[8]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_SYNC_WIDTH[4].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_SYNC_WIDTH_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[0]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[5].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HA_END[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HA_END_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_LINE[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_LINE_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_SCREEN[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_SCREEN_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HA_END[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HA_END_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_LINE[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_LINE_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VA_END[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VA_END_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_FRONT_PORCH_reg[4]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH[8].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_FRONT_PORCH_reg[8]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VA_END[3].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VA_END_reg[3]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_FRONT_PORCH[4].  Re-placed instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_FRONT_PORCH_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_FRONT_PORCH[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_FRONT_PORCH_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VA_END[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VA_END_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VA_END[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VA_END_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_SCREEN[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_SCREEN_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_SYNC_WIDTH_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_SYNC_WIDTH[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_SYNC_WIDTH_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_FRONT_PORCH_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_FRONT_PORCH[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_FRONT_PORCH_reg[5]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HA_END[2].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HA_END_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HA_END[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HA_END_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[11].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[11]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_SYNC_WIDTH_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[11].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[11]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_SYNC_WIDTH[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_SYNC_WIDTH_reg[7]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_BLUE[2].  Re-placed instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_BLUE_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_BLUE[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_BLUE_reg[5]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_GREEN[6].  Re-placed instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_GREEN_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_SYNC_WIDTH_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_SYNC_WIDTH_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_SYNC_WIDTH_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_END_OF_SCREEN[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_END_OF_SCREEN_reg[3]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_BLUE[2].  Re-placed instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_BLUE_reg[2]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_BLUE[5].  Re-placed instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_BLUE_reg[5]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_GREEN[6].  Re-placed instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_GREEN_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_SYNC_WIDTH[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_SYNC_WIDTH_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_SYNC_WIDTH[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_SYNC_WIDTH_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_SYNC_WIDTH[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_SYNC_WIDTH_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_BLUE[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_BLUE_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_GREEN[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_GREEN_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_RED[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_RED_reg[4]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_RED[6].  Re-placed instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_RED_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HA_END[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HA_END_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_SYNC_WIDTH_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VA_END[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VA_END_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VA_END[9].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VA_END_reg[9]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HA_END[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HA_END_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VA_END[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VA_END_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VA_END[9].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VA_END_reg[9]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_BLUE[4].  Re-placed instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_BLUE_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_GREEN[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_GREEN_reg[4]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_RED[4].  Re-placed instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_RED_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_RED[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_RED_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_SYNC_WIDTH[4].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_SYNC_WIDTH_reg[4]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_BLUE[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_BLUE_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_LINE[13].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[13]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH[0].  Re-placed instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_FRONT_PORCH_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_FRONT_PORCH_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_LINE[13].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_LINE_reg[13]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_BLUE[6].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_BLUE_reg[6]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_FRONT_PORCH[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_FRONT_PORCH_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_FRONT_PORCH[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_FRONT_PORCH_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_SYNC_WIDTH_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_SYNC_WIDTH[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_SYNC_WIDTH_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_BLUE[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_BLUE_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_RED[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_RED_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_RED[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_RED_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN[15].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_SCREEN_reg[15]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HA_END[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HA_END_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_SYNC_WIDTH_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VA_END[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VA_END_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH[9].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_FRONT_PORCH_reg[9]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_SYNC_WIDTH_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HA_END[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HA_END_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VA_END[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VA_END_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/r_END_OF_SCREEN[15].  Did not re-place instance CHAR_ROM_DISPLAY_i/RAM_RANGLER_FSM_0/inst/r_END_OF_SCREEN_reg[15]
+INFO: [Physopt 32-663] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_BLUE[1].  Re-placed instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_BLUE_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_RED[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_RED_reg[2]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_RED[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_RED_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_SYNC_WIDTH[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_SYNC_WIDTH_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_FRONT_PORCH[9].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_FRONT_PORCH_reg[9]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_SYNC_WIDTH[8].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_SYNC_WIDTH_reg[8]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_SYNC_WIDTH_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_SYNC_WIDTH[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_SYNC_WIDTH_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_RED[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_RED_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_FRONT_PORCH_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_RED[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_RED_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_FRONT_PORCH[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_FRONT_PORCH_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_GREEN[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_GREEN_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_GREEN[5].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_GREEN_reg[5]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_GREEN[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_GREEN_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_SYNC_WIDTH_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_GREEN[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_GREEN_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_SYNC_WIDTH[3].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_SYNC_WIDTH_reg[3]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_GREEN[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_GREEN_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_GREEN[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_GREEN_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HORIZONTAL_SYNC_WIDTH_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_FRONT_PORCH_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HORIZONTAL_SYNC_WIDTH[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HORIZONTAL_SYNC_WIDTH_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VERTICAL_FRONT_PORCH[10].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VERTICAL_FRONT_PORCH_reg[10]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/o_BG_BLUE[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/CHAR_ROM_CONTROLLER_0/inst/CHAR_ROM_CONTROLLER_v1_0_S00_AXI_inst/o_BG_BLUE_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_HA_END[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_HA_END_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_HA_END[0].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_HA_END_reg[0]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/r_BG_BLUE[7].  Did not re-place instance CHAR_ROM_DISPLAY_i/C_ROM_LOGIC_0/inst/r_BG_BLUE_reg[7]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VA_END[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VA_END_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/VGA_controller_0/r_VA_END[1].  Did not re-place instance CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/r_VA_END_reg[1]
+INFO: [Physopt 32-662] Processed net CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH[2].  Did not re-place instance CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_VERTICAL_FRONT_PORCH_reg[2]
+INFO: [Physopt 32-661] Optimized 62 nets.  Re-placed 62 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 62 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 62 existing cells
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.154 | TNS=0.000 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 201 ; free virtual = 8038
+Phase 4 Placement Based Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.78 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 158 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 200 ; free virtual = 8037
 
 Phase 5 MultiInst Placement Optimization
 INFO: [Physopt 32-670] No setup violation found.  MultiInst Placement Optimization was not performed.
-Phase 5 MultiInst Placement Optimization | Checksum: 8f5230d4
+Phase 5 MultiInst Placement Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.80 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 158 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 200 ; free virtual = 8037
 
 Phase 6 Rewire
 INFO: [Physopt 32-670] No setup violation found.  Rewire was not performed.
-Phase 6 Rewire | Checksum: 8f5230d4
+Phase 6 Rewire | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.80 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 158 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 199 ; free virtual = 8036
 
 Phase 7 Critical Cell Optimization
 INFO: [Physopt 32-670] No setup violation found.  Critical Cell Optimization was not performed.
-Phase 7 Critical Cell Optimization | Checksum: 8f5230d4
+Phase 7 Critical Cell Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.82 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 199 ; free virtual = 8036
 
 Phase 8 Fanout Optimization
 INFO: [Physopt 32-670] No setup violation found.  Fanout Optimization was not performed.
-Phase 8 Fanout Optimization | Checksum: 8f5230d4
+Phase 8 Fanout Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.83 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 198 ; free virtual = 8035
 
 Phase 9 Placement Based Optimization
 INFO: [Physopt 32-670] No setup violation found.  Placement Based Optimization was not performed.
-Phase 9 Placement Based Optimization | Checksum: 8f5230d4
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 197 ; free virtual = 8034
+Phase 9 Placement Based Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 197 ; free virtual = 8034
 
 Phase 10 MultiInst Placement Optimization
 INFO: [Physopt 32-670] No setup violation found.  MultiInst Placement Optimization was not performed.
-Phase 10 MultiInst Placement Optimization | Checksum: 8f5230d4
+Phase 10 MultiInst Placement Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.85 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 196 ; free virtual = 8033
 
 Phase 11 Rewire
 INFO: [Physopt 32-670] No setup violation found.  Rewire was not performed.
-Phase 11 Rewire | Checksum: 8f5230d4
+Phase 11 Rewire | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.86 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 196 ; free virtual = 8033
 
 Phase 12 Critical Cell Optimization
 INFO: [Physopt 32-670] No setup violation found.  Critical Cell Optimization was not performed.
-Phase 12 Critical Cell Optimization | Checksum: 8f5230d4
+Phase 12 Critical Cell Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.87 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 195 ; free virtual = 8032
 
 Phase 13 Slr Crossing Optimization
-Phase 13 Slr Crossing Optimization | Checksum: 8f5230d4
+INFO: [Physopt 32-670] No setup violation found.  Slr Crossing Optimization was not performed.
+Phase 13 Slr Crossing Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.88 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 194 ; free virtual = 8031
 
 Phase 14 Fanout Optimization
 INFO: [Physopt 32-670] No setup violation found.  Fanout Optimization was not performed.
-Phase 14 Fanout Optimization | Checksum: 8f5230d4
+Phase 14 Fanout Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 193 ; free virtual = 8030
 
 Phase 15 Placement Based Optimization
 INFO: [Physopt 32-670] No setup violation found.  Placement Based Optimization was not performed.
-Phase 15 Placement Based Optimization | Checksum: 8f5230d4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 193 ; free virtual = 8030
+Phase 15 Placement Based Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.90 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 193 ; free virtual = 8030
 
 Phase 16 MultiInst Placement Optimization
 INFO: [Physopt 32-670] No setup violation found.  MultiInst Placement Optimization was not performed.
-Phase 16 MultiInst Placement Optimization | Checksum: 8f5230d4
+Phase 16 MultiInst Placement Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.91 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 192 ; free virtual = 8029
 
 Phase 17 Rewire
 INFO: [Physopt 32-670] No setup violation found.  Rewire was not performed.
-Phase 17 Rewire | Checksum: 8f5230d4
+Phase 17 Rewire | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.92 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 191 ; free virtual = 8028
 
 Phase 18 Critical Cell Optimization
 INFO: [Physopt 32-670] No setup violation found.  Critical Cell Optimization was not performed.
-Phase 18 Critical Cell Optimization | Checksum: 8f5230d4
+Phase 18 Critical Cell Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.93 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 190 ; free virtual = 8027
 
 Phase 19 DSP Register Optimization
 INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
-Phase 19 DSP Register Optimization | Checksum: 8f5230d4
+Phase 19 DSP Register Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.94 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 189 ; free virtual = 8026
 
 Phase 20 BRAM Register Optimization
 INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
-Phase 20 BRAM Register Optimization | Checksum: 8f5230d4
+Phase 20 BRAM Register Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.95 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 188 ; free virtual = 8025
 
 Phase 21 URAM Register Optimization
 INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
-Phase 21 URAM Register Optimization | Checksum: 8f5230d4
+Phase 21 URAM Register Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.96 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 187 ; free virtual = 8024
 
 Phase 22 Shift Register Optimization
 INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
-Phase 22 Shift Register Optimization | Checksum: 8f5230d4
+Phase 22 Shift Register Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.97 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 186 ; free virtual = 8023
 
 Phase 23 DSP Register Optimization
 INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
-Phase 23 DSP Register Optimization | Checksum: 8f5230d4
+Phase 23 DSP Register Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.98 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 185 ; free virtual = 8022
 
 Phase 24 BRAM Register Optimization
 INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
-Phase 24 BRAM Register Optimization | Checksum: 8f5230d4
+Phase 24 BRAM Register Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.99 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 184 ; free virtual = 8021
 
 Phase 25 URAM Register Optimization
 INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
-Phase 25 URAM Register Optimization | Checksum: 8f5230d4
+Phase 25 URAM Register Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 183 ; free virtual = 8020
 
 Phase 26 Shift Register Optimization
 INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
-Phase 26 Shift Register Optimization | Checksum: 8f5230d4
+Phase 26 Shift Register Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 182 ; free virtual = 8019
 
 Phase 27 Critical Pin Optimization
 INFO: [Physopt 32-670] No setup violation found.  Critical Pin Optimization was not performed.
-Phase 27 Critical Pin Optimization | Checksum: 8f5230d4
+Phase 27 Critical Pin Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 181 ; free virtual = 8018
 
 Phase 28 Very High Fanout Optimization
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 28 Very High Fanout Optimization | Checksum: 8f5230d4
+Phase 28 Very High Fanout Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 177 ; free virtual = 8014
 
 Phase 29 Placement Based Optimization
 INFO: [Physopt 32-670] No setup violation found.  Placement Based Optimization was not performed.
-Phase 29 Placement Based Optimization | Checksum: 8f5230d4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 176 ; free virtual = 8013
+Phase 29 Placement Based Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 176 ; free virtual = 8013
 
 Phase 30 MultiInst Placement Optimization
 INFO: [Physopt 32-670] No setup violation found.  MultiInst Placement Optimization was not performed.
-Phase 30 MultiInst Placement Optimization | Checksum: 8f5230d4
+Phase 30 MultiInst Placement Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 175 ; free virtual = 8012
 
 Phase 31 Slr Crossing Optimization
-Phase 31 Slr Crossing Optimization | Checksum: 8f5230d4
+INFO: [Physopt 32-670] No setup violation found.  Slr Crossing Optimization was not performed.
+Phase 31 Slr Crossing Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 174 ; free virtual = 8011
 
 Phase 32 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.038 | TNS=0.000 |
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.038 | TNS=0.000 |
-Phase 32 Critical Path Optimization | Checksum: 8f5230d4
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.154 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.154 | TNS=0.000 |
+Phase 32 Critical Path Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 173 ; free virtual = 8010
 
 Phase 33 BRAM Enable Optimization
-Phase 33 BRAM Enable Optimization | Checksum: 8f5230d4
+Phase 33 BRAM Enable Optimization | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 172 ; free virtual = 8009
 INFO: [Physopt 32-960] Skip hold-fix as initial WHS does not violate hold threshold 250 ps
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=0.038 | TNS=0.000 |
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 172 ; free virtual = 8009
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=0.154 | TNS=0.000 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -599,12 +851,12 @@ Summary of Physical Synthesis Optimizations
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization          |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|  Fanout                |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Placement Based       |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Fanout                |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Placement Based       |          0.171  |          0.026  |            0  |              0  |                    62  |           0  |           1  |  00:00:11  |
 |  MultiInst Placement   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Rewire                |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Critical Cell         |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Slr Crossing          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
+|  Slr Crossing          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  BRAM Register         |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  URAM Register         |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
@@ -613,25 +865,26 @@ Summary of Physical Synthesis Optimizations
 |  Very High Fanout      |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  BRAM Enable           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Critical Path         |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                 |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           6  |  00:00:00  |
+|  Total                 |          0.171  |          0.026  |            0  |              0  |                    62  |           0  |           6  |  00:00:11  |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 157 ; free virtual = 5173
-Ending Physical Synthesis Task | Checksum: 8f5230d4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 171 ; free virtual = 8008
+Ending Physical Synthesis Task | Checksum: 134170a19
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 163 ; free virtual = 5178
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 169 ; free virtual = 8006
 INFO: [Common 17-83] Releasing license: Implementation
-115 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+373 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 205 ; free virtual = 5221
+phys_opt_design: Time (s): cpu = 00:01:17 ; elapsed = 00:00:14 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 164 ; free virtual = 8001
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 133 ; free virtual = 7970
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.45 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 215 ; free virtual = 5219
-INFO: [Common 17-1381] The checkpoint '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_physopt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.58 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 103 ; free virtual = 7922
+INFO: [Common 17-1381] The checkpoint '/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_physopt.dcp' has been generated.
 Command: route_design -directive AggressiveExplore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z007s'
@@ -644,41 +897,41 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Starting Routing Task
 INFO: [Route 35-270] Using Router directive 'AggressiveExplore'.
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: a5b1e0d4 ConstDB: 0 ShapeSum: 5cad1b6 RouteDB: 0
+Checksum: PlaceDB: 86ccb88d ConstDB: 0 ShapeSum: cd9e7438 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: e06a82fe
+Phase 1 Build RT Design | Checksum: 179ce731e
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 234 ; free virtual = 5114
-Post Restoration Checksum: NetGraph: 25de38f2 NumContArr: ba8c4a0c Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 297 ; free virtual = 8063
+Post Restoration Checksum: NetGraph: bf283573 NumContArr: baa63dab Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: e06a82fe
+Phase 2.1 Create Timer | Checksum: 179ce731e
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 232 ; free virtual = 5113
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 296 ; free virtual = 8063
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: e06a82fe
+Phase 2.2 Fix Topology Constraints | Checksum: 179ce731e
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 201 ; free virtual = 5081
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 261 ; free virtual = 8032
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: e06a82fe
+Phase 2.3 Pre Route Cleanup | Checksum: 179ce731e
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 201 ; free virtual = 5081
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 261 ; free virtual = 8032
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 17dda130b
+Phase 2.4 Update Timing | Checksum: 28d24acce
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 193 ; free virtual = 5076
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.015  | TNS=0.000  | WHS=-0.145 | THS=-45.281|
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 238 ; free virtual = 8011
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.093  | TNS=0.000  | WHS=-0.190 | THS=-55.762|
 
-Phase 2 Router Initialization | Checksum: 1505fbe6b
+Phase 2 Router Initialization | Checksum: 1f47c0fbd
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 180 ; free virtual = 5066
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 232 ; free virtual = 8006
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -686,78 +939,78 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 5650
+  Number of Failed Nets               = 7311
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 5650
+  Number of Unrouted Nets             = 7311
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 17efd1dea
+Phase 3 Initial Routing | Checksum: 22f37c1de
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 173 ; free virtual = 5061
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 235 ; free virtual = 8009
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 601
- Number of Nodes with overlaps = 41
- Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 771
+ Number of Nodes with overlaps = 57
+ Number of Nodes with overlaps = 6
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.015  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.027  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 16e855054
+Phase 4.1 Global Iteration 0 | Checksum: 175a34388
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 144 ; free virtual = 5056
-Phase 4 Rip-up And Reroute | Checksum: 16e855054
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 233 ; free virtual = 8009
+Phase 4 Rip-up And Reroute | Checksum: 175a34388
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 143 ; free virtual = 5057
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 233 ; free virtual = 8009
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 155979a0b
+Phase 5.1.1 Update Timing | Checksum: 155cba98c
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 130 ; free virtual = 5061
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.015  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 233 ; free virtual = 8009
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.027  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 155979a0b
+Phase 5.1 Delay CleanUp | Checksum: 155cba98c
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 145 ; free virtual = 5059
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 233 ; free virtual = 8009
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 155979a0b
+Phase 5.2 Clock Skew Optimization | Checksum: 155cba98c
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 145 ; free virtual = 5059
-Phase 5 Delay and Skew Optimization | Checksum: 155979a0b
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 233 ; free virtual = 8009
+Phase 5 Delay and Skew Optimization | Checksum: 155cba98c
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 132 ; free virtual = 5060
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 233 ; free virtual = 8009
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1ed2ed72f
+Phase 6.1.1 Update Timing | Checksum: cecb7ac1
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 134 ; free virtual = 5055
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.015  | TNS=0.000  | WHS=0.032  | THS=0.000  |
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 238 ; free virtual = 8014
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.027  | TNS=0.000  | WHS=0.018  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 223fd15e6
+Phase 6.1 Hold Fix Iter | Checksum: 932f2ca5
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 131 ; free virtual = 5053
-Phase 6 Post Hold Fix | Checksum: 223fd15e6
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 238 ; free virtual = 8014
+Phase 6 Post Hold Fix | Checksum: 932f2ca5
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 131 ; free virtual = 5052
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 238 ; free virtual = 8014
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 2.58516 %
-  Global Horizontal Routing Utilization  = 3.18658 %
+  Global Vertical Routing Utilization    = 3.18229 %
+  Global Horizontal Routing Utilization  = 4.04182 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -767,57 +1020,57 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 224d616c4
+Phase 7 Route finalize | Checksum: ee0e5fed
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 130 ; free virtual = 5051
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 238 ; free virtual = 8014
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 224d616c4
+Phase 8 Verifying routed nets | Checksum: ee0e5fed
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 129 ; free virtual = 5051
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 236 ; free virtual = 8013
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 236cd7440
+Phase 9 Depositing Routes | Checksum: 1661a8967
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 196 ; free virtual = 5018
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:18 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 237 ; free virtual = 8014
 
 Phase 10 Post Router Timing
-INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.016  | TNS=0.000  | WHS=0.034  | THS=0.000  |
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.028  | TNS=0.000  | WHS=0.020  | THS=0.000  |
 
 INFO: [Route 35-61] The design met the timing requirement.
-Phase 10 Post Router Timing | Checksum: 1c886fe43
+Phase 10 Post Router Timing | Checksum: 13b99b93d
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 176 ; free virtual = 5016
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 238 ; free virtual = 8015
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 238 ; free virtual = 5078
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 302 ; free virtual = 8079
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-131 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+389 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 228 ; free virtual = 5065
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 228 ; free virtual = 5064
+route_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:22 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 294 ; free virtual = 8076
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 294 ; free virtual = 8076
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.49 . Memory (MB): peak = 2665.094 ; gain = 0.000 ; free physical = 201 ; free virtual = 5050
-INFO: [Common 17-1381] The checkpoint '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_routed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.51 . Memory (MB): peak = 2549.824 ; gain = 0.000 ; free physical = 276 ; free virtual = 8073
+INFO: [Common 17-1381] The checkpoint '/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file CHAR_ROM_DISPLAY_wrapper_drc_routed.rpt -pb CHAR_ROM_DISPLAY_wrapper_drc_routed.pb -rpx CHAR_ROM_DISPLAY_wrapper_drc_routed.rpx
 Command: report_drc -file CHAR_ROM_DISPLAY_wrapper_drc_routed.rpt -pb CHAR_ROM_DISPLAY_wrapper_drc_routed.pb -rpx CHAR_ROM_DISPLAY_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Coretcl 2-168] The results of DRC are in file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_drc_routed.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_drc_routed.rpt.
 report_drc completed successfully
 INFO: [runtcl-4] Executing : report_methodology -file CHAR_ROM_DISPLAY_wrapper_methodology_drc_routed.rpt -pb CHAR_ROM_DISPLAY_wrapper_methodology_drc_routed.pb -rpx CHAR_ROM_DISPLAY_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file CHAR_ROM_DISPLAY_wrapper_methodology_drc_routed.rpt -pb CHAR_ROM_DISPLAY_wrapper_methodology_drc_routed.pb -rpx CHAR_ROM_DISPLAY_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 8 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_methodology_drc_routed.rpt.
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
 INFO: [runtcl-4] Executing : report_power -file CHAR_ROM_DISPLAY_wrapper_power_routed.rpt -pb CHAR_ROM_DISPLAY_wrapper_power_summary_routed.pb -rpx CHAR_ROM_DISPLAY_wrapper_power_routed.rpx
 Command: report_power -file CHAR_ROM_DISPLAY_wrapper_power_routed.rpt -pb CHAR_ROM_DISPLAY_wrapper_power_summary_routed.pb -rpx CHAR_ROM_DISPLAY_wrapper_power_routed.rpx
@@ -825,8 +1078,9 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-143 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+401 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
+report_power: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2624.234 ; gain = 0.000 ; free physical = 323 ; free virtual = 8026
 INFO: [runtcl-4] Executing : report_route_status -file CHAR_ROM_DISPLAY_wrapper_route_status.rpt -pb CHAR_ROM_DISPLAY_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file CHAR_ROM_DISPLAY_wrapper_timing_summary_routed.rpt -pb CHAR_ROM_DISPLAY_wrapper_timing_summary_routed.pb -rpx CHAR_ROM_DISPLAY_wrapper_timing_summary_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
@@ -845,20 +1099,20 @@ INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplor
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-159 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+417 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2740.531 ; gain = 0.000 ; free physical = 212 ; free virtual = 5051
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2624.234 ; gain = 0.000 ; free physical = 292 ; free virtual = 8047
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.66 . Memory (MB): peak = 2740.531 ; gain = 0.000 ; free physical = 172 ; free virtual = 4996
-INFO: [Common 17-1381] The checkpoint '/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_postroute_physopt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.43 . Memory (MB): peak = 2624.234 ; gain = 0.000 ; free physical = 269 ; free virtual = 8038
+INFO: [Common 17-1381] The checkpoint '/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.runs/impl_2/CHAR_ROM_DISPLAY_wrapper_postroute_physopt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -warn_on_violation -file CHAR_ROM_DISPLAY_wrapper_timing_summary_postroute_physopted.rpt -pb CHAR_ROM_DISPLAY_wrapper_timing_summary_postroute_physopted.pb -rpx CHAR_ROM_DISPLAY_wrapper_timing_summary_postroute_physopted.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
 INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file CHAR_ROM_DISPLAY_wrapper_bus_skew_postroute_physopted.rpt -pb CHAR_ROM_DISPLAY_wrapper_bus_skew_postroute_physopted.pb -rpx CHAR_ROM_DISPLAY_wrapper_bus_skew_postroute_physopted.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 21 21:28:37 2019...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 19:37:33 2019...

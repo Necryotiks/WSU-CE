@@ -23,23 +23,23 @@
 module VGA_controller(
     input wire i_CLK,
     input wire i_RESETN,
-    input wire [15:0] i_END_OF_LINE,
-    input wire [15:0] i_END_OF_SCREEN,
-    input wire [15:0] i_HA_END,
-    input wire [15:0] i_VA_END,
-    input wire [15:0] i_HORIZONTAL_FRONT_PORCH,
+    input wire [10:0] i_END_OF_LINE,
+    input wire [10:0] i_END_OF_SCREEN,
+    input wire [10:0] i_HA_END,
+    input wire [10:0] i_VA_END,
+    input wire [10:0] i_HORIZONTAL_FRONT_PORCH,
 
-    input wire [15:0] i_HORIZONTAL_SYNC_WIDTH,
-    input wire [15:0] i_VERTICAL_FRONT_PORCH,
+    input wire [10:0] i_HORIZONTAL_SYNC_WIDTH,
+    input wire [10:0] i_VERTICAL_FRONT_PORCH,
 
-    input wire [15:0] i_VERTICAL_SYNC_WIDTH,
+    input wire [10:0] i_VERTICAL_SYNC_WIDTH,
     output reg o_HSYNC,
     output reg o_VSYNC,
     output reg o_VDE,
-    output wire [15:0] o_X_COORD, //normalized coordinates
-    output wire [15:0] o_Y_COORD,
-    output reg [15:0] o_HCNT, //raw counter data
-    output reg [15:0] o_VCNT
+    output wire [10:0] o_X_COORD, //normalized coordinates
+    output wire [10:0] o_Y_COORD,
+    output reg [10:0] o_HCNT, //raw counter data
+    output reg [10:0] o_VCNT
     );
     
     
@@ -60,8 +60,8 @@ module VGA_controller(
 
     reg [15:0] r_X_COORD = 16'd0;
     reg [15:0] r_Y_COORD = 16'd0;
-    reg [15:0] r_HCNT;
-    reg [15:0] r_VCNT;
+//    reg [15:0] r_HCNT;
+//    reg [15:0] r_VCNT;
     reg r_VDE = 1'd1;
     
     //assign w_CLK = i_CLK;
@@ -77,69 +77,105 @@ module VGA_controller(
     
 
     
-    always@(posedge i_CLK)
-    begin
-        if(r_HCNT < v_HA_END)
-            begin
-            r_X_COORD <= r_HCNT;
-            end
-        else
-            r_X_COORD <= 16'd0;
-    end
+//    always@(posedge i_CLK)
+//    begin
+//        if(r_HCNT < v_HA_END)
+//            begin
+//            r_X_COORD <= r_HCNT;
+//            end
+//        else
+//            r_X_COORD <= 16'd0;
+//    end
     
-    always@(posedge i_CLK)
-    begin
-        if(o_VCNT >= v_VA_END)
-            r_Y_COORD <= v_VA_END - 1'b1;
-        else
-            r_Y_COORD <= o_VCNT;
+//    always@(posedge i_CLK)
+//    begin
+//        if(o_VCNT >= v_VA_END)
+//            r_Y_COORD <= v_VA_END - 1'b1;
+//        else
+//            r_Y_COORD <= o_VCNT;
+//    end
+     reg [10:0] r_END_OF_LINE;
+     reg [10:0] r_END_OF_SCREEN;
+     reg [10:0] r_HA_END;
+     reg [10:0] r_VA_END;
+     reg [10:0] r_HORIZONTAL_FRONT_PORCH;
+     reg [10:0] r_HORIZONTAL_SYNC_WIDTH;
+     reg [10:0] r_VERTICAL_FRONT_PORCH;
+     reg [10:0] r_VERTICAL_SYNC_WIDTH;
+    always@(posedge i_CLK) begin
+        r_END_OF_LINE <= i_END_OF_LINE;
+        r_END_OF_SCREEN <= i_END_OF_SCREEN;
+        r_HA_END <= i_HA_END;
+        r_VA_END <= i_VA_END;
+        r_HORIZONTAL_FRONT_PORCH <= i_HORIZONTAL_FRONT_PORCH;
+        r_HORIZONTAL_SYNC_WIDTH <= i_HORIZONTAL_SYNC_WIDTH;
+        r_VERTICAL_FRONT_PORCH <= i_VERTICAL_FRONT_PORCH;
+        r_VERTICAL_SYNC_WIDTH <= i_VERTICAL_SYNC_WIDTH;
     end
     
     always@(posedge i_CLK) //PIXEL COUNT
     begin
-        if(!i_RESETN || o_HCNT == v_END_OF_LINE - 1) begin
+        if(!i_RESETN)begin
             o_HCNT <= 16'd0;
             end
         else
+            if(o_HCNT == r_END_OF_LINE - 1) 
             begin
-            o_HCNT <= o_HCNT + 1'b1;
+                o_HCNT <= 0;
+            end
+            else
+            begin
+                o_HCNT <= o_HCNT + 1'b1;
             end
     end
     
     always@(posedge i_CLK) //LINE COUNT
         begin
-            if(!i_RESETN || o_VCNT == v_END_OF_SCREEN - 1) begin
+            if(!i_RESETN) begin
                 o_VCNT <= 16'd0;
                 end
-            else if (o_HCNT == i_END_OF_LINE - 1)
-                begin
-                o_VCNT <= o_VCNT + 1'b1;
-                end
-           else
-                begin
-                o_VCNT <= o_VCNT;
-                end
+            else 
+            begin
+                if ( o_VCNT == r_END_OF_SCREEN - 1)
+                    begin
+                        o_VCNT <= 0;
+                    end
+                else if(o_HCNT == r_END_OF_LINE - 1)
+                    begin
+                        o_VCNT <= o_VCNT + 1;
+                    end
+                else
+                    o_VCNT <= o_VCNT;
+            end
         end
-        
         always@(posedge i_CLK)
         begin
-            if((!i_RESETN) || (o_HCNT > v_HA_END + v_HORIZONTAL_FRONT_PORCH) && (r_HCNT <= v_HA_END + v_HORIZONTAL_FRONT_PORCH + v_HORIZONTAL_SYNC_WIDTH))
+            if(!i_RESETN)
                 o_HSYNC <= 1'b0;
             else
-                o_HSYNC <= 1'b1;
+            begin
+                if((o_HCNT > r_HA_END + r_HORIZONTAL_FRONT_PORCH) && (o_HCNT <= r_HA_END + r_HORIZONTAL_FRONT_PORCH + r_HORIZONTAL_SYNC_WIDTH))
+                    o_HSYNC <= 1'b0;
+                else
+                    o_HSYNC <= 1'b1;
+        end
         end
         
         always@(posedge i_CLK)
         begin
-            if((!i_RESETN) || (o_VCNT > v_VA_END + v_VERTICAL_FRONT_PORCH ) && (o_VCNT <= v_VA_END + v_VERTICAL_FRONT_PORCH + v_VERTICAL_SYNC_WIDTH))
+            if(!i_RESETN)
                 o_VSYNC <= 1'b0;
-            else
-                o_VSYNC <= 1'b1;
+            else 
+            begin
+                if((o_VCNT > r_VA_END + r_VERTICAL_FRONT_PORCH ) && (o_VCNT <= r_VA_END + r_VERTICAL_FRONT_PORCH + r_VERTICAL_SYNC_WIDTH))
+                    o_VSYNC <= 1'b0;
+                else
+                    o_VSYNC <= 1'b1;
         end
-        
+        end
         always@(posedge i_CLK)
         begin
-            if((o_HCNT <= v_HA_END) && (o_VCNT <= v_VA_END))
+            if((o_HCNT <= r_HA_END) && (o_VCNT <= r_VA_END))
                 o_VDE <= 1'b1;
             else
                 o_VDE <= 1'b0;

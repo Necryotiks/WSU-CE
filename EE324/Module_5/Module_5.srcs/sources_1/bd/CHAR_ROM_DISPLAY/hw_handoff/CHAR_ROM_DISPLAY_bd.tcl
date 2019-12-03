@@ -207,6 +207,9 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: RESOLUTION_CONTROLLER_0, and set properties
+  set RESOLUTION_CONTROLLER_0 [ create_bd_cell -type ip -vlnv user.org:user:RESOLUTION_CONTROLLER:1.0 RESOLUTION_CONTROLLER_0 ]
+
   # Create instance: VGA_controller_0, and set properties
   set block_name VGA_controller
   set block_cell_name VGA_controller_0
@@ -240,15 +243,19 @@ proc create_root_design { parentCell } {
    CONFIG.CLKOUT1_JITTER {337.616} \
    CONFIG.CLKOUT1_PHASE_ERROR {322.999} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {74.25} \
+   CONFIG.CLKOUT1_REQUESTED_PHASE {25} \
    CONFIG.CLKOUT2_JITTER {258.703} \
    CONFIG.CLKOUT2_PHASE_ERROR {322.999} \
    CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {371.25} \
+   CONFIG.CLKOUT2_REQUESTED_PHASE {25} \
    CONFIG.CLKOUT2_USED {true} \
    CONFIG.MMCM_CLKFBOUT_MULT_F {37.125} \
    CONFIG.MMCM_CLKIN1_PERIOD {10.000} \
    CONFIG.MMCM_CLKIN2_PERIOD {10.000} \
    CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.000} \
+   CONFIG.MMCM_CLKOUT0_PHASE {27.000} \
    CONFIG.MMCM_CLKOUT1_DIVIDE {2} \
+   CONFIG.MMCM_CLKOUT1_PHASE {22.500} \
    CONFIG.MMCM_DIVCLK_DIVIDE {5} \
    CONFIG.NUM_OUT_CLKS {2} \
    CONFIG.PRIM_IN_FREQ {100} \
@@ -697,6 +704,7 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins CHAR_ROM_CONTROLLER_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins clk_wiz_0/s_axi_lite] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins RESOLUTION_CONTROLLER_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
 
   # Create port connections
   connect_bd_net -net ASCII_addr_gen_0_o_BRAM_ADDR [get_bd_pins ASCII_addr_gen_0/o_BRAM_ADDR] [get_bd_pins char_rom_0/ADDR]
@@ -715,8 +723,14 @@ proc create_root_design { parentCell } {
   connect_bd_net -net C_ROM_LOGIC_0_o_GREEN [get_bd_pins C_ROM_LOGIC_0/o_GREEN] [get_bd_pins hdmi_tx_0/green]
   connect_bd_net -net C_ROM_LOGIC_0_o_RED [get_bd_pins C_ROM_LOGIC_0/o_RED] [get_bd_pins hdmi_tx_0/red]
   connect_bd_net -net RAM_RANGLER_FSM_0_o_CHAR_LINE_CNT [get_bd_pins ASCII_addr_gen_0/i_LINE_CNT] [get_bd_pins RAM_RANGLER_FSM_0/o_CHAR_LINE_CNT]
-  connect_bd_net -net RESOLUTION_CONTROLLER_0_o_END_OF_LINE [get_bd_pins RAM_RANGLER_FSM_0/i_END_OF_LINE] [get_bd_pins VGA_controller_0/i_END_OF_LINE]
-  connect_bd_net -net RESOLUTION_CONTROLLER_0_o_END_OF_SCREEN [get_bd_pins RAM_RANGLER_FSM_0/i_END_OF_SCREEN] [get_bd_pins VGA_controller_0/i_END_OF_SCREEN]
+  connect_bd_net -net RESOLUTION_CONTROLLER_0_o_END_OF_LINE [get_bd_pins RAM_RANGLER_FSM_0/i_END_OF_LINE] [get_bd_pins RESOLUTION_CONTROLLER_0/o_END_OF_LINE] [get_bd_pins VGA_controller_0/i_END_OF_LINE]
+  connect_bd_net -net RESOLUTION_CONTROLLER_0_o_END_OF_SCREEN [get_bd_pins RAM_RANGLER_FSM_0/i_END_OF_SCREEN] [get_bd_pins RESOLUTION_CONTROLLER_0/o_END_OF_SCREEN] [get_bd_pins VGA_controller_0/i_END_OF_SCREEN]
+  connect_bd_net -net RESOLUTION_CONTROLLER_0_o_HA_END [get_bd_pins RESOLUTION_CONTROLLER_0/o_HA_END] [get_bd_pins VGA_controller_0/i_HA_END]
+  connect_bd_net -net RESOLUTION_CONTROLLER_0_o_HORIZONTAL_FRONT_PORCH [get_bd_pins RESOLUTION_CONTROLLER_0/o_HORIZONTAL_FRONT_PORCH] [get_bd_pins VGA_controller_0/i_HORIZONTAL_FRONT_PORCH]
+  connect_bd_net -net RESOLUTION_CONTROLLER_0_o_HORIZONTAL_SYNC_WIDTH [get_bd_pins RESOLUTION_CONTROLLER_0/o_HORIZONTAL_SYNC_WIDTH] [get_bd_pins VGA_controller_0/i_HORIZONTAL_SYNC_WIDTH]
+  connect_bd_net -net RESOLUTION_CONTROLLER_0_o_VA_END [get_bd_pins RESOLUTION_CONTROLLER_0/o_VA_END] [get_bd_pins VGA_controller_0/i_VA_END]
+  connect_bd_net -net RESOLUTION_CONTROLLER_0_o_VERTICAL_FRONT_PORCH [get_bd_pins RESOLUTION_CONTROLLER_0/o_VERTICAL_FRONT_PORCH] [get_bd_pins VGA_controller_0/i_VERTICAL_FRONT_PORCH]
+  connect_bd_net -net RESOLUTION_CONTROLLER_0_o_VERTICAL_SYNC_WIDTH [get_bd_pins RESOLUTION_CONTROLLER_0/o_VERTICAL_SYNC_WIDTH] [get_bd_pins VGA_controller_0/i_VERTICAL_SYNC_WIDTH]
   connect_bd_net -net VGA_controller_0_o_HCNT [get_bd_pins RAM_RANGLER_FSM_0/i_HCNT] [get_bd_pins VGA_controller_0/o_HCNT]
   connect_bd_net -net VGA_controller_0_o_HSYNC [get_bd_pins VGA_controller_0/o_HSYNC] [get_bd_pins hdmi_tx_0/hsync]
   connect_bd_net -net VGA_controller_0_o_VCNT [get_bd_pins RAM_RANGLER_FSM_0/i_VCNT] [get_bd_pins VGA_controller_0/o_VCNT]
@@ -726,9 +740,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins ASCII_addr_gen_0/i_CLK] [get_bd_pins C_ROM_LOGIC_0/i_CLK] [get_bd_pins RAM_RANGLER_FSM_0/i_CLK] [get_bd_pins VGA_controller_0/i_CLK] [get_bd_pins char_rom_0/CLK] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins hdmi_tx_0/pix_clk]
   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins hdmi_tx_0/pix_clkx5]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins ASCII_addr_gen_0/i_RESETN] [get_bd_pins RAM_RANGLER_FSM_0/i_RESETN] [get_bd_pins VGA_controller_0/i_RESETN] [get_bd_pins clk_wiz_0/locked] [get_bd_pins hdmi_tx_0/pix_clk_locked]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins CHAR_ROM_CONTROLLER_0/s00_axi_aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins clk_wiz_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins ps7_0_axi_periph/S01_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins CHAR_ROM_CONTROLLER_0/s00_axi_aclk] [get_bd_pins RESOLUTION_CONTROLLER_0/s00_axi_aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins clk_wiz_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins ps7_0_axi_periph/S01_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins CHAR_ROM_CONTROLLER_0/s00_axi_aresetn] [get_bd_pins clk_wiz_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins ps7_0_axi_periph/S01_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins CHAR_ROM_CONTROLLER_0/s00_axi_aresetn] [get_bd_pins RESOLUTION_CONTROLLER_0/s00_axi_aresetn] [get_bd_pins clk_wiz_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins ps7_0_axi_periph/S01_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins char_rom_0/DI] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins char_rom_0/EN] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_2_dout [get_bd_pins char_rom_0/REGCE] [get_bd_pins xlconstant_2/dout]
@@ -737,6 +751,7 @@ proc create_root_design { parentCell } {
 
   # Create address segments
   create_bd_addr_seg -range 0x00001000 -offset 0x4BB00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs CHAR_ROM_CONTROLLER_0/S00_AXI/S00_AXI_reg] SEG_CHAR_ROM_CONTROLLER_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs RESOLUTION_CONTROLLER_0/S00_AXI/S00_AXI_reg] SEG_RESOLUTION_CONTROLLER_0_S00_AXI_reg
   create_bd_addr_seg -range 0x00001000 -offset 0x4CC00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clk_wiz_0/s_axi_lite/Reg] SEG_clk_wiz_0_Reg
 
 

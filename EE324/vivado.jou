@@ -2,212 +2,124 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Oct 31 20:54:20 2019
-# Process ID: 6585
-# Current directory: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324
+# Start of session at: Fri Nov 29 15:29:04 2019
+# Process ID: 466274
+# Current directory: /home/necryotiks/WSU-CPTE/EE324
 # Command line: vivado
-# Log file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/vivado.log
-# Journal file: /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/vivado.jou
+# Log file: /home/necryotiks/WSU-CPTE/EE324/vivado.log
+# Journal file: /home/necryotiks/WSU-CPTE/EE324/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.xpr
+open_project /home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.xpr
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
 update_compile_order -fileset sources_1
-open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
-delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_cells RGB_PWM_0]
-regenerate_bd_layout
-save_bd_design
-create_bd_design "design_2"
-update_compile_order -fileset sources_1
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
-endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
-open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_1/design_1.bd}
-open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_2/design_2.bd}
-create_peripheral user.org user RGB_PWM 1.0 -dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/ip_repo/RGB_PWM_1.0
-add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core user.org:user:RGB_PWM:1.0]
-set_property VALUE 16 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core user.org:user:RGB_PWM:1.0]]]
-generate_peripheral -driver -bfm_example_design -debug_hw_example_design -force [ipx::find_open_core user.org:user:RGB_PWM:1.0]
-write_peripheral [ipx::find_open_core user.org:user:RGB_PWM:1.0]
-set_property  ip_repo_paths  {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/ip_repo/RGB_PWM_1.0/RGB_PWM_1.0 /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/ip_repo/RGB_PWM_1.0 /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/ip_repo/PWM_CONTROLLER_1.0 /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Documents/Repos/WSU-CPTE/EE324/ip_repo} [current_project]
-update_ip_catalog -rebuild
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:RGB_PWM:1.0 RGB_PWM_0
-endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/RGB_PWM_0/S00_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins RGB_PWM_0/S00_AXI]
-ipx::edit_ip_in_project -upgrade true -name RGB_PWM_v1_0_project -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.tmp/RGB_PWM_v1_0_project /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/ip_repo/RGB_PWM_1.0/component.xml
-update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 14
-wait_on_run synth_1
-ipx::merge_project_changes files [ipx::current_core]
-ipx::merge_project_changes ports [ipx::current_core]
-current_project m5
-set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_RGB_PWM_0_S00_AXI_reg}]
-set_property offset 0x4BB04000 [get_bd_addr_segs {processing_system7_0/Data/SEG_RGB_PWM_0_S00_AXI_reg}]
-save_bd_design
-set_property core_revision 2 [ipx::current_core]
-ipx::update_source_project_archive -component [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::save_core [ipx::current_core]
-current_project RGB_PWM_v1_0_project
-ipx::move_temp_component_back -component [ipx::current_core]
-close_project -delete
-update_ip_catalog -rebuild -repo_path /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/ip_repo/RGB_PWM_1.0
-report_ip_status -name ip_status 
-upgrade_ip -vlnv user.org:user:RGB_PWM:1.0 [get_ips  design_2_RGB_PWM_0_0] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips design_2_RGB_PWM_0_0] -no_script -sync -force -quiet
-set_property synth_checkpoint_mode None [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_2/design_2.bd]
-generate_target all [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_2/design_2.bd]
-export_ip_user_files -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_2/design_2.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_2/design_2.bd] -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
-current_bd_design [get_bd_designs design_1]
-current_bd_design [get_bd_designs design_2]
-current_bd_design design_1
-set tmpCopyObjs [concat  [get_bd_cells {PWM_CLK_EN_0}]]
-current_bd_design design_2
-copy_bd_objs -from_design design_1 / $tmpCopyObjs
-current_bd_design design_1
-set tmpCopyObjs [concat  [get_bd_cells {PWM_CLK_EN_0}]]
-current_bd_design design_2
-copy_bd_objs -from_design design_1 / $tmpCopyObjs
-current_bd_design design_1
-set tmpCopyObjs [concat  [get_bd_cells {PWM_CLK_EN_0}]]
-current_bd_design design_2
-copy_bd_objs -from_design design_1 / $tmpCopyObjs
-undo
-undo
-current_bd_design [get_bd_designs design_2]
-undo
-current_bd_design [get_bd_designs design_2]
-undo
-current_bd_design [get_bd_designs design_2]
-undo
-current_bd_design [get_bd_designs design_2]
-delete_bd_objs [get_bd_cells PWM_CLK_EN_1]
-set_property location {2 541 -348} [get_bd_cells PWM_CLK_EN_0]
-connect_bd_net [get_bd_pins PWM_CLK_EN_0/i_PWM_FREQ] [get_bd_pins RGB_PWM_0/o_PFREQ_VAL_R]
-copy_bd_objs /  [get_bd_cells {PWM_CLK_EN_0}]
-connect_bd_net [get_bd_pins PWM_CLK_EN_1/i_PWM_FREQ] [get_bd_pins RGB_PWM_0/o_PFREQ_VAL_G]
-copy_bd_objs /  [get_bd_cells {PWM_CLK_EN_0}]
-connect_bd_net [get_bd_pins PWM_CLK_EN_2/i_PWM_FREQ] [get_bd_pins RGB_PWM_0/o_PFREQ_VAL_B]
-current_bd_design [get_bd_designs design_1]
-current_bd_design [get_bd_designs design_2]
-current_bd_design design_1
-set tmpCopyObjs [concat  [get_bd_cells {DUTY_CYCLE_0}]]
-current_bd_design design_2
-copy_bd_objs -from_design design_1 / $tmpCopyObjs
-connect_bd_net [get_bd_pins DUTY_CYCLE_0/i_DC_VAL] [get_bd_pins RGB_PWM_0/o_DC_VAL_R]
-connect_bd_net [get_bd_pins DUTY_CYCLE_0/i_PULSE_WINDOW] [get_bd_pins RGB_PWM_0/o_PSW_VAL_R]
-copy_bd_objs /  [get_bd_cells {DUTY_CYCLE_0}]
-connect_bd_net [get_bd_pins DUTY_CYCLE_1/i_DC_VAL] [get_bd_pins RGB_PWM_0/o_DC_VAL_G]
-connect_bd_net [get_bd_pins DUTY_CYCLE_1/i_PULSE_WINDOW] [get_bd_pins RGB_PWM_0/o_PSW_VAL_G]
-copy_bd_objs /  [get_bd_cells {DUTY_CYCLE_0}]
-connect_bd_net [get_bd_pins DUTY_CYCLE_2/i_DC_VAL] [get_bd_pins RGB_PWM_0/o_DC_VAL_B]
-connect_bd_net [get_bd_pins DUTY_CYCLE_2/i_PULSE_WINDOW] [get_bd_pins RGB_PWM_0/o_PSW_VAL_B]
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins PWM_CLK_EN_0/i_CLK]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins PWM_CLK_EN_1/i_CLK]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins PWM_CLK_EN_2/i_CLK]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins DUTY_CYCLE_0/i_CLK]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins DUTY_CYCLE_1/i_CLK]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins DUTY_CYCLE_2/i_CLK]
-endgroup
-connect_bd_net [get_bd_pins PWM_CLK_EN_0/o_CLK_EN] [get_bd_pins DUTY_CYCLE_0/i_CEN]
-connect_bd_net [get_bd_pins PWM_CLK_EN_1/o_CLK_EN] [get_bd_pins DUTY_CYCLE_1/i_CEN]
-connect_bd_net [get_bd_pins PWM_CLK_EN_2/o_CLK_EN] [get_bd_pins DUTY_CYCLE_2/i_CEN]
-regenerate_bd_layout
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
-endgroup
-set_property -dict [list CONFIG.DIN_WIDTH {3} CONFIG.DIN_TO {0} CONFIG.DIN_FROM {0}] [get_bd_cells xlslice_0]
-copy_bd_objs /  [get_bd_cells {xlslice_0}]
-copy_bd_objs /  [get_bd_cells {xlslice_0}]
-set_property location {4 1333 -74} [get_bd_cells xlslice_0]
-connect_bd_net [get_bd_pins RGB_PWM_0/o_EN] [get_bd_pins xlslice_0/Din]
-set_property location {4 1347 -145} [get_bd_cells xlslice_1]
-set_property -dict [list CONFIG.DIN_TO {1} CONFIG.DIN_FROM {1} CONFIG.DIN_FROM {1} CONFIG.DOUT_WIDTH {1}] [get_bd_cells xlslice_1]
-set_property location {4 1381 -219} [get_bd_cells xlslice_2]
-set_property -dict [list CONFIG.DIN_TO {2} CONFIG.DIN_FROM {2} CONFIG.DIN_FROM {2} CONFIG.DOUT_WIDTH {1}] [get_bd_cells xlslice_2]
-connect_bd_net [get_bd_pins xlslice_1/Din] [get_bd_pins RGB_PWM_0/o_EN]
-connect_bd_net [get_bd_pins xlslice_2/Din] [get_bd_pins RGB_PWM_0/o_EN]
-connect_bd_net [get_bd_pins xlslice_0/Dout] [get_bd_pins DUTY_CYCLE_0/i_EN]
-connect_bd_net [get_bd_pins xlslice_1/Dout] [get_bd_pins DUTY_CYCLE_1/i_EN]
-connect_bd_net [get_bd_pins xlslice_2/Dout] [get_bd_pins DUTY_CYCLE_2/i_EN]
-regenerate_bd_layout
-startgroup
-make_bd_pins_external  [get_bd_pins DUTY_CYCLE_1/o_OUT] [get_bd_pins DUTY_CYCLE_0/o_OUT] [get_bd_pins DUTY_CYCLE_2/o_OUT]
-endgroup
-delete_bd_objs [get_bd_nets DUTY_CYCLE_1_o_OUT] [get_bd_ports o_OUT_0]
-delete_bd_objs [get_bd_nets DUTY_CYCLE_0_o_OUT] [get_bd_ports o_OUT_1]
-startgroup
-make_bd_pins_external  [get_bd_pins DUTY_CYCLE_0/o_OUT]
-endgroup
-startgroup
-make_bd_pins_external  [get_bd_pins DUTY_CYCLE_1/o_OUT]
-endgroup
-save_bd_design
-generate_target all [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_2/design_2.bd]
-export_ip_user_files -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_2/design_2.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_2/design_2.bd] -directory /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.ip_user_files/sim_scripts -ip_user_files_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.ip_user_files -ipstatic_source_dir /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/modelsim} {questa=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/questa} {ies=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/ies} {xcelium=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/xcelium} {vcs=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/vcs} {riviera=/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-make_wrapper -files [get_files /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_2/design_2.bd] -top
-add_files -norecurse /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v
-update_compile_order -fileset sources_1
-report_ip_status -name ip_status 
-regenerate_bd_layout
-regenerate_bd_layout
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 14
-wait_on_run impl_1
-reset_run synth_1
-launch_runs synth_1 -jobs 14
-wait_on_run synth_1
-report_ip_status -name ip_status 
-open_run synth_1 -name synth_1
-close [ open /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/constrs_1/new/rgb.xdc w ]
-add_files -fileset constrs_1 /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/constrs_1/new/rgb.xdc
-set_property is_enabled false [get_files  /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/constrs_1/new/pwm.xdc]
+open_run synth_2 -name synth_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+set_max_delay -from [get_pins CHAR_ROM_DISPLAY_i/hdmi_tx_0/inst/serial_g/oserdes_m/CLK] -to [get_ports {hdmi_tx_0_tmds_data_n[1]}] 3.0
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+save_constraints
+reset_run synth_2
+update_module_reference CHAR_ROM_DISPLAY_VGA_controller_0_0
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
 refresh_design
-reset_run synth_1
-launch_runs synth_1 -jobs 14
-wait_on_run synth_1
-set_property IOSTANDARD LVCMOS33 [get_ports [list o_OUT_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list o_OUT_1]]
-reset_run synth_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top design_2_wrapper [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_2
+update_module_reference CHAR_ROM_DISPLAY_VGA_controller_0_0
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+update_module_reference CHAR_ROM_DISPLAY_VGA_controller_0_0
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_2
+update_module_reference CHAR_ROM_DISPLAY_VGA_controller_0_0
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_timing -from [get_pins {CHAR_ROM_DISPLAY_i/RESOLUTION_CONTROLLER_0/inst/o_END_OF_LINE_reg[4]/C}] -to [get_pins {CHAR_ROM_DISPLAY_i/VGA_controller_0/inst/o_HCNT_reg[10]/R}] -delay_type min_max -max_paths 10 -sort_by group -input_pins -routable_nets -name timing_2
+reset_run synth_2
+update_module_reference CHAR_ROM_DISPLAY_VGA_controller_0_0
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_2
+update_module_reference CHAR_ROM_DISPLAY_VGA_controller_0_0
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_2
+update_module_reference CHAR_ROM_DISPLAY_VGA_controller_0_0
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_2
+update_module_reference CHAR_ROM_DISPLAY_VGA_controller_0_0
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_2
+update_module_reference CHAR_ROM_DISPLAY_VGA_controller_0_0
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_2
+update_module_reference CHAR_ROM_DISPLAY_C_ROM_LOGIC_0_0
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_2
+update_module_reference CHAR_ROM_DISPLAY_RAM_RANGLER_FSM_0_0
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_runs impl_2 -jobs 8
+wait_on_run impl_2
 close_design
-launch_runs synth_1 -jobs 14
-wait_on_run synth_1
-open_run synth_1 -name synth_1
-set_property IOSTANDARD LVCMOS33 [get_ports [list o_OUT_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list o_OUT_1]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list o_OUT_2]]
-place_ports o_OUT_0 U13
-place_ports o_OUT_1 T19
-place_ports o_OUT_2 W20
-set_property target_constrs_file /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/constrs_1/new/rgb.xdc [current_fileset -constrset]
-save_constraints -force
-launch_runs impl_1 -to_step write_bitstream -jobs 14
-wait_on_run impl_1
-file copy -force /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.runs/impl_1/design_2_wrapper.sysdef /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.sdk/design_2_wrapper.hdf
-
-launch_sdk -workspace /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.sdk -hwspec /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.sdk/design_2_wrapper.hdf
-open_bd_design {/home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.srcs/sources_1/bd/design_2/design_2.bd}
+open_run impl_2
+open_bd_design {/home/necryotiks/WSU-CPTE/EE324/Module_5/Module_5.srcs/sources_1/bd/CHAR_ROM_DISPLAY/CHAR_ROM_DISPLAY.bd}
 startgroup
-set_property -dict [list CONFIG.PCW_DDR_RAM_HIGHADDR {0x1FFFFFFF} CONFIG.PCW_UIPARAM_DDR_BANK_ADDR_COUNT {3} CONFIG.PCW_UIPARAM_DDR_ROW_ADDR_COUNT {15} CONFIG.PCW_UIPARAM_DDR_COL_ADDR_COUNT {10} CONFIG.PCW_UIPARAM_DDR_CL {7} CONFIG.PCW_UIPARAM_DDR_CWL {6.000000} CONFIG.PCW_UIPARAM_DDR_T_RCD {13.75} CONFIG.PCW_UIPARAM_DDR_T_RP {13.75} CONFIG.PCW_UIPARAM_DDR_T_RC {48.75} CONFIG.PCW_UIPARAM_DDR_T_RAS_MIN {35.0} CONFIG.PCW_UIPARAM_DDR_T_FAW {40} CONFIG.PCW_QSPI_PERIPHERAL_FREQMHZ {200} CONFIG.PCW_USB0_PERIPHERAL_FREQMHZ {60} CONFIG.PCW_SDIO_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_UART_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_SPI_PERIPHERAL_FREQMHZ {166.666666} CONFIG.PCW_I2C_PERIPHERAL_FREQMHZ {25} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {50} CONFIG.PCW_ACT_APU_PERIPHERAL_FREQMHZ {666.666687} CONFIG.PCW_UIPARAM_ACT_DDR_FREQ_MHZ {533.333374} CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.158730} CONFIG.PCW_ACT_QSPI_PERIPHERAL_FREQMHZ {200.000000} CONFIG.PCW_ACT_SMC_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_SDIO_PERIPHERAL_FREQMHZ {100.000000} CONFIG.PCW_ACT_UART_PERIPHERAL_FREQMHZ {100.000000} CONFIG.PCW_ACT_SPI_PERIPHERAL_FREQMHZ {166.666672} CONFIG.PCW_ACT_CAN_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_WDT_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {200.000000} CONFIG.PCW_ACT_TPIU_PERIPHERAL_FREQMHZ {200.000000} CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {50.000000} CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ {111.111115} CONFIG.PCW_CLK0_FREQ {50000000} CONFIG.PCW_CLK1_FREQ {10000000} CONFIG.PCW_CLK2_FREQ {10000000} CONFIG.PCW_CLK3_FREQ {10000000} CONFIG.PCW_CPU_PERIPHERAL_DIVISOR0 {2} CONFIG.PCW_DDR_PERIPHERAL_DIVISOR0 {2} CONFIG.PCW_SMC_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0 {5} CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0 {10} CONFIG.PCW_UART_PERIPHERAL_DIVISOR0 {10} CONFIG.PCW_SPI_PERIPHERAL_DIVISOR0 {6} CONFIG.PCW_CAN_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {5} CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {4} CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_ENET1_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_ENET1_PERIPHERAL_DIVISOR1 {1} CONFIG.PCW_TPIU_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_DCI_PERIPHERAL_DIVISOR0 {15} CONFIG.PCW_DCI_PERIPHERAL_DIVISOR1 {7} CONFIG.PCW_PCAP_PERIPHERAL_DIVISOR0 {5} CONFIG.PCW_ARMPLL_CTRL_FBDIV {40} CONFIG.PCW_IOPLL_CTRL_FBDIV {30} CONFIG.PCW_DDRPLL_CTRL_FBDIV {32} CONFIG.PCW_CPU_CPU_PLL_FREQMHZ {1333.333} CONFIG.PCW_IO_IO_PLL_FREQMHZ {1000.000} CONFIG.PCW_DDR_DDR_PLL_FREQMHZ {1066.667} CONFIG.PCW_SDIO_PERIPHERAL_VALID {1} CONFIG.PCW_SPI_PERIPHERAL_VALID {1} CONFIG.PCW_UART_PERIPHERAL_VALID {1} CONFIG.PCW_EN_EMIO_SPI1 {0} CONFIG.PCW_EN_EMIO_UART0 {0} CONFIG.PCW_EN_QSPI {1} CONFIG.PCW_EN_GPIO {1} CONFIG.PCW_EN_SDIO0 {1} CONFIG.PCW_EN_SPI1 {1} CONFIG.PCW_EN_UART0 {1} CONFIG.PCW_EN_UART1 {0} CONFIG.PCW_EN_USB0 {1} CONFIG.PCW_UIPARAM_DDR_MEMORY_TYPE {DDR 3 (Low Voltage)} CONFIG.PCW_UIPARAM_DDR_ECC {Disabled} CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {16 Bit} CONFIG.PCW_UIPARAM_DDR_BL {8} CONFIG.PCW_UIPARAM_DDR_PARTNO {Custom} CONFIG.PCW_UIPARAM_DDR_DRAM_WIDTH {16 Bits} CONFIG.PCW_UIPARAM_DDR_DEVICE_CAPACITY {4096 MBits} CONFIG.PCW_UIPARAM_DDR_SPEED_BIN {DDR3_1600K} CONFIG.PCW_NAND_PERIPHERAL_ENABLE {0} CONFIG.PCW_NAND_GRP_D8_ENABLE {0} CONFIG.PCW_NOR_PERIPHERAL_ENABLE {0} CONFIG.PCW_NOR_GRP_A25_ENABLE {0} CONFIG.PCW_NOR_GRP_CS0_ENABLE {0} CONFIG.PCW_NOR_GRP_SRAM_CS0_ENABLE {0} CONFIG.PCW_NOR_GRP_CS1_ENABLE {0} CONFIG.PCW_NOR_GRP_SRAM_CS1_ENABLE {0} CONFIG.PCW_NOR_GRP_SRAM_INT_ENABLE {0} CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {1} CONFIG.PCW_QSPI_QSPI_IO {MIO 1 .. 6} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_QSPI_GRP_SINGLE_SS_IO {MIO 1 .. 6} CONFIG.PCW_QSPI_GRP_SS1_ENABLE {0} CONFIG.PCW_SINGLE_QSPI_DATA_MODE {x4} CONFIG.PCW_QSPI_GRP_IO1_ENABLE {0} CONFIG.PCW_QSPI_GRP_FBCLK_ENABLE {1} CONFIG.PCW_QSPI_GRP_FBCLK_IO {MIO 8} CONFIG.PCW_ENET_RESET_ENABLE {0} CONFIG.PCW_ENET0_RESET_ENABLE {0} CONFIG.PCW_ENET1_RESET_ENABLE {0} CONFIG.PCW_SD0_PERIPHERAL_ENABLE {1} CONFIG.PCW_SD0_SD0_IO {MIO 40 .. 45} CONFIG.PCW_SD0_GRP_CD_ENABLE {1} CONFIG.PCW_SD0_GRP_CD_IO {MIO 47} CONFIG.PCW_SD0_GRP_WP_ENABLE {0} CONFIG.PCW_SD0_GRP_POW_ENABLE {0} CONFIG.PCW_UART0_PERIPHERAL_ENABLE {1} CONFIG.PCW_UART0_UART0_IO {MIO 14 .. 15} CONFIG.PCW_UART0_GRP_FULL_ENABLE {0} CONFIG.PCW_UART1_PERIPHERAL_ENABLE {0} CONFIG.PCW_UART1_UART1_IO {<Select>} CONFIG.PCW_UART1_GRP_FULL_ENABLE {0} CONFIG.PCW_SPI1_PERIPHERAL_ENABLE {1} CONFIG.PCW_SPI1_SPI1_IO {MIO 10 .. 15} CONFIG.PCW_SPI1_GRP_SS0_ENABLE {1} CONFIG.PCW_SPI1_GRP_SS0_IO {MIO 13} CONFIG.PCW_SPI1_GRP_SS1_ENABLE {0} CONFIG.PCW_SPI1_GRP_SS2_ENABLE {0} CONFIG.PCW_USB0_PERIPHERAL_ENABLE {1} CONFIG.PCW_USB0_USB0_IO {MIO 28 .. 39} CONFIG.PCW_USB_RESET_ENABLE {1} CONFIG.PCW_USB_RESET_SELECT {Share reset pin} CONFIG.PCW_USB0_RESET_ENABLE {1} CONFIG.PCW_USB0_RESET_IO {MIO 46} CONFIG.PCW_USB1_RESET_ENABLE {0} CONFIG.PCW_I2C0_RESET_ENABLE {0} CONFIG.PCW_I2C_RESET_ENABLE {1} CONFIG.PCW_I2C1_RESET_ENABLE {0} CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {1} CONFIG.PCW_GPIO_MIO_GPIO_IO {MIO} CONFIG.PCW_MIO_0_PULLUP {enabled} CONFIG.PCW_MIO_0_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_0_DIRECTION {inout} CONFIG.PCW_MIO_0_SLEW {slow} CONFIG.PCW_MIO_1_PULLUP {enabled} CONFIG.PCW_MIO_1_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_1_DIRECTION {out} CONFIG.PCW_MIO_1_SLEW {slow} CONFIG.PCW_MIO_2_PULLUP {disabled} CONFIG.PCW_MIO_2_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_2_DIRECTION {inout} CONFIG.PCW_MIO_2_SLEW {slow} CONFIG.PCW_MIO_3_PULLUP {disabled} CONFIG.PCW_MIO_3_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_3_DIRECTION {inout} CONFIG.PCW_MIO_3_SLEW {slow} CONFIG.PCW_MIO_4_PULLUP {disabled} CONFIG.PCW_MIO_4_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_4_DIRECTION {inout} CONFIG.PCW_MIO_4_SLEW {slow} CONFIG.PCW_MIO_5_PULLUP {disabled} CONFIG.PCW_MIO_5_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_5_DIRECTION {inout} CONFIG.PCW_MIO_5_SLEW {slow} CONFIG.PCW_MIO_6_PULLUP {disabled} CONFIG.PCW_MIO_6_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_6_DIRECTION {out} CONFIG.PCW_MIO_6_SLEW {slow} CONFIG.PCW_MIO_7_PULLUP {disabled} CONFIG.PCW_MIO_7_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_7_DIRECTION {out} CONFIG.PCW_MIO_7_SLEW {slow} CONFIG.PCW_MIO_8_PULLUP {disabled} CONFIG.PCW_MIO_8_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_8_DIRECTION {out} CONFIG.PCW_MIO_8_SLEW {slow} CONFIG.PCW_MIO_9_PULLUP {enabled} CONFIG.PCW_MIO_9_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_9_DIRECTION {inout} CONFIG.PCW_MIO_9_SLEW {slow} CONFIG.PCW_MIO_10_PULLUP {enabled} CONFIG.PCW_MIO_10_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_10_DIRECTION {inout} CONFIG.PCW_MIO_10_SLEW {slow} CONFIG.PCW_MIO_11_PULLUP {enabled} CONFIG.PCW_MIO_11_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_11_DIRECTION {inout} CONFIG.PCW_MIO_11_SLEW {slow} CONFIG.PCW_MIO_12_PULLUP {enabled} CONFIG.PCW_MIO_12_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_12_DIRECTION {inout} CONFIG.PCW_MIO_12_SLEW {slow} CONFIG.PCW_MIO_13_PULLUP {enabled} CONFIG.PCW_MIO_13_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_13_DIRECTION {inout} CONFIG.PCW_MIO_13_SLEW {slow} CONFIG.PCW_MIO_14_PULLUP {enabled} CONFIG.PCW_MIO_14_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_14_DIRECTION {in} CONFIG.PCW_MIO_14_SLEW {slow} CONFIG.PCW_MIO_15_PULLUP {enabled} CONFIG.PCW_MIO_15_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_15_DIRECTION {out} CONFIG.PCW_MIO_15_SLEW {slow} CONFIG.PCW_MIO_16_PULLUP {enabled} CONFIG.PCW_MIO_16_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_16_DIRECTION {inout} CONFIG.PCW_MIO_16_SLEW {slow} CONFIG.PCW_MIO_17_PULLUP {enabled} CONFIG.PCW_MIO_17_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_17_DIRECTION {inout} CONFIG.PCW_MIO_17_SLEW {slow} CONFIG.PCW_MIO_18_PULLUP {enabled} CONFIG.PCW_MIO_18_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_18_DIRECTION {inout} CONFIG.PCW_MIO_18_SLEW {slow} CONFIG.PCW_MIO_19_PULLUP {enabled} CONFIG.PCW_MIO_19_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_19_DIRECTION {inout} CONFIG.PCW_MIO_19_SLEW {slow} CONFIG.PCW_MIO_20_PULLUP {enabled} CONFIG.PCW_MIO_20_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_20_DIRECTION {inout} CONFIG.PCW_MIO_20_SLEW {slow} CONFIG.PCW_MIO_21_PULLUP {enabled} CONFIG.PCW_MIO_21_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_21_DIRECTION {inout} CONFIG.PCW_MIO_21_SLEW {slow} CONFIG.PCW_MIO_22_PULLUP {enabled} CONFIG.PCW_MIO_22_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_22_DIRECTION {inout} CONFIG.PCW_MIO_22_SLEW {slow} CONFIG.PCW_MIO_23_PULLUP {enabled} CONFIG.PCW_MIO_23_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_23_DIRECTION {inout} CONFIG.PCW_MIO_23_SLEW {slow} CONFIG.PCW_MIO_24_PULLUP {enabled} CONFIG.PCW_MIO_24_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_24_DIRECTION {inout} CONFIG.PCW_MIO_24_SLEW {slow} CONFIG.PCW_MIO_25_PULLUP {enabled} CONFIG.PCW_MIO_25_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_25_DIRECTION {inout} CONFIG.PCW_MIO_25_SLEW {slow} CONFIG.PCW_MIO_26_PULLUP {enabled} CONFIG.PCW_MIO_26_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_26_DIRECTION {inout} CONFIG.PCW_MIO_26_SLEW {slow} CONFIG.PCW_MIO_27_PULLUP {enabled} CONFIG.PCW_MIO_27_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_27_DIRECTION {inout} CONFIG.PCW_MIO_27_SLEW {slow} CONFIG.PCW_MIO_28_PULLUP {enabled} CONFIG.PCW_MIO_28_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_28_DIRECTION {inout} CONFIG.PCW_MIO_28_SLEW {slow} CONFIG.PCW_MIO_29_PULLUP {enabled} CONFIG.PCW_MIO_29_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_29_DIRECTION {in} CONFIG.PCW_MIO_29_SLEW {slow} CONFIG.PCW_MIO_30_PULLUP {enabled} CONFIG.PCW_MIO_30_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_30_DIRECTION {out} CONFIG.PCW_MIO_30_SLEW {slow} CONFIG.PCW_MIO_31_PULLUP {enabled} CONFIG.PCW_MIO_31_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_31_DIRECTION {in} CONFIG.PCW_MIO_31_SLEW {slow} CONFIG.PCW_MIO_32_PULLUP {enabled} CONFIG.PCW_MIO_32_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_32_DIRECTION {inout} CONFIG.PCW_MIO_32_SLEW {slow} CONFIG.PCW_MIO_33_PULLUP {enabled} CONFIG.PCW_MIO_33_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_33_DIRECTION {inout} CONFIG.PCW_MIO_33_SLEW {slow} CONFIG.PCW_MIO_34_PULLUP {enabled} CONFIG.PCW_MIO_34_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_34_DIRECTION {inout} CONFIG.PCW_MIO_34_SLEW {slow} CONFIG.PCW_MIO_35_PULLUP {enabled} CONFIG.PCW_MIO_35_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_35_DIRECTION {inout} CONFIG.PCW_MIO_35_SLEW {slow} CONFIG.PCW_MIO_36_PULLUP {enabled} CONFIG.PCW_MIO_36_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_36_DIRECTION {in} CONFIG.PCW_MIO_36_SLEW {slow} CONFIG.PCW_MIO_37_PULLUP {enabled} CONFIG.PCW_MIO_37_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_37_DIRECTION {inout} CONFIG.PCW_MIO_37_SLEW {slow} CONFIG.PCW_MIO_38_PULLUP {enabled} CONFIG.PCW_MIO_38_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_38_DIRECTION {inout} CONFIG.PCW_MIO_38_SLEW {slow} CONFIG.PCW_MIO_39_PULLUP {enabled} CONFIG.PCW_MIO_39_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_39_DIRECTION {inout} CONFIG.PCW_MIO_39_SLEW {slow} CONFIG.PCW_MIO_40_PULLUP {enabled} CONFIG.PCW_MIO_40_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_40_DIRECTION {inout} CONFIG.PCW_MIO_40_SLEW {slow} CONFIG.PCW_MIO_41_PULLUP {enabled} CONFIG.PCW_MIO_41_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_41_DIRECTION {inout} CONFIG.PCW_MIO_41_SLEW {slow} CONFIG.PCW_MIO_42_PULLUP {enabled} CONFIG.PCW_MIO_42_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_42_DIRECTION {inout} CONFIG.PCW_MIO_42_SLEW {slow} CONFIG.PCW_MIO_43_PULLUP {enabled} CONFIG.PCW_MIO_43_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_43_DIRECTION {inout} CONFIG.PCW_MIO_43_SLEW {slow} CONFIG.PCW_MIO_44_PULLUP {enabled} CONFIG.PCW_MIO_44_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_44_DIRECTION {inout} CONFIG.PCW_MIO_44_SLEW {slow} CONFIG.PCW_MIO_45_PULLUP {enabled} CONFIG.PCW_MIO_45_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_45_DIRECTION {inout} CONFIG.PCW_MIO_45_SLEW {slow} CONFIG.PCW_MIO_46_PULLUP {enabled} CONFIG.PCW_MIO_46_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_46_DIRECTION {out} CONFIG.PCW_MIO_46_SLEW {slow} CONFIG.PCW_MIO_47_PULLUP {enabled} CONFIG.PCW_MIO_47_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_47_DIRECTION {in} CONFIG.PCW_MIO_47_SLEW {slow} CONFIG.PCW_MIO_48_PULLUP {enabled} CONFIG.PCW_MIO_48_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_48_DIRECTION {inout} CONFIG.PCW_MIO_48_SLEW {slow} CONFIG.PCW_MIO_49_PULLUP {enabled} CONFIG.PCW_MIO_49_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_49_DIRECTION {inout} CONFIG.PCW_MIO_49_SLEW {slow} CONFIG.PCW_MIO_50_PULLUP {enabled} CONFIG.PCW_MIO_50_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_50_DIRECTION {inout} CONFIG.PCW_MIO_50_SLEW {slow} CONFIG.PCW_MIO_51_PULLUP {enabled} CONFIG.PCW_MIO_51_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_51_DIRECTION {inout} CONFIG.PCW_MIO_51_SLEW {slow} CONFIG.PCW_MIO_52_PULLUP {enabled} CONFIG.PCW_MIO_52_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_52_DIRECTION {inout} CONFIG.PCW_MIO_52_SLEW {slow} CONFIG.PCW_MIO_53_PULLUP {enabled} CONFIG.PCW_MIO_53_IOTYPE {LVCMOS 3.3V} CONFIG.PCW_MIO_53_DIRECTION {inout} CONFIG.PCW_MIO_53_SLEW {slow} CONFIG.PCW_MIO_TREE_PERIPHERALS {GPIO#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO#Quad SPI Flash#GPIO#SPI 1#SPI 1#SPI 1#SPI 1#UART 0#UART 0#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#USB Reset#SD 0#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO} CONFIG.PCW_MIO_TREE_SIGNALS {gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_sclk#gpio[7]#qspi_fbclk#gpio[9]#mosi#miso#sclk#ss[0]#rx#tx#gpio[16]#gpio[17]#gpio[18]#gpio[19]#gpio[20]#gpio[21]#gpio[22]#gpio[23]#gpio[24]#gpio[25]#gpio[26]#gpio[27]#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#reset#cd#gpio[48]#gpio[49]#gpio[50]#gpio[51]#gpio[52]#gpio[53]} CONFIG.PCW_FPGA_FCLK0_ENABLE {1} CONFIG.PCW_FPGA_FCLK1_ENABLE {0} CONFIG.PCW_FPGA_FCLK2_ENABLE {0} CONFIG.PCW_FPGA_FCLK3_ENABLE {0}] [get_bd_cells processing_system7_0]
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_PHASE {25} CONFIG.CLKOUT2_REQUESTED_PHASE {25} CONFIG.MMCM_CLKOUT0_PHASE {27.000} CONFIG.MMCM_CLKOUT1_PHASE {22.500}] [get_bd_cells clk_wiz_0]
 endgroup
 save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 14
-wait_on_run impl_1
-file copy -force /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.runs/impl_1/design_2_wrapper.sysdef /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.sdk/design_2_wrapper.hdf
-
-launch_sdk -workspace /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.sdk -hwspec /home/sergaljerk/Documents/Repos/WSU-CPTE/EE324/Module_4/Module_4/m5/m5.sdk/design_2_wrapper.hdf
-report_ip_status -name ip_status 
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+open_run synth_2 -name synth_2
+current_design impl_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+current_design synth_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_runs impl_2 -jobs 8
+wait_on_run impl_2
+current_design impl_2
+refresh_design
+reset_run synth_2
+launch_runs impl_2 -jobs 8
+wait_on_run impl_2
+refresh_design
+reset_run synth_2
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2
+current_design synth_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_runs impl_2 -jobs 8
+wait_on_run impl_2
+current_design impl_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+refresh_design
